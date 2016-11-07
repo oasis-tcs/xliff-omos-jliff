@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.1" srcLang="en" trgLang="fr">
+<file id="f1">
+ <unit id="u1" xmlns:my="myNS" my:xattr="extValue">
+  <originalData>
+   <data id="d1">[C1/]</data>
+   <data id="d2">[C2]</data>
+   <data id="d3">[/C2]</data>
+  </originalData>
+  <segment canResegment="no" state="translated">
+   <source><ph id="c1" dataRef="d1"/> aaa <pc id="c2" dataRefEnd="d3" dataRefStart="d2">text</pc></source>
+   <target><ph id="c1" dataRef="d1"/> AAA <pc id="c2" dataRefEnd="d3" dataRefStart="d2">TEXT</pc></target>
+  </segment>
+  <ignorable>
+   <source>.  </source>
+  </ignorable>
+ </unit>
+</file>
+</xliff>

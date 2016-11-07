@@ -1,0 +1,37 @@
+{
+    "id": "fl",
+    "version": "1.0",
+    "unit": [
+        {
+	    "id": "u1",
+	    "originalData": [
+		{ "id": "d1", "data": "[C1/]" },
+		{ "id": "d2", "data": "[C2]" },
+		{ "id": "d3", "data": "[/C2]" }
+	    ],
+	    "subunit": [
+		{
+		    "segment": true,
+		    "state": "translated",
+		    "canResegment": false,
+		    "source": [
+			{ "id": "c1", "kind": "ph", "dataRef": "d1" },
+			"aaa",
+			{ "id": "c2", "kind": "pc", "startRef": "d2", "dataRef": "d3", "text": "text" }
+		    ],
+		    "target": [
+			{ "id": "c1", "kind": "ph", "dataRef": "d1" },
+			"AAA",
+			{ "id": "c2", "kind": "pc", "startRef": "d2", "dataRef": "d3", "text": "TEXT" }
+		    ]
+		},
+		{
+		    "segment": false,
+		    "source": [
+			".  "
+		    ]
+		}
+	    ]
+	}
+    ]
+}
