@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
 
-  "$id": "urn:oasis:names:tc:xliff-omos:document:jliff:0.1",
+  "$id": "urn:oasis:names:tc:xliff-omos:document:jliff:0.9.1",
 
   "$ref": "#/definitions/file",
 
@@ -22,6 +22,7 @@
           "items": { "$ref": "#/definitions/unit" }
         }
       },
+      "additionalProperties": false,
       "required": [ "id", "version" ]
     },
 
@@ -30,6 +31,7 @@
       "properties": {
         "ref": { "type": "string" }
       },
+      "additionalProperties": false,
       "required": [ "ref" ]
     },
 
@@ -45,7 +47,8 @@
           "type": "array",
           "items": { "$ref": "#/definitions/unit" }
         }
-      }
+      },
+      "additionalProperties": false
     },
 
     "unit": {
@@ -65,6 +68,7 @@
         },
         "originalData": { "$ref": "#/definitions/originalData" }
       },
+      "additionalProperties": false,
       "required": [ "id" ]
     },
 
@@ -76,6 +80,7 @@
           "id": { "type": "string" },
           "data": { "type" : "string" }
         },
+	"additionalProperties": false,
         "required": [ "id", "data" ]
       }
     },
@@ -84,10 +89,12 @@
       "type": "object",
       "properties": {
         "segment": { "type": "boolean" },
+        "canResegment": { "type": "boolean" },
         "state": { "type": "string", "enum": [ "initial", "translated", "reviewed", "final" ] },
         "source": { "$ref": "#/definitions/elements" },
         "target": { "$ref": "#/definitions/elements" }
       },
+      "additionalProperties": false,
       "required": [ "segment", "source" ]
     },
 
@@ -104,7 +111,8 @@
         "appliesTo": { "type": "string", "enum": [ "source", "target" ] },
         "category": { "type": "string" },
         "priority": { "type": "integer", "minimum": 1, "maximum": 10 }
-      }
+      },
+      "additionalProperties": false
     },
 
     "elements": {
@@ -134,14 +142,16 @@
         "copyOf": { "type": "string" },
         "disp": { "type": "string" },
         "equiv": { "type": "string" },
-        "dataRef": { "type": "string" },
+        "dataRefEnd": { "type": "string" },
+        "dataRefStart": { "type": "string" },
         "subFlows": { "type": "string" },
         "subType": { "type": "string" },
         "type": { "$ref": "#/definitions/type" },
         "dir": { "$ref": "#/definitions/dir" },
         "isolated": { "type": "boolean" },
-        "startRef": { "type": "string" }
+	"text": { "type": "string" }
       },
+      "additionalProperties": false,
       "required": [ "kind" ]
     },
 
@@ -151,6 +161,7 @@
         "kind": { "type": "string", "enum": [ "em" ] },
         "startRef": { "type": "string" }
       },
+      "additionalProperties": true,
       "required": [ "kind", "startRef" ]
     },
 
@@ -174,8 +185,10 @@
         "subFlowsStart": { "type": "string" },
         "subType": { "type": "string" },
         "type": { "$ref": "#/definitions/type" },
-        "dir": { "$ref": "#/definitions/dir" }
+        "dir": { "$ref": "#/definitions/dir" },
+	"text": { "type": "string" }
       },
+      "additionalProperties": false,
       "required": [ "id", "kind" ]
     },
 
@@ -193,8 +206,10 @@
         "dataRef": { "type": "string" },
         "subFlows": { "type": "string" },
         "subtype": { "type": "string" },
-        "type": { "$ref": "#/definitions/type" }
+        "type": { "$ref": "#/definitions/type" },
+	"text": { "type": "string" }
       },
+      "additionalProperties": false,
       "required": [ "id", "kind" ]
     },
 
@@ -215,8 +230,10 @@
         "subType": { "type": "string" },
         "type": { "$ref": "#/definitions/type" },
         "dir": { "$ref": "#/definitions/dir" },
-        "isolated": { "type": "boolean" }
+        "isolated": { "type": "boolean" },
+	"text": { "type": "string" }
       },
+      "additionalProperties": false,
       "required": [ "id", "kind" ]
     },
 
@@ -230,6 +247,7 @@
         "ref": { "type": "string" },
         "value": { "type": "string" }
       },
+      "additionalProperties": true,
       "required": [ "id", "kind" ]
     },
 

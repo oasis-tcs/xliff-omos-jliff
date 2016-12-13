@@ -24,5 +24,10 @@ TODO
 ====
 
 - JLIFF JSON Schema constraints review requested.
-- Perhaps add `"additionalProperties: false` to each JSON object type that is defined to restrict the properties to only those that may appear.
 - More examples with comparable XLIFF 2.0 examples.
+
+Changelog
+=========
+
+Nov  7 2016 0.9.0 Draft JLIFF schema 
+Dec 13 2016 0.9.1 `additionalProperties` added, fixed `startRef` to `dataRefStart`
