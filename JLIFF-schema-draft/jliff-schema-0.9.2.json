@@ -100,7 +100,7 @@
         "meta": { "$ref": "#/definitions/meta" }
       },
       "additionalProperties": false,
-      "required": [ "category", "meta" ]
+      "required": [ "meta" ]
     },
 
     "meta": {
