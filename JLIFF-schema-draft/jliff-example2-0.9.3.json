@@ -1,0 +1,34 @@
+{
+  "id": "fl",
+  "version": "1.0",
+  "skeleton": { "ref": "Graphic Example.psd.skl" },
+  "unit": [
+    {
+      "id": "1",
+      "subunit": [
+        {
+          "source": [ "Quetzal" ],
+          "target": [ "Quetzal" ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "subunit": [
+        {
+          "source": [ "An application to manipulate and process XLIFF documents" ],
+          "target": [ "XLIFF 文書を編集、または処理 するアプリケーションです。" ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "subunit": [
+        {
+          "source": [ "XLIFF Data Manager" ],
+          "target": [ "XLIFF データ・マネージャ" ]
+        }
+      ]
+    }
+  ]
+}

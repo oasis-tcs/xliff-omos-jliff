@@ -1,0 +1,312 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+
+  "$id": "urn:oasis:names:tc:xliff-omos:document:jliff:0.9.2",
+
+  "$ref": "#/definitions/fragment",
+
+  "definitions": {
+
+    "fragment": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "version": { "type": "string" },
+        "skeleton": { "$ref": "#/definitions/skeleton" },
+        "group": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/group" }
+        },
+        "unit": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/unit" }
+        },
+        "metadata": { "$ref": "#/definitions/metaData" }
+      },
+      "additionalProperties": false,
+      "required": [ "id", "version" ]
+    },
+
+    "skeleton": {
+      "type": "object",
+      "properties": {
+        "ref": { "type": "string" }
+      },
+      "additionalProperties": false,
+      "required": [ "ref" ]
+    },
+
+    "group": {
+      "type": "object",
+      "properties": {
+        "notes": { "$ref": "#/definitions/notes" },
+        "group": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/group" }
+        },
+        "unit": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/unit" }
+        },
+        "metadata": { "$ref": "#/definitions/metaData" }
+      },
+      "additionalProperties": false
+    },
+
+    "unit": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "canResegment": { "type": "boolean", "default": "false" },
+        "translate": { "type": "boolean", "default": "false" },
+        "srcDir": { "$ref": "#/definitions/dir" },
+        "trgDir": { "$ref": "#/definitions/dir" },
+        "type": { "$ref": "#/definitions/type" },
+        "notes": { "$ref": "#/definitions/notes" },
+        "subunit": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/subunit" }
+        },
+        "originalData": { "$ref": "#/definitions/originalData" },
+        "metadata": { "$ref": "#/definitions/metaData" }
+      },
+      "additionalProperties": false,
+      "required": [ "id" ]
+    },
+
+    "originalData": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "data": { "type" : "string" }
+        },
+        "additionalProperties": false,
+        "required": [ "id", "data" ]
+      }
+    },
+
+    "metaData": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/metaGroup" }
+    },
+
+    "metaGroup": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "appliesTo": { "type": "string", "enum": [ "source", "target", "ignorable" ] },
+        "category": { "type": "string" },
+        "meta": { 
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "type": "object",
+                "patternProperties": { "^.*$": { "type": "string" } },
+                "additionalProperties": false
+              },
+              { "$ref": "#/definitions/metaGroup" }
+            ]
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [ "meta" ]
+    },
+
+    "subunit": {
+      "type": "object",
+      "oneOf": [
+        {
+          "properties": {
+            "type": { "type": "string", "default": "segment", "enum": [ "segment" ] },
+            "canResegment": { "type": "boolean" },
+            "state": { "type": "string", "enum": [ "initial", "translated", "reviewed", "final" ], "default": "initial" },
+            "source": { "$ref": "#/definitions/elements" },
+            "target": { "$ref": "#/definitions/elements" }
+          },
+          "additionalProperties": false,
+          "required": [ "source" ]
+        },
+        {
+          "properties": {
+            "type": { "type": "string", "enum": ["ignorable"] },
+            "state": { "type": "string", "enum": [ "initial", "translated", "reviewed", "final" ], "default": "initial" },
+            "source": { "$ref": "#/definitions/elements" },
+            "target": { "$ref": "#/definitions/elements" }
+          },
+          "additionalProperties": false,
+          "required": [ "type", "source" ]
+        }
+      ]
+    },
+
+    "notes": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/note" },
+      "minItems": 1
+    },
+
+    "note": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "appliesTo": { "type": "string", "enum": [ "source", "target" ] },
+        "category": { "type": "string" },
+        "priority": { "type": "integer", "minimum": 1, "maximum": 10 }
+      },
+      "additionalProperties": false
+    },
+
+    "elements": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          { "$ref": "#/definitions/element-ec" },
+          { "$ref": "#/definitions/element-em" },
+          { "$ref": "#/definitions/element-pc" },
+          { "$ref": "#/definitions/element-ph" },
+          { "$ref": "#/definitions/element-sc" },
+          { "$ref": "#/definitions/element-sm" },
+          { "type": "string" }
+        ]
+      }
+    },
+
+    "element-ec": {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string", "enum": [ "ec" ] },
+        "id": { "type": "string" },
+        "canCopy": { "type": "boolean" },
+        "canDelete": { "type": "boolean" },
+        "canOverlap": { "type": "boolean" },
+        "canReorder": { "type": "boolean" },
+        "copyOf": { "type": "string" },
+        "disp": { "type": "string" },
+        "equiv": { "type": "string" },
+        "dataRefEnd": { "type": "string" },
+        "dataRefStart": { "type": "string" },
+        "subFlows": { "type": "string" },
+        "subType": { "type": "string" },
+        "type": { "$ref": "#/definitions/type" },
+        "dir": { "$ref": "#/definitions/dir" },
+        "isolated": { "type": "boolean" },
+        "text": { "type": "string" }
+      },
+      "additionalProperties": false,
+      "required": [ "kind" ]
+    },
+
+    "element-em": {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string", "enum": [ "em" ] },
+        "startRef": { "type": "string" }
+      },
+      "additionalProperties": true,
+      "required": [ "kind", "startRef" ]
+    },
+
+    "element-pc": {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string", "enum": [ "pc" ] },
+        "id": { "type": "string" },
+        "canCopy": { "type": "boolean" },
+        "canDelete": { "type": "boolean" },
+        "canOverlap": { "type": "boolean" },
+        "canReorder": { "type": "boolean" },
+        "copyOf": { "type": "string" },
+        "dispEnd": { "type": "string" },
+        "dispStart": { "type": "string" },
+        "equivEnd": { "type": "string" },
+        "equivStart": { "type": "string" },
+        "dataRefEnd": { "type": "string" },
+        "dataRefStart": { "type": "string" },
+        "subFlowsEnd": { "type": "string" },
+        "subFlowsStart": { "type": "string" },
+        "subType": { "type": "string" },
+        "type": { "$ref": "#/definitions/type" },
+        "dir": { "$ref": "#/definitions/dir" },
+        "text": { "type": "string" }
+      },
+      "additionalProperties": false,
+      "required": [ "id", "kind" ]
+    },
+
+    "element-ph": {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string", "enum": [ "ph" ] },
+        "id": { "type": "string" },
+        "canCopy": { "type": "boolean" },
+        "canDelete": { "type": "boolean" },
+        "canReorder": { "type": "boolean" },
+        "copyOf": { "type": "string" },
+        "disp": { "type": "string" },
+        "equiv": { "type": "string" },
+        "dataRef": { "type": "string" },
+        "subFlows": { "type": "string" },
+        "subtype": { "type": "string" },
+        "type": { "$ref": "#/definitions/type" },
+        "text": { "type": "string" }
+      },
+      "additionalProperties": false,
+      "required": [ "id", "kind" ]
+    },
+
+    "element-sc": {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string", "enum": [ "sc" ] },
+        "id": { "type": "string" },
+        "canCopy": { "type": "boolean" },
+        "canDelete": { "type": "boolean" },
+        "canOverlap": { "type": "boolean" },
+        "canReorder": { "type": "boolean" },
+        "copyOf": { "type": "string" },
+        "disp": { "type": "string" },
+        "equiv": { "type": "string" },
+        "dataRef": { "type": "string" },
+        "subFlows": { "type": "string" },
+        "subType": { "type": "string" },
+        "type": { "$ref": "#/definitions/type" },
+        "dir": { "$ref": "#/definitions/dir" },
+        "isolated": { "type": "boolean" },
+        "text": { "type": "string" }
+      },
+      "additionalProperties": false,
+      "required": [ "id", "kind" ]
+    },
+
+    "element-sm": {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string", "enum": [ "sm" ] },
+        "id": { "type": "string" },
+        "type": { "$ref": "#/definitions/type" },
+        "translate": { "type": "boolean", "default": "false" },
+        "ref": { "type": "string" },
+        "value": { "type": "string" }
+      },
+      "additionalProperties": true,
+      "required": [ "id", "kind" ]
+    },
+
+    "dir": {
+      "type": "string",
+      "enum": [ "ltr", "rtl", "auto" ]
+    },
+
+    "type": {
+      "type": "string",
+      "enum": [ "fmt", "ui", "quote", "link", "image", "other" ]
+    }
+
+  }
+
+}

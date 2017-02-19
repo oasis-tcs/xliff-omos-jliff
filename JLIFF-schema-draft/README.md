@@ -33,3 +33,4 @@ Changelog
 - Nov  7 2016 0.9.0 Draft JLIFF schema 0.9
 - Dec 13 2016 0.9.1 `additionalProperties` added, fixed `startRef` to `dataRefStart`
 - Feb 13 2017 0.9.2 Draft version for proposed changes: changed `file` definition name to `fragment`, added optional `metadata` property to `fragment`, `unit`, and `group` (Extensibility and Modularity), added default value for subunit `"segment": { "type": "boolean", "default": "true" }`, unit and subunit `"canResegment": { "type": "boolean", "default": "false" }`, unit and element-sm `"translate": { "type": "boolean", "default": "false" }` and subunit `"state": { "type": "string", "enum": [ "initial", "translated", "reviewed", "final" ], "default": "initial" }`
+- Feb 19 2017 0.9.3 Draft version incorporates proposed changes for segment versus ignorable subunits, updated `metaGroup` with `id` and `appliesTo` properties.
