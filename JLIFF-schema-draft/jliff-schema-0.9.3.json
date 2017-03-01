@@ -13,14 +13,8 @@
         "id": { "type": "string" },
         "version": { "type": "string" },
         "skeleton": { "$ref": "#/definitions/skeleton" },
-        "group": {
-          "type": "array",
-          "items": { "$ref": "#/definitions/group" }
-        },
-        "unit": {
-          "type": "array",
-          "items": { "$ref": "#/definitions/unit" }
-        },
+        "group": { "$ref": "#/definitions/groups" },
+        "unit": { "$ref": "#/definitions/units" },
         "metadata": { "$ref": "#/definitions/metaData" }
       },
       "additionalProperties": false,
@@ -36,21 +30,27 @@
       "required": [ "ref" ]
     },
 
+    "groups": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/group" },
+      "minItems": 1
+    },
+
     "group": {
       "type": "object",
       "properties": {
         "notes": { "$ref": "#/definitions/notes" },
-        "group": {
-          "type": "array",
-          "items": { "$ref": "#/definitions/group" }
-        },
-        "unit": {
-          "type": "array",
-          "items": { "$ref": "#/definitions/unit" }
-        },
+        "group": { "$ref": "#/definitions/groups" },
+        "unit": { "$ref": "#/definitions/units" },
         "metadata": { "$ref": "#/definitions/metaData" }
       },
       "additionalProperties": false
+    },
+
+    "units": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/unit" },
+      "minItems": 1
     },
 
     "unit": {
@@ -64,10 +64,7 @@
         "trgDir": { "$ref": "#/definitions/dir" },
         "type": { "$ref": "#/definitions/type" },
         "notes": { "$ref": "#/definitions/notes" },
-        "subunit": {
-          "type": "array",
-          "items": { "$ref": "#/definitions/subunit" }
-        },
+        "subunit": { "$ref": "#/definitions/subunits" },
         "originalData": { "$ref": "#/definitions/originalData" },
         "metadata": { "$ref": "#/definitions/metaData" }
       },
@@ -117,14 +114,22 @@
       "required": [ "meta" ]
     },
 
+    "subunits": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/subunit" },
+      "minItems": 1
+    },
+
     "subunit": {
       "type": "object",
       "oneOf": [
         {
           "properties": {
+            "id": { "type": "string" },
             "type": { "type": "string", "default": "segment", "enum": [ "segment" ] },
             "canResegment": { "type": "boolean" },
             "state": { "type": "string", "enum": [ "initial", "translated", "reviewed", "final" ], "default": "initial" },
+            "subState": { "type": "string", "pattern": "^.*:.*$" },
             "source": { "$ref": "#/definitions/elements" },
             "target": { "$ref": "#/definitions/elements" }
           },
@@ -133,8 +138,8 @@
         },
         {
           "properties": {
+            "id": { "type": "string" },
             "type": { "type": "string", "enum": ["ignorable"] },
-            "state": { "type": "string", "enum": [ "initial", "translated", "reviewed", "final" ], "default": "initial" },
             "source": { "$ref": "#/definitions/elements" },
             "target": { "$ref": "#/definitions/elements" }
           },
@@ -171,7 +176,7 @@
           { "$ref": "#/definitions/element-ph" },
           { "$ref": "#/definitions/element-sc" },
           { "$ref": "#/definitions/element-sm" },
-          { "type": "string" }
+          { "$ref": "#/definitions/element-text" }
         ]
       }
     },
@@ -295,6 +300,15 @@
       },
       "additionalProperties": true,
       "required": [ "id", "kind" ]
+    },
+
+    "element-text": {
+      "type": "object",
+      "properties": {
+        "text": { "type": "string" }
+      },
+      "additionalProperties": false,
+      "required": [ "text" ]
     },
 
     "dir": {
