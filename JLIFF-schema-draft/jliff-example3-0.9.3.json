@@ -7,8 +7,8 @@
       "id": "1",
       "subunit": [
         {
-          "source": [ "Quetzal" ],
-          "target": [ "Quetzal" ]
+          "source": [ { "text": "Quetzal" } ],
+          "target": [ { "text" : "Quetzal" } ]
         }
       ],
       "metadata" : [
@@ -32,8 +32,8 @@
       "id": "2",
       "subunit": [
         {
-          "source": [ "An application to manipulate and process XLIFF documents" ],
-          "target": [ "XLIFF 文書を編集、または処理 するアプリケーションです。" ]
+          "source": [ { "text": "An application to manipulate and process XLIFF documents" } ],
+          "target": [ { "text": "XLIFF 文書を編集、または処理 するアプリケーションです。" } ]
         }
       ]
     },
@@ -41,8 +41,8 @@
       "id": "3",
       "subunit": [
         {
-          "source": [ "XLIFF Data Manager" ],
-          "target": [ "XLIFF データ・マネージャ" ]
+          "source": [ { "text": "XLIFF Data Manager" } ],
+          "target": [ { "text": "XLIFF データ・マネージャ" } ]
         }
       ]
     }
