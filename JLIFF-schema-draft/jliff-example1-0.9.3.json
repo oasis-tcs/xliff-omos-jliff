@@ -19,14 +19,14 @@
                         { "text": "aaa" },
                         { "id": "c2", "kind": "sc", "dataRef": "d2" },
                         { "text": "text" },
-                        { "id": "c2", "kind": "ec", "dataRef": "d3" }
+                        { "startRef": "c2", "kind": "ec", "dataRef": "d3" }
                     ],
                     "target": [
                         { "id": "c1", "kind": "ph", "dataRef": "d1" },
                         { "text": "AAA" },
                         { "id": "c2", "kind": "sc", "dataRef": "d2" },
                         { "text": "TEXT" },
-                        { "id": "c2", "kind": "ec", "dataRef": "d3" }
+                        { "startRef": "c2", "kind": "ec", "dataRef": "d3" }
                     ]
                 },
                 {

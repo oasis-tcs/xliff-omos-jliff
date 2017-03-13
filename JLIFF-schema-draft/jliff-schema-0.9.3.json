@@ -184,6 +184,7 @@
       "type": "object",
       "properties": {
         "kind": { "type": "string", "enum": [ "ec" ] },
+        "startRef": { "type": "string" },
         "id": { "type": "string" },
         "canCopy": { "type": "boolean" },
         "canDelete": { "type": "boolean" },
@@ -201,7 +202,7 @@
         "text": { "type": "string" }
       },
       "additionalProperties": false,
-      "required": [ "kind" ]
+      "required": [ "kind", "startRef" ]
     },
 
     "element-em": {
