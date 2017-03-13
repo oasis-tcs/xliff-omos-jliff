@@ -73,16 +73,9 @@
     },
 
     "originalData": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "id": { "type": "string" },
-          "data": { "type" : "string" }
-        },
-        "additionalProperties": false,
-        "required": [ "id", "data" ]
-      }
+      "type": "object",
+      "patternProperties": { "^.*$": { "type": "string" } },
+      "additionalProperties": false
     },
 
     "metaData": {
