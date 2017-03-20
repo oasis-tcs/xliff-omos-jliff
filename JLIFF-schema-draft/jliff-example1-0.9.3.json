@@ -16,12 +16,12 @@
                     "canResegment": false,
                     "source": [
                         { "id": "c1", "kind": "ph", "dataRef": "d1" },
-                        { "text": "aaa" },
+                        { "text": " aaa " },
                         { "id": "c2", "kind": "pc", "dataRefStart": "d2", "dataRefEnd": "d3", "text": "text" }
                     ],
                     "target": [
                         { "id": "c1", "kind": "ph", "dataRef": "d1" },
-                        { "text": "AAA" },
+                        { "text": " AAA " },
                         { "id": "c2", "kind": "pc", "dataRefStart": "d2", "dataRefEnd": "d3", "text": "TEXT" }
                     ]
                 },
