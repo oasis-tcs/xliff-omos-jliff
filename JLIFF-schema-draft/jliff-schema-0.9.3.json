@@ -13,8 +13,8 @@
         "id": { "type": "string" },
         "version": { "type": "string" },
         "skeleton": { "$ref": "#/definitions/skeleton" },
-        "group": { "$ref": "#/definitions/groups" },
-        "unit": { "$ref": "#/definitions/units" },
+        "groups": { "$ref": "#/definitions/groups" },
+        "units": { "$ref": "#/definitions/units" },
         "metadata": { "$ref": "#/definitions/metaData" }
       },
       "additionalProperties": false,
@@ -40,8 +40,8 @@
       "type": "object",
       "properties": {
         "notes": { "$ref": "#/definitions/notes" },
-        "group": { "$ref": "#/definitions/groups" },
-        "unit": { "$ref": "#/definitions/units" },
+        "groups": { "$ref": "#/definitions/groups" },
+        "units": { "$ref": "#/definitions/units" },
         "metadata": { "$ref": "#/definitions/metaData" }
       },
       "additionalProperties": false
@@ -64,7 +64,7 @@
         "trgDir": { "$ref": "#/definitions/dir" },
         "type": { "$ref": "#/definitions/type" },
         "notes": { "$ref": "#/definitions/notes" },
-        "subunit": { "$ref": "#/definitions/subunits" },
+        "subunits": { "$ref": "#/definitions/subunits" },
         "originalData": { "$ref": "#/definitions/originalData" },
         "metadata": { "$ref": "#/definitions/metaData" }
       },

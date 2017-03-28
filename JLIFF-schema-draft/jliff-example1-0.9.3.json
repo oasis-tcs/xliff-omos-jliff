@@ -1,7 +1,7 @@
 {
     "id": "fl",
     "version": "1.0",
-    "unit": [
+    "units": [
         {
             "id": "u1",
             "originalData": {
@@ -9,7 +9,7 @@
                 "d2": "[C2]",
                 "d3": "[/C2]"
             },
-            "subunit": [
+            "subunits": [
                 {
                     "type": "segment",
                     "state": "translated",
