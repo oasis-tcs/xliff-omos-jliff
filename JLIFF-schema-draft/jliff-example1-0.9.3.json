@@ -4,11 +4,11 @@
     "unit": [
         {
             "id": "u1",
-            "originalData": [
-                { "id": "d1", "data": "[C1/]" },
-                { "id": "d2", "data": "[C2]" },
-                { "id": "d3", "data": "[/C2]" }
-            ],
+            "originalData": {
+                "d1": "[C1/]",
+                "d2": "[C2]",
+                "d3": "[/C2]"
+            },
             "subunit": [
                 {
                     "type": "segment",
