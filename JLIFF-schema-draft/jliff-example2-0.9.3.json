@@ -2,10 +2,10 @@
   "id": "fl",
   "version": "1.0",
   "skeleton": { "ref": "Graphic Example.psd.skl" },
-  "unit": [
+  "units": [
     {
       "id": "1",
-      "subunit": [
+      "subunits": [
         {
           "source": [ { "text": "Quetzal" } ],
           "target": [ { "text": "Quetzal" } ]
@@ -14,7 +14,7 @@
     },
     {
       "id": "2",
-      "subunit": [
+      "subunits": [
         {
           "source": [ { "text": "An application to manipulate and process XLIFF documents" } ],
           "target": [ { "text": "XLIFF 文書を編集、または処理 するアプリケーションです。" } ]
@@ -23,7 +23,7 @@
     },
     {
       "id": "3",
-      "subunit": [
+      "subunits": [
         {
           "source": [ { "text": "XLIFF Data Manager" } ],
           "target": [ { "text": "XLIFF データ・マネージャ" }]
