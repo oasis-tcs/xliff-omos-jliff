@@ -165,7 +165,6 @@
         "oneOf": [
           { "$ref": "#/definitions/element-ec" },
           { "$ref": "#/definitions/element-em" },
-          { "$ref": "#/definitions/element-pc" },
           { "$ref": "#/definitions/element-ph" },
           { "$ref": "#/definitions/element-sc" },
           { "$ref": "#/definitions/element-sm" },
@@ -178,6 +177,7 @@
       "type": "object",
       "properties": {
         "kind": { "type": "string", "enum": [ "ec" ] },
+        "startRef": { "type": "string" },
         "id": { "type": "string" },
         "canCopy": { "type": "boolean" },
         "canDelete": { "type": "boolean" },
@@ -186,8 +186,7 @@
         "copyOf": { "type": "string" },
         "disp": { "type": "string" },
         "equiv": { "type": "string" },
-        "dataRefEnd": { "type": "string" },
-        "dataRefStart": { "type": "string" },
+        "dataRef": { "type": "string" },
         "subFlows": { "type": "string" },
         "subType": { "type": "string" },
         "type": { "$ref": "#/definitions/type" },
@@ -196,7 +195,7 @@
         "text": { "type": "string" }
       },
       "additionalProperties": false,
-      "required": [ "kind" ]
+      "required": [ "kind", "startRef" ]
     },
 
     "element-em": {
@@ -207,33 +206,6 @@
       },
       "additionalProperties": true,
       "required": [ "kind", "startRef" ]
-    },
-
-    "element-pc": {
-      "type": "object",
-      "properties": {
-        "kind": { "type": "string", "enum": [ "pc" ] },
-        "id": { "type": "string" },
-        "canCopy": { "type": "boolean" },
-        "canDelete": { "type": "boolean" },
-        "canOverlap": { "type": "boolean" },
-        "canReorder": { "type": "boolean" },
-        "copyOf": { "type": "string" },
-        "dispEnd": { "type": "string" },
-        "dispStart": { "type": "string" },
-        "equivEnd": { "type": "string" },
-        "equivStart": { "type": "string" },
-        "dataRefEnd": { "type": "string" },
-        "dataRefStart": { "type": "string" },
-        "subFlowsEnd": { "type": "string" },
-        "subFlowsStart": { "type": "string" },
-        "subType": { "type": "string" },
-        "type": { "$ref": "#/definitions/type" },
-        "dir": { "$ref": "#/definitions/dir" },
-        "text": { "type": "string" }
-      },
-      "additionalProperties": false,
-      "required": [ "id", "kind" ]
     },
 
     "element-ph": {
