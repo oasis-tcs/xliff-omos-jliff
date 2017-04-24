@@ -344,7 +344,8 @@
       "oneOf": [
           {
               "type": "string",
-              "enum": [ "generic", "comment", "term" ]
+              "enum": [ "generic", "comment", "term" ],
+              "default": "generic"
           },
           {
               "type": "string",
