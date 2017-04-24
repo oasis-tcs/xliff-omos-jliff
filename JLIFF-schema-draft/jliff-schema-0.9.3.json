@@ -238,7 +238,7 @@
         "dataRef": { "type": "string" },
         "subFlows": { "type": "string" },
         "subType": { "type": "string" },
-        "type": { "$ref": "#/definitions/type" },
+        "type": { "$ref": "#/definitions/codeType" },
         "dir": { "$ref": "#/definitions/dir" },
         "isolated": { "type": "boolean" },
         "text": { "type": "string" }
@@ -271,7 +271,7 @@
         "dataRef": { "type": "string" },
         "subFlows": { "type": "string" },
         "subtype": { "type": "string" },
-        "type": { "$ref": "#/definitions/type" },
+        "type": { "$ref": "#/definitions/codeType" },
         "text": { "type": "string" }
       },
       "additionalProperties": false,
@@ -293,7 +293,7 @@
         "dataRef": { "type": "string" },
         "subFlows": { "type": "string" },
         "subType": { "type": "string" },
-        "type": { "$ref": "#/definitions/type" },
+        "type": { "$ref": "#/definitions/codeType" },
         "dir": { "$ref": "#/definitions/dir" },
         "isolated": { "type": "boolean" },
         "text": { "type": "string" }
@@ -307,7 +307,7 @@
       "properties": {
         "kind": { "type": "string", "enum": [ "sm" ] },
         "id": { "type": "string" },
-        "type": { "$ref": "#/definitions/type" },
+        "type": { "$ref": "#/definitions/mrkType" },
         "translate": { "type": "boolean", "default": "false" },
         "ref": { "type": "string" },
         "value": { "type": "string" }
@@ -332,7 +332,25 @@
 
     "type": {
       "type": "string",
-      "enum": [ "fmt", "ui", "quote", "link", "image", "term", "other" ]
+      "pattern": "^.+:.+$"
+    },
+
+    "codeType": {
+      "type": "string",
+      "enum": [ "fmt", "ui", "quote", "link", "image", "other" ]
+    },
+
+    "mrkType": {
+      "oneOf": [
+          {
+              "type": "string",
+              "enum": [ "generic", "comment", "term" ]
+          },
+          {
+              "type": "string",
+              "pattern": "^.+:.+$"
+          }
+      ]
     }
 
   }
