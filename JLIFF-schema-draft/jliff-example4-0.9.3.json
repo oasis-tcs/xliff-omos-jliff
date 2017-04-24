@@ -1,0 +1,52 @@
+{
+    "id": "fl",
+    "version": "1.0",
+    "units": [
+        {
+            "id": "u1",
+            "subunits": [
+                {
+                    "source": [
+                        { "text": "Press the " },
+                        { "id": "m1", "kind": "sm", "type": "term" },
+                        { "text": "TAB key" },
+                        { "startRef": "m1", "kind": "em" },
+                        { "text": "." }
+                    ],
+                    "target": [
+                        { "text": "Drücken Sie die " },
+                        { "id": "m2", "kind": "sm", "type": "term" },
+                        { "text": "TAB-TASTE" },
+                        { "startRef": "m1", "kind": "em" },
+                        { "text": "." }
+                    ]
+                }
+            ],
+            "glossary": [
+                {
+                    "ref": "m1",
+                    "term": {
+                        "text": "TAB key",
+                        "source": "publicTermbase"
+                    },
+                    "translations": [
+                        {
+                            "id": "1",
+                            "source": "myTermbase",
+                            "text": "Tabstopptaste"
+                        },
+                        {
+                            "ref": "m2",
+                            "source": "myTermbase",
+                            "text": "TAB-TASTE"
+                        }
+                    ],
+                    "definition": {
+                        "text": "A keyboard key that is traditionally used to insert tab characters into a document.",
+                        "source": "publicTermbase"
+                    }
+                }
+            ]
+        }
+    ]
+}
