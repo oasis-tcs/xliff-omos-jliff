@@ -66,7 +66,8 @@
         "notes": { "$ref": "#/definitions/notes" },
         "subunits": { "$ref": "#/definitions/subunits" },
         "originalData": { "$ref": "#/definitions/originalData" },
-        "metadata": { "$ref": "#/definitions/metaData" }
+        "metadata": { "$ref": "#/definitions/metaData" },
+        "glossary": { "$ref": "#/definitions/glossary" }
       },
       "additionalProperties": false,
       "required": [ "id" ]
@@ -105,6 +106,54 @@
       },
       "additionalProperties": false,
       "required": [ "meta" ]
+    },
+
+    "glossary": {
+        "type": "array",
+        "items": { "$ref": "#/definitions/glossEntry" }
+    },
+
+    "glossEntry": {
+        "type": "object",
+        "properties": {
+            "ref": { "type": "string" },
+            "term": {
+                "type": "object",
+                "$ref": "#/definitions/glossEntryData"
+            },
+            "definition": {
+                "type": "object",
+                "$ref": "#/definitions/glossEntryData"
+            },
+            "translations": {
+                "type": "array",
+                "items": { "$ref": "#/definitions/glossEntryTranslation" }
+            }
+        },
+        "additionalProperties": true,
+        "required": [ "term" ]
+    },
+
+    "glossEntryTranslation": {
+        "type": "object",
+        "properties": {
+            "id": { "type": "string" },
+            "ref": { "type": "string" },
+            "text": { "type": "string" },
+            "source": { "type": "string" }
+        },
+        "additionalProperties": true,
+        "required": [ "text" ]
+    },
+
+    "glossEntryData": {
+        "type": "object",
+        "properties": {
+            "text": { "type": "string" },
+            "source": { "type": "string" }
+        },
+        "additionalProperties": true,
+        "required": [ "text" ]
     },
 
     "subunits": {
@@ -189,7 +238,7 @@
         "dataRef": { "type": "string" },
         "subFlows": { "type": "string" },
         "subType": { "type": "string" },
-        "type": { "$ref": "#/definitions/type" },
+        "type": { "$ref": "#/definitions/codeType" },
         "dir": { "$ref": "#/definitions/dir" },
         "isolated": { "type": "boolean" },
         "text": { "type": "string" }
@@ -222,7 +271,7 @@
         "dataRef": { "type": "string" },
         "subFlows": { "type": "string" },
         "subtype": { "type": "string" },
-        "type": { "$ref": "#/definitions/type" },
+        "type": { "$ref": "#/definitions/codeType" },
         "text": { "type": "string" }
       },
       "additionalProperties": false,
@@ -244,7 +293,7 @@
         "dataRef": { "type": "string" },
         "subFlows": { "type": "string" },
         "subType": { "type": "string" },
-        "type": { "$ref": "#/definitions/type" },
+        "type": { "$ref": "#/definitions/codeType" },
         "dir": { "$ref": "#/definitions/dir" },
         "isolated": { "type": "boolean" },
         "text": { "type": "string" }
@@ -258,7 +307,7 @@
       "properties": {
         "kind": { "type": "string", "enum": [ "sm" ] },
         "id": { "type": "string" },
-        "type": { "$ref": "#/definitions/type" },
+        "type": { "$ref": "#/definitions/mrkType" },
         "translate": { "type": "boolean", "default": "false" },
         "ref": { "type": "string" },
         "value": { "type": "string" }
@@ -283,7 +332,26 @@
 
     "type": {
       "type": "string",
+      "pattern": "^.+:.+$"
+    },
+
+    "codeType": {
+      "type": "string",
       "enum": [ "fmt", "ui", "quote", "link", "image", "other" ]
+    },
+
+    "mrkType": {
+      "oneOf": [
+          {
+              "type": "string",
+              "enum": [ "generic", "comment", "term" ],
+              "default": "generic"
+          },
+          {
+              "type": "string",
+              "pattern": "^.+:.+$"
+          }
+      ]
     }
 
   }
