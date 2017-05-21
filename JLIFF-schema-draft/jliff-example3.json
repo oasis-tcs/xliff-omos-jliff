@@ -18,12 +18,12 @@
             "category": "document",
             "appliesTo": "source",
             "meta": [
-              { "version" : "3" },
-              { "phase": "draft" },
+              { "type": "version", "value": "3" },
+              { "type": "phase", "value": "draft" },
               {
                 "category": "subgroup",
                 "meta": [
-                  { "breakfast" : "eggs" }
+                  { "type": "breakfast", "value": "eggs" }
                 ]
               }
             ]

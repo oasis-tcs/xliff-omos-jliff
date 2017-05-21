@@ -85,7 +85,8 @@
         "id": { "type": "string" },
         "groups": {
           "type": "array",
-          "items": { "$ref": "#/definitions/metaGroup" }
+          "items": { "$ref": "#/definitions/metaGroup" },
+          "minItems": 1
         }
       },
       "additionalProperties": false
@@ -103,7 +104,10 @@
             "oneOf": [
               {
                 "type": "object",
-                "patternProperties": { "^.*$": { "type": "string" } },
+                "properties": {
+                  "type": { "type": "string" },
+                  "value": { "type": "string" }
+                },
                 "additionalProperties": false
               },
               { "$ref": "#/definitions/metaGroup" }
