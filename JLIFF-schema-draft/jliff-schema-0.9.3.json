@@ -80,8 +80,15 @@
     },
 
     "metaData": {
-      "type": "array",
-      "items": { "$ref": "#/definitions/metaGroup" }
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "groups": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/metaGroup" }
+        }
+      },
+      "additionalProperties": false
     },
 
     "metaGroup": {

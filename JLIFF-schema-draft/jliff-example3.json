@@ -11,22 +11,25 @@
           "target": [ { "text" : "Quetzal" } ]
         }
       ],
-      "metadata" : [
-        {
-          "category": "document",
-          "appliesTo": "source",
-          "meta": [
-            { "version" : "3" },
-            { "phase": "draft" },
-            {
-              "category": "subgroup",
-              "meta": [
-                { "breakfast" : "eggs" }
-              ]
-            }
-          ]
-        }
-      ]
+      "metadata": {
+        "id": "md14",
+        "groups": [
+          {
+            "category": "document",
+            "appliesTo": "source",
+            "meta": [
+              { "version" : "3" },
+              { "phase": "draft" },
+              {
+                "category": "subgroup",
+                "meta": [
+                  { "breakfast" : "eggs" }
+                ]
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "2",
