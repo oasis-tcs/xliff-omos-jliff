@@ -1,37 +1,41 @@
 {
     "id": "fl",
     "version": "1.0",
-    "unit": [
+    "units": [
         {
-	    "id": "u1",
-	    "originalData": [
-		{ "id": "d1", "data": "[C1/]" },
-		{ "id": "d2", "data": "[C2]" },
-		{ "id": "d3", "data": "[/C2]" }
-	    ],
-	    "subunit": [
-		{
-		    "segment": true,
-		    "state": "translated",
-		    "canResegment": false,
-		    "source": [
-			{ "id": "c1", "kind": "ph", "dataRef": "d1" },
-			"aaa",
-			{ "id": "c2", "kind": "pc", "dataRefStart": "d2", "dataRefEnd": "d3", "text": "text" }
-		    ],
-		    "target": [
-			{ "id": "c1", "kind": "ph", "dataRef": "d1" },
-			"AAA",
-			{ "id": "c2", "kind": "pc", "dataRefStart": "d2", "dataRefEnd": "d3", "text": "TEXT" }
-		    ]
-		},
-		{
-		    "segment": false,
-		    "source": [
-			".  "
-		    ]
-		}
-	    ]
-	}
+            "id": "u1",
+            "originalData": {
+                "d1": "[C1/]",
+                "d2": "[C2]",
+                "d3": "[/C2]"
+            },
+            "subunits": [
+                {
+                    "type": "segment",
+                    "state": "translated",
+                    "canResegment": false,
+                    "source": [
+                        { "id": "c1", "kind": "ph", "dataRef": "d1" },
+                        { "text": " aaa " },
+                        { "id": "c2", "kind": "sc", "dataRef": "d2" },
+                        { "text": "text" },
+                        { "startRef": "c2", "kind": "ec", "dataRef": "d3" }
+                    ],
+                    "target": [
+                        { "id": "c1", "kind": "ph", "dataRef": "d1" },
+                        { "text": " AAA " },
+                        { "id": "c2", "kind": "sc", "dataRef": "d2" },
+                        { "text": "TEXT" },
+                        { "startRef": "c2", "kind": "ec", "dataRef": "d3" }
+                    ]
+                },
+                {
+                    "type": "ignorable",
+                    "source": [
+                       { "text": ".  " }
+                    ]
+                }
+            ]
+        }
     ]
 }
