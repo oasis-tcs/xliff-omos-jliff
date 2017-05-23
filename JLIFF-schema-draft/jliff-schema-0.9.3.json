@@ -1,11 +1,17 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
 
-  "$id": "urn:oasis:names:tc:xliff-omos:document:jliff:0.9.2",
+  "$id": "urn:oasis:names:tc:xliff-omos:document:jliff:0.9.3",
 
   "$ref": "#/definitions/fragment",
 
   "definitions": {
+
+    "files": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/fragment" },
+      "minItems": 1
+    },
 
     "fragment": {
       "type": "object",
@@ -13,7 +19,6 @@
         "id": { "type": "string" },
         "version": { "type": "string" },
         "skeleton": { "$ref": "#/definitions/skeleton" },
-        "groups": { "$ref": "#/definitions/groups" },
         "units": { "$ref": "#/definitions/units" },
         "metadata": { "$ref": "#/definitions/metaData" }
       },
@@ -30,23 +35,6 @@
       "required": [ "ref" ]
     },
 
-    "groups": {
-      "type": "array",
-      "items": { "$ref": "#/definitions/group" },
-      "minItems": 1
-    },
-
-    "group": {
-      "type": "object",
-      "properties": {
-        "notes": { "$ref": "#/definitions/notes" },
-        "groups": { "$ref": "#/definitions/groups" },
-        "units": { "$ref": "#/definitions/units" },
-        "metadata": { "$ref": "#/definitions/metaData" }
-      },
-      "additionalProperties": false
-    },
-
     "units": {
       "type": "array",
       "items": { "$ref": "#/definitions/unit" },
@@ -60,6 +48,8 @@
         "name": { "type": "string" },
         "canResegment": { "type": "boolean", "default": "false" },
         "translate": { "type": "boolean", "default": "false" },
+        "srcLang": { "type": "string" },
+        "trgLang": { "type": "string" },
         "srcDir": { "$ref": "#/definitions/dir" },
         "trgDir": { "$ref": "#/definitions/dir" },
         "type": { "$ref": "#/definitions/type" },
