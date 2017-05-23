@@ -35,4 +35,6 @@ Changelog
 - Feb 13 2017 0.9.2 Draft version for proposed changes: changed `file` definition name to `fragment`, added optional `metadata` property to `fragment`, `unit`, and `group` (Extensibility and Modularity), added default value for subunit `"segment": { "type": "boolean", "default": "true" }`, unit and subunit `"canResegment": { "type": "boolean", "default": "false" }`, unit and element-sm `"translate": { "type": "boolean", "default": "false" }` and subunit `"state": { "type": "string", "enum": [ "initial", "translated", "reviewed", "final" ], "default": "initial" }`
 - Feb 19 2017 0.9.3 Draft version incorporates proposed changes for segment versus ignorable subunits, updated `metaGroup` with `id` and `appliesTo` properties.
 - Feb 28 2017 0.9.3 Revision of 0.9.3 to refactor schema with `groups`, `units`, and `subunits` arrays of `group`, `unit`, and `subunit`, changed primitive string type in array of elements to object type with `text` string property, and added `subState`.
-- Mar 28 2017 0.9.3 Revision #2 is merged, `unit`=>`units`, `subunit`=>`subunits`, `group`=>`groups`, removed "pc" to align with OM, updated examples.
+- Mar 28 2017 0.9.3 Branches merged, `unit`=>`units`, `subunit`=>`subunits`, `group`=>`groups`, removed "pc" to align with OM, updated examples.
+- Apr 24 2017 0.9.3 Added glossary module with example, `/definitions/type` split in `type, `codeType` and `mrkType`.
+- May 21, 2017 0.9.3 Added optional `id` attribute inside `metaData type`, fixed `type` and `value` keys for `metaData` items.
