@@ -38,3 +38,4 @@ Changelog
 - Mar 28 2017 0.9.3 Branches merged, `unit`=>`units`, `subunit`=>`subunits`, `group`=>`groups`, removed "pc" to align with OM, updated examples.
 - Apr 24 2017 0.9.3 Added glossary module with example, `/definitions/type` split in `type, `codeType` and `mrkType`.
 - May 21, 2017 0.9.3 Added optional `id` attribute inside `metaData type`, fixed `type` and `value` keys for `metaData` items.
+- May 23, 2017 0.9.3 Removed `group(s)`, added "files", added "srcLang"/"trgLang" to "units" in support of inheriting these values in "unit"
