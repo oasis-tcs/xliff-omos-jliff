@@ -1,23 +1,41 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
 
-  "$id": "urn:oasis:names:tc:xliff-omos:document:jliff:0.9.3",
+  "$id": "urn:oasis:names:tc:xliff-omos:document:jliff:0.9.4",
 
-  "$ref": "#/definitions/fragment",
+  "$ref": "#/definitions/jliff",
 
   "definitions": {
+
+    "jliff": {
+      "type": "object",
+      "properties": {
+	"jliff": { "type": "string" },
+        "srcLang": { "type": "string" },
+        "trgLang": { "type": "string" },
+	"files": { "$ref": "#/definitions/files" }
+      },
+      "additionalProperties": false,
+      "required": [ "jliff", "files" ]
+    },
+
+    "files": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/fragment" },
+      "minItems": 1
+    },
 
     "fragment": {
       "type": "object",
       "properties": {
         "id": { "type": "string" },
-        "version": { "type": "string" },
+	"original": { "type": "string" },
         "skeleton": { "$ref": "#/definitions/skeleton" },
         "units": { "$ref": "#/definitions/units" },
         "metadata": { "$ref": "#/definitions/metaData" }
       },
       "additionalProperties": false,
-      "required": [ "id", "version" ]
+      "required": [ "id" ]
     },
 
     "skeleton": {
@@ -42,8 +60,6 @@
         "name": { "type": "string" },
         "canResegment": { "type": "boolean", "default": "false" },
         "translate": { "type": "boolean", "default": "false" },
-        "srcLang": { "type": "string" },
-        "trgLang": { "type": "string" },
         "srcDir": { "$ref": "#/definitions/dir" },
         "trgDir": { "$ref": "#/definitions/dir" },
         "type": { "$ref": "#/definitions/type" },
@@ -235,8 +251,7 @@
         "subType": { "type": "string" },
         "type": { "$ref": "#/definitions/codeType" },
         "dir": { "$ref": "#/definitions/dir" },
-        "isolated": { "type": "boolean" },
-        "text": { "type": "string" }
+        "isolated": { "type": "boolean" }
       },
       "additionalProperties": false,
       "required": [ "kind", "startRef" ]
@@ -266,8 +281,7 @@
         "dataRef": { "type": "string" },
         "subFlows": { "type": "string" },
         "subtype": { "type": "string" },
-        "type": { "$ref": "#/definitions/codeType" },
-        "text": { "type": "string" }
+        "type": { "$ref": "#/definitions/codeType" }
       },
       "additionalProperties": false,
       "required": [ "id", "kind" ]
@@ -290,8 +304,7 @@
         "subType": { "type": "string" },
         "type": { "$ref": "#/definitions/codeType" },
         "dir": { "$ref": "#/definitions/dir" },
-        "isolated": { "type": "boolean" },
-        "text": { "type": "string" }
+        "isolated": { "type": "boolean" }
       },
       "additionalProperties": false,
       "required": [ "id", "kind" ]

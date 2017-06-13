@@ -1,52 +1,58 @@
 {
-  "id": "fl",
-  "version": "1.0",
-  "skeleton": { "ref": "Graphic Example.psd.skl" },
-  "units": [
+  "jliff": "2.0",
+  "srcLang": "en-US",
+  "trgLang": "ja-JP",
+  "files": [
     {
-      "id": "1",
-      "subunits": [
-        {
-          "source": [ { "text": "Quetzal" } ],
-          "target": [ { "text" : "Quetzal" } ]
-        }
-      ],
-      "metadata": {
-        "id": "md14",
-        "groups": [
-          {
-            "category": "document",
-            "appliesTo": "source",
-            "meta": [
-              { "type": "version", "value": "3" },
-              { "type": "phase", "value": "draft" },
-              {
-                "category": "subgroup",
-                "meta": [
-                  { "type": "breakfast", "value": "eggs" }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "id": "2",
-      "subunits": [
-        {
-          "source": [ { "text": "An application to manipulate and process XLIFF documents" } ],
-          "target": [ { "text": "XLIFF 文書を編集、または処理 するアプリケーションです。" } ]
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "subunits": [
-        {
-          "source": [ { "text": "XLIFF Data Manager" } ],
-          "target": [ { "text": "XLIFF データ・マネージャ" } ]
-        }
+      "id": "fl",
+      "skeleton": { "ref": "Graphic Example.psd.skl" },
+      "units": [
+	{
+	  "id": "1",
+	  "subunits": [
+	    {
+	      "source": [ { "text": "Quetzal" } ],
+	      "target": [ { "text": "Quetzal" } ]
+	    }
+	  ],
+	  "metadata": {
+	    "id": "md14",
+	    "groups": [
+	      {
+		"category": "document",
+		"appliesTo": "source",
+		"meta": [
+		  { "type": "version", "value": "3" },
+		  { "type": "phase", "value": "draft" },
+		  {
+		    "category": "subgroup",
+		    "meta": [
+		      { "type": "breakfast", "value": "eggs" }
+		    ]
+		  }
+		]
+	      }
+	    ]
+	  }
+	},
+	{
+	  "id": "2",
+	  "subunits": [
+	    {
+	      "source": [ { "text": "An application to manipulate and process XLIFF documents" } ],
+	      "target": [ { "text": "XLIFF 文書を編集、または処理 するアプリケーションです。" } ]
+	    }
+	  ]
+	},
+	{
+	  "id": "3",
+	  "subunits": [
+	    {
+	      "source": [ { "text": "XLIFF Data Manager" } ],
+	      "target": [ { "text": "XLIFF データ・マネージャ" } ]
+	    }
+	  ]
+	}
       ]
     }
   ]
