@@ -39,4 +39,5 @@ Changelog
 - Apr 24 2017 0.9.3 Added glossary module with example, `/definitions/type` split in `type, `codeType` and `mrkType`.
 - May 21, 2017 0.9.3 Added optional `id` attribute inside `metaData type`, fixed `type` and `value` keys for `metaData` items.
 - May 23, 2017 0.9.3 Removed `group(s)`, added "files", added "srcLang"/"trgLang" to "units" in support of inheriting these values in "unit".
-- June 13, 2017 0.9.4 Added `jliff` root object type with `jliff` version property, `srcLang`, `trgLang` and `files` properties.  Removed `version` property from `fragment` type.  Added `original` property to `fragment` type.  Removed `text` properties from `element-ph`, `element-ec` and `element-sc` types.
+- June 13, 2017 0.9.4 Added `jliff` root object type to the schema with `jliff` version property, `srcLang`, `trgLang` and `files` properties.  Removed `version` property from `fragment` type.  Added `original` property to `fragment` type.  Removed `text` properties from `element-ph`, `element-ec` and `element-sc` types.
+- July 25, 2017 0.9.4 Added `srcDir` and `trgDir` properties with `ltr`, `rtl`, or `auto` enumerated string values.  Restructured the JLIFF object by providing a choice of `files`, `fragment`, `groups`, `units`, `subunits` properties.

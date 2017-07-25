@@ -9,14 +9,63 @@
 
     "jliff": {
       "type": "object",
-      "properties": {
-	"jliff": { "type": "string" },
-        "srcLang": { "type": "string" },
-        "trgLang": { "type": "string" },
-	"files": { "$ref": "#/definitions/files" }
-      },
-      "additionalProperties": false,
-      "required": [ "jliff", "files" ]
+      "oneOf": [
+        { "properties": {
+            "jliff": { "type": "string" },
+            "srcLang": { "type": "string" },
+            "trgLang": { "type": "string" },
+            "srcDir": { "$ref": "#/definitions/dir" },
+            "trgDir": { "$ref": "#/definitions/dir" },
+            "files": { "$ref": "#/definitions/files" }
+          },
+          "additionalProperties": false,
+          "required": [ "jliff", "files" ]
+        },
+        { "properties": {
+            "jliff": { "type": "string" },
+            "srcLang": { "type": "string" },
+            "trgLang": { "type": "string" },
+            "srcDir": { "$ref": "#/definitions/dir" },
+            "trgDir": { "$ref": "#/definitions/dir" },
+            "fragment": { "$ref": "#/definitions/fragment" }
+          },
+          "additionalProperties": false,
+          "required": [ "jliff", "fragment" ]
+        },
+        { "properties": {
+            "jliff": { "type": "string" },
+            "srcLang": { "type": "string" },
+            "trgLang": { "type": "string" },
+            "srcDir": { "$ref": "#/definitions/dir" },
+            "trgDir": { "$ref": "#/definitions/dir" },
+            "groups": { "$ref": "#/definitions/groups" }
+          },
+          "additionalProperties": false,
+          "required": [ "jliff", "groups" ]
+        },
+        { "properties": {
+            "jliff": { "type": "string" },
+            "srcLang": { "type": "string" },
+            "trgLang": { "type": "string" },
+            "srcDir": { "$ref": "#/definitions/dir" },
+            "trgDir": { "$ref": "#/definitions/dir" },
+            "units": { "$ref": "#/definitions/units" }
+          },
+          "additionalProperties": false,
+          "required": [ "jliff", "units" ]
+        },
+        { "properties": {
+            "jliff": { "type": "string" },
+            "srcLang": { "type": "string" },
+            "trgLang": { "type": "string" },
+            "srcDir": { "$ref": "#/definitions/dir" },
+            "trgDir": { "$ref": "#/definitions/dir" },
+            "subunits": { "$ref": "#/definitions/subunits" }
+          },
+          "additionalProperties": false,
+          "required": [ "jliff", "subunits" ]
+        }
+      ]
     },
 
     "files": {
@@ -29,7 +78,7 @@
       "type": "object",
       "properties": {
         "id": { "type": "string" },
-	"original": { "type": "string" },
+        "original": { "type": "string" },
         "skeleton": { "$ref": "#/definitions/skeleton" },
         "units": { "$ref": "#/definitions/units" },
         "metadata": { "$ref": "#/definitions/metaData" }
