@@ -1,6 +1,7 @@
 {
-    "id": "fl",
-    "version": "1.0",
+    "jliff": "2.1",
+    "srcLang": "en",
+    "trgLang": "de",
     "units": [
         {
             "id": "u1",
