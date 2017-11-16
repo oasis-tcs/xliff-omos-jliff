@@ -27,32 +27,10 @@
             "trgLang": { "type": "string" },
             "srcDir": { "$ref": "#/definitions/dir" },
             "trgDir": { "$ref": "#/definitions/dir" },
-            "fragment": { "$ref": "#/definitions/fragment" }
+            "subfiles": { "$ref": "#/definitions/subfiles" }
           },
           "additionalProperties": false,
-          "required": [ "jliff", "fragment" ]
-        },
-        { "properties": {
-            "jliff": { "type": "string" },
-            "srcLang": { "type": "string" },
-            "trgLang": { "type": "string" },
-            "srcDir": { "$ref": "#/definitions/dir" },
-            "trgDir": { "$ref": "#/definitions/dir" },
-            "groups": { "$ref": "#/definitions/groups" }
-          },
-          "additionalProperties": false,
-          "required": [ "jliff", "groups" ]
-        },
-        { "properties": {
-            "jliff": { "type": "string" },
-            "srcLang": { "type": "string" },
-            "trgLang": { "type": "string" },
-            "srcDir": { "$ref": "#/definitions/dir" },
-            "trgDir": { "$ref": "#/definitions/dir" },
-            "units": { "$ref": "#/definitions/units" }
-          },
-          "additionalProperties": false,
-          "required": [ "jliff", "units" ]
+          "required": [ "jliff", "subfiles" ]
         },
         { "properties": {
             "jliff": { "type": "string" },
@@ -70,17 +48,17 @@
 
     "files": {
       "type": "array",
-      "items": { "$ref": "#/definitions/fragment" },
+      "items": { "$ref": "#/definitions/file" },
       "minItems": 1
     },
 
-    "fragment": {
+    "file": {
       "type": "object",
       "properties": {
-        "id": { "type": "string" },
+        "id": { "$ref": "#/definitions/NMTOKEN" },
         "original": { "type": "string" },
         "skeleton": { "$ref": "#/definitions/skeleton" },
-        "units": { "$ref": "#/definitions/units" },
+        "subfiles": { "$ref": "#/definitions/subfiles" },
         "metadata": { "$ref": "#/definitions/metaData" }
       },
       "additionalProperties": false,
@@ -96,6 +74,77 @@
       "required": [ "ref" ]
     },
 
+    "subfiles": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/subfile" },
+      "minItems": 1
+    },
+
+    "subfile": {
+      "type": "object",
+      "oneOf": [
+        {
+	  "properties": {
+	    "id": { "$ref": "#/definitions/NMTOKEN" },
+            "kind": { "type": "string", "default": "unit", "enum": [ "unit" ] },
+	    "name": { "type": "string" },
+	    "canResegment": { "type": "boolean", "default": "false" },
+	    "translate": { "type": "boolean", "default": "false" },
+	    "srcDir": { "$ref": "#/definitions/dir" },
+	    "trgDir": { "$ref": "#/definitions/dir" },
+	    "type": { "$ref": "#/definitions/type" },
+	    "notes": { "$ref": "#/definitions/notes" },
+	    "subunits": { "$ref": "#/definitions/subunits" },
+	    "originalData": { "$ref": "#/definitions/originalData" },
+	    "metadata": { "$ref": "#/definitions/metaData" },
+	    "glossary": { "$ref": "#/definitions/glossary" }
+	  },
+	  "additionalProperties": false,
+	  "required": [ "id" ]
+	},
+        {
+	  "properties": {
+	    "id": { "$ref": "#/definitions/NMTOKEN" },
+            "kind": { "type": "string", "enum": [ "group" ] },
+	    "name": { "type": "string" },
+	    "canResegment": { "type": "boolean", "default": "false" },
+	    "translate": { "type": "boolean", "default": "false" },
+	    "srcDir": { "$ref": "#/definitions/dir" },
+	    "trgDir": { "$ref": "#/definitions/dir" },
+	    "type": { "$ref": "#/definitions/type" },
+	    "subfiles": { "$ref": "#/definitions/subfiles" },
+	    "metadata": { "$ref": "#/definitions/metaData" }
+	  },
+	  "additionalProperties": false,
+	  "required": [ "id", "kind" ]
+	}
+      ]
+    },
+
+    "groups": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/group" },
+      "minItems": 1
+    },
+
+    "group": {
+      "type": "object",
+      "properties": {
+	"id": { "$ref": "#/definitions/NMTOKEN" },
+	"type": { "type": "string", "enum": [ "group" ] },
+	"name": { "type": "string" },
+	"canResegment": { "type": "boolean", "default": "false" },
+	"translate": { "type": "boolean", "default": "false" },
+	"srcDir": { "$ref": "#/definitions/dir" },
+	"trgDir": { "$ref": "#/definitions/dir" },
+	"type": { "$ref": "#/definitions/type" },
+	"subfiles": { "$ref": "#/definitions/subfiles" },
+	"metadata": { "$ref": "#/definitions/metaData" }
+      },
+      "additionalProperties": false,
+      "required": [ "id" ]
+    },
+
     "units": {
       "type": "array",
       "items": { "$ref": "#/definitions/unit" },
@@ -105,18 +154,18 @@
     "unit": {
       "type": "object",
       "properties": {
-        "id": { "type": "string" },
-        "name": { "type": "string" },
-        "canResegment": { "type": "boolean", "default": "false" },
-        "translate": { "type": "boolean", "default": "false" },
-        "srcDir": { "$ref": "#/definitions/dir" },
-        "trgDir": { "$ref": "#/definitions/dir" },
-        "type": { "$ref": "#/definitions/type" },
-        "notes": { "$ref": "#/definitions/notes" },
-        "subunits": { "$ref": "#/definitions/subunits" },
-        "originalData": { "$ref": "#/definitions/originalData" },
-        "metadata": { "$ref": "#/definitions/metaData" },
-        "glossary": { "$ref": "#/definitions/glossary" }
+	"id": { "$ref": "#/definitions/NMTOKEN" },
+	"name": { "type": "string" },
+	"canResegment": { "type": "boolean", "default": "false" },
+	"translate": { "type": "boolean", "default": "false" },
+	"srcDir": { "$ref": "#/definitions/dir" },
+	"trgDir": { "$ref": "#/definitions/dir" },
+	"type": { "$ref": "#/definitions/type" },
+	"notes": { "$ref": "#/definitions/notes" },
+	"subunits": { "$ref": "#/definitions/subunits" },
+	"originalData": { "$ref": "#/definitions/originalData" },
+	"metadata": { "$ref": "#/definitions/metaData" },
+	"glossary": { "$ref": "#/definitions/glossary" }
       },
       "additionalProperties": false,
       "required": [ "id" ]
@@ -131,7 +180,7 @@
     "metaData": {
       "type": "object",
       "properties": {
-        "id": { "type": "string" },
+        "id": { "$ref": "#/definitions/NMTOKEN" },
         "groups": {
           "type": "array",
           "items": { "$ref": "#/definitions/metaGroup" },
@@ -144,7 +193,7 @@
     "metaGroup": {
       "type": "object",
       "properties": {
-        "id": { "type": "string" },
+        "id": { "$ref": "#/definitions/NMTOKEN" },
         "appliesTo": { "type": "string", "enum": [ "source", "target", "ignorable" ] },
         "category": { "type": "string" },
         "meta": { 
@@ -227,8 +276,8 @@
       "oneOf": [
         {
           "properties": {
-            "id": { "type": "string" },
-            "type": { "type": "string", "default": "segment", "enum": [ "segment" ] },
+            "id": { "$ref": "#/definitions/NMTOKEN" },
+            "kind": { "type": "string", "default": "segment", "enum": [ "segment" ] },
             "canResegment": { "type": "boolean" },
             "state": { "type": "string", "enum": [ "initial", "translated", "reviewed", "final" ], "default": "initial" },
             "subState": { "type": "string", "pattern": "^.*:.*$" },
@@ -240,13 +289,13 @@
         },
         {
           "properties": {
-            "id": { "type": "string" },
-            "type": { "type": "string", "enum": ["ignorable"] },
+            "id": { "$ref": "#/definitions/NMTOKEN" },
+            "kind": { "type": "string", "enum": ["ignorable"] },
             "source": { "$ref": "#/definitions/elements" },
             "target": { "$ref": "#/definitions/elements" }
           },
           "additionalProperties": false,
-          "required": [ "type", "source" ]
+          "required": [ "kind", "source" ]
         }
       ]
     },
@@ -260,7 +309,7 @@
     "note": {
       "type": "object",
       "properties": {
-        "id": { "type": "string" },
+        "id": { "$ref": "#/definitions/NMTOKEN" },
         "appliesTo": { "type": "string", "enum": [ "source", "target" ] },
         "category": { "type": "string" },
         "priority": { "type": "integer", "minimum": 1, "maximum": 10 }
@@ -287,7 +336,7 @@
       "properties": {
         "kind": { "type": "string", "enum": [ "ec" ] },
         "startRef": { "type": "string" },
-        "id": { "type": "string" },
+        "id": { "$ref": "#/definitions/NMTOKEN" },
         "canCopy": { "type": "boolean" },
         "canDelete": { "type": "boolean" },
         "canOverlap": { "type": "boolean" },
@@ -320,7 +369,7 @@
       "type": "object",
       "properties": {
         "kind": { "type": "string", "enum": [ "ph" ] },
-        "id": { "type": "string" },
+        "id": { "$ref": "#/definitions/NMTOKEN" },
         "canCopy": { "type": "boolean" },
         "canDelete": { "type": "boolean" },
         "canReorder": { "type": "boolean" },
@@ -340,7 +389,7 @@
       "type": "object",
       "properties": {
         "kind": { "type": "string", "enum": [ "sc" ] },
-        "id": { "type": "string" },
+        "id": { "$ref": "#/definitions/NMTOKEN" },
         "canCopy": { "type": "boolean" },
         "canDelete": { "type": "boolean" },
         "canOverlap": { "type": "boolean" },
@@ -363,7 +412,7 @@
       "type": "object",
       "properties": {
         "kind": { "type": "string", "enum": [ "sm" ] },
-        "id": { "type": "string" },
+        "id": { "$ref": "#/definitions/NMTOKEN" },
         "type": { "$ref": "#/definitions/mrkType" },
         "translate": { "type": "boolean", "default": "false" },
         "ref": { "type": "string" },
@@ -409,6 +458,11 @@
               "pattern": "^.+:.+$"
           }
       ]
+    },
+
+    "NMTOKEN": {
+      "type": "string",
+      "pattern": "^[-._:A-Za-z0-9]+$"
     }
 
   }

@@ -5,7 +5,7 @@
     "files": [
 	{
 	    "id": "fl",
-	    "units": [
+	    "subfiles": [
 		{
 		    "id": "u1",
 		    "originalData": {

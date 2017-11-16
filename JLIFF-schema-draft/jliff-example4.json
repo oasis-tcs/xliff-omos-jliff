@@ -2,7 +2,7 @@
     "jliff": "2.1",
     "srcLang": "en",
     "trgLang": "de",
-    "units": [
+    "subfiles": [
         {
             "id": "u1",
             "subunits": [

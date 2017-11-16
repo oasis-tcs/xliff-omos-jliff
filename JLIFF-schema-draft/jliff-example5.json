@@ -1,0 +1,35 @@
+{
+    "jliff": "2.1",
+    "srcLang": "en",
+    "trgLang": "de",
+    "subfiles": [
+        {
+            "id": "u1",
+	    "kind": "group",
+            "subfiles": [
+                {
+		    "id": "u2",
+		    "subunits": [
+		        {
+			    "kind": "ignorable",
+			    "source": [
+				{ "text": "Press the " },
+				{ "id": "m1", "kind": "sm", "type": "term" },
+				{ "text": "TAB key" },
+				{ "startRef": "m1", "kind": "em" },
+				{ "text": "." }
+			    ],
+			    "target": [
+				{ "text": "Drücken Sie die " },
+				{ "id": "m2", "kind": "sm", "type": "term" },
+				{ "text": "TAB-TASTE" },
+				{ "startRef": "m1", "kind": "em" },
+				{ "text": "." }
+			    ]
+			}
+                    ]
+                }
+            ]
+        }
+    ]
+}

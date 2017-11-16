@@ -6,7 +6,7 @@
     {
       "id": "fl",
       "skeleton": { "ref": "Graphic Example.psd.skl" },
-      "units": [
+      "subfiles": [
 	{
 	  "id": "1",
 	  "subunits": [
