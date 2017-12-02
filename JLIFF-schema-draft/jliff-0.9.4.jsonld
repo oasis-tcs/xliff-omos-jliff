@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "xliff": "urn:oasis:names:tc:xliff:document:2.0",
+    "gls": "urn:oasis:names:tc:xliff:glossary:2.0",
+    "mtc": "urn:oasis:names:tc:xliff:matches:2.0",
+    "fs": "urn:oasis:names:tc:xliff:fs:2.0",
+    "md": "urn:oasis:names:tc:xliff:metadata:2.0",
+    "res": "urn:oasis:names:tc:xliff:resourcedata:2.0",
+    "ctr": "urn:oasis:names:tc:xliff:changetracking:2.0",
+    "slr": "urn:oasis:names:tc:xliff:sizerestriction:2.0",
+    "val": "urn:oasis:names:tc:xliff:validation:2.0",
+    "its": "https://www.w3.org/2005/11/its/",
+    "itsm": "urn:oasis:names:tc:xliff:itsm:2.1"
+  }
+}
