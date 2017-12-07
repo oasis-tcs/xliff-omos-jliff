@@ -15,7 +15,7 @@
 		    },
 		    "subunits": [
 			{
-			    "type": "segment",
+			    "kind": "segment",
 			    "state": "translated",
 			    "canResegment": false,
 			    "source": [
@@ -34,7 +34,7 @@
 			    ]
 			},
 			{
-			    "type": "ignorable",
+			    "kind": "ignorable",
 			    "source": [
 			       { "text": ".  " }
 			    ]
