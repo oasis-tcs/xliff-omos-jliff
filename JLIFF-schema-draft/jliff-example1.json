@@ -3,45 +3,59 @@
     "srcLang": "en",
     "trgLang": "fr",
     "files": [
-	{
-	    "id": "fl",
-	    "subfiles": [
-		{
-		    "id": "u1",
-		    "originalData": {
-			"d1": "[C1/]",
-			"d2": "[C2]",
-			"d3": "[/C2]"
-		    },
-		    "subunits": [
-			{
-			    "kind": "segment",
-			    "state": "translated",
-			    "canResegment": false,
-			    "source": [
-				{ "id": "c1", "kind": "ph", "dataRef": "d1" },
-				{ "text": " aaa " },
-				{ "id": "c2", "kind": "sc", "dataRef": "d2" },
-				{ "text": "text" },
-				{ "startRef": "c2", "kind": "ec", "dataRef": "d3" }
-			    ],
-			    "target": [
-				{ "id": "c1", "kind": "ph", "dataRef": "d1" },
-				{ "text": " AAA " },
-				{ "id": "c2", "kind": "sc", "dataRef": "d2" },
-				{ "text": "TEXT" },
-				{ "startRef": "c2", "kind": "ec", "dataRef": "d3" }
-			    ]
-			},
-			{
-			    "kind": "ignorable",
-			    "source": [
-			       { "text": ".  " }
-			    ]
-			}
-		    ]
-		}
-	    ]
-	}
+        {
+            "id": "fl",
+            "subfiles": [
+                {
+                    "id": "u1",
+                    "originalData": {
+                        "d1": "[C1/]",
+                        "d2": "[C2]",
+                        "d3": "[/C2]"
+                    },
+                    "subunits": [
+                        {
+                            "kind": "segment",
+                            "state": "translated",
+                            "canResegment": false,
+                            "source": [
+                                { "id": "c1", "kind": "ph", "dataRef": "d1" },
+                                { "text": " aaa " },
+                                { "id": "c2", "kind": "sc", "dataRef": "d2" },
+                                { "text": "text" },
+                                { "startRef": "c2", "kind": "ec", "dataRef": "d3" }
+                            ],
+                            "target": [
+                                { "id": "c1", "kind": "ph", "dataRef": "d1" },
+                                { "text": " AAA " },
+                                { "id": "c2", "kind": "sc", "dataRef": "d2" },
+                                { "text": "TEXT" },
+                                { "startRef": "c2", "kind": "ec", "dataRef": "d3" }
+                            ]
+                        },
+                        {
+                            "kind": "ignorable",
+                            "source": [
+                               { "text": ".  " }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "kind": "group",
+                    "id": "g1",
+                    "subfiles": [
+                        {
+                            "kind": "unit",
+                            "id": "u2"
+                        },
+                        {
+                            "kind": "group",
+                            "id": "g2"
+                        }
+                    ]
+                }
+            ]
+        }
     ]
 }
