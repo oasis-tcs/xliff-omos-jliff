@@ -32,7 +32,7 @@
             "trgLang": { "type": "string" },
             "srcDir": { "$ref": "#/definitions/dir" },
             "trgDir": { "$ref": "#/definitions/dir" },
-            "subfiles": { "$ref": "#/definitions/subfiles" }
+            "subfiles": { "$ref": "#/definitions/subitems" }
           },
           "additionalProperties": false,
           "required": [ "jliff", "subfiles" ]
@@ -67,9 +67,9 @@
         "id": { "$ref": "#/definitions/NMTOKEN" },
         "original": { "type": "string" },
         "skeleton": { "$ref": "#/definitions/skeleton" },
-        "subfiles": { "$ref": "#/definitions/subfiles" },
+        "subfiles": { "$ref": "#/definitions/subitems" },
         "metadata": { "$ref": "#/definitions/metaData" },
-        "user":     { "$ref": "#/definitions/extensionsData" }
+        "userdata": { "$ref": "#/definitions/extensionsData" }
       },
       "additionalProperties": false,
       "required": [ "id" ]
@@ -84,15 +84,15 @@
       "required": [ "ref" ]
     },
 
-    "subfiles": {
+    "subitems": {
       "description": "An array of units and groups",
       "type": "array",
-      "items": { "$ref": "#/definitions/subfile" },
+      "items": { "$ref": "#/definitions/subitem" },
       "minItems": 1
     },
 
-    "subfile": {
-      "description": "A subfile is one of: 1) unit or 2) group, as specified by the kind property, defaults to unit",
+    "subitem": {
+      "description": "A subitem is one of: 1) unit or 2) group, as specified by the kind property, defaults to unit",
       "type": "object",
       "oneOf": [
         {
@@ -110,7 +110,7 @@
             "originalData": { "$ref": "#/definitions/originalData" },
             "metadata": { "$ref": "#/definitions/metaData" },
             "glossary": { "$ref": "#/definitions/glossary" },
-            "user":     { "$ref": "#/definitions/extensionsData" }
+            "userdata": { "$ref": "#/definitions/extensionsData" }
           },
           "additionalProperties": false,
           "required": [ "id" ]
@@ -125,9 +125,9 @@
             "srcDir": { "$ref": "#/definitions/dir" },
             "trgDir": { "$ref": "#/definitions/dir" },
             "type": { "$ref": "#/definitions/type" },
-            "subfiles": { "$ref": "#/definitions/subfiles" },
+            "subgroups": { "$ref": "#/definitions/subitems" },
             "metadata": { "$ref": "#/definitions/metaData" },
-            "user":     { "$ref": "#/definitions/extensionsData" }
+            "userdata": { "$ref": "#/definitions/extensionsData" }
           },
           "additionalProperties": false,
           "required": [ "id", "kind" ]
@@ -143,7 +143,7 @@
     },
 
     "group": {
-      "description": "A group with optional subfiles (an array of units and groups)",
+      "description": "A group with optional subgroups (an array of units and groups)",
       "type": "object",
       "properties": {
         "id": { "$ref": "#/definitions/NMTOKEN" },
@@ -154,9 +154,9 @@
         "srcDir": { "$ref": "#/definitions/dir" },
         "trgDir": { "$ref": "#/definitions/dir" },
         "type": { "$ref": "#/definitions/type" },
-        "subfiles": { "$ref": "#/definitions/subfiles" },
+        "subgroups": { "$ref": "#/definitions/subitems" },
         "metadata": { "$ref": "#/definitions/metaData" },
-        "user":     { "$ref": "#/definitions/extensionsData" }
+        "userdata": { "$ref": "#/definitions/extensionsData" }
       },
       "additionalProperties": false,
       "required": [ "id" ]
@@ -186,7 +186,7 @@
         "originalData": { "$ref": "#/definitions/originalData" },
         "metadata": { "$ref": "#/definitions/metaData" },
         "glossary": { "$ref": "#/definitions/glossary" },
-        "user":     { "$ref": "#/definitions/extensionsData" }
+        "userdata": { "$ref": "#/definitions/extensionsData" }
       },
       "additionalProperties": false,
       "required": [ "id" ]

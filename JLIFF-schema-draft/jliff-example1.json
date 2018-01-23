@@ -44,7 +44,7 @@
                 {
                     "kind": "group",
                     "id": "g1",
-                    "subfiles": [
+                    "subgroups": [
                         {
                             "kind": "unit",
                             "id": "u2"
