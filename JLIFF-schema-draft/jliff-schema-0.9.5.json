@@ -1,0 +1,508 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+
+  "$id": "urn:oasis:names:tc:xliff-omos:document:jliff:0.9.5",
+
+  "$ref": "#/definitions/jliff",
+
+  "definitions": {
+
+    "jliff": {
+      "description": "The JLIFF root object has a required jliff property with the JLIFF version and one of the properties: 1) files, 2) subfiles, or 3) subunits",
+      "type": "object",
+      "oneOf": [
+        {
+          "properties": {
+            "jliff": { "type": "string" },
+            "@context": { "$ref": "#/definitions/JSON-LD-context" },
+            "srcLang": { "type": "string" },
+            "trgLang": { "type": "string" },
+            "srcDir": { "$ref": "#/definitions/dir" },
+            "trgDir": { "$ref": "#/definitions/dir" },
+            "files": { "$ref": "#/definitions/files" }
+          },
+          "additionalProperties": false,
+          "required": [ "jliff", "files" ]
+        },
+        {
+          "properties": {
+            "jliff": { "type": "string" },
+            "@context": { "$ref": "#/definitions/JSON-LD-context" },
+            "srcLang": { "type": "string" },
+            "trgLang": { "type": "string" },
+            "srcDir": { "$ref": "#/definitions/dir" },
+            "trgDir": { "$ref": "#/definitions/dir" },
+            "subfiles": { "$ref": "#/definitions/subitems" }
+          },
+          "additionalProperties": false,
+          "required": [ "jliff", "subfiles" ]
+        },
+        {
+          "properties": {
+            "jliff": { "type": "string" },
+            "@context": { "$ref": "#/definitions/JSON-LD-context" },
+            "srcLang": { "type": "string" },
+            "trgLang": { "type": "string" },
+            "srcDir": { "$ref": "#/definitions/dir" },
+            "trgDir": { "$ref": "#/definitions/dir" },
+            "subunits": { "$ref": "#/definitions/subunits" }
+          },
+          "additionalProperties": false,
+          "required": [ "jliff", "subunits" ]
+        }
+      ]
+    },
+
+    "files": {
+      "description": "An array of files",
+      "type": "array",
+      "items": { "$ref": "#/definitions/file" },
+      "minItems": 1
+    },
+
+    "file": {
+      "description": "A file with optional subfiles (an array of units and groups)",
+      "type": "object",
+      "properties": {
+        "id": { "$ref": "#/definitions/NMTOKEN" },
+        "original": { "type": "string" },
+        "skeleton": { "$ref": "#/definitions/skeleton" },
+        "subfiles": { "$ref": "#/definitions/subitems" },
+        "metadata": { "$ref": "#/definitions/metaData" },
+        "userdata": { "$ref": "#/definitions/extensionsData" }
+      },
+      "additionalProperties": false,
+      "required": [ "id" ]
+    },
+
+    "skeleton": {
+      "type": "object",
+      "properties": {
+        "ref": { "type": "string" }
+      },
+      "additionalProperties": false,
+      "required": [ "ref" ]
+    },
+
+    "subitems": {
+      "description": "An array of units and groups",
+      "type": "array",
+      "items": { "$ref": "#/definitions/subitem" },
+      "minItems": 1
+    },
+
+    "subitem": {
+      "description": "A subitem is one of: 1) unit or 2) group, as specified by the kind property, defaults to unit",
+      "type": "object",
+      "oneOf": [
+        {
+          "properties": {
+            "id": { "$ref": "#/definitions/NMTOKEN" },
+            "kind": { "type": "string", "default": "unit", "enum": [ "unit" ] },
+            "name": { "type": "string" },
+            "canResegment": { "type": "boolean", "default": "false" },
+            "translate": { "type": "boolean", "default": "false" },
+            "srcDir": { "$ref": "#/definitions/dir" },
+            "trgDir": { "$ref": "#/definitions/dir" },
+            "type": { "$ref": "#/definitions/type" },
+            "notes": { "$ref": "#/definitions/notes" },
+            "subunits": { "$ref": "#/definitions/subunits" },
+            "originalData": { "$ref": "#/definitions/originalData" },
+            "metadata": { "$ref": "#/definitions/metaData" },
+            "glossary": { "$ref": "#/definitions/glossary" },
+            "userdata": { "$ref": "#/definitions/extensionsData" }
+          },
+          "additionalProperties": false,
+          "required": [ "id" ]
+        },
+        {
+          "properties": {
+            "id": { "$ref": "#/definitions/NMTOKEN" },
+            "kind": { "type": "string", "enum": [ "group" ] },
+            "name": { "type": "string" },
+            "canResegment": { "type": "boolean", "default": "false" },
+            "translate": { "type": "boolean", "default": "false" },
+            "srcDir": { "$ref": "#/definitions/dir" },
+            "trgDir": { "$ref": "#/definitions/dir" },
+            "type": { "$ref": "#/definitions/type" },
+            "subgroups": { "$ref": "#/definitions/subitems" },
+            "metadata": { "$ref": "#/definitions/metaData" },
+            "userdata": { "$ref": "#/definitions/extensionsData" }
+          },
+          "additionalProperties": false,
+          "required": [ "id", "kind" ]
+        }
+      ]
+    },
+
+    "groups": {
+      "description": "An array of groups",
+      "type": "array",
+      "items": { "$ref": "#/definitions/group" },
+      "minItems": 1
+    },
+
+    "group": {
+      "description": "A group with optional subgroups (an array of units and groups)",
+      "type": "object",
+      "properties": {
+        "id": { "$ref": "#/definitions/NMTOKEN" },
+        "kind": { "type": "string", "enum": [ "group" ] },
+        "name": { "type": "string" },
+        "canResegment": { "type": "boolean", "default": "false" },
+        "translate": { "type": "boolean", "default": "false" },
+        "srcDir": { "$ref": "#/definitions/dir" },
+        "trgDir": { "$ref": "#/definitions/dir" },
+        "type": { "$ref": "#/definitions/type" },
+        "subgroups": { "$ref": "#/definitions/subitems" },
+        "metadata": { "$ref": "#/definitions/metaData" },
+        "userdata": { "$ref": "#/definitions/extensionsData" }
+      },
+      "additionalProperties": false,
+      "required": [ "id" ]
+    },
+
+    "units": {
+      "description": "An array of units",
+      "type": "array",
+      "items": { "$ref": "#/definitions/unit" },
+      "minItems": 1
+    },
+
+    "unit": {
+      "description": "A unit with optional subunits (an array of segment and ignorable)",
+      "type": "object",
+      "properties": {
+        "id": { "$ref": "#/definitions/NMTOKEN" },
+        "kind": { "type": "string", "enum": [ "unit" ] },
+        "name": { "type": "string" },
+        "canResegment": { "type": "boolean", "default": "false" },
+        "translate": { "type": "boolean", "default": "false" },
+        "srcDir": { "$ref": "#/definitions/dir" },
+        "trgDir": { "$ref": "#/definitions/dir" },
+        "type": { "$ref": "#/definitions/type" },
+        "notes": { "$ref": "#/definitions/notes" },
+        "subunits": { "$ref": "#/definitions/subunits" },
+        "originalData": { "$ref": "#/definitions/originalData" },
+        "metadata": { "$ref": "#/definitions/metaData" },
+        "glossary": { "$ref": "#/definitions/glossary" },
+        "userdata": { "$ref": "#/definitions/extensionsData" }
+      },
+      "additionalProperties": false,
+      "required": [ "id" ]
+    },
+
+    "subunits": {
+      "description": "An array of subunits (an array of segment and ignorable)",
+      "type": "array",
+      "items": { "$ref": "#/definitions/subunit" },
+      "minItems": 1
+    },
+
+    "subunit": {
+      "description": "A subunit is one of: 1) a segment or 2) ignorable, as specified by kind, defaults to segment",
+      "type": "object",
+      "oneOf": [
+        {
+          "properties": {
+            "id": { "$ref": "#/definitions/NMTOKEN" },
+            "kind": { "type": "string", "default": "segment", "enum": [ "segment" ] },
+            "canResegment": { "type": "boolean" },
+            "state": { "type": "string", "enum": [ "initial", "translated", "reviewed", "final" ], "default": "initial" },
+            "subState": { "type": "string", "pattern": "^.*:.*$" },
+            "source": { "$ref": "#/definitions/elements" },
+            "target": { "$ref": "#/definitions/elements" }
+          },
+          "additionalProperties": false,
+          "required": [ "source" ]
+        },
+        {
+          "properties": {
+            "id": { "$ref": "#/definitions/NMTOKEN" },
+            "kind": { "type": "string", "enum": ["ignorable"] },
+            "source": { "$ref": "#/definitions/elements" },
+            "target": { "$ref": "#/definitions/elements" }
+          },
+          "additionalProperties": false,
+          "required": [ "kind", "source" ]
+        }
+      ]
+    },
+
+    "originalData": {
+      "type": "object",
+      "patternProperties": { "^.*$": { "type": "string" } },
+      "additionalProperties": false
+    },
+
+    "metaData": {
+      "type": "object",
+      "properties": {
+        "id": { "$ref": "#/definitions/NMTOKEN" },
+        "groups": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/metaGroup" },
+          "minItems": 1
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "metaGroup": {
+      "type": "object",
+      "properties": {
+        "id": { "$ref": "#/definitions/NMTOKEN" },
+        "appliesTo": { "type": "string", "enum": [ "source", "target", "ignorable" ] },
+        "category": { "type": "string" },
+        "meta": { 
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "type": { "type": "string" },
+                  "value": { "type": "string" }
+                },
+                "additionalProperties": false
+              },
+              { "$ref": "#/definitions/metaGroup" }
+            ]
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [ "meta" ]
+    },
+
+    "glossary": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/glossEntry" }
+    },
+
+    "glossEntry": {
+      "type": "object",
+      "properties": {
+        "ref": { "type": "string" },
+        "term": {
+          "type": "object",
+          "$ref": "#/definitions/glossEntryData"
+        },
+        "definition": {
+          "type": "object",
+          "$ref": "#/definitions/glossEntryData"
+        },
+        "translations": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/glossEntryTranslation" }
+        }
+      },
+      "additionalProperties": true,
+      "required": [ "term" ]
+    },
+
+    "glossEntryTranslation": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "ref": { "type": "string" },
+        "text": { "type": "string" },
+        "source": { "type": "string" }
+      },
+      "additionalProperties": true,
+      "required": [ "text" ]
+    },
+
+    "glossEntryData": {
+      "type": "object",
+      "properties": {
+        "text": { "type": "string" },
+        "source": { "type": "string" }
+      },
+      "additionalProperties": true,
+      "required": [ "text" ]
+    },
+
+    "extensionsData": {
+      "description": "An object that maps an extension's fully qualified name to the extension data comprising an unconstrained object",
+      "type": "object",
+      "patternProperties": { "^[-.:_A-Za-z0-9]+$": { "type": "object" } },
+      "additionalProperties": false
+    },
+
+    "notes": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/note" },
+      "minItems": 1
+    },
+
+    "note": {
+      "type": "object",
+      "properties": {
+        "id": { "$ref": "#/definitions/NMTOKEN" },
+        "appliesTo": { "type": "string", "enum": [ "source", "target" ] },
+        "category": { "type": "string" },
+        "priority": { "type": "integer", "minimum": 1, "maximum": 10 }
+      },
+      "additionalProperties": false
+    },
+
+    "elements": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          { "$ref": "#/definitions/element-ec" },
+          { "$ref": "#/definitions/element-em" },
+          { "$ref": "#/definitions/element-ph" },
+          { "$ref": "#/definitions/element-sc" },
+          { "$ref": "#/definitions/element-sm" },
+          { "$ref": "#/definitions/element-text" }
+        ]
+      }
+    },
+
+    "element-ec": {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string", "enum": [ "ec" ] },
+        "startRef": { "type": "string" },
+        "id": { "$ref": "#/definitions/NMTOKEN" },
+        "canCopy": { "type": "boolean" },
+        "canDelete": { "type": "boolean" },
+        "canOverlap": { "type": "boolean" },
+        "canReorder": { "type": "boolean" },
+        "copyOf": { "type": "string" },
+        "disp": { "type": "string" },
+        "equiv": { "type": "string" },
+        "dataRef": { "type": "string" },
+        "subFlows": { "type": "string" },
+        "subType": { "type": "string" },
+        "type": { "$ref": "#/definitions/codeType" },
+        "dir": { "$ref": "#/definitions/dir" },
+        "isolated": { "type": "boolean" }
+      },
+      "additionalProperties": false,
+      "required": [ "kind", "startRef" ]
+    },
+
+    "element-em": {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string", "enum": [ "em" ] },
+        "startRef": { "type": "string" }
+      },
+      "additionalProperties": true,
+      "required": [ "kind", "startRef" ]
+    },
+
+    "element-ph": {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string", "enum": [ "ph" ] },
+        "id": { "$ref": "#/definitions/NMTOKEN" },
+        "canCopy": { "type": "boolean" },
+        "canDelete": { "type": "boolean" },
+        "canReorder": { "type": "boolean" },
+        "copyOf": { "type": "string" },
+        "disp": { "type": "string" },
+        "equiv": { "type": "string" },
+        "dataRef": { "type": "string" },
+        "subFlows": { "type": "string" },
+        "subtype": { "type": "string" },
+        "type": { "$ref": "#/definitions/codeType" }
+      },
+      "additionalProperties": false,
+      "required": [ "id", "kind" ]
+    },
+
+    "element-sc": {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string", "enum": [ "sc" ] },
+        "id": { "$ref": "#/definitions/NMTOKEN" },
+        "canCopy": { "type": "boolean" },
+        "canDelete": { "type": "boolean" },
+        "canOverlap": { "type": "boolean" },
+        "canReorder": { "type": "boolean" },
+        "copyOf": { "type": "string" },
+        "disp": { "type": "string" },
+        "equiv": { "type": "string" },
+        "dataRef": { "type": "string" },
+        "subFlows": { "type": "string" },
+        "subType": { "type": "string" },
+        "type": { "$ref": "#/definitions/codeType" },
+        "dir": { "$ref": "#/definitions/dir" },
+        "isolated": { "type": "boolean" }
+      },
+      "additionalProperties": false,
+      "required": [ "id", "kind" ]
+    },
+
+    "element-sm": {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string", "enum": [ "sm" ] },
+        "id": { "$ref": "#/definitions/NMTOKEN" },
+        "type": { "$ref": "#/definitions/mrkType" },
+        "translate": { "type": "boolean", "default": "false" },
+        "ref": { "type": "string" },
+        "value": { "type": "string" }
+      },
+      "additionalProperties": true,
+      "required": [ "id", "kind" ]
+    },
+
+    "element-text": {
+      "type": "object",
+      "properties": {
+        "text": { "type": "string" }
+      },
+      "additionalProperties": false,
+      "required": [ "text" ]
+    },
+
+    "dir": {
+      "type": "string",
+      "enum": [ "ltr", "rtl", "auto" ]
+    },
+
+    "type": {
+      "type": "string",
+      "pattern": "^.+:.+$"
+    },
+
+    "codeType": {
+      "type": "string",
+      "enum": [ "fmt", "ui", "quote", "link", "image", "other" ]
+    },
+
+    "mrkType": {
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [ "generic", "comment", "term" ],
+          "default": "generic"
+        },
+        {
+          "type": "string",
+          "pattern": "^.+:.+$"
+        }
+      ]
+    },
+
+    "JSON-LD-context": {
+      "description": "An embedded JSON-LD-context with prefix-name pairs",
+      "type": "object",
+      "patternProperties": { "^[-._A-Za-z0-9]+$": { "type": "string" } },
+      "additionalProperties": false
+    },
+
+    "NMTOKEN": {
+      "description": "XSD NMTOKEN type for XLIFF interoperability, the type of id properties",
+      "type": "string",
+      "pattern": "^[-._:A-Za-z0-9]+$"
+    }
+
+  }
+
+}
