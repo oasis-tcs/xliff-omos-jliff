@@ -22,7 +22,7 @@
                         {
                             "kind": "segment",
                             "state": "translated",
-                            "canResegment": false,
+                            "canResegment": "no",
                             "source": [
                                 { "id": "c1", "kind": "ph", "dataRef": "d1" },
                                 { "text": " aaa " },
