@@ -65,10 +65,21 @@
       "type": "object",
       "properties": {
         "id": { "$ref": "#/definitions/NMTOKEN" },
+        "fs": { "$ref": "#/definitions/formatStyle" },
+        "subFs": { "$ref": "#/definitions/subFormatStyle" },
         "original": { "type": "string" },
         "skeleton": { "$ref": "#/definitions/skeleton" },
         "subfiles": { "$ref": "#/definitions/subitems" },
-        "metadata": { "$ref": "#/definitions/metaData" },
+        "metadata": { "$ref": "#/definitions/metadata" },
+        "resourceData": { "$ref": "#/definitions/resourceData" },
+        "changeTrack": { "$ref": "#/definitions/changeTrack" },
+        "profiles": { "$ref": "#/definitions/profiles" },
+        "profileData": { "$ref": "#/definitions/profileData" },
+        "profileStorageRestriction": { "$ref": "#/definitions/profileStorageRestriction" },
+        "profileSizeRestriction": { "$ref": "#/definitions/profileSizeRestriction" },
+        "profileSizeInfo": { "$ref": "#/definitions/profileSizeInfo" },
+        "profileSizeInfoRef": { "$ref": "#/definitions/profileSizeInfoRef" },
+        "validation": { "$ref": "#/definitions/validation" },
         "userdata": { "$ref": "#/definitions/extensionsData" }
       },
       "additionalProperties": false,
@@ -110,9 +121,16 @@
             "originalData": { "$ref": "#/definitions/originalData" },
             "matches": { "$ref": "#/definitions/translationCandidates" },
             "glossary": { "$ref": "#/definitions/glossary" },
-            "metadata": { "$ref": "#/definitions/metaData" },
-            "resourcedata": { "$ref": "#/definitions/resourceData" },
-            "changetracking": { "$ref": "#/definitions/changeTrack" },
+            "metadata": { "$ref": "#/definitions/metadata" },
+            "resourceData": { "$ref": "#/definitions/resourceData" },
+            "changeTrack": { "$ref": "#/definitions/changeTrack" },
+            "profiles": { "$ref": "#/definitions/profiles" },
+            "profileData": { "$ref": "#/definitions/profileData" },
+            "profileStorageRestriction": { "$ref": "#/definitions/profileStorageRestriction" },
+            "profileSizeRestriction": { "$ref": "#/definitions/profileSizeRestriction" },
+            "profileSizeInfo": { "$ref": "#/definitions/profileSizeInfo" },
+            "profileSizeInfoRef": { "$ref": "#/definitions/profileSizeInfoRef" },
+            "validation": { "$ref": "#/definitions/validation" },
             "userdata": { "$ref": "#/definitions/extensionsData" }
           },
           "additionalProperties": false,
@@ -129,7 +147,16 @@
             "trgDir": { "$ref": "#/definitions/dir" },
             "type": { "$ref": "#/definitions/type" },
             "subgroups": { "$ref": "#/definitions/subitems" },
-            "metadata": { "$ref": "#/definitions/metaData" },
+            "metadata": { "$ref": "#/definitions/metadata" },
+            "resourceData": { "$ref": "#/definitions/resourceData" },
+            "changeTrack": { "$ref": "#/definitions/changeTrack" },
+            "profiles": { "$ref": "#/definitions/profiles" },
+            "profileData": { "$ref": "#/definitions/profileData" },
+            "profileStorageRestriction": { "$ref": "#/definitions/profileStorageRestriction" },
+            "profileSizeRestriction": { "$ref": "#/definitions/profileSizeRestriction" },
+            "profileSizeInfo": { "$ref": "#/definitions/profileSizeInfo" },
+            "profileSizeInfoRef": { "$ref": "#/definitions/profileSizeInfoRef" },
+            "validation": { "$ref": "#/definitions/validation" },
             "userdata": { "$ref": "#/definitions/extensionsData" }
           },
           "additionalProperties": false,
@@ -158,7 +185,16 @@
         "trgDir": { "$ref": "#/definitions/dir" },
         "type": { "$ref": "#/definitions/type" },
         "subgroups": { "$ref": "#/definitions/subitems" },
-        "metadata": { "$ref": "#/definitions/metaData" },
+        "metadata": { "$ref": "#/definitions/metadata" },
+        "resourceData": { "$ref": "#/definitions/resourceData" },
+        "changeTrack": { "$ref": "#/definitions/changeTrack" },
+        "profiles": { "$ref": "#/definitions/profiles" },
+        "profileData": { "$ref": "#/definitions/profileData" },
+        "profileStorageRestriction": { "$ref": "#/definitions/profileStorageRestriction" },
+        "profileSizeRestriction": { "$ref": "#/definitions/profileSizeRestriction" },
+        "profileSizeInfo": { "$ref": "#/definitions/profileSizeInfo" },
+        "profileSizeInfoRef": { "$ref": "#/definitions/profileSizeInfoRef" },
+        "validation": { "$ref": "#/definitions/validation" },
         "userdata": { "$ref": "#/definitions/extensionsData" }
       },
       "additionalProperties": false,
@@ -177,6 +213,8 @@
       "type": "object",
       "properties": {
         "id": { "$ref": "#/definitions/NMTOKEN" },
+        "fs": { "$ref": "#/definitions/formatStyle" },
+        "subFs": { "$ref": "#/definitions/subFormatStyle" },
         "kind": { "type": "string", "enum": [ "unit" ] },
         "name": { "type": "string" },
         "canResegment": { "type": "string", "enum": [ "yes", "no" ], "default": "yes" },
@@ -189,9 +227,16 @@
         "originalData": { "$ref": "#/definitions/originalData" },
         "matches": { "$ref": "#/definitions/translationCandidates" },
         "glossary": { "$ref": "#/definitions/glossary" },
-        "metadata": { "$ref": "#/definitions/metaData" },
-        "resourcedata": { "$ref": "#/definitions/resourceData" },
-        "changetracking": { "$ref": "#/definitions/changeTrack" },
+        "metadata": { "$ref": "#/definitions/metadata" },
+        "resourceData": { "$ref": "#/definitions/resourceData" },
+        "changeTrack": { "$ref": "#/definitions/changeTrack" },
+        "profiles": { "$ref": "#/definitions/profiles" },
+        "profileData": { "$ref": "#/definitions/profileData" },
+        "profileStorageRestriction": { "$ref": "#/definitions/profileStorageRestriction" },
+        "profileSizeRestriction": { "$ref": "#/definitions/profileSizeRestriction" },
+        "profileSizeInfo": { "$ref": "#/definitions/profileSizeInfo" },
+        "profileSizeInfoRef": { "$ref": "#/definitions/profileSizeInfoRef" },
+        "validation": { "$ref": "#/definitions/validation" },
         "userdata": { "$ref": "#/definitions/extensionsData" }
       },
       "additionalProperties": false,
@@ -249,7 +294,7 @@
         "type": { "$ref": "#/definitions/type", "enum": [ "mtc:match" ] },
         "ref": { "$ref": "#/definitions/NMTOKEN" },
         "translate": { "type": "string", "enum": [ "yes", "no" ] },
-        "match": {
+        "matches": {
           "type": "array",
           "items": { "$ref": "#/definitions/translationCandidatesMatch" },
           "minItems": 1
@@ -271,7 +316,7 @@
         "similarity": { "type": "number", "minimum": 0, "maximum": 100 },
         "subType": { "type": "string" },
         "type": { "type": "string", "enum": [ "am", "mt", "icm", "idm", "tb", "tm", "other" ], "default": "tm" },
-        "metadata": { "$ref": "#/definitions/metaData" },
+        "metadata": { "$ref": "#/definitions/metadata" },
         "originalData": { "$ref": "#/definitions/originalData" },
         "source": { "$ref": "#/definitions/elements" },
         "target": { "$ref": "#/definitions/elements" }
@@ -328,12 +373,23 @@
       "required": [ "text" ]
     },
 
-    "metaData": {
-      "description": "The metaData module: provides a mechanism for storing custom metadata",
+    "formatStyle": {
+      "description": "The formatStyle module: fs attribute; this module is intended to carry information needed for generating a quick glance HTML preview of JLIFF content using a predefined set of simple HTML formatting elements",
+      "type": "string",
+      "enum": [ "a", "b", "bdo", "big", "blockquote", "body", "br", "button", "caption", "center", "cite", "code", "col", "colgroup", "dd", "del", "div", "dl", "dt", "em", "h1", "h2", "h3", "h4", "h5", "h6", "head", "hr", "html", "i", "img", "label", "legend", "li", "ol", "p", "pre", "q", "s", "samp", "select", "small", "span", "strike", "strong", "sub", "sup", "table", "tbody", "td", "tfoot", "th", "thead", "title", "tr", "tt", "u", "ul" ]
+    },
+
+    "subFormatStyle": {
+      "description": "The formatStyle module: subFs attribute; this module is intended to carry information needed for generating a quick glance HTML preview of JLIFF content using a predefined set of simple HTML formatting elements",
+      "type": "string"
+    },
+
+    "metadata": {
+      "description": "The metadata module: provides a mechanism for storing custom metadata",
       "type": "object",
       "properties": {
         "id": { "$ref": "#/definitions/NMTOKEN" },
-        "groups": {
+        "metaGroups": {
           "type": "array",
           "items": { "$ref": "#/definitions/metaGroup" },
           "minItems": 1
@@ -374,12 +430,12 @@
       "type": "object",
       "properties": {
         "id": { "$ref": "#/definitions/NMTOKEN" },
-        "resourceItemRef": {
+        "resourceItemRefs": {
           "type": "array",
           "items": { "$ref": "#/definitions/resourceItemRef" },
           "minItems": 1
         },
-        "resourceItem": {
+        "resourceItems": {
           "type": "array",
           "items": { "$ref": "#/definitions/resourceItem" },
           "minItems": 1
@@ -420,7 +476,7 @@
           },
           "additionalProperties": true
         },
-        "reference": {
+        "references": {
           "type": "array",
           "items": {
             "type": "object",
@@ -433,8 +489,7 @@
           }
         }
       },
-      "additionalProperties": true,
-      "required": [ "ref" ]
+      "additionalProperties": true
     },
 
     "changeTrack": {
@@ -457,7 +512,7 @@
         "appliesTo": { "$ref": "#/definitions/NMTOKEN" },
         "ref": { "$ref": "#/definitions/NMTOKEN" },
         "currentVersion": { "$ref": "#/definitions/NMTOKEN" },
-        "revision": {
+        "items": {
           "type": "array",
           "items": { "$ref": "#/definitions/changeTrackRevisionItem" },
           "minItems": 1
@@ -485,7 +540,107 @@
         "text": { "type": "string" }
       },
       "additionalProperties": true,
-      "required": [ "text" ]
+      "required": [ "property", "text" ]
+    },
+
+    "profiles": {
+      "description": "The Size and Length Restriction (profiles) module provides a mechanism to annotate the XLIFF content with information on storage and general size restrictions",
+      "type": "object",
+      "properties": {
+        "generalProfile": { "type": "string" },
+        "storageProfile": { "type": "string" },
+        "normalization": {
+          "type": "object",
+          "properties": {
+            "general": { "type": "string", "enum": [ "none", "nfc", "nfd" ] },
+            "storage": { "type": "string", "enum": [ "none", "nfc", "nfd" ] }
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+
+    "profileData": {
+      "type": "object",
+      "properties": {
+         "profile": { "type": "string" }
+      },
+      "additionalProperties": true,
+      "required": [ "profile" ]
+    },
+
+    "profileStorageRestriction": {
+      "type": "string"
+    },
+
+    "profileSizeRestriction": {
+      "type": "string"
+    },
+
+    "profileEquivStorage": {
+      "type": "string"
+    },
+
+    "profileSizeInfo": {
+      "type": "string"
+    },
+
+    "profileSizeInfoRef": {
+      "type": "string"
+    },
+
+    "validation": {
+      "description": "The validation module defines a specific set of validation rules that can be applied to target text both globally and locally",
+      "type": "array",
+      "items": { "$ref": "#/definitions/validationRule" },
+      "minItems": 1
+    },
+
+    "validationRule": {
+      "type": "object",
+      "oneOf": [
+        {
+          "properties": {
+            "isPresent": { "type": "string" },
+            "occurs": { "type": "integer", "minimum": 1 },
+            "existsInSource": { "type": "string", "enum": [ "yes", "no" ] },
+            "caseSensitive": { "type": "string", "enum": [ "yes", "no" ] },
+            "normalization": { "type": "string", "enum": [ "none", "nfc", "nfd" ] },
+            "disabled": { "type": "string", "enum": [ "yes", "no" ] }
+          }
+        },
+        {
+          "properties": {
+            "isNotPresent": { "type": "string" },
+            "occurs": { "type": "integer", "minimum": 1 },
+            "existsInSource": { "type": "string", "enum": [ "yes", "no" ] },
+            "caseSensitive": { "type": "string", "enum": [ "yes", "no" ] },
+            "normalization": { "type": "string", "enum": [ "none", "nfc", "nfd" ] },
+            "disabled": { "type": "string", "enum": [ "yes", "no" ] }
+          }
+        },
+        {
+          "properties": {
+            "occurs": { "type": "integer", "minimum": 1 },
+            "startsWith": { "type": "string" },
+            "existsInSource": { "type": "string", "enum": [ "yes", "no" ] },
+            "caseSensitive": { "type": "string", "enum": [ "yes", "no" ] },
+            "normalization": { "type": "string", "enum": [ "none", "nfc", "nfd" ] },
+            "disabled": { "type": "string", "enum": [ "yes", "no" ] }
+          }
+        },
+        {
+          "properties": {
+            "occurs": { "type": "integer", "minimum": 1 },
+            "endsWith": { "type": "string" },
+            "existsInSource": { "type": "string", "enum": [ "yes", "no" ] },
+            "caseSensitive": { "type": "string", "enum": [ "yes", "no" ] },
+            "normalization": { "type": "string", "enum": [ "none", "nfc", "nfd" ] },
+            "disabled": { "type": "string", "enum": [ "yes", "no" ] }
+          }
+        }
+      ],
+      "additionalProperties": true
     },
 
     "extensionsData": {
@@ -505,6 +660,8 @@
       "type": "object",
       "properties": {
         "id": { "$ref": "#/definitions/NMTOKEN" },
+        "fs": { "$ref": "#/definitions/formatStyle" },
+        "subFs": { "$ref": "#/definitions/subFormatStyle" },
         "appliesTo": { "type": "string", "enum": [ "source", "target" ] },
         "category": { "type": "string" },
         "priority": { "type": "integer", "minimum": 1, "maximum": 10 }
@@ -516,14 +673,90 @@
       "type": "array",
       "items": {
         "oneOf": [
-          { "$ref": "#/definitions/element-ec" },
-          { "$ref": "#/definitions/element-em" },
+          { "$ref": "#/definitions/element-text" },
+          { "$ref": "#/definitions/element-mrk" },
+          { "$ref": "#/definitions/element-pc" },
+          { "$ref": "#/definitions/element-cp" },
           { "$ref": "#/definitions/element-ph" },
           { "$ref": "#/definitions/element-sc" },
+          { "$ref": "#/definitions/element-ec" },
           { "$ref": "#/definitions/element-sm" },
-          { "$ref": "#/definitions/element-text" }
+          { "$ref": "#/definitions/element-em" }
         ]
       }
+    },
+
+    "element-text": {
+      "type": "object",
+      "properties": {
+        "text": { "type": "string" }
+      },
+      "additionalProperties": false,
+      "required": [ "text" ]
+    },
+
+    "element-mrk": {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string", "enum": [ "mrk" ] },
+        "id": { "$ref": "#/definitions/NMTOKEN" },
+        "fs": { "$ref": "#/definitions/formatStyle" },
+        "subFs": { "$ref": "#/definitions/subFormatStyle" },
+        "profileStorageRestriction": { "$ref": "#/definitions/profileStorageRestriction" },
+        "profileSizeRestriction": { "$ref": "#/definitions/profileSizeRestriction" },
+        "type": { "$ref": "#/definitions/mrkType" },
+        "translate": { "type": "string", "enum": [ "yes", "no" ] },
+        "ref": { "$ref": "#/definitions/IRI" },
+        "value": { "type": "string" },
+        "elements": { "$ref": "#/definitions/elements" }
+      },
+      "additionalProperties": true,
+      "required": [ "id", "kind" ]
+    },
+
+    "element-pc": {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string", "enum": [ "pc" ] },
+        "id": { "$ref": "#/definitions/NMTOKEN" },
+        "fs": { "$ref": "#/definitions/formatStyle" },
+        "subFs": { "$ref": "#/definitions/subFormatStyle" },
+        "profileData": { "$ref": "#/definitions/profileData" },
+        "profileStorageRestriction": { "$ref": "#/definitions/profileStorageRestriction" },
+        "profileSizeRestriction": { "$ref": "#/definitions/profileSizeRestriction" },
+        "profileEquivStorage": { "$ref": "#/definitions/profileEquivStorage" },
+        "profileSizeInfo": { "$ref": "#/definitions/profileSizeInfo" },
+        "profileSizeInfoRef": { "$ref": "#/definitions/profileSizeInfoRef" },
+        "canCopy": { "type": "string", "enum": [ "yes", "no" ] },
+        "canDelete": { "type": "string", "enum": [ "yes", "no" ] },
+        "canOverlap": { "type": "string", "enum": [ "yes", "no" ] },
+        "canReorder": { "type": "string", "enum": [ "yes", "no", "firstNo" ], "default": "yes" },
+        "copyOf": { "$ref": "#/definitions/NMTOKEN" },
+        "dispEnd": { "type": "string" },
+        "dispStart": { "type": "string" },
+        "equivEnd": { "type": "string" },
+        "equivStart": { "type": "string" },
+        "dataRefEnd": { "$ref": "#/definitions/NMTOKEN" },
+        "dataRefStart": { "$ref": "#/definitions/NMTOKEN" },
+        "subFlowsEnd": { "$ref": "#/definitions/NMTOKENS" },
+        "subFlowsStart": { "$ref": "#/definitions/NMTOKENS" },
+        "subType": { "type": "string" },
+        "type": { "$ref": "#/definitions/codeType" },
+        "dir": { "$ref": "#/definitions/dir" },
+        "elements": { "$ref": "#/definitions/elements" }
+      },
+      "additionalProperties": true,
+      "required": [ "kind"  ]
+    },
+
+    "element-cp": {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string", "enum": [ "cp" ] },
+        "hex": { "type": "string", "pattern": "^[a-fA-F0-9]{4,6}$" }
+      },
+      "additionalProperties": false,
+      "required": [ "kind", "hex" ]
     },
 
     "element-ec": {
@@ -532,14 +765,19 @@
         "kind": { "type": "string", "enum": [ "ec" ] },
         "startRef": { "type": "string" },
         "id": { "$ref": "#/definitions/NMTOKEN" },
+        "fs": { "$ref": "#/definitions/formatStyle" },
+        "subFs": { "$ref": "#/definitions/subFormatStyle" },
+        "profileEquivStorage": { "$ref": "#/definitions/profileEquivStorage" },
+        "profileSizeInfo": { "$ref": "#/definitions/profileSizeInfo" },
+        "profileSizeInfoRef": { "$ref": "#/definitions/profileSizeInfoRef" },
         "canCopy": { "type": "string", "enum": [ "yes", "no" ] },
         "canDelete": { "type": "string", "enum": [ "yes", "no" ] },
         "canOverlap": { "type": "string", "enum": [ "yes", "no" ] },
         "canReorder": { "type": "string", "enum": [ "yes", "no", "firstNo" ], "default": "yes" },
-        "copyOf": { "type": "string" },
+        "copyOf": { "$ref": "#/definitions/NMTOKEN" },
         "disp": { "type": "string" },
         "equiv": { "type": "string" },
-        "dataRef": { "type": "string" },
+        "dataRef": { "$ref": "#/definitions/NMTOKEN" },
         "subFlows": { "type": "string" },
         "subType": { "type": "string" },
         "type": { "$ref": "#/definitions/codeType" },
@@ -565,13 +803,18 @@
       "properties": {
         "kind": { "type": "string", "enum": [ "ph" ] },
         "id": { "$ref": "#/definitions/NMTOKEN" },
+        "fs": { "$ref": "#/definitions/formatStyle" },
+        "subFs": { "$ref": "#/definitions/subFormatStyle" },
+        "profileEquivStorage": { "$ref": "#/definitions/profileEquivStorage" },
+        "profileSizeInfo": { "$ref": "#/definitions/profileSizeInfo" },
+        "profileSizeInfoRef": { "$ref": "#/definitions/profileSizeInfoRef" },
         "canCopy": { "type": "string", "enum": [ "yes", "no" ] },
         "canDelete": { "type": "string", "enum": [ "yes", "no" ] },
         "canReorder": { "type": "string", "enum": [ "yes", "no", "firstNo" ], "default": "yes" },
-        "copyOf": { "type": "string" },
+        "copyOf": { "$ref": "#/definitions/NMTOKEN" },
         "disp": { "type": "string" },
         "equiv": { "type": "string" },
-        "dataRef": { "type": "string" },
+        "dataRef": { "$ref": "#/definitions/NMTOKEN" },
         "subFlows": { "type": "string" },
         "subtype": { "type": "string" },
         "type": { "$ref": "#/definitions/codeType" }
@@ -585,14 +828,22 @@
       "properties": {
         "kind": { "type": "string", "enum": [ "sc" ] },
         "id": { "$ref": "#/definitions/NMTOKEN" },
+        "fs": { "$ref": "#/definitions/formatStyle" },
+        "subFs": { "$ref": "#/definitions/subFormatStyle" },
+        "profileData": { "$ref": "#/definitions/profileData" },
+        "profileStorageRestriction": { "$ref": "#/definitions/profileStorageRestriction" },
+        "profileSizeRestriction": { "$ref": "#/definitions/profileSizeRestriction" },
+        "profileEquivStorage": { "$ref": "#/definitions/profileEquivStorage" },
+        "profileSizeInfo": { "$ref": "#/definitions/profileSizeInfo" },
+        "profileSizeInfoRef": { "$ref": "#/definitions/profileSizeInfoRef" },
         "canCopy": { "type": "string", "enum": [ "yes", "no" ] },
         "canDelete": { "type": "string", "enum": [ "yes", "no" ] },
         "canOverlap": { "type": "string", "enum": [ "yes", "no" ] },
         "canReorder": { "type": "string", "enum": [ "yes", "no", "firstNo" ], "default": "yes" },
-        "copyOf": { "type": "string" },
+        "copyOf": { "$ref": "#/definitions/NMTOKEN" },
         "disp": { "type": "string" },
         "equiv": { "type": "string" },
-        "dataRef": { "type": "string" },
+        "dataRef": { "$ref": "#/definitions/NMTOKEN" },
         "subFlows": { "type": "string" },
         "subType": { "type": "string" },
         "type": { "$ref": "#/definitions/codeType" },
@@ -608,6 +859,10 @@
       "properties": {
         "kind": { "type": "string", "enum": [ "sm" ] },
         "id": { "$ref": "#/definitions/NMTOKEN" },
+        "fs": { "$ref": "#/definitions/formatStyle" },
+        "subFs": { "$ref": "#/definitions/subFormatStyle" },
+        "profileStorageRestriction": { "$ref": "#/definitions/profileStorageRestriction" },
+        "profileSizeRestriction": { "$ref": "#/definitions/profileSizeRestriction" },
         "type": { "$ref": "#/definitions/mrkType" },
         "translate": { "type": "string", "enum": [ "yes", "no" ] },
         "ref": { "$ref": "#/definitions/IRI" },
@@ -615,15 +870,6 @@
       },
       "additionalProperties": true,
       "required": [ "id", "kind" ]
-    },
-
-    "element-text": {
-      "type": "object",
-      "properties": {
-        "text": { "type": "string" }
-      },
-      "additionalProperties": false,
-      "required": [ "text" ]
     },
 
     "dir": {
@@ -666,6 +912,12 @@
       "description": "XSD NMTOKEN type for XLIFF interoperability, the type of id properties",
       "type": "string",
       "pattern": "^[-._:A-Za-z0-9]+$"
+    },
+
+    "NMTOKENS": {
+      "description": "List of XSD NMTOKEN separated by spaces for XLIFF interoperability",
+      "type": "string",
+      "pattern": "^([-._:A-Za-z0-9]+[ ]+)*[-._:A-Za-z0-9]+$"
     },
 
     "IRI": {
