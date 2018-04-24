@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
 
-  "$id": "urn:oasis:names:tc:xliff-omos:document:jliff:0.9.6",
+  "$id": "urn:oasis:names:tc:xliff-omos:document:jliff:2.0",
 
   "$ref": "#/definitions/jliff",
 
@@ -674,9 +674,6 @@
       "items": {
         "oneOf": [
           { "$ref": "#/definitions/element-text" },
-          { "$ref": "#/definitions/element-mrk" },
-          { "$ref": "#/definitions/element-pc" },
-          { "$ref": "#/definitions/element-cp" },
           { "$ref": "#/definitions/element-ph" },
           { "$ref": "#/definitions/element-sc" },
           { "$ref": "#/definitions/element-ec" },
@@ -693,73 +690,6 @@
       },
       "additionalProperties": false,
       "required": [ "text" ]
-    },
-
-    "element-mrk": {
-      "description": "This element reflects XLIFF and is not required in JLIFF and may be removed in the future",
-      "type": "object",
-      "properties": {
-        "kind": { "type": "string", "enum": [ "mrk" ] },
-        "id": { "$ref": "#/definitions/NMTOKEN" },
-        "fs": { "$ref": "#/definitions/formatStyle" },
-        "subFs": { "$ref": "#/definitions/subFormatStyle" },
-        "profileStorageRestriction": { "$ref": "#/definitions/profileStorageRestriction" },
-        "profileSizeRestriction": { "$ref": "#/definitions/profileSizeRestriction" },
-        "type": { "$ref": "#/definitions/mrkType" },
-        "translate": { "type": "string", "enum": [ "yes", "no" ] },
-        "ref": { "$ref": "#/definitions/IRI" },
-        "value": { "type": "string" },
-        "elements": { "$ref": "#/definitions/elements" }
-      },
-      "additionalProperties": true,
-      "required": [ "id", "kind" ]
-    },
-
-    "element-pc": {
-      "description": "This element reflects XLIFF and is not required in JLIFF and may be removed in the future",
-      "type": "object",
-      "properties": {
-        "kind": { "type": "string", "enum": [ "pc" ] },
-        "id": { "$ref": "#/definitions/NMTOKEN" },
-        "fs": { "$ref": "#/definitions/formatStyle" },
-        "subFs": { "$ref": "#/definitions/subFormatStyle" },
-        "profileData": { "$ref": "#/definitions/profileData" },
-        "profileStorageRestriction": { "$ref": "#/definitions/profileStorageRestriction" },
-        "profileSizeRestriction": { "$ref": "#/definitions/profileSizeRestriction" },
-        "profileEquivStorage": { "$ref": "#/definitions/profileEquivStorage" },
-        "profileSizeInfo": { "$ref": "#/definitions/profileSizeInfo" },
-        "profileSizeInfoRef": { "$ref": "#/definitions/profileSizeInfoRef" },
-        "canCopy": { "type": "string", "enum": [ "yes", "no" ] },
-        "canDelete": { "type": "string", "enum": [ "yes", "no" ] },
-        "canOverlap": { "type": "string", "enum": [ "yes", "no" ] },
-        "canReorder": { "type": "string", "enum": [ "yes", "no", "firstNo" ], "default": "yes" },
-        "copyOf": { "$ref": "#/definitions/NMTOKEN" },
-        "dispEnd": { "type": "string" },
-        "dispStart": { "type": "string" },
-        "equivEnd": { "type": "string" },
-        "equivStart": { "type": "string" },
-        "dataRefEnd": { "$ref": "#/definitions/NMTOKEN" },
-        "dataRefStart": { "$ref": "#/definitions/NMTOKEN" },
-        "subFlowsEnd": { "$ref": "#/definitions/NMTOKENS" },
-        "subFlowsStart": { "$ref": "#/definitions/NMTOKENS" },
-        "subType": { "type": "string" },
-        "type": { "$ref": "#/definitions/codeType" },
-        "dir": { "$ref": "#/definitions/dir" },
-        "elements": { "$ref": "#/definitions/elements" }
-      },
-      "additionalProperties": true,
-      "required": [ "kind"  ]
-    },
-
-    "element-cp": {
-      "description": "This element reflects XLIFF and is not required in JLIFF and may be removed in the future",
-      "type": "object",
-      "properties": {
-        "kind": { "type": "string", "enum": [ "cp" ] },
-        "hex": { "type": "string", "pattern": "^[a-fA-F0-9]{4,6}$" }
-      },
-      "additionalProperties": false,
-      "required": [ "kind", "hex" ]
     },
 
     "element-ec": {
