@@ -160,6 +160,7 @@
             "locQualityRatingScoreThreshold": { "type": "number", "minimum": 0, "maximum": 100 },
             "locQualityRatingVote": { "type": "integer" },
             "locQualityRatingVoteThreshold": { "type": "integer" },
+            "locQualityIssues": { "$ref": "#/definitions/locQualityIssues" },
             "annotatorsRef": { "type": "string" },
             "org": { "type": "string" },
             "orgRef": { "$ref": "#/definitions/IRI" },
@@ -329,6 +330,7 @@
         "locQualityRatingScoreThreshold": { "type": "number", "minimum": 0, "maximum": 100 },
         "locQualityRatingVote": { "type": "integer" },
         "locQualityRatingVoteThreshold": { "type": "integer" },
+        "locQualityIssues": { "$ref": "#/definitions/locQualityIssues" },
         "annotatorsRef": { "type": "string" },
         "org": { "type": "string" },
         "orgRef": { "$ref": "#/definitions/IRI" },
@@ -432,7 +434,8 @@
         "locQualityRatingVote": { "type": "integer" },
         "locQualityRatingVoteThreshold": { "type": "integer" },
         "source": { "$ref": "#/definitions/elements" },
-        "target": { "$ref": "#/definitions/elements" }
+        "target": { "$ref": "#/definitions/elements" },
+        "domains": { "type": "string" }
       },
       "additionalProperties": true,
       "required": [ "ref", "source", "target" ]
@@ -785,6 +788,28 @@
       "additionalProperties": false
     },
 
+    "locQualityIssues": {
+      "description": "a standoff wrapper element to group any number of single issue elements related to the same span of source or target content",
+      "type": "array",
+      "items": { "$ref": "#/definitions/locQualityIssue" },
+      "minItems": 1
+    },
+
+    "locQualityIssue": {
+      "type": "object",
+      "properties": {
+        "locQualityIssueType": { "$ref": "#/definitions/locQualityIssueType" },
+        "locQualityIssueComment": { "type": "string" },
+        "locQualityIssueSeverity": { "type": "number", "minimum": 0, "maximum": 100 },
+        "locQualityIssueProfileRef": { "$ref": "#/definitions/IRI" }, 
+        "locQualityIssueEnabled": { "type": "string", "enum": [ "yes", "no" ] }
+      }
+    },
+
+    "locQualityIssueType": {
+        "type": "string", "enum": [ "terminology", "mistranslation", "omission", "untranslated", "addition", "duplication", "inconsistency", "grammar", "legal", "register", "locale-specific-content", "locale-violation", "style", "characters", "misspelling", "typographical", "formatting", "inconsistent-entities", "numbers", "markup", "pattern-problem", "whitespace", "internationalization", "length", "non-conformance", "uncategorized", "other" ]
+    },
+
     "extensionsData": {
       "description": "An object that maps an extension's fully qualified name to the extension data comprising an unconstrained object",
       "type": "object",
@@ -952,7 +977,7 @@
         "locQualityIssueProfileRef": { "$ref": "#/definitions/IRI" }, 
         "locQualityIssuesRef": { "$ref": "#/definitions/IRI" },
         "locQualityIssueSeverity": { "type": "number", "minimum": 0, "maximum": 100 },
-        "locQualityIssueType": { "type": "string", "enum": [ "terminology", "mistranslation", "omission", "untranslated", "addition", "duplication", "inconsistency", "grammar", "legal", "register", "locale-specific-content", "locale-violation", "style", "characters", "misspelling", "typographical", "formatting", "inconsistent-entities", "numbers", "markup", "pattern-problem", "whitespace", "internationalization", "length", "non-conformance", "uncategorized", "other" ] },
+        "locQualityIssueType": { "$ref": "#/definitions/locQualityIssueType" },
         "locQualityRatingProfileRef": { "$ref": "#/definitions/IRI" },
         "locQualityRatingScore": { "type": "number", "minimum": 0, "maximum": 100 },
         "locQualityRatingScoreThreshold": { "type": "number", "minimum": 0, "maximum": 100 },
