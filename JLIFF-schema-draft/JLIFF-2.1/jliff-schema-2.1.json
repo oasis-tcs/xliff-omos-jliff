@@ -85,7 +85,7 @@
         "locQualityRatingScoreThreshold": { "type": "number", "minimum": 0, "maximum": 100 },
         "locQualityRatingVote": { "type": "integer" },
         "locQualityRatingVoteThreshold": { "type": "integer" },
-        "annotatorsRef": { "type": "string" },
+        "annotatorsRef": { "$ref": "#/definitions/annotatorsRef" },
         "translate": { "type": "string", "enum": [ "yes", "no" ] },
         "srcDir": { "$ref": "#/definitions/dir" },
         "trgDir": { "$ref": "#/definitions/dir" },
@@ -103,7 +103,12 @@
         "tool": { "type": "string" },
         "toolRef": { "$ref": "#/definitions/IRI" },
         "provenanceRecords": {  "$ref": "#/definitions/provenanceRecords" },
-        "domains": { "type": "string" },
+        "domains": { "$ref": "#/definitions/domains" },
+        "taClassRef": { "$ref": "#/definitions/IRI" },
+        "taConfidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "taSource": { "type": "string" },
+        "taIdent": { "type": "string" },
+        "taIdentRef": { "$ref": "#/definitions/IRI" },
         "userdata": { "$ref": "#/definitions/extensionsData" }
       },
       "additionalProperties": false,
@@ -161,7 +166,7 @@
             "locQualityRatingVote": { "type": "integer" },
             "locQualityRatingVoteThreshold": { "type": "integer" },
             "locQualityIssues": { "$ref": "#/definitions/locQualityIssues" },
-            "annotatorsRef": { "type": "string" },
+            "annotatorsRef": { "$ref": "#/definitions/annotatorsRef" },
             "org": { "type": "string" },
             "orgRef": { "$ref": "#/definitions/IRI" },
             "person": { "type": "string" },
@@ -176,7 +181,12 @@
             "tool": { "type": "string" },
             "toolRef": { "$ref": "#/definitions/IRI" },
             "provenanceRecords": {  "$ref": "#/definitions/provenanceRecords" },
-            "domains": { "type": "string" },
+            "domains": { "$ref": "#/definitions/domains" },
+            "taClassRef": { "$ref": "#/definitions/IRI" },
+            "taConfidence": { "type": "number", "minimum": 0, "maximum": 1 },
+            "taSource": { "type": "string" },
+            "taIdent": { "type": "string" },
+            "taIdentRef": { "$ref": "#/definitions/IRI" },
             "userdata": { "$ref": "#/definitions/extensionsData" }
           },
           "additionalProperties": false,
@@ -208,7 +218,7 @@
             "locQualityRatingScoreThreshold": { "type": "number", "minimum": 0, "maximum": 100 },
             "locQualityRatingVote": { "type": "integer" },
             "locQualityRatingVoteThreshold": { "type": "integer" },
-            "annotatorsRef": { "type": "string" },
+            "annotatorsRef": { "$ref": "#/definitions/annotatorsRef" },
             "org": { "type": "string" },
             "orgRef": { "$ref": "#/definitions/IRI" },
             "person": { "type": "string" },
@@ -223,7 +233,12 @@
             "tool": { "type": "string" },
             "toolRef": { "$ref": "#/definitions/IRI" },
             "provenanceRecords": {  "$ref": "#/definitions/provenanceRecords" },
-            "domains": { "type": "string" },
+            "domains": { "$ref": "#/definitions/domains" },
+            "taClassRef": { "$ref": "#/definitions/IRI" },
+            "taConfidence": { "type": "number", "minimum": 0, "maximum": 1 },
+            "taSource": { "type": "string" },
+            "taIdent": { "type": "string" },
+            "taIdentRef": { "$ref": "#/definitions/IRI" },
             "userdata": { "$ref": "#/definitions/extensionsData" }
           },
           "additionalProperties": false,
@@ -267,7 +282,7 @@
         "locQualityRatingScoreThreshold": { "type": "number", "minimum": 0, "maximum": 100 },
         "locQualityRatingVote": { "type": "integer" },
         "locQualityRatingVoteThreshold": { "type": "integer" },
-        "annotatorsRef": { "type": "string" },
+        "annotatorsRef": { "$ref": "#/definitions/annotatorsRef" },
         "org": { "type": "string" },
         "orgRef": { "$ref": "#/definitions/IRI" },
         "person": { "type": "string" },
@@ -282,7 +297,12 @@
         "tool": { "type": "string" },
         "toolRef": { "$ref": "#/definitions/IRI" },
         "provenanceRecords": {  "$ref": "#/definitions/provenanceRecords" },
-        "domains": { "type": "string" },
+        "domains": { "$ref": "#/definitions/domains" },
+        "taClassRef": { "$ref": "#/definitions/IRI" },
+        "taConfidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "taSource": { "type": "string" },
+        "taIdent": { "type": "string" },
+        "taIdentRef": { "$ref": "#/definitions/IRI" },
         "userdata": { "$ref": "#/definitions/extensionsData" }
       },
       "additionalProperties": false,
@@ -331,7 +351,7 @@
         "locQualityRatingVote": { "type": "integer" },
         "locQualityRatingVoteThreshold": { "type": "integer" },
         "locQualityIssues": { "$ref": "#/definitions/locQualityIssues" },
-        "annotatorsRef": { "type": "string" },
+        "annotatorsRef": { "$ref": "#/definitions/annotatorsRef" },
         "org": { "type": "string" },
         "orgRef": { "$ref": "#/definitions/IRI" },
         "person": { "type": "string" },
@@ -346,7 +366,12 @@
         "tool": { "type": "string" },
         "toolRef": { "$ref": "#/definitions/IRI" },
         "provenanceRecords": {  "$ref": "#/definitions/provenanceRecords" },
-        "domains": { "type": "string" },
+        "domains": { "$ref": "#/definitions/domains" },
+        "taClassRef": { "$ref": "#/definitions/IRI" },
+        "taConfidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "taSource": { "type": "string" },
+        "taIdent": { "type": "string" },
+        "taIdentRef": { "$ref": "#/definitions/IRI" },
         "userdata": { "$ref": "#/definitions/extensionsData" }
       },
       "additionalProperties": false,
@@ -435,7 +460,7 @@
         "locQualityRatingVoteThreshold": { "type": "integer" },
         "source": { "$ref": "#/definitions/elements" },
         "target": { "$ref": "#/definitions/elements" },
-        "domains": { "type": "string" }
+        "domains": { "$ref": "#/definitions/domains" }
       },
       "additionalProperties": true,
       "required": [ "ref", "source", "target" ]
@@ -617,7 +642,7 @@
           "items": { "$ref": "#/definitions/changeTrackRevisions" },
           "minItems": 1
         },
-        "annotatorsRef": { "type": "string" }
+        "annotatorsRef": { "$ref": "#/definitions/annotatorsRef" }
       },
       "additionalProperties": false,
       "required": [ "revisions" ]
@@ -634,7 +659,7 @@
           "items": { "$ref": "#/definitions/changeTrackRevisionItem" },
           "minItems": 1
         },
-        "annotatorsRef": { "type": "string" }
+        "annotatorsRef": { "$ref": "#/definitions/annotatorsRef" }
       },
       "additionalProperties": true,
       "required": [ "appliesTo" ]
@@ -807,7 +832,67 @@
     },
 
     "locQualityIssueType": {
-        "type": "string", "enum": [ "terminology", "mistranslation", "omission", "untranslated", "addition", "duplication", "inconsistency", "grammar", "legal", "register", "locale-specific-content", "locale-violation", "style", "characters", "misspelling", "typographical", "formatting", "inconsistent-entities", "numbers", "markup", "pattern-problem", "whitespace", "internationalization", "length", "non-conformance", "uncategorized", "other" ]
+      "type": "string",
+      "enum": [
+        "terminology",
+        "mistranslation",
+        "omission",
+        "untranslated",
+        "addition",
+        "duplication",
+        "inconsistency",
+        "grammar",
+        "legal",
+        "register",
+        "locale-specific-content",
+        "locale-violation",
+        "style",
+        "characters",
+        "misspelling",
+        "typographical",
+        "formatting",
+        "inconsistent-entities",
+        "numbers",
+        "markup",
+        "pattern-problem",
+        "whitespace",
+        "internationalization",
+        "length",
+        "non-conformance",
+        "uncategorized",
+        "other"
+      ]
+    },
+
+    "annotatorsRef": {
+      "type": "object",
+      "properties": {
+        "translate": { "type": "string", "pattern": "^[^ |]+$" },
+        "localization-note": { "type": "string", "pattern": "^[^ |]+$" },
+        "terminology": { "type": "string", "pattern": "^[^ |]+$" },
+        "directionality": { "type": "string", "pattern": "^[^ |]+$" },
+        "language-information": { "type": "string", "pattern": "^[^ |]+$" },
+        "elements-within-text": { "type": "string", "pattern": "^[^ |]+$" },
+        "domain": { "type": "string", "pattern": "^[^ |]+$" },
+        "text-analysis": { "type": "string", "pattern": "^[^ |]+$" },
+        "locale-filter": { "type": "string", "pattern": "^[^ |]+$" },
+        "provenance": { "type": "string", "pattern": "^[^ |]+$" },
+        "external-resource": { "type": "string", "pattern": "^[^ |]+$" },
+        "target-pointer": { "type": "string", "pattern": "^[^ |]+$" },
+        "id-value": { "type": "string", "pattern": "^[^ |]+$" },
+        "preserve-space": { "type": "string", "pattern": "^[^ |]+$" },
+        "localization-quality-issue": { "type": "string", "pattern": "^[^ |]+$" },
+        "localization-quality-rating": { "type": "string", "pattern": "^[^ |]+$" },
+        "mt-confidence": { "type": "string", "pattern": "^[^ |]+$" },
+        "allowed-characters": { "type": "string", "pattern": "^[^ |]+$" },
+        "storage-size": { "type": "string", "pattern": "^[^ |]+$" }
+      }
+    },
+
+    "domains": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[^,]+$" },
+      "minitems": 1
     },
 
     "extensionsData": {
@@ -893,12 +978,7 @@
       "properties": {
         "kind": { "type": "string", "enum": [ "em" ] },
         "allowedCharacters": { "type": "string" },
-        "startRef": { "type": "string" },
-        "taClassRef": { "$ref": "#/definitions/IRI" },
-        "taConfidence": { "type": "number", "minimum": 0, "maximum": 1 },
-        "taSource": { "type": "string" },
-        "taIdent": { "type": "string" },
-        "taIdentRef": { "$ref": "#/definitions/IRI" }
+        "startRef": { "type": "string" }
       },
       "additionalProperties": true,
       "required": [ "kind", "startRef" ]
@@ -983,7 +1063,7 @@
         "locQualityRatingScoreThreshold": { "type": "number", "minimum": 0, "maximum": 100 },
         "locQualityRatingVote": { "type": "integer" },
         "locQualityRatingVoteThreshold": { "type": "integer" },
-        "annotatorsRef": { "type": "string" },
+        "annotatorsRef": { "$ref": "#/definitions/annotatorsRef" },
         "org": { "type": "string" },
         "orgRef": { "$ref": "#/definitions/IRI" },
         "person": { "type": "string" },
@@ -997,7 +1077,7 @@
         "revToolRef": { "$ref": "#/definitions/IRI" },
         "tool": { "type": "string" },
         "toolRef": { "$ref": "#/definitions/IRI" },
-        "domains": { "type": "string" },
+        "domains": { "$ref": "#/definitions/domains" },
         "taClassRef": { "$ref": "#/definitions/IRI" },
         "taConfidence": { "type": "number", "minimum": 0, "maximum": 1 },
         "taSource": { "type": "string" },
