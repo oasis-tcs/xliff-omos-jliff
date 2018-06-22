@@ -1050,6 +1050,7 @@
         "profileStorageRestriction": { "$ref": "#/definitions/profileStorageRestriction" },
         "profileSizeRestriction": { "$ref": "#/definitions/profileSizeRestriction" },
         "allowedCharacters": { "type": "string" },
+        "lang": { "type": { "$ref": "#/definitions/language" } },
         "localeFilterList": { "type": "string", "default": "*" },
         "localeFilterType": { "type": "string", "default": "include" },
         "locQualityIssueComment": { "type": "string" },
