@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         <!-- copy these up to "this-loc" to documents that reference additional artifacts and the catalog listing -->
+<!ENTITY version "2.1">
+
+<!ENTITY stage "wd01">
+<!ENTITY pstage "N/A">
+<!ENTITY standard "Working Draft 01">
+
+<!ENTITY this-loc "http://docs.oasis-open.org/xliff/xliff-core/v&version;/&stage;">
+<!ENTITY previous-loc "http://docs.oasis-open.org/xliff/xliff-core/v&version;/&pstage;">
+<!ENTITY latest-loc "http://docs.oasis-open.org/xliff/xliff-core/v&version;">
+<!ENTITY pubdate "05 August 2015">
+<!ENTITY releaseinfo "Standards Track Work Product">
+                         ]>
+<section id="changeTracking_module" role="Informative">
+  <title>Change Tracking Extension (Informative)</title>
+    <section>
+      <title>Introduction</title>
+      <para>The Change Tracking extension is used to store revision information for XLIFF elements
+      and attributes. The Change Tracking extension is in place as informative material until the TC
+      will be able to replace it with a revised Change Tracking Module hopefully for XLIFF Version
+      2.2.</para>
+    </section>
+  <section>
+    <title>Module Namespace and Validation Artifacts</title>
+        <para>The namespace for the Change Tracking extension is:
+        <code>urn:oasis:names:tc:xliff:changetracking:2.0</code></para>
+        <para>Schema for this extension is available at <ulink
+        url="&this-loc;/schemas/modules/matches.xsd"
+        >&this-loc;/schemas/modules/change_tracking.xsd</ulink> 
+          <!--Schematron schema won't be provide for the extension, but for the 2.2 module if and when available
+          and <ulink
+        url="&this-loc;/schemas/modules/change_tracking.sch"
+        >&this-loc;/schemas/modules/change_tracking.sch</ulink> -->.</para>
+    </section>
+
+  <section>
+    <title>Module Fragment Identification Prefix</title>
+    <para>The fragment identification prefix for the Change Tracking module or extension is:
+        <code>ctr</code></para>
+  </section>
+
+    <section>
+    <title>Module Elements</title>
+    <para>The elements defined in the Change Tracking extension are: <olink
+        targetdoc="../../elements/change-tracking/changeTrack.xml" targetptr="changeTrack"
+          ><code>&lt;changeTrack></code></olink>, <olink
+        targetdoc="../../elements/change-tracking/revisions.xml" targetptr="revisions"
+          ><code>&lt;revisions></code></olink>, <olink
+        targetdoc="../../elements/change-tracking/revision.xml" targetptr="revision"
+          ><code>&lt;revision></code></olink>, and <olink
+        targetdoc="../../elements/change-tracking/item.xml" targetptr="item"
+        ><code>&lt;item></code></olink>.</para>
+<section><!-- gen. 20140318 -->
+  <title>Tree Structure</title>
+  <para>Legend:</para>
+  <simplelist type="vert">
+    <member>+ = one or more</member>
+  </simplelist>
+  <programlisting format="linespecific">
+<olink targetdoc="../../elements/change-tracking/changeTrack.xml" targetptr="changeTrack"><code>&lt;changeTrack></code></olink>
+|
++---<olink targetdoc="../../elements/change-tracking/revisions.xml" targetptr="revisions"><code>&lt;revisions></code></olink> +
+  |
+  +---<olink targetdoc="../../elements/change-tracking/revision.xml" targetptr="revision"><code>&lt;revision></code></olink> +
+    |
+    +---<olink targetdoc="../../elements/change-tracking/item.xml" targetptr="item"><code>&lt;item></code></olink> +
+
+
+  </programlisting>
+</section>
+    <xi:include href="../../elements/change-tracking/changeTrack.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../elements/change-tracking/revisions.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../elements/change-tracking/revision.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../elements/change-tracking/item.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  </section>
+
+    <section>
+    <title>Module Attributes</title>
+    <para>The attributes defined in the Change Tracking extension are: <olink
+        targetdoc="../../attributes/change-tracking/ctr_appliesTo.xml" targetptr="ctr_appliesTo"
+          ><code>appliesTo</code></olink>, <olink
+        targetdoc="../../attributes/change-tracking/ctr_author.xml" targetptr="ctr_author"
+          ><code>author</code></olink>, <olink
+        targetdoc="../../attributes/change-tracking/ctr_currentVersion.xml"
+        targetptr="ctr_currentVersion"><code>currentVersion</code></olink>, <olink
+        targetdoc="../../attributes/change-tracking/ctr_datetime.xml" targetptr="ctr_datetime"
+          ><code>datetime</code></olink>, <olink
+        targetdoc="../../attributes/change-tracking/ctr_ref.xml" targetptr="ctr_ref"
+          ><code>ref</code></olink>, <olink
+        targetdoc="../../attributes/change-tracking/ctr_property.xml" targetptr="ctr_property"
+          ><code>property</code></olink>, and <olink
+        targetdoc="../../attributes/change-tracking/ctr_version.xml" targetptr="ctr_version"
+          ><code>version</code></olink>. </para>
+    <xi:include href="../../attributes/change-tracking/ctr_appliesTo.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/change-tracking/ctr_author.xml"
+	    xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/change-tracking/ctr_currentVersion.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/change-tracking/ctr_datetime.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/change-tracking/ctr_ref.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/change-tracking/ctr_property.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/change-tracking/ctr_version.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  </section>
+
+  <section>
+      <title>Example</title>
+
+<para>The following example shows change tracking for <olink
+        targetdoc="../../elements/structural/source.xml" targetptr="source"
+        ><code>&lt;source></code></olink>, <olink targetdoc="../../elements/structural/target.xml"
+        targetptr="target"><code>&lt;target></code></olink>, and <olink
+        targetdoc="../../elements/structural/notes.xml" targetptr="notes"
+        ><code>&lt;notes></code></olink>. Current and previous versions are both stored in the
+      Change Tracking extension.</para>
+
+<programlisting>
+  <!--
+&lt;unit id="1"&gt;
+    &lt;segment&gt;
+      &lt;source&gt;Hello World&lt;/source&gt;
+      &lt;target&gt;Guten Tag Welt&lt;/target&gt;
+    &lt;/segment&gt;
+    &lt;notes&gt;
+      &lt;note category="instruction" id="n1"&gt;The translation should be formal&lt;/note&gt;
+      &lt;note category="comment" id="n2"&gt;Please Review my translation&lt;/note&gt;
+    &lt;/notes&gt;
+    &lt;changeTrack&gt;
+      &lt;revisions appliesTo="source" currentVersion="r1"&gt;
+        &lt;revision author="system" datetime="2013-07-15T10:00:00+8:00" version="r1"&gt;
+          &lt;item property="content"&gt;Hello World&lt;/item&gt;&gt;
+        &lt;/revision&gt;
+        &lt;revision author="system" datetime="2013-06-15T10:00:00+8:00" version="r2"&gt;
+          &lt;item property="content"&gt;Hello&lt;/item&gt;&gt;
+        &lt;/revision&gt;
+        &lt;revision author="system" datetime="2013-05-15T10:00:00+8:00" version="r3"&gt;
+          &lt;item property="content"&gt;Hi&lt;/item&gt;
+        &lt;/revision&gt;
+      &lt;/revisions&gt;
+      &lt;revisions appliesTo="target" currentVersion="r1"&gt;
+       &lt;revision author="Frank" datetime="2013-07-17T11:00:00+8:00" version="r1"&gt;
+          &lt;item property="content"&gt;Guten Tag Welt&lt;/item&gt;
+        &lt;/revision&gt;
+        &lt;revision author="Frank" datetime="2013-06-17T11:00:00+8:00" version="r2"&gt;
+          &lt;item property="content"&gt;Hallo&lt;/item&gt;
+        &lt;/revision&gt;
+        &lt;revision author="Frank" datetime="2013-05-17T11:00:00+8:00" version="r3"&gt;
+          &lt;item property="content"&gt;Grüsse&lt;/item&gt;
+        &lt;/revision&gt;
+      &lt;/revisions&gt;
+      &lt;revisions appliesTo="note" nid="n1" currentVersion="r1"&gt;
+        &lt;revision author="Bob" datetime="2013-07-16T10:30:00+8:00" version="r1"&gt;
+          &lt;item property="content"&gt;The translation should be formal&lt;/item&gt;
+          &lt;item property="category"&gt;instruction&lt;/item&gt;
+        &lt;/revision&gt;
+        &lt;revision author="Bob" datetime="2013-05-16T10:30:00+8:00" version="r2"&gt;
+          &lt;item property="content"&gt;The translation should be informal&lt;/item&gt;
+          &lt;item property="category"&gt;comment&lt;/item&gt;
+        &lt;/revision&gt;
+      &lt;/revisions&gt;
+      &lt;revisions appliesTo="note" nid="n2" currentVersion="r1"&gt;
+        &lt;revision author="Bob" datetime="2013-07-18T10:30:00+8:00" version="r1"&gt;
+          &lt;item property="content"&gt;Please Review my translation&lt;/item&gt;
+        &lt;/revision&gt;
+      &lt;/revisions&gt;
+    &lt;/changeTrack&gt;
+ &lt;/unit&gt;
+ -->
+     &lt;unit id="1">
+     &lt;ctr:changeTrack>
+       &lt;ctr:revisions appliesTo="source" currentVersion="r1">
+         &lt;ctr:revision author="system" datetime="2013-07-15T10:00:00+8:00"
+             version="r1">
+           &lt;ctr:item property="content">Hello World&lt;/ctr:item>
+         &lt;/ctr:revision>
+         &lt;ctr:revision author="system" datetime="2013-06-15T10:00:00+8:00"
+             version="r2">
+           &lt;ctr:item property="content">Hello&lt;/ctr:item>
+         &lt;/ctr:revision>
+         &lt;ctr:revision author="system" datetime="2013-05-15T10:00:00+8:00"
+             version="r3">
+           &lt;ctr:item property="content">Hi&lt;/ctr:item>
+         &lt;/ctr:revision>
+       &lt;/ctr:revisions>
+       &lt;ctr:revisions appliesTo="target" currentVersion="r1">
+         &lt;ctr:revision author="Frank" datetime="2013-07-17T11:00:00+8:00"
+             version="r1">
+           &lt;ctr:item property="content">Guten Tag Welt&lt;/ctr:item>
+         &lt;/ctr:revision>
+         &lt;ctr:revision author="Frank" datetime="2013-06-17T11:00:00+8:00"
+             version="r2">
+           &lt;ctr:item property="content">Hallo&lt;/ctr:item>
+         &lt;/ctr:revision>
+         &lt;ctr:revision author="Frank" datetime="2013-05-17T11:00:00+8:00"
+             version="r3">
+           &lt;ctr:item property="content">Grüsse&lt;/ctr:item>
+         &lt;/ctr:revision>
+       &lt;/ctr:revisions>
+       &lt;ctr:revisions appliesTo="note" ref="n1" currentVersion="r1">
+         &lt;ctr:revision author="Bob" datetime="2013-07-16T10:30:00+8:00"
+             version="r1">
+           &lt;ctr:item property="content">The translation should be formal
+           &lt;/ctr:item>
+           &lt;ctr:item property="category">instruction&lt;/ctr:item>
+         &lt;/ctr:revision>
+         &lt;ctr:revision author="Bob" datetime="2013-05-16T10:30:00+8:00"
+             version="r2">
+           &lt;ctr:item property="content">The translation should be informal
+           &lt;/ctr:item>
+           &lt;ctr:item property="category">comment&lt;/ctr:item>
+         &lt;/ctr:revision>
+       &lt;/ctr:revisions>
+       &lt;ctr:revisions appliesTo="note" ref="n2" currentVersion="r1">
+         &lt;ctr:revision author="Bob" datetime="2013-07-18T10:30:00+8:00"
+             version="r1">
+           &lt;ctr:item property="content">Please Review my translation
+           &lt;/ctr:item>
+         &lt;/ctr:revision>
+       &lt;/ctr:revisions>
+     &lt;/ctr:changeTrack>
+     &lt;notes>
+       &lt;note category="instruction" id="n1">The translation should be
+       formal&lt;/note>
+       &lt;note category="comment" id="n2">Please Review my translation&lt;/note>
+     &lt;/notes>
+     &lt;segment>
+       &lt;source>Hello World&lt;/source>
+       &lt;target>Guten Tag Welt&lt;/target>
+     &lt;/segment>
+   &lt;/unit>
+</programlisting>
+
+</section>
+  
+
+</section>

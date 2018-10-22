@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="itsm_id">
+  <title>xml:id</title>
+
+  <para>Identifier - the <code>id</code> attribute from the <code>http://www.w3.org/XML/1998/</code>
+    namespace is used to identify a <olink targetdoc="../../elements/itsm/itsm_locQualityIssues.xml"
+      targetptr="itsm_locQualityIssues"><code>&lt;locQualityIssues></code></olink> or <olink
+      targetdoc="../../elements/itsm/itsm_provenanceRecords.xml" targetptr="itsm_provenanceRecords"
+        ><code>&lt;provenanceRecords></code></olink> element.</para>
+
+  <para><emphasis>Value description:</emphasis> xs:ID</para>
+
+  <para><emphasis>Default value:</emphasis> undefined</para>
+
+  <para><emphasis>Used in:</emphasis><olink
+    targetdoc="../../elements/itsm/itsm_locQualityIssues.xml" targetptr="itsm_locQualityIssues"
+    ><code>&lt;locQualityIssues></code></olink> and 
+    <olink
+      targetdoc="../../elements/itsm/itsm_provenanceRecords.xml" targetptr="itsm_provenanceRecords"
+      ><code>&lt;provenanceRecords></code></olink>.</para>
+  <warning>
+    <para>Since the ITS Module reuses the W3C namespace <code>http://www.w3.org/2005/11/its</code>
+      it cannot use <code>xs:NMTOKEN</code> identifiers as the <firstterm>XLIFF Core</firstterm> or
+      other <firstterm>Modules</firstterm>. Implementers need to be aware that <code>xs:ID</code>
+      has to be globally unique.</para>
+  </warning>
+  
+  
+  <!--<itemizedlist>
+  
+    <title>Constraints</title>
+  <listitem>
+    <para>Any value of this <link linkend="itsm_id"><code>id</code></link> attribute
+          <glossterm>must</glossterm> be unique either among all <olink
+          targetdoc="../../elements/itsm/itsm_locQualityIssues.xml"
+          targetptr="itsm_locQualityIssues"><code>&lt;locQualityIssues></code></olink> and
+      <olink
+        targetdoc="../../elements/itsm/itsm_provenanceRecords.xml" targetptr="itsm_provenanceRecords"
+        ><code>&lt;provenanceRecords></code></olink> elements within the given enclosing <olink
+          targetdoc="../../elements/structural/unit.xml" targetptr="unit"
+          ><code>&lt;unit></code></olink> element if the ITS Module elements, on which the
+        attributes are set are children of a <olink targetdoc="../../elements/structural/unit.xml"
+          targetptr="unit"><code>&lt;unit></code></olink> element, 
+      within the enclosing <olink
+        targetdoc="../../elements/structural/group.xml" targetptr="group"
+        ><code>&lt;group></code></olink> element, in case of <olink
+          targetdoc="../../elements/itsm/itsm_provenanceRecords.xml" targetptr="itsm_provenanceRecords"
+          ><code>&lt;provenanceRecords></code></olink> elements that are
+      children of a <olink targetdoc="../../elements/structural/group.xml" targetptr="group"
+        ><code>&lt;group></code></olink> element, or within the enclosing <olink
+          targetdoc="../../elements/structural/file.xml" targetptr="file"
+            ><code>&lt;file></code></olink> element, in case of <olink
+              targetdoc="../../elements/itsm/itsm_provenanceRecords.xml" targetptr="itsm_provenanceRecords"
+              ><code>&lt;provenanceRecords></code></olink> elements that are
+        children of a <olink targetdoc="../../elements/structural/file.xml" targetptr="file"
+            ><code>&lt;file></code></olink> element.</para>
+  </listitem>
+</itemizedlist>-->  
+
+
+</section>

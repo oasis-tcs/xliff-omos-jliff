@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="itsm_provenanceRecords">
+    <title>provenanceRecords</title>
+    <para>Provenance Records - a standoff wrapper element to group any number of single Provenance Record elements related to the same span of source or target content.</para>
+    <para><emphasis>Contains:</emphasis></para>
+    <simplelist>
+      <member>- One or more <olink targetdoc="itsm_provenanceRecord.xml" targetptr="itsm_provenanceRecord"><code>&lt;itsm_provenanceRecord></code></olink>
+            elements</member>
+        
+    </simplelist>
+  
+  <para><emphasis>Parents:</emphasis></para>
+  
+  <simplelist>
+    <member>- <olink targetdoc="../structural/unit.xml"
+      targetptr="unit"><code>&lt;unit></code></olink></member>
+    <member>- <olink targetdoc="../structural/group.xml"
+      targetptr="group"><code>&lt;group></code></olink></member>
+    <member>- <olink targetdoc="../structural/file.xml"
+      targetptr="file"><code>&lt;file></code></olink></member>
+  </simplelist>
+  
+
+    <para><emphasis>Attributes:</emphasis></para>
+    <simplelist>
+      <member>- <olink targetdoc="../../attributes/itsm/itsm_id.xml" targetptr="itsm_id">
+        <code>xml:id</code>
+      </olink>, <glossterm>required</glossterm>
+    </member>
+      <!--  not allowed on ITS stand off elements <member>-<olink targetdoc="../../attributes/itsm/itsm_annotatorsRef.xml"
+        targetptr="itsm_annotatorsRef">
+        <code>annotatorsRef</code></olink>,
+        <glossterm>optional</glossterm></member>-->
+        
+    </simplelist>
+<!-- This Constraint would be too strong as a MUST, it would invalidate XLIFF Documents with orphaned Provenance Records. But this can happen because the references can be removed by core only Modifiers.-->
+<itemizedlist>
+  <title>Constraints</title>
+  <listitem>
+    <para>Each <link linkend="itsm_provenanceRecords">provenanceRecords</link> element
+          <glossterm>should</glossterm> be referenced by at least one <olink
+          targetdoc="../../attributes/itsm/itsm_provenanceRecordsRef.xml"
+          targetptr="itsm_provenanceRecordsRef"><code>provenanceRecordsRef</code></olink> attribute
+        from the common parent element or one of the common parent's descendants as per Constraints
+        for the <olink targetdoc="../../attributes/itsm/itsm_provenanceRecordsRef.xml"
+          targetptr="itsm_provenanceRecordsRef"><code>provenanceRecordsRef</code></olink>
+        attribute.</para>
+  </listitem>
+</itemizedlist>
+  <itemizedlist>
+    <title>Processing Requirements</title>
+    <listitem>
+      <para><firstterm>Modifiers</firstterm> detecting an orphaned <link
+          linkend="itsm_provenanceRecords">provenanceRecords</link> element
+          <glossterm>may</glossterm> delete that <link linkend="itsm_provenanceRecords"
+          >provenanceRecords</link> element.</para>
+    </listitem>
+  </itemizedlist>
+  
+</section>

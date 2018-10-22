@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="External_Resource">
+  <title>External Resource</title>
+
+  <para>Indicates that a node represents or references potentially translatable data in a resource outside the document. Examples of such resources are external images and audio or video files.
+     See <olink
+      targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+    <ulink url="https://www.w3.org/TR/its20/#externalresource">External Resource</ulink> for
+    details.</para>
+
+  <section id="External_Resource_Structural">
+    <title>Structural Elements</title>
+    <para>External Resource is not to be used at structural levels. If a structural element of the
+      original document has <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+      <ulink url="http://www.w3.org/TR/its20/#externalresource">External Resource</ulink>
+      information associated, it <glossterm>may</glossterm> be <firstterm>Extracted</firstterm>
+      using the XLIFF Resource Data Module. The <firstterm>Extractor</firstterm> needs to determine
+      the media type of the external resource, since this is not available via <olink
+        targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+      <ulink url="http://www.w3.org/TR/its20/#externalresource">External Resource</ulink>
+      information.</para>
+
+
+    <example>
+      <title>Extraction of External Resource at structural levels</title>
+
+    <para>Original:</para>
+
+      <programlisting>
+&lt;its:rules version="2.0" xmlns:its="http://www.w3.org/2005/11/its"
+    xmlns:html="http://www.w3.org/1999/xhtml">
+  &lt;its:externalResourceRefRule selector="//html:video/@src"
+      externalResourceRefPointer="."/>
+  &lt;its:externalResourceRefRule selector="//html:video/@poster"
+      externalResourceRefPointer="."/>
+&lt;/its:rules>
+...
+&lt;video height=360 poster=video-image.png
+    src=http://www.example.com/video/v2.mp width=640>
+ </programlisting>
+
+
+    <para>Extraction:</para>
+
+
+      <programlisting>
+...
+&lt;res:resourceData>
+  &lt;res:resourceItem id="r1" mimeType="image/png" context="no">
+    &lt;res:source href="video-image.png" />
+  &lt;/res:resourceItem>
+&lt;/res:resourceData>
+...
+</programlisting>
+   </example>
+
+
+
+  </section>
+  <section id="External_resource__Inline">
+    <title>Inline Elements</title>
+    <para> External resources is <firstterm>Extracted</firstterm> using the XLIFF Resource Data
+      module. Use a <code><olink targetdoc="../elements/resourceData/res_source.xml" targetptr="res_source"
+        >&lt;res:source></olink></code> element as a child of a <code><olink targetdoc="../elements/resourceData/resourceItem.xml" targetptr="res_resourceItem"
+          >&lt;res:resourceItem></olink></code>element.</para>
+      <example>
+        <title>Extraction of External Resource at inline levels</title>
+    <para>Original:</para>
+
+    <programlisting>
+&lt;!doctype html>
+&lt;html lang="en">
+  &lt;head>
+    &lt;meta charset="utf-8">
+    &lt;title>Data Category: External Resource&lt;/title>
+    &lt;script type="application/its+xml">
+      &lt;its:rules xmlns:its="http://www.w3.org/2005/11/its" version="2.0"
+          xmlns:h="http://www.w3.org/1999/xhtml">
+        &lt;its:externalResourceRefRule selector="//h:img"
+            externalResourceRefPointer="@src"/>
+      &lt;/its:rules>
+    &lt;/script>
+  &lt;/head>
+  &lt;body>
+    &lt;p>Image: &lt;img src="example.png" alt="Text for the image">&lt;/p>
+  &lt;/body>
+&lt;/html>
+ </programlisting>
+
+
+    <para>Extraction:</para>
+
+
+    <programlisting>
+&lt;res:resourceData>
+  &lt;res:resourceItem id="r1" mimeType="image/png" context="no">
+    &lt;res:source href="example.png" />
+  &lt;/res:resourceItem>
+&lt;/res:resourceData>
+...
+</programlisting>
+        </example>
+
+  </section>
+
+</section>

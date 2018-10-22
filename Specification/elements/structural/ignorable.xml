@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="ignorable">
+    <title>ignorable</title>
+    <para>Part of the extracted content that is not included in a segment (and therefore not
+        translatable). For example tools can use <code>&lt;ignorable&gt;</code> to store the white
+        space and/or codes that are between two segments.</para>
+    <para><emphasis>Contains:</emphasis></para>
+    <simplelist>
+        <member>- One <olink targetdoc="source.xml" targetptr="source"><code>&lt;source></code></olink> element 
+            followed by</member>
+        <member>- Zero or one <olink targetdoc="target.xml" targetptr="target"><code>&lt;target></code></olink> element</member>
+    </simplelist>
+    
+    <para><emphasis>Attributes:</emphasis></para>
+    <simplelist>
+        <member>- <olink targetdoc="../../attributes/id.xml" targetptr="id"><code>id</code></olink>, <glossterm>optional</glossterm></member>
+    </simplelist>
+    
+    <!-- The uniqueness scope is described on the id attribute <itemizedlist>
+        <title>Constraints</title>
+        <listitem><para>The value of the <glossterm>optional</glossterm>
+            <olink targetdoc="../../attributes/id.xml" targetptr="id"><code>id</code></olink> 
+            attribute <glossterm>must</glossterm> be unique among all 
+            <olink targetdoc="segment.xml" targetptr="segment"><code>&lt;segment></code></olink> and
+            <link linkend="ignorable"><code>&lt;ignorable></code></link>
+            children of the enclosing 
+            <olink targetdoc="unit.xml" targetptr="unit"><code>&lt;unit></code></olink> 
+            element.</para></listitem>
+    </itemizedlist> -->
+    
+</section>
+
+    

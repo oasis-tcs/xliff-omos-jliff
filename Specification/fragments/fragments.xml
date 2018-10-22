@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="fragid">
+  <title>Fragment Identification</title>
+  <para>Because <firstterm>XLIFF Documents</firstterm> do not follow the usual behavior of XML documents when it comes to element identifiers, this specification
+    defines how <firstterm>Agents</firstterm> <glossterm>must</glossterm> interpret the fragment identifiers in IRIs pointing to <firstterm>XLIFF Documents</firstterm>.</para>
+  <note>
+    <para>Note that some identifiers may change during the localization process. For example <olink targetdoc="../elements/structural/data.xml"
+      targetptr="data"><code>&lt;data></code></olink> elements may be re-grouped or not depending on how tools treat
+     identical original data.</para>
+  </note>
+  <itemizedlist>
+    <title>Constraints</title>
+    <listitem>
+      <para>A fragment identifier <glossterm>must</glossterm> match the following format:</para>
+      <programlisting>
+&lt;expression>      ::= "#" ["/"] &lt;selector>
+                      {&lt;selectorSeparator> &lt;selector>}
+&lt;selector>        ::= [&lt;prefix> &lt;prefixSeparator>] &lt;id>
+&lt;prefix>          ::= NMTOKEN
+&lt;id>              ::= NMTOKEN
+&lt;prefixSeparator> ::= "="
+&lt;selectorSeparator>  ::= "/"</programlisting>
+    </listitem>
+    <listitem>
+      <para>There <glossterm>must not</glossterm> be two identical prefixes in the expression.</para>
+    </listitem>
+    <listitem>
+      <para>When used, the following selectors <glossterm>must</glossterm> be declared in this order: file selector, group selector and unit selector.</para>
+    </listitem>
+    <listitem>
+      <para>The selectors for modules or extensions, <olink targetdoc="../elements/structural/note.xml"
+        targetptr="note"><code>&lt;note&gt;</code></olink>, <olink targetdoc="../elements/structural/segment.xml"
+          targetptr="segment"><code>&lt;segment&gt;</code></olink> or <olink targetdoc="../elements/structural/ignorable.xml"
+            targetptr="ignorable"><code>&lt;ignorable&gt;</code></olink> or source inline elements, target inline elements and
+        <olink targetdoc="../elements/structural/data.xml"
+          targetptr="data"><code>&lt;data></code></olink> have the following constraints:</para>
+      <itemizedlist>
+        <listitem><para>Only one of them <glossterm>may</glossterm> be used in the expression.</para></listitem>
+        <listitem><para>The one used <glossterm>must</glossterm> be the last selector of the expression.</para></listitem>
+      </itemizedlist>
+    </listitem>
+  </itemizedlist>
+  <warning><para>Please note that due to the above Constraints, referencing fragments using third party
+      namespaces within <firstterm>Modules</firstterm> or extensions (including but not limited to
+        <firstterm>XLIFF Core</firstterm> or the Metadata Module) is not possible. This is to
+      restrict the complexity of the fragment identification mechanism, as it would otherwise have
+      potentially unlimited depth.</para></warning>
+  <section>
+    <title>Selectors for Core Elements</title>
+    <itemizedlist>
+      <listitem><para>The prefix <code>f</code> indicates a <olink targetdoc="../elements/structural/file.xml"
+        targetptr="file"><code>&lt;file></code></olink> id and the value of that id is unique among all <olink targetdoc="../elements/structural/file.xml"
+          targetptr="file"><code>&lt;file></code></olink> <code>id</code> attribute values within the enclosing <olink
+            targetdoc="../elements/structural/xliff.xml" targetptr="xliff"><code>&lt;xliff></code></olink> element.</para></listitem>
+
+      <listitem><para>The prefix <code>g</code> indicates a <olink targetdoc="../elements/structural/group.xml" targetptr="group"
+        ><code>&lt;group&gt;</code></olink> id and the value of that id is unique among all <olink targetdoc="../elements/structural/group.xml"
+          targetptr="group"><code>&lt;group></code></olink> <code>id</code> attribute values within the enclosing  <olink
+            targetdoc="../elements/structural/file.xml" targetptr="file"><code>&lt;file></code></olink> element.</para></listitem>
+
+      <listitem><para>The prefix <code>u</code> indicates a <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"
+        ><code>&lt;unit&gt;</code></olink> id and the value of that id is unique among all <olink targetdoc="../elements/structural/unit.xml"
+          targetptr="unit"><code>&lt;unit></code></olink> <code>id</code> attribute values within the enclosing  <olink
+            targetdoc="../elements/structural/file.xml" targetptr="file"><code>&lt;file></code></olink> element.</para></listitem>
+
+      <listitem><para>The prefix <code>n</code> indicates a <olink targetdoc="../elements/structural/note.xml"
+        targetptr="note"><code>&lt;note&gt;</code></olink> id and the value of that id is unique among all <olink targetdoc="../elements/structural/note.xml"
+          targetptr="note"><code>&lt;note></code></olink> <code>id</code> attribute values within the immediate enclosing
+        <olink targetdoc="../elements/structural/file.xml" targetptr="file"><code>&lt;file></code></olink>,
+        <olink targetdoc="../elements/structural/group.xml" targetptr="group"><code>&lt;group></code></olink>, or
+        <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink> element.</para></listitem>
+
+      <listitem><para>The prefix <code>d</code> indicates a <olink targetdoc="../elements/structural/data.xml"
+        targetptr="data"><code>&lt;data></code></olink> id and the value of that id is unique among all <olink targetdoc="../elements/structural/data.xml"
+        targetptr="data"><code>&lt;data></code></olink> <code>id</code> attribute values within the enclosing
+        <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink> element.</para></listitem>
+
+      <listitem><para>The prefix <code>t</code> indicates an id for an inline element in the <olink targetdoc="../elements/structural/target.xml"
+        targetptr="target"><code>&lt;target&gt;</code></olink> element and the value of that id is unique within the
+        enclosing <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"
+          ><code>&lt;unit&gt;</code></olink> element (with the exception of the matching inline elements in the <olink targetdoc="../elements/structural/source.xml"
+            targetptr="source"><code>&lt;source&gt;</code></olink>).</para></listitem>
+
+      <listitem><para>No prefix indicates an id for a <olink targetdoc="../elements/structural/segment.xml"
+        targetptr="segment"><code>&lt;segment&gt;</code></olink> or an <olink targetdoc="../elements/structural/ignorable.xml"
+          targetptr="ignorable"><code>&lt;ignorable&gt;</code></olink> or an inline element in the <olink targetdoc="../elements/structural/source.xml"
+            targetptr="source"><code>&lt;source&gt;</code></olink> element and the value of that id
+        is unique within the enclosing <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"
+          ><code>&lt;unit&gt;</code></olink> element (with the exception of the matching inline elements in the <olink targetdoc="../elements/structural/target.xml"
+            targetptr="target"><code>&lt;target&gt;</code></olink>).</para></listitem>
+    </itemizedlist>
+  </section>
+  <section id="fragid-modandext">
+    <title>Selectors for Modules and Extensions</title>
+    <para>A selector for a module or an extension uses a registered prefix and the value of that id is unique within the immediate enclosing
+      <olink targetdoc="../elements/structural/file.xml" targetptr="file"><code>&lt;file></code></olink>,
+      <olink targetdoc="../elements/structural/group.xml" targetptr="group"
+        ><code>&lt;group&gt;</code></olink> or <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"
+        ><code>&lt;unit&gt;</code></olink> element.</para>
+    <itemizedlist>
+      <title>Constraints</title>
+      <listitem><para>The prefix of a module or an extension <glossterm>must</glossterm> be an NMTOKEN longer than 1
+          character and <glossterm>must</glossterm> be defined in the module or extension
+          specification.</para></listitem>
+      <listitem><para>The prefix of a module or an extension <glossterm>must</glossterm> be registered with the
+          XLIFF TC.</para></listitem>
+      <listitem><para>A given module or extension namespace URI <glossterm>must</glossterm> be associated with a single prefix.</para></listitem>
+      <listitem><para>A prefix <glossterm>may</glossterm> be associated with more than one namespace URI (to allow
+          for example different versions of a given module or extension to use the same
+          prefix).</para></listitem>
+    </itemizedlist>
+    <para>See also the <olink targetdoc="../extensions/extensions.xml" targetptr="ext-constraints">constraints related to how IDs need to be specified in
+      extensions</olink> (which applies for modules as well).</para>
+  </section>
+  <section>
+    <title>Relative References</title>
+    <para>Fragment identifiers that do not start with a character <code>/</code> (U+002F) are relative to their location in the document,
+      or to the document being processed.</para>
+    <para>Any unit, group or file selector missing to resolve the relative reference is obtained from the immediate enclosing unit, group or file elements.</para>
+  </section>
+  <section id="fragid-example">
+    <title>Examples</title>
+    <para>Given the following XLIFF document:</para>
+    <programlisting>
+&lt;xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0"
+    srcLang="en" trgLang="fr">
+  &lt;file id="f1">
+    &lt;notes>
+      &lt;note id="n1">note for file.&lt;/note>
+    &lt;/notes>
+    &lt;unit id="u1">
+      &lt;my:elem xmlns:my="myNamespaceURI" id="x1">data&lt;/my:elem>
+      &lt;notes>
+        &lt;note id="n1">note for unit&lt;/note>
+      &lt;/notes>
+      &lt;segment id="s1">
+        &lt;source>&lt;pc id="1">Hello &lt;mrk id="m1" type="term">World&lt;/mrk>!&lt;/pc>
+            &lt;/source>
+        &lt;target>&lt;pc id="1">Bonjour le &lt;mrk id="m1" type="term">Monde&lt;/mrk>
+            ! &lt;/pc>&lt;/target>
+      &lt;/segment>
+    &lt;/unit>
+  &lt;/file>
+&lt;/xliff>
+</programlisting>
+    <para>You can have the following fragment identifiers:</para>
+    <itemizedlist>
+      <listitem><para><code>#f=f1/u=u1/1</code> refers to the element <code>&lt;pc id="1"></code> of the source content of the element <code>&lt;unit id="u1"></code>.</para></listitem>
+      <listitem><para><code>#f=f1/u=u1/t=1</code> refers to the element <code>&lt;pc id="1"></code> of the target content of the element <code>&lt;unit id="u1"></code>.</para></listitem>
+      <listitem><para><code>#f=f1/n=n1</code> refers to the element <code>&lt;note id="n1"></code> of the element <code>&lt;file id="f1"></code>.</para></listitem>
+      <listitem><para><code>#f=f1/u=u1/n=n1</code> refers to the element <code>&lt;note id="n1"></code> of the element <code>&lt;unit id="u1"></code>.</para></listitem>
+      <listitem><para><code>#f=f1/u=u1/s1</code> refers to the element <code>&lt;segment id="s1"></code> of the element <code>&lt;unit id="u1"></code>.</para></listitem>
+      <listitem><para>Assuming the extension defined by the namespace URI <code>myNamespaceURI</code> has registered the prefix <code>myprefix</code>, the expression
+        <code>#f=f1/u=u1/myprefix=x1</code> refers to the element <code>&lt;my:element id="x1"></code> of the element <code>&lt;unit id="u1"></code>.</para></listitem>
+    </itemizedlist>
+  </section>
+
+</section>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="glossentry">
+    <title>glossEntry</title>
+    <para>Glossary entry.</para>
+    <para><emphasis>Contains:</emphasis></para>
+    <simplelist>
+        <member>- One <olink targetdoc="term.xml" targetptr="term"><code>&lt;term></code></olink> element followed by </member>
+        <member>- Zero, one or more <olink targetdoc="translation.xml" targetptr="translation"><code>&lt;translation></code></olink>
+            elements followed by </member>
+        <member>- Zero or one <olink targetdoc="definition.xml" targetptr="definition"><code>&lt;definition></code></olink>
+            element followed by </member>
+        <member>- elements from other namespaces, <glossterm>optional</glossterm></member>
+    </simplelist>
+
+    <para><emphasis>Attributes:</emphasis></para>
+    <simplelist>
+      <member>
+      - <olink targetdoc="../../attributes/glossary/gls_id.xml" targetptr="gls_id">
+        <code>id</code>
+        </olink>, <glossterm>optional</glossterm>
+      </member>
+        <member> - <olink targetdoc="../../attributes/glossary/gls_ref.xml" targetptr="gls_ref">
+                <code>ref</code>
+            </olink>, <glossterm>optional</glossterm></member>
+      <member>- attributes from other namespaces, <glossterm>optional</glossterm></member>
+    </simplelist>
+
+    <itemizedlist>
+        <title>Constraints</title>
+        <listitem>
+            <para>A <link linkend="glossentry"><code>&lt;glossEntry></code></link> element <glossterm>must</glossterm> contain a
+                <olink targetdoc="translation.xml" targetptr="translation"><code>&lt;translation></code></olink>  or a
+                <olink targetdoc="definition.xml" targetptr="definition"><code>&lt;definition></code></olink> element
+                to be valid.</para>
+        </listitem>
+        <listitem>
+            <para>The following <firstterm>XLIFF Module</firstterm> elements are explicitly allowed
+                by the wildcard <code>other</code>:</para>
+            <simplelist>
+                
+                <member>- Zero or one <olink targetdoc="../metadata/metadata.xml" targetptr="metadata"><code>&lt;mda:metadata></code></olink>
+                    elements</member>
+                
+                
+            </simplelist>
+        </listitem>
+    </itemizedlist>
+</section>

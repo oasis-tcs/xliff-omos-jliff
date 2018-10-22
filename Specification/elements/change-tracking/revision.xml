@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="revision">
+    <title>revision</title>
+    <para>Container for specific revisions associated with a sibling element, or a child of a sibling element, to the change track extension within the scope of the enclosing element.</para>
+    <para><emphasis>Contains:</emphasis></para>
+    <simplelist>
+        <member>- One or more <olink targetdoc="../../elements/change-tracking/item.xml" targetptr="item"><code>&lt;item></code></olink> elements.</member>
+    </simplelist>
+    
+    <para><emphasis>Attributes:</emphasis></para>
+    <simplelist>
+        <member>- <olink targetdoc="../../attributes/change-tracking/ctr_author.xml" targetptr="ctr_author"><code>author</code></olink>, <glossterm>optional</glossterm></member>
+        <member>- <olink targetdoc="../../attributes/change-tracking/ctr_datetime.xml" targetptr="ctr_datetime"><code>datetime</code></olink>, <glossterm>optional</glossterm></member> 
+        <member>- <olink targetdoc="../../attributes/change-tracking/ctr_version.xml" targetptr="ctr_version"><code>version</code></olink>, <glossterm>optional</glossterm></member> 
+        <member>- attributes from other namespaces, <glossterm>optional</glossterm></member>
+    </simplelist>
+
+  <itemizedlist>
+    <title>Constraints</title>
+    
+    <listitem>
+      <para>The following <firstterm>XLIFF Module</firstterm> attributes are explicitly allowed by
+        the wildcard <code>other</code>:</para>
+      <simplelist>
+        <member>- attributes from the namespace <code>urn:oasis:names:tc:xliff:itsm:2.1</code>,
+          <glossterm>optional</glossterm>, provided that the Constraints specified in the <olink
+            targetdoc="../../modules/itsm/specification.xml" targetptr="ITS-module">ITS Module</olink> are
+          met.</member>
+      </simplelist>
+    </listitem>
+    
+  </itemizedlist>
+  
+  <itemizedlist>
+    <title>Processing Requirements</title>
+
+    <listitem>
+      <para>Modifying agents <glossterm>may</glossterm> create <olink targetdoc="../../elements/change-tracking/revision.xml" targetptr="revision"><code>&lt;revision></code></olink> elements with attributes.</para>
+    </listitem>
+    
+    <listitem>
+      <para>Modifying agents <glossterm>should not</glossterm> modify <olink targetdoc="../../elements/change-tracking/revision.xml" targetptr="revision"><code>&lt;revision></code></olink> and its attributes defined in this extension.</para>
+    </listitem>
+
+    <listitem>
+      <para>Modifying agents <glossterm>may</glossterm> remove <olink targetdoc="../../elements/change-tracking/revision.xml" targetptr="revision"><code>&lt;revision></code></olink> and its attributes defined in this extension 
+        if and only if there is more than one instance of <olink targetdoc="../../elements/change-tracking/revision.xml" targetptr="revision"><code>&lt;revision></code></olink> present. For example, a user agent can decide
+        to preserve only the most current revision.</para>
+    </listitem>
+
+  </itemizedlist>
+</section>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="priority">
+    <title>priority</title>
+
+    <para>Priority - provides a way to prioritize notes.</para>
+
+    <para><emphasis>Value description:</emphasis> Integer 1-10.</para>
+
+    <para><emphasis>Default value:</emphasis> <code>1</code></para>
+
+    <para><emphasis>Used in:</emphasis> <olink targetdoc="../elements/structural/note.xml" targetptr="note"><code>&lt;note></code></olink>.</para>
+
+    <note><para>Please note that 1 is the highest priority that can be interpreted as an alert,
+        e.g. an <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> <ulink url="http://www.w3.org/TR/its20/#locNote-datacat">Localization Note</ulink> of the type alert.
+        The best practice is to use only one alert per an annotated element, and the full scale of 2-10 can be used for prioritizing notes of lesser importance than the alert.</para></note>
+</section>
+

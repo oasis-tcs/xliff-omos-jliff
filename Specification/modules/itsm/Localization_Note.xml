@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="Localization_Note">
+  <title>Localization Note</title>
+
+  <para>Provides a way to communicate notes to localizers about a particular item of content.
+    See <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+    <ulink url="http://www.w3.org/TR/its20/#locNote-datacat">Localization Note</ulink> for details.</para>
+  <warning><para> There is a one-to-one mapping for all parts of the <ulink
+        url="http://www.w3.org/TR/its20/#locNote-datacat">Localization Note</ulink> information to
+      and from the <firstterm>XLIFF Core</firstterm>
+      <code><olink targetdoc="../elements/structural/note.xml" targetptr="note"
+        >&lt;note></olink></code> and the <olink targetdoc="../inline/inline.xml"
+        targetptr="commentAnnotation">Comment Annotation</olink> mechanism. This means that the
+      whole data category can be losslessly <firstterm>Extracted</firstterm> from the native format,
+        <firstterm>Merged</firstterm> back to the native format or even round-tripped. However,
+      generic ITS Processors won't be able to fully access the <ulink
+        url="http://www.w3.org/TR/its20/#locNote-datacat">Localization Note</ulink> information
+      encoded in <firstterm>XLIFF Documents</firstterm>. The <ulink
+        url="http://www.w3.org/TR/its20/#locNote-datacat">Localization Note</ulink> rules contained
+      in the ITS Module Schematron Schema (<ulink url="&this-loc;/schemas/its.sch"
+        >&this-loc;/schemas/its.sch</ulink>) won't be able to parse <firstterm>XLIFF
+        Core</firstterm>
+      <code><olink targetdoc="../elements/structural/note.xml" targetptr="note"
+        >&lt;note></olink></code> elements placed on <olink
+        targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink>
+      unless they have set the attribute <olink targetdoc="../../attributes/appliesto.xml"
+        targetptr="appliesto"><code>appliesTo</code></olink>.</para></warning>
+
+
+  <section id="Localization_Note_Structural">
+    <title>Structural Elements</title>
+    <para> Localization Notes present in source content at structural levels are <firstterm>Extracted</firstterm> using the
+      <firstterm>XLIFF Core</firstterm> <code><olink targetdoc="../elements/structural/note.xml"
+        targetptr="note">&lt;note></olink></code> and the
+      <code><olink targetdoc="../elements/structural/note.xml" targetptr="note"
+        >&lt;note></olink></code> element. ITS attribute <code>locNoteType</code> is mapped onto the
+        <firstterm>XLIFF Core</firstterm> attribute <olink targetdoc="../attributes/priority.xml"
+        targetptr="priority"><code>priority</code></olink>. The value <code>alert</code> is mapped
+      onto priority <code>1</code>. The value <code>description</code> is mapped onto any of the
+      integers <code>2-10</code>.</para>
+
+      <example>
+        <title>Extraction of a Localization note at a structural level</title>
+        <para>Original:</para>
+        <programlisting>
+&lt;msgList xmlns:its= "http://www.w3.org/2005/11/its" xml:space= "preserve"
+    its:version= "2.0"&gt;
+  &lt;data name= "LISTFILTERS_VARIANT" its:locNote= "Keep the leading space!"
+      its:locNoteType= "alert"&gt;
+    &lt;value&gt; Variant {0} = {1} ({2}) &lt;/value&gt;
+  &lt;/data&gt;
+  &lt;data its:locNote= "%1\$s is the original text's date in the format
+      YYYY-MM-DD HH:MM always in GMT"&gt;
+    &lt;value&gt;Translated from English content dated
+        &lt;span id= "version-info"&gt;%1\$s&lt;/span&gt; GMT.&lt;/value&gt;
+  &lt;/data&gt;
+&lt;/msgList&gt;
+ </programlisting>
+        <para>Extraction:</para>
+        <programlisting>
+&lt;file id="1" xml:space="preserve">
+  &lt;unit id="1" name="LISTFILTERS_VARIANT">
+    &lt;notes>
+      &lt;note priority="1">Keep the leading space! &lt;/note>
+    &lt;/notes>
+    &lt;segment>
+      &lt;source> Variant {0} = {1} ({2}) &lt;/source>
+    &lt;/segment>
+  &lt;/unit>
+  &lt;unit id="2" name="LISTFILTERS_VARIANT">
+    &lt;notes>
+      &lt;note priority="2">%1\$s is the original text's date in the format
+          YYYY-MM-DD HH:MM always in GMT &lt;/note>
+    &lt;/notes>
+    &lt;segment>
+      &lt;source>Translated from English content dated
+          &lt;pc id="1">%1\$s&lt;/pc> GMT.&lt;/source>
+    &lt;/segment>
+  &lt;/unit>
+&lt;/file>
+ </programlisting>
+      </example>
+    <para><warning><para>The values of the ITS attribute <code>locNoteRef</code> are to be dereferenced during
+            <firstterm>Extraction</firstterm>, so that the Localization Note text can be included
+          verbatim in the XLIFF <code><olink targetdoc="../elements/structural/note.xml"
+              targetptr="note">&lt;note></olink></code> element. A corresponding attribute is NOT
+          provided through the <olink targetptr="ITS-module"
+            targetdoc="../modules/its/specification.xml">ITS Module</olink> to discourage external
+          references from XLIFF Notes. The <code>locNoteRef</code> attribute and its value still can
+          be preserved on <firstterm>Extraction</firstterm> via extensibility, however this
+          information will not have a guaranteed roundtrip protection and the XLIFF Note itself
+          still better include the dereferenced Localization Note text.</para> </warning></para>
+  </section>
+  <section id="Localization_Note_Inline">
+    <title>Inline Elements</title>
+    <para> Localization Notes present on inline spans of source content are
+        <firstterm>Extracted</firstterm> using the <firstterm>XLIFF Core</firstterm>
+      <olink targetdoc="../inline/inline.xml" targetptr="annotations">Annotations</olink> mechanism.
+      Use <code><olink targetdoc="../elements/inline/mrk.xml" targetptr="mrk"
+        >&lt;mrk></olink></code> or an <code><olink targetdoc="../elements/inline/sm.xml"
+          targetptr="sm">&lt;sm/></olink></code> / <code><olink
+          targetdoc="../elements/inline/em.xml" targetptr="em">&lt;em/></olink></code> pair with
+        <code>type="comment"</code>. See  <olink targetdoc="../inline/inline.xml"
+        targetptr="commentAnnotation">Comment Annotation</olink>.
+    </para>
+    <para>Comment Annotations can either contain the Localization Note text as the value of the
+      attribute <olink targetdoc="../attributes/value.xml" targetptr="value"
+        ><code>value</code></olink> or otherwise have to reference a <olink
+        targetdoc="../elements/structural/note.xml" targetptr="note"><code>&lt;note></code></olink>
+      element within the same enclosing <olink targetdoc="../elements/structural/unit.xml"
+        targetptr="unit"><code>&lt;unit></code></olink>. In case no <olink
+        targetdoc="../elements/structural/note.xml" targetptr="note"><code>&lt;note></code></olink>
+      element is referenced, it is assumed that the ITS <code>locNoteType</code> is
+        <code>description</code>. In case the referenced <olink
+        targetdoc="../elements/structural/note.xml" targetptr="note"><code>&lt;note></code></olink>
+      element has <olink targetdoc="../attributes/priority.xml" targetptr="priority"
+          ><code>priority</code></olink>
+      <code>1</code> or does not have the <olink targetdoc="../attributes/priority.xml"
+        targetptr="priority"><code>priority</code></olink> attribute set explicitly, the ITS
+        <code>locNoteType</code> is <code>alert</code>. Explicitly set values <code>2-10</code> map
+      onto the ITS <code>locNoteType</code> value <code>description</code>.</para>
+
+
+
+   <example>
+      <title>Extraction of an inline Localization Note </title>
+
+     <para>Original:</para>
+     <programlisting>
+<emphasis role="bold">&lt;!DOCTYPE html&gt;</emphasis>
+<emphasis role="bold">&lt;html</emphasis> lang=en<emphasis role="bold">&gt;</emphasis>
+  <emphasis role="bold">&lt;head&gt;</emphasis>
+    <emphasis role="bold">&lt;meta</emphasis> charset=utf-8<emphasis role="bold">&gt;</emphasis>
+    <emphasis role="bold">&lt;title&gt;</emphasis>LocNote test: Default<emphasis role="bold">&lt;/title&gt;</emphasis>
+  <emphasis role="bold">&lt;/head&gt;</emphasis>
+  <emphasis role="bold">&lt;body&gt;</emphasis>
+    <emphasis role="bold">&lt;p&gt;</emphasis>This is a
+      <emphasis role="bold">&lt;span</emphasis> its-loc-note="Check with terminology engineer"
+          its-loc-note-type="alert"<emphasis role="bold">&gt;</emphasis> motherboard<emphasis role="bold">&lt;/span&gt;</emphasis>.
+    <emphasis role="bold">&lt;/p&gt;</emphasis>
+  <emphasis role="bold">&lt;/body&gt;</emphasis>
+<emphasis role="bold">&lt;/html&gt;</emphasis>     </programlisting>
+     <para>Extraction:</para>
+     <programlisting>
+&lt;xliff version="2.1" srcLang="EN">
+  &lt;file id=1>
+    &lt;unit id='1'>
+      &lt;notes>
+        &lt;note id="1" priority="1">Check with terminology engineer&lt;/note>
+      &lt;/notes>
+      &lt;segment>
+        &lt;source>This is a &lt;mrk id="1" type="comment" ref="#n=1">
+            motherboard&lt;/mrk>.&lt;/source>
+      &lt;/segment>
+    &lt;/unit>
+  &lt;/file>
+&lt;/xliff>
+        </programlisting>
+
+
+
+    </example>
+  </section>
+
+</section>

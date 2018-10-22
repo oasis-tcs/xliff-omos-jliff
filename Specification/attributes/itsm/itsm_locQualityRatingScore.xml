@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="itsm_locQualityRatingScore">
+    <title>locQualityRatingScore</title>
+    
+    <para>Localization Quality Rating Score - the <code>locQualityRatingScore</code> attribute
+        is the <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+        defined <code>locQualityRatingScore</code> attribute. </para>
+    <para> This attribute provides the quality rating score pertaining to a structural or inline portion of target text, the higher the number
+        the better the quality rating. Tools are expected to interpret this score within their own quality rating system.</para>
+    
+    <para><emphasis>Value description:</emphasis> a decimal number between 0.0 and 100.0.</para>
+        
+    <para><emphasis>Default value:</emphasis> default values for this attribute
+        depend on the element in which it is used:</para>
+    
+    <itemizedlist>
+        <listitem>
+            <para>When used in <olink targetdoc="../../elements/structural/file.xml"
+                targetptr="file"><code>&lt;file&gt;</code></olink>:</para>
+            
+            <para>The value is undefined.</para>
+        </listitem>
+        <listitem>
+            <para>When used in any other admissible structural element (<olink
+                    targetdoc="../../elements/structural/group.xml" targetptr="group"
+                        ><code>&lt;group></code></olink> or <olink
+                    targetdoc="../../elements/structural/unit.xml" targetptr="unit"
+                        ><code>&lt;unit></code></olink>):</para>
+            <para>The value of the <link linkend="itsm_locQualityRatingScore"
+                        ><code>locQualityRatingScore</code></link> attribute of its parent element
+                (which can be undefined).</para>
+        </listitem>
+        <listitem>
+            <para>When used in annotations markers <olink targetdoc="../../elements/inline/mrk.xml"
+                    targetptr="mrk"><code>&lt;mrk></code></olink> or <olink
+                    targetdoc="../../elements/inline/sm.xml" targetptr="sm"
+                    ><code>&lt;sm></code></olink>:</para>
+            <para>The value of the <link linkend="itsm_locQualityRatingScore"
+                        ><code>locQualityRatingScore</code></link> attribute of the innermost <olink
+                    targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
+                    ><code>&lt;mrk></code></olink>, <olink
+                    targetdoc="../../elements/structural/unit.xml" targetptr="unit"
+                        ><code>&lt;unit&gt;</code></olink>, or <olink
+                    targetdoc="../../elements/candidates/match.xml" targetptr="match"
+                        ><code>&lt;mtc:match></code></olink> element, in which the marker in
+                question is located (which can be undefined).</para>
+            <para>In the special case that the parent element of the marker is a <olink
+                    targetdoc="../../elements/candidates/match.xml" targetptr="match"
+                        ><code>&lt;mtc:match></code></olink> element, the value is inherited from
+                the <olink targetdoc="../../attributes/candidates/matchQuality.xml"
+                    targetptr="matchQuality"><code>mtc:matchQuality</code></olink> attribute of the
+                parent <olink targetdoc="../../elements/candidates/match.xml" targetptr="match"
+                        ><code>&lt;mtc:match></code></olink> (which can be undefined).</para>
+        </listitem>
+        
+        
+        
+    </itemizedlist>
+    
+    <warning><para>The <link linkend="itsm_locQualityRatingScore">locQualityRatingScore</link> attribute is
+            intended to be used in concert with the <olink
+                targetdoc="itsm_locQualityRatingProfileRef.xml"
+                targetptr="itsm_locQualityRatingProfileRef">locQualityRatingProfileRef</olink> attribute that is to provide
+        information on the applicable Quality Assessment Model and with the <olink
+            targetdoc="itsm_locQualityRatingScoreThreshold.xml"
+            targetptr="itsm_locQualityRatingScoreThreshold">locQualityRatingScoreThreshold</olink> attribute. Without providng quality assessment model information and/or an acceptance threshold,
+            the score between 0 and 100 is very likely to be useless and not interoperable.</para> </warning>
+    
+    
+    <para><emphasis>Used in:</emphasis>
+        <olink targetdoc="../../elements/structural/file.xml" targetptr="file"
+                ><code>&lt;file></code></olink>, <olink
+            targetdoc="../../elements/structural/group.xml" targetptr="group"
+                ><code>&lt;group></code></olink>, <olink
+            targetdoc="../../elements/structural/unit.xml" targetptr="unit"
+            ><code>&lt;unit></code></olink>, <olink targetdoc="../../elements/inline/mrk.xml"
+            targetptr="mrk"><code>&lt;mrk></code></olink>, and <olink
+            targetdoc="../../elements/inline/sm.xml" targetptr="sm"><code>&lt;sm></code></olink>.</para>
+    
+    
+    <itemizedlist>
+        <title>Constraints</title>
+        <listitem><para>The <link linkend="itsm_locQualityRatingScore">locQualityRatingScore</link> attribute <glossterm>must not</glossterm> be either set or inherited on the 
+            <olink targetdoc="../../elements/candidates/match.xml" targetptr="match"
+                ><code>&lt;mtc:match></code></olink> elements, where it maps to and from the <olink targetdoc="../../attributes/candidates/matchQuality.xml"
+                    targetptr="matchQuality"><code>mtc:matchQuality</code></olink> attribute.</para></listitem>
+    </itemizedlist>
+    <para>See the <olink targetdoc="../../modules/itsm/specifcation.xml" targetptr="lqrAnnotation"
+            >ITS Localization Quality Rating Annotation</olink> for the normative usage description of this
+        attribute when used inline; advanced Constraints follow from that normative usage
+        description.</para>
+    <para>See <olink targetdoc="../../modules/itsm/Localization_Quality_Rating.xml"
+            targetptr="Localization_Quality_Rating_Structural"><code>Localization Quality Rating on
+                Structural Elements</code></olink> for advanced Constraints when used on strcutural
+        elements (<olink targetdoc="../../elements/structural/file.xml" targetptr="file"
+                ><code>&lt;file></code></olink>, <olink
+            targetdoc="../../elements/structural/group.xml" targetptr="group"
+                ><code>&lt;group></code></olink>, and <olink
+            targetdoc="../../elements/structural/unit.xml" targetptr="unit"
+            ><code>&lt;unit></code></olink>).</para>
+    <para>See <olink targetdoc="../../modules/itsm/Localization_Quality_Rating.xml"
+            targetptr="Localization_Quality_Rating_Matches"><code>Localization Quality Rating in
+                Translation Candidates Module</code></olink> for advanced Constraints when used
+        within the <olink targetdoc="../../modules/candidates/specification.xml"
+            targetptr="candidates">Translation Candidates Module</olink>.</para>
+
+
+</section>

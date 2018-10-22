@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="equiv">
+  <title>equiv</title>
+
+  <para>Equivalent text - holds a plain text representation of the original data of the inline code
+    that can be used when generating a plain text representation of the content.</para>
+
+  <para><emphasis>Value description:</emphasis> Text.</para>
+
+  <para><emphasis>Default value:</emphasis> an empty string.</para>
+
+  <para><emphasis>Used in:</emphasis> <olink
+  targetdoc="../elements/inline/ph.xml"
+  targetptr="ph"><code>&lt;ph&gt;</code></olink>, <olink
+  targetdoc="../elements/inline/sc.xml"
+  targetptr="sc"><code>&lt;sc&gt;</code></olink>, <olink
+  targetdoc="../elements/inline/ec.xml"
+  targetptr="ec"><code>&lt;ec&gt;</code></olink>.</para>
+
+  <para><emphasis>Example:</emphasis></para>
+
+  <programlisting>
+&lt;unit id="1"&gt;
+  &lt;originalData&gt;
+    &lt;data id="d1"&gt;&amp;amp;&lt;/data&gt;
+  &lt;/originalData&gt;
+  &lt;segment&gt;
+    &lt;source&gt;Open &lt;ph id="1" equiv="" dataRef="d1"/&gt;File&lt;/source&gt;
+  &lt;/segment&gt;
+&lt;/unit&gt;
+</programlisting>
+
+  <para>In this example the <olink targetdoc="equiv.xml"
+  targetptr="equiv"><code>equiv</code></olink> attribute of the <olink
+  targetdoc="../elements/inline/ph.xml"
+  targetptr="ph"><code>&lt;ph&gt;</code></olink> element is used to indicate
+  that the original data of the code can be ignored in the text representation
+  of the string. This could, for instance, help a spell-checker tool to
+  process the content as "Open File".</para>
+
+  <note>
+    <para>To provide a user-friendly representation, use the <olink
+    targetdoc="disp.xml" targetptr="disp"><code>disp</code></olink>
+    attribute.</para>
+  </note>
+</section>

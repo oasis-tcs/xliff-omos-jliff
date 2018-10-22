@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="Translate">
+  <title>Translate</title>
+
+  <para>Indicates whether content is translatable or not. See <olink
+      targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+    <ulink url="http://www.w3.org/TR/its20/#trans-datacat">Translate</ulink> for
+    details.</para>
+  <para>ITS data category Translate in source content influences how <firstterm>Extractors</firstterm> prepare source content for <firstterm>Translation</firstterm> via <firstterm>XLIFF Documents</firstterm>.</para>
+
+  <section id="Translate_Structural">
+    <title>Structural Elements</title>
+    <para>
+      Use the <code><olink targetdoc="../attributes/translate.xml" targetptr="translate">translate</olink></code> attribute:</para>
+
+    <example>
+      <title>Extraction of Translate at structural levels</title>
+
+    <para>Original:</para>
+
+      <programlisting>
+&lt;p translate='yes'>Translatable text&lt;/p>
+&lt;p translate='no'>Non-translatable text&lt;/p>
+ </programlisting>
+
+
+    <para>Extraction:</para>
+
+
+      <programlisting>
+&lt;unit id='1' translate="yes">
+  &lt;segment>
+    &lt;source>Translatable text&lt;/source>
+  &lt;/segment>
+&lt;/unit>
+&lt;unit id='2' translate="no">
+  &lt;segment>
+    &lt;source>Non-translatable text&lt;/source>
+  &lt;/segment>
+&lt;/unit>
+ </programlisting>
+   </example>
+
+
+    <para> If an element is not translatable you can also simply not extract it. </para>
+  </section>
+  <section id="Translate_Inline">
+    <title>Inline Elements</title>
+    <para> Use <code><olink targetdoc="../elements/inline/mrk.xml" targetptr="mrk"
+        >&lt;mrk></olink></code> or an <code><olink targetdoc="../elements/inline/sm.xml"
+          targetptr="sm">&lt;sm/></olink></code> / <code><olink
+          targetdoc="../elements/inline/em.xml" targetptr="em">&lt;em/></olink></code> pair with
+        <code>translate='yes|no'</code>. Another option is to extract the non-translatable content
+      as an inline code. However, it is worth noting that <firstterm>Extracting</firstterm>
+      non-translatable text as inline code data can hide important context information from
+      translators, human or machine. The <firstterm>Extraction</firstterm> as code data is
+      preferable if the non-translatable text has purely programmatic purpose and bears no
+      linguistic relationship to the surrounding translatable text.</para>
+    <example>
+      <title>Extraction of non-translatable inline text using Annotation markers</title>
+
+    <para>Original:</para>
+
+      <programlisting>
+&lt;p>The  &lt;span translate="no">World Wide Web Consortium&lt;/span> makes the
+    World Wide Web world wide.&lt;/p>
+ </programlisting>
+      <para>Extraction:</para>
+      <para>In this case the non-translatable span is a critical part of the content (a brand name)
+        and hiding it within a code could potentially cause lot of damage, albeit
+        non-translatable.</para>
+        <programlisting>
+&lt;unit id='1'>
+  &lt;segment>
+    &lt;source>The &lt;pc id='1'/>&lt;mrk id='m1' translate='no'>World Wide Web
+        Consortium&lt;/mrk>&lt;/pc> makes the World Wide Web world wide.
+        &lt;/source>
+  &lt;/segment>
+&lt;/unit>
+ </programlisting>
+    </example>
+    <para/>
+    <example>
+      <title>Protection of non-translatable inline text using an inline code</title>
+      <para>
+        <programlisting>
+&lt;p>You have &lt;code translate='no'>%1&lt;/span> messages.&lt;/p>
+ </programlisting>
+      </para>
+      <programlisting>
+&lt;unit id='1'>
+  &lt;originalData>
+    &lt;data id="1">%1&lt;/data>
+  &lt;/originalData>
+  &lt;segment>
+    &lt;source>You have &lt;ph id='1' dataRef="1" type="ui" subtype="xlf:var"
+        disp="[a variable number]" equiv="%1"/>&lt;/source>
+  &lt;/segment>
+&lt;/unit>
+ </programlisting>
+      <para>Protection of non-translatable code as a code is more fool proof. On the other hand, it
+        can hide the nature of the placeholder and it's linguistic relationship to the rest of the
+        content from the translators. Therefore, it's advised to use maximum redundancy on the
+          <code>&lt;ph></code> to make sure that CAT tools can pickup up something useful to display
+        in their editing GUI to the Translator. It's completely another challenge to make an MT
+        engine understand that the placeholder has a significant linguistic relationship to the rest
+        of the sentence.</para>
+
+
+
+    </example>
+  </section>
+
+</section>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="Target_Pointer">
+  <title>Target Pointer</title>
+
+  <para>Is used to associate the node of a given source content (i.e., the content to be translated) and the node of its corresponding target content (i.e., the source content translated into a given target language). See <olink
+      targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+    <ulink url="http://www.w3.org/TR/its20/#target-pointer">Target Pointer</ulink> for
+    details.</para>
+  <para>This data category is not mapped to XLIFF but used by extracting and merging tools to get the source content from the original document and put back the translated content at its proper location.</para>
+  <para>Note that ITS processors working on XLIFF documents should use the following rule to locate the source and target content:</para>
+
+  <programlisting>
+&lt;its:targetPointerRule selector="//xlf:source"
+    targetPointer="../xlf:target"/> </programlisting>
+
+</section>

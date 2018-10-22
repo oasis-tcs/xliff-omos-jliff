@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="segmentation">
+  <title>Segmentation</title>
+
+  <para>In the context of XLIFF, a segment is content which is either a unit
+  of extracted text, or has been created from a unit of extracted text by
+  means of a segmentation mechanism such as sentence boundary detection. For
+  example, a segment can be a title, the text of a menu item, a paragraph or a
+  sentence in a paragraph.</para>
+
+  <para>In the context of XLIFF, other types representations sometimes called
+  "segmentation" can be represented using annotations. For example: the terms
+  in a segment can be identified and marked up using the <olink
+  targetdoc="../inline/inline.xml" targetptr="termAnnotation">term
+  annotation</olink>.</para>
+
+  <para>XLIFF does not specify how segmentation is carried out, only how to represent its result.
+    Material provisions regarding segmentation can be found for instance in the Segmentation Rules
+    eXchange standard <olink targetdoc="../xliff21.xml" targetptr="biblio_srx">[SRX]</olink> or <olink targetdoc="../xliff21.xml" targetptr="uax29">[UAX #29]</olink>.</para>
+
+  <section id="segmentationRepresentation">
+    <title>Segments Representation</title>
+
+    <para>In XLIFF each segment of processed content is represented by a <olink
+        targetdoc="../elements/structural/segment.xml" targetptr="segment"
+          ><code>&lt;segment&gt;</code></olink> element.</para>
+
+    <para>A <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"
+          ><code>&lt;unit&gt;</code></olink> can comprise a single <olink
+        targetdoc="../elements/structural/segment.xml" targetptr="segment"
+          ><code>&lt;segment&gt;</code></olink>.</para>
+
+    <para>Each <olink targetdoc="../elements/structural/segment.xml"
+    targetptr="segment"><code>&lt;segment&gt;</code></olink> element has one
+    <olink targetdoc="../elements/structural/source.xml"
+    targetptr="source"><code>&lt;source&gt;</code></olink> element that
+    contains the source content and one <glossterm>optional</glossterm> <olink
+    targetdoc="../elements/structural/target.xml"
+    targetptr="target"><code>&lt;target&gt;</code></olink> element that can be
+    empty or contain the translation of the source content at a given
+    state.</para>
+
+    <para>Content parts between segments are represented with the <olink
+    targetdoc="../elements/structural/ignorable.xml"
+    targetptr="ignorable"><code>&lt;ignorable&gt;</code></olink> element,
+    which has the same content model as <olink
+    targetdoc="../elements/structural/segment.xml"
+    targetptr="segment"><code>&lt;segment&gt;</code></olink>.</para>
+
+    <para>For example:</para>
+
+    <para><programlisting>
+&lt;unit id="1"&gt;
+  &lt;segment&gt;
+    &lt;source&gt;First sentence.&lt;/source&gt;
+    &lt;target&gt;Première phrase.&lt;/target&gt;
+  &lt;/segment&gt;
+  &lt;ignorable&gt;
+    &lt;source&gt; &lt;/source&gt;
+  &lt;/ignorable&gt;
+  &lt;segment&gt;
+    &lt;source&gt;Second sentence.&lt;/source&gt;
+  &lt;/segment&gt;
+&lt;/unit&gt;
+</programlisting></para>
+  </section>
+
+  <section id="segorder">
+    <title>Segments Order</title>
+
+    <para>Some <firstterm>Agents</firstterm> (e.g. aligner tools) can segment content, so that
+    the target segments are not in the same order as the source segments.</para>
+
+    <para>To be able to map order differences, the <olink
+        targetdoc="../elements/structural/target.xml" targetptr="target"
+      ><code>&lt;target&gt;</code></olink> element has an <glossterm>optional</glossterm> <olink targetdoc="../attributes/order.xml" targetptr="order"><code>order</code></olink> attribute
+      that indicates its position in the sequence of segments (and inter-segments). Its value is an
+      integer from 1 to N, where N is the sum of the numbers of the <olink
+        targetdoc="../elements/structural/segment.xml"
+        targetptr="segment"><code>&lt;segment&gt;</code></olink> and <olink
+          targetdoc="../elements/structural/ignorable.xml"
+          targetptr="ignorable"><code>&lt;ignorable&gt;</code></olink> elements within the given enclosing <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"
+            ><code>&lt;unit&gt;</code></olink> element.</para>
+    <warning><para>When <firstterm>Writers</firstterm> set explicit <code><olink targetdoc="../attributes/order.xml" targetptr="order">order</olink></code> on <olink targetdoc="../elements/structural/target.xml" targetptr="target"><code>&lt;target></code></olink> elements,
+      they have to check for conflicts with implicit <code><olink targetdoc="../attributes/order.xml" targetptr="order">order</olink></code>, as <olink targetdoc="../elements/structural/target.xml" targetptr="target"><code>&lt;target></code></olink> elements without explicit
+      <code><olink targetdoc="../attributes/order.xml" targetptr="order">order</olink></code> correspond to their sibling <olink targetdoc="../elements/structural/source.xml" targetptr="source"><code>&lt;source></code></olink> elements.
+      Beware that moving one <olink targetdoc="../elements/structural/target.xml" targetptr="target"><code>&lt;target></code></olink> element is likely to cause a renumbering domino effect throughout the enclosing <olink
+        targetdoc="../elements/structural/unit.xml"
+        targetptr="unit"><code>&lt;unit></code></olink> element.</para></warning>
+
+    <para>For example, the following HTML documents have the same paragraph
+    with three sentences in different order:<programlisting>
+&lt;p lang='en'&gt;Sentence A. Sentence B. Sentence C.&lt;/p&gt;
+</programlisting><programlisting>
+&lt;p lang='fr'&gt;Phrase B. Phrase C. Phrase A.&lt;/p&gt;
+</programlisting>The
+    XLIFF representation of the content, after segmentation and alignment,
+    would be:</para>
+
+    <para><programlisting>
+&lt;unit id="1"&gt;
+  &lt;segment id="1"&gt;
+    &lt;source&gt;Sentence A.&lt;/source&gt;
+    &lt;target order="5"&gt;Phrase A.&lt;/target&gt;
+  &lt;/segment&gt;
+  &lt;ignorable&gt;
+    &lt;source&gt; &lt;/source&gt;
+  &lt;/ignorable&gt;
+  &lt;segment id="2"&gt;
+    &lt;source&gt;Sentence B.&lt;/source&gt;
+    &lt;target order="1"&gt;Phrase B.&lt;/target&gt;
+  &lt;/segment&gt;
+  &lt;ignorable&gt;
+    &lt;source&gt; &lt;/source&gt;
+  &lt;/ignorable&gt;
+  &lt;segment id="3"&gt;
+    &lt;source&gt;Sentence C.&lt;/source&gt;
+    &lt;target order="3"&gt;Phrase C.&lt;/target&gt;
+  &lt;/segment&gt;
+&lt;/unit&gt;
+</programlisting></para>
+  </section>
+
+  <section id="segmentationModification">
+    <title>Segmentation Modification</title>
+    <para>When <firstterm>Modifying</firstterm> segmentation of a <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit&gt;</code></olink>,
+      <firstterm>Modifiers</firstterm> <glossterm>must</glossterm> meet the Constraints and follow the Processing Requirements defined below:</para>
+    <itemizedlist>
+      <title>Constraints</title>
+      <listitem>
+        <para>Integrity of the inline codes <glossterm>must</glossterm> be preserved. See the section on <olink
+              targetdoc="../inline/inline.xml" targetptr="inlineCodes">Inline Codes</olink> and on <olink
+              targetdoc="../inline/inline.xml" targetptr="annotations">Annotations</olink> for details.</para>
+      </listitem>
+      <listitem>
+        <para>The entire source content of any one <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit&gt;</code></olink> element
+          <glossterm>must</glossterm> remain logically unchanged: <olink targetdoc="../elements/structural/segment.xml"
+              targetptr="segment"><code>&lt;segment&gt;</code></olink> elements or their data <glossterm>must not</glossterm> be moved or joined across units.</para>
+      </listitem>
+    </itemizedlist>
+    <warning><para>Note that when splitting or joining segments that have both source and target content it is advisable
+      to keep the resulting segments linguistically aligned, which is likely to require human linguistic expertise and
+      hence manual re-segmentation. If the linguistically correct alignment cannot be guaranteed, discarding the target
+      content and retranslating the resulting source segments is worth considering.</para></warning>
+
+    <itemizedlist>
+      <title>Processing Requirements</title>
+
+      <listitem>
+        <para>When the <firstterm>Modifiers</firstterm> perform a split operation:</para>
+        <itemizedlist>
+          <listitem>
+            <para>Only <olink targetdoc="../elements/structural/segment.xml" targetptr="segment"><code>&lt;segment&gt;</code></olink> or
+              <olink targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"><code>&lt;ignorable></code></olink> elements
+              that have their <olink targetdoc="../attributes/canResegment.xml" targetptr="canResegment"><code>canResegment</code></olink> value resolved to <code>yes</code>
+              <glossterm>may</glossterm> be split.</para>
+          </listitem>
+          <listitem>
+            <para>All new <olink targetdoc="../elements/structural/segment.xml" targetptr="segment"><code>&lt;segment&gt;</code></olink> or
+              <olink targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"><code>&lt;ignorable></code></olink> elements
+              created and their <olink targetdoc="../elements/structural/source.xml" targetptr="source"><code>&lt;source&gt;</code></olink> and
+              <olink targetdoc="../elements/structural/target.xml" targetptr="target"><code>&lt;target&gt;</code></olink> children <glossterm>must</glossterm> have
+              the same attribute values as the original elements they were
+              created from, as applicable, except for the <olink targetdoc="../attributes/id.xml" targetptr="id"><code>id</code></olink> attributes and, possibly, for the
+              <olink targetdoc="../attributes/order.xml" targetptr="order"><code>order</code></olink>,
+              <olink targetdoc="../attributes/state.xml" targetptr="state"><code>state</code></olink> and
+              <olink targetdoc="../attributes/subState.xml" targetptr="substate"><code>subState</code></olink> attributes.</para>
+          </listitem>
+          <listitem>
+            <para>Any new <olink targetdoc="../attributes/id.xml" targetptr="id"><code>id</code></olink> attributes <glossterm>must</glossterm> follow the
+              <olink targetdoc="../elements/structural/segment.xml" targetptr="segment"><code>&lt;segment&gt;</code></olink> or
+              <olink targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"><code>&lt;ignorable></code></olink>
+              <olink targetdoc="../attributes/id.xml" targetptr="id"><code>id</code></olink> constraints.</para>
+          </listitem>
+          <listitem>
+            <para>If there was a target content in the original segment and if the <olink targetdoc="../attributes/state.xml" targetptr="state"><code>state</code></olink> attribute
+              of the original segment was not <code>initial</code>, the <olink targetdoc="../attributes/state.xml" targetptr="state"><code>state</code></olink> attributes of the
+              segments resulting from the split (and possibly their corresponding <olink targetdoc="../attributes/subState.xml" targetptr="substate"><code>subState</code></olink>
+              attributes) <glossterm>may</glossterm> be
+              changed to reflect the fact that the target content <glossterm>may</glossterm> need to be verified as the new segmentation <glossterm>may</glossterm> have desynchronized the alignment between
+              the source and target contents.</para>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+
+      <listitem>
+        <para>When the <firstterm>Modifiers</firstterm> perform a join operation:</para>
+        <itemizedlist>
+          <listitem>
+            <para>Only <olink targetdoc="../elements/structural/segment.xml" targetptr="segment"><code>&lt;segment&gt;</code></olink> or
+              <olink targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"><code>&lt;ignorable></code></olink> elements
+              that have their <olink targetdoc="../attributes/canResegment.xml" targetptr="canResegment"><code>canResegment</code></olink> value resolved to
+              <code>yes</code> <glossterm>may</glossterm> be join with other elements.</para>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+
+      <listitem id="joiningSegments">
+        <para>When the <firstterm>Modifiers</firstterm> or <firstterm>Mergers</firstterm> perform a join operation:</para>
+        <itemizedlist>
+          <listitem>
+            <para>Two elements (<olink targetdoc="../elements/structural/segment.xml" targetptr="segment"><code>&lt;segment&gt;</code></olink> or
+              <olink targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"><code>&lt;ignorable></code></olink>)
+              <glossterm>must not</glossterm> be joined if their <olink targetdoc="../elements/structural/target.xml" targetptr="target"><code>&lt;target&gt;</code></olink> have
+              resolved <olink targetdoc="../attributes/order.xml" targetptr="order"><code>order</code></olink> values that are not consecutive.</para>
+          </listitem>
+          <listitem>
+            <para>The attributes of the elements to be joined (<olink targetdoc="../elements/structural/segment.xml" targetptr="segment"><code>&lt;segment&gt;</code></olink> or
+              <olink targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"><code>&lt;ignorable></code></olink>) and the attributes of their
+              <olink targetdoc="../elements/structural/source.xml" targetptr="source"><code>&lt;source&gt;</code></olink> and
+              <olink targetdoc="../elements/structural/target.xml" targetptr="target"><code>&lt;target&gt;</code></olink>
+              <glossterm>must</glossterm> be carried over in the resulting joined elements.</para>
+          </listitem>
+          <listitem>
+            <para>If attributes of elements to be joined (<olink targetdoc="../elements/structural/segment.xml" targetptr="segment"><code>&lt;segment&gt;</code></olink> or
+              <olink targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"><code>&lt;ignorable></code></olink>) differ, or if the attributes of their
+              <olink targetdoc="../elements/structural/source.xml" targetptr="source"><code>&lt;source&gt;</code></olink> or
+              <olink targetdoc="../elements/structural/target.xml" targetptr="target"><code>&lt;target&gt;</code></olink> differ,
+              the resulting joined elements <glossterm>must</glossterm> comply with following rules:</para>
+            <itemizedlist>
+              <listitem>
+                <para>If the <olink targetdoc="../attributes/state.xml" targetptr="state"><code>state</code></olink> attributes of the
+                  <olink targetdoc="../elements/structural/segment.xml" targetptr="segment"><code>&lt;segment&gt;</code></olink> elements
+                  differ: the <olink targetdoc="../attributes/state.xml" targetptr="state"><code>state</code></olink> attribute of the joined
+                  <olink targetdoc="../elements/structural/segment.xml" targetptr="segment"><code>&lt;segment&gt;</code></olink>
+                  <glossterm>must</glossterm> be set
+                  to the "earliest" of the values specified in the original <olink targetdoc="../elements/structural/segment.xml"
+                    targetptr="segment"><code>&lt;segment&gt;</code></olink> elements. The sequence of
+                  <olink targetdoc="../attributes/state.xml" targetptr="state"><code>state</code></olink> values are defined in the following order:
+                  1: <code>initial</code>, 2: <code>translated</code>, 3: <code>reviewed</code>, and 4: <code>final</code>.</para>
+              </listitem>
+              <listitem>
+                <para>The <olink targetdoc="../attributes/subState.xml" targetptr="substate"><code>subState</code></olink> attribute <glossterm>must</glossterm> be the one
+                  associated with the
+                  <olink targetdoc="../attributes/state.xml" targetptr="state"><code>state</code></olink> attribute selected to be used in the joined <olink
+                  targetdoc="../elements/structural/segment.xml" targetptr="segment"><code>&lt;segment&gt;</code></olink>.
+                  If no <olink targetdoc="../attributes/subState.xml" targetptr="substate"><code>subState</code></olink> attribute is associated with that
+                  <olink targetdoc="../attributes/state.xml" targetptr="state"><code>state</code></olink>, the joined
+                  <olink targetdoc="../elements/structural/segment.xml" targetptr="segment"><code>&lt;segment&gt;</code></olink> <glossterm>must not</glossterm>
+                  have a <olink targetdoc="../attributes/subState.xml" targetptr="substate"><code>subState</code></olink>.</para>
+              </listitem>
+              <listitem>
+                <para>If the <olink targetdoc="../attributes/xml_space.xml" targetptr="xml_space"><code>xml:space</code></olink> attributes differ:
+                  The <olink targetdoc="../elements/structural/source.xml" targetptr="source"><code>&lt;source&gt;</code></olink> and
+                  <olink targetdoc="../elements/structural/target.xml" targetptr="target"><code>&lt;target&gt;</code></olink> of the joined element <glossterm>must</glossterm> be
+                  set to <code>xml:space="preserve"</code>.</para>
+              </listitem>
+              <!-- dir killed on source and target in the meeting of Dec 17, 2013 and the follow up discussion to simplify 
+                the directionality algorithm and resegmentation PR's <listitem>
+                <para>If the <olink targetdoc="../attributes/dir.xml" targetptr="dir"><code>dir</code></olink> attributes of the
+                  <olink targetdoc="../elements/structural/source.xml" targetptr="source"><code>&lt;source&gt;</code></olink> or
+                  <olink targetdoc="../elements/structural/target.xml" targetptr="target"><code>&lt;target&gt;</code></olink> elements differ: The content of the
+                  <olink targetdoc="../elements/structural/source.xml" targetptr="source"><code>&lt;source&gt;</code></olink> or
+                  <olink targetdoc="../elements/structural/target.xml" targetptr="target"><code>&lt;target&gt;</code></olink> elements set to a
+                  different directionality than the directionality for the
+                  <olink targetdoc="../elements/structural/source.xml" targetptr="source"><code>&lt;source&gt;</code></olink> or
+                  <olink targetdoc="../elements/structural/target.xml" targetptr="target"><code>&lt;target&gt;</code></olink> elements of the joined segment
+                  <glossterm>must</glossterm> be enclosed between Unicode bi-directional control characters reflecting their original directionality.
+                  A possible mapping is [[TO BE DEFINED]] U+202A and U+202C for left-to-right spans and U+202B and U+202C for right-to-left spans.</para>
+              </listitem> -->
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+
+      <listitem id="joiningOrSplittingSegments">
+        <para>When the <firstterm>Modifiers</firstterm> or <firstterm>Mergers</firstterm> perform a join or a split operation:</para>
+        <itemizedlist>
+          <listitem>
+            <para>If any <olink targetdoc="../elements/structural/segment.xml" targetptr="segment"
+                  ><code>&lt;segment&gt;</code></olink> or <olink
+                targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"
+                  ><code>&lt;ignorable></code></olink> element of the <olink
+                targetdoc="../elements/structural/unit.xml" targetptr="unit"
+                  ><code>&lt;unit&gt;</code></olink> had a <olink
+                targetdoc="../elements/structural/target.xml" targetptr="target"
+                  ><code>&lt;target&gt;</code></olink> child with an <olink
+                targetdoc="../attributes/order.xml" targetptr="order"><code>order</code></olink>
+              attribute prior to the segmentation modification, the <olink
+                targetdoc="../elements/structural/target.xml" targetptr="target"
+                  ><code>&lt;target&gt;</code></olink> child of all <olink
+                targetdoc="../elements/structural/segment.xml" targetptr="segment"
+                  ><code>&lt;segment&gt;</code></olink> and <olink
+                targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"
+                  ><code>&lt;ignorable></code></olink> elements in the <olink
+                targetdoc="../elements/structural/unit.xml" targetptr="unit"
+                  ><code>&lt;unit&gt;</code></olink>
+              <glossterm>must</glossterm> be examined and if necessary their <olink
+                targetdoc="../attributes/order.xml" targetptr="order"><code>order</code></olink>
+              attributes updated to preserve the ordering of the target content prior the
+              segmentation modification.</para>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+
+      <!--
+      <para>When the value of the <olink targetdoc="../attributes/canResegment.xml" targetptr="canResegment"><code>canResegment</code></olink> flag
+          is <code>no</code> on all <olink targetdoc="../elements/structural/segment.xml" targetptr="segment"><code>&lt;segment&gt;</code></olink> elements  within a <olink
+            targetdoc="../elements/structural/unit.xml" targetptr="unit"
+            ><code>&lt;unit&gt;</code></olink>:</para>
+        <itemizedlist>
+          <listitem><para><firstterm>Modifiers</firstterm>
+              <glossterm>must not</glossterm> split or join either the <olink
+                targetdoc="../elements/structural/segment.xml" targetptr="segment"
+                  ><code>&lt;segment&gt;</code></olink>,  or the <olink targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"><code>&lt;ignorable></code></olink> elements within that <olink
+                targetdoc="../elements/structural/unit.xml" targetptr="unit"
+                  ><code>&lt;unit&gt;</code></olink>.</para></listitem>
+
+          <listitem>
+            <para><firstterm>Modifiers</firstterm>
+              <glossterm>may</glossterm> still reorder the <olink
+                targetdoc="../elements/structural/target.xml" targetptr="target"
+                ><code>&lt;target&gt;</code></olink> elements within that <olink
+                  targetdoc="../elements/structural/unit.xml" targetptr="unit"
+                  ><code>&lt;unit&gt;</code></olink> using the <glossterm>optional</glossterm>
+                <code>order</code> attributes as needed.</para>
+
+          </listitem>
+        </itemizedlist>
+      </listitem>
+
+      <listitem>
+        <para>When the value of the <olink targetdoc="../attributes/canResegment.xml" targetptr="canResegment"><code>canResegment</code></olink> flag is <code>no</code> on some <olink
+          targetdoc="../elements/structural/segment.xml" targetptr="segment"
+          ><code>&lt;segment&gt;</code></olink> elements and <code>yes</code> on some other <olink
+            targetdoc="../elements/structural/segment.xml" targetptr="segment"
+            ><code>&lt;segment&gt;</code></olink> elements within a <olink
+            targetdoc="../elements/structural/unit.xml" targetptr="unit"
+            ><code>&lt;unit&gt;</code></olink>:</para>
+        <itemizedlist>
+          <listitem><para><firstterm>Modifiers</firstterm>
+              <glossterm>must not</glossterm> split or join the <olink
+                targetdoc="../elements/structural/segment.xml" targetptr="segment"
+                  ><code>&lt;segment&gt;</code></olink> elements that have their <olink
+                targetdoc="../attributes/canResegment.xml" targetptr="canResegment"
+                  ><code>canResegment</code></olink> flag set to <code>no</code>, even not with
+                <olink targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"
+                  ><code>&lt;ignorable&gt;</code></olink> elements within that <olink
+                targetdoc="../elements/structural/unit.xml" targetptr="unit"
+                  ><code>&lt;unit&gt;</code></olink>. </para></listitem>
+
+          <listitem><para><firstterm>Modifiers</firstterm>
+              <glossterm>may</glossterm> still split or join the <olink
+                targetdoc="../elements/structural/segment.xml" targetptr="segment"
+                  ><code>&lt;segment&gt;</code></olink>  elements that have their <olink
+                targetdoc="../attributes/canResegment.xml" targetptr="canResegment"
+                  ><code>canResegment</code></olink> flag inherited or set to <code>yes</code> or
+                <olink targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"
+                  ><code>&lt;ignorable&gt;</code></olink> elements within that <olink
+                targetdoc="../elements/structural/unit.xml" targetptr="unit"
+                  ><code>&lt;unit&gt;</code></olink>. </para></listitem>
+
+          <listitem>
+            <para><firstterm>Modifiers</firstterm>
+              <glossterm>may</glossterm> still reorder all <olink
+                targetdoc="../elements/structural/target.xml" targetptr="target"
+                  ><code>&lt;target&gt;</code></olink> elements within that <olink
+                targetdoc="../elements/structural/unit.xml" targetptr="unit"
+                  ><code>&lt;unit&gt;</code></olink> using the <glossterm>optional</glossterm> <code>order</code>
+              attributes as needed.</para>
+
+          </listitem>
+
+          <listitem>
+            <para><firstterm>Modifiers</firstterm> splitting or joining <olink
+                targetdoc="../elements/structural/segment.xml" targetptr="segment"
+                  ><code>&lt;segment&gt;</code></olink> or <olink
+                targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"
+                  ><code>&lt;ignorable&gt;</code></olink> elements <glossterm>must</glossterm>
+              update, add, or remove the <code>order</code> attributes of the <olink
+                targetdoc="../elements/structural/target.xml" targetptr="target"
+                  ><code>&lt;target&gt;</code></olink> elements as needed.</para>
+
+          </listitem>
+        </itemizedlist>
+      </listitem>
+
+      <listitem>
+        <para>When the value of the <olink targetdoc="../attributes/canResegment.xml" targetptr="canResegment"><code>canResegment</code></olink>
+          flag is <code>yes</code> on all <olink
+          targetdoc="../elements/structural/segment.xml" targetptr="segment"
+          ><code>&lt;segment&gt;</code></olink> elements within a <olink
+            targetdoc="../elements/structural/unit.xml" targetptr="unit"
+            ><code>&lt;unit&gt;</code></olink>:</para>
+      <itemizedlist>
+      <listitem><para><firstterm>Modifiers</firstterm>
+              <glossterm>may</glossterm> split or join all <olink
+                targetdoc="../elements/structural/segment.xml" targetptr="segment"
+                  ><code>&lt;segment&gt;</code></olink> or  <olink
+                targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"
+                  ><code>&lt;ignorable&gt;</code></olink> elements within the same <olink
+                targetdoc="../elements/structural/unit.xml" targetptr="unit"
+                  ><code>&lt;unit&gt;</code></olink> as needed.</para></listitem>
+
+          <listitem>
+            <para><firstterm>Modifiers</firstterm> splitting or joining <olink
+                targetdoc="../elements/structural/segment.xml" targetptr="segment"
+                  ><code>&lt;segment&gt;</code></olink> or <olink
+                targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"
+                  ><code>&lt;ignorable&gt;</code></olink> elements <glossterm>must</glossterm>
+              update, add or remove the <code>order</code> attributes of the <olink
+                targetdoc="../elements/structural/target.xml" targetptr="target"
+                  ><code>&lt;target&gt;</code></olink> elements as needed to preserve the existing logical order of the target content.</para>
+          </listitem>
+          <listitem>
+            <para><firstterm>Modifiers</firstterm>
+              <glossterm>may</glossterm> reorder all <olink
+                targetdoc="../elements/structural/target.xml" targetptr="target"
+                  ><code>&lt;target&gt;</code></olink> elements within that <olink
+                targetdoc="../elements/structural/unit.xml" targetptr="unit"
+                  ><code>&lt;unit&gt;</code></olink> using the <glossterm>optional</glossterm> <code>order</code>
+              attributes as needed.</para>
+          </listitem>
+      </itemizedlist>
+      </listitem>
+
+      <listitem>
+        <para>Handling of content, elements, and attributes in the <olink
+            targetdoc="../elements/structural/segment.xml" targetptr="segment"
+              ><code>&lt;segment&gt;</code></olink>, <olink
+            targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"
+              ><code>&lt;ignorable&gt;</code></olink>, <olink targetdoc="../elements/structural/source.xml" targetptr="source"><code>&lt;source&gt;</code></olink>, and
+              <olink targetdoc="../elements/structural/target.xml" targetptr="target"><code>&lt;target&gt;</code></olink> elements when splitting <olink
+            targetdoc="../elements/structural/segment.xml" targetptr="segment"
+              ><code>&lt;segment&gt;</code></olink> elements:</para>
+        <itemizedlist>
+          <listitem>
+            <para><firstterm>Modifiers</firstterm>
+              <glossterm>may</glossterm> split the source and target content as they see fit between
+              the split instances, except that the eventually resulting <olink
+                targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"
+                  ><code>&lt;ignorable&gt;</code></olink> element <glossterm>must not</glossterm> hold translatable content.</para>
+          </listitem>
+          <listitem>
+            <para><firstterm>Modifiers</firstterm>
+              <glossterm>must</glossterm> copy all attributes including values, except for the
+                <olink targetdoc="../attributes/id.xml" targetptr="id"><code>id</code></olink> and
+                <olink targetdoc="../attributes/order.xml" targetptr="order"
+                ><code>order</code></olink> attributes, from their original instances on or within
+              the original <olink targetdoc="../elements/structural/segment.xml" targetptr="segment"
+                  ><code>&lt;segment&gt;</code></olink> element onto both instances on and within
+              the resulting two <olink targetdoc="../elements/structural/segment.xml"
+                targetptr="segment"><code>&lt;segment&gt;</code></olink> or <olink
+                targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"
+                  ><code>&lt;ignorable&gt;</code></olink> elements, except for attributes that do
+              not have valid instances on the eventually resulting <olink
+                targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"
+                  ><code>&lt;ignorable&gt;</code></olink> element. </para>
+            <itemizedlist><listitem>
+                <para>New unique <olink targetdoc="../attributes/id.xml" targetptr="id"><code>id</code></olink>
+                  values <glossterm>must</glossterm> be created and assigned as needed to fulfill
+                  uniqueness constraints within the enclosing <olink
+                    targetdoc="../elements/structural/unit.xml" targetptr="unit"
+                      ><code>&lt;unit&gt;</code></olink> element.</para>
+              </listitem>
+              <listitem>
+                <para>The <olink targetdoc="../attributes/order.xml" targetptr="order"
+                      ><code>order</code></olink> attributes <glossterm>must</glossterm> be
+                  reassigned as needed within the enclosing <olink
+                    targetdoc="../elements/structural/unit.xml" targetptr="unit"
+                      ><code>&lt;unit&gt;</code></olink> element to ensure the desired target text
+                  flow.</para>
+              </listitem></itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para><firstterm>Modifiers</firstterm>
+              <glossterm>must</glossterm> transform spanning inline codes that start and end in
+              different new segments into the non spanning versions according to the <olink
+                targetdoc="../inline/inline.xml" targetptr="spanningcodeusage">rules</olink> for
+              usage and conversion between the different inline code representations.</para>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+
+        <listitem>
+        <para> Handling of content, elements and attributes in the <olink
+            targetdoc="../elements/structural/segment.xml" targetptr="segment"
+              ><code>&lt;segment&gt;</code></olink>, <olink
+            targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"
+              ><code>&lt;ignorable&gt;</code></olink>, <olink
+            targetdoc="../elements/structural/source.xml" targetptr="source"
+              ><code>&lt;source&gt;</code></olink>, and <olink
+            targetdoc="../elements/structural/target.xml" targetptr="target"
+              ><code>&lt;target&gt;</code></olink> elements when joining segment or <olink
+            targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"
+              ><code>&lt;ignorable&gt;</code></olink> elements:</para>
+          <itemizedlist>
+            <listitem>
+              <para><firstterm>Modifiers</firstterm>
+              <glossterm>must</glossterm> join the content of the original  <olink
+                targetdoc="../elements/structural/segment.xml" targetptr="segment"
+                  ><code>&lt;segment&gt;</code></olink> and  <olink
+                targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"
+                  ><code>&lt;ignorable&gt;</code></olink> elements in the same order as it appeared,
+              taking the <code>order</code> attribute into account. Non consecutive <olink
+                targetdoc="../elements/structural/segment.xml" targetptr="segment"
+                  ><code>&lt;segment&gt;</code></olink> or  <olink
+                targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"
+                  ><code>&lt;ignorable&gt;</code></olink> elements <glossterm>must not</glossterm>
+              be joined, again taking the <code>order</code> attribute into account.</para>
+            </listitem>
+            <listitem>
+            <para><firstterm>Modifiers</firstterm>
+              <glossterm>must</glossterm> put all attributes that are the same on and within all
+              joined <olink targetdoc="../elements/structural/segment.xml" targetptr="segment"
+                  ><code>&lt;segment&gt;</code></olink> elements on  their valid instances on and
+              within the resulting <olink targetdoc="../elements/structural/segment.xml"
+                targetptr="segment"><code>&lt;segment&gt;</code></olink> element.</para>
+            </listitem>
+            <listitem>
+              <para>The <olink targetdoc="../attributes/order.xml" targetptr="order"
+                  ><code>order</code></olink> attributes <glossterm>must</glossterm> be reassigned
+              or removed as needed within the enclosing <olink
+                targetdoc="../elements/structural/unit.xml" targetptr="unit"
+                  ><code>&lt;unit&gt;</code></olink> element to ensure the desired target text flow. </para>
+          </listitem>
+            <listitem>
+              <para>If attributes differ in values on the joined <olink
+                targetdoc="../elements/structural/segment.xml" targetptr="segment"
+                  ><code>&lt;segment&gt;</code></olink> elements or their children elements,
+                <firstterm>Modifiers</firstterm>
+              <glossterm>must</glossterm> perform the following transformations, according to which
+              attributes actually differ.</para>
+              <itemizedlist>
+                <listitem>
+                  <para>If the <olink targetdoc="../attributes/xml_space.xml" targetptr="xml_space"
+                    ><code>xml:space</code></olink> attributes differ in values, the resulting
+                    value <glossterm>must</glossterm> be <code>preserve</code>.</para>
+                </listitem>
+                <listitem>
+                  <para>If the <olink targetdoc="../attributes/state.xml" targetptr="state"><code>state</code></olink> attributes differ in values, the resulting <olink
+                    targetdoc="../elements/structural/segment.xml" targetptr="segment"
+                    ><code>&lt;segment&gt;</code></olink> element <glossterm>must</glossterm> have it set to the "earliest"
+                    value set on any of the joined segments.</para>
+                  <para>"Earliest" in the above refers to the process state of the segment, the leftmost in the sequence <code>initial</code>,
+                    <code>translated</code>, <code>reviewed</code>, <code>final</code> is considered the "earliest".</para>
+                </listitem>
+                <listitem>
+                  <para>If the directionality attributes, <olink targetdoc="../attributes/srcdir.xml" targetptr="srcdir"><code>srcDir</code></olink>,
+                    <olink targetdoc="../attributes/trgdir.xml" targetptr="trgdir"><code>trgDir</code></olink>, or
+                    <olink targetdoc="../attributes/dir.xml" targetptr="dir"><code>dir</code></olink>
+                    differ the <firstterm>Modifier</firstterm> <glossterm>must</glossterm> insert Unicode bidirectional
+                    control characters <olink targetdoc="../xliff21.xml" targetptr="uax9">[UAX
+                      #9]</olink> to secure proper directionality in the <olink
+                        targetdoc="../elements/structural/segment.xml" targetptr="segment"
+                        ><code>&lt;segment&gt;</code></olink> and its children.</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para><firstterm>Modifiers</firstterm>
+                <glossterm>may</glossterm> transform non spanning inline codes that started and
+                ended in different segments but now start and end in the same segment into the
+                spanning version according to the <olink targetdoc="../inline/inline.xml"
+                  targetptr="spanningcodeusage">rules</olink> for usage and conversion between the
+                different inline code representations.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+-->
+      </itemizedlist>
+    
+
+  </section>
+  <section role="informative">
+    <title>Best Practice for <firstterm>Mergers</firstterm></title>
+    
+    <para>Since a typical simple corporate implementation of XLIFF 2 is a localization tool that is
+      at the same time an <firstterm>Extractor</firstterm> and a <firstterm>Merger</firstterm> with
+      the full knowledge of the <firstterm>Extraction</firstterm> mechanism, the community requested
+      a non-normative best practice for <firstterm>Merging</firstterm> after an XLIFF
+      Round-trip.</para>
+    <para>First of all, it needs to be noted that <firstterm>Mergers</firstterm> are not advised to
+      rely on their knowledge of the <firstterm>Extraction</firstterm> mechanism in terms of <link
+        linkend="segmentation">segmentation</link>. <firstterm>Modifiers</firstterm> are free to
+        <link linkend="segmentationModification">change segmentation</link> during the roundtrip and
+      even <link linkend="segorder">to change order of target content held in different segments of
+        the same unit</link>. Therefore, it can be advised as a best practice before
+        <firstterm>Merging</firstterm> to look for all segments within each unit, even and
+      especially when the <firstterm>Extractor</firstterm> had created only one segment per
+      unit.</para>
+    <para>When joining segments, <firstterm>Mergers</firstterm> need to observe all <emphasis>Processing Requirements</emphasis> for <link linkend="joiningSegments">joining segments</link> and <link linkend="joiningOrSplittingSegments"> joining or splitting segments</link></para>
+    <para>When joining segments it can happen that not all <olink
+        targetdoc="../elements/structural/segment.xml" targetptr="segment"
+          ><code>&lt;segment&gt;</code></olink> or <olink
+        targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"
+          ><code>&lt;ignorable></code></olink> elements actually have their <olink
+        targetdoc="../elements/structural/target.xml" targetptr="target"
+        ><code>&lt;target&gt;</code></olink> element children. This situation can be legal depending
+      on a specific workflow set up. The <olink targetdoc="../elements/structural/target.xml"
+        targetptr="target"><code>&lt;target&gt;</code></olink> child within an <olink
+        targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"
+          ><code>&lt;ignorable></code></olink> element is always optional, but at the same can be
+      created any time by simply copying the content of the sibling <olink
+        targetdoc="../elements/structural/source.xml" targetptr="source"
+        ><code>&lt;source&gt;</code></olink>, see <olink targetdoc="../inline/inline.xml" targetptr="contentmodificationwithouttarget">Content Modification Without Target</olink>. The presence of <olink
+        targetdoc="../elements/structural/target.xml" targetptr="target"
+        ><code>&lt;target&gt;</code></olink> children can be better governed in <olink
+        targetdoc="../elements/structural/segment.xml" targetptr="segment"
+          ><code>&lt;segment&gt;</code></olink> elements that have the <olink
+        targetdoc="../attributes/state.xml" targetptr="state"><code>state</code></olink> attribute.
+      The <olink targetdoc="../attributes/state.xml" targetptr="state"><code>state</code></olink>
+      attribute is strictly optional with the default <code>initial</code>, yet it is advisable for
+      a corporate localization operation to request that their service providers progress that
+      attribute through <code>translated</code> and <code>reviewed</code> to <code>final</code>.
+      This attribute cannot be progressed from the <code>initial</code> state without a <olink
+        targetdoc="../elements/structural/target.xml" targetptr="target"
+        ><code>&lt;target&gt;</code></olink> child and all violations of <olink targetdoc="../inline/inline.xml" targetptr="editinghints">Editing
+        Hints</olink> will become validation errors only in the <code>final</code> state. Usage of
+        <olink targetdoc="../attributes/state.xml" targetptr="state"><code>state</code></olink> also
+      allows for fine-tuning of a specific workflow <emphasis>State Machine</emphasis> with the
+      dependent <olink targetdoc="../attributes/subState.xml" targetptr="substate"
+          ><code>subState</code></olink> attribute. With the attribute <olink
+        targetdoc="../attributes/subState.xml" targetptr="substate"><code>subState</code></olink>,
+      implementers can create an arbitrary number of private state machine under their prefix
+      authorities. It is advisable to register such authority prefixes with the XLIFF TC and publish
+      their documentation.</para>
+    <para>When <firstterm>Mergers</firstterm> need to perform the <firstterm>Merge</firstterm> in a
+      non-final state, when the presence of targets cannot be guaranteed, they are free to create
+      preliminary targets again following the <olink targetdoc="../inline/inline.xml" targetptr="contentmodificationwithouttarget">Processing Requirements for
+        Content Modification Without Target</olink></para>
+  </section>
+  
+</section>

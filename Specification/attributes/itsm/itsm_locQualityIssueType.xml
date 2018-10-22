@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="itsm_locQualityIssueType">
+    <title>locQualityIssueType</title>
+    
+    <para>Localization Quality Issue Type - the <code>locQualityIssueType</code> attribute is the
+            <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> defined
+            <code>locQualityIssueType</code> attribute.</para>
+    
+    
+    <para><emphasis>Value description:</emphasis> a text string, exactly one value from the
+        following list:</para>
+    <para> <simplelist>
+    
+        <member><code>terminology</code></member>
+        <member><code>mistranslation</code></member>
+        <member><code>omission</code></member>
+        <member><code>untranslated</code></member>
+        <member><code>addition</code></member>
+        <member><code>duplication</code></member>
+        <member><code>inconsistency</code></member>
+        <member><code>grammar</code></member>
+        <member><code>legal</code></member>
+        <member><code>register</code></member>
+        <member><code>locale-specific-content</code></member>
+        <member><code>locale-violation</code></member>
+        <member><code>style</code></member>
+        <member><code>characters</code></member>
+        <member><code>misspelling</code></member>
+        <member><code>typographical</code></member>
+        <member><code>formatting</code></member>
+        <member><code>inconsistent-entities</code></member>
+        <member><code>numbers</code></member>
+        <member><code>markup</code></member>
+        <member><code>pattern-problem</code></member>
+        <member><code>whitespace</code></member>
+        <member><code>internationalization</code></member>
+        <member><code>length</code></member>
+        <member><code>non-conformance</code></member>
+        <member><code>uncategorized</code></member>
+        <member><code>other</code></member>
+        
+        
+        
+        
+    </simplelist></para>
+    <para>For normative usage description and informative guidance for the above values, see <olink
+            targetdoc="../../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+        <ulink url="http://www.w3.org/TR/its20/#lqissue-typevalues"
+            >http://www.w3.org/TR/its20/#lqissue-typevalues</ulink>.</para>
+    
+    <para><emphasis>Default value:</emphasis>: undefined</para>
+    
+    
+    
+    <para><emphasis>Used in:</emphasis>
+        <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
+            ><code>&lt;mrk></code></olink> and
+        <olink targetdoc="../../elements/inline/sm.xml"
+            targetptr="sm"><code>&lt;sm></code></olink>, or in <olink targetdoc="../../elements/itsm/itsm_locQualityIssue.xml"
+                targetptr="itsm_locQualityIssue"><code>&lt;locQualityIssue></code></olink>.</para>
+    
+    
+    <para>See the <olink targetdoc="../../modules/itsm/Localization_Quality_Issue.xml" targetptr="lqiAnnotation"
+            >ITS Localization Issue Annotation</olink> for the normative usage description of this
+        attribute when used inline; advanced Constraints follow from that normative usage
+        description.</para>
+    <para>See <olink targetdoc="../../elements/itsm/itsm_locQualityIssue.xml"
+            targetptr="itsm_locQualityIssue"><code>&lt;locQualityIssue></code></olink> for standoff
+        usage Constraints.</para>
+    
+</section>

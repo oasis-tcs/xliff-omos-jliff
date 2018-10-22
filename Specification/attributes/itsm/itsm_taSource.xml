@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="itsm_taSource">
+    <title>taSource</title>
+    
+    <para>Text Analysis Source - the <code>taSource</code> attribute is the <olink
+            targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> defined <code>taSource</code>
+        attribute.</para>
+    
+    
+    <para><emphasis>Value description:</emphasis> text string</para>
+    <para>The text string is supposed to be a human or machine redable name of a collection of text
+        analysis concept resources, in the sense of an <ulink
+            url="http://www.w3.org/TR/its20/#textAnalysis-info-pieces"> identifier of the collection
+            source</ulink>.</para>
+    
+    <para><emphasis>Default value:</emphasis>: undefined</para>
+    
+    
+    
+    <para><emphasis>Used in:</emphasis>
+        <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
+            ><code>&lt;mrk></code></olink>, and
+        <olink targetdoc="../../elements/inline/sm.xml"
+            targetptr="sm"><code>&lt;sm></code></olink>.</para>
+    
+    <itemizedlist>
+        <title>Constraints</title>
+        <listitem><para>When the attribute <link linkend="itsm_taSource"><code>taSource</code></link> is set, the
+                    <olink targetdoc="itsm_taIdent.xml" targetptr="itsm_taIdent"
+                        ><code>taIdent</code></olink> attribute <glossterm>must</glossterm> be set
+                as well.</para></listitem>
+    </itemizedlist>
+    <para>See the <olink targetdoc="../../modules/itsm/Text_Analysis.xml" targetptr="taAnnotation">ITS Text Analysis Annotation</olink> for the full normative usage description of this attribute. Other advanced Constraints follow from that normative usage description.</para>
+    
+</section>

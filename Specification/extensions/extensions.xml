@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="extensions">
+    <title>Extension Mechanisms</title>
+    <para>XLIFF 2.0 offers two mechanisms for storing custom data in an XLIFF document:</para>
+    <orderedlist>
+        <listitem>
+            <para>Using the <olink targetdoc="../modules/metadata/metadata.xml" targetptr="metadata_module">Metadata 
+                module</olink> for storing custom data in elements defined by the official XLIFF 
+                specification.</para>
+        </listitem>
+        <listitem>
+            <para>Using the standard XML namespace mechanism for storing data in elements or attributes defined in a custom 
+            XML Schema.</para>
+        </listitem>
+    </orderedlist>
+    <para>Both mechanisms can be used simultaneously.</para>
+    <section>
+        <title>Extension Points</title>
+        <para>The following <firstterm>XLIFF Core</firstterm> elements allow storing custom data in <olink
+                targetdoc="../elements/metadata/metadata.xml" targetptr="metadata"
+                    ><code>&lt;mda:metadata></code></olink> elements or in elements from a custom
+            XML namespace:</para>
+        <simplelist>
+            <member>- <olink targetdoc="../elements/structural/file.xml" targetptr="file"><code>&lt;file></code></olink></member>
+            <member>- <olink targetdoc="../elements/structural/group.xml" targetptr="group"><code>&lt;group></code></olink></member>
+            <member>- <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink></member>
+        </simplelist>
+        <!-- The June F2F meeting decided to allow cusotm elements wherever mda is allowed and vice versa, all modules and custom elements were removed from segment and lower to allow for resegmentation 
+            <para>Custom extensions using 
+            <olink targetdoc="../elements/metadata/metadata.xml" targetptr="metadata"><code>&lt;mda:metadata></code></olink> 
+            are allowed in:</para>
+        <simplelist>
+            <member>- <olink targetdoc="../elements/structural/segment.xml" targetptr="segment"><code>&lt;segment></code></olink></member>
+            <member>- <olink targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"><code>&lt;ignorable></code></olink></member>            
+            <member>- <olink targetdoc="../elements/candidates/match.xml" targetptr="match"><code>&lt;mtc:match></code></olink></member>
+        </simplelist>
+        -->    
+        <para>The following <firstterm>XLIFF Core</firstterm> elements accept custom
+            attributes:</para>
+        <simplelist>
+            <member>- <olink targetdoc="../elements/structural/xliff.xml" targetptr="xliff"><code>&lt;xliff></code></olink></member>
+            <member>- <olink targetdoc="../elements/structural/file.xml" targetptr="file"><code>&lt;file></code></olink></member>
+            <member>- <olink targetdoc="../elements/structural/group.xml" targetptr="group"><code>&lt;group></code></olink></member>
+            <member>- <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink></member>
+            <!-- Extensions points have been removed from segment and lower structural levels to allow for resegmentation 
+            <member>- <olink targetdoc="../elements/structural/segment.xml" targetptr="segment"><code>&lt;segment></code></olink></member>
+            <member>- <olink targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"><code>&lt;ignorable></code></olink></member>            
+            <member>- <olink targetdoc="../elements/structural/source.xml" targetptr="source"><code>&lt;source></code></olink></member>
+            <member>- <olink targetdoc="../elements/structural/target.xml" targetptr="target"><code>&lt;target></code></olink></member>
+            -->
+            <member>- <olink targetdoc="../elements/structural/note.xml" targetptr="note"><code>&lt;note></code></olink></member>
+            <member>- <olink targetdoc="../elements/inline/mrk.xml" targetptr="mrk"><code>&lt;mrk></code></olink></member>
+            <member>- <olink targetdoc="../elements/inline/sm.xml" targetptr="sm"><code>&lt;sm></code></olink></member>
+        </simplelist>
+        <section>
+            <title>Extensibility of <firstterm>XLIFF Modules</firstterm></title>
+        <para>For extensibility of <firstterm>XLIFF Modules</firstterm> please refer to the relevant
+            Module Sections.</para></section>
+        
+    </section>
+  
+  <section id="ext-constraints">
+    <title>Constraints</title>
+    <itemizedlist>
+      <listitem><para>When using identifiers, an extension <glossterm>must</glossterm> use either an attribute named <code>id</code> or the attribute
+        <code>xml:id</code> to specify them.</para></listitem>
+      <listitem><para>Extensions identifiers <glossterm>must</glossterm> be unique within their immediate <olink targetdoc="../elements/structural/file.xml"
+        targetptr="file"><code>&lt;file></code></olink>, <olink targetdoc="../elements/structural/group.xml" targetptr="group"><code>&lt;group&gt;</code></olink> 
+        or <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit&gt;</code></olink> 
+        enclosing element.</para></listitem>
+      <listitem><para>Identifier values used in extensions <glossterm>must</glossterm> be of type <code>xs:NMTOKEN</code> or compatible with <code>xs:NMTOKEN</code>
+        (e.g. <code>xs:NAME</code> and <code>xs:ID</code> are compatible).</para></listitem>
+    </itemizedlist>
+    <para>These constraints are needed for the <olink targetdoc="../fragments/fragments.xml" targetptr="fragid">fragment identification mechanism</olink>.</para>
+  </section>
+  
+    <section>
+        <title>Processing Requirements</title>
+        <itemizedlist>
+            <listitem>
+                <para>A user extension, whether implemented using <olink
+                        targetdoc="../elements/metadata/metadata.xml" targetptr="metadata"
+                            ><code>&lt;mda:metadata></code></olink> or using a custom namespace,
+                        <glossterm>must not</glossterm> provide the same functionality as an
+                    existing XLIFF core or module feature, however it <glossterm>may</glossterm>
+                    complement an extensible XLIFF core feature or module feature or provide a new
+                    functionality at the provided extension points.</para>
+            </listitem>
+            
+            <listitem>
+                <para><firstterm>Mergers</firstterm> <glossterm>must not</glossterm> rely on custom namespace extensions, other than the ones possibly defined in <olink
+                        targetdoc="../elements/structural/skeleton.xml" targetptr="skeleton"
+                    ><code>&lt;skeleton></code></olink>, to create the <firstterm>Translated</firstterm> version of
+                    the original document. </para>
+            </listitem>
+            
+            <listitem>
+                <para><firstterm>Writers</firstterm> that do not support a given custom namespace based user extension
+                        <glossterm>should</glossterm> preserve that extension without
+                    <firstterm>Modification</firstterm>.</para>
+            </listitem>
+        </itemizedlist>
+    </section>
+</section>

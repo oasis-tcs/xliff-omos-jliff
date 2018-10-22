@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="MT_Confidence">
+  <title>MT Confidence</title>
+
+  <para>communicates the confidence score from a machine translation engine for the accuracy of a translation it has provided
+    <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> <ulink url="http://www.w3.org/TR/its20/#mtconfidence">MT Confidence</ulink> for details.</para>
+  <warning><para>MT Confidence is not intended to provide a score that is comparable among or between Machine
+      Translation engines and platforms. This data category does NOT aim to establish any sort of
+      correlation between the confidence score and either human evaluation of MT usefulness, or
+      post-editing cognitive effort. </para> </warning>
+  
+  <section id="MT_Confidence_mtc">
+    <title>Within the Translation Candidates module</title>
+    <para>The most natural step to introduce the MT Confidence metadata into the multilingual
+      content life cycle is during the XLIFF roundtrip, when the <firstterm>XLIFF
+        Document</firstterm> is being <firstterm>Enriched</firstterm> with Translation Candidates
+      from a specific MT Service or via an MT Services broker. The MT Confidence metadata included
+      with the MT provided matches <glossterm>may</glossterm> be used by human or machine
+        <firstterm>Modifiers</firstterm> who populate the <firstterm>XLIFF Core</firstterm>
+      <olink targetdoc="../../structural/target.xml" targetptr="target"
+        ><code>&lt;target></code></olink> elements with matches.</para>
+    <para>In the <olink targetdoc="../../modules/candidates/specification.xml"
+        targetptr="candidates">Translation Candidates Module</olink>, there is a partial overlap
+      between the <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+      <ulink url="http://www.w3.org/TR/its20/#mtconfidence">MT Confidence</ulink> and
+        <firstterm>XLIFF-defined</firstterm> features. See the <olink
+        targetdoc="../../attributes/itsm/itsm_mtConfidence.xml" targetptr="itsm_mtConfidence"
+          ><code>mtConfidence</code></olink> attribute for the mapping details, Advanced Constraints
+      and Processing Requirements.</para>
+    <example>
+      <title>MT Confidence as Translation Candidates metadata</title>
+      <programlisting>
+&lt;xliff xmlns="urn:oasis:names:tc:xliff:document:2.0"
+    xmlns:mtc="urn:oasis:names:tc:xliff:matches:2.0"
+    xmlns:its="http://www.w3.org/2005/11/its" version="2.0"
+    srcLang="en" trgLang="fr">
+  &lt;file id="f1" its:annotatorsRef="mt-confidence|MTServices-XYZ">
+    &lt;unit id="1">
+      &lt;mtc:matches>
+        &lt;!-- Score provided by MTServices-XYZ -->
+        &lt;mtc:match ref="#m1" matchQuality="89.82">
+          &lt;source>Text&lt;/source>
+          &lt;target >Texte&lt;/target>
+        &lt;/mtc:match>
+        &lt;!-- Score provided by MTProvider-ABC -->
+        &lt;mtc:match ref="#m1" matchQuality="67.8"
+            its:annotatorsRef="mt-confidence|MTProvider-ABC">
+          &lt;source>Text&lt;/source>
+          &lt;target >Texte&lt;/target>
+        &lt;/mtc:match>
+        &lt;!-- Score provided by MTProvider-JKL -->
+        &lt;mtc:match ref="#m1" matchQuality="65"
+            its:annotatorsRef="mt-confidence|MTProvider-JKL">
+          &lt;source>Text&lt;/source>
+          &lt;target >texte&lt;/target>
+        &lt;/mtc:match>
+        &lt;!-- Score provided by MTServices-XYZ -->
+        &lt;mtc:match ref="#m1" matchQuality="89.82">
+          &lt;source>Some text&lt;/source>
+          &lt;target>Du texte&lt;/target>
+        &lt;/mtc:match>
+      &lt;/mtc:matches>
+      &lt;segment>
+        &lt;source>&lt;mrk id='m1' type='mtc:match'>Text&lt;/mrk>&lt;/source>
+      &lt;/segment>
+    &lt;/unit>
+  &lt;/file>
+&lt;/xliff>
+ </programlisting>
+    </example>
+    <warning>
+      <para>Generic ITS Processors cannot directly read MT Confidence data from the XLIFF
+        Translation Candidates Module because ITS 2.0 does not define a global pointer for this data
+        category.</para>
+    </warning>    
+  </section>
+  
+  
+
+  <section id="MT_Confidence_Structural">
+    <title>Structural Elements</title>
+    <para>It is NOT advised that <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+      <ulink url="http://www.w3.org/TR/its20/#mtconfidence">MT Confidence</ulink> be used at a
+      structural level because meaningful MT Confidence scores will vary from segment to segment. If
+      a structural element of an original document has an <olink targetdoc="../xliff21.xml"
+        targetptr="ITS20">[ITS]</olink>
+      <ulink url="http://www.w3.org/TR/its20/#mtconfidence">MT Confidence</ulink> annotation, it
+        <glossterm>may</glossterm> be represented upon <firstterm>Extraction</firstterm> using the
+        <link linkend="MTConfidenceAnnotation">MT Confidence Inline Annotation</link>.  The whole
+      unit source content <glossterm>must</glossterm> be enclosed within the annotation in such a case, possibly spanning multiple segments.</para>
+  </section>
+  
+  <section id="MT_Confidence_Inline">
+    <title>Inline Elements</title>
+    <para>  
+    </para>
+    
+    
+      
+   <example>
+      <title>Extraction of ITS MT Confidence Metadata from a Raw MTed source document</title>
+    
+     <para>Original:</para>
+     <programlisting>
+&lt;p>&lt;span its:mtConfidence="0.8982"
+    its:annotatorsRef="mt-confidence|MTServices-XYZ">Some Machine
+        Translated text. &lt;/span>&lt;/p>
+ </programlisting>
+     <para>Extraction from a raw MT original:</para>
+     <programlisting>
+&lt;unit id="u1">
+  &lt;segment>
+    &lt;source>&lt;mrk id="m1" type="its:generic" its:mtConfidence="0.8982"
+        its:annotatorsRef="mt-confidence|MTServices-XYZ" >Some Machine
+        Translated text.&lt;/mrk>&lt;/source>
+  &lt;/segment>
+&lt;/unit>
+       </programlisting>
+      
+      
+      
+    </example>
+  </section>
+  <section id="MTConfidenceAnnotation">
+    <title>MT Confidence Annotation</title>
+    <para>This is used to fully map to and from the <olink targetdoc="../xliff21.xml"
+        targetptr="ITS20">[ITS]</olink>
+      <ulink url="https://www.w3.org/TR/its20/#mtconfidence">MT Confidence</ulink> data
+      category in <firstterm>XLIFF Core</firstterm>.</para>
+    <para>Usage:</para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>The <olink targetdoc="../../attributes/id.xml" targetptr="id"><code>id</code></olink>
+          attribute is <glossterm>required</glossterm>.</para>
+      </listitem>
+      <listitem>
+        <para>The <olink targetdoc="../../attributes/type.xml" targetptr="type"
+            ><code>type</code></olink> attribute is <glossterm>optional</glossterm> and set to
+            <code>its:generic</code>.</para>
+      </listitem>
+      <listitem>
+        <para>The the <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> defined
+          attribute <olink targetdoc="../../attributes/itsm/itsm_mtConfidence"
+            targetptr="itsm_mtConfidence"><code>its:mtConfidence</code></olink>
+          <glossterm>must</glossterm> be set.</para>
+      </listitem>
+      <listitem>
+        <para>The <olink targetdoc="../../attributes/translate.xml" targetptr="translate"
+              ><code>translate</code></olink> attribute is <glossterm>optional</glossterm>.</para>
+      </listitem>
+      
+      <listitem>
+        <para> The <olink targetdoc="../../attributes/itsm/itsm_annotatorsRef.xml"
+            targetptr="itsm_annotatorsRef"><code>its:annotatorsRef</code></olink> attribute is
+          <glossterm>required</glossterm> if and only if the <olink targetdoc="../../attributes/itsm/itsm_mtConfidence"
+            targetptr="itsm_mtConfidence"><code>its:mtConfidence</code></olink> attribute is not in scope of
+          another relevant <olink targetdoc="../../attributes/itsm/itsm_annotatorsRef.xml"
+            targetptr="itsm_annotatorsRef"><code>its:annotatorsRef</code></olink> attribute.</para>
+      </listitem>
+    </itemizedlist>
+    <warning>
+      <para>This annotation can be syntactically in scope of a relevant <olink
+          targetdoc="../../attributes/itsm/itsm_annotatorsRef.xml" targetptr="itsm_annotatorsRef"
+            ><code>its:annotatorsRef</code></olink> attribute, while it still fails to resolve with
+        the <emphasis>intended</emphasis> value. This can happen if more then one MT and/or MT Confidence providers were used.
+      </para>
+    </warning>
+    <example>
+      <title>Populating <firstterm>XLIFF Core</firstterm> targets with raw MT along with ITS MT
+        Confidence metadata</title>
+      
+      <para>Original:</para>
+      <programlisting>
+&lt;p> Some human authored text for translation. &lt;/p>
+ </programlisting>
+      <para>Extracted text Enriched with a Machine Translated candidate and
+          the same candidate inserted into the core target:</para>
+      <programlisting>
+&lt;unit id="u1">
+  &lt;mtc:matches>
+    &lt;mtc:match ref="#t=m1" matchQuality="67.8"
+        its:annotatorsRef="mt-confidence|GoogleTranslate">
+      &lt;source xml:lang="EN">Some human authored text for translation.
+          &lt;/source>
+      &lt;target xml:lang="CS">Některé lidské napsaný text určený k překladu .
+          &lt;/target>
+    &lt;/mtc:match>
+  &lt;/mtc:matches>
+  &lt;segment>
+    &lt;source xml:lang="EN">Some human authored text for translation. 
+        &lt;/source>
+    &lt;target xml:lang="CS">&lt;mrk id="m1" type="its:generic"
+        its:mtConfidence="0.678"
+        its:annotatorsRef="mt-confidence|GoogleTranslate">Některé lidské
+        napsaný text určený k překladu .&lt;/mrk>&lt;/target>
+  &lt;/segment>
+&lt;/unit>
+       </programlisting>
+      
+      <para>Raw MT Merged back into the original format with MT Confidence
+          metadata:</para>
+      <programlisting>
+&lt;p>&lt;span its:mtConfidence="0.678"
+    its:annotatorsRef="mt-confidence|GoogleTranslate"> Některé lidské
+    napsaný text určený k překladu . &lt;/span>&lt;/p>
+ </programlisting>
+      
+    </example>
+  <itemizedlist>
+    <title>Processing Requirements</title>
+    <listitem>
+      <para><firstterm>Modifiers</firstterm> populating <firstterm>XLIFF Core</firstterm> <olink targetdoc="../../elements/structural/target.xml" targetptr="target"><code>&lt;target></code></olink> elements with unmodified MT suggestions <glossterm>may</glossterm> annotate the exact unmodified target spans with <link linkend="MTConfidenceAnnotation">MT Confidence Annotations</link>.</para>
+      
+      
+    </listitem>
+    
+  </itemizedlist>
+    <warning><para>The MT Confidence Annotations need to be removed whenever the original MT is modified, no
+        matter if by human post-editors or some automated post-editing methods. This is however not
+        enforceable since the subsequent <firstterm>Modifiers</firstterm> might not be aware of the
+        ITS Module data. Thus it is not advised to transfer the MT Confidence data onto
+          <firstterm>XLIFF Core</firstterm> targets if any sort of post editing is foreseen or
+        possible in the subsesquent steps of the XLIFF Round-trip, unless the post-editors were
+        instructed and equipped to remove the MT Confidence Annotations as soon as they touch the MT
+        suggestions. Preserving the MT Confidence data in <firstterm>XLIFF Core</firstterm>
+        <olink targetptr="target" targetdoc="../../elements/structural/target.xml"
+            ><code>&lt;target></code></olink> elements only makes sense if the data needs to be
+        preserved throughout <firstterm>Merging</firstterm> back to the original format, for
+        instance for data analytic purposes or to color code the raw MTed target text for the end
+        user based on the MT Confidence scores.</para></warning>
+  </section>
+  
+  
+  
+  
+</section>

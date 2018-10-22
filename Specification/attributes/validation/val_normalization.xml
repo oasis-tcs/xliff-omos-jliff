@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="val_normalization">
+  <title>normalization</title>
+
+  <para>This rule attribute specifies the normalization type to apply when validating a rule. Only the
+    normalization forms C and D as specified in  <olink targetdoc="../../xliff21.xml"
+      targetptr="uax15">[UAX #15]</olink>.</para>
+
+  <para><emphasis>Value description:</emphasis> The allowed values are listed in the table below
+    along with their corresponding types of normalization to be applied.</para>
+  <table>
+    <title>Values</title>
+    <tgroup cols="2">
+      <thead>
+        <row>
+          <entry>Value</entry>
+          <entry>Description</entry>
+        </row>
+      </thead>
+      <tbody>
+        <row>
+          <entry>none</entry>
+          <entry>No normalization <glossterm>should</glossterm> be done.</entry>
+        </row>
+        <row>
+          <entry>nfc</entry>
+          <entry>Normalization Form C <glossterm>must</glossterm> be used.</entry>
+        </row>
+        <row>
+          <entry>nfd</entry>
+          <entry>Normalization Form D <glossterm>must</glossterm> be used.</entry>
+        </row>
+     </tbody>
+    </tgroup>
+  </table>
+
+  <para><emphasis>Default value:</emphasis> <code>nfc</code></para>
+
+  <para><emphasis>Used in:</emphasis> <olink targetdoc="../../elements/validation/rule.xml" targetptr="rule"><code>&lt;rule></code></olink></para>
+
+
+</section>

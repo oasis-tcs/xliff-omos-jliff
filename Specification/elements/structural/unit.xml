@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="unit">
+    <title>unit</title>
+    <para>Static container for a dynamic structure of elements holding the extracted translatable source text, aligned with the <firstterm>Translated</firstterm> text.</para>
+
+    <para><emphasis>Contains:</emphasis></para>
+    <simplelist>
+        <member>- elements from other namespaces, <glossterm>optional</glossterm></member>
+        <member>- Zero or one
+            <olink targetdoc="notes.xml" targetptr="notes"><code>&lt;notes></code></olink>
+            elements followed by</member>
+        <member>- Zero or one
+            <olink targetdoc="originaldata.xml" targetptr="originaldata"><code>&lt;originalData></code></olink>
+            element followed by</member>
+        <member>- One or more
+            <olink targetdoc="segment.xml" targetptr="segment"><code>&lt;segment></code></olink>
+            or <olink targetdoc="ignorable" targetptr="ignorable"><code>&lt;ignorable></code></olink>
+            elements in any order.</member>
+
+
+
+
+
+
+    </simplelist>
+
+    <para><emphasis>Attributes:</emphasis></para>
+    <simplelist>
+        <member>- <olink targetdoc="../../attributes/id.xml" targetptr="id"><code>id</code></olink>, <glossterm>required</glossterm></member>
+        <member>- <olink targetdoc="../../attributes/name.xml" targetptr="name"><code>name</code></olink>, <glossterm>optional</glossterm></member>
+        <member>- <olink targetdoc="../../attributes/canResegment.xml" targetptr="canResegment"><code>canResegment</code></olink>, <glossterm>optional</glossterm></member>
+        <member>- <olink targetdoc="../../attributes/translate.xml" targetptr="translate"><code>translate</code></olink>, <glossterm>optional</glossterm></member>
+        <member>- <olink targetdoc="../../attributes/srcdir.xml" targetptr="srcdir"><code>srcDir</code></olink>, <glossterm>optional</glossterm></member>
+        <member>- <olink targetdoc="../../attributes/trgdir.xml" targetptr="trgdir"><code>trgDir</code></olink>, <glossterm>optional</glossterm></member>
+        <member>- <olink targetdoc="../../attributes/xml_space.xml" targetptr="xml_space"><code>xml:space</code></olink>, <glossterm>optional</glossterm></member>
+
+    <member>- <olink targetdoc="../../attributes/type.xml"
+    targetptr="type"><code>type</code></olink>, <glossterm>optional</glossterm></member>
+
+
+
+        <member>- attributes from other namespaces, <glossterm>optional</glossterm></member>
+    </simplelist>
+
+    <itemizedlist>
+        <title>Constraints</title>
+        <listitem>
+            <para>A <link linkend="unit"><code>&lt;unit></code></link> <glossterm>must</glossterm> contain at least one
+                <olink targetdoc="segment.xml" targetptr="segment"><code>&lt;segment></code></olink>
+                element.
+            </para>
+        </listitem>
+        <listitem>
+            <para>The following <firstterm>XLIFF Module</firstterm> elements are explicitly allowed
+                by the wildcard <code>other</code>:</para>
+            <simplelist>
+                <!--  Removing CTR module as per resolution to https://issues.oasis-open.org/browse/XLIFF-32 
+                <member>- Zero or one <olink targetdoc="../change-tracking/changeTrack.xml" targetptr="changeTrack"><code>&lt;ctr:changeTrack></code></olink>
+                    elements</member>
+-->
+                <member>- Zero or one
+                    <olink targetdoc="matches.xml" targetptr="matches"><code>&lt;mtc:matches></code></olink>
+                    elements</member>
+                <member>- Zero or one
+                    <olink targetdoc="../glosary/glossary.xml" targetptr="glossary"><code>&lt;gls:glossary></code></olink>
+                    elements</member>
+                <member>- Zero or one <olink targetdoc="../metadata/metadata.xml" targetptr="metadata"><code>&lt;mda:metadata></code></olink>
+                    elements</member>
+                <member>- Zero or one <olink targetdoc="../resourceData/resourceData.xml"
+                        targetptr="res_resourceData"><code>&lt;res:resourceData></code></olink>
+                    elements </member>
+                <member>- Zero or one <olink targetdoc="../size_restriction/data.xml" targetptr="slr_data"><code>&lt;slr:data></code></olink>
+                    elements </member>
+                <member>- Zero or one <olink targetdoc="../validation/validation.xml" targetptr="validation"><code>&lt;val:validation></code></olink>
+                    elements </member>
+                <member>- Zero, one, or more <olink targetdoc="../itsm/itsm_locQualityIssues.xml" targetptr="itsm_locQualityIssues"><code>&lt;its:locQualityIssues></code></olink>
+                    elements</member>
+                <member>- Zero, one, or more <olink targetdoc="../itsm/itsm_provenanceRecords.xml" targetptr="itsm_provenanceRecords"><code>&lt;its:provenanceRecords></code></olink>
+                    elements</member>
+                
+            </simplelist>
+        </listitem>
+        <listitem>
+            <para><firstterm>Module</firstterm> and Extension elements <glossterm>may</glossterm> be
+                used in any order.</para>
+        </listitem>
+        <listitem>
+            <para>The following <firstterm>XLIFF Module</firstterm> attributes are explicitly
+                allowed by the wildcard <code>other</code>:</para>
+            <simplelist>
+                <member>- attributes from the namespace
+                    <code>urn:oasis:names:tc:xliff:fs:2.0</code>, <glossterm>optional</glossterm>,
+                    provided that the Constraints specified in the <olink
+                        targetdoc="modules/fs/fs.xml" targetptr="fs-mod">Format Style Module</olink>
+                    are met.</member>
+                <member>- attributes from the namespace
+                        <code>urn:oasis:names:tc:xliff:sizerestriction:2.0</code>,
+                        <glossterm>optional</glossterm>, provided that the Constraints specified in
+                    the <olink targetdoc="modules/size_restriction/specification.xml"
+                        targetptr="size_restriction_module">Size and Length Restriction
+                        Module</olink> are met.</member>
+                <member>- attributes from the namespace
+                        <code>http://www.w3.org/2005/11/its</code>,
+                        <glossterm>optional</glossterm>, provided that the Constraints specified in
+                    the <olink targetdoc="modules/itsm/specification.xml" targetptr="ITS-module">ITS
+                        Module</olink> are met.</member>
+                <member>- attributes from the namespace
+                        <code>urn:oasis:names:tc:xliff:itsm:2.1</code>,
+                        <glossterm>optional</glossterm>, provided that the Constraints specified in
+                    the <olink targetdoc="../../modules/itsm/specification.xml"
+                        targetptr="ITS-module">ITS Module</olink> are met.</member>
+            </simplelist>
+        </listitem>
+        <!-- The id scopes are defined on the id attribute
+            <listitem><para>The value of the
+            <olink targetdoc="../../attributes/id.xml" targetptr="id"><code>id</code></olink>
+            attribute <glossterm>must</glossterm> be unique among all
+            <link linkend="unit"><code>&lt;unit></code></link>
+            children of the enclosing
+            <olink targetdoc="file.xml" targetptr="file"><code>&lt;file></code></olink>
+            element.</para>
+        </listitem>-->
+        <!-- This falg got killed in the August 20 2013 meeting <listitem>
+            <para>For a <link linkend="unit"><code>&lt;unit></code></link> element to be ready for
+                    <emphasis>Merging</emphasis> it is <glossterm>required</glossterm> that all its <olink
+                    targetdoc="segment.xml" targetptr="segment"><code>&lt;segment></code></olink>
+                children with <olink targetdoc="../../attributes/translate.xml"
+                    targetptr="translate"><code>translate</code></olink> set to <code>yes</code>
+                have the <olink targetdoc="../../attributes/approved.xml" targetptr="approved"
+                        ><code>approved</code></olink> attribute set to <code>yes</code>. </para>
+        </listitem>-->
+        </itemizedlist>
+</section>

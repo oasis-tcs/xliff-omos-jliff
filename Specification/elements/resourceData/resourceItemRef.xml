@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="res_resourceItemRef">
+    <title>resourceItemRef</title>
+    <para>Specifies a reference to an associated <olink targetdoc="../../elements/resourcedata/resourceItem.xml" targetptr="res_resourceItem"><code>&lt;resourceItem></code></olink> element located at the <olink targetdoc="../../elements/structural/file.xml" targetptr="file"><code>&lt;file></code></olink> level.</para>
+    <para><emphasis>Contains:</emphasis></para>
+    <simplelist>
+        <member>This element is always empty.</member>
+    </simplelist>
+    <para><emphasis>Attributes:</emphasis></para>
+    <simplelist>
+      <member>- <olink targetdoc="../../attributes/resourceData/res_id.xml" targetptr="res_id"><code>id</code></olink>, <glossterm>optional</glossterm></member>
+      <member>- <olink targetdoc="../../attributes/resourceData/res_ref.xml" targetptr="res_ref"><code>ref</code></olink>, <glossterm>required</glossterm></member>
+      <member>- attributes from other namespaces, <glossterm>optional</glossterm></member>
+    </simplelist>
+
+  <itemizedlist>
+    <title>Constraints</title>
+
+    <listitem>
+      <para>The value of the <glossterm>optional</glossterm> <olink targetdoc="../../attributes/resourceData/res_id.xml" targetptr="res_id">id</olink> attribute
+        <glossterm>must</glossterm> be unique among all <olink targetdoc="../../elements/resourceData/resourceItem.xml" targetptr="res_resourceItem"><code>&lt;resourceItem></code></olink>
+        and <olink targetdoc="../../elements/resourceData/resourceItemRef.xml" targetptr="res_resourceItemRef"><code>&lt;resourceItemRef></code></olink>
+        elements of the enclosing <olink targetdoc="../../elements/resourceData/resourceData.xml" targetptr="res_resourceData"><code>&lt;resourceData></code></olink> element.</para>
+    </listitem>
+    
+  </itemizedlist>
+    <itemizedlist>
+      <title>Processing Requirements</title>
+      
+    <listitem>
+      <para><firstterm>Modifiers</firstterm>
+        <glossterm>must</glossterm> remove <olink
+          targetdoc="../../elements/resourceData/resourceItemRef.xml"
+          targetptr="res_resourceItemRef"><code>&lt;resourceItemRef></code></olink> when removing
+        the referenced <olink targetdoc="../../elements/resourceData/resourcItem.xml"
+          targetptr="res_resourceItem"><code>&lt;resourceItem></code></olink>.</para>
+    </listitem>
+    
+  </itemizedlist>
+</section>

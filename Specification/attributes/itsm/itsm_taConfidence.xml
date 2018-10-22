@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="itsm_taConfidence">
+    <title>taConfidence</title>
+    
+    <para>Text Analysis Confidence - the <code>taConfidence</code> attribute is the <olink
+            targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> defined
+            <code>taConfidence</code> attribute.</para>
+    
+    
+    <para><emphasis>Value description:</emphasis> floating point number between 0 and 1.</para>
+    <para>The number represents the self reported confidence of the application or service providing
+        the <ulink url="http://www.w3.org/TR/its20/#textanalysis">Text Analysis</ulink> metadata, the higher the better.</para>
+    
+    <para><emphasis>Default value:</emphasis>: undefined</para>
+    
+    
+    
+    <para><emphasis>Used in:</emphasis>
+        <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
+            ><code>&lt;mrk></code></olink>, and
+        <olink targetdoc="../../elements/inline/sm.xml"
+            targetptr="sm"><code>&lt;sm></code></olink>.</para>
+    
+    <itemizedlist>
+        <title>Constraints</title>
+        <listitem><para>When the attribute <link linkend="itsm_taConfidence"><code>taConfidence</code></link> is set, the element where it is set <glossterm>must</glossterm> be in the scope of an
+            <olink targetdoc="itsm_annotatorsRef.xml" targetptr="itsm_annotatorsRef" ><code>its:annotatorsRef</code></olink> attribute with the 
+            <olink targetdoc="../../xliff21.xml" targetptr="ITS20">[ITS]</olink><ulink url="https://www.w3.org/TR/its20/#datacategories-overview"
+                >Data category
+                identifier</ulink> part of exactly one list value equal to the string <code>text-analysis</code>.</para></listitem>
+    </itemizedlist>
+    <para>See the <olink targetdoc="../../modules/itsm/Text_Analysis.xml" targetptr="taAnnotation">ITS Text Analysis Annotation</olink> for the full normative usage description of this attribute. Other advanced Constraints follow from that normative usage description.</para>
+    
+</section>

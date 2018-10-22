@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="equivend">
+  <title>equivEnd</title>
+
+  <para>Equivalent text - holds a plain text representation of the original data of the end marker
+    of an inline code that can be used when generating a plain text representation of the
+    content.</para>
+
+  <para><emphasis>Value description:</emphasis> Text.</para>
+
+  <para><emphasis>Default value:</emphasis> an empty string</para>
+
+  <para><emphasis>Used in:</emphasis> <olink
+  targetdoc="../elements/inline/pc.xml"
+  targetptr="pc"><code>&lt;pc&gt;</code></olink>.</para>
+
+  <para><emphasis>Example:</emphasis></para>
+
+  <programlisting>
+&lt;unit id="1"&gt;
+  &lt;originalData&gt;
+    &lt;data id="d1"&gt;&amp;lt;span class="link" onclick="linkTo('dbId5345')"&gt;
+        &lt;/data&gt;
+    &lt;data id="d2"&gt;&amp;lt;/span&gt;&lt;/data&gt;
+  &lt;/originalData&gt;
+  &lt;segment&gt;
+    &lt;source&gt;The jam made of &lt;pc id="1" dataRefStart="d1" equivStart=""
+        dataRefEnd="d2" equivEnd=""&gt;lingonberries&lt;/pc&gt; is quite
+        tasty.&lt;/source&gt;
+  &lt;/segment&gt;
+&lt;/unit&gt;
+</programlisting>
+
+  <note>
+    <para>To provide a user-friendly representation, use the <olink
+    targetdoc="dispend.xml" targetptr="dispend"><code>dispEnd</code></olink>
+    attribute.</para>
+  </note>
+</section>

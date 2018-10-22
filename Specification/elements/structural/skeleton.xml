@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="skeleton">
+    <title>skeleton</title>
+    <para>Container for non-translatable material pertaining to the parent <olink
+            targetdoc="file.xml" targetptr="file"><code>&lt;file></code></olink> element.</para>
+    <para><emphasis>Contains:</emphasis></para>
+    <para>Either</para>
+    <simplelist>
+        <member>- Non-translatable text</member>
+        <member>- elements from other namespaces</member>
+    </simplelist>
+    <para>or</para>
+    <simplelist>
+        <member>- is empty.</member>
+    </simplelist>
+
+    <para><emphasis>Attributes:</emphasis></para>
+    <simplelist>
+        <member>- <olink targetdoc="../../attributes/href.xml" targetptr="href"><code>href</code></olink>, <glossterm>optional</glossterm></member>
+    </simplelist>
+
+    <itemizedlist>
+        <title>Constraints</title>
+    <listitem><para> The attribute <olink targetdoc="../../attributes/href.xml" targetptr="href"
+                    ><code>href</code></olink> is <glossterm>required</glossterm> if and only if the
+                    <link linkend="skeleton"><code>&lt;skeleton></code></link> element is empty. </para></listitem>
+    </itemizedlist>
+    <itemizedlist>
+        <title>Processing Requirements</title>
+        <listitem><para><firstterm>Modifiers</firstterm> and <firstterm>Enrichers</firstterm> processing an
+                    <firstterm>XLIFF Document</firstterm> that contains a <link linkend="skeleton"
+                        ><code>&lt;skeleton></code></link> element <glossterm>must not</glossterm>
+                change that element, its attributes, or its content. </para></listitem>
+        <listitem><para><firstterm>Extractors</firstterm> creating an <firstterm>XLIFF Document</firstterm> with a <link
+                    linkend="skeleton"><code>&lt;skeleton></code></link> element
+                    <glossterm>must</glossterm> leave the <link linkend="skeleton"
+                        ><code>&lt;skeleton></code></link> element empty if and only if they specify
+                the attribute <olink targetdoc="../../attributes/href.xml" targetptr="href"
+                        ><code>href</code></olink>.</para></listitem>
+    </itemizedlist>
+</section>

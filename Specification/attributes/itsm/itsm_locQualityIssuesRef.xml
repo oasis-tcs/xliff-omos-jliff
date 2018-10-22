@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="itsm_locQualityIssuesRef">
+    <title>locQualityIssuesRef</title>
+    
+    <para>Localization Quality Standoff Reference - the <code>locQualityIssuesRef</code> attribute
+        is the <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+        defined <code>locQualityIssuesRef</code> attribute.</para>
+    <para>This attribute references the collection of Localization Issues that pertain to the
+        content span from where the reference is declared.</para>
+    
+    <para><emphasis>Value description:</emphasis> IRI</para>
+        
+    <para><emphasis>Default value:</emphasis> undefined.</para>
+    
+    
+    <para><emphasis>Used in:</emphasis>
+        <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
+            ><code>&lt;mrk></code></olink> and
+        <olink targetdoc="../../elements/inline/sm.xml"
+            targetptr="sm"><code>&lt;sm></code></olink>.</para>
+    
+    
+    <para>See the <olink targetdoc="../../modules/itsm/Localization_Quality_Issue.xml" targetptr="lqiAnnotation"
+            >ITS Localization Issue Annotation</olink> for the normative usage description of this
+        attribute. </para>
+    <itemizedlist>
+        <title>Constraints</title>
+        <listitem>
+            <para>The IRI value of the <link linkend="itsm_locQualityIssuesRef"
+                    >locQualityIssuesRef</link> attribute <glossterm>must</glossterm> be an
+                    IRI referencing a <olink
+                    targetdoc="../../elements/itsm/itsm_locQualityIssues.xml"
+                    targetptr="itsm_locQualityIssues"><code>&lt;locQualityIssues></code></olink>
+                element within the same <olink targetdoc="../../elements/structural/unit.xml"
+                    targetptr="unit"><code>&lt;unit></code></olink>.</para>
+        </listitem>
+        <listitem>
+            <para>Multiple <link linkend="itsm_locQualityIssuesRef">locQualityIssuesRef</link>
+                attributes <glossterm>may</glossterm> reference the same <olink
+                    targetdoc="../../elements/itsm/itsm_locQualityIssues.xml"
+                    targetptr="itsm_locQualityIssues"><code>&lt;locQualityIssues></code></olink>
+                element.</para>
+        </listitem>
+    </itemizedlist>
+    <itemizedlist>
+        <title>Processing Requirements</title>
+        <listitem>
+            <para><firstterm>Modifiers</firstterm> removing the last <link
+                linkend="itsm_locQualityIssuesRef"><code>locQualityIssuesRef</code></link>
+                attribute referencing a <olink targetptr="itsm_locQualityIssues"
+                    targetdoc="../../elements/itsm/itsm_locQualityIssues.xml"
+                    ><code>locQualityIssues</code></olink> element <glossterm>must</glossterm>
+                delete that <olink targetptr="itsm_provenanceRecords"
+                    targetdoc="../../elements/itsm/itsm_provenanceRecords.xml"
+                    ><code>locQualityIssues</code></olink> element.</para>
+        </listitem>
+        
+    </itemizedlist>
+</section>

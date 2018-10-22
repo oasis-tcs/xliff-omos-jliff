@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section>
+  <title>Attributes</title>
+
+  <para>This section lists all the various attributes used in XLIFF core elements.</para>
+
+  <section>
+    <title>XLIFF Attributes</title>
+
+    <para>The attributes defined in XLIFF 2.0 are: <olink targetdoc="appliesto.xml"
+      targetptr="appliesto"><code>appliesTo</code></olink>,
+      <!-- This falg got killed in the August 20 2013 meeting <olink targetdoc="approved.xml"
+        targetptr="approved"><code>approved</code></olink>,-->
+      <olink targetdoc="cancopy.xml"
+        targetptr="cancopy"><code>canCopy</code></olink>,
+      <olink targetdoc="candelete.xml"
+        targetptr="candelete"><code>canDelete</code></olink>,
+      <olink targetdoc="canoverlap.xml"
+        targetptr="canoverlap"><code>canOverlap</code></olink>,
+      <olink targetdoc="canreorder.xml"
+        targetptr="canreorder"><code>canReorder</code></olink>,
+      <olink targetdoc="canResegment.xml"
+        targetptr="canResegment"><code>canResegment</code></olink>,
+      <olink targetdoc="category.xml"
+        targetptr="category"><code>category</code></olink>,
+      <olink targetdoc="copyof.xml"
+        targetptr="copyof"><code>copyOf</code></olink>,
+
+      <olink targetdoc="dataref.xml" targetptr="dataref"
+        ><code>dataRef</code></olink>,
+      <olink targetdoc="datarefend.xml" targetptr="datarefend"
+          ><code>dataRefEnd</code></olink>,
+      <olink targetdoc="datarefstart.xml" targetptr="datarefstart"
+          ><code>dataRefStart</code></olink>,
+      <olink targetdoc="dir.xml" targetptr="dir"
+          ><code>dir</code></olink>,
+      <olink targetdoc="disp.xml" targetptr="disp"
+        ><code>disp</code></olink>,
+      <olink targetdoc="dispend.xml" targetptr="dispend"
+          ><code>dispEnd</code></olink>,
+      <olink targetdoc="dispstart.xml" targetptr="dispstart"
+          ><code>dispStart</code></olink>,
+      <olink targetdoc="equiv.xml" targetptr="equiv"
+          ><code>equiv</code></olink>,
+      <olink targetdoc="equivend.xml" targetptr="equivend"
+          ><code>equivEnd</code></olink>,
+      <olink targetdoc="equivstart.xml" targetptr="equivstart"
+          ><code>equivStart</code></olink>,
+      <olink targetdoc="hex.xml" targetptr="hex"
+            ><code>hex</code></olink>,
+      <olink targetdoc="href.xml" targetptr="href"
+              ><code>href</code></olink>,
+      <olink targetdoc="id.xml" targetptr="id"
+        ><code>id</code></olink>,
+      <olink targetdoc="isolated.xml" targetptr="isolated"
+          ><code>isolated</code></olink>,
+      <olink targetdoc="name.xml" targetptr="name"
+          ><code>name</code></olink>,
+      <olink targetdoc="order.xml" targetptr="order"
+        ><code>order</code></olink>,
+      <olink targetdoc="original.xml" targetptr="original"
+        ><code>original</code></olink>,
+      <olink targetdoc="priority.xml" targetptr="priority"
+          ><code>priority</code></olink>,
+      <olink targetdoc="ref.xml" targetptr="ref"
+          ><code>ref</code></olink>,
+
+
+      <olink targetdoc="srcdir.xml" targetptr="srcdir"
+          ><code>srcDir</code></olink>,
+      <olink targetdoc="srcLang.xml" targetptr="srcLang"
+          ><code>srcLang</code></olink>,
+
+      <olink targetdoc="startref.xml" targetptr="startref"
+        ><code>startRef</code></olink>,
+
+      <olink targetdoc="state.xml"
+        targetptr="state"><code>state</code></olink>,
+
+      <olink targetdoc="subflows.xml" targetptr="subflows"
+          ><code>subFlows</code></olink>,
+      <olink targetdoc="subflowsend.xml" targetptr="subflowsend"
+          ><code>subFlowsEnd</code></olink>,
+      <olink targetdoc="subflowsstart.xml"
+        targetptr="subflowsstart"><code>subFlowsStart</code></olink>,
+
+      <olink targetdoc="subState.xml"
+        targetptr="substate"><code>subState</code></olink>,
+
+      <olink targetdoc="subType.xml"
+        targetptr="subtype"><code>subType</code></olink>,
+
+
+      <olink targetdoc="trgLang.xml"
+        targetptr="trgLang"><code>trgLang</code></olink>,
+      <olink targetdoc="translate.xml"
+        targetptr="translate"><code>translate</code></olink>,
+      <olink targetdoc="trgdir.xml"
+        targetptr="trgdir"><code>trgDir</code></olink>,
+      <olink targetdoc="type.xml" targetptr="type"
+          ><code>type</code></olink>,
+      <olink targetdoc="value.xml" targetptr="value"
+          ><code>value</code></olink>
+      and <olink targetdoc="version.xml" targetptr="version"
+          ><code>version</code></olink>.</para>
+
+    <!-- This falg got killed in the August 20 2013 meeting <xi:include href="approved.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>-->
+
+    <xi:include href="appliesto.xml"
+                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="cancopy.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="candelete.xml"
+                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="canoverlap.xml"
+                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="canreorder.xml"
+                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="canResegment.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="category.xml"
+                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="copyof.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+
+    <xi:include href="dataref.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="datarefend.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="datarefstart.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+
+    <xi:include href="dir.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="disp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="dispend.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="dispstart.xml"
+                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="equiv.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="equivend.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="equivstart.xml"
+                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="hex.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="href.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="id.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="isolated.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="name.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+
+    <xi:include href="order.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="original.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="priority.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="ref.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+
+
+    <!-- removed skeleton attribute in response to comments 007 and 008 -->
+
+    <xi:include href="srcdir.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="srcLang.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="startref.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="state.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+
+    <xi:include href="subflows.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="subflowsend.xml"
+                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="subflowsstart.xml"
+                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="subState.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="subType.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="trgLang.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="translate.xml"
+                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="trgdir.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="type.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="value.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="version.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+  </section>
+
+  <section>
+    <title>XML namespace</title>
+
+    <para>The attributes from XML namespace used in XLIFF 2.0 are: <olink
+    targetdoc="xml_lang.xml" targetptr="xml_lang">xml:lang</olink> and <olink
+    targetdoc="xml_space.xml" targetptr="xml_space">xml:space</olink>.</para>
+
+    <xi:include href="xml_lang.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+
+    <xi:include href="xml_space.xml"
+                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+  </section>
+</section>

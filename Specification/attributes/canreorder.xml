@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="canreorder">
+  <title>canReorder</title>
+
+  <para>Re-ordering editing hint - indicates whether or not the inline code can be re-ordered. See
+      <olink targetdoc="../inline/inline.xml" targetptr="editinghints">Editing Hints section</olink>
+    for more details.</para>
+
+  <para><emphasis>Value description:</emphasis>
+    <code>yes</code> in case the code can be re-ordered, <code>firstNo</code> when the code is the
+    first element of a sequence that cannot be re-ordered, <code>no</code> when it is another
+    element of such a sequence.</para>
+
+  <para><emphasis>Default value:</emphasis> <code>yes</code>.</para>
+
+  <para><emphasis>Used in:</emphasis> <olink
+  targetdoc="../elements/inline/pc.xml"
+  targetptr="pc"><code>&lt;pc&gt;</code></olink>, <olink
+  targetdoc="../elements/inline/sc.xml"
+  targetptr="sc"><code>&lt;sc&gt;</code></olink>, <olink
+  targetdoc="../elements/inline/ec.xml"
+  targetptr="ec"><code>&lt;ec&gt;</code></olink>, <olink
+  targetdoc="../elements/inline/ph.xml"
+  targetptr="ph"><code>&lt;ph&gt;</code></olink>.</para>
+</section>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="ref">
+  <title>ref</title>
+
+  <para>Reference - holds a reference for the associated annotation.</para>
+
+  <para><emphasis>Value description:</emphasis> A value of the <olink targetdoc="../xliff21.xml" targetptr="XMLSchema2">[XML Schema Datatypes]</olink> type
+  anyURI. The semantics of the value depends on the type of annotation:</para>
+
+  <itemizedlist>
+    <listitem>
+      <para>When used in a <olink targetdoc="../inline/inline.xml" targetptr="termAnnotation">term
+          annotation</olink>, the URI value is referring to a resource providing information about
+        the term.</para>
+    </listitem>
+
+    <listitem>
+      <para>When used in a <olink targetdoc="../inline/inline.xml"
+        targetptr="matchAnnotation">translation candidates annotation</olink>, the URI value is referring
+        to an external resource providing information about the translation candidate.</para>
+    </listitem>
+
+    <listitem>
+      <para>When used in a <olink targetdoc="../inline/inline.xml" targetptr="commentAnnotation"
+          >comment annotation</olink>, the value is referring to a <olink
+          targetdoc="../elements/structural/note.xml" targetptr="note"
+            ><code>&lt;note&gt;</code></olink> element within the same enclosing <olink
+              targetdoc="../elements/structural/unit.xml" targetptr="unit"
+              ><code>&lt;unit&gt;</code></olink>.</para>
+    </listitem>
+
+    <listitem>
+      <para>When used in a <olink targetdoc="../inline/inline.xml"
+      targetptr="customAnnotation">custom annotation</olink>, the value is
+      defined by each custom annotation.</para>
+    </listitem>
+  </itemizedlist>
+
+  <para><emphasis>Default value:</emphasis> undefined</para>
+
+  <para><emphasis>Used in:</emphasis> <olink
+  targetdoc="../elements/inline/mrk.xml"
+  targetptr="mrk"><code>&lt;mrk&gt;</code></olink> or <olink
+  targetdoc="../elements/inline/sm.xml"
+  targetptr="sm"><code>&lt;sm&gt;</code></olink>.</para>
+
+  <para><emphasis>Example:</emphasis></para>
+
+  <programlisting>
+&lt;unit id="1"&gt;
+  &lt;segment&gt;
+    &lt;source&gt;The &lt;pc id="1"&gt;ref&lt;/pc&gt; attribute of a term
+        annotation holds a &lt;mrk id="m1" type="term"
+        ref="http://dbpedia.org/page/Uniform_Resource_Identifier"&gt;
+        URI&lt;/mrk&gt; pointing to more information about the given
+        term.&lt;/source&gt;
+  &lt;/segment&gt;
+&lt;/unit&gt;
+</programlisting>
+<!-- This Constraint does not make sense with the current fragmnt identifying mechanism
+  <itemizedlist>
+    <title>Constraints</title>
+
+    <listitem>
+      <para>The value of the <olink targetdoc="ref.xml" targetptr="ref"><code>ref</code></olink>
+        attribute <glossterm>should</glossterm> point to an element that is a child of the <olink
+          targetdoc="../elements/structural/unit.xml" targetptr="unit"
+          ><code>&lt;unit&gt;</code></olink> element where the parent of the attribute is
+        located.</para>
+      <para>Rationale: Pointing to an element located
+      elsewhere is likely to prevent proper execution of Processing
+      Requirements.</para>
+    </listitem>
+  </itemizedlist>-->
+</section>

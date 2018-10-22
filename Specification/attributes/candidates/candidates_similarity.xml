@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="candidates_similarity">
+    <title>similarity</title>
+    
+    <para>Similarity - indicates the similarity level between the content of the  
+        <olink targetdoc="../elements/structural/source.xml" targetptr="source"><code>&lt;source></code></olink>
+        child of a
+        <olink targetdoc="../elements/structural/match.xml" targetptr="match"><code>&lt;match></code></olink>
+        element and the translatable text being matched.</para>
+    
+    <para><emphasis>Value description:</emphasis> a decimal number between 0.0 and 100.0.</para>
+        
+    <para><emphasis>Default value:</emphasis> undefined</para>
+    
+    <para><emphasis>Used in:</emphasis> <olink targetdoc="../elements/structural/match.xml" targetptr="match"><code>&lt;match></code></olink>.</para>
+    
+</section>
+

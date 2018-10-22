@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         <!--the document properties were transferred to "dockbook/dbgenent.mod"-->
+                         ]>
+<section id="metadata_module">
+    <title>Metadata Module</title>
+    <section>
+        <title>Introduction</title>
+        <para>The Metadata module provides a mechanism for storing custom metadata using elements that are part of the official XLIFF specification.</para>
+    </section>
+
+    <section>
+        <title>Module Namespace and Validation Artifacts</title>
+        <para>The namespace for the Metadata module is: <code>urn:oasis:names:tc:xliff:metadata:2.0</code></para>
+        <para>Schema and Schematron for this module are available at <ulink
+            url="&this-loc;/schemas/metadata.xsd"
+            >&this-loc;/schemas/metadata.xsd</ulink> and <ulink
+                url="&this-loc;/schemas/metadata.sch"
+                >&this-loc;/schemas/metadata.sch</ulink>.</para>
+    </section>
+    <section>
+        <title>Module Fragment Identification Prefix</title>
+        <para>The fragment identification prefix for the Metadata module is: <code>mda</code></para>
+    </section>
+
+    <section>
+        <title>Module Elements</title>
+        <para>The elements defined in the Metadata module are: <olink
+                targetdoc="../../elements/metadata/metadata.xml" targetptr="metadata"
+                    ><code>&lt;metadata></code></olink>, <olink
+                targetdoc="../../elements/metadata/metagroup.xml" targetptr="metagroup"
+                    ><code>&lt;metaGroup></code></olink>, and <olink
+                targetdoc="../../elements/metadata/meta.xml" targetptr="meta"
+                ><code>&lt;meta></code></olink>. </para>
+<section><!-- gen. 20140318 -->
+  <title>Tree Structure</title>
+  <para>Legend:</para>
+  <simplelist type="vert">
+    <member>+ = one or more</member>
+  </simplelist>
+  <programlisting format="linespecific">
+<olink targetdoc="../../elements/metadata/metadata.xml" targetptr="metadata"><code>&lt;metadata></code></olink>
+|
++---<olink targetdoc="../../elements/metadata/metaGroup.xml" targetptr="metagroup"><code>&lt;metaGroup></code></olink> +
+  |
+  +---At least one of (<olink targetdoc="../../elements/metadata/metaGroup.xml" targetptr="metagroup"><code>&lt;metaGroup></code></olink> OR <olink targetdoc="../../elements/metadata/meta.xml" targetptr="meta"><code>&lt;meta></code></olink>)
+      |
+      +---<olink targetdoc="../../elements/metadata/meta.xml" targetptr="meta"><code>&lt;meta></code></olink>
+
+
+  </programlisting>
+</section>
+        <xi:include href="../../elements/metadata/metadata.xml"/>
+        <xi:include href="../../elements/metadata/metagroup.xml"/>
+        <xi:include href="../../elements/metadata/meta.xml"/>
+    </section>
+
+    <section>
+        <title>Module Attributes</title>
+        <para>The attributes defined in the Metadata module are:
+            <olink targetdoc="../../attributes/meta_appliesto.xml" targetptr="meta_appliesto"><code>appliesTo</code></olink>,
+            <olink targetdoc="../../attributes/meta_category.xml" targetptr="meta_category"><code>category</code></olink>,
+            <olink targetdoc="../../attributes/meta_id.xml" targetptr="meta_id"><code>id</code></olink>, and
+            <olink targetdoc="../../attributes/meta_type.xml" targetptr="meta_type"><code>type</code></olink>.
+         </para>
+        <xi:include href="../../attributes/meta_appliesto.xml"/>
+        <xi:include href="../../attributes/meta_category.xml"/>
+        <xi:include href="../../attributes/meta_id.xml"/>
+        <xi:include href="../../attributes/meta_type.xml"/>
+
+    </section>
+
+
+
+</section>
+
+

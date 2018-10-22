@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="sm">
+  <title>sm</title>
+
+  <para>Start marker of an annotation where the spanning marker cannot be used for wellformedness
+    reasons.</para>
+
+  <para><emphasis>Contains:</emphasis></para>
+
+  <simplelist>
+    <member>This element is always empty.</member>
+  </simplelist>
+
+  <para><emphasis>Parents:</emphasis></para>
+
+  <simplelist>
+    <member><olink targetdoc="structural/source.xml"
+    targetptr="source"><code>&lt;source&gt;</code></olink>, <olink
+    targetdoc="structural/target.xml"
+    targetptr="target"><code>&lt;target&gt;</code></olink>, <olink
+    targetdoc="pc.xml" targetptr="pc"><code>&lt;pc&gt;</code></olink> and
+    <olink targetdoc="mrk.xml"
+    targetptr="mrk"><code>&lt;mrk&gt;</code></olink></member>
+  </simplelist>
+
+  <para><emphasis>Attributes:</emphasis></para>
+
+  <simplelist>
+    <member>- <olink targetdoc="../../attributes/id.xml"
+    targetptr="id"><code>id</code></olink>, <glossterm>required</glossterm></member>
+
+    <member>- <olink targetdoc="../../attributes/translate.xml"
+    targetptr="translate"><code>translate</code></olink>, <glossterm>optional</glossterm></member>
+
+    <member>- <olink targetdoc="../../attributes/type.xml"
+    targetptr="type"><code>type</code></olink>, <glossterm>optional</glossterm></member>
+
+    <member>- <olink targetdoc="../../attributes/ref.xml"
+    targetptr="ref"><code>ref</code></olink>, <glossterm>optional</glossterm></member>
+
+    <member>- <olink targetdoc="../../attributes/value.xml"
+    targetptr="value"><code>value</code></olink>, <glossterm>optional</glossterm></member>
+    
+    
+    <member>- attributes from other namespaces, <glossterm>optional</glossterm></member>
+
+  </simplelist>
+  
+  <itemizedlist>
+    <title>Constraints</title>
+    <listitem>
+      <para>The <olink targetdoc="../../xliff21.xml" targetptr="xml_namespace">[XML
+          namespace]</olink>
+        <glossterm>must not</glossterm> be used at this extension point.</para>
+    </listitem>
+    <listitem>
+      <para>The following <firstterm>XLIFF Module</firstterm> attributes are explicitly allowed by
+        the wildcard <code>other</code>:</para>
+      <simplelist>
+        <member>- attributes from the namespace
+          <code>urn:oasis:names:tc:xliff:fs:2.0</code>, <glossterm>optional</glossterm>,
+          provided that the Constraints specified in the <olink
+            targetdoc="modules/fs/fs.xml" targetptr="fs-mod">Format Style Module</olink>
+          are met.</member>
+        <member>- attributes from the namespace
+          <code>urn:oasis:names:tc:xliff:sizerestriction:2.0</code>,
+          <glossterm>optional</glossterm>, provided that the Constraints specified in
+          the <olink targetdoc="modules/size_restriction/specification.xml"
+            targetptr="size_restriction_module">Size and Length Restriction
+            Module</olink> are met.</member>
+        <member>- attributes from the namespace
+          <code>http://www.w3.org/2005/11/its</code>,
+          <glossterm>optional</glossterm>, provided that the Constraints specified in
+          the <olink targetdoc="modules/itsm/specification.xml" targetptr="ITS-module">ITS
+            Module</olink> are met.</member>
+        <member>- attributes from the namespace <code>urn:oasis:names:tc:xliff:itsm:2.1</code>,
+            <glossterm>optional</glossterm>, provided that the Constraints specified in the <olink
+            targetdoc="../../modules/itsm/specification.xml" targetptr="ITS-module">ITS
+            Module</olink> are met.</member>
+      </simplelist>
+    </listitem>
+    
+    
+  </itemizedlist>
+
+  <para>See the <olink targetdoc="../../inline/inline.xml"
+  targetptr="annotations">Annotations section</olink> for more details and
+  examples on how to use the <olink targetdoc="sm.xml"
+  targetptr="sm"><code>&lt;sm&gt;</code></olink> element.</para>
+</section>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="candidates_origin">
+    <title>origin</title>
+    
+    <para>
+		Match origin - indicates the tool, system or repository that generated a <olink targetdoc="../elements/structural/match.xml" targetptr="match"><code>&lt;match></code></olink>
+        element. This is a free text short informative
+description. For example, 'Microsoft Translator Hub' or 'tm-client123-v456', or 'MSTH
+(52217d25-d9e7-54a2-af44-3d4e4341d112_healthc).'
+		
+		</para>
+    
+    <para><emphasis>Value description:</emphasis> Text.</para>
+        
+    <para><emphasis>Default value:</emphasis> undefined</para>
+    
+    <para><emphasis>Used in:</emphasis> <olink targetdoc="../elements/candidates/match.xml" targetptr="match"><code>&lt;match></code></olink>.</para>
+    
+</section>
+

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="itsm_provenanceRecordsRef">
+    <title>provenanceRecordsRef</title>
+    
+    <para>Provenance Records Standoff Reference - the <code>provenanceRecordsRef</code> attribute
+        is the <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+        defined <code>provenanceRecordsRef</code> attribute.</para>
+    <para>This attribute references the collection of Provenance Records that pertain to the content
+        span or structural element content from where the reference is declared.</para>
+    
+    <para><emphasis>Value description:</emphasis> IRI</para>
+        
+    <para><emphasis>Default value:</emphasis> undefined.</para>
+    
+    
+    <para><emphasis>Used in:</emphasis>
+        <olink targetdoc="../../elements/structural/file.xml" targetptr="file"><code>&lt;file></code></olink>, <olink targetdoc="../../elements/structural/group.xml" targetptr="group"><code>&lt;goup></code></olink>, <olink targetdoc="../../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink>, 
+        <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
+            ><code>&lt;mrk></code></olink>,
+        <olink targetdoc="../../elements/inline/sm.xml"
+            targetptr="sm"><code>&lt;sm></code></olink>, <olink
+                targetdoc="../../elements/candidates/match.xml" targetptr="match"
+                ><code>&lt;mtc:match></code></olink>, and <olink
+                    targetdoc="../../elements/itms/revision.xml" targetptr="revision"
+                    ><code>&lt;ctr:revision></code></olink>.
+        
+    </para>
+    
+    <para>See the <olink targetdoc="../../modules/itsm/Provenance.xml" targetptr="provenanceAnnotation"
+            >ITS Localization Issue Annotation</olink> for the normative usage description of this
+        attribute inline. </para>
+    <itemizedlist>
+        <title>Constraints</title>
+        <listitem>
+            <para>Multiple <link linkend="itsm_provenanceRecordsRef">provenanceRecordsRef</link>
+                attributes <glossterm>may</glossterm> reference the same <olink targetdoc="../../elements/itsm/itsm_provenanceRecords.xml"
+                    targetptr="itsm_provenanceRecords"><code>&lt;provenanceRecords></code></olink>
+                element.</para>
+        </listitem>
+        <listitem>
+            <para>In case the <link linkend="itsm_provenanceRecordsRef">provenanceRecordsRef</link>
+                attribute is used on an <olink targetdoc="../../elements/inline/mrk.xml"
+                    targetptr="mrk"><code>&lt;mrk></code></olink> or <olink
+                    targetdoc="../../elements/inline/sm.xml" targetptr="sm"
+                    ><code>&lt;sm></code></olink> element, <itemizedlist>
+                    <listitem>
+                        <para>The value of the <link linkend="itsm_provenanceRecordsRef"
+                                >provenanceRecordsRef</link> attribute <glossterm>must</glossterm>
+                            be an IRI referencing a <olink
+                                targetdoc="../../elements/itsm/itsm_provenanceRecords.xml"
+                                targetptr="itsm_provenanceRecords"
+                                    ><code>&lt;provenanceRecords></code></olink> element within the
+                            innermost enclosing <olink
+                                targetdoc="../../elements/structural/unit.xml" targetptr="unit"
+                                    ><code>&lt;unit></code></olink>, <olink
+                                targetdoc="../../elements/candidates/match.xml" targetptr="match"
+                                    ><code>&lt;mtc:match></code></olink>, or <olink
+                                targetdoc="../../elements/itms/revision.xml" targetptr="revision"
+                                    ><code>&lt;ctr:revision></code></olink>element. </para>
+                    </listitem>
+                </itemizedlist></para>
+            
+        </listitem>
+        
+        <listitem>
+            <para>In case the <link linkend="itsm_provenanceRecordsRef">provenanceRecordsRef</link>
+                attribute is used on a <olink targetdoc="../../elements/structural/file.xml"
+                    targetptr="file"><code>&lt;file></code></olink>, <olink
+                    targetdoc="../../elements/structural/group.xml" targetptr="group"
+                        ><code>&lt;goup></code></olink>, or <olink
+                    targetdoc="../../elements/structural/unit.xml" targetptr="unit"
+                        ><code>&lt;unit></code></olink> element, <itemizedlist>
+                    <listitem>
+                        <para>The value of the <link linkend="itsm_provenanceRecordsRef"
+                                >provenanceRecordsRef</link> attribute <glossterm>must</glossterm>
+                            be an IRI referencing a <olink
+                                targetdoc="../../elements/itsm/itsm_provenanceRecords.xml"
+                                targetptr="itsm_provenanceRecords"
+                                    ><code>&lt;provenanceRecords></code></olink> element within the
+                            same element or its ancestor element. </para>
+                    </listitem>
+                </itemizedlist></para>
+            
+        </listitem>
+        
+    </itemizedlist>
+    <itemizedlist>
+        <title>Processing Requirements</title>
+        <listitem>
+            <para><firstterm>Modifiers</firstterm> removing the last <link
+                    linkend="itsm_provenanceRecordsRef"><code>provenanceRecordsRef</code></link>
+                attribute referencing a <olink targetptr="itsm_provenanceRecords"
+                    targetdoc="../../elements/itsm/itsm_provenanceRecords.xml"
+                        ><code>provenanceRecords</code></olink> element <glossterm>must</glossterm>
+                delete that <olink targetptr="itsm_provenanceRecords"
+                    targetdoc="../../elements/itsm/itsm_provenanceRecords.xml"
+                        ><code>provenanceRecords</code></olink> element.</para>
+        </listitem>
+        
+    </itemizedlist>
+</section>

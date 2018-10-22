@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="Allowed_Characters">
+  <title>Allowed Characters</title>
+
+  <para>Used to specify the characters that are permitted in a given piece of content. See <olink targetdoc="../../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+    <ulink url="https://www.w3.org/TR/its20/#allowedchars">Allowed Characters</ulink> for further
+    details.</para>
+  <itemizedlist>
+    <title>Processing Requirements</title>
+    <listitem><para><firstterm>Writers</firstterm>
+        <glossterm>must</glossterm> use the <olink targetdoc="specification"
+          targetptr="allowedCharactersAnnotation">ITS Allowed Characters Annotation</olink> to express the
+          <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+        <ulink url="http://www.w3.org/TR/its20/#allowedchars">Allowed Characters</ulink> data category in
+          <firstterm>XLIFF Documents</firstterm>.</para>
+      <para>For both structural and inline elements, use <code><olink
+            targetdoc="../../elements/inline/mrk.xml" targetptr="mrk">&lt;mrk></olink></code> or an
+            <code><olink targetdoc="../../elements/inline/sm.xml" targetptr="sm"
+          >&lt;sm/></olink></code> / <code><olink targetdoc="../../elements/inline/em.xml"
+            targetptr="em">&lt;em/></olink></code> pair with the following attribute: <olink
+          targetdoc="../../attributes/itsm/itsm_allowedCharacters.xml"
+          targetptr="itsm_allowedCharacters"><code>its:allowedCharacters</code></olink>.</para>
+      <para>See the <link linkend="allowedCharactersAnnotation">ITS Allowed Characters Annotation</link> for
+        the normative usage description of this attribute and the following sections for further
+        details on structural and inline elements.</para></listitem>
+
+  </itemizedlist>
+
+
+  <section id="Allowed_Characters_Structural">
+    <title>Structural Elements</title>
+    <para>If a structural element of the original document has a Allowed Characters annotation, it
+      is recommended to represent that annotation using a <code>&lt;mrk></code> element that
+      encloses the whole content of the <code>&lt;source></code> element. </para>
+
+
+    <example>
+      <title>Extraction of Allowed Characters at structural levels</title>
+
+      <para>Original: </para>
+
+      <programlisting>
+...
+&lt;p its-allowed-characters="[a-ZA-Z]">Text&lt;/p>
+...
+</programlisting>
+
+      <para>Extraction:</para>
+
+
+      <programlisting>
+...
+&lt;unit id="1">
+  &lt;segment>
+    &lt;source>&lt;mrk id="m1" type="its:generic"
+        its:allowedCharacters="[a-ZA-Z]">Text&lt;/mrk>&lt;/source>
+  &lt;/segment>
+&lt;/unit>
+...
+</programlisting>
+    </example>
+
+
+
+  </section>
+  <section id="Allowed_Characters_Inline">
+    <title>Inline Elements</title>
+    <para>Use the ITS attribute on the <code>&lt;mrk></code> element:</para>
+
+    <para>Original:</para>
+    <programlisting>
+...
+&lt;p>user name: &lt;span its-allowed-characters='[a-ZA-Z]'>johnDoe&lt;/span>&lt;/p>
+...
+</programlisting>
+    <para>Extraction:</para>
+    <programlisting>
+...
+&lt;unit id="1">
+  &lt;segment>
+    &lt;source>user name: &lt;mrk id="m1" type="its:generic"
+        its:allowedCharacters="[a-ZA-Z]">johnDoe&lt;/mrk>.&lt;/source>
+  &lt;/segment>
+&lt;/unit>
+...
+</programlisting>
+  </section>
+  <section id="allowedCharactersAnnotation">
+    <title>ITS Allowed Characters Annotation</title>
+    <para>This is used to fully map to and from the <olink targetdoc="../xliff21.xml"
+      targetptr="ITS20">[ITS]</olink>
+      <ulink url="https://www.w3.org/TR/its20/#allowedchars">Alllowed Characters</ulink> data
+      category.</para>
+    <para>Usage:</para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>The <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> defined <olink
+            targetdoc="../../attributes/itsm_allowedCharacters.xml"
+            targetptr="itsm_allowedCharacters"><code>its:allowedCharacters</code></olink> attribute
+          is <glossterm>required</glossterm>.</para>
+      </listitem>
+      <listitem>
+        <para>The <olink targetdoc="../../attributes/type.xml" targetptr="type"
+          ><code>type</code></olink> attribute is <glossterm>optional</glossterm> and set to
+          <code>its:generic</code>.</para>
+
+      </listitem>
+      <listitem>
+        <para>The <olink targetdoc="../../attributes/translate.xml" targetptr="translate"
+          ><code>translate</code></olink> attribute is <glossterm>optional</glossterm>.</para>
+      </listitem>
+    </itemizedlist>
+
+  </section>
+
+</section>

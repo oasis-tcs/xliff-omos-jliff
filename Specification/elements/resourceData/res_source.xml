@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="res_source">
+    <title>source</title>
+  <para>References the actual resource data that is either intended for
+    <firstterm>Modification</firstterm>, or to be used as contextual reference during
+    <firstterm>Translation</firstterm>.</para>
+    <para><emphasis>Contains:</emphasis></para>
+    <para>Either</para>
+    <simplelist>
+        <member>- elements from other namespaces</member>
+    </simplelist>
+    <para>or</para>
+    <simplelist>
+        <member>- is empty.</member>
+    </simplelist>
+
+    <para><emphasis>Attributes:</emphasis></para>
+    <simplelist>
+      <member>- <olink targetdoc="../../attributes/resourceData/res_href.xml" targetptr="res_href"><code>href</code></olink>, <glossterm>optional</glossterm></member>
+      <member>- <olink targetdoc="../../attributes/resourceData/res_xml_lang.xml" targetptr="res_xml_lang"><code>xml:lang</code></olink>, <glossterm>optional</glossterm></member>
+        <member>- attributes from other namespaces, <glossterm>optional</glossterm></member>
+    </simplelist>
+
+  <itemizedlist>
+    <title>Constraints</title>
+
+    <listitem>
+
+      <para>The attribute <olink targetdoc="../../attributes/resourceData/res_href.xml"
+          targetptr="res_href"><code>href</code></olink> is <glossterm>required</glossterm> if and
+        only if <olink targetdoc="../../elements/resourceData/res_source.xml" targetptr="res_source"
+            ><code>&lt;source></code></olink> is empty.</para>
+    </listitem>
+
+    <listitem>
+      <para>When the <glossterm>optional</glossterm> <olink targetdoc="../../attributes/resourceData/res_xml_lang.xml" targetptr="res_xml_lang"><code>xml:lang</code></olink>
+        attribute is present, its value <glossterm>must</glossterm> be equal to the value of the <olink targetdoc="../../attributes/srcLang.xml" targetptr="srcLang"><code>srcLang</code></olink> attribute
+        of the enclosing <olink targetdoc="../../elements/structural/xliff.xml" targetptr="xliff"><code>&lt;xliff></code></olink> element.</para>
+    </listitem>
+  </itemizedlist>
+
+
+  <itemizedlist>
+    <title>Processing Requirements</title>
+
+
+    <listitem>
+      <para>When the <olink targetdoc="../../attributes/resourceData/res_context.xml" targetptr="res_context"><code>context</code></olink>
+        attribute of <olink targetdoc="../../elements/resourceData/resourceItem.xml" targetptr="res_resourceItem"><code>&lt;resourceItem></code></olink> is set to <code>yes</code>:</para>
+      <itemizedlist>
+        <listitem>
+          <para><firstterm>Modifiers</firstterm> <glossterm>may</glossterm> create
+            <olink targetdoc="../../elements/resourceData/res_source.xml" targetptr="res_source"><code>&lt;source></code></olink>
+            if not already present.</para>
+        </listitem>
+        <listitem>
+          <para><firstterm>Modifiers</firstterm> <glossterm>should not</glossterm> change
+            <olink targetdoc="../../elements/resourceData/res_source.xml" targetptr="res_source"><code>&lt;source></code></olink>.</para>
+        </listitem>
+        <listitem>
+          <para><firstterm>Modifiers</firstterm> <glossterm>may</glossterm> remove
+            <olink targetdoc="../../elements/resourceData/res_source.xml" targetptr="res_source"><code>&lt;source></code></olink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>When the <olink targetdoc="../../attributes/resourceData/res_context.xml" targetptr="res_context"><code>context</code></olink>
+        attribute of <olink targetdoc="../../elements/resourceData/resourceItem.xml" targetptr="res_resourceItem"><code>&lt;resourceItem></code></olink>
+        is set to <code>no</code>:</para>
+      <itemizedlist>
+        <listitem>
+          <para><olink targetdoc="../../elements/resourceData/res_source.xml" targetptr="res_source"><code>&lt;source></code></olink>
+            <glossterm>must</glossterm> be present.</para>
+        </listitem>
+        <listitem>
+          <para><firstterm>Modifiers</firstterm> <glossterm>must not</glossterm> change
+            <olink targetdoc="../../elements/resourceData/res_source.xml" targetptr="res_source"><code>&lt;source></code></olink>.</para>
+        </listitem>
+        <listitem>
+          <para><firstterm>Modifiers</firstterm> <glossterm>must not</glossterm> remove
+            <olink targetdoc="../../elements/resourceData/res_source.xml" targetptr="res_source"><code>&lt;source></code></olink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+  </itemizedlist>
+</section>

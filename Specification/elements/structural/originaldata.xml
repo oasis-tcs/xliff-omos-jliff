@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="originaldata">
+  <title>originalData</title>
+
+  <para>Unit-level collection of original data for the inline codes.</para>
+
+  <para><emphasis>Contains:</emphasis></para>
+
+  <simplelist>
+    <member>- One or more <olink targetdoc="data.xml"
+    targetptr="data"><code>&lt;data&gt;</code></olink> elements</member>
+  </simplelist>
+
+
+</section>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+<!ENTITY version "2.1">
+]>
+<section id="ITSInCore">
+  <title>ITS data categories available through XLIFF Core and other Modules</title>
+
+  <para>The following <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> data
+    categories are fully available via <firstterm>XLIFF Core</firstterm>  and other XLIFF
+    modules:</para>
+
+  <orderedlist>
+    <!-- Moved Localization Note to Partial Overlap in response to https://issues.oasis-open.org/browse/XLIFF-5
+    
+    <listitem>
+      <para><olink targetdoc="Localization_Note.xml" targetptr="Localization_Note">Localization Note</olink></para>
+    </listitem>
+    -->   
+    
+    <listitem>
+      <para><olink targetdoc="Translate.xml" targetptr="Translate">Translate</olink> and</para>
+    </listitem>
+    
+    <listitem>
+      <para><olink targetdoc="External_Resource.xml" targetptr="External_Resource">External Resource</olink>.</para>
+    </listitem>
+        
+    <listitem>
+      <para><olink targetdoc="Preserve_Space.xml" targetptr="Preserve_Space">Preserve Space</olink></para>
+    </listitem>
+    
+    
+        
+  </orderedlist>
+  
+  <xi:include href="Translate.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>  
+  <xi:include href="External_Resource.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  <xi:include href="Preserve_Space.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    
+  
+</section>

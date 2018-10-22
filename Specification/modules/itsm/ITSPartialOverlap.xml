@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+<!ENTITY version "2.1">
+]>
+<section id="ITSPartialOverlap">
+  <title>ITS data categories that have a partial overlap with XLIFF features</title>
+
+  <para>The following <olink
+    targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> data cetegories are partially covered with <firstterm>XLIFF Core</firstterm> or <firstterm>Modules</firstterm> other than
+    the <olink targetdoc="../modules/its/specification.xml" targetptr="ITS-module">ITS Module</olink>:</para>
+
+  <orderedlist>
+    <!-- Localization Note moved here in response to https://issues.oasis-open.org/browse/XLIFF-5 -->
+    <listitem>
+      <para><olink targetdoc="Localization_Note.xml" targetptr="Localization_Note">Localization
+          Note</olink>,</para>
+    </listitem>
+    
+    <listitem>
+      <para><olink targetdoc="Terminology.xml" targetptr="Terminology_datacat">Terminology</olink>,</para>
+    </listitem>
+    
+    <listitem>
+      <para><olink targetdoc="Language_Information.xml" targetptr="Language_Information">Language Information</olink>,</para>
+    </listitem>
+    
+    <listitem>
+      <para><olink targetdoc="Provenance.xml" targetptr="Provenance">Provenance</olink>,</para>
+    </listitem>
+    
+    <listitem>
+      <para><olink targetdoc="MT_Confidence.xml" targetptr="MT_Confidence">MT Confidence</olink>,
+        and</para>
+    </listitem>
+    
+    
+    <listitem>
+      <para><link linkend="Storage_Size">Storage Size</link>.</para>
+    </listitem>
+    
+    
+    
+  </orderedlist>
+  
+  
+  <!-- moved to fully supported -pending consenus <xi:include href="Localization_Note.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    -->
+  <xi:include href="Localization_Note.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  <xi:include href="Terminology.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  <xi:include href="Language_Information.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  <xi:include href="Provenance.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  <xi:include href="MT_Confidence.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  
+  
+  <section id="Storage_Size">
+    <title>Storage Size</title>
+    <para>Mapping for this metadata category has not been specified in XLIFF Version &version;</para>
+    <itemizedlist>
+      <title>Processing Requirements</title>
+      <listitem>
+        <para>The <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+          <ulink url="https://www.w3.org/TR/its20/#storagesize">Storage Size data
+            category</ulink>
+          <glossterm>may</glossterm> be expressed as an Extended profile within the <olink
+            targetdoc="../size_restriction/specification.xml" targetptr="size_restriction_module"
+            >Size and Length Restriction Module</olink>. No other parts of XLIFF
+          <glossterm>must</glossterm> be extended to support this data category.</para>
+      </listitem>
+    </itemizedlist>
+    <note><para>An <firstterm>XLIFF-defined</firstterm> common profile could be made part of this module in a future Version of
+      XLIFF.</para></note>
+  </section>  
+  
+  
+  
+  
+  
+</section>

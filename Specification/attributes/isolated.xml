@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="isolated">
+  <title>isolated</title>
+
+  <para>Orphan code flag - indicates if the start or end marker of a spanning inline code is not in
+    the same <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"
+        ><code>&lt;unit&gt;</code></olink> as its corresponding end or start code.</para>
+
+  <para><emphasis>Value description:</emphasis>
+    <code>yes</code> if this start or end code is not in the same <olink
+      targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit&gt;</code></olink>
+    as its corresponding end or start code, <code>no</code> if both codes are in the same <olink
+      targetdoc="../elements/structural/unit.xml" targetptr="unit"
+    ><code>&lt;unit&gt;</code></olink>.</para>
+
+  <para><emphasis>Default value:</emphasis> <code>no</code>.</para>
+
+  <para><emphasis>Used in:</emphasis> <olink
+  targetdoc="../elements/inline/sc.xml"
+  targetptr="sc"><code>&lt;sc&gt;</code></olink>, <olink
+  targetdoc="../elements/inline/ec.xml"
+  targetptr="ec"><code>&lt;ec&gt;</code></olink>.</para>
+
+  <para><emphasis>Example:</emphasis></para>
+
+  <programlisting>
+<!--
+&lt;unit id="1"&gt;
+  &lt;segment&gt;
+    &lt;source&gt;&lt;pc id="1"&gt;Warning: File not found.&lt;/pc&gt;&lt;/source&gt;
+  &lt;/segment&gt;
+  &lt;mtc:matches&gt;
+    &lt;mtc:match&gt;
+      &lt;source&gt;&lt;sc id="1" isolated="yes"/&gt;Warning:&lt;/source&gt;
+      &lt;target&gt;&lt;sc id="1" isolated="yes"/&gt;Attention :&lt;/target&gt;
+    &lt;/mtc:match&gt;
+  &lt;/mtc:matches&gt;
+&lt;/unit&gt;
+-->
+&lt;file id="f2" xmlns:abc="urn:abc">
+  &lt;unit id="1">
+    &lt;mtc:matches>
+      &lt;mtc:match id="tc01" ref="seg2">
+        &lt;source>&lt;sc id="1" isolated="yes"/>Warning:&lt;/source>
+        &lt;target>&lt;sc id="1" isolated="yes"/>Attention :&lt;/target>
+      &lt;/mtc:match>
+    &lt;/mtc:matches>
+    &lt;segment id="seg2">
+      &lt;source>&lt;pc id="1">Warning: File not found.&lt;/pc>&lt;/source>
+    &lt;/segment>
+  &lt;/unit>
+&lt;/file>
+</programlisting>
+
+  <para>In the example above the <olink targetdoc="../elements/inline/sc.xml"
+  targetptr="sc"><code>&lt;sc&gt;</code></olink> elements have their <olink
+  targetdoc="isolated.xml" targetptr="isolated"><code>isolated</code></olink>
+  attribute set to <code>yes</code> because they do not have their
+  corresponding <olink targetdoc="../elements/inline/ec.xml"
+  targetptr="ec"><code>&lt;ec&gt;</code></olink> elements.</para>
+</section>

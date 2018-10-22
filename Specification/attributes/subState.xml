@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="substate">
+  <title>subState</title>
+
+  <para>subState - indicates a user-defined status for the <olink
+      targetdoc="../elements/structural/segment.xml" targetptr="segment"
+        ><code>&lt;segment&gt;</code></olink> element.</para>
+
+  <para><emphasis>Value description:</emphasis></para>
+
+  <para>The value is composed of a prefix and a sub-value separated by a
+  character <code>:</code> (U+003A).</para>
+
+  <para>The prefix is a string uniquely identifying a collection of values for
+  a specific authority. The sub-value is any string value defined by an
+  authority.</para>
+
+  <para>The prefix <code>xlf</code> is reserved for this specification.</para>
+
+  <para>Other prefixes and sub-values <glossterm>may</glossterm> be defined by the users.</para>
+
+  <para><emphasis>Default value:</emphasis> undefined</para>
+
+  <para><emphasis>Used in:</emphasis> <olink
+  targetdoc="../elements/structural/segment.xml"
+  targetptr="segment"><code>&lt;segment&gt;</code></olink></para>
+
+  <itemizedlist>
+    <title>Constraints</title>
+
+    <listitem>
+      <para>If the attribute <olink targetdoc="subState.xml" targetptr="substate"
+            ><code>subState</code></olink> is used, the attribute <olink targetdoc="state.xml"
+          targetptr="state"><code>state</code></olink>
+        <glossterm>must</glossterm> be explicitly set.</para>
+    </listitem>
+    </itemizedlist>
+    <itemizedlist>
+      <title>Processing Requirements</title>
+      
+  
+    <listitem>
+      <para><firstterm>Writers</firstterm> updating the attribute <olink targetdoc="state.xml"
+        targetptr="state"><code>state</code></olink> <glossterm>must</glossterm> also update or delete <link  linkend="substate"><code>subState</code></link>.</para>
+      </listitem>
+  </itemizedlist>
+</section>

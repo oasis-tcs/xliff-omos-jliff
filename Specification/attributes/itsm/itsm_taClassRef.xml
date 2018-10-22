@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="itsm_taClassRef">
+    <title>taClassRef</title>
+    
+    <para>Text Analysis Class Reference - the <code>taClassRef</code> attribute is the <olink
+        targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> defined <code>taClassRef</code> attribute.</para>
+    
+    
+    <para><emphasis>Value description:</emphasis> IRI</para>
+    <para>The IRI is supposed to resolve as human or machine readable <ulink url="http://www.w3.org/TR/its20/#textAnalysis-info-pieces">Entity type / concept class</ulink> information.</para>
+    
+    <para><emphasis>Default value:</emphasis>: undefined</para>
+    
+    
+    
+    <para><emphasis>Used in:</emphasis>
+        <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
+            ><code>&lt;mrk></code></olink>, and
+        <olink targetdoc="../../elements/inline/sm.xml"
+            targetptr="sm"><code>&lt;sm></code></olink>.</para>
+    
+    <para>See the <olink targetdoc="../../modules/itsm/Text_Analysis.xml" targetptr="taAnnotation">ITS Text Analysis Annotation</olink> for the normative usage description of this attribute. Advanced Constraints follow from that normative usage description.</para>
+    
+</section>

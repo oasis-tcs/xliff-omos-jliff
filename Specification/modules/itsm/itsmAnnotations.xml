@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="itsmAnnotations">
+    <title>ITS Mapping Annotations</title>
+    <para>This lists all custom Annotations that are needed for <olink targetdoc="../xliff21.xml"
+      targetptr="ITS20">[ITS]</olink> support in <firstterm>XLIFF Documents</firstterm> but are not
+    available through <firstterm>XLIFF Core</firstterm>
+    <olink targetdoc="../inline/inline.xml" targetptr="annotations">Annotations</olink> or other
+    module specific annotations. Use of <firstterm>XLIFF Core</firstterm>
+    <olink targetdoc="../inline/inline.xml" targetptr="annotations">Annotations</olink> for the ITS
+    Mapping purposes is described in sections <olink targetdoc="ITSInCore.xml"
+      targetptr="ITSInCore">ITS data categories available through XLIFF Core</olink> and <olink
+      targetptr="ITSPartialOverlap" targetdoc="ITSPartialOverlap.xml">ITS data categories that have a
+      partial overlap with XLIFF features</olink> sections of this ITS Module.</para>
+  <para>The following is the summary of internal links to all relevant Annotations:</para>
+    
+    
+    
+    <itemizedlist>
+      <listitem>
+        <para>Generic Annotation</para>
+        <itemizedlist>
+          <listitem><para><olink targetdoc="specification.xml" targetptr="toolsAnnotation">ITS Tools Annotation</olink></para></listitem>
+        </itemizedlist>
+      </listitem>
+      <listitem>
+        <para>Annotations for Data Categories fully defined in the ITS Module</para>
+        <itemizedlist>
+          <listitem><para><olink targetdoc="Allowed_Characters.xml" targetptr="Allowed_Characters">ITS Allowed Characters</olink></para></listitem>
+          <listitem><para><olink targetdoc="Domain.xml" targetptr="domainsAnnotation">ITS Domain Annotation</olink></para></listitem>
+          
+          <listitem><para><olink targetdoc="Localization_Quality_Issue.xml" targetptr="lqiAnnotation">ITS Localization Quality Issue Annotation</olink></para></listitem>
+          <listitem><para><olink targetdoc="Localization_Quality_Rating.xml" targetptr="lqrAnnotation">ITS Localization Quality Rating Annotation</olink></para></listitem>
+          <listitem><para><olink targetdoc="Text_Analysis.xml" targetptr="taAnnotation">ITS Text Analysis Annotation</olink></para></listitem>
+        </itemizedlist>
+      </listitem>
+      <listitem>
+        <para>Annotations for Data Categories partially defined in the ITS Module</para>
+        <itemizedlist>
+          
+          <listitem><para><olink targetdoc="Language_Information.xml" targetptr="langAnnotation">ITS Language Information Annotation</olink></para></listitem>
+          <listitem><para><olink targetdoc="Terminology.xml" targetptr="nonTermAnnotation">ITS Terminology Annotation</olink></para></listitem>
+        </itemizedlist>
+      </listitem>
+      
+      
+      
+    <!--  The TC agreed in January 2015 not to have a specific annotation or attribute for handling whitespace inline
+    <section id="spaceAnnotation">
+      <title>ITS Preserve Space Annotation</title>
+      <para>This is used to fully map to and from the <olink targetdoc="../xliff21.xml"
+          targetptr="ITS20">[ITS]</olink>
+        <ulink url="http://www.w3.org/TR/its20/#terminology">Preserve Space</ulink> data category,
+        including full inline support that cannot be provided via the <firstterm>XLIFF
+          Core</firstterm>. </para>
+      <para>Usage:</para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>The <olink targetdoc="../../attributes/id.xml" targetptr="id"
+            ><code>id</code></olink> attribute is <glossterm>required</glossterm>.</para>
+        </listitem>
+        <listitem>
+          <para>The <olink targetdoc="../../attributes/itsm/itsm_space.xml" targetptr="itsm_space"
+            ><code>its:space</code></olink> attribute is <glossterm>required</glossterm>.</para>
+        </listitem>
+        
+        <listitem>
+          <para>The <olink targetdoc="../../attributes/type.xml" targetptr="type"
+              ><code>type</code></olink> attribute is <glossterm>optional</glossterm> and set to
+<code>its:generic</code>.</para>
+          
+        </listitem>
+        
+        
+        <listitem>
+          <para>The <olink targetdoc="../../attributes/translate.xml" targetptr="translate"
+            ><code>translate</code></olink> attribute is <glossterm>optional</glossterm>.</para>
+        </listitem>
+      </itemizedlist>
+      
+    </section>-->
+      
+    </itemizedlist>
+    
+    
+    
+ 
+  
+  
+  
+  
+  
+      
+  </section>
+ 
