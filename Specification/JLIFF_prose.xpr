@@ -19,5 +19,6 @@
             <file name="jliff.xml"/>
         </folder>
         <folder path="."/>
+        <folder path="../../xliff-omos-om/proseSpec/"/>
     </projectTree>
 </project>

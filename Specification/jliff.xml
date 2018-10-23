@@ -84,7 +84,7 @@
     <legalnotice role="additional">
       <title>Additional artifacts</title>
 
-<!-- probably will have references to UML diagrams
+
       <para>This prose specification is one component of a Work Product that also includes:</para>
 
       <itemizedlist spacing="compact">
@@ -96,8 +96,8 @@
           
       
         </listitem>
-      </itemizedlist>-->
-      <para>NONE AT THE MOMENT</para>
+      </itemizedlist>
+      
       </legalnotice>
 
     <legalnotice role="related">
@@ -118,12 +118,15 @@
       <itemizedlist spacing="compact">
         
         <listitem>
-          <para>[This will contain the XLIFF OM spec reference]</para>
+          <para><emphasis>XLIFF 2 Object Model Version 1.0.</emphasis> Edited by David Filip. XX Month 2018. OASIS Standard.
+            <ulink
+              url="http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html"
+              >http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html</ulink></para>
         </listitem>
         
         <listitem>
           <para><emphasis>XLIFF Version 2.1.</emphasis> Edited by David Filip, Tom Comerford,
-            Soroush Saadatfar, Felix Sasaki, and Yves Savourel. XX Month 2018. OASIS Standard.
+            Soroush Saadatfar, Felix Sasaki, and Yves Savourel. 13 February 2018. OASIS Standard.
               <ulink
               url="http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html"
               >http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html</ulink></para>
@@ -142,13 +145,13 @@
     </legalnotice>
 
     <legalnotice role="namespaces">
-      <title>Declared Namespaces</title>
+      <title>Normatively Used Namespaces</title>
 
-<para>
-  This specification doesn't declare any namespaces. However, it provides JSON specific methods to represent objects from the following namespaces: 
-</para>
+<para> This specification doesn't declare any namespaces. However, it provides JSON specific methods
+        to represent objects from the following namespaces: </para>
 
       <itemizedlist spacing="compact">
+        <title>Namespaces used normatively in both <olink targetptr="XLIFF21">[XLIFF 2.1]</olink> and <olink targetptr="XLIFF20">[XLIFF 2.0]</olink>:</title>
         <listitem>
           <para>urn:oasis:names:tc:xliff:document:&bschversion;</para>
         </listitem>
@@ -169,43 +172,49 @@
         <listitem>
           <para>urn:oasis:names:tc:xliff:resourcedata:&bschversion;</para>
         </listitem>
-<!-- No CTR namestace given in XLIFF 2.1 as per resolution to https://issues.oasis-open.org/browse/XLIFF-32
-        <listitem>
-          <para>urn:oasis:names:tc:xliff:changetracking:&cschversion;</para>
-        </listitem>
--->
-
-        <listitem>
+       <listitem>
           <para>urn:oasis:names:tc:xliff:sizerestriction:&bschversion;</para>
         </listitem>
 
         <listitem>
           <para>urn:oasis:names:tc:xliff:validation:&bschversion;</para>
         </listitem>
+      </itemizedlist>
         
-        <listitem>
+        <itemizedlist>
+          <title>Namespaces used normatively only in <olink targetptr="XLIFF21">[XLIFF 2.1]</olink>:</title>
+      <listitem>
           <para>https://www.w3.org/2005/11/its/</para>
         </listitem>
         <listitem>
           <para>urn:oasis:names:tc:xliff:itsm:&cschversion;</para>
         </listitem>
-       
+          
+        </itemizedlist>
+
+<itemizedlist>
+  <title>Namespaces used normatively only in <olink targetptr="XLIFF20">[XLIFF 2.0]</olink>:</title>
+      <listitem>
+          <para>urn:oasis:names:tc:xliff:changetracking:&bschversion;</para>
+        </listitem>
+        
+
       </itemizedlist>
     </legalnotice>
 
     <abstract>
-      <para>This document defines version &version; of JLIFF,  the JSON Localization Interchange
-        Fragment Format based on the XLIFF 2 Object Model that has been in turn based on the XLIFF 2
+      <para>This document defines version &version; of JLIFF, the JSON Localization Interchange
+        Fragment Format, based on the XLIFF 2 Object Model that has been in turn based on the XLIFF 2
         Family of Standards. The purpose of JLIFF is to provide standard JSON serialization methods
         for all XLIFF OM objects, their relationships, and data models, so that Localization tools
         can exchange translation and localization task data in an interoperable way.</para>
-      <para>Same as JSON, JLIFF concentrates on real time exchange scenarios. Thanks to the fact
+      <para>Same as JSON (its parent etiquette), JLIFF concentrates on real time exchange scenarios. Thanks to the fact
         that JLIFF and XLIFF (the original XML serialization) share the same Object Model (XLIFF 2
         OM), implementers of both formats can rely on and benefit from the semantic and behavioral
-        match between those two serialization formats.</para>
+        match between those two interchange serialization formats.</para>
       <para>Since JLIFF primarily targets real time API exchanges, it is capable of expressing
         different levels of fragments corresponding to various structural parts of the XLIFF OM and
-        corresponding <firstterm>XLIFF Documents</firstterm>.</para>
+        possibly related <firstterm>XLIFF Documents</firstterm>.</para>
     </abstract>
 
     <legalnotice role="status">
@@ -257,7 +266,7 @@
 
       <para><citation>JLIFF-&version;</citation></para>
 
-      <para><emphasis>XLIFF 2 Object Model Version &version;</emphasis>. Edited by Robert van
+      <para><emphasis>JLIFF Version &version;</emphasis>. Edited by Robert van
         Engelen and David Filip. &pubdate;. OASIS &standard;. <ulink
           url="&this-loc;/&name;-&stage;.html">&this-loc;/&name;-&stage;.html</ulink>. Latest
         version: <ulink url="&latest-loc;/&name;.html">&latest-loc;/&name;.html</ulink>. </para>
@@ -350,16 +359,11 @@
   <section>
     <title>Introduction</title>
 
-    <para>Localization Interchange Object Model (LIOM) is the <emphasis>XLIFF 2 Object
-        Model</emphasis> designed by a group of multilingual content publishers, software providers,
-      localization service providers, localization tools providers and researchers. It is intended
-      to give any multilingual content owner a single object and data model that can be subject to
-      any sort of serialization common now (such as XML, JSON, or protobuf) or a in the future.
+    <para>JSON Localization Interchange Fragment Format (JLIFF), a serialization of the LIOM (Localization Interchange Object Model), which is the <emphasis>XLIFF 2 Object Model</emphasis>, has been designed by a group of multilingual content publishers, software providers, localization service providers, localization tools providers, and researchers. It is intended
+      to give any multilingual content owner a reliable and interoperable JSON serialization of the said object and data model.
       XLIFF 2 has been providing a reliable XML based interchange file format understood by any
-      localization provider, using any conformant localization tool. The primary focus of this
-      Object Model is to ensure lossless Interchange between and among pipelines based on different
-      serializations and technologies. While the primary focus is on lossless Interchange,
-      toolmakers, service providers, and content owners are encouraged to stick to this Object Model
+      localization provider, using any conformant localization tool. The primary focus of this JSON serialization specification of the shared Object Model is to ensure lossless Interchange between JSON and XML pipelines, or indeed other pipelines serialized in other ways, as long as they are based on the same underlying Object Model. While the primary focus is on lossless Interchange,
+      toolmakers, service providers, and content owners are encouraged to stick to the shared Object Model <olink targetptr="">[LIOM]</olink>
       also while designing their internal processing and messaging formats, as this will make the
       mapping to the standardized Interchange format serializations of this Object Model, such as
       JLIFF or XLIFF, so much easier. </para>
@@ -403,8 +407,8 @@
 
             <listitem>
               <para>any application or tool that generates (creates), reads, edits, writes,
-                processes, stores, renders or otherwise handles documents, messages, or any other
-                instantiations of the <firstterm>LIOM</firstterm>.</para>
+                processes, stores, renders or otherwise handles <firstterm>JLIFF
+                  Instances</firstterm>.</para>
               <para><firstterm>Agent</firstterm> is the most general application conformance target
                 that subsumes all other specialized user agents disregarding whether they are
                 defined in this specification or not.</para>
@@ -416,7 +420,7 @@
             <term>Enriching</term>
             <listitem>
               <para> the process of associating metadata and resources with the
-                  <firstterm>Extracted</firstterm> LIOM based payload </para>
+                  <firstterm>Extracted</firstterm> JLIFF payload </para>
               <itemizedlist>
                 <title>Processing Requirements</title>
               <listitem><para>
@@ -439,9 +443,10 @@
             <term>Extraction</term>
             <listitem>
               <para>the process of encoding localizable content from a native content or User
-                Interface format as LIOM based payload, so that localizable parts of the content in
-                the source language are available for <firstterm>Translation</firstterm> into the
-                target language along with the necessary context information </para>
+                Interface format as <firstterm>JLIFF Instances</firstterm>, so that localizable
+                parts of the content in the source language are available for
+                  <firstterm>Translation</firstterm> into the target language along with the
+                necessary context information </para>
             </listitem>
           </varlistentry>
 
@@ -461,8 +466,8 @@
             <term>Merging</term>
 
             <listitem>
-              <para>the process of importing LIOM based payload back to the originating native
-                format, based on the <emphasis>full knowledge</emphasis> of the
+              <para>the process of importing JLIFF payload back to the originating native format,
+                based on the <emphasis>full knowledge</emphasis> of the
                   <firstterm>Extraction</firstterm> mechanism, so that the localized content or User
                 Interface strings replace the source language in the native format </para>
             </listitem>
@@ -492,14 +497,13 @@
             <term>Modify</term>
             <term>Modification</term>
             <listitem>
-              <para> the process of changing core and module LIOM based structural and inline
-                elements that were previously created by other <firstterm>Writers</firstterm>
+              <para> the process of changing core and module based structural and inline objects
+                that were previously created by other <firstterm>Writers</firstterm>
               </para>
               <itemizedlist>
                 <title>Processing Requirements</title>
-                <listitem><para>
-                  XLIFF elements <glossterm>may</glossterm> be <firstterm>Modified</firstterm> 	and <firstterm>Enriched</firstterm> at the same time.
-                  </para></listitem>
+                <listitem><para> JLIFF objects <glossterm>may</glossterm> be <firstterm>Modified</firstterm> and
+                      <firstterm>Enriched</firstterm> at the same time. </para></listitem>
               </itemizedlist>
               <note><para><firstterm>Extractor</firstterm> or <firstterm>Enricher</firstterm> knowledge of the native format is not assumed while <firstterm>Modifying</firstterm>.</para></note>
             </listitem>
@@ -555,16 +559,16 @@
             <term>Writer Agent</term>
 
             <listitem>
-              <para>an <firstterm>Agent</firstterm> that creates, generates, or otherwise writes a
-                document or me<firstterm>XLIFF Document</firstterm> for whatever purpose, including
-                but not limited to <firstterm>Extractor</firstterm>,
-                <firstterm>Modifier</firstterm>, and <firstterm>Enricher</firstterm>
+              <para>an <firstterm>Agent</firstterm> that creates, generates, or otherwise writes
+                  <firstterm>JLIFF Instances</firstterm> for whatever purpose, including but not
+                limited to <firstterm>Extractor</firstterm>, <firstterm>Modifier</firstterm>, and
+                  <firstterm>Enricher</firstterm>
                 <firstterm>Agents</firstterm>. </para>
 
-              <note><para>Since XLIFF is intended as an exchange format rather than a processing format, many
-                  applications will need to generate <firstterm>XLIFF Documents</firstterm> from
+              <note><para>Since JLIFF is intended as an exchange format rather than a processing format, many
+                  applications will need to generate <firstterm>JLIFF Instances</firstterm> from
                   their internal processing formats, even in cases when they are processing
-                    <firstterm>XLIFF Documents</firstterm> created by another
+                    <firstterm>JLIFF Instances</firstterm> created by another
                     <firstterm>Extractor</firstterm>. </para></note>
             </listitem>
 
@@ -584,15 +588,26 @@
 
         <variablelist>
           <varlistentry>
-            <term>LIOM Core</term>
+            <term>JLIFF Core</term>
             <listitem>
-              <para>The core of LIOM &version; consists of the minimum set of data objects required
-                to (a) prepare a LIOM Instance that contains text extracted from one or more files
-                for localization, (b) allow it to be completed with the translation of the extracted
-                text, and (c) allow the generation of <firstterm>Translated</firstterm> versions of
-                the original document.</para>
-              <para>The XML namespace that corresponds to the core subset of XLIFF &version; is
+              <para>The core of JLIFF &version; consists of the minimum set of JSON values required
+                to (a) prepare a JLIFF Instance that contains text <firstterm>Extracted</firstterm>
+                from one or more files for localization, (b) allow it to be completed with the
+                  <firstterm>Translation</firstterm> of the <firstterm>Extracted</firstterm> text,
+                and (c) allow the generation of <firstterm>Translated</firstterm> versions of the
+                original document.</para>
+              <para>The namespace that corresponds to the core subset of JLIFF &version; is
                   <code>"urn:oasis:names:tc:xliff:document:&bschversion;"</code>.</para>
+              <para>
+                <note>
+                  <para>Vanilla JSON is not capable of expressing namespaces. Nevertheless, JLIFF
+                    adopts two prefix conventions that allow for representing LIOM and XLIFF
+                    namespaces to be able to make use of LIOM modularity.</para>
+                  <para>JLIFF Core object names are not prefixed either in JLIFF Instances or in the
+                    JLIFF JSON Schema.</para>
+                  
+                </note>
+              </para>
             </listitem>
           </varlistentry>
           <varlistentry>
@@ -680,10 +695,17 @@
             <ulink url="http://www.w3.org/TR/html5/">http://www.w3.org/TR/html5/</ulink>
           </citetitle> W3C Recommendation 28 October 2014.</bibliomixed>
 
-        <bibliomixed id="ITS20"><abbrev>ITS</abbrev> David Filip, Shaun McCance, Dave Lewis, Christian Lieske, Arle Lommel, Jirka Kosek, Felix Sasaki, Yves Savourel  <title>Internationalization Tag
+        <bibliomixed id="ITS20"><abbrev>ITS</abbrev> David Filip, Shaun McCance, Dave Lewis, Christian Lieske, Arle Lommel, Jirka Kosek, Felix Sasaki, and Yves Savourel, eds.  <title>Internationalization Tag
             Set (ITS) Version 2.0</title>, <citetitle>
             <ulink url="http://www.w3.org/TR/its20/">http://www.w3.org/TR/its20/</ulink>
           </citetitle> W3C Recommendation 29 October 2013.</bibliomixed>
+        
+        <bibliomixed id="JSON"><abbrev>JSON</abbrev>
+          <title>The JavaScript Object Notation (JSON) Data Interchange Format</title>,
+          <citetitle>
+            <ulink url="https://tools.ietf.org/html/rfc8259">https://tools.ietf.org/html/rfc8259</ulink> 
+          </citetitle> IETF RFC 8259 December 2017.
+        </bibliomixed>
        
         
         <bibliomixed id="bib_datetime"><abbrev>NOTE-datetime</abbrev>
@@ -736,6 +758,19 @@
             <ulink url="http://www.unicode.org/versions/Unicode9.0.0/">http://www.unicode.org/versions/Unicode9.0.0/</ulink>
             </citetitle> Mountain View, CA: The Unicode Consortium, June 21, 2016.</bibliomixed>
 
+        <bibliomixed id="XLIFF20"><abbrev>XLIFF 2.0</abbrev> Tom Comerford, David Filip, Rodolfo Raya, and Yves Savourel, eds. <title>XLIFF Version 2.0</title>, <citetitle>
+  <ulink url="http://docs.oasis-open.org/xliff/xliff-core/v2.0/os/xliff-core-v2.0-os.html">http://docs.oasis-open.org/xliff/xliff-core/v2.0/os/xliff-core-v2.0-os.html</ulink> 
+</citetitle>
+  OASIS Standard 05 August 2014
+</bibliomixed>
+        
+        <bibliomixed id="XLIFF21"><abbrev>XLIFF 2.1</abbrev> David Filip, Tom Comerford, Soroush Saadatfar, Felix Sasaki, and Yves Savourel, eds. <title>XLIFF Version 2.0</title>, <citetitle>
+          <ulink url="http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html">http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html</ulink> 
+        </citetitle>
+          OASIS Standard 13 February 2018
+        </bibliomixed>
+        
+        
         <bibliomixed id="bib_XML"><abbrev>XML</abbrev>
           W3C, <title>Extensible Markup Language (XML) 1.0</title>, <citetitle> <ulink url="http://www.w3.org/TR/xml/">http://www.w3.org/TR/xml/</ulink>
           </citetitle> (Fifth Edition) W3C Recommendation 26 November 2008.</bibliomixed>
