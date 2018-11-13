@@ -65,11 +65,14 @@
       "type": "object",
       "properties": {
         "id": { "$ref": "#/definitions/NMTOKEN" },
-        "fs_fs": { "$ref": "#/definitions/fs_formatStyle" },
-        "fs_subFs": { "$ref": "#/definitions/fs_subFormatStyle" },
         "original": { "type": "string" },
         "skeleton": { "$ref": "#/definitions/skeleton" },
         "subfiles": { "$ref": "#/definitions/subitems" },
+        "translate": { "type": "string", "enum": [ "yes", "no" ] },
+        "srcDir": { "$ref": "#/definitions/dir" },
+        "trgDir": { "$ref": "#/definitions/dir" },
+        "fs_fs": { "$ref": "#/definitions/fs_formatStyle" },
+        "fs_subFs": { "$ref": "#/definitions/fs_subFormatStyle" },
         "mda_metadata": { "$ref": "#/definitions/mda_metadata" },
         "res_resourceData": { "$ref": "#/definitions/res_resourceData" },
         "ctr_changeTrack": { "$ref": "#/definitions/ctr_changeTrack" },
@@ -86,9 +89,6 @@
         "its_locQualityRatingVote": { "type": "integer" },
         "its_locQualityRatingVoteThreshold": { "type": "integer" },
         "its_annotatorsRef": { "$ref": "#/definitions/its_annotatorsRef" },
-        "translate": { "type": "string", "enum": [ "yes", "no" ] },
-        "srcDir": { "$ref": "#/definitions/dir" },
-        "trgDir": { "$ref": "#/definitions/dir" },
         "its_org": { "type": "string" },
         "its_orgRef": { "$ref": "#/definitions/IRI" },
         "its_person": { "type": "string" },
@@ -108,7 +108,7 @@
         "its_taSource": { "type": "string" },
         "its_taIdent": { "type": "string" },
         "its_taIdentRef": { "$ref": "#/definitions/IRI" },
-        "itsm_domains": { "$ref": "#/definitions/itsm_domains" },
+        "its_domains": { "$ref": "#/definitions/its_domains" },
         "userdata": { "$ref": "#/definitions/extensionsData" }
       },
       "additionalProperties": false,
@@ -186,7 +186,7 @@
             "its_taSource": { "type": "string" },
             "its_taIdent": { "type": "string" },
             "its_taIdentRef": { "$ref": "#/definitions/IRI" },
-            "itsm_domains": { "$ref": "#/definitions/itsm_domains" },
+            "its_domains": { "$ref": "#/definitions/its_domains" },
             "userdata": { "$ref": "#/definitions/extensionsData" }
           },
           "additionalProperties": false,
@@ -238,7 +238,7 @@
             "its_taSource": { "type": "string" },
             "its_taIdent": { "type": "string" },
             "its_taIdentRef": { "$ref": "#/definitions/IRI" },
-            "itsm_domains": { "$ref": "#/definitions/itsm_domains" },
+            "its_domains": { "$ref": "#/definitions/its_domains" },
             "userdata": { "$ref": "#/definitions/extensionsData" }
           },
           "additionalProperties": false,
@@ -302,7 +302,7 @@
         "its_taSource": { "type": "string" },
         "its_taIdent": { "type": "string" },
         "its_taIdentRef": { "$ref": "#/definitions/IRI" },
-        "itsm_domains": { "$ref": "#/definitions/itsm_domains" },
+        "its_domains": { "$ref": "#/definitions/its_domains" },
         "userdata": { "$ref": "#/definitions/extensionsData" }
       },
       "additionalProperties": false,
@@ -371,7 +371,7 @@
         "its_taSource": { "type": "string" },
         "its_taIdent": { "type": "string" },
         "its_taIdentRef": { "$ref": "#/definitions/IRI" },
-        "itsm_domains": { "$ref": "#/definitions/itsm_domains" },
+        "its_domains": { "$ref": "#/definitions/its_domains" },
         "userdata": { "$ref": "#/definitions/extensionsData" }
       },
       "additionalProperties": false,
@@ -451,16 +451,16 @@
         "similarity": { "type": "number", "minimum": 0, "maximum": 100 },
         "subType": { "type": "string" },
         "type": { "type": "string", "enum": [ "am", "mt", "icm", "idm", "tb", "tm", "other" ], "default": "tm" },
-        "mda_metadata": { "$ref": "#/definitions/mda_metadata" },
+        "source": { "$ref": "#/definitions/elements" },
+        "target": { "$ref": "#/definitions/elements" },
         "originalData": { "$ref": "#/definitions/originalData" },
+        "mda_metadata": { "$ref": "#/definitions/mda_metadata" },
         "its_locQualityRatingProfileRef": { "$ref": "#/definitions/IRI" },
         "its_locQualityRatingScore": { "type": "number", "minimum": 0, "maximum": 100 },
         "its_locQualityRatingScoreThreshold": { "type": "number", "minimum": 0, "maximum": 100 },
         "its_locQualityRatingVote": { "type": "integer" },
         "its_locQualityRatingVoteThreshold": { "type": "integer" },
-        "itsm_domains": { "$ref": "#/definitions/itsm_domains" },
-        "source": { "$ref": "#/definitions/elements" },
-        "target": { "$ref": "#/definitions/elements" }
+        "its_domains": { "$ref": "#/definitions/its_domains" }
       },
       "additionalProperties": true,
       "required": [ "ref", "source", "target" ]
@@ -729,7 +729,7 @@
     },
 
     "slr_sizeInfoRef": {
-      "type": "string"
+      "$ref": "#/definitions/NMTOKEN"
     },
 
     "val_validation": {
@@ -814,7 +814,7 @@
     },
 
     "its_locQualityIssues": {
-      "description": "a standoff wrapper element to group any number of single issue elements related to the same span of source or target content",
+      "description": "A standoff wrapper element to group any number of single issue elements related to the same span of source or target content",
       "type": "array",
       "items": { "$ref": "#/definitions/its_locQualityIssue" },
       "minItems": 1
@@ -823,6 +823,7 @@
     "its_locQualityIssue": {
       "type": "object",
       "properties": {
+        "id": { "$ref": "#/definitions/NMTOKEN" },
         "locQualityIssueType": { "$ref": "#/definitions/its_locQualityIssueType" },
         "locQualityIssueComment": { "type": "string" },
         "locQualityIssueSeverity": { "type": "number", "minimum": 0, "maximum": 100 },
@@ -889,7 +890,7 @@
       }
     },
 
-    "itsm_domains": {
+    "its_domains": {
       "type": "array",
       "items": { "type": "string", "pattern": "^[^,]+$" },
       "minitems": 1
@@ -912,11 +913,11 @@
       "type": "object",
       "properties": {
         "id": { "$ref": "#/definitions/NMTOKEN" },
-        "fs_fs": { "$ref": "#/definitions/fs_formatStyle" },
-        "fs_subFs": { "$ref": "#/definitions/fs_subFormatStyle" },
         "appliesTo": { "type": "string", "enum": [ "source", "target" ] },
         "category": { "type": "string" },
-        "priority": { "type": "integer", "minimum": 1, "maximum": 10 }
+        "priority": { "type": "integer", "minimum": 1, "maximum": 10 },
+        "fs_fs": { "$ref": "#/definitions/fs_formatStyle" },
+        "fs_subFs": { "$ref": "#/definitions/fs_subFormatStyle" }
       },
       "additionalProperties": false
     },
@@ -948,13 +949,8 @@
       "type": "object",
       "properties": {
         "kind": { "type": "string", "enum": [ "ec" ] },
-        "startRef": { "type": "string" },
+        "startRef": { "type": "#/definitions/NMTOKEN" },
         "id": { "$ref": "#/definitions/NMTOKEN" },
-        "fs_fs": { "$ref": "#/definitions/fs_formatStyle" },
-        "fs_subFs": { "$ref": "#/definitions/fs_subFormatStyle" },
-        "slr_equivStorage": { "$ref": "#/definitions/slr_equivStorage" },
-        "slr_sizeInfo": { "$ref": "#/definitions/slr_sizeInfo" },
-        "slr_sizeInfoRef": { "$ref": "#/definitions/slr_sizeInfoRef" },
         "canCopy": { "type": "string", "enum": [ "yes", "no" ] },
         "canDelete": { "type": "string", "enum": [ "yes", "no" ] },
         "canOverlap": { "type": "string", "enum": [ "yes", "no" ] },
@@ -967,7 +963,12 @@
         "subType": { "type": "string" },
         "type": { "$ref": "#/definitions/codeType" },
         "dir": { "$ref": "#/definitions/dir" },
-        "isolated": { "type": "string", "enum": [ "yes", "no" ] }
+        "isolated": { "type": "string", "enum": [ "yes", "no" ] },
+        "fs_fs": { "$ref": "#/definitions/fs_formatStyle" },
+        "fs_subFs": { "$ref": "#/definitions/fs_subFormatStyle" },
+        "slr_equivStorage": { "$ref": "#/definitions/slr_equivStorage" },
+        "slr_sizeInfo": { "$ref": "#/definitions/slr_sizeInfo" },
+        "slr_sizeInfoRef": { "$ref": "#/definitions/slr_sizeInfoRef" }
       },
       "additionalProperties": false,
       "required": [ "kind", "startRef" ]
@@ -989,11 +990,6 @@
       "properties": {
         "kind": { "type": "string", "enum": [ "ph" ] },
         "id": { "$ref": "#/definitions/NMTOKEN" },
-        "fs_fs": { "$ref": "#/definitions/fs_formatStyle" },
-        "fs_subFs": { "$ref": "#/definitions/fs_subFormatStyle" },
-        "slr_equivStorage": { "$ref": "#/definitions/slr_equivStorage" },
-        "slr_sizeInfo": { "$ref": "#/definitions/slr_sizeInfo" },
-        "slr_sizeInfoRef": { "$ref": "#/definitions/slr_sizeInfoRef" },
         "canCopy": { "type": "string", "enum": [ "yes", "no" ] },
         "canDelete": { "type": "string", "enum": [ "yes", "no" ] },
         "canReorder": { "type": "string", "enum": [ "yes", "no", "firstNo" ], "default": "yes" },
@@ -1003,7 +999,12 @@
         "dataRef": { "$ref": "#/definitions/NMTOKEN" },
         "subFlows": { "type": "string" },
         "subtype": { "type": "string" },
-        "type": { "$ref": "#/definitions/codeType" }
+        "type": { "$ref": "#/definitions/codeType" },
+        "fs_fs": { "$ref": "#/definitions/fs_formatStyle" },
+        "fs_subFs": { "$ref": "#/definitions/fs_subFormatStyle" },
+        "slr_equivStorage": { "$ref": "#/definitions/slr_equivStorage" },
+        "slr_sizeInfo": { "$ref": "#/definitions/slr_sizeInfo" },
+        "slr_sizeInfoRef": { "$ref": "#/definitions/slr_sizeInfoRef" }
       },
       "additionalProperties": false,
       "required": [ "id", "kind" ]
@@ -1014,14 +1015,6 @@
       "properties": {
         "kind": { "type": "string", "enum": [ "sc" ] },
         "id": { "$ref": "#/definitions/NMTOKEN" },
-        "fs_fs": { "$ref": "#/definitions/fs_formatStyle" },
-        "fs_subFs": { "$ref": "#/definitions/fs_subFormatStyle" },
-        "slr_data": { "$ref": "#/definitions/slr_data" },
-        "slr_storageRestriction": { "$ref": "#/definitions/slr_storageRestriction" },
-        "slr_sizeRestriction": { "$ref": "#/definitions/slr_sizeRestriction" },
-        "slr_equivStorage": { "$ref": "#/definitions/slr_equivStorage" },
-        "slr_sizeInfo": { "$ref": "#/definitions/slr_sizeInfo" },
-        "slr_sizeInfoRef": { "$ref": "#/definitions/slr_sizeInfoRef" },
         "canCopy": { "type": "string", "enum": [ "yes", "no" ] },
         "canDelete": { "type": "string", "enum": [ "yes", "no" ] },
         "canOverlap": { "type": "string", "enum": [ "yes", "no" ] },
@@ -1034,7 +1027,15 @@
         "subType": { "type": "string" },
         "type": { "$ref": "#/definitions/codeType" },
         "dir": { "$ref": "#/definitions/dir" },
-        "isolated": { "type": "string", "enum": [ "yes", "no" ] }
+        "isolated": { "type": "string", "enum": [ "yes", "no" ] },
+        "fs_fs": { "$ref": "#/definitions/fs_formatStyle" },
+        "fs_subFs": { "$ref": "#/definitions/fs_subFormatStyle" },
+        "slr_data": { "$ref": "#/definitions/slr_data" },
+        "slr_storageRestriction": { "$ref": "#/definitions/slr_storageRestriction" },
+        "slr_sizeRestriction": { "$ref": "#/definitions/slr_sizeRestriction" },
+        "slr_equivStorage": { "$ref": "#/definitions/slr_equivStorage" },
+        "slr_sizeInfo": { "$ref": "#/definitions/slr_sizeInfo" },
+        "slr_sizeInfoRef": { "$ref": "#/definitions/slr_sizeInfoRef" }
       },
       "additionalProperties": false,
       "required": [ "id", "kind" ]
@@ -1045,6 +1046,10 @@
       "properties": {
         "kind": { "type": "string", "enum": [ "sm" ] },
         "id": { "$ref": "#/definitions/NMTOKEN" },
+        "type": { "$ref": "#/definitions/mrkType" },
+        "translate": { "type": "string", "enum": [ "yes", "no" ] },
+        "ref": { "$ref": "#/definitions/IRI" },
+        "value": { "type": "string" },
         "fs_fs": { "$ref": "#/definitions/fs_formatStyle" },
         "fs_subFs": { "$ref": "#/definitions/fs_subFormatStyle" },
         "slr_storageRestriction": { "$ref": "#/definitions/slr_storageRestriction" },
@@ -1084,11 +1089,7 @@
         "its_taSource": { "type": "string" },
         "its_taIdent": { "type": "string" },
         "its_taIdentRef": { "$ref": "#/definitions/IRI" },
-        "itsm_domains": { "$ref": "#/definitions/itsm_domains" },
-        "type": { "$ref": "#/definitions/mrkType" },
-        "translate": { "type": "string", "enum": [ "yes", "no" ] },
-        "ref": { "$ref": "#/definitions/IRI" },
-        "value": { "type": "string" }
+        "its_domains": { "$ref": "#/definitions/its_domains" }
       },
       "additionalProperties": true,
       "required": [ "id", "kind" ]

@@ -65,20 +65,23 @@
       "type": "object",
       "properties": {
         "id": { "$ref": "#/definitions/NMTOKEN" },
-        "fs": { "$ref": "#/definitions/formatStyle" },
-        "subFs": { "$ref": "#/definitions/subFormatStyle" },
         "original": { "type": "string" },
         "skeleton": { "$ref": "#/definitions/skeleton" },
         "subfiles": { "$ref": "#/definitions/subitems" },
+        "translate": { "type": "string", "enum": [ "yes", "no" ] },
+        "srcDir": { "$ref": "#/definitions/dir" },
+        "trgDir": { "$ref": "#/definitions/dir" },
+        "fs": { "$ref": "#/definitions/formatStyle" },
+        "subFs": { "$ref": "#/definitions/subFormatStyle" },
         "metadata": { "$ref": "#/definitions/metadata" },
         "resourceData": { "$ref": "#/definitions/resourceData" },
         "changeTrack": { "$ref": "#/definitions/changeTrack" },
         "profiles": { "$ref": "#/definitions/profiles" },
-        "profileData": { "$ref": "#/definitions/profileData" },
-        "profileStorageRestriction": { "$ref": "#/definitions/profileStorageRestriction" },
-        "profileSizeRestriction": { "$ref": "#/definitions/profileSizeRestriction" },
-        "profileSizeInfo": { "$ref": "#/definitions/profileSizeInfo" },
-        "profileSizeInfoRef": { "$ref": "#/definitions/profileSizeInfoRef" },
+        "data": { "$ref": "#/definitions/data" },
+        "storageRestriction": { "$ref": "#/definitions/storageRestriction" },
+        "sizeRestriction": { "$ref": "#/definitions/sizeRestriction" },
+        "sizeInfo": { "$ref": "#/definitions/sizeInfo" },
+        "sizeInfoRef": { "$ref": "#/definitions/sizeInfoRef" },
         "validation": { "$ref": "#/definitions/validation" },
         "locQualityRatingProfileRef": { "$ref": "#/definitions/IRI" },
         "locQualityRatingScore": { "type": "number", "minimum": 0, "maximum": 100 },
@@ -86,9 +89,6 @@
         "locQualityRatingVote": { "type": "integer" },
         "locQualityRatingVoteThreshold": { "type": "integer" },
         "annotatorsRef": { "$ref": "#/definitions/annotatorsRef" },
-        "translate": { "type": "string", "enum": [ "yes", "no" ] },
-        "srcDir": { "$ref": "#/definitions/dir" },
-        "trgDir": { "$ref": "#/definitions/dir" },
         "org": { "type": "string" },
         "orgRef": { "$ref": "#/definitions/IRI" },
         "person": { "type": "string" },
@@ -103,12 +103,12 @@
         "tool": { "type": "string" },
         "toolRef": { "$ref": "#/definitions/IRI" },
         "provenanceRecords": {  "$ref": "#/definitions/provenanceRecords" },
-        "domains": { "$ref": "#/definitions/domains" },
         "taClassRef": { "$ref": "#/definitions/IRI" },
         "taConfidence": { "type": "number", "minimum": 0, "maximum": 1 },
         "taSource": { "type": "string" },
         "taIdent": { "type": "string" },
         "taIdentRef": { "$ref": "#/definitions/IRI" },
+        "domains": { "$ref": "#/definitions/domains" },
         "userdata": { "$ref": "#/definitions/extensionsData" }
       },
       "additionalProperties": false,
@@ -154,11 +154,11 @@
             "resourceData": { "$ref": "#/definitions/resourceData" },
             "changeTrack": { "$ref": "#/definitions/changeTrack" },
             "profiles": { "$ref": "#/definitions/profiles" },
-            "profileData": { "$ref": "#/definitions/profileData" },
-            "profileStorageRestriction": { "$ref": "#/definitions/profileStorageRestriction" },
-            "profileSizeRestriction": { "$ref": "#/definitions/profileSizeRestriction" },
-            "profileSizeInfo": { "$ref": "#/definitions/profileSizeInfo" },
-            "profileSizeInfoRef": { "$ref": "#/definitions/profileSizeInfoRef" },
+            "data": { "$ref": "#/definitions/data" },
+            "storageRestriction": { "$ref": "#/definitions/storageRestriction" },
+            "sizeRestriction": { "$ref": "#/definitions/sizeRestriction" },
+            "sizeInfo": { "$ref": "#/definitions/sizeInfo" },
+            "sizeInfoRef": { "$ref": "#/definitions/sizeInfoRef" },
             "validation": { "$ref": "#/definitions/validation" },
             "locQualityRatingProfileRef": { "$ref": "#/definitions/IRI" },
             "locQualityRatingScore": { "type": "number", "minimum": 0, "maximum": 100 },
@@ -181,12 +181,12 @@
             "tool": { "type": "string" },
             "toolRef": { "$ref": "#/definitions/IRI" },
             "provenanceRecords": {  "$ref": "#/definitions/provenanceRecords" },
-            "domains": { "$ref": "#/definitions/domains" },
             "taClassRef": { "$ref": "#/definitions/IRI" },
             "taConfidence": { "type": "number", "minimum": 0, "maximum": 1 },
             "taSource": { "type": "string" },
             "taIdent": { "type": "string" },
             "taIdentRef": { "$ref": "#/definitions/IRI" },
+            "domains": { "$ref": "#/definitions/domains" },
             "userdata": { "$ref": "#/definitions/extensionsData" }
           },
           "additionalProperties": false,
@@ -207,11 +207,11 @@
             "resourceData": { "$ref": "#/definitions/resourceData" },
             "changeTrack": { "$ref": "#/definitions/changeTrack" },
             "profiles": { "$ref": "#/definitions/profiles" },
-            "profileData": { "$ref": "#/definitions/profileData" },
-            "profileStorageRestriction": { "$ref": "#/definitions/profileStorageRestriction" },
-            "profileSizeRestriction": { "$ref": "#/definitions/profileSizeRestriction" },
-            "profileSizeInfo": { "$ref": "#/definitions/profileSizeInfo" },
-            "profileSizeInfoRef": { "$ref": "#/definitions/profileSizeInfoRef" },
+            "data": { "$ref": "#/definitions/data" },
+            "storageRestriction": { "$ref": "#/definitions/storageRestriction" },
+            "sizeRestriction": { "$ref": "#/definitions/sizeRestriction" },
+            "sizeInfo": { "$ref": "#/definitions/sizeInfo" },
+            "sizeInfoRef": { "$ref": "#/definitions/sizeInfoRef" },
             "validation": { "$ref": "#/definitions/validation" },
             "locQualityRatingProfileRef": { "$ref": "#/definitions/IRI" },
             "locQualityRatingScore": { "type": "number", "minimum": 0, "maximum": 100 },
@@ -233,12 +233,12 @@
             "tool": { "type": "string" },
             "toolRef": { "$ref": "#/definitions/IRI" },
             "provenanceRecords": {  "$ref": "#/definitions/provenanceRecords" },
-            "domains": { "$ref": "#/definitions/domains" },
             "taClassRef": { "$ref": "#/definitions/IRI" },
             "taConfidence": { "type": "number", "minimum": 0, "maximum": 1 },
             "taSource": { "type": "string" },
             "taIdent": { "type": "string" },
             "taIdentRef": { "$ref": "#/definitions/IRI" },
+            "domains": { "$ref": "#/definitions/domains" },
             "userdata": { "$ref": "#/definitions/extensionsData" }
           },
           "additionalProperties": false,
@@ -271,11 +271,11 @@
         "resourceData": { "$ref": "#/definitions/resourceData" },
         "changeTrack": { "$ref": "#/definitions/changeTrack" },
         "profiles": { "$ref": "#/definitions/profiles" },
-        "profileData": { "$ref": "#/definitions/profileData" },
-        "profileStorageRestriction": { "$ref": "#/definitions/profileStorageRestriction" },
-        "profileSizeRestriction": { "$ref": "#/definitions/profileSizeRestriction" },
-        "profileSizeInfo": { "$ref": "#/definitions/profileSizeInfo" },
-        "profileSizeInfoRef": { "$ref": "#/definitions/profileSizeInfoRef" },
+        "data": { "$ref": "#/definitions/data" },
+        "storageRestriction": { "$ref": "#/definitions/storageRestriction" },
+        "sizeRestriction": { "$ref": "#/definitions/sizeRestriction" },
+        "sizeInfo": { "$ref": "#/definitions/sizeInfo" },
+        "sizeInfoRef": { "$ref": "#/definitions/sizeInfoRef" },
         "validation": { "$ref": "#/definitions/validation" },
         "locQualityRatingProfileRef": { "$ref": "#/definitions/IRI" },
         "locQualityRatingScore": { "type": "number", "minimum": 0, "maximum": 100 },
@@ -297,12 +297,12 @@
         "tool": { "type": "string" },
         "toolRef": { "$ref": "#/definitions/IRI" },
         "provenanceRecords": {  "$ref": "#/definitions/provenanceRecords" },
-        "domains": { "$ref": "#/definitions/domains" },
         "taClassRef": { "$ref": "#/definitions/IRI" },
         "taConfidence": { "type": "number", "minimum": 0, "maximum": 1 },
         "taSource": { "type": "string" },
         "taIdent": { "type": "string" },
         "taIdentRef": { "$ref": "#/definitions/IRI" },
+        "domains": { "$ref": "#/definitions/domains" },
         "userdata": { "$ref": "#/definitions/extensionsData" }
       },
       "additionalProperties": false,
@@ -339,11 +339,11 @@
         "resourceData": { "$ref": "#/definitions/resourceData" },
         "changeTrack": { "$ref": "#/definitions/changeTrack" },
         "profiles": { "$ref": "#/definitions/profiles" },
-        "profileData": { "$ref": "#/definitions/profileData" },
-        "profileStorageRestriction": { "$ref": "#/definitions/profileStorageRestriction" },
-        "profileSizeRestriction": { "$ref": "#/definitions/profileSizeRestriction" },
-        "profileSizeInfo": { "$ref": "#/definitions/profileSizeInfo" },
-        "profileSizeInfoRef": { "$ref": "#/definitions/profileSizeInfoRef" },
+        "data": { "$ref": "#/definitions/data" },
+        "storageRestriction": { "$ref": "#/definitions/storageRestriction" },
+        "sizeRestriction": { "$ref": "#/definitions/sizeRestriction" },
+        "sizeInfo": { "$ref": "#/definitions/sizeInfo" },
+        "sizeInfoRef": { "$ref": "#/definitions/sizeInfoRef" },
         "validation": { "$ref": "#/definitions/validation" },
         "locQualityRatingProfileRef": { "$ref": "#/definitions/IRI" },
         "locQualityRatingScore": { "type": "number", "minimum": 0, "maximum": 100 },
@@ -366,12 +366,12 @@
         "tool": { "type": "string" },
         "toolRef": { "$ref": "#/definitions/IRI" },
         "provenanceRecords": {  "$ref": "#/definitions/provenanceRecords" },
-        "domains": { "$ref": "#/definitions/domains" },
         "taClassRef": { "$ref": "#/definitions/IRI" },
         "taConfidence": { "type": "number", "minimum": 0, "maximum": 1 },
         "taSource": { "type": "string" },
         "taIdent": { "type": "string" },
         "taIdentRef": { "$ref": "#/definitions/IRI" },
+        "domains": { "$ref": "#/definitions/domains" },
         "userdata": { "$ref": "#/definitions/extensionsData" }
       },
       "additionalProperties": false,
@@ -451,15 +451,15 @@
         "similarity": { "type": "number", "minimum": 0, "maximum": 100 },
         "subType": { "type": "string" },
         "type": { "type": "string", "enum": [ "am", "mt", "icm", "idm", "tb", "tm", "other" ], "default": "tm" },
-        "metadata": { "$ref": "#/definitions/metadata" },
+        "source": { "$ref": "#/definitions/elements" },
+        "target": { "$ref": "#/definitions/elements" },
         "originalData": { "$ref": "#/definitions/originalData" },
+        "metadata": { "$ref": "#/definitions/metadata" },
         "locQualityRatingProfileRef": { "$ref": "#/definitions/IRI" },
         "locQualityRatingScore": { "type": "number", "minimum": 0, "maximum": 100 },
         "locQualityRatingScoreThreshold": { "type": "number", "minimum": 0, "maximum": 100 },
         "locQualityRatingVote": { "type": "integer" },
         "locQualityRatingVoteThreshold": { "type": "integer" },
-        "source": { "$ref": "#/definitions/elements" },
-        "target": { "$ref": "#/definitions/elements" },
         "domains": { "$ref": "#/definitions/domains" }
       },
       "additionalProperties": true,
@@ -687,7 +687,7 @@
     },
 
     "profiles": {
-      "description": "The Size and Length Restriction (profiles) module provides a mechanism to annotate the XLIFF content with information on storage and general size restrictions",
+      "description": "The Size and Length Restriction module provides a mechanism to annotate the XLIFF content with information on storage and general size restrictions",
       "type": "object",
       "properties": {
         "generalProfile": { "type": "string" },
@@ -703,7 +703,7 @@
       "additionalProperties": true
     },
 
-    "profileData": {
+    "data": {
       "type": "object",
       "properties": {
          "profile": { "type": "string" }
@@ -712,24 +712,24 @@
       "required": [ "profile" ]
     },
 
-    "profileStorageRestriction": {
+    "storageRestriction": {
       "type": "string"
     },
 
-    "profileSizeRestriction": {
+    "sizeRestriction": {
       "type": "string"
     },
 
-    "profileEquivStorage": {
+    "equivStorage": {
       "type": "string"
     },
 
-    "profileSizeInfo": {
+    "sizeInfo": {
       "type": "string"
     },
 
-    "profileSizeInfoRef": {
-      "type": "string"
+    "sizeInfoRef": {
+      "$ref": "#/definitions/NMTOKEN"
     },
 
     "validation": {
@@ -814,7 +814,7 @@
     },
 
     "locQualityIssues": {
-      "description": "a standoff wrapper element to group any number of single issue elements related to the same span of source or target content",
+      "description": "A standoff wrapper element to group any number of single issue elements related to the same span of source or target content",
       "type": "array",
       "items": { "$ref": "#/definitions/locQualityIssue" },
       "minItems": 1
@@ -823,6 +823,7 @@
     "locQualityIssue": {
       "type": "object",
       "properties": {
+        "id": { "$ref": "#/definitions/NMTOKEN" },
         "locQualityIssueType": { "$ref": "#/definitions/locQualityIssueType" },
         "locQualityIssueComment": { "type": "string" },
         "locQualityIssueSeverity": { "type": "number", "minimum": 0, "maximum": 100 },
@@ -912,11 +913,11 @@
       "type": "object",
       "properties": {
         "id": { "$ref": "#/definitions/NMTOKEN" },
-        "fs": { "$ref": "#/definitions/formatStyle" },
-        "subFs": { "$ref": "#/definitions/subFormatStyle" },
         "appliesTo": { "type": "string", "enum": [ "source", "target" ] },
         "category": { "type": "string" },
-        "priority": { "type": "integer", "minimum": 1, "maximum": 10 }
+        "priority": { "type": "integer", "minimum": 1, "maximum": 10 },
+        "fs": { "$ref": "#/definitions/formatStyle" },
+        "subFs": { "$ref": "#/definitions/subFormatStyle" }
       },
       "additionalProperties": false
     },
@@ -948,13 +949,8 @@
       "type": "object",
       "properties": {
         "kind": { "type": "string", "enum": [ "ec" ] },
-        "startRef": { "type": "string" },
+        "startRef": { "type": "#/definitions/NMTOKEN" },
         "id": { "$ref": "#/definitions/NMTOKEN" },
-        "fs": { "$ref": "#/definitions/formatStyle" },
-        "subFs": { "$ref": "#/definitions/subFormatStyle" },
-        "profileEquivStorage": { "$ref": "#/definitions/profileEquivStorage" },
-        "profileSizeInfo": { "$ref": "#/definitions/profileSizeInfo" },
-        "profileSizeInfoRef": { "$ref": "#/definitions/profileSizeInfoRef" },
         "canCopy": { "type": "string", "enum": [ "yes", "no" ] },
         "canDelete": { "type": "string", "enum": [ "yes", "no" ] },
         "canOverlap": { "type": "string", "enum": [ "yes", "no" ] },
@@ -967,7 +963,12 @@
         "subType": { "type": "string" },
         "type": { "$ref": "#/definitions/codeType" },
         "dir": { "$ref": "#/definitions/dir" },
-        "isolated": { "type": "string", "enum": [ "yes", "no" ] }
+        "isolated": { "type": "string", "enum": [ "yes", "no" ] },
+        "fs": { "$ref": "#/definitions/formatStyle" },
+        "subFs": { "$ref": "#/definitions/subFormatStyle" },
+        "equivStorage": { "$ref": "#/definitions/equivStorage" },
+        "sizeInfo": { "$ref": "#/definitions/sizeInfo" },
+        "sizeInfoRef": { "$ref": "#/definitions/sizeInfoRef" }
       },
       "additionalProperties": false,
       "required": [ "kind", "startRef" ]
@@ -989,11 +990,6 @@
       "properties": {
         "kind": { "type": "string", "enum": [ "ph" ] },
         "id": { "$ref": "#/definitions/NMTOKEN" },
-        "fs": { "$ref": "#/definitions/formatStyle" },
-        "subFs": { "$ref": "#/definitions/subFormatStyle" },
-        "profileEquivStorage": { "$ref": "#/definitions/profileEquivStorage" },
-        "profileSizeInfo": { "$ref": "#/definitions/profileSizeInfo" },
-        "profileSizeInfoRef": { "$ref": "#/definitions/profileSizeInfoRef" },
         "canCopy": { "type": "string", "enum": [ "yes", "no" ] },
         "canDelete": { "type": "string", "enum": [ "yes", "no" ] },
         "canReorder": { "type": "string", "enum": [ "yes", "no", "firstNo" ], "default": "yes" },
@@ -1003,7 +999,12 @@
         "dataRef": { "$ref": "#/definitions/NMTOKEN" },
         "subFlows": { "type": "string" },
         "subtype": { "type": "string" },
-        "type": { "$ref": "#/definitions/codeType" }
+        "type": { "$ref": "#/definitions/codeType" },
+        "fs": { "$ref": "#/definitions/formatStyle" },
+        "subFs": { "$ref": "#/definitions/subFormatStyle" },
+        "equivStorage": { "$ref": "#/definitions/equivStorage" },
+        "sizeInfo": { "$ref": "#/definitions/sizeInfo" },
+        "sizeInfoRef": { "$ref": "#/definitions/sizeInfoRef" }
       },
       "additionalProperties": false,
       "required": [ "id", "kind" ]
@@ -1014,14 +1015,6 @@
       "properties": {
         "kind": { "type": "string", "enum": [ "sc" ] },
         "id": { "$ref": "#/definitions/NMTOKEN" },
-        "fs": { "$ref": "#/definitions/formatStyle" },
-        "subFs": { "$ref": "#/definitions/subFormatStyle" },
-        "profileData": { "$ref": "#/definitions/profileData" },
-        "profileStorageRestriction": { "$ref": "#/definitions/profileStorageRestriction" },
-        "profileSizeRestriction": { "$ref": "#/definitions/profileSizeRestriction" },
-        "profileEquivStorage": { "$ref": "#/definitions/profileEquivStorage" },
-        "profileSizeInfo": { "$ref": "#/definitions/profileSizeInfo" },
-        "profileSizeInfoRef": { "$ref": "#/definitions/profileSizeInfoRef" },
         "canCopy": { "type": "string", "enum": [ "yes", "no" ] },
         "canDelete": { "type": "string", "enum": [ "yes", "no" ] },
         "canOverlap": { "type": "string", "enum": [ "yes", "no" ] },
@@ -1034,7 +1027,15 @@
         "subType": { "type": "string" },
         "type": { "$ref": "#/definitions/codeType" },
         "dir": { "$ref": "#/definitions/dir" },
-        "isolated": { "type": "string", "enum": [ "yes", "no" ] }
+        "isolated": { "type": "string", "enum": [ "yes", "no" ] },
+        "fs": { "$ref": "#/definitions/formatStyle" },
+        "subFs": { "$ref": "#/definitions/subFormatStyle" },
+        "data": { "$ref": "#/definitions/data" },
+        "storageRestriction": { "$ref": "#/definitions/storageRestriction" },
+        "sizeRestriction": { "$ref": "#/definitions/sizeRestriction" },
+        "equivStorage": { "$ref": "#/definitions/equivStorage" },
+        "sizeInfo": { "$ref": "#/definitions/sizeInfo" },
+        "sizeInfoRef": { "$ref": "#/definitions/sizeInfoRef" }
       },
       "additionalProperties": false,
       "required": [ "id", "kind" ]
@@ -1045,10 +1046,14 @@
       "properties": {
         "kind": { "type": "string", "enum": [ "sm" ] },
         "id": { "$ref": "#/definitions/NMTOKEN" },
+        "type": { "$ref": "#/definitions/mrkType" },
+        "translate": { "type": "string", "enum": [ "yes", "no" ] },
+        "ref": { "$ref": "#/definitions/IRI" },
+        "value": { "type": "string" },
         "fs": { "$ref": "#/definitions/formatStyle" },
         "subFs": { "$ref": "#/definitions/subFormatStyle" },
-        "profileStorageRestriction": { "$ref": "#/definitions/profileStorageRestriction" },
-        "profileSizeRestriction": { "$ref": "#/definitions/profileSizeRestriction" },
+        "storageRestriction": { "$ref": "#/definitions/storageRestriction" },
+        "sizeRestriction": { "$ref": "#/definitions/sizeRestriction" },
         "allowedCharacters": { "type": "string" },
         "localeFilterList": { "type": "string", "default": "*" },
         "localeFilterType": { "type": "string", "default": "include" },
@@ -1079,16 +1084,12 @@
         "revToolRef": { "$ref": "#/definitions/IRI" },
         "tool": { "type": "string" },
         "toolRef": { "$ref": "#/definitions/IRI" },
-        "domains": { "$ref": "#/definitions/domains" },
         "taClassRef": { "$ref": "#/definitions/IRI" },
         "taConfidence": { "type": "number", "minimum": 0, "maximum": 1 },
         "taSource": { "type": "string" },
         "taIdent": { "type": "string" },
         "taIdentRef": { "$ref": "#/definitions/IRI" },
-        "type": { "$ref": "#/definitions/mrkType" },
-        "translate": { "type": "string", "enum": [ "yes", "no" ] },
-        "ref": { "$ref": "#/definitions/IRI" },
-        "value": { "type": "string" }
+        "domains": { "$ref": "#/definitions/domains" }
       },
       "additionalProperties": true,
       "required": [ "id", "kind" ]
