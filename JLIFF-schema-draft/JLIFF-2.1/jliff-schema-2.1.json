@@ -815,9 +815,17 @@
 
     "its_locQualityIssues": {
       "description": "A standoff wrapper element to group any number of single issue elements related to the same span of source or target content",
-      "type": "array",
-      "items": { "$ref": "#/definitions/its_locQualityIssue" },
-      "minItems": 1
+      "type": "object",
+      "properties": {
+        "id": { "$ref": "#/definitions/NMTOKEN" },
+        "items": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/its_locQualityIssue" },
+          "minItems": 1
+        }
+      },
+      "additionalProperties": false,
+      "required": [ "items" ]
     },
 
     "its_locQualityIssue": {
