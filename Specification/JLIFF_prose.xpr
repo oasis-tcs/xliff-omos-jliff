@@ -16,6 +16,7 @@
     <projectTree name="JLIFF_prose.xpr">
         <folder masterFiles="true" name="Master Files">
             <file name="docbook/dbgenent.mod"/>
+            <file name="../../xliff-omos-om/proseSpec/docbook/dbgenent.mod"/>
             <file name="jliff.xml"/>
         </folder>
         <folder path="."/>
