@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="segmentItem">
+    <title>segmentItem</title>
+    <para>Container for a specific revision associated with an element referenced from
+    the enclosing <olink targetdoc="revisions" targetptr="revisions"
+      ><code>&lt;revisions></code></olink> element. <link linkend="segmentItem"
+        >&lt;segmentItem></link> has a simplified data model compared to <olink targetdoc="unitItem.xml" targetptr="unitItem"><code>&lt;unitItem</code></olink>) to
+    cater primarily for target changes without changing segmentation while at the same time tracking segment states and/or substates.</para>
+    <para><emphasis>Contains:</emphasis></para>
+  <simplelist>
+    <member>- Zero or one <olink targetdoc="../strcutural/source.xml" targetptr="source"
+        ><code>&lt;xlf:source></code></olink> elements followed by:</member> 
+      <member>- Exactly one <olink targetdoc="../strcutural/target.xml"
+      targetptr="target"><code>&lt;xlf:target></code></olink> element.
+    </member>
+  </simplelist>
+ 
+  
+
+    <para><emphasis>Attributes:</emphasis></para>
+    <simplelist>
+        <member>- <olink targetdoc="../../attributes/change-tracking/ctr_property.xml" targetptr="ctr_property"><code>property</code></olink>, <glossterm>required</glossterm></member>
+        <member>- attributes from other namespaces, <glossterm>optional</glossterm></member>
+    </simplelist>
+  
+  <itemizedlist>
+    <title>Constraints</title>
+    <!--mixed data prohibited at xsd level, so no need for an additional Constraint to that
+        effect-->
+    <listitem>
+      <para>The value of the <firstterm>required</firstterm> attribute <olink
+          targetdoc="../../attributes/change-tracking/ctr_property.xml" targetptr="ctr_property"
+            ><code>property</code></olink>
+        <glossterm>must</glossterm> be unique within the parent <olink targetdoc="revision"
+          targetptr="revision"><code>&lt;revision></code></olink> element.</para>
+    </listitem>
+    <listitem>
+      <para>The <glossterm>required</glossterm> attribute <olink
+          targetdoc="../../attributes/change-tracking/ctr_property.xml" targetptr="ctr_property"
+            ><code>property</code></olink> is restricted to the value <code>content</code>, any
+        other values <glossterm>must not</glossterm> be used on <link linkend="segmentItem"
+            ><code>&lt;segmentItem></code></link>.</para>
+    </listitem>
+    
+    <listitem>
+      <para><link linkend="segmentItem"><code>&lt;segmentItem></code></link>
+        <glossterm>must not</glossterm> contain any unhandled orphaned <firstterm>XLIFF
+          Core</firstterm>
+        <olink targetdoc="../inline.xml" targetptr="inlineelements">Inline Elements</olink>.</para>
+    </listitem>
+  </itemizedlist>
+  
+  <warning>
+    <para> If it appears that the <link linkend="segmentItem"><code>&lt;segmentItem></code></link>
+      needs to contain an unhandled orphan code, then the tracked content is not expressible within
+      a <link linkend="segmentItem"><code>&lt;segmentItem></code></link> and tracking via a <olink
+        targetdoc="unitItem" targetptr="unitItem"><code>&lt;unitItem></code></olink> is
+      needed.</para>
+  </warning>
+  
+  <itemizedlist>
+    
+    <title>Processing Requirements</title>
+
+    <listitem>
+      <para><firstterm>Modifiers</firstterm> <glossterm>may</glossterm> create <link linkend="segmentItem"><code>&lt;segmentItem></code></link> elements with attributes.</para>
+    </listitem>
+
+    <listitem>
+      <para><firstterm>Modifiers</firstterm> <glossterm>should not</glossterm> change <link linkend="segmentItem"><code>&lt;segmentItem></code></link> and its attribute defined in this module.</para>
+    </listitem>
+
+    <listitem>
+      <para><firstterm>Modifiers</firstterm> <glossterm>should not</glossterm> remove <link linkend="segmentItem"><code>&lt;segmentItem></code></link> and its attribute defined in this module,
+        unless they are removed as part of a <olink targetdoc="../../elements/change-tracking/revision.xml" targetptr="revision"><code>&lt;revision></code></olink> element removed according to its own processing requirements.</para>
+     </listitem>
+
+  </itemizedlist>
+  
+  
+</section>

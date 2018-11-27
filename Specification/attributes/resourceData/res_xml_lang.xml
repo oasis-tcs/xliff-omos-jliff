@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="res_xml_lang">
+    <title>xml:lang</title>
+    
+    <para>Language - The xml:lang attribute specifies the language variant of the text of a given element. 
+        For example: <code>xml:lang="fr-FR"</code> indicates the French language as spoken in France.</para>
+    
+    <para><emphasis>Value description:</emphasis> A language code as described in <olink targetdoc="../../xliff21.xml"
+        targetptr="bcp47">[BCP 47]</olink>.</para>
+    
+    <para><emphasis>Default value:</emphasis> undefined</para>
+    
+    <para><emphasis>Used in:</emphasis> <olink targetdoc="../../elements/resourcedata/res_source.xml" targetptr="res_source"><code>&lt;source></code></olink>, 
+        <olink targetdoc="../../elements/resourcedata/res_target.xml" targetptr="res_target"><code>&lt;target></code></olink>, and 
+        <olink targetdoc="../../elements/resourcedata/reference.xml" targetptr="res_reference"><code>&lt;reference></code></olink>.</para>
+</section>
+

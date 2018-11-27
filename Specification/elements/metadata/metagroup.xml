@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="metagroup">
+    <title>metaGroup</title>
+    <para>Provides a way to organize metadata into a structured hierarchy.</para>
+    <para><emphasis>Contains:</emphasis></para>
+    <simplelist>
+        <member>- One or more <olink targetdoc="metagroup.xml" targetptr="metagroup"
+                    ><code>&lt;metaGroup></code></olink> or <olink targetdoc="meta.xml"
+                targetptr="meta"><code>&lt;meta></code></olink> elements in any order.</member>
+    </simplelist>
+    <para><emphasis>Attributes:</emphasis></para>
+    <simplelist>
+	     <member>- <olink targetdoc="../../attributes/meta_id.xml" targetptr="meta_id"><code>id</code></olink>,
+                <glossterm>optional</glossterm></member>
+        <member>- <olink targetdoc="../../atributes/meta_category.xml" targetptr="meta_category"><code>category</code></olink>, <glossterm>optional</glossterm>
+    </member>
+	<member>- <olink targetdoc="../../atributes/meta_appliesto.xml" targetptr="meta_appliesto"><code>appliesTo</code></olink>, <glossterm>optional</glossterm>
+    </member>
+  </simplelist>
+</section>

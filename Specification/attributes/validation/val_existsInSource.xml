@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="val_existsInSource">
+  <title>existsInSource</title>
+
+  <para>When this rule attribute is used with another rule attribute and is set to <code>yes</code>, it specifies that for the rule to succeed, the condition
+  <glossterm>must</glossterm> be satisfied in both source and target text. This rule attribute is valid only when used with one of the following rule attributes:
+      <olink targetdoc="../../attributes/validation/val_isPresent.xml" targetptr="val_isPresent"><code>isPresent</code></olink>,
+      <olink targetdoc="../../attributes/validation/val_startsWith.xml" targetptr="val_startsWith"><code>startsWith</code></olink>, or
+      <olink targetdoc="../../attributes/validation/val_endsWith.xml" targetptr="val_endsWith"><code>endsWith</code></olink>.</para>
+
+<para>When <link linkend="val_existsInSource"><code>existsInSource</code></link> is set to
+    <code>no</code>, it will have no impact on execution of rules, except for overriding rules where
+    <link linkend="val_existsInSource"><code>existsInSource</code></link> is set to <code>yes</code> on a higher level.</para>
+    <para>For example, the following are valid:</para>
+ <programlisting>
+&lt;unit id="1"&gt;
+  &lt;val:validation&gt;
+    &lt;val:rule endsWith=":" existsInSource="yes" /&gt;
+  &lt;/val:validation&gt;
+  &lt;segment id="1"&gt;
+    &lt;source&gt;Choose an option in the online store:&lt;/source&gt;
+    &lt;target&gt;Escolha uma opção na loja online:&lt;/target&gt;
+  &lt;/segment&gt;
+&lt;/unit&gt;
+...
+&lt;unit id="2"&gt;
+  &lt;val:validation&gt;
+    &lt;val:rule endsWith=":" existsInSource="no" /&gt;
+  &lt;/val:validation&gt;
+  &lt;segment id="1"&gt;
+    &lt;source&gt;Choose an option in the online store.&lt;/source&gt;
+    &lt;target&gt;Escolha uma opção na loja online:&lt;/target&gt;
+  &lt;/segment&gt;
+&lt;/unit&gt;
+ </programlisting>
+<para>Whereas the following is invalid:</para>
+<programlisting>
+&lt;unit id="1"&gt;
+  &lt;val:validation&gt;
+    &lt;val:rule endsWith=":" existsInSource="yes" /&gt;
+  &lt;/val:validation&gt;
+  &lt;segment id="1"&gt;
+    &lt;source&gt;Choose an option in the online store.&lt;/source&gt;
+    &lt;target&gt;Escolha uma opção na loja online:&lt;/target&gt;
+  &lt;/segment&gt;
+&lt;/unit&gt;
+ </programlisting>
+  <para><emphasis>Value description:</emphasis> <code>yes</code> or <code>no</code></para>
+  <para><emphasis>Default value:</emphasis> <code>no</code></para>
+  <para><emphasis>Used in:</emphasis> <olink targetdoc="../../elements/validation/rule.xml" targetptr="rule"><code>&lt;rule></code></olink></para>
+
+  <itemizedlist>
+    <title>Constraints</title>
+
+    <listitem><para>
+      When <link linkend="val_existsInSource"><code>existsInSource</code></link> is specified, exactly one of
+      <itemizedlist>
+        <listitem><para><olink targetdoc="../../attributes/validation/val_isPresent.xml" targetptr="val_isPresent"><code>isPresent</code></olink></para></listitem>
+        <listitem><para><olink targetdoc="../../attributes/validation/val_startsWith.xml" targetptr="val_startsWith"><code>startsWith</code></olink></para></listitem>
+        <listitem><para><olink targetdoc="../../attributes/validation/val_endsWith.xml" targetptr="val_endsWith"><code>endsWith</code></olink></para></listitem>
+      </itemizedlist>
+      is <glossterm>required</glossterm> in the same <olink targetdoc="../../elements/validation/rule.xml" targetptr="rule"><code>&lt;val:rule></code></olink> element.
+    </para></listitem>
+    <!--
+    <listitem><para>When one of the following:
+      <itemizedlist>
+        <listitem><para><olink targetdoc="../../attributes/validation/val_mustLoc.xml" targetptr="val_mustLoc"><code>mustLoc</code></olink></para></listitem>
+        <listitem><para><olink targetdoc="../../attributes/validation/val_noLoc.xml" targetptr="val_noLoc"><code>noLoc</code></olink></para></listitem>
+      </itemizedlist>
+      is specified, the attribute <link linkend="val_existsInSource"><code>existsInSource</code></link> <glossterm>must not</glossterm>
+      occur in the same <olink targetdoc="../../elements/validation/rule.xml" targetptr="rule"><code>&lt;val:rule></code></olink> element.
+      </para></listitem>
+      -->
+  </itemizedlist>
+
+</section>

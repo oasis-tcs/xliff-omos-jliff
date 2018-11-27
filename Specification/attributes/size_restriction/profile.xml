@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="slr_profile">
+  <title>profile</title>
+
+  <para>This attribute is used on the <code>&lt;data></code> element to indicate what profile the contents of that element apply to.</para>
+
+  <para><emphasis>Value description:</emphasis> Name of a restriction profile</para>
+
+  <para><emphasis>Default value:</emphasis> undefined</para>
+
+  <para><emphasis>Used in:</emphasis><olink targetdoc="../../elements/size_restriction/data.xml" targetptr="slr_data"><code>&lt;data&gt;</code></olink>.</para>
+</section>

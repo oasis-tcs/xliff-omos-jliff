@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+<!--the document properties were transferred to "dockbook/dbgenent.mod"-->
+                         ]>
+<section id="validation_module">
+  <title>Validation Module</title>
+  <section>
+    <title>Introduction</title>
+    <para>This module defines a specific set of validation rules that can be applied to target text both globally and locally. Further constraints can be defined that allow rules to be applied to target text based on conditions in the source text or disabled to override a global scope.</para>
+  </section>
+    <section>
+        <title>Module Namespace and Validation Artifacts</title>
+        <para>The namespace for the Validation module is:
+        <code>urn:oasis:names:tc:xliff:validation:2.0</code></para>
+      <para>Schema and Schematron for this module are available at <ulink
+        url="&this-loc;/schemas/validation.xsd"
+        >&this-loc;/schemas/validation.xsd</ulink> and <ulink
+          url="&this-loc;/schemas/validation.sch"
+          >&this-loc;/schemas/validation.sch</ulink>.</para>
+    </section>
+
+    <section>
+      <title>Module Fragment Identification Prefix</title>
+      <para>The fragment identification prefix for the Validation module is: <code>val</code></para>
+    </section>
+
+    <section>
+    <title>Module Elements</title>
+    <para>The elements defined in the Validation module are:
+        <olink targetdoc="../../elements/validation/validation.xml" targetptr="validation"><code>&lt;validation></code></olink> and
+        <olink targetdoc="../../elements/validation/rule.xml" targetptr="rule"><code>&lt;rule></code></olink>.</para>
+<section><!-- gen. 20140318 -->
+  <title>Tree Structure</title>
+  <para>Legend:</para>
+  <simplelist type="vert">
+    <member>+ = one or more</member>
+  </simplelist>
+  <programlisting format="linespecific">
+<olink targetdoc="../../elements/validation/validation.xml" targetptr="validation"><code>&lt;validation></code></olink>
+|
++---<olink targetdoc="../../elements/validation/rule.xml" targetptr="rule"><code>&lt;rule></code></olink> +
+
+
+  </programlisting>
+</section>
+    <xi:include href="../../elements/validation/validation.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../elements/validation/rule.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </section>
+
+    <section>
+    <title>Module Attributes</title>
+    <para>The attributes defined in the Validation module are:
+         <olink targetdoc="../../attributes/validation/val_isPresent.xml" targetptr="val_isPresent"><code>isPresent</code></olink>,
+         <olink targetdoc="../../attributes/validation/val_occurs.xml" targetptr="val_occurs"><code>occurs</code></olink>,
+         <olink targetdoc="../../attributes/validation/val_isNotPresent.xml" targetptr="val_isNotPresent"><code>isNotPresent</code></olink>,
+         <olink targetdoc="../../attributes/validation/val_startsWith.xml" targetptr="val_startsWith"><code>startsWith</code></olink>,
+         <olink targetdoc="../../attributes/validation/val_endsWith.xml" targetptr="val_endsWith"><code>endsWith</code></olink>,
+         <olink targetdoc="../../attributes/validation/val_existsInSource.xml" targetptr="val_existsInSource"><code>existsInSource</code></olink>,
+         <olink targetdoc="../../attributes/validation/val_caseSensitive.xml" targetptr="val_caseSensitive"><code>caseSensitive</code></olink>,
+         <olink targetdoc="../../attributes/validation/val_normalization.xml" targetptr="val_normalization"><code>normalization</code></olink>, and
+         <olink targetdoc="../../attributes/validation/val_disabled.xml" targetptr="val_disabled"><code>disabled</code></olink>.
+      </para>
+
+    <xi:include href="../../attributes/validation/val_isPresent.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/validation/val_occurs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/validation/val_isNotPresent.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/validation/val_startsWith.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/validation/val_endsWith.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/validation/val_existsInSource.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+
+    <!--<xi:include href="../../attributes/validation/val_mustLoc.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>-->
+    <!--<xi:include href="../../attributes/validation/val_noLoc.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>-->
+    <xi:include href="../../attributes/validation/val_caseSensitive.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/validation/val_normalization.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/validation/val_disabled.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  </section>
+
+
+
+</section>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="itsm_lang">
+    <title>itsm:lang</title>
+    
+    <para>Inline language information - the <code>itsm:lang</code> attribute specifies <emphasis>an
+            inline foreign language span</emphasis> within the source or target content of the
+        otherwise bilingual <firstterm>XLIFF Document</firstterm>. For example:
+        <code>itsm:lang="fr-FR"</code> indicates the French language as spoken in France.</para>
+    <note>
+            <para>This is NEVER used on structural elements that have their Language Information set
+            by the <firstterm>XLIFF Core</firstterm>
+            <olink targetdoc="../srcLang.xml" targetptr="srcLang"><code>xlf:srcLang</code></olink>
+            and <olink targetdoc="../trgLang.xml" targetptr="trgLang"
+                ><code>xlf:trgLang</code></olink> attributes. It is not advisable to use this
+            attribute on structural elements even outside of XLIFF where the Language Information is
+            typically given by the <code>xml:lang</code> attribute.</para>
+        </note>
+    
+    <para><emphasis>Value description:</emphasis> A language code as described in <olink targetdoc="../xliff21.xml"
+        targetptr="bcp47">[BCP 47]</olink>.</para>
+    
+    <para><emphasis>Default value:</emphasis></para>
+    
+            
+            <para>The value of the <olink targetdoc="../xml_lang" targetptr="xml_lang"
+                ><code>xml:lang</code></olink> or <code>itsm:lang</code> attribute set or inherited
+        on the parent element of the <olink targetdoc="../../elements/inline/mrk.xml"
+            targetptr="mrk"><code>&lt;mrk></code></olink> or <olink
+            targetdoc="../../elements/inline/sm.xml" targetptr="sm"><code>&lt;sm></code></olink>
+        element in question.</para>                
+        
+    
+    <para><emphasis>Used in:</emphasis>
+        <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
+            ><code>&lt;mrk></code></olink> and <olink targetdoc="../../elements/inline/sm.xml"
+            targetptr="sm"><code>&lt;sm></code></olink>.</para>
+    <para>See the <olink targetdoc="../../modules/itsm/Language_Information.xml" targetptr="langAnnotation">ITS Language Information Annotation</olink> for the normative usage description of this
+        attribute.</para>
+    
+  <para>
+      <note>
+          <para>
+                <code>itsm:lang</code> is an attribute analogical to <olink
+                    targetdoc="../xml_lang.xml" targetptr="xml_lang"><code>xml:lang</code></olink>.
+                Unlike <olink targetdoc="../xml_lang.xml" targetptr="xml_lang"
+                    ><code>xml:lang</code></olink>, it is allowed on XLIFF inline <olink
+                    targetdoc="../../inline/inline.xml" targetptr="annotations">Annotations</olink>.
+                The normative behavior of this attribute results from the <firstterm>XLIFF
+                    Core</firstterm> behavior as further specified by the <olink
+                    targetdoc="../../modules/itsm/specifcation.xml" targetptr="langAnnotation">ITS
+                    Language Information Annotation</olink>.</para>
+      </note>
+      <warning>
+          <para>This attribute belongs to the <code>urn:oasis:names:tc:xliff:itsm:2.1</code>
+                namespace that is being prefixed with <code>itsm:</code> throughout this
+                specification, unlike the original W3C ITS namespace
+                    <code>https://www.w3.org/2005/11/its/</code> that is being prefixed with
+                    <code>its:</code>.</para>
+      </warning>
+  </para>
+</section>

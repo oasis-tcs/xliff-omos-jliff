@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="dir">
+  <title>dir</title>
+
+  <para>Directionality - indicates the directionality of content.</para>
+
+  <para><emphasis>Value description:</emphasis>
+    <code>ltr</code> (Left-To-Right), <code>rtl</code> (Right-To-Left), or <code>auto</code>
+    (determined heuristically, based on the first strong directional character in scope, see <olink
+      targetdoc="xliff20.xml" targetptr="uax9">[UAX #9]</olink>).</para>
+
+  <para><emphasis>Default value:</emphasis> default values for this attribute
+  depend on the element in which it is used:</para>
+
+  <itemizedlist>
+    <listitem>
+      <para>When used in a <olink targetdoc="../elements/inline/pc.xml" targetptr="pc"
+            ><code>&lt;pc&gt;</code></olink>, <olink targetdoc="../elements/inline/sc.xml"
+          targetptr="sc"><code>&lt;sc&gt;</code></olink>, or <olink
+          targetdoc="../elements/inline/ec.xml" targetptr="ec"><code>&lt;ec&gt;</code></olink>
+        element that has a <olink targetdoc="../elements/structural/source.xml" targetptr="source"
+            ><code>&lt;source></code></olink> element as its parent:</para>
+
+      <para>The value of the <olink targetdoc="srcdir.xml" targetptr="srcdir"
+          ><code>srcDir</code></olink> attribute of the <olink
+          targetdoc="../elements/structural/unit.xml" targetptr="unit"
+          ><code>&lt;unit&gt;</code></olink> element, in which the elements are located.</para>
+    </listitem>
+
+    <listitem>
+      <para>When used in a <olink targetdoc="../elements/inline/pc.xml" targetptr="pc"
+            ><code>&lt;pc&gt;</code></olink>, <olink targetdoc="../elements/inline/sc.xml"
+          targetptr="sc"><code>&lt;sc&gt;</code></olink>, or <olink
+          targetdoc="../elements/inline/ec.xml" targetptr="ec"><code>&lt;ec&gt;</code></olink>
+        element that has a <olink targetdoc="../elements/structural/target.xml" targetptr="target"
+            ><code>&lt;target></code></olink> element as its parent: </para>
+
+      <para>The value of the <olink targetdoc="trgdir.xml" targetptr="trgdir"
+          ><code>trgDir</code></olink> attribute of the <olink
+          targetdoc="../elements/structural/unit.xml" targetptr="unit"
+          ><code>&lt;unit&gt;</code></olink> element, in which the elements are located.</para>
+    </listitem>
+
+    <listitem>
+      <para>When used in a <olink targetdoc="../elements/inline/pc.xml" targetptr="pc"
+            ><code>&lt;pc></code></olink>, <olink targetdoc="../elements/inline/sc.xml"
+          targetptr="sc"><code>&lt;sc></code></olink>, or <olink
+          targetdoc="../elements/inline/ec.xml" targetptr="ec"><code>&lt;ec&gt;</code></olink>
+        element that has a <olink targetdoc="../elements/inline/pc.xml" targetptr="pc"
+            ><code>&lt;pc></code></olink> element as its parent:</para>
+
+      <para>The value of the <olink targetdoc="dir.xml" targetptr="dir"><code>dir</code></olink>
+        attribute of the parent <olink targetdoc="../elements/inline/pc.xml" targetptr="pc"
+            ><code>&lt;pc&gt;</code></olink> element.</para>
+    </listitem>
+
+    <listitem>
+      <para>When used in <olink targetdoc="../elements/structural/data.xml"
+      targetptr="data"><code>&lt;data&gt;</code></olink>:</para>
+
+      <para>The value <code>auto</code>.</para>
+    </listitem>
+  </itemizedlist>
+
+  <para><emphasis>Used in:</emphasis> 
+    <!-- killed on source and target to simplify re-segmentation PRs and to make use of BiDi control characters less likely 
+      <olink
+  targetdoc="../elements/structural/source.xml"
+  targetptr="source"><code>&lt;source&gt;</code></olink>, <olink
+  targetdoc="../elements/structural/target.xml"
+  targetptr="target"><code>&lt;target&gt;</code></olink>,--> <olink
+  targetdoc="../elements/structural/data.xml"
+  targetptr="data"><code>&lt;data&gt;</code></olink>, <olink
+  targetdoc="../elements/inline/pc.xml"
+  targetptr="pc"><code>&lt;pc&gt;</code></olink>, <olink
+  targetdoc="../elements/inline/sc.xml"
+  targetptr="sc"><code>&lt;sc&gt;</code></olink>, and <olink
+    targetdoc="../elements/inline/ec.xml"
+    targetptr="ec"><code>&lt;ec&gt;</code></olink>.</para>
+</section>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="itsm_locQualityIssueProfileRef">
+    <title>locQualityIssueProfileRef</title>
+    
+    <para>Localization Quality Issue Quality Model Profile Reference - the <code>locQualityIssueProfileRef</code> attribute
+        is the <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+        defined <code>locQualityIssueProfileRef</code> attribute. </para>
+    <para> This attribute references a quality model that has been used to identify and evaluate a particular issue.</para>
+    
+    <para><emphasis>Value description:</emphasis> IRI.</para>
+        
+    <para><emphasis>Default value:</emphasis> undefined</para>
+    
+    <note><para>It is strongly advised that the IRI value of the 
+        <link linkend="itsm_locQualityIssueProfileRef">locQualityIssueProfileRef</link> attribute is
+            resolvable, so that human evaluators can find out about the referenced Quality Model.</para> </note>
+    
+    
+    <para><emphasis>Used in:</emphasis>
+        <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
+            ><code>&lt;mrk></code></olink> and
+        <olink targetdoc="../../elements/inline/sm.xml"
+            targetptr="sm"><code>&lt;sm></code></olink>, or in <olink targetdoc="../../elements/itsm/itsm_locQualityIssue.xml"
+                targetptr="itsm_locQualityIssue"><code>&lt;locQualityIssue></code></olink>.</para>
+    
+    
+    <para>See the <olink targetdoc="../../modules/itsm/Localization_Quality_Issue.xml" targetptr="lqiAnnotation"
+        >ITS Localization Issue Annotation</olink> for the normative usage description of this
+        attribute when used inline; advanced Constraints follow from that normative usage
+        description.</para>
+    <para>See <olink targetdoc="../../elements/itsm/itsm_locQualityIssue.xml"
+            targetptr="itsm_locQualityIssue"><code>&lt;locQualityIssue></code></olink> for standoff
+        usage Constraints.</para>
+</section>

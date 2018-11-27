@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="startref">
+  <title>startRef</title>
+
+  <para>Start code or marker reference - The <olink targetdoc="id.xml" targetptr="id"
+        ><code>id</code></olink> of the <olink targetdoc="../elements/inline/sc.xml" targetptr="sc"
+        ><code>&lt;sc&gt;</code></olink> element or the <olink targetdoc="../elements/inline/sm.xml"
+      targetptr="sm"><code>&lt;sm&gt;</code></olink> element a given <olink
+      targetdoc="../elements/inline/ec.xml" targetptr="ec"><code>&lt;ec&gt;</code></olink> element
+    or <olink targetdoc="../elements/inline/em.xml" targetptr="em"><code>&lt;em&gt;</code></olink>
+    element corresponds.</para>
+
+  <para><emphasis>Value description:</emphasis> NMTOKEN.</para>
+
+  <para><emphasis>Default value:</emphasis> undefined</para>
+
+  <para><emphasis>Used in:</emphasis> <olink
+  targetdoc="../elements/inline/ec.xml"
+  targetptr="ec"><code>&lt;ec&gt;</code></olink>, <olink
+  targetdoc="../elements/inline/em.xml"
+  targetptr="em"><code>&lt;em&gt;</code></olink>.</para>
+
+  <para><emphasis>Example:</emphasis></para>
+
+  <programlisting>
+&lt;unit id="1"&gt;
+  &lt;segment&gt;
+    &lt;source&gt;&lt;sc id="1"/&gt;Bold, &lt;sc id="2"/&gt;both
+        &lt;ec startRef="1"/&gt;, italics&lt;ec startRef="2"/&gt;&lt;/source&gt;
+  &lt;/segment&gt;
+&lt;/unit&gt;
+</programlisting>
+</section>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         <!--the document properties were transferred to "dockbook/dbgenent.mod"-->
+                         ]>
+<section id="resourceData_module">
+  <title>Resource Data Module</title>
+    <section>
+      <title>Introduction</title>
+      <para>The Resource Data module provides a mechanism for referencing external resource data that <glossterm>may</glossterm> need
+        to be modified or used as contextual reference during translation.</para>
+    </section>
+  <section>
+        <title>Module Namespace and Validation Artifacts</title>
+        <para>The namespace for the Resource Data module is: <code>urn:oasis:names:tc:xliff:resourcedata:2.0</code></para>
+    <para>Schema and Schematron for this module are available at <ulink
+      url="&this-loc;/schemas/resource_data.xsd"
+      >&this-loc;/schemas/resource_data.xsd</ulink> and <ulink
+        url="&this-loc;/schemas/resource_data.sch"
+        >&this-loc;/schemas/resource_data.sch</ulink>.</para>
+    </section>
+
+  <section>
+    <title>Module Fragment Identification Prefix</title>
+    <para>The fragment identification prefix for the Resource Data module is: <code>res</code></para>
+  </section>
+
+    <section>
+    <title>Module Elements</title>
+    <para>The elements defined in the Resource Data module are: <olink
+        targetdoc="../../elements/resourcedata/resourceData.xml" targetptr="res_resourceData"
+          ><code>&lt;resourceData></code></olink>, <olink
+        targetdoc="../../elements/resourcedata/resourceItemRef.xml" targetptr="res_resourceItemRef"
+          ><code>&lt;resourceItemRef></code></olink>, <olink
+        targetdoc="../../elements/resourcedata/resourceItem.xml" targetptr="res_resourceItem"
+          ><code>&lt;resourceItem></code></olink>, <olink
+        targetdoc="../../elements/resourcedata/res_source.xml" targetptr="res_source"
+          ><code>&lt;source></code></olink>, <olink
+        targetdoc="../../elements/resourcedata/res_target.xml" targetptr="res_target"
+          ><code>&lt;target></code></olink>, and <olink
+        targetdoc="../../elements/resourcedata/reference.xml" targetptr="res_reference"
+          ><code>&lt;reference></code></olink>. </para>
+<section><!-- gen. 20140318 -->
+  <title>Tree Structure</title>
+  <para>Legend:</para>
+  <simplelist type="vert">
+    <member>? = zero or one</member>
+    <member>* = zero, one or more</member>
+  </simplelist>
+  <programlisting format="linespecific">
+<olink targetdoc="../../elements/resourcedata/resourceData.xml" targetptr="res_resourceData"><code>&lt;resourceData></code></olink>
+|
++---<olink targetdoc="../../elements/resourcedata/resourceItemRef.xml" targetptr="res_resourceItemRef"><code>&lt;resourceItemRef></code></olink> *
+|
++---<olink targetdoc="../../elements/resourcedata/resourceItem.xml" targetptr="res_resourceItem"><code>&lt;resourceItem></code></olink> *
+  |
+  +---<olink targetdoc="../../elements/resourcedata/source.xml" targetptr="res_source"><code>&lt;source></code></olink> ?
+  | |
+  | +---&lt;other> *
+  |
+  +---<olink targetdoc="../../elements/resourcedata/target.xml" targetptr="res_target"><code>&lt;target></code></olink> ?
+  | |
+  | +---&lt;other> *
+  |
+  +---<olink targetdoc="../../elements/resourcedata/reference.xml" targetptr="res_reference"><code>&lt;reference></code></olink> *
+
+
+  </programlisting>
+</section>
+    <xi:include href="../../elements/resourcedata/resourceData.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+          <xi:include href="../../elements/resourcedata/resourceItemRef.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../elements/resourcedata/resourceItem.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../elements/resourcedata/res_source.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../elements/resourcedata/res_target.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../elements/resourcedata/reference.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  </section>
+
+    <section>
+    <title>Module Attributes</title>
+    <para>The attributes defined in the Resource Data module are: <olink
+        targetdoc="../../attributes/resourceData/res_id.xml" targetptr="res_id"
+        ><code>id</code></olink>, <olink targetdoc="../../attributes/resourceData/res_xml_lang.xml"
+        targetptr="res_xml_lang"><code>xml:lang</code></olink>, <olink
+        targetdoc="../../attributes/resourceData/res_mimeType.xml" targetptr="res_mimeType"
+          ><code>mimeType</code></olink>, <olink
+        targetdoc="../../attributes/resourceData/res_context.xml" targetptr="res_context"
+          ><code>context</code></olink>, <olink
+        targetdoc="../../attributes/resourceData/res_href.xml" targetptr="res_href"
+          ><code>href</code></olink>, and <olink
+        targetdoc="../../attributes/resourceData/res_ref.xml"
+        targetptr="res_ref"><code>ref</code></olink>. </para>
+    <xi:include href="../../attributes/resourceData/res_id.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/resourceData/res_xml_lang.xml"
+	  xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/resourceData/res_mimeType.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/resourceData/res_context.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/resourceData/res_href.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/resourceData/res_ref.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  </section>
+
+    <section>
+      <title>Examples</title>
+
+      <para>In this example, the <olink targetdoc="../../elements/resourceData/res_resourceData.xml" targetptr="res_resourceData"><code>&lt;resourceData></code></olink>
+      module at <olink targetdoc="../../elements/structural/file.xml" targetptr="file"><code>&lt;file></code></olink> level references external XML that contains resource data
+      for a user interface control. The control is the container for the text “Load Registry Config” and needs to be resized to accommodate the increased length of
+      the string due to translation. The <olink targetdoc="../../elements/resourceItemRef/res_resourceItemRef.xml" targetptr="res_resourceData"><code>&lt;resourceItemRef></code></olink>
+      element contained in the <olink targetdoc="../../elements/resourceData/res_resourceData.xml" targetptr="res_resourceData"><code>&lt;resourceData></code></olink>
+      module at <olink targetdoc="../../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink> level provides the reference between them.
+      The name attribute of the <olink targetdoc="../../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink> element could serve as the key for
+      an editor to associate <olink targetdoc="../../elements/resourcedata/res_source.xml" targetptr="res_source"><code>&lt;source></code></olink> and
+      <olink targetdoc="../../elements/resourcedata/res_target.xml" targetptr="res_target"><code>&lt;target></code></olink> text with the resource data contained in the referenced
+      XML and display it for modification.</para>
+
+<programlisting>
+<!-- &lt;file&gt;&lt;res:resourceData&gt;&lt;res:resourceItem id="r1" mimeType="text/xml" context="no"&gt;&lt;res:source href="resources\en\registryconfig.resources.xml" /&gt;&lt;res:target href="resources\de\registryconfig.resources.xml" /&gt;&lt;/res:resourceItem&gt;&lt;/res:resourceData&gt;&lt;unit id="1" name="130;WIN_DLG_CTRL_"&gt;&lt;segment id="1" state="translated"&gt;&lt;source&gt;Load Registry Config&lt;/source&gt;&lt;target&gt;Registrierungskonfiguration laden&lt;/target&gt;&lt;/segment&gt;&lt;res:resourceData&gt;&lt;res:resourceItemRef ref="r1" /&gt;&lt;/res:resourceData&gt;&lt;/unit&gt;&lt;/file&gt; -->
+&lt;file id="f1">
+  &lt;res:resourceData>
+    &lt;res:resourceItem id="r1" mimeType="text/xml" context="no">
+      &lt;res:source href="resources\en\registryconfig.resources.xml" />
+      &lt;res:target href="resources\de\registryconfig.resources.xml" />
+    &lt;/res:resourceItem>
+  &lt;/res:resourceData>
+  &lt;unit id="1" name="130;WIN_DLG_CTRL_">
+    &lt;res:resourceData>
+      &lt;res:resourceItemRef ref="r1" />
+    &lt;/res:resourceData>
+    &lt;segment id="1" state="translated">
+      &lt;source>Load Registry Config&lt;/source>
+      &lt;target>Registrierungskonfiguration laden&lt;/target>
+    &lt;/segment>
+  &lt;/unit>
+&lt;/file>
+ </programlisting>
+
+      <para>In this example, the <olink targetdoc="../../elements/resourceData/res_resourceData.xml" targetptr="res_resourceData"><code>&lt;resourceData></code></olink>
+      module at the <olink targetdoc="../../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink> level contains elements from another
+      namespace (abc), which could be displayed for modification in an editor that understands how to process the namespace.</para>
+
+<programlisting>
+<!-- &lt;file&gt;&lt;unit id="1"&gt;&lt;segment id="1" state="translated"&gt;&lt;source&gt;Load Registry Config&lt;/source&gt;&lt;target&gt;Registrierungskonfiguration laden&lt;/target&gt;&lt;/segment&gt;&lt;res:resourceData&gt;&lt;res:resourceItem id="r1" context="no"&gt;&lt;res:source&gt;&lt;abc:resourceType&gt;button&lt;/abc:resourceType&gt;&lt;abc:resourceHeight&gt;40&lt;/abc:resourceHeight&gt;&lt;abc:resourceWidth&gt;75&lt;/abc:resourceWidth&gt;&lt;/res:source&gt;&lt;res:target&gt;&lt;abc:resourceType&gt;button&lt;/abc:resourceType&gt;&lt;abc:resourceHeight&gt;40&lt;/abc:resourceHeight&gt;&lt;abc:resourceWidth&gt;150&lt;/abc:resourceWidth&gt;&lt;/res:target&gt;&lt;/res:resourceItem&gt;&lt;/res:resourceData&gt;&lt;/unit&gt;&lt;/file&gt; -->
+&lt;file id="f2" xmlns:abc="urn:abc">
+  &lt;unit id="1">
+    &lt;res:resourceData>
+      &lt;res:resourceItem id="r1" context="no">
+        &lt;res:source>
+          &lt;abc:resourceType>button&lt;/abc:resourceType>
+          &lt;abc:resourceHeight>40&lt;/abc:resourceHeight>
+          &lt;abc:resourceWidth>75&lt;/abc:resourceWidth>
+        &lt;/res:source>
+        &lt;res:target>
+          &lt;abc:resourceType>button&lt;/abc:resourceType>
+          &lt;abc:resourceHeight>40&lt;/abc:resourceHeight>
+          &lt;abc:resourceWidth>150&lt;/abc:resourceWidth>
+        &lt;/res:target>
+      &lt;/res:resourceItem>
+    &lt;/res:resourceData>
+    &lt;segment id="1" state="translated">
+      &lt;source>Load Registry Config&lt;/source>
+      &lt;target>Registrierungskonfiguration laden&lt;/target>
+    &lt;/segment>
+  &lt;/unit>
+&lt;/file>
+ </programlisting>
+
+      <para>In this example, the <olink targetdoc="../../elements/resourceData/res_resourceData.xml" targetptr="res_resourceData"><code>&lt;resourceData></code></olink>
+      module references multiple static images that an editor can make use of as context while translating or reviewing.</para>
+
+<programlisting>
+<!-- &lt;file&gt;&lt;res:resourceData&gt;&lt;res:resourceItem id="r1" mimeType="image/jpeg" context="yes"&gt;&lt;res:source xml:lang="en-us" href="resources\en\registryconfig1.resources.jpg" /&gt;&lt;res:target xml:lang="lb-lu" href="resources\lb\registryconfig1.resources.jpg" /&gt;&lt;res:reference xml:lang="de-de" href="resources\de\registryconfig1.resources.jpg" /&gt;&lt;/res:resourceItem&gt;&lt;res:resourceItem id="r2" mimeType="image/jpeg" context="yes"&gt;&lt;res:source xml:lang="en-us" href="resources\en\registryconfig2.resources.jpg" /&gt;&lt;res:target xml:lang="lb-lu" href="resources\lb\registryconfig2.resources.jpg" /&gt;&lt;/res:resourceItem&gt;&lt;/res:resourceData&gt;&lt;unit id="1"&gt;&lt;segment id="1" state="translated"&gt;&lt;source&gt;Remove Registry Config&lt;/source&gt;&lt;target&gt;Registrierungskonfiguration entfernen&lt;/target&gt;&lt;/segment&gt;&lt;res:resourceData&gt;&lt;res:resourceItemRef ref="r1" /&gt;&lt;res:resourceItemRef ref="r2" /&gt;&lt;/res:resourceData&gt;&lt;/unit&gt;&lt;/file&gt; -->
+&lt;file id="f3">
+  &lt;res:resourceData>
+    &lt;res:resourceItem id="r1" mimeType="image/jpeg" context="yes">
+      &lt;res:source xml:lang="en-us"
+          href="resources\en\registryconfig1.resources.jpg" />
+      &lt;res:target xml:lang="lb-lu"
+          href="resources\lb\registryconfig1.resources.jpg" />
+      &lt;res:reference xml:lang="de-de"
+          href="resources\de\registryconfig1.resources.jpg" />
+    &lt;/res:resourceItem>
+    &lt;res:resourceItem id="r2" mimeType="image/jpeg" context="yes">
+      &lt;res:source xml:lang="en-us"
+          href="resources\en\registryconfig2.resources.jpg" />
+      &lt;res:target xml:lang="lb-lu"
+          href="resources\lb\registryconfig2.resources.jpg" />
+    &lt;/res:resourceItem>
+  &lt;/res:resourceData>
+  &lt;unit id="1">
+    &lt;res:resourceData>
+      &lt;res:resourceItemRef ref="r1" />
+      &lt;res:resourceItemRef ref="r2" />
+    &lt;/res:resourceData>
+    &lt;segment id="1" state="translated">
+      &lt;source>Remove Registry Config&lt;/source>
+      &lt;target>Registrierungskonfiguration entfernen&lt;/target>
+    &lt;/segment>
+  &lt;/unit>
+&lt;/file>
+ </programlisting>
+
+    </section>
+
+
+</section>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="itsm_locQualityIssueSeverity">
+    <title>locQualityIssueSeverity</title>
+    
+    <para>Localization Quality Issue Severity - the <code>locQualityIssueSeverity</code> attribute
+        is the <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+        defined <code>locQualityIssueSeverity</code> attribute. </para>
+    <para> This attribute provides the severity score for a particular issue, the higher the number
+        the higher the severity. Tools are expected to interpret this score within their own severity
+        rating system.</para>
+    
+    <para><emphasis>Value description:</emphasis> a decimal number between 0.0 and 100.0.</para>
+        
+    <para><emphasis>Default value:</emphasis> undefined</para>
+    
+    <warning><para>The <link linkend="itsm_locQualityIssueSeverity">locQualityIssueSeverity</link> attribute is
+        intended to be used in concert with the
+        <olink targetdoc="itsm_locQualityIssueProfileRef.xml" targetptr="itsm_locQualityIssueProfileRef"><code>locQualityIssueProfileRef</code></olink> attribute
+        that is to provide information on the applicable Quality Model. Without providng quality model
+            information, the severity score between 0 and 100 is very likely to be useless and not
+            interoperable.</para> </warning>
+    
+    
+    <para><emphasis>Used in:</emphasis>
+        <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
+            ><code>&lt;mrk></code></olink> and
+        <olink targetdoc="../../elements/inline/sm.xml"
+            targetptr="sm"><code>&lt;sm></code></olink>, or in <olink targetdoc="../../elements/itsm/itsm_locQualityIssue.xml"
+                targetptr="itsm_locQualityIssue"><code>&lt;locQualityIssue></code></olink>.</para>
+    
+    
+    <para>See the <olink targetdoc="../../modules/itsm/Localization_Quality_Issue.xml" targetptr="lqiAnnotation"
+        >ITS Localization Quality Issue Annotation</olink> for the normative usage description of this
+        attribute when used inline; advanced Constraints follow from that normative usage
+        description.</para>
+    <para>See <olink targetdoc="../../elements/itsm/itsm_locQualityIssue.xml"
+            targetptr="itsm_locQualityIssue"><code>&lt;locQualityIssue></code></olink> for standoff
+        usage Constraints.</para>
+</section>

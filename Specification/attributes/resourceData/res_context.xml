@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="res_context">
+  <title>context</title>
+
+  <para>Contextual Information - Indicates whether an external resource is to be used for context only and not modified.</para>
+
+  <para><emphasis>Value description:</emphasis> <code>yes</code> or <code>no</code></para>
+
+  <para><emphasis>Default value:</emphasis> <code>yes</code></para>
+
+  <para><emphasis>Used in:</emphasis><olink targetdoc="../../elements/resourcedata/resourceItem.xml" targetptr="res_resourceItem"><code>&lt;resourceItem></code></olink></para>
+
+</section>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+]>
+<section id="schema_tree">
+    <title>XML Schemas Tree</title>
+
+<programlisting>
+    
+<ulink url="&this-loc;/schemas/xliff_2_advanced_validation.nvdl"><code>Master NVDL Schema</code></ulink>
+   |      |
+   |    <ulink url="&this-loc;/schemas/xliff_core_&bschversion;.xsd"><code>Core XML Schema</code></ulink>|
+   |      |
+   |      +---<ulink url="&this-loc;/schemas/matches.xsd"><code>Candidates Module XML Schema</code></ulink>
+   |      |
+   |      +---<ulink url="&this-loc;/schemas/glossary.xsd"><code>Glossary Module XML Schema</code></ulink>
+   |      |
+   |      +---<ulink url="&this-loc;/schemas/fs.xsd"><code>Format Style Module XML Schema</code></ulink>
+   |      |
+   |      +---<ulink url="&this-loc;/schemas/metadata.xsd"><code>Metadata Module XML Schema</code></ulink>
+   |      |
+   |      +---<ulink url="&this-loc;/schemas/resource_data.xsd"><code>Resource Data Module XML Schema</code></ulink>
+   |      |
+   |      +---<ulink url="&this-loc;/schemas/change_tracking.xsd"><code>Change Tracking Module XML Schema</code></ulink>
+   |      |
+   |      +---<ulink url="&this-loc;/schemas/size_restriction.xsd"><code>Size and Length Restriction Module XML Schema</code></ulink>
+   |      |
+   |      +---<ulink url="&this-loc;/schemas/validation.xsd"><code>Validation Module XML Schema</code></ulink>
+   |      |
+   |      +---<ulink url="https://www.w3.org/2005/11/its/its.xsd"><code>Internationalization Tag Set (ITS) Version 1.0</code></ulink>
+   |      |
+   |      +---<ulink url="&this-loc;/schemas/itsm.xsd"><code>ITS Module XML Schema</code></ulink>
+   |
+   +---<ulink url="&this-loc;/schemas/xliff_core_&cschversion;.sch"><code>Core constraints</code></ulink>
+         |
+         +---<ulink url="&this-loc;/schemas/matches.sch"><code>Candidates Module Constraints</code></ulink>
+         |
+         +---<ulink url="&this-loc;/schemas/glossary.sch"><code>Glossary Module Constraints</code></ulink>
+         |
+         +---<ulink url="&this-loc;/schemas/fs.sch"><code>Format Style Module Constraints</code></ulink>
+         |
+         +---<ulink url="&this-loc;/schemas/resource_data.sch"><code>Resource Data Module Constraints</code></ulink>
+         |
+         +---<ulink url="&this-loc;/schemas/size_restriction.sch"><code>Size and Length Restriction Module Constraints</code></ulink>
+         |
+         +---<ulink url="&this-loc;/schemas/change_tracking.sch"><code>Change Tracking Module Constraints</code></ulink>
+         |
+         +---<ulink url="&this-loc;/schemas/metadata.sch"><code>Metadata Module Constraints</code></ulink>
+         |
+         +---<ulink url="&this-loc;/schemas/validation.sch"><code>Validation Module Constraints</code></ulink>
+         |
+         +---<ulink url="&this-loc;/schemas/its.sch"><code>ITS Module Constraints</code></ulink>
+ 
+</programlisting>
+
+</section>

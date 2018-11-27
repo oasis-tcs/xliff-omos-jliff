@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="ctr_property">
+  <title>property</title>
+
+  <para>property – Indicates the type of revision data.</para>
+
+  <para><emphasis>Value description:</emphasis> The value <glossterm>must</glossterm> be either <code>content</code> to signify the content of an element, or the name of the attribute relating to the revision data.</para>
+
+  <para><emphasis>Default value:</emphasis> none</para>
+
+  <para><emphasis>Used in:</emphasis><olink targetdoc="../../elements/change-tracking/item.xml" targetptr="item"><code>&lt;item></code></olink>.</para>
+  
+</section>

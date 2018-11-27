@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="candidates_ref">
+  <title>ref</title>
+
+  <para>Reference - points to a span of text within the same unit, to which the translation
+    candidate is relevant. </para>
+
+  <para><emphasis>Value description:</emphasis> IRI</para>
+
+  <para><emphasis>Default value:</emphasis> undefined</para>
+
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../elements/candidates/match.xml"
+  targetptr="match"><code>&lt;match></code></olink>.</para>
+
+  <itemizedlist>
+    <title>Constraints</title>
+
+    <listitem>
+      <para>The value of the <olink targetdoc="candidates_ref.xml" targetptr="candidates_ref"
+            ><code>ref</code></olink> attribute <glossterm>must</glossterm> point to a span of text
+        within the same <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"
+            ><code>&lt;unit></code></olink> element where the <olink
+          targetdoc="../elements/candidates/match.xml" targetptr="match"
+          ><code>&lt;match></code></olink> is located.</para>
+      
+    </listitem>
+  </itemizedlist>
+</section>

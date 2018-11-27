@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="translate">
+    <title>translate</title>
+
+    <para>Translate - indicates whether or not the source text in the scope of the given <code>translate</code> flag is intended
+        for <firstterm>Translation</firstterm>.</para>
+
+    <para><emphasis>Value description:</emphasis> <code>yes</code> or <code>no</code>.</para>
+
+    <para><emphasis>Default value:</emphasis> default values for this attribute
+        depend on the element in which it is used:</para>
+
+    <itemizedlist>
+        <listitem>
+            <para>When used in <olink targetdoc="../elements/structural/file.xml"
+                targetptr="file"><code>&lt;file></code></olink>:</para>
+
+            <para>The value <code>yes</code>.</para>
+        </listitem>
+        <listitem>
+            <para>When used in any other admissible structural element (<olink targetdoc="../elements/structural/group.xml"
+                targetptr="group"><code>&lt;group></code></olink> or <olink targetdoc="../elements/structural/unit.xml"
+                    targetptr="unit"><code>&lt;unit></code></olink>):</para>
+            <para>The value of the <olink targetdoc="translate.xml"
+                targetptr="translate"><code>translate</code></olink> attribute of its parent element.
+            </para>
+
+        </listitem>
+        <listitem>
+            <para>When used in annotations markers
+                <olink targetdoc="../elements/inline/mrk.xml" targetptr="mrk"><code>&lt;mrk></code></olink> or
+                <olink targetdoc="../elements/inline/sm.xml" targetptr="sm"><code>&lt;sm></code></olink>:</para>
+
+
+            <para>The value of the <olink targetdoc="translate.xml"
+                targetptr="translate"><code>translate</code></olink> attribute of the innermost <olink targetdoc="../elements/inline/mrk.xml" targetptr="mrk"><code>&lt;mrk></code></olink> or <olink targetdoc="../elements/structural/unit.xml"
+                    targetptr="unit"><code>&lt;unit&gt;</code></olink> element, in which the marker in question is located.
+            </para>
+
+        </listitem>
+
+        <!--Caveat! @translte has been removed from <segment> to simplify translation state algorithm..
+            The following is the verbose version of the above defaults descriptions:
+
+        <listitem>
+
+             <para>When used in <olink targetdoc="../elements/structural/group.xml" targetptr="group"
+                        ><code>&lt;group&gt;</code></olink>:</para>
+
+            <para>The value of the <olink targetdoc="translate.xml"
+                targetptr="translate"><code>translate</code></olink> attribute of its parent
+                <olink
+                    targetdoc="../elements/structural/group.xml"
+                    targetptr="group"><code>&lt;group&gt;</code></olink>, or
+
+                <olink>
+                    targetdoc="../elements/structural/file.xml"
+                    targetptr="file"><code>&lt;file&gt;</code></olink> element.</para>
+        </listitem>
+
+
+        <listitem>
+            <para>When used in <olink targetdoc="../elements/structural/unit.xml"
+                targetptr="unit"><code>&lt;unit&gt;</code></olink>:</para>
+
+            <para>The value of the <olink targetdoc="translate.xml"
+                targetptr="translate"><code>translate</code></olink> attribute of its parent
+                <olink
+                    targetdoc="../elements/structural/group.xml"
+                    targetptr="group"><code>&lt;group&gt;</code></olink>, or
+
+                <olink
+                    targetdoc="../elements/structural/file.xml"
+                    targetptr="file"><code>&lt;file&gt;</code></olink> element.</para>
+        </listitem>
+
+
+    <listitem>
+        <para>When used in <olink targetdoc="../elements/structural/segment.xml"
+            targetptr="segment"><code>&lt;segment&gt;</code></olink>:</para>
+
+        <para>The value of the <olink targetdoc="translate.xml"
+            targetptr="translate"><code>translate</code></olink> attribute of its parent
+            <olink
+                targetdoc="../elements/structural/unit.xml"
+                targetptr="unit"><code>&lt;unit&gt;</code></olink> element.</para>
+    </listitem>
+        <listitem><para>
+            When used in <olink targetdoc="../elements/inline/mrk.xml" targetptr="mrk"><code>&lt;mrk></code></olink>:
+        </para>
+            <para>The value of the <olink targetdoc="translate.xml" targetptr="translate"><code>translate</code></olink> attribute
+                of the innermost <olink targetdoc="../elements/inline/mrk.xml" targetptr="mrk"><code>&lt;mrk&gt;</code></olink>
+                or <olink targetdoc="../elements/structural/segment.xml" targetptr="segment"><code>&lt;segment&gt;</code></olink> element,
+                in which the <olink targetdoc="../elements/inline/mrk.xml" targetptr="mrk"><code>&lt;mrk></code></olink> element in question is located.</para>
+         </listitem>
+        <listitem><para>
+            When used in <olink targetdoc="../elements/inline/sm.xml" targetptr="sm"><code>&lt;sm></code></olink>:
+        </para>
+            <para>The value of the <olink targetdoc="translate.xml" targetptr="translate"><code>translate</code></olink> attribute
+                of the innermost <olink targetdoc="../elements/inline/mrk.xml" targetptr="mrk"><code>&lt;mrk&gt;</code></olink>
+                or <olink targetdoc="../elements/structural/segment.xml" targetptr="segment"><code>&lt;segment&gt;</code></olink> element,
+                in which the <olink targetdoc="../elements/inline/sm.xml" targetptr="sm"><code>&lt;sm></code></olink> element in question is located.</para>
+        </listitem>
+        -->
+    </itemizedlist>
+
+
+    <para><emphasis>Used in:</emphasis>
+        <olink targetdoc="../elements/structural/file.xml" targetptr="file"><code>&lt;file></code></olink>
+        <olink targetdoc="../elements/structural/group.xml" targetptr="group"><code>&lt;group></code></olink>
+        <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink>,
+        <olink targetdoc="../elements/inline/mrk.xml" targetptr="mrk"><code>&lt;mrk></code></olink> and
+        <olink targetdoc="../elements/inline/sm.xml" targetptr="sm"><code>&lt;sm></code></olink>.
+    </para>
+
+</section>

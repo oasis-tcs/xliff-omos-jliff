@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="item">
+    <title>item</title>
+    <para>Container for a specific revision associated with a sibling element, or a child of a
+    sibling element, to the change track extension within the scope of the enclosing element.</para>
+    <para><emphasis>Contains:</emphasis></para>
+    <simplelist>
+        <member>- Text</member>
+    </simplelist>
+
+    <para><emphasis>Attributes:</emphasis></para>
+    <simplelist>
+        <member>- <olink targetdoc="../../attributes/change-tracking/ctr_property.xml" targetptr="ctr_property"><code>property</code></olink>, <glossterm>required</glossterm></member>
+        <member>- attributes from other namespaces, <glossterm>optional</glossterm></member>
+    </simplelist>
+
+  <itemizedlist>
+    <title>Processing Requirements</title>
+
+    <listitem>
+      <para>Modifying agents <glossterm>may</glossterm> create <olink targetdoc="../../elements/change-tracking/item.xml" targetptr="item"><code>&lt;item></code></olink> elements with attributes.</para>
+    </listitem>
+
+    <listitem>
+      <para>Modifying agents <glossterm>should not</glossterm> modify <olink
+          targetdoc="../../elements/change-tracking/item.xml" targetptr="item"
+            ><code>&lt;item></code></olink> and its attribute defined in this extension.</para>
+    </listitem>
+
+    <listitem>
+      <para>Modifying agents <glossterm>should not</glossterm> remove <olink
+          targetdoc="../../elements/change-tracking/item.xml" targetptr="item"
+            ><code>&lt;item></code></olink> and its attribute defined in this extension, unless they
+        are removed as part of a <olink targetdoc="../../elements/change-tracking/revision.xml"
+          targetptr="revision"><code>&lt;revision></code></olink> element removed according to its
+        own processing requirements.</para>
+     </listitem>
+
+  </itemizedlist>
+</section>

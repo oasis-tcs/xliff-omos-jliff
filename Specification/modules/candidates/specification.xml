@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         <!--the document properties were transferred to "dockbook/dbgenent.mod"-->
+                         ]>
+<section id="candidates">
+    <title>Translation Candidates Module</title>
+
+    <section>
+        <title>Introduction</title>
+
+    <para>The source text of a document can be pre-processed against various translation resources
+        (TM, MT, etc.) to provide translation candidates. This module provides an XLIFF capability to store lists of
+        possible translations along with information about the similarity of the match, the quality
+        of the translation, its provenance, etc. </para>
+    </section>
+    <section>
+        <title>Module Namespace and Validation Artifacts</title>
+        <para>The namespace for the Translation Candidates module is: <code>urn:oasis:names:tc:xliff:matches:2.0</code></para>
+        <para>Schema and Schematron for this module are available at <ulink
+                url="&this-loc;/schemas/matches.xsd"
+                >&this-loc;/schemas/matches.xsd</ulink> and <ulink
+                    url="&this-loc;/schemas/matches.sch"
+                    >&this-loc;/schemas/matches.sch</ulink>.</para>
+
+
+    </section>
+    <section>
+        <title>Module Fragment Identification Prefix</title>
+        <para>The fragment identification prefix for the Translation Candidates module is:
+                <code>mtc</code></para>
+    </section>
+
+    <section id="mtc_CoreReuse">
+        <title>XLIFF Core Reuse</title>
+        <para>The <link linkend="candidates">Translation Candidates Module</link> reuses several <firstterm>XLIFF Core</firstterm> elements, most of them have mandatory <olink targetdoc="../attributes/id.xml" targetptr="id"><code>xlf:id</code></olink>. The uniqueness scopes for the reused <olink targetdoc="../attributes/id.xml" targetptr="id"><code>xlf:id</code></olink> attributes are separate from the <firstterm>XLIFF Core</firstterm>. The following states the exact normative Constraints for the validation purposes:</para>
+        <itemizedlist>
+            <title>Constraints</title>
+            <listitem>
+                <para> When the <olink targetdoc="../attributes/id.xml" targetptr="id"
+                    ><code>xlf:id</code></olink> attribute is used on <olink
+                                targetdoc="../elements/inline/mrk.xml" targetptr="mrk"
+                                ><code>&lt;xlf:mrk&gt;</code></olink>, <olink targetdoc="../elements/inline/sm.xml"
+                                    targetptr="sm"><code>&lt;xlf:sm&gt;</code></olink>, <olink
+                                        targetdoc="../elements/inline/pc.xml" targetptr="pc"
+                                        ><code>&lt;xlf:pc&gt;</code></olink>, <olink targetdoc="../elements/inline/sc.xml"
+                                            targetptr="sc"><code>&lt;xlf:sc&gt;</code></olink>, <olink
+                                                targetdoc="../elements/inline/ec.xml" targetptr="ec"
+                                                ><code>&lt;xlf:ec&gt;</code></olink>, or <olink targetdoc="../elements/inline/ph.xml"
+                                                    targetptr="ph"><code>&lt;xlf:ph&gt;</code></olink> elements reused within the <link
+                                                        linkend="candidates">Translation Candidates Module</link>:</para>
+                <itemizedlist>
+                    <listitem><para>The inline elements enclosed by a <olink targetdoc="../elements/structural/target.xml"
+                        targetptr="target"><code>&lt;xlf:target></code></olink> element
+                        <glossterm>must</glossterm> use the duplicate <olink
+                            targetdoc="../attributes/id.xml" targetptr="id"><code>xlf:id</code></olink> values
+                        of their corresponding inline elements enclosed within the sibling <olink
+                            targetdoc="../elements/structural/source.xml" targetptr="source"
+                            ><code>&lt;xlf:source></code></olink> element if and only if those corresponding
+                        elements exist.</para></listitem>
+
+                    <listitem><para>Except for the above exception, the value <glossterm>must</glossterm> be unique among all of the above within the
+                        enclosing <olink targetdoc="../elements/candidates/match.xml" targetptr="match"><code>&lt;match></code></olink>
+                        element.
+                    </para>
+                    </listitem>
+                </itemizedlist>
+            </listitem>
+            <listitem>
+                <para>When used on <olink targetdoc="../elements/structural/data.xml"
+                    targetptr="data"><code>&lt;xlf:data></code></olink> elements reused within the <link
+                        linkend="candidates">Translation Candidates Module</link>:</para>
+                <para>The value <glossterm>must</glossterm> be unique among all <olink targetdoc="../elements/structural/data.xml"
+                    targetptr="data"><code>&lt;xlf:data></code></olink> <code>xlf:id</code> attribute values within the enclosing
+                    <olink targetdoc="../elements/candidates/match.xml" targetptr="match"><code>&lt;match></code></olink> element.</para>
+            </listitem>
+            <listitem>
+                <para>When the <olink targetdoc="../attributes/dataref.xml" targetptr="dataref"
+                    ><code>xlf:dataRef</code></olink>, <olink targetdoc="../attributes/datarefstart.xml"
+                        targetptr="datarefstart"><code>xlf:datarefstart</code></olink>, and <olink
+                            targetdoc="../attributes/datarefend.xml" targetptr="datarefend"
+                            ><code>xlf:dataRefEnd</code></olink> attributes are used on <olink
+                                targetdoc="../elements/inline/pc.xml" targetptr="pc"
+                                ><code>&lt;xlf:pc&gt;</code></olink>, <olink targetdoc="../elements/inline/sc.xml"
+                                    targetptr="sc"><code>&lt;xlf:sc&gt;</code></olink>, <olink
+                                        targetdoc="../elements/inline/ec.xml" targetptr="ec"
+                                        ><code>&lt;xlf:ec&gt;</code></olink>, or <olink targetdoc="../elements/inline/ph.xml"
+                                            targetptr="ph"><code>&lt;xlf:ph&gt;</code></olink> elements reused within the <link
+                                                linkend="candidates">Translation Candidates Module</link>, their
+                    <code>NMTOKEN</code> values <glossterm>must</glossterm> identify <olink
+                        targetdoc="../elements/structural/data.xml" targetptr="data"
+                        ><code>&lt;data&gt;</code></olink> elements within the enclosing <olink
+                            targetdoc="../elements/candidates/match.xml" targetptr="match"
+                            ><code>&lt;match></code></olink> element. Those attributes <glossterm>must
+                                not</glossterm> be used without corresponding <olink
+                                    targetdoc="../elements/structural/data.xml" targetptr="data"
+                                    ><code>&lt;data&gt;</code></olink> elements within the enclosing <olink
+                                        targetdoc="../elements/candidates/match.xml" targetptr="match"
+                                        ><code>&lt;match></code></olink> element.  </para>
+            </listitem>
+        </itemizedlist>
+    </section>
+
+    <section id="matchAnnotation">
+        <title>Translation Candidate Annotation</title>
+
+        <para>This annotation can be used to mark up the scope of a translation candidate within the
+            content of a unit. This module can reference any source or even target spans of content
+            that are referencable via the XLIFF <olink targetdoc="../../fragments/fragments.xml"
+                targetptr="fragid">Fragment Identification</olink> mechanism, however in case the
+            corresponding fragment is not suitably delimited, the best way how to mark the relevant
+            span is to use the following annotation.</para>
+
+        <para>Usage:</para>
+
+        <itemizedlist spacing="compact">
+            <listitem>
+                <para>The <olink targetdoc="../../attributes/id.xml"
+                    targetptr="id"><code>id</code></olink> attribute is
+                    <glossterm>required</glossterm></para>
+            </listitem>
+
+            <listitem>
+                <para>The <olink targetdoc="../../attributes/type.xml" targetptr="type"
+                            ><code>type</code></olink> attribute is <glossterm>required</glossterm>
+                    and set to <code>mtc:match</code></para>
+            </listitem>
+
+
+            <listitem>
+                <para>The <olink targetdoc="../../attributes/ref.xml" targetptr="ref"
+                            ><code>ref</code></olink> attribute is not used.</para>
+            </listitem>
+
+            <listitem>
+                <para>The <olink targetdoc="../../attributes/translate.xml" targetptr="translate"
+                            ><code>translate</code></olink> attribute is
+                        <glossterm>optional</glossterm></para>
+            </listitem>
+        </itemizedlist>
+
+        <para>For example:</para>
+
+        <programlisting>
+&lt;unit id="1"&gt;
+  &lt;mtc:matches&gt;
+    &lt;mtc:match ref="#m1"&gt;
+      &lt;source&gt;He is my friend.&lt;/source&gt;
+      &lt;target&gt;Il est mon ami.&lt;/target&gt;
+    &lt;/mtc:match&gt;
+    &lt;mtc:match ref="#m1"&gt;
+      &lt;source&gt;He is my best friend.&lt;/source&gt;
+      &lt;target&gt;Il est mon meilleur ami.&lt;/target&gt;
+    &lt;/mtc:match&gt;
+  &lt;/mtc:matches&gt;
+  &lt;segment&gt;
+    &lt;source&gt;&lt;mrk id="m1" type="mtc:match"&gt;He is my friend.&lt;/mrk&gt;&lt;/source&gt;
+  &lt;/segment&gt;
+  &lt;segment&gt;
+    &lt;source&gt;Yet, I barely see him.&lt;/source&gt;
+  &lt;/segment&gt;
+&lt;/unit&gt;
+</programlisting>
+    </section>
+
+    <section>
+        <title>Module Elements</title>
+        <para>The elements defined in the Translation Candidates module are:
+            <olink targetdoc="../elements/candidates/matches.xml" targetptr="matches"><code>&lt;matches></code></olink> and
+            <olink targetdoc="../elements/candidates/match.xml" targetptr="match"><code>&lt;match></code></olink>.
+        </para>
+
+<section><!-- gen. 20140318 -->
+  <title>Tree Structure</title>
+  <para>Legend:</para>
+  <simplelist type="vert">
+    <member>1 = one</member>
+    <member>+ = one or more</member>
+    <member>? = zero or one</member>
+    <member>* = zero or more</member>
+  </simplelist>
+  <programlisting format="linespecific">
+<olink targetdoc="../../elements/candidates/matches.xml" targetptr="matches"><code>&lt;matches></code></olink>
+|
++---<olink targetdoc="../../elements/candidates/match.xml" targetptr="match"><code>&lt;match></code></olink> +
+  |
+  +---<olink targetdoc="../../elements/metadata/metadata.xml" targetptr="metadata"><code>&lt;mda:metadata></code></olink> ?
+  |
+  +---<olink targetdoc="../../elements/structural/originalData.xml" targetptr="originaldata"><code>&lt;xlf:originalData></code></olink> ?
+  |
+  +---<olink targetdoc="../../elements/structural/source.xml" targetptr="source"><code>&lt;xlf:source></code></olink> 1
+  |
+  +---<olink targetdoc="../../elements/structural/target.xml" targetptr="target"><code>&lt;xlf:target></code></olink> 1
+  |
+  +---&lt;other> *
+
+
+  </programlisting>
+</section>
+
+        <xi:include href="../../elements/candidates/matches.xml"
+            xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="../../elements/candidates/match.xml"
+            xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </section>
+
+    <section>
+        <title>Module Attributes</title>
+        <para>The attributes defined in the Translation Candidates module are:
+            <olink
+                targetdoc="../../attributes/candidates/candidates_id.xml" targetptr="candidates_id"
+                    ><code>id</code></olink>,
+
+            <olink
+                targetdoc="../../attributes/candidates/matchQuality.xml" targetptr="matchQuality"
+                ><code>matchQuality</code></olink>,
+            <olink
+                targetdoc="../../attributes/candidates/matchSuitability.xml" targetptr="matchSuitability"
+                ><code>matchSuitability</code></olink>,
+            <olink
+                targetdoc="../../attributes/candidates/candidates_origin.xml" targetptr="candidates_origin"
+                ><code>origin</code></olink>,
+
+            <olink
+                targetdoc="../../attributes/candidates/candidates_ref.xml"
+                targetptr="candidates_ref"><code>ref</code></olink>,
+
+            <olink
+                targetdoc="../../attributes/candidates/candidates_reference.xml"
+                targetptr="candidates_reference"><code>reference</code></olink>,
+
+            <olink targetdoc="../../attributes/cnadidates/candidates_similarity.xml"
+                targetptr="candidates_similarity"><code>similarity</code></olink>,
+
+            <olink
+                targetdoc="../../attributes/candidates/candidates_subtype.xml" targetptr="candidates_subtype"
+                ><code>subType</code></olink>, and
+
+            <olink
+                targetdoc="../../attributes/candidates/candidates_type.xml" targetptr="candidates_type"
+                    ><code>type</code></olink>.
+        </para>
+
+        <xi:include href="../../attributes/candidates/candidates_id.xml"
+            xmlns:xi="http://www.w3.org/2001/XInclude"/>
+
+
+        <xi:include href="../../attributes/candidates/matchQuality.xml"
+            xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="../../attributes/candidates/matchSuitability.xml"
+            xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="../../attributes/candidates/candidates_origin.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+
+        <xi:include href="../../attributes/candidates/candidates_ref.xml"
+            xmlns:xi="http://www.w3.org/2001/XInclude"/>
+
+        <xi:include href="../../attributes/candidates/candidates_reference.xml"
+            xmlns:xi="http://www.w3.org/2001/XInclude"/>
+
+        <xi:include href="../../attributes/candidates/candidates_similarity.xml"
+            xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="../../attributes/candidates/candidates_subtype.xml"
+            xmlns:xi="http://www.w3.org/2001/XInclude"/>
+
+        <xi:include href="../../attributes/candidates/candidates_type.xml"
+            xmlns:xi="http://www.w3.org/2001/XInclude"/>
+
+
+    </section>
+
+    <section>
+      <title>Example</title>
+
+      <programlisting format="linespecific">
+&lt;mtc:matches&gt;
+  &lt;mtc:match id="[NMTOKEN]"&gt;
+    &lt;xlf:source&gt;&lt;!-- text data --&gt;&lt;/xlf:source&gt;
+    &lt;xlf:target&gt;&lt;!-- text data --&gt;&lt;/xlf:target&gt;
+    &lt;xlf:originalData&gt;
+      &lt;xlf:data id="[NMTOKEN]"&gt;
+        &lt;xlf:cp hex="[required]"&gt;&lt;!-- text data --&gt;&lt;/xlf:cp&gt;
+      &lt;/xlf:data&gt;
+    &lt;/xlf:originalData&gt;
+    &lt;mda:metadata&gt;
+      &lt;mda:metagroup&gt;&lt;!-- One or more of mda:metagroup or mda:meta --&gt;
+          &lt;/mda:metagroup&gt;
+    &lt;/mda:metadata&gt;
+    &lt;!-- Zero, one or more elements from any namespace --&gt;
+  &lt;/mtc:match&gt;
+&lt;/mtc:matches&gt;
+ </programlisting>
+
+    </section>
+
+
+
+</section>

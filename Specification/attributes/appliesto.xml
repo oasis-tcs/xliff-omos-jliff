@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="appliesto">
+    <title>appliesTo</title>
+    
+    <para>Comment target - indicates the element to what the content of the note applies.</para>
+    
+    <para><emphasis>Value description:</emphasis> <code>source</code> or <code>target</code>.</para>
+    
+    <para><emphasis>Default value:</emphasis> undefined.</para>
+    
+    <para><emphasis>Used in:</emphasis> <olink targetdoc="../elements/structural/note.xml" targetptr="note"><code>&lt;note></code></olink>.</para>
+    
+</section>
+

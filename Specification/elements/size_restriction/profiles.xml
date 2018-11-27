@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="slr_profiles">
+    <title>profiles</title>
+    <para>This element selects the restriction profiles to use in the document. If no storage or general profile is specified the default values (empty) of those elements will disable restriction checking in the file.</para>
+    <para><emphasis>Contains:</emphasis></para>
+    <simplelist>
+        <member>- Zero or one <olink targetdoc="../../elements/size_restriction/normalization.xml" targetptr="slr_normalization"><code>&lt;normalization></code></olink> element
+            followed by</member>
+        <member>- elements from other namespaces, <glossterm>optional</glossterm></member>
+    </simplelist>
+
+    <para><emphasis>Attributes:</emphasis></para>
+    <simplelist>
+        <member>- <olink targetdoc="../../attributes/size_restriction/general-profile.xml" targetptr="slr_general_profile"><code>generalProfile</code></olink>, <glossterm>optional</glossterm></member>
+        <member>- <olink targetdoc="../../attributes/size_restriction/storage-profile.xml" targetptr="slr_storage_profile"><code>storageProfile</code></olink>, <glossterm>optional</glossterm></member>
+    </simplelist>
+
+    <itemizedlist>
+    <title>Processing Requirements</title>
+    <listitem>
+      <para>Any overall configuration or settings related to the selected profile <glossterm>must</glossterm> be placed in child elements of this element.</para>
+    </listitem>
+        <listitem>
+      <para>Data not related to the configuration of the selected profiles <glossterm>must not</glossterm> be placed in this element.</para>
+    </listitem>
+  </itemizedlist>
+
+</section>
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="res_mimeType">
+  <title>mimeType</title>
+
+  <para>MIME type, mimeType - indicates the type of a resource object. This generally corresponds to
+    the content type of <ulink url="http://tools.ietf.org/rfc/rfc2045.txt">[RFC 2045]</ulink>, the
+    MIME specification; e.g. mimeType="text/xml" indicates the resource data is a text file of XML
+    format.</para>
+
+  <para><emphasis>Value description:</emphasis> A MIME type. An existing MIME type <glossterm>must</glossterm> be used from
+    a <ulink url="http://www.iana.org/assignments/media-types">list of standard values</ulink>.</para>
+
+  <para><emphasis>Default value:</emphasis> undefined</para>
+
+  <para><emphasis>Used in:</emphasis><olink targetdoc="../../elements/resourcedata/resourceItem.xml" targetptr="res_resourceItem"><code>&lt;resourceItem></code></olink></para>
+  <note><para>If you cannot use any of the standard MIME type values as specified above, a new MIME type can be registered according to <ulink url="http://tools.ietf.org/rfc/rfc2048.txt">[RFC
+    2048]</ulink>.</para></note>
+
+</section>

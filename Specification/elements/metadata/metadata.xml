@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="metadata">
+    <title>metadata</title>
+    <para>Container for metadata associated with the enclosing element.</para>
+   <para><emphasis>Contains:</emphasis></para>
+   <simplelist>
+      <member>- One or more <olink targetdoc="metagroup.xml" targetptr="metagroup"
+               ><code>&lt;metaGroup></code></olink> elements</member>
+   </simplelist>
+ <para><emphasis>Attributes:</emphasis></para>
+    <simplelist>
+	     <member>- <olink targetdoc="../../attributes/meta_id.xml" targetptr="meta_id"><code>id</code></olink>,
+                <glossterm>optional</glossterm></member>
+
+  </simplelist>
+    <para><emphasis>Example:</emphasis> Metadata can be used to store XML attribute names and values
+      for <firstterm>XLIFF Documents</firstterm> that do not use a skeleton. The following XML
+      sample contains attributes on the<code> &lt;document></code> and <code>&lt;row></code>
+      elements.</para>
+    <programlisting>
+&lt;document version="3" phase="draft">
+  &lt;table>
+    &lt;row style="head">
+      &lt;cell>Name&lt;/cell>
+      &lt;cell>Position&lt;/cell>
+    &lt;/row>
+    &lt;row>
+      &lt;cell>Patrick K.&lt;/cell>
+      &lt;cell>Right Wing&lt;/cell>
+    &lt;/row>
+    &lt;row>
+      &lt;cell>Bryan B.&lt;/cell>
+      &lt;cell>Left Wing&lt;/cell>
+    &lt;/row>
+  &lt;/table>
+&lt;/document>
+</programlisting>
+    <para>The Metadata module can be used to preserve these attributes for a round trip without
+      using a skeleton:</para>
+    <programlisting>
+&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;xliff xmlns="urn:oasis:names:tc:xliff:document:2.0"
+    xmlns:fs="urn:oasis:names:tc:xliff:fs:2.0"
+    xmlns:mda="urn:oasis:names:tc:xliff:metadata:2.0" version="2.0"
+    srcLang="en">
+  &lt;file id="f1">
+    &lt;group id="g1" name="document">
+      &lt;mda:metadata>
+        &lt;mda:metaGroup category="document_xml_attribute">
+          &lt;mda:meta type="version">3&lt;/mda:meta>
+          &lt;mda:meta type="phase">draft&lt;/mda:meta>
+        &lt;/mda:metaGroup>
+      &lt;/mda:metadata>
+      &lt;group id="g2" name="table">
+        &lt;group id="g3" name="row">
+          &lt;mda:metadata>
+            &lt;mda:metaGroup category="row_xml_attribute">
+              &lt;mda:meta type="style">head&lt;/mda:meta>
+            &lt;/mda:metaGroup>
+          &lt;/mda:metadata>
+          &lt;unit id="u1" name="cell">
+            &lt;segment>
+              &lt;source>Name&lt;/source>
+            &lt;/segment>
+          &lt;/unit>
+          &lt;unit id="u2" name="cell">
+            &lt;segment>
+              &lt;source>Position&lt;/source>
+            &lt;/segment>
+          &lt;/unit>
+        &lt;/group>
+        &lt;group id="g4" name="row">
+          &lt;unit id="u3" name="cell">
+            &lt;segment>
+              &lt;source>Patrick K.&lt;/source>
+            &lt;/segment>
+          &lt;/unit>
+          &lt;unit id="u4" name="cell">
+            &lt;segment>
+              &lt;source>Right Wing&lt;/source>
+            &lt;/segment>
+          &lt;/unit>
+        &lt;/group>
+        &lt;group id="g5" name="row">
+          &lt;unit id="u5" name="cell">
+            &lt;segment>
+              &lt;source>Bryan B.&lt;/source>
+            &lt;/segment>
+          &lt;/unit>
+          &lt;unit id="u6" name="cell">
+            &lt;segment>
+              &lt;source>Left Wing&lt;/source>
+            &lt;/segment>
+          &lt;/unit>
+        &lt;/group>
+      &lt;/group>
+    &lt;/group>
+  &lt;/file>
+&lt;/xliff>
+</programlisting>
+
+</section>

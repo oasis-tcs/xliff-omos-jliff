@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+<!--the document properties were transferred to "dockbook/dbgenent.mod"-->
+]>
+<section id="size_restriction_module">
+    <title>Size and Length Restriction Module</title>
+
+        <section>
+        <title>Introduction</title>
+            <para>The Size and Length Restriction module provides a mechanism to annotate the XLIFF content with information on storage and general
+                size restrictions.</para>
+            <para>The restriction framework has support for two distinct types of restrictions; storage
+            size restrictions and general size restriction. The reason for this is that it is often
+            common to have separate restrictions between storage and display / physical
+            representation of data. Since it would be impossible to define all restrictions here a
+            concept of restriction profile is introduced. The profiles for storage size and general
+            size are independent. The information related to restriction profiles are stored in the
+            processing invariant part of the XLIFF file like the <olink
+                targetdoc="../../elements/structural/file.xml" targetptr="file"
+                    ><code>&lt;xlf:file></code></olink>, <olink
+                targetdoc="../../elements/structural/group.xml" targetptr="group"
+                    ><code>&lt;xlf:group></code></olink> and <olink
+                targetdoc="../../elements/structural/unit.xml" targetptr="unit"
+                    ><code>&lt;xlf:unit></code></olink> elements and contained within elements
+            defined in this module. The information regarding the specific restrictions are stored
+            on the processing invariant parts and on the inline elements as attributes or attributes
+            referencing data in the elements defined in this module. To avoid issues with
+            segmentation no information regarding size restrictions is present on <olink
+                targetdoc="../../elements/structural/segment.xml" targetptr="segment"
+                    ><code>&lt;xlf:segment></code></olink>, <olink
+                targetdoc="../../elements/structural/source.xml" targetptr="source"
+                    ><code>&lt;xlf:source></code></olink> and <olink
+                targetdoc="../../elements/structural/target.xml" targetptr="target"
+                    ><code>&lt;xlf:target></code></olink> elements. The module defines a namespace
+            for all the elements and attributes it introduces, in the rest of the module
+            specification elements and attributes are in this namespace unless stated otherwise. In
+            other parts of the XLIFF specification the prefix "slr" is used to refer to this module's
+            namespace. For clarity the prefix "xlf" will be used for <firstterm>XLIFF Core</firstterm> elements and
+            attributes. Profile names use the same namespace-like naming convention as user defined values in the
+            <firstterm>XLIFF Core</firstterm> specification. The names <glossterm>should</glossterm> be composed of two components separated by a
+            colon. &lt;authority>:&lt;name>. The authority "xliff" is reserved for profiles defined
+            by the OASIS XLIFF Technical Committee.</para>
+    </section>
+    <section>
+        <title>Module Namespace and Validation Artifacts</title>
+        <para>The namespace for the Size and Length restriction module is:
+                <code>urn:oasis:names:tc:xliff:sizerestriction:2.0</code></para>
+        <para>Schema and Schematron for this module are available at <ulink
+            url="&this-loc;/schemas/size_restriction.xsd"
+            >&this-loc;/schemas/size_restriction.xsd</ulink> and <ulink
+                url="&this-loc;/schemas/size_restriction.sch"
+                >&this-loc;/schemas/size_restriction.sch</ulink>.</para>
+    </section>
+
+    <section>
+        <title>Module Fragment Identification Prefix</title>
+        <para>The fragment identification prefix for the Size and Length restriction module is: <code>slr</code></para>
+    </section>
+
+    <section>
+        <title>Module Elements</title>
+        <para>The elements defined in the Size and Length restriction module are: <olink
+                targetdoc="../../elements/size_restriction/profiles.xml" targetptr="slr_profiles"
+                    ><code>&lt;profiles></code></olink>, <olink
+                targetdoc="../../elements/size_restriction/normalization.xml"
+                targetptr="slr_normalization"><code>&lt;normalization></code></olink> and <olink
+                targetdoc="../../elements/size_restriction/data.xml" targetptr="slr_data"
+                    ><code>&lt;data></code></olink>. </para>
+<section><!-- gen. 20140318 -->
+  <title>Tree Structure</title>
+  <para>Legend:</para>
+  <simplelist type="vert">
+    <member>? = zero or one</member>
+  </simplelist>
+  <programlisting format="linespecific">
+<olink targetdoc="../../elements/size_restriction/profiles.xml" targetptr="slr_profiles"><code>&lt;profiles></code></olink>
+|
++---<olink targetdoc="../../elements/size_restriction/normalization.xml" targetptr="slr_normalization"><code>&lt;normalization></code></olink> ?
+|
++---&lt;other> *
+
+
+  </programlisting>
+</section>
+        <xi:include href="../../elements/size_restriction/profiles.xml"
+            xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="../../elements/size_restriction/normalization.xml"
+            xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="../../elements/size_restriction/data.xml"
+            xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </section>
+    <section>
+        <title>Module Attributes</title>
+        <para>The attributes defined in the Size and Length restriction module are: <olink
+                targetdoc="../../attributes/size_restriction/storage-profile.xml"
+                targetptr="slr_storage_profile"><code>storageProfile</code></olink>, <olink
+                targetdoc="../../attributes/size_restriction/general-profile.xml"
+                targetptr="slr_general_profile"><code>generalProfile</code></olink>, <olink
+                targetdoc="../../attributes/size_restriction/storage.xml" targetptr="slr_storage"
+                    ><code>storage</code></olink>, <olink
+                targetdoc="../../attributes/size_restriction/general.xml" targetptr="slr_general"
+                    ><code>general</code></olink>, <olink
+                targetdoc="../../attributes/size_restriction/profile.xml" targetptr="slr_profile"
+                    ><code>profile</code></olink>, <olink
+                targetdoc="../../attributes/size_restriction/storage-restriction.xml"
+                targetptr="slr_storage_restriction"><code>storageRestriction</code></olink>, <olink
+                targetdoc="../../attributes/size_restriction/size-restriction.xml"
+                targetptr="slr_size_restriction"><code>sizeRestriction</code></olink>, <olink
+                targetdoc="../../attributes/size_restriction/equiv-storage.xml"
+                targetptr="slr_equiv_storage"><code>equivStorage</code></olink> , <olink
+                targetdoc="../../attributes/size_restriction/size-info.xml"
+                targetptr="slr_size_info"><code>sizeInfo</code></olink> and <olink
+                targetdoc="../../attributes/size_restriction/size-info-ref.xml"
+                targetptr="slr_size_info_ref"><code>sizeInfoRef</code></olink>. </para>
+        <xi:include href="../../attributes/size_restriction/storage-profile.xml"
+            xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="../../attributes/size_restriction/general-profile.xml"
+            xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="../../attributes/size_restriction/storage.xml"
+            xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="../../attributes/size_restriction/general.xml"
+            xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="../../attributes/size_restriction/profile.xml"
+            xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="../../attributes/size_restriction/storage-restriction.xml"
+            xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="../../attributes/size_restriction/size-restriction.xml"
+            xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="../../attributes/size_restriction/equiv-storage.xml"
+            xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="../../attributes/size_restriction/size-info.xml"
+            xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="../../attributes/size_restriction/size-info-ref.xml"
+            xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </section>
+    <section>
+        <title>Standard profiles</title>
+        <section>
+            <title>General restriction profile ”xliff:codepoints”</title>
+            <para>This profile implements a simple string length restriction based on the number of
+                Unicode code points. It is <glossterm>optional</glossterm> to specify if normalization is to be applied
+                using the <olink targetdoc="../../elements/size_restriction/normalization.xml"
+                    targetptr="slr_normalization"><code>&lt;normalization></code></olink> element
+                and the <olink targetdoc="../../attributes/size_restriction/general.xml"
+                    targetptr="slr_general"><code>general</code></olink> attribute. This profile
+                makes use of the following attributes from this module:</para>
+            <section>
+                <title>sizeRestriction</title>
+                <para>The value of this attribute holds the ”maximum” or ”minimum and maximum” size
+                    of the string. Either size <glossterm>must</glossterm> be an integer. The maximum size <glossterm>may</glossterm> also be ’*’ to
+                    denote that there is no maximum restriction. If only a maximum is specified it
+                    is implied that the minimum is 0 (empty string). The format of the value is the
+                    <glossterm>optional</glossterm> minimum size and a coma followed by a maximum size
+                    (”[minsize,]maxsize”). The default value is ’*’ which evaluates to a string with
+                    unbounded size.</para>
+            </section>
+            <section>
+                <title>sizeInfo</title>
+                <para>The value of this attribute is an integer representing how many code points
+                    the element it is set on is considered to contribute to the total size. If
+                    empty, the default for all elements is 0.</para>
+            </section>
+        </section>
+        <section>
+            <title>Storage restriction profiles ”xliff:utf8”, ”xliff:utf16” and
+                ”xliff:utf32”</title>
+            <para>These three profiles define the standard size restriction profiles for the common
+                Unicode character encoding schemes. It is <glossterm>optional</glossterm> to specify if normalization is to be
+                applied using the <olink
+                    targetdoc="../../elements/size_restriction/normalization.xml"
+                    targetptr="slr_normalization"><code>&lt;normalization></code></olink>element and
+                the <olink targetdoc="../../attributes/size_restriction/storage.xml"
+                    targetptr="slr_storage"><code>storage</code></olink>. All sizes are represented
+                in 8bit bytes. The size of text for these profiles is the size of the text converted
+                to the selected encoding without any byte order marks attached. The encodings are
+                specified by the Unicode Consortium in <ulink
+                    url="http://www.unicode.org/versions/Unicode6.2.0/ch02.pdf">chapter 2.5 of the
+                    Unicode Standard</ulink> <olink targetdoc="../xliff21.xml" targetptr="Unicode">[Unicode]</olink>.</para>
+            <table>
+                <title>Profiles</title>
+                <tgroup cols="2">
+                    <thead>
+                        <row>
+                            <entry>Name</entry>
+                            <entry>Description</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>xliff:utf8</entry>
+                            <entry>The number of 8bit bytes needed to represent the string encoded
+                                as UTF-8 as specified by the Unicode consortium.</entry>
+                        </row>
+                        <row>
+                            <entry>xliff:utf16</entry>
+                            <entry>The number of 8bit bytes needed to represent the string encoded
+                                as UTF-16 as specified by the Unicode consortium.</entry>
+                        </row>
+                        <row>
+                            <entry>xliff:utf32</entry>
+                            <entry>The number of 8bit bytes needed to represent the string encoded
+                                as UTF-32 as specified by the Unicode consortium.</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <para>These profiles make use of the following attributes from this module:</para>
+            <section>
+                <title>storageRestriction</title>
+                <para>The value of this attribute holds the ”maximum” or ”minimum and maximum” size
+                    of the string. Either size <glossterm>must</glossterm> be an integer. The maximum size <glossterm>may</glossterm> also be ’*’
+                    to denote that there is no maximum restriction. If only a maximum is specified
+                    it is implied that the minimum is 0 (empty string). The format of the value is
+                    the <glossterm>optional</glossterm> minimum size and a coma followed by a maximum size
+                    (”[minsize,]maxsize”). The default value is ’*’ which evaluates to a string with
+                    unbounded size.</para>
+            </section>
+            <section>
+                <title>equivStorage</title>
+                <para>The value of this attribute is an integer representing how many bytes the
+                    element it is set on is considered to contribute to the total size. If
+                    empty the default is 0. The <olink
+                        targetdoc="../../elements/inline/cp.xml" targetptr="cp"
+                        ><code>&lt;cp></code></olink> is always converted to its representation in
+                    the profiles encoding and the size of that representation is used as the size
+                    contributed by the <olink targetdoc="../../elements/inline/cp.xml"
+                        targetptr="cp"><code>&lt;cp></code></olink>. </para>
+            </section>
+        </section>
+    </section>
+    <section>
+        <title>Third party profiles</title>
+        <para>The general structure of this module together with the extensibility mechanisms
+            provided has been designed with the goal to cater for all practically thinkable size
+            restriction schemes. For example, to represent two dimensional data, a profile can adopt
+            a coordinate style for the values of the general restriction attributes. For instance
+                <code>{x,y}</code> to represent width and height, or <code>{{x1,y1},{x2,y2}}</code>
+            to represent a bounding box. It is also possible to embed information necessary to drive
+            for instance a display simulator and attach that data to text in order to be able to
+            perform device specific checking. Providing font information and checking glyph based
+            general size are other feasible options.</para>
+    </section>
+    <section>
+        <title>Conformance</title>
+        <para>To claim conformance to the XLIFF size and length restriction module an
+                <firstterm>Agent</firstterm>
+            <glossterm>must</glossterm> meet the following criteria:</para>
+        <itemizedlist spacing="compact">
+            <listitem>
+                <para><glossterm>must</glossterm> be compliant with the schema of the
+                        <firstterm>XLIFF Core</firstterm> specification and its extensions provided
+                    in this module.</para>
+            </listitem>
+            <listitem>
+                <para><glossterm>must</glossterm> follow all processing requirements set forth in
+                    this module specification regarding the general use of elements and
+                    attributes.</para>
+            </listitem>
+            <listitem>
+                <para><glossterm>must</glossterm> support all standard profiles with normalization
+                    set to <code>none</code>.</para>
+            </listitem>
+            <listitem>
+                <para><glossterm>should</glossterm> support all standard profiles with all modes of
+                    normalization.</para>
+            </listitem>
+            <listitem>
+                <para><glossterm>may</glossterm> support additional third party profiles for storage
+                    or general restrictions.</para>
+            </listitem>
+            <listitem>
+                <para><glossterm>must</glossterm> provide at least one of the following:</para>
+                <itemizedlist spacing="compact">
+                    <listitem>
+                        <para>add size and length restriction information to an <firstterm>XLIFF
+                                Document</firstterm></para>
+                    </listitem>
+                    <listitem>
+                        <para>if it supports the profile(s) specified in the <firstterm>XLIFF
+                                Document</firstterm> it <glossterm>must</glossterm> provide a way to
+                            check if the size and length restrictions in the document are met
+                            according to the profile(s) requirements.</para>
+                    </listitem>
+                </itemizedlist>
+            </listitem>
+        </itemizedlist>
+    </section>
+    <section>
+        <title>Example</title>
+        <para>A short example on how this module can be used is provided here with inline XML comments explaining the usage of the module features.
+	<programlisting>
+&lt;xliff version="2.0" srcLang="en-us"
+    xmlns="urn:oasis:names:tc:xliff:document:2.0"
+    xmlns:slr="urn:oasis:names:tc:xliff:sizerestriction:2.0"&gt;
+  &lt;file id="f1"&gt;
+    &lt;slr:profiles generalProfile="xliff:codepoints"
+        storageProfile="xliff:utf8"&gt;
+      &lt;!-- Select standard UTF-8 storage encoding and standard codepoint
+          size restriction both with NFC normalization--&gt;
+      &lt;slr:normalization general="nfc" storage="nfc" /&gt;
+    &lt;/slr:profiles&gt;
+    &lt;!-- The group should not require more than 255 bytes of storage And
+        have at most 90 codepoints. Note that the sum of the unit sizes
+        are larger than this the total content of the group must still
+        be at most 90 codepoints. --&gt;
+    &lt;group id="g1" slr:storageRestriction="255" slr:sizeRestriction="90"&gt;
+      &lt;!-- This unit must not contain more than 60 code points --&gt;
+      &lt;unit id="u1" slr:sizeRestriction="60"&gt;
+        &lt;segment&gt;
+          &lt;!-- The spanning &lt;pc&gt; element require 7 bytes of storage in the
+              native format. Its content must not have more than 25
+              codepoints --&gt;
+          &lt;source&gt;This is a small &lt;pc equivStorage="7"
+              slr:sizeRestriction="25"&gt;size restriction&lt;/pc&gt;
+              example. &lt;/source&gt;
+        &lt;/segment&gt;
+      &lt;/unit&gt;
+      &lt;!-- This unit must not have more than 35 codepoints --&gt;
+      &lt;unit id="u2" slr:sizeRestriction="35"&gt;
+        &lt;segment&gt;
+          &lt;source&gt;With a group structure.&lt;/source&gt;
+        &lt;/segment&gt;
+      &lt;/unit&gt;
+    &lt;/group&gt;
+  &lt;/file&gt;
+&lt;/xliff&gt;
+ </programlisting>
+	</para>
+     </section>
+
+</section>

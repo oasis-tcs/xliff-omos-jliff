@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="srcLang">
+    <title>srcLang</title>
+    
+    <para>Source language - the code of the language, in which the text to be <firstterm>Translated</firstterm> is
+        expressed.</para>
+    
+    <para><emphasis>Value description:</emphasis> A language code as described in <olink targetdoc="../xliff21.xml"
+        targetptr="bcp47">[BCP 47]</olink>.</para>
+    
+    <para><emphasis>Default value:</emphasis> undefined</para>
+    
+    <para><emphasis>Used in:</emphasis> <olink targetdoc="../elements/structural/xliff.xml" targetptr="xliff"><code>&lt;xliff></code></olink>.</para>
+</section>
+

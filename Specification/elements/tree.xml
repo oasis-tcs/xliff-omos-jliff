@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section><!-- gen. 20140318 -->
+  <title>Tree Structure</title>
+  <para>Legend:</para>
+  <simplelist type="vert">
+    <member>1 = one</member>
+    <member>+ = one or more</member>
+    <member>? = zero or one</member>
+    <member>* = zero or more</member>
+  </simplelist>
+  <programlisting format="linespecific">
+<olink targetdoc="structural/xliff.xml" targetptr="xliff"><code>&lt;xliff></code></olink>
+|
++---<olink targetdoc="structural/file.xml" targetptr="file"><code>&lt;file></code></olink> +
+  |
+  +---<olink targetdoc="structural/skeleton.xml" targetptr="skeleton"><code>&lt;skeleton></code></olink> ?
+  | |
+  | +---&lt;other> *
+  |
+  +---&lt;other> *
+  |
+  +---<olink targetdoc="structural/notes.xml" targetptr="notes"><code>&lt;notes></code></olink> ?
+  | |
+  | +---<olink targetdoc="structural/note.xml" targetptr="note"><code>&lt;note></code></olink> +
+  |
+  +---At least one of (<olink targetdoc="structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink> OR <olink targetdoc="structural/group.xml" targetptr="group"><code>&lt;group></code></olink>)
+      | |
+      | +---<olink targetdoc="structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink>
+      |   |
+      |   +---&lt;other> *
+      |   |
+      |   +---<olink targetdoc="structural/notes.xml" targetptr="notes"><code>&lt;notes></code></olink> ?
+      |   | |
+      |   | +---<olink targetdoc="structural/note.xml" targetptr="note"><code>&lt;note></code></olink> +
+      |   |
+      |   +---<olink targetdoc="structural/originalData.xml" targetptr="originaldata"><code>&lt;originalData></code></olink> ?
+      |   | |
+      |   | +---<olink targetdoc="structural/data.xml" targetptr="data"><code>&lt;data></code></olink> +
+      |   |
+      |   +---At least one of (<olink targetdoc="structural/segment.xml" targetptr="segment"><code>&lt;segment></code></olink> OR <olink targetdoc="structural/ignorable.xml" targetptr="ignorable"><code>&lt;ignorable></code></olink>)
+      |       | |
+      |       | +---<olink targetdoc="structural/segment.xml" targetptr="segment"><code>&lt;segment></code></olink>
+      |       |   |
+      |       |   +---<olink targetdoc="structural/source.xml" targetptr="source"><code>&lt;source></code></olink> 1
+      |       |   |
+      |       |   +---<olink targetdoc="structural/target.xml" targetptr="target"><code>&lt;target></code></olink> ?
+      |       |
+      |       +---<olink targetdoc="structural/ignorable.xml" targetptr="ignorable"><code>&lt;ignorable></code></olink>
+      |           |
+      |           +---<olink targetdoc="structural/source.xml" targetptr="source"><code>&lt;source></code></olink> 1
+      |           |
+      |           +---<olink targetdoc="structural/target.xml" targetptr="target"><code>&lt;target></code></olink> ?
+      |
+      +---<olink targetdoc="structural/group.xml" targetptr="group"><code>&lt;group></code></olink>
+          |
+          +---&lt;other> *
+          |
+          +---<olink targetdoc="structural/notes.xml" targetptr="notes"><code>&lt;notes></code></olink> ?
+          | |
+          | +---<olink targetdoc="structural/note.xml" targetptr="note"><code>&lt;note></code></olink> +
+          |
+          +---At least one of (<olink targetdoc="structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink> OR <olink targetdoc="structural/group.xml" targetptr="group"><code>&lt;group></code></olink>)
+
+
+  </programlisting>
+</section>

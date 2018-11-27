@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="gls_ref">
+  <title>ref</title>
+
+  <para>Reference - points to a span of source or target text within the same unit, to which the
+    glossary entry is relevant.</para>
+
+  <para><emphasis>Value description:</emphasis> IRI</para>
+
+  <para><emphasis>Default value:</emphasis> undefined</para>
+
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../elements/glossary/glossentry.xml"
+      targetptr="glossentry"><code>&lt;glossEntry></code></olink> and <olink targetdoc="../elements/glossary/translation.xml"
+        targetptr="translation"><code>&lt;translation></code></olink>.</para>
+
+  <itemizedlist>
+    <title>Constraints</title>
+
+    <listitem>
+      <para>The value of the <olink targetdoc="gls_ref.xml" targetptr="gls_ref"
+          ><code>ref</code></olink> attribute <glossterm>MUST</glossterm> point to a span of text
+        within the same <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"
+            ><code>&lt;unit></code></olink> element, where the enclosing <olink
+          targetdoc="../elements/glossary/glossary.xml" targetptr="glossary"
+            ><code>&lt;glossary></code></olink> element is located.</para>
+      
+    </listitem>
+  </itemizedlist>
+</section>

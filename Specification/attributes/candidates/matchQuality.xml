@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="matchQuality">
+    <title>matchQuality</title>
+    
+    <para>Match quality - indicates the quality of the <olink
+            targetdoc="../elements/structural/target.xml" targetptr="target"
+                ><code>&lt;target></code></olink> child of a <olink
+            targetdoc="../elements/structural/match.xml" targetptr="match"
+            ><code>&lt;match></code></olink> element based on an external benchmark or metric.</para>
+    
+    <para><emphasis>Value description:</emphasis> a decimal number between 0.0 and 100.0.</para>
+        
+    <para><emphasis>Default value:</emphasis> undefined</para>
+    
+    <para><emphasis>Used in:</emphasis> <olink targetdoc="../elements/structural/match.xml" targetptr="match"><code>&lt;match></code></olink>.</para>
+    
+<note><para>This attribute can carry a human review based metrics score, a Machine Translation
+            self-reported confidence score etc.</para></note>
+</section>
+
