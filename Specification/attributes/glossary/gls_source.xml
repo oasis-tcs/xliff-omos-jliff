@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="gls_source">
+  <title>source</title>
+
+  <para>Source - indicates the origin of the content of the element where the attribute is
+    defined.</para>
+
+  <para><emphasis>Value description:</emphasis> Text.</para>
+
+  <para><emphasis>Default value:</emphasis> undefined</para>
+
+  <para><emphasis>Used in:</emphasis><olink targetdoc="../../elements/glossary/term.xml" targetptr="term"><code>&lt;term></code></olink>, 
+  <olink targetdoc="../../elements/glossary/translation.xml" targetptr="translation"><code>&lt;translation></code></olink>, and 
+  <olink targetdoc="../../elements/glossary/definition.xml" targetptr="definition"><code>&lt;definition></code></olink>.</para>
+  
+</section>

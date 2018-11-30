@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="slr_storage">
+  <title>storage</title>
+
+  <para>This attribute specifies the normalization form to apply for storage size restrictions. Only
+    the normalization forms C and D as specified by the Unicode Consortium are supported, see <ulink
+      url="http://unicode.org/reports/tr15/">Unicode Standard Annex #15</ulink>.</para>
+
+  <para><emphasis>Value description:</emphasis> normalization to apply.</para>
+  <table>
+    <title>Values</title>
+    <tgroup cols="2">
+      <thead>
+        <row>
+          <entry>Value</entry>
+          <entry>Description</entry>
+        </row>
+      </thead>
+      <tbody>
+        <row>
+          <entry>none</entry>
+          <entry>No additional normalization <glossterm>should</glossterm> be done, content
+              <glossterm>should</glossterm> be used as represented in the document. It is possible
+            that other <firstterm>Agents</firstterm> have already done some type of normalization when <firstterm>Modifying</firstterm> content.
+            This means that this setting could give different results depending on what <firstterm>Agents</firstterm> are
+            used to perform a specific action on the <firstterm>XLIFF Document</firstterm>.</entry>
+        </row>
+        <row>
+          <entry>nfc</entry>
+          <entry>Normalization Form C <glossterm>must</glossterm> be used</entry>
+        </row>
+        <row>
+          <entry>nfd</entry>
+          <entry>Normalization Form D <glossterm>must</glossterm> be used</entry>
+        </row>
+      </tbody>
+    </tgroup>
+  </table>
+
+
+  <para><emphasis>Default value:</emphasis> <code>none</code></para>
+
+  <para><emphasis>Used in:</emphasis> <olink targetdoc="../../elements/size_restriction/normalization.xml" targetptr="slr_normalization"><code>&lt;normalization&gt;</code></olink>.</para>
+</section>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="itsm_domains">
+    <title>itsm:domains</title>
+    
+    <para>Domains - the <code>itsm:domains</code> attribute expresses the <olink
+            targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+        <ulink url="http://www.w3.org/TR/its20/#domain">Domain</ulink> data category.</para>
+    
+    
+    <para><emphasis>Value description:</emphasis>
+        The value is a text string, however commas if present separate distinct domain values within the string.</para>
+    
+    <para><emphasis>Default value:</emphasis>: default values for this attribute
+        depend on the element in which it is used:</para>
+    
+    <itemizedlist>
+        <listitem>
+            <para>When used in <olink targetdoc="../../elements/structural/file.xml"
+                targetptr="file"><code>&lt;file&gt;</code></olink>:</para>
+            
+            <para>The value is undefined.</para>
+        </listitem>
+        <listitem>
+            <para>When used in any other admissible structural element (<olink targetdoc="../../elements/structural/group.xml"
+                targetptr="group"><code>&lt;group></code></olink> or <olink targetdoc="../../elements/structural/unit.xml"
+                    targetptr="unit"><code>&lt;unit></code></olink>):</para>
+            <para>The value of the <link linkend="itsm_domains"
+                ><code>domains</code></link> attribute of its parent element
+                (which can be undefined).</para>
+        </listitem>
+        <listitem>
+            <para>When used in annotations markers
+                <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"><code>&lt;mrk></code></olink> or
+                <olink targetdoc="../../elements/inline/sm.xml" targetptr="sm"><code>&lt;sm></code></olink>:</para>
+            
+            
+            <para>The value of the <link linkend="itsm_domains"
+                ><code>domains</code></link> attribute of the innermost
+                <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
+                    ><code>&lt;mrk></code></olink>, <olink
+                        targetdoc="../../elements/structural/unit.xml" targetptr="unit"
+                        ><code>&lt;unit&gt;</code></olink>, or <olink
+                            targetdoc="../../elements/candidates/match.xml" targetptr="match"
+                            ><code>&lt;mtc:match></code></olink> element, element, in which the marker
+                in question is located (which can be undefined). </para>
+            
+        </listitem>
+        <listitem>
+            <para> When used in the <olink targetdoc="../../elements/candidates/match.xml" targetptr="match"><code>&lt;mtc:match></code></olink> element:</para>
+            <para>The value is undefined.</para>
+        </listitem>
+        
+        
+        
+    </itemizedlist>
+    
+    
+    
+    <para><emphasis>Used in:</emphasis>
+        <olink targetdoc="../../elements/structural/file.xml" targetptr="file"
+                ><code>&lt;file></code></olink>
+        <olink targetdoc="../../elements/structural/group.xml" targetptr="group"
+                ><code>&lt;group></code></olink>
+        <olink targetdoc="../../elements/structural/unit.xml" targetptr="unit"
+                ><code>&lt;unit></code></olink>, <olink targetdoc="../../elements/inline/mrk.xml"
+            targetptr="mrk"><code>&lt;mrk></code></olink>, <olink
+            targetdoc="../../elements/inline/sm.xml" targetptr="sm"><code>&lt;sm></code></olink>,
+        and <olink targetdoc="../../elements/modules/match.xml" targetptr="match"
+                ><code>&lt;mtc:match></code></olink>.</para>
+    
+    <para>See the <olink targetdoc="../../modules/itsm/Domain.xml" targetptr="domainsAnnotation">ITS Domain Annotation</olink> for the normative usage description of this attribute inline.</para>
+    <warning>
+        <para>This attribute belongs to the <code>urn:oasis:names:tc:xliff:itsm:2.1</code>
+            namespace that is being prefixed with <code>itsm:</code> throughout this
+            specification, unlike the original W3C ITS namespace
+            <code>https://www.w3.org/2005/11/its/</code> that is being prefixed with
+            <code>its:</code>.</para>
+    </warning>
+    
+</section>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="matches">
+    <title>matches</title>
+    <para>Collection of matches retrieved from any leveraging system (MT, TM, etc.)</para>
+    <para><emphasis>Contains:</emphasis></para>
+    <simplelist>
+        <member>- One or more <olink targetdoc="match.xml" targetptr="match"><code>&lt;match></code></olink> elements</member>
+    </simplelist>
+</section>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="revisions">
+    <title>revisions</title>
+    <para>Container for logical groups of revisions associated with a sibling element, or a child of
+    a sibling element, to the change track extension within the scope of the enclosing
+    element.</para>
+    <para><emphasis>Contains:</emphasis></para>
+    <simplelist>
+        <member>- One or more <olink targetdoc="../../elements/change-tracking/revision.xml" targetptr="revision"><code>&lt;revision></code></olink> elements.</member>
+    </simplelist>
+    
+    <para><emphasis>Attributes:</emphasis></para>
+    <simplelist>
+        <member>- <olink targetdoc="../../attributes/change-tracking/ctr_appliesTo.xml" targetptr="ctr_appliesTo"><code>appliesTo</code></olink>, <glossterm>required</glossterm></member>
+        <member>- <olink targetdoc="../../attributes/change-tracking/ctr_ref.xml" targetptr="ctr_ref"><code>ref</code></olink>, <glossterm>optional</glossterm></member> 
+        <member>- <olink targetdoc="../../attributes/change-tracking/ctr_currentVersion.xml" targetptr="ctr_currentVersion"><code>currentVersion</code></olink>, <glossterm>optional</glossterm></member> 
+        <member>- attributes from other namespaces, <glossterm>optional</glossterm></member>
+    </simplelist>
+
+  <itemizedlist>
+    <title>Constraints</title>
+    
+    <listitem>
+      <para>The following <firstterm>XLIFF Module</firstterm> attributes are explicitly allowed by
+        the wildcard <code>other</code>:</para>
+      <simplelist>
+        <member>- attributes from the namespace <code>urn:oasis:names:tc:xliff:itsm:2.1</code>,
+          <glossterm>optional</glossterm>, provided that the Constraints specified in the <olink
+            targetdoc="../../modules/itsm/specification.xml" targetptr="ITS-module">ITS Module</olink> are
+          met.</member>
+      </simplelist>
+    </listitem>
+    
+  </itemizedlist>
+
+  <itemizedlist>
+    <title>Processing Requirements</title>
+
+    <listitem>
+      <para>Modifying agents <glossterm>may</glossterm> create <olink targetdoc="../../elements/change-tracking/revisions.xml" targetptr="revisions"><code>&lt;revisions></code></olink> elements with attributes.</para>
+    </listitem>
+
+    <listitem>
+      <para>Modifying agents <glossterm>should not</glossterm> modify <olink
+          targetdoc="../../elements/change-tracking/revisions.xml" targetptr="revisions"
+            ><code>&lt;revisions></code></olink> and its attributes defined in this extension,
+        except in the case where the <olink
+          targetdoc="../../elements/change-tracking/ctr_currentVersion.xml"
+          targetptr="ctr_currentVersion"><code>currentVersion</code></olink> attribute is used. This
+        attribute <glossterm>should</glossterm> be updated when a new revision becomes the most
+        current.</para>
+     </listitem>
+    
+     <listitem>
+       <para>Modifying agents <glossterm>should not</glossterm> remove <olink
+          targetdoc="../../elements/change-tracking/revisions.xml" targetptr="revisions"
+            ><code>&lt;revisions></code></olink> and its attributes defined in this
+        extension.</para>
+     </listitem>
+
+    <listitem>
+      <para>When the <olink targetdoc="../../elements/change-tracking/ctr_appliesTo.xml" targetptr="ctr_appliesTo"><code>appliesTo</code></olink> attribute refers to an element that is a multiple instance within
+        the enclosing element, the <olink targetdoc="../../elements/change-tracking/ctr_ref.xml" targetptr="ctr_ref"><code>ref</code></olink> attribute <glossterm>must</glossterm> be used to reference an individual
+        instance if and only if the referenced instance has an id. Using <olink targetdoc="../../elements/structural/notes.xml" targetptr="notes"><code>&lt;notes></code></olink> as an example:</para>
+      <programlisting>
+      &lt;notes&gt;
+        &lt;note id="n1"&gt;new note&lt;/note&gt;
+        &lt;note id="n2"&gt;another note&lt;/note&gt;  
+      &lt;/notes&gt;
+      &lt;ctr:changeTrack&gt;
+        &lt;ctr:revisions appliesTo="note" ref="n1"&gt;
+          &lt;ctr:revision&gt;
+            &lt;ctr:item property="content"&gt;old note&lt;/ctr:item&gt;
+          &lt;/ctr:revision&gt;
+        &lt;/ctr:revisions&gt;
+      &lt;/ctr:changeTrack&gt;
+      </programlisting>
+     </listitem>  
+    
+  </itemizedlist>
+</section>

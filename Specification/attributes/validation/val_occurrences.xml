@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="val_occurrences">
+  <title>occurrences</title>
+
+  <para>occurrences - is a test to verify that a certain number of occurences of a specified string
+    exists in the target text.</para>
+
+  <para><emphasis>Value description:</emphasis> Text.</para>
+  <para>Characters left parenthesis <code>(</code> (U+0028), right parenthesis <code>)</code>
+    (U+0029), and quotation mark <code>"</code> (U+0022) <glossterm>must</glossterm> be escaped by
+    enclosing within a pair of quotation marks, <code>"</code> (U+0022). The value
+    <glossterm>must</glossterm> follow this pattern: <code>"(string)(integer)"</code>.
+    </para><para> For example: In this <code>occurrences="(&amp;nbsp;&amp;nbsp;)(0)"</code>, the value patern
+    prohibits any occurences of two non-breaking spaces next to each other. Here
+      <code>occurrences="(:)(1)"</code>, exactly one occurrence of the colon is enforced.</para>
+
+  <para><emphasis>Default value:</emphasis> none</para>
+
+  <para><emphasis>Used in:</emphasis> <olink targetdoc="../../elements/validation/rule.xml" targetptr="rule"><code>&lt;val:rule></code></olink></para>
+  
+  <itemizedlist>
+    <title>Processing Requirements</title>
+    <listitem><para>The target text <glossterm>must</glossterm> contain the <code>integer</code> number of occurences of the <code>string</code> as specified in <olink targetdoc="../../attributes/validation/val_occurrences.xml" targetptr="val_occurrences"><code>occurrences</code></olink>.</para></listitem>
+  </itemizedlist>
+  
+</section>

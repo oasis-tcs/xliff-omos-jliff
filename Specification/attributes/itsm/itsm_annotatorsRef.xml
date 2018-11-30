@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="itsm_annotatorsRef">
+    <title>annotatorsRef</title>
+    
+    <para>Annotators Reference - the <code>annotatorsRef</code> attribute holds provenance
+        information about tools that produced <olink targetdoc="../xliff21.xml" targetptr="ITS20"
+            >[ITS]</olink> metadata. See <olink targetdoc="../xliff21.xml" targetptr="ITS20"
+            >[ITS]</olink>
+        <ulink
+            url="http://www.w3.org/TR/2013/REC-its20-20131029/#its-tool-annotation
+                "
+            >Tools Annotation</ulink> mechanism.</para>
+    
+    
+    <para><emphasis>Value description:</emphasis> Text. </para>
+    
+    <para><emphasis>Default value:</emphasis>: default values for this attribute
+        depend on the element in which it is used:</para>
+    
+    <itemizedlist>
+        <listitem>
+            <para>When used in <olink targetdoc="../../elements/structural/file.xml"
+                targetptr="file"><code>&lt;file&gt;</code></olink>:</para>
+            
+            <para>The value is undefined.</para>
+        </listitem>
+        <listitem>
+            <para>When used in any other admissible structural element (<olink
+                    targetdoc="../../elements/structural/group.xml" targetptr="group"
+                        ><code>&lt;group></code></olink> or <olink
+                    targetdoc="../../elements/structural/unit.xml" targetptr="unit"
+                        ><code>&lt;unit></code></olink>) or any of the elements defined in the
+                    <olink targetdoc="../../modules/itsm/specification" targetptr="ITS-module">ITS
+                    Module</olink>:</para>
+            <para>The value of the <link linkend="itsm_annotatorsRef"
+                ><code>annotatorsRef</code></link> attribute of its parent element
+                (which can be undefined).</para>
+        </listitem>
+        <listitem>
+            <para>When used in annotations markers
+                <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"><code>&lt;mrk></code></olink> or
+                <olink targetdoc="../../elements/inline/sm.xml" targetptr="sm"><code>&lt;sm></code></olink>:</para>
+            
+            
+            <para>The value of the <link linkend="itsm_annotatorsRef"
+                ><code>annotatorsRef</code></link> attribute of the innermost
+                <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
+                    ><code>&lt;mrk></code></olink>, <olink
+                        targetdoc="../../elements/structural/unit.xml" targetptr="unit"
+                        ><code>&lt;unit&gt;</code></olink>, or <olink
+                            targetdoc="../../elements/candidates/match.xml" targetptr="match"
+                            ><code>&lt;mtc:match></code></olink> element, element, in which the marker
+                in question is located (which can be undefined). </para>
+            
+        </listitem>
+        <listitem>
+            <para> When used in top level module elements (<olink
+                    targetdoc="../../elements/candidates/match.xml" targetptr="match"
+                        ><code>&lt;mtc:match></code></olink>, 
+              <!--  not allowed on ITS stand off elements  <olink
+                    targetdoc="../../elements/itsm/itsm_locQualityIssues.xml"
+                    targetptr="itsm_locQualityIssues"
+                  ><code>&lt;its:locQualityIssues></code></olink>,-->
+                
+                <olink
+                    targetdoc="../../elements/modules/revisions.xml" targetptr="revisions"
+                    ><code>&lt;ctr:revisions></code></olink>, <!--  not allowed on ITS stand off elements[need to add
+                its:provenanceRecords]-->:</para>
+            <para>The value is undefined.</para>
+            
+        </listitem>
+        <listitem>
+            <para>When used in
+                
+                <!--  not allowed on ITS stand off elements<olink
+                targetdoc="../../elements/itsm/itsm_locQualityIssue.xml" targetptr="itsm_locQualityIssue"><code>&lt;its:locQualityIssue></code></olink>,-->
+                <olink
+                        targetdoc="../../elements/modules/revision.xml" targetptr="revision"
+                        ><code>&lt;ctr:revision></code></olink>
+                <!--  not allowed on ITS stand off elements, or  [need to add its:provenanceRecord]-->.</para>
+            <para>The value of the <link linkend="itsm_annotatorsRef"
+                ><code>annotatorsRef</code></link> attribute of its parent element
+                (which can be undefined).</para>
+        </listitem>
+        
+        
+    </itemizedlist>
+    
+    <itemizedlist>
+        <title>Constraints</title>
+        <listitem>
+            <para>All Constraints that follow from <olink targetdoc="../../xliff21.xml" targetptr="ITS20">[ITS]</olink> <ulink url="https://www.w3.org/TR/its20/#its-tool-annotation">Tools Annotation</ulink>.</para>
+        </listitem> 
+        <!--  
+        <listitem><para>Values of the <link linkend="itsm_annotatorsRef"><code>annotatorsRef</code></link> <glossterm>must</glossterm> consist of triples of the following parts in the exact order:</para>
+        <orderedlist>
+            <listitem><para>ITS Data category identifier, see the table below for admissible values. No other values
+                            <glossterm>must</glossterm> be used.</para></listitem>
+            <listitem><para>character | VERTICAL LINE (U+007C) as the separator</para></listitem>
+            <listitem><para>IRI</para></listitem>
+        </orderedlist>
+        </listitem>
+                <listitem><para>The text string <glossterm>must</glossterm> be composed from space separated triples or
+                comprise exactly one triple.</para></listitem>
+        <listitem><para>Each ITS data category identifier <glossterm>must not</glossterm> be used more than once.</para></listitem>
+        <listitem><para>The space separated triples <glossterm>must</glossterm> be ordered alphabetically as per the
+                ITS Data category identifier.</para></listitem>-->
+    </itemizedlist>    
+    <!--          
+    <table id="categoryIdentifiers">
+        <title>ITS Data category identifiers</title>
+        <tgroup cols="3">
+            <colspec colname="number" align="center" colsep="1" rowsep="1"/>
+          
+            <colspec colname="identifier" align="center" colsep="1" rowsep="1"/>
+            <colspec colname="category" align="center" rowsep="1" colsep="1"/>
+            <tbody>
+                <row>
+                    <entry>1.</entry>
+                    <entry>allowed-characters</entry>
+                    <entry>for <ulink url="http://www.w3.org/TR/its20/#allowedchars">Allowed Characters</ulink></entry></row>
+                
+                <row>
+                    <entry>2.</entry>
+                    <entry>directionality</entry>
+                    <entry>for <ulink url="http://www.w3.org/TR/its20/#directionality">Directionality</ulink></entry></row>
+                <row>
+                    <entry>3.</entry>
+                    <entry>domain</entry>
+                    <entry>for <ulink url="http://www.w3.org/TR/its20/#domain">Domain</ulink></entry>
+                </row>
+                <row>
+                    <entry>4.</entry>
+                    <entry>elements-within-text</entry>
+                    <entry>for <ulink url="http://www.w3.org/TR/its20/#elements-within-text">Elements Within Text</ulink></entry>
+                </row>
+                <row>
+                    <entry>5.</entry>
+                    <entry>external-resource</entry>
+                    <entry>for <ulink url="http://www.w3.org/TR/its20/#externalresource">External Resource</ulink></entry>
+                </row>
+                <row>
+                    <entry>6.</entry>
+                    <entry>id-value</entry>
+                    <entry>for <ulink url="http://www.w3.org/TR/its20/#idvalue">ID Value</ulink></entry>
+                </row>
+                <row>
+                    <entry>7.</entry>
+                    <entry>language-information</entry>
+                    <entry>for <ulink url="http://www.w3.org/TR/its20/#language-information">Language Information</ulink></entry>
+                </row>
+                <row>
+                    <entry>8.</entry>
+                    <entry>locale-filter</entry>
+                    <entry>for <ulink url="http://www.w3.org/TR/its20/#LocaleFilter">Locale Filter</ulink></entry>
+                </row>
+                <row>
+                    <entry>9.</entry>
+                    <entry>localization-note</entry>
+                    <entry>for <ulink url="http://www.w3.org/TR/its20/#locNote-datacat">Localization Note</ulink></entry>
+                </row>
+                <row>
+                    <entry>10.</entry>
+                    <entry>localization-quality-issue</entry>
+                    <entry>for <ulink url="http://www.w3.org/TR/its20/#lqissue">Localization Quality Issue</ulink></entry>
+                </row>
+                <row>
+                    <entry>11.</entry>
+                    <entry>localization-quality-rating</entry>
+                    <entry>for <ulink url="http://www.w3.org/TR/its20/#lqrating">Localization Quality Rating</ulink></entry>
+                </row>
+                <row>
+                    <entry>12.</entry>
+                    <entry>mt-confidence</entry>
+                    <entry>for <ulink url="http://www.w3.org/TR/its20/#mtconfidence">MT Confidence</ulink></entry>
+                </row>
+                <row>
+                    <entry>13.</entry>
+                    <entry>preserve-space</entry>
+                    <entry>for <ulink url="http://www.w3.org/TR/its20/#preservespace">Preserve Space</ulink></entry>
+                </row>
+                <row>
+                    <entry>14.</entry>
+                    <entry>provenance</entry>
+                    <entry>for <ulink url="http://www.w3.org/TR/its20/#provenance">Provenance</ulink></entry>
+                </row>
+                <row>
+                    <entry>15.</entry>
+                    <entry>storage-size</entry>
+                    <entry>for <ulink url="http://www.w3.org/TR/its20/#storagesize">Storage Size</ulink></entry>
+                </row>
+                <row>
+                    <entry>16.</entry>
+                    <entry>target-pointer</entry>
+                    <entry>for <ulink url="http://www.w3.org/TR/its20/#target-pointer">Target Pointer</ulink></entry>
+                </row>
+                <row>
+                    <entry>17.</entry>
+                    <entry>terminology</entry>
+                    <entry>for <ulink url="http://www.w3.org/TR/its20/#terminology">Terminology</ulink></entry>
+                </row>
+                <row>
+                    <entry>18.</entry>
+                    <entry>text-analysis</entry>
+                    <entry>for <ulink url="http://www.w3.org/TR/its20/#textanalysis">Text Analysis</ulink></entry>
+                </row>
+                                <row>
+                                    <entry>19.</entry>
+                                    <entry>translate</entry>
+                    <entry>for <ulink url="http://www.w3.org/TR/its20/#trans-datacat">Translate</ulink></entry>
+                </row>
+            </tbody>
+        </tgroup></table>-->
+        
+    
+    
+    <note><para>The IRI part of the value string is used as the annotator identifier. The semantics of how the
+            IRI identifies the ITS producing tool is not prescribed. Possible mechanisms are for
+            instance: to encode information directly in the IRI, as parameters or similar; to
+            reference an external resource that provides such information, an XML file, an RDF
+            declaration and so on; or to reference another part of the document that provides such
+            information.</para></note>
+    
+    <para><emphasis>Used in:</emphasis>
+        <olink targetdoc="../../elements/structural/file.xml" targetptr="file"
+                ><code>&lt;file></code></olink>
+        <olink targetdoc="../../elements/structural/group.xml" targetptr="group"
+                ><code>&lt;group></code></olink>
+        <olink targetdoc="../../elements/structural/unit.xml" targetptr="unit"
+                ><code>&lt;unit></code></olink>, <olink targetdoc="../../elements/inline/mrk.xml"
+            targetptr="mrk"><code>&lt;mrk></code></olink>, <olink
+            targetdoc="../../elements/inline/sm.xml" targetptr="sm"><code>&lt;sm></code></olink>,
+            <olink targetdoc="../../elements/modules/match.xml" targetptr="match"
+                ><code>&lt;mtc:match></code></olink>,
+        <!--  not allowed on ITS stand off elements<olink
+            targetdoc="../../elements/itsm/itsm_locQualityIssues.xml"
+            targetptr="itsm_locQualityIssues"><code>&lt;its:locQualityIssues></code></olink>,
+            <olink targetdoc="../../elements/itsm/itsm_locQualityIssue.xml"
+            targetptr="itsm_locQualityIssue"><code>&lt;its:locQualityIssue></code></olink>,--> <olink
+            targetdoc="../../elements/modules/revisions.xml" targetptr="revisions"
+                ><code>&lt;ctr:revisions></code></olink>, or <olink
+            targetdoc="../../elements/modules/revision.xml" targetptr="revision"
+                    ><code>&lt;ctr:revision></code></olink> <!--  not allowed on ITS stand off elements[need to add its:provenanceRecords and
+        its:provenanceRecord]. -->.</para>
+    
+    <itemizedlist>
+        <title>Processing Requirements</title>
+        <listitem>
+            <para>All Processing Requirements that follow from <olink targetdoc="../../xliff21.xml" targetptr="ITS20">[ITS]"></olink> <ulink url="https://www.w3.org/TR/its20/#its-tool-annotation">Tools Annotation</ulink>.</para>
+        </listitem> 
+        <!--  <listitem>
+            <para>When resolving any actual local value of the <link linkend="itsm_annotatorsRef"
+                        ><code>annotatorsRef</code></link> attribute,
+                    <firstterm>Modifiers</firstterm> and <firstterm>Enrichers</firstterm>
+                <glossterm>must</glossterm> combine the actual set value with all default values
+                inherited from higher levels as follows:</para>
+            <para>On any given node, the information provided by this mechanism is a space-separated
+                list of the accumulated references found in the <link linkend="itsm_annotatorsRef"
+                        ><code>annotatorsRef</code></link> attributes declared in the enclosing
+                elements and sorted by <link linkend="categoryIdentifiers">data category
+                    identifiers</link>. For each data category, the IRI part is the one of the
+                inner-most declaration.</para>
+        </listitem>-->
+    </itemizedlist>
+    <para>See the <olink targetdoc="../../modules/itsm/specifcation.xml" targetptr="toolsAnnotation">ITS Tools Annotation</olink> for the normative usage description of this attribute inline.</para>
+    
+</section>

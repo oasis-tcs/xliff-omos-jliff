@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="canoverlap">
+  <title>canOverlap</title>
+
+  <para>Code can overlap - indicates whether or not the spanning code where this attribute is used
+    can enclose partial spanning codes (i.e. a start code without its corresponding end code, or an
+    end code without its corresponding start code).</para>
+
+  <para><emphasis>Value description:</emphasis> <code>yes</code> or
+  <code>no</code>.</para>
+
+  <para><emphasis>Default value:</emphasis> default values for this
+  attribute depend on the element in which it is used:</para>
+
+  <itemizedlist>
+    <listitem>
+      <para>When used in <olink targetdoc="../elements/inline/pc.xml"
+      targetptr="pc"><code>&lt;pc&gt;</code></olink>: <code>no</code>.</para>
+    </listitem>
+
+    <listitem>
+      <para>When used in <olink targetdoc="../elements/inline/sc.xml"
+      targetptr="sc"><code>&lt;sc&gt;</code></olink> or <olink
+      targetdoc="../elements/inline/ec.xml"
+      targetptr="ec"><code>&lt;ec&gt;</code></olink>: <code>yes</code>.</para>
+    </listitem>
+  </itemizedlist>
+
+  <para><emphasis>Used in:</emphasis> <olink
+  targetdoc="../elements/inline/pc.xml"
+  targetptr="pc"><code>&lt;pc&gt;</code></olink>, <olink
+  targetdoc="../elements/inline/sc.xml"
+  targetptr="sc"><code>&lt;sc&gt;</code></olink> and <olink
+  targetdoc="../elements/inline/ec.xml"
+  targetptr="ec"><code>&lt;ec&gt;</code></olink></para>
+
+  <para><emphasis>Example:</emphasis></para>
+
+  <programlisting>
+&lt;unit id="1"&gt;
+  &lt;originalData&gt;
+    &lt;data id="1"&gt;\i1 &lt;/data&gt;
+    &lt;data id="2"&gt;\i0 &lt;/data&gt;
+    &lt;data id="3"&gt;{\b &lt;/data&gt;
+    &lt;data id="4"&gt;}&lt;/data&gt;
+  &lt;/originalData&gt;
+  &lt;segment&gt;
+    &lt;source&gt;&lt;pc id="1" dataRefStart="3" dataRefEnd="4" canOverlap="no"&gt;
+        Bold, &lt;sc id="2" dataRef="1" canOverlap="yes"/&gt;both&lt;/pc&gt;,
+         italics&lt;ec startRef="2" dataRef="2"/&gt;&lt;/source&gt;
+  &lt;/segment&gt;
+&lt;/unit&gt;
+</programlisting>
+</section>

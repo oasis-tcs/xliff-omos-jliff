@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="Preserve_Space">
+  <title>Preserve Space</title>
+
+  <para>Indicates how to handle whitespace in a given content portion. See
+    <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> <ulink url="http://www.w3.org/TR/its20/#preservespace">Preserve Space</ulink> for details.</para>
+  
+
+  <section id="Preserve_Space_Structural">
+    <title>Structural Elements</title>
+    <para>
+      Whitespace handling at the structural level is indicated with <code><olink targetdoc="../attributes/xml_space.xml" targetptr="xml_space">xml:space</olink></code> in <firstterm>XLIFF Core</firstterm> and extensions:
+      <example>
+        <title>Extraction of preserved whitespace at the structural level</title>
+      
+      <para>Original:</para>
+      <programlisting>
+&lt;listing xml:space='preserve'>Line 1 Line 2&lt;/listing>
+ </programlisting>
+      <para>Extraction:</para>
+      <programlisting>
+&lt;unit id='1' xml:space='preserve'>
+  &lt;segment>
+    &lt;source>Line 1 Line 2&lt;/source>
+  &lt;/segment>
+&lt;/unit>
+ </programlisting>
+      </example>
+    </para>
+  </section>
+  <section id="Preserve_Space_Inline">
+    <title>Inline Elements</title>
+    <para> It is not possible to use <olink targetdoc="../xliff21.xml" targetptr="xml_namespace"
+        >[XML namespace]</olink> on XLIFF inline elements. It is advised that mixed Preserve Space
+      behavior is NOT used inline in source formats. The advised way to extract content with mixed
+      Preserve Space behavior is for the <firstterm>Extractor</firstterm> to perform the following:<orderedlist>
+        <listitem>
+          <para>Normalize the whitespace in the content as needed, i.e. preserving whitespace spans
+            where they need to be preserved, normalizing elsewhere.</para>
+        </listitem>
+        <listitem>
+          <para>Then, extract the content with <olink targetdoc="../attrbutes/xml_space.xml"
+              targetptr="xml_space"><code>xml:space</code></olink> set to <code>preserve</code> on the
+            structural level, i.e. <olink targetdoc="../elements/structural/unit.xml"
+              targetptr="unit"><code>unit</code></olink> or higher.</para>
+        </listitem>
+      </orderedlist></para>
+    <para>
+      <note>
+        <para>Even in case <firstterm>Extractors</firstterm> don't perform the normalization step,
+          it is safer to set <olink targetdoc="../attrbutes/xml_space.xml" targetptr="xml_space"
+            ><code>xml:space</code></olink> to <code>preserve</code> on the structural level, since any potentially
+          superfluous whitespace characters can be removed by human translators or editors, whereas inheriting of the default
+          value <code>default</code> could lead to irreversible loss of significant whitespace
+          characters.</para>
+      </note>
+    </para>
+    <para>Whitespace handling can be also set independently for text segments and ignorable text
+      portions within an <firstterm>Extracted</firstterm> unit and for the source and target
+      language within the same <code><olink targetdoc="../elements/structural/segment.xml"
+          targetptr="segment">&lt;segment></olink></code> or <code><olink
+          targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"
+          >&lt;ignorable></olink></code> element using the <glossterm>optional</glossterm>
+      <code><olink targetdoc="../attributes/xml_space.xml" targetptr="xml_space"
+        >xml:space</olink></code> attribute at the <code><olink
+          targetdoc="../elements/structural/source.xml" targetptr="source"
+        >&lt;source></olink></code> and <code><olink targetdoc="../elements/structural/target.xml"
+          targetptr="target">&lt;target></olink></code> elements. </para>    
+    
+    <para> It is important to note that the value of the <code><olink
+          targetdoc="../attributes/xml_space.xml" targetptr="xml_space">xml:space</olink></code>
+      attribute is restricted to <code>preserve</code> on the <code><olink
+          targetdoc="../elements/structural/data.xml" targetptr="data">&lt;data></olink></code>
+      element.</para>
+       
+    
+      <!-- The example demonstartes bad practice that we don't want to encourage, could be listed later on as a bad example with an explanation of issues this kind of extraction would be likely to cause.
+   <example>
+      <title>Extraction of preserved whitespaces as referenced original data</title>
+    
+     <para>Original:</para>
+     <programlisting>
+ &lt;p>
+   &lt;span xml:space='preserve'>Item 1      Item 2      Item n+1 
+   &lt;/span> are all used to build Item n+2.
+ &lt;/p>
+     </programlisting>
+     <para>Extraction:</para>
+     <programlisting>
+&lt;unit id='1'>
+  &lt;originalData>
+    &lt;data id="d1">&amp;lt;span xml:space='preserve'>&lt;/data>
+    &lt;data id="d2">&amp;lt;/span>&lt;/data>
+    &lt;data id="d3">      &lt;/data>
+    &lt;data id="d4"> 
+    &lt;/data>
+  &lt;/originalData>
+  &lt;segment>
+    &lt;source>&lt;pc id="1" dataRefStart="d1" dataRefEnd="d2">Item 1&lt;ph id="2" dataRef="d3">Item 2&lt;ph id="2" dataRef="d3">Item n+1&lt;ph id="2" dataRef="d4">&lt;/pc> are all used to build Item n+2.&lt;/source>
+  &lt;/segment>
+&lt;/unit>
+        </programlisting>
+      
+      
+      
+    </example>
+     -->
+  </section>
+  
+</section>

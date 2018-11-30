@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="slr_size_restriction">
+  <title>sizeRestriction</title>
+
+  <para>This attribute specifies the size restriction to apply to the collection descendants of the element it is defined on.</para>
+
+  <para><emphasis>Value description:</emphasis> Interpretation of the value is dependent on selected <olink targetdoc="general-profile.xml" targetptr="slr_general_profile"><code>generalProfile</code></olink>. It <glossterm>must</glossterm> represent the restriction to apply to the indicated sub part of the document.</para>
+
+  <para><emphasis>Default value:</emphasis> undefined</para>
+
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../../elements/structural/file.xml" targetptr="file"><code>&lt;file></code></olink>,
+    <olink targetdoc="../../elements/structural/group.xml" targetptr="group"><code>&lt;group></code></olink>,
+    <olink targetdoc="../../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink>,
+    <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"><code>&lt;mrk></code></olink>,
+    <olink targetdoc="../../elements/inline/sm.xml" targetptr="sm"><code>&lt;sm></code></olink>,
+    <olink targetdoc="../../elements/inline/pc.xml" targetptr="pc"><code>&lt;pc></code></olink> and
+    <olink targetdoc="../../elements/inline/sc.xml" targetptr="sc"><code>&lt;sc></code></olink>.
+  </para>
+</section>

@@ -1,0 +1,114 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<!-- This document was created with Syntext Serna Free. -->
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="type">
+  <title>type</title>
+  <para>Type - indicates the type of an element.</para>
+  <para><emphasis>Value description:</emphasis> allowed values for this attribute depend on the
+    element in which it is used.</para>
+  <itemizedlist>
+    <listitem>
+      <para>When used in <olink targetdoc="../elements/inline/pc.xml" targetptr="pc">
+          <code>&lt;pc&gt;</code>
+        </olink>, <olink targetdoc="../elements/inline/sc.xml" targetptr="sc">
+          <code>&lt;sc&gt;</code>
+        </olink>, <olink targetdoc="../elements/inline/ec.xml" targetptr="ec">
+          <code>&lt;ec&gt;</code>
+        </olink> or <olink targetdoc="../elements/inline/ph.xml" targetptr="ph">
+          <code>&lt;ph&gt;</code>
+        </olink>:</para>
+      <para>The value  <glossterm>must</glossterm> be set to one of the following values:</para>
+      <simplelist>
+        <member><code>fmt</code> - Formatting (e.g. a &lt;b&gt; element in HTML)</member>
+        <member><code>ui</code> - User interface element</member>
+        <member><code>quote</code> - Inline quotation (as opposed to a block citation)</member>
+        <member><code>link</code> - Link (e.g. an &lt;a&gt; element in HTML)</member>
+        <member><code>image</code> - Image or graphic</member>
+        <member><code>other</code> - Type of element not covered by any of the other top-level types.</member>
+      </simplelist>
+      <para><emphasis>Example:</emphasis>
+        <programlisting>
+&lt;segment&gt;
+  &lt;source xml:lang="cs">&lt;pc type="quote"><foreignphrase lang="cs">Blázen,
+      chce dobýt točnu v takovém počasí&lt;/pc>, dodal slovy svého
+      oblíbeného imaginárního autora.</foreignphrase>&lt;/source>
+  &lt;target xml:lang="en">&lt;pc type="quote">Madman, he wants to conquer the
+      pole in this weather&lt;/pc&gt;, offered he the words of his
+      favourite imaginary playwright.&lt;/target&gt;
+&lt;/segment&gt;
+</programlisting>
+      </para>
+      <para>One can further specify the type of a code using the <olink targetdoc="subtype.xml" targetptr="subtype">
+          <code>subType</code>
+        </olink>
+      attribute.</para>
+      <para><emphasis>Default value:</emphasis> Undefined</para>
+    </listitem>
+    <listitem>
+      <para>When used in <olink targetdoc="../elements/inline/mrk.xml" targetptr="mrk">
+          <code>&lt;mrk&gt;</code>
+        </olink> or <olink targetdoc="../elements/inline/sm.xml" targetptr="sm">
+          <code>&lt;sm&gt;</code>
+        </olink>:</para>
+      <para>One of the following values: <code>generic</code>, <code>comment</code>,
+          <code>term</code>, or a user-defined value that is composed of a prefix and a sub-value
+        separated by a character <code>:</code> (U+003A).</para>
+      <para>The prefix is a string uniquely identifying a collection of sub-values for a specific authority.
+        The sub-value is any string value defined by the authority.</para>
+      <para><emphasis>Default value:</emphasis> <code>generic</code></para>
+    </listitem>
+    <listitem>
+      <para>When used in <olink targetdoc="../elements/structural/group.xml" targetptr="group">
+          <code>&lt;group&gt;</code>
+        </olink> or <olink targetdoc="../elements/structural/unit.xml" targetptr="unit">
+          <code>&lt;unit&gt;</code>
+        </olink>:</para>
+      <para>A value that is composed of a prefix and a sub-value
+        separated by a character <code>:</code> (U+003A).</para>
+      <para>The prefix is a string uniquely identifying a collection of sub-values for a specific authority.
+        The sub-value is any string value defined by the authority. The prefix <code>xlf</code> is reserved.</para>
+      <para><emphasis>Default value:</emphasis> Undefined</para>
+    </listitem>
+  </itemizedlist>
+  <para><emphasis>Used in:</emphasis> <olink targetdoc="../elements/structural/group.xml" targetptr="group">
+      <code>&lt;group&gt;</code>
+    </olink>, <olink targetdoc="../elements/structural/unit.xml" targetptr="unit">
+      <code>&lt;unit&gt;</code>
+    </olink>, <olink targetdoc="../elements/inline/pc.xml" targetptr="pc">
+      <code>&lt;pc&gt;</code>
+    </olink>, <olink targetdoc="../elements/inline/sc.xml" targetptr="sc">
+      <code>&lt;sc&gt;</code>
+    </olink>, <olink targetdoc="../elements/inline/ec.xml" targetptr="ec">
+      <code>&lt;ec&gt;</code>
+    </olink>, <olink targetdoc="../elements/inline/mrk.xml" targetptr="mrk">
+      <code>&lt;mrk&gt;</code>
+    </olink>,  <olink targetdoc="../elements/inline/ph.xml" targetptr="ph">
+      <code>&lt;ph&gt;</code>
+    </olink> and <olink targetdoc="../elements/inline/sm.xml" targetptr="sm">
+      <code>&lt;sm&gt;</code>
+    </olink>.</para>
+  <itemizedlist>
+    <title>Processing Requirements</title>
+    <listitem>
+      <para><firstterm>Modifiers</firstterm> updating the attribute <link linkend="type">
+          <code>type</code>
+        </link> on <olink targetdoc="../elements/inline/pc.xml" targetptr="pc">
+          <code>&lt;pc&gt;</code>
+        </olink>, <olink targetdoc="../elements/inline/sc.xml" targetptr="sc">
+          <code>&lt;sc&gt;</code>
+        </olink>, <olink targetdoc="../elements/inline/ec.xml" targetptr="ec">
+          <code>&lt;ec&gt;</code>
+        </olink>, or
+          <olink targetdoc="../elements/inline/ph.xml" targetptr="ph">
+          <code>&lt;ph&gt;</code>
+        </olink>
+        <glossterm>must</glossterm> also update or delete <olink targetdoc="subType.xml" targetptr="subtype">
+          <code>subType</code>
+        </olink>.</para>
+    </listitem>
+  </itemizedlist>
+</section>

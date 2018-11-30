@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="validation">
+    <title>validation</title>
+    <para>Parent container for a list of rules and constraints to apply to the target text of the enclosing element.</para>
+    <para><emphasis>Contains:</emphasis></para>
+    <simplelist>
+        <member>- One or more <olink targetdoc="../../elements/validation/rule.xml" targetptr="rule"><code>&lt;rule></code></olink> elements.</member>
+    </simplelist>
+  
+    <para><emphasis>Attributes:</emphasis></para>
+    <simplelist>
+        <member>- attributes from other namespaces, <glossterm>optional</glossterm></member>
+    </simplelist>
+    
+  <itemizedlist>
+    <title>Processing Requirements</title>
+
+     <listitem>
+      <para>When the <olink targetdoc="../../elements/validation/validation.xml" targetptr="validation"><code>&lt;validation></code></olink> element occurs at the 
+        <olink targetdoc="../../elements/structural/file.xml" targetptr="file"><code>&lt;file></code></olink> level, rules <glossterm>must</glossterm> be applied to all 
+      <olink targetdoc="../../elements/structural/target.xml" targetptr="target"><code>&lt;target></code></olink> elements within the scope of that  
+      <olink targetdoc="../../elements/structural/file.xml" targetptr="file"><code>&lt;file></code></olink> element, except where overrides are specified at the 
+      <olink targetdoc="../../elements/structural/group.xml" targetptr="group"><code>&lt;group></code></olink> or 
+      <olink targetdoc="../../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink> level.</para>
+    </listitem>
+    
+    <listitem>
+      <para>When <olink targetdoc="../../elements/validation/validation.xml" targetptr="validation"><code>&lt;validation></code></olink> occurs at the 
+        <olink targetdoc="../../elements/structural/group.xml" targetptr="group"><code>&lt;group></code></olink> level, rules <glossterm>must</glossterm> be applied to all 
+      <olink targetdoc="../../elements/structural/target.xml" targetptr="target"><code>&lt;target></code></olink> elements within the scope of that 
+      <olink targetdoc="../../elements/structural/group.xml" targetptr="group"><code>&lt;group></code></olink>, except where overrides are specified in a nested 
+      <olink targetdoc="../../elements/structural/group.xml" targetptr="group"><code>&lt;group></code></olink> element, or at the 
+      <olink targetdoc="../../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink> level.</para>
+    </listitem>
+    
+    <listitem>
+      <para>When <olink targetdoc="../../elements/validation/validation.xml" targetptr="validation"><code>&lt;validation></code></olink> occurs at the 
+        <olink targetdoc="../../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink> level, rules <glossterm>must</glossterm> be applied to all 
+      <olink targetdoc="../../elements/structural/target.xml" targetptr="target"><code>&lt;target></code></olink> elements within the scope of that 
+      <olink targetdoc="../../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink>.</para>
+    </listitem>
+   
+  </itemizedlist>
+</section>

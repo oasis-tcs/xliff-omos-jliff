@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="structural">
+    <title>Structural Elements</title>
+    <para>The structural elements used in <firstterm>XLIFF Core</firstterm> are: 
+        <olink  targetdoc="structural/xliff.xml" targetptr="xliff"><code>&lt;xliff></code></olink>, 
+        <olink targetdoc="structural/file.xml" targetptr="file"><code>&lt;file></code></olink>, 
+        <olink targetdoc="structural/skeleton.xml" targetptr="skeleton"><code>&lt;skeleton></code></olink>,
+        <olink targetdoc="structural/group.xml" targetptr="group"><code>&lt;group></code></olink>,
+        <olink targetdoc="structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink>, 
+        <olink targetdoc="structural/segment.xml" targetptr="segment"><code>&lt;segment></code></olink>, 
+        <olink targetdoc="structural/ignorable.xml" targetptr="ignorable"><code>&lt;ignorable></code></olink>, 
+        <olink targetdoc="structural/notes.xml" targetptr="notes"><code>&lt;notes></code></olink>, 
+        <olink targetdoc="structural/note.xml" targetptr="note"><code>&lt;note></code></olink>, 
+        <olink targetdoc="structural/originaldata.xml" targetptr="originaldata"><code>&lt;originalData></code></olink>, 
+        <olink targetdoc="structural/data.xml" targetptr="data"><code>&lt;data></code></olink>, 
+        <olink targetdoc="structural/source.xml" targetptr="source"><code>&lt;source></code></olink> 
+        and <olink targetdoc="structural/target.xml" targetptr="target"><code>&lt;target></code></olink>.
+    </para>
+
+    <xi:include href="structural/xliff.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+
+    <xi:include href="structural/file.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    
+    <xi:include href="structural/skeleton.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    
+    <xi:include href="structural/group.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+
+    <xi:include href="structural/unit.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    
+    <xi:include href="structural/segment.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    
+    <xi:include href="structural/ignorable.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    
+    <xi:include href="structural/notes.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    
+    <xi:include href="structural/note.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    
+    <xi:include href="structural/originaldata.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    
+    <xi:include href="structural/data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    
+    <xi:include href="structural/source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    
+    <xi:include href="structural/target.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    
+</section>

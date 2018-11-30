@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="subtype">
+  <title>subType</title>
+
+  <para>subType - indicates the secondary level type of an inline code.</para>
+
+  <para><emphasis>Value description:</emphasis></para>
+
+  <para>The value is composed of a prefix and a sub-value separated by a
+  character <code>:</code> (U+003A).</para>
+
+  <para>The prefix is a string uniquely identifying a collection of sub-values for a specific authority.
+    The sub-value is any string value defined by the authority.</para>
+
+  <para>The prefix <code>xlf</code> is reserved for this specification, and
+  the following sub-values are defined:</para>
+
+  <simplelist>
+    <member><code>xlf:lb</code> - Line break</member>
+
+    <member><code>xlf:pb</code> - Page break</member>
+
+    <member><code>xlf:b</code> - Bold</member>
+
+    <member><code>xlf:i</code> - Italics</member>
+
+    <member><code>xlf:u</code> - Underlined</member>
+
+    <member><code>xlf:var</code> - Variable</member>
+  </simplelist>
+
+  <para>Other prefixes and sub-values <glossterm>may</glossterm> be defined by the users.</para>
+
+  <para><emphasis>Default value:</emphasis> undefined</para>
+
+  <para><emphasis>Used in:</emphasis> <olink
+  targetdoc="../elements/inline/pc.xml"
+  targetptr="pc"><code>&lt;pc&gt;</code></olink>, <olink
+  targetdoc="../elements/inline/sc.xml"
+  targetptr="sc"><code>&lt;sc&gt;</code></olink>, <olink
+  targetdoc="../elements/inline/ec.xml"
+  targetptr="ec"><code>&lt;ec&gt;</code></olink> and <olink
+  targetdoc="../elements/inline/ph.xml"
+  targetptr="ph"><code>&lt;ph&gt;</code></olink></para>
+
+  <itemizedlist>
+    <title>Constraints</title>
+
+    <listitem>
+      <para>If the attribute <olink targetdoc="subtype.xml" targetptr="subtype"
+          ><code>subType</code></olink> is used, the attribute <olink targetdoc="type.xml"
+          targetptr="type"><code>type</code></olink>
+        <glossterm>must</glossterm> be specified as well.</para>
+    </listitem>
+    <listitem>
+      <para>The reserved <code>xlf:</code> prefixed values map onto the <olink targetdoc="type.xml" targetptr="type"><code>type</code></olink> attribute values as follows:</para>
+      <simplelist>
+        <member> For <code>xlf:b</code>, <code>xlf:i</code>, <code>xlf:u</code>,
+          <code>xlf:lb</code>, and <code>xlf:pb</code>, the <glossterm>required</glossterm> value of
+          the <olink targetdoc="type.xml" targetptr="type"><code>type</code></olink> attribute is
+            <code>fmt</code>.</member>
+        <member> For <code>xlf:var</code>, the <glossterm>required</glossterm> value of the <olink
+            targetdoc="type.xml" targetptr="type"><code>type</code></olink> attribute is
+            <code>ui</code>.</member>
+      </simplelist>
+    </listitem>
+  </itemizedlist>
+  <itemizedlist>
+    <title>Processing Requirements</title>
+    
+    
+    <listitem>
+      <para><firstterm>Modifiers</firstterm> updating the attribute <olink targetdoc="type.xml"
+          targetptr="type"><code>type</code></olink>
+        <glossterm>must</glossterm> also update or delete <link linkend="subtype"
+            ><code>subType</code></link>.</para>
+    </listitem>
+  </itemizedlist>
+</section>

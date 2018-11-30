@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="itsm_localeFilterList">
+    <title>localeFilterList</title>
+    
+    <para>LocaleFilterList - the <code>localeFilterList</code> attribute is the
+            <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> defined
+            <code>localeFilterList</code> attribute. See the <ulink
+            url="https://www.w3.org/TR/its20/#localefilter-local">localeFilterList</ulink>
+        definition in the <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+        specification for details on the purpose of the attribute and permitted values.</para>
+    <para><emphasis>Value description:</emphasis> See the <ulink
+            url="https://www.w3.org/TR/its20/#localefilter-local">localeFilterList</ulink>
+        definition in the <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+        specification.</para>
+    <para><emphasis>Default value:</emphasis> "*".</para>
+    
+    <para><emphasis>Used in:</emphasis>
+        <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
+            ><code>&lt;mrk></code></olink> and <olink targetdoc="../../elements/inline/sm.xml"
+            targetptr="sm"><code>&lt;sm></code></olink>.</para>
+    
+    
+    <para>See the <olink targetdoc="../../modules/itsm/Locale_Filter.xml" targetptr="localeFilterAnnotation"
+        >ITS Locale Filter  Annotation</olink> for the normative usage description of this
+        attribute when used inline; advanced Constraints follow from that normative usage
+        description.</para>
+    
+</section>

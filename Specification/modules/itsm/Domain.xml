@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="Domain">
+  <title>Domain</title>
+
+  <para>Identifies the topic, theme, or subject of the content in scope. See <olink
+      targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+    <ulink url="http://www.w3.org/TR/its20/#domain">Domain</ulink> for
+    details.</para>
+  <itemizedlist>
+    <title>Processing Requirements</title>
+    <listitem><para><firstterm>Writers</firstterm>
+        <glossterm>must</glossterm> use the attribute <olink
+          targetdoc="../../attributes/itsm/itsm_domains.xml" targetptr="itsm_domains"
+            ><code>itsm:domains</code></olink> to express the <olink targetdoc="../xliff21.xml"
+          targetptr="ITS20">[ITS]</olink>
+        <ulink url="http://www.w3.org/TR/its20/#domain">Domain</ulink> data category in
+          <firstterm>XLIFF Documents</firstterm>.</para></listitem>
+
+  </itemizedlist>
+  <warning>
+    <para>Please note that the <link linkend="Domain">Domain metadata category</link> uses the
+      <olink targetdoc="../attributes/itsm/itsm_domains.xml" targetptr="itsm_domains"><code>itsm:domains</code></olink> attribute that
+      belongs to the <code>urn:oasis:names:tc:xliff:itsm:2.1</code> namespace (prefixed with
+        <code>itsm:</code>) and not to the <code>https://www.w3.org/2005/11/its/</code> (prefixed
+      with <code>its</code>) as most of the other attributes described in this module.</para>
+  </warning>
+
+
+  <section id="Domain_Structural">
+    <title>Structural Elements</title>
+
+
+    <example>
+      <title>Extraction of Domain at structural levels</title>
+
+    <para>Original:</para>
+
+      <programlisting>
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Data Category: Domain&lt;/title&gt;
+    &lt;script type="application/its+xml"&gt;
+      &lt;its:rules xmlns:its="<ulink url="http://www.w3.org/2005/11/its">http://www.w3.org/2005/11/its</ulink>" version="2.0"
+          xmlns:h="<ulink url="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</ulink>"&gt;
+        &lt;its:domainRule selector="//h:*[@class='dom1']"
+            domainPointer="./@class" domainMapping="dom1 domain1" /&gt;
+      &lt;/its:rules&gt;
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p class="dom1"&gt;Text in the domain domain1&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+ </programlisting>
+
+
+    <para>Extraction:</para>
+
+
+      <programlisting>
+...
+&lt;unit id='2' itsm:domains="domain1">
+  &lt;segment>
+    &lt;source&gt;Text in the domain domain1&lt;/source>
+  &lt;/segment>
+&lt;/unit>
+...
+</programlisting>
+   </example>
+
+
+
+  </section>
+  <section id="Domain_Inline">
+    <title>Inline Elements</title>
+    <para> Use <code><olink targetdoc="../elements/inline/mrk.xml" targetptr="mrk"
+        >&lt;mrk></olink></code> or an <code><olink targetdoc="../elements/inline/sm.xml"
+          targetptr="sm">&lt;sm/></olink></code> / <code><olink
+          targetdoc="../elements/inline/em.xml" targetptr="em">&lt;em/></olink></code> pair with the
+        <olink targetdoc="../../attributes/itsm/itsm_domains.xml" targetptr="itsm_domains"
+          ><code>itsm:domains</code></olink> attribute set.</para>
+    <para>See the <link linkend="domainsAnnotation">ITS Domain Annotation</link> for the normative
+      usage description on inline markers.</para>
+
+  </section>
+
+  <section id="domainsAnnotation">
+    <title>ITS Domain Annotation</title>
+    <para>This is used to express inline the <olink targetdoc="../xliff21.xml" targetptr="ITS20"
+        >[ITS]</olink>
+      <ulink url="http://www.w3.org/TR/its20/#domain">Domain</ulink> data category. </para>
+    <para>Usage:</para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>The <olink targetdoc="../../attributes/id.xml" targetptr="id"
+          ><code>id</code></olink> attribute is <glossterm>required</glossterm>.</para>
+      </listitem>
+      <listitem>
+        <para>The <olink targetdoc="../../attributes/itsm/itsm_domains.xml" targetptr="itsm_domains"
+              ><code>itsm:domains</code></olink> attribute is
+          <glossterm>required</glossterm>.</para>
+      </listitem>
+
+      <listitem>
+        <para>The <olink targetdoc="../../attributes/type.xml" targetptr="type"
+          ><code>type</code></olink> attribute is <glossterm>optional</glossterm> and set to
+          <code>its:generic</code>.</para>
+
+      </listitem>
+
+
+      <listitem>
+        <para>The <olink targetdoc="../../attributes/translate.xml" targetptr="translate"
+          ><code>translate</code></olink> attribute is <glossterm>optional</glossterm>.</para>
+      </listitem>
+    </itemizedlist>
+    <example>
+      <title>Extraction of Domain metadata on inline elements</title>
+
+      <para>Original:</para>
+      <programlisting>
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Data Category: Domain&lt;/title&gt;
+    &lt;script type="application/its+xml"&gt;
+      &lt;its:rules xmlns:its="<ulink url="http://www.w3.org/2005/11/its">http://www.w3.org/2005/11/its</ulink>" version="2.0"
+          xmlns:h="<ulink url="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</ulink>"&gt;
+        &lt;its:domainRule selector="//h:*[@class='dom1']"
+            domainPointer="./@class" domainMapping="dom1 domain1" /&gt;
+      &lt;/its:rules&gt;
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;Span of text &lt;span class="dom1"&gt;in the domain domain1&lt;/span&gt;&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+ </programlisting>
+      <para>Extraction:</para>
+      <programlisting>
+...
+&lt;unit id="1"&gt;
+  &lt;segment&gt;
+    &lt;source&gt;Span of text &lt;pc id="1"&gt;&lt;mrk id="m1" type="its:generic"
+        itsm:domains="domain1" &gt;in the domain domain1&lt;/mrk&gt;&lt;/pc&gt;&lt;/source&gt;
+  &lt;/segment&gt;
+&lt;/unit&gt;
+...
+</programlisting>
+    </example>
+  </section>
+
+</section>

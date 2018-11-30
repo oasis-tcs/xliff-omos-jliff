@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+<!--the document properties were transferred to "dockbook/dbgenent.mod"-->
+                         ]>
+<section id="glossary-module">
+  <title>Glossary Module</title>
+  <section>
+    <title>Introduction</title>
+
+  <para>Simple glossaries, consisting of a list of terms with a definition or translation, can
+    be optionally embedded in an XLIFF document using the namespace mechanism to include elements
+    from the Glossary module.</para>
+  </section>
+
+  <section>
+            <title>Module Namespace and Validation Artifacts</title>
+            <para>The namespace for the Glossary module is: <code>urn:oasis:names:tc:xliff:glossary:2.0</code></para>
+    <para>Schema and Schematron for this module are available at <ulink
+      url="&this-loc;/schemas/glossary.xsd"
+      >&this-loc;/schemas/glossary.xsd</ulink> and <ulink
+        url="&this-loc;/schemas/glossary.sch"
+        >&this-loc;/schemas/glossary.sch</ulink></para>
+    </section>
+
+  <section>
+    <title>Module Fragment Identification Prefix</title>
+    <para>The fragment identification prefix for the Glossary module is: <code>gls</code></para>
+  </section>
+
+    <section>
+        <title>Module Elements</title>
+        <para>The elements defined in the Glossary module are:
+                <olink targetdoc="../../elements/glossary/glossary.xml" targetptr="glossary"><code>&lt;glossary></code></olink>,
+                <olink targetdoc="../../elements/glossary/glossentry.xml" targetptr="glossentry"><code>&lt;glossEntry></code></olink>,
+                <olink targetdoc="../../elements/glossary/term.xml" targetptr="term"><code>&lt;term></code></olink>,
+                <olink targetdoc="../../elements/glossary/translation" targetptr="translation"><code>&lt;translation></code></olink> and
+                <olink targetdoc="../../elements/glossary/definition" targetptr="definition"><code>&lt;definition></code></olink>.
+        </para>
+
+<section><!-- gen. 20140318 -->
+  <title>Tree Structure</title>
+  <para>Legend:</para>
+  <simplelist type="vert">
+    <member>1 = one</member>
+    <member>+ = one or more</member>
+    <member>? = zero or one</member>
+    <member>* = zero, one or more</member>
+  </simplelist>
+  <programlisting format="linespecific">
+<olink targetdoc="../../elements/glossary/glossary.xml" targetptr="glossary"><code>&lt;glossary></code></olink>
+|
++---<olink targetdoc="../../elements/glossary/glossEntry.xml" targetptr="glossentry"><code>&lt;glossEntry></code></olink> +
+  |
+  +---<olink targetdoc="../../elements/glossary/term.xml" targetptr="term"><code>&lt;term></code></olink> 1
+  |
+  +---<olink targetdoc="../../elements/glossary/translation.xml" targetptr="translation"><code>&lt;translation></code></olink> *
+  |
+  +---<olink targetdoc="../../elements/glossary/definition.xml" targetptr="definition"><code>&lt;definition></code></olink> ?
+  |
+  +---&lt;other> *
+
+
+  </programlisting>
+</section>
+
+
+            <xi:include href="../../elements/glossary/glossary.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+            <xi:include href="../../elements/glossary/glossentry.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+            <xi:include href="../../elements/glossary/term.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+            <xi:include href="../../elements/glossary/translation.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+            <xi:include href="../../elements/glossary/definition.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        </section>
+
+        <section>
+            <title>Module Attributes</title>
+            <para>The attributes defined in the Glossary module are:
+            <olink targetdoc="../../attributes/glossary/gls_id.xml" targetptr="gls_id"><code>id</code></olink>,
+            <olink targetdoc="../../attributes/glossary/gls_ref.xml" targetptr="gls_ref"><code>ref</code></olink>,
+              and
+            <olink targetdoc="../../attributes/glossary/gls_source.xml" targetptr="gls_source"><code>source</code></olink></para>
+
+            <xi:include href="../../attributes/glossary/gls_id.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+            <xi:include href="../../attributes/glossary/gls_ref.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+            <xi:include href="../../attributes/glossary/gls_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        </section>
+
+
+
+    <section>
+      <title>Example</title>
+
+<programlisting>
+<!--&lt;unit id="1"&gt;
+  &lt;segment&gt;
+    &lt;source&gt;Press the &lt;mrk id="m1" type="term"&gt;TAB key&lt;/mrk&gt;.&lt;/source&gt;
+    &lt;target&gt;Drücken Sie die &lt;mrk id="m2" type="term"&gt;TAB-TASTE&lt;/mrk&gt;.&lt;/target&gt;
+  &lt;/segment&gt;
+  &lt;gls:glossary&gt;
+    &lt;gls:glossentry ref="#m1"&gt;
+      &lt;gls:term source="publicTermbase"&gt;TAB key&lt;/gls:term&gt;
+      &lt;gls:translation id="1" source="myTermbase"&gt;Tabstopptaste&lt;/gls:translation&gt;
+      &lt;gls:translation ref="#m2" source="myTermbase"&gt;TAB-TASTE&lt;/gls:translation&gt;
+      &lt;gls:definition source="publicTermbase"&gt;A keyboard key that is traditionally used to insert tab characters into a document.&lt;/gls:definition&gt;
+    &lt;/gls:glossentry&gt;
+  &lt;/gls:glossary&gt;
+&lt;/unit&gt; -->
+&lt;unit id="1">
+  &lt;gls:glossary>
+    &lt;gls:glossEntry ref="#m1">
+      &lt;gls:term source="publicTermbase">TAB key&lt;/gls:term>
+      &lt;gls:translation id="1" source="myTermbase">Tabstopptaste
+          &lt;/gls:translation>
+      &lt;gls:translation ref="#t=m1" source="myTermbase">TAB-TASTE
+          &lt;/gls:translation>
+      &lt;gls:definition source="publicTermbase">A keyboard key that is
+          traditionally used to insert tab characters into a document.
+          &lt;/gls:definition>
+    &lt;/gls:glossEntry>
+  &lt;/gls:glossary>
+  &lt;segment>
+    &lt;source>Press the &lt;mrk id="m1" type="term">TAB key&lt;/mrk>.&lt;/source>
+    &lt;target>Drücken Sie die &lt;mrk id="m1" type="term">TAB-TASTE&lt;/mrk>. &lt;/target>
+  &lt;/segment>
+&lt;/unit>
+ </programlisting>
+
+    </section>
+
+        <!--<xi:include href="schema.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+          TC agreed https://lists.oasis-open.org/archives/xliff/201412/msg00049.html to get rid of schema listings in the spec -->
+
+</section>

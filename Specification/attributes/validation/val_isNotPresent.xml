@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="val_isNotPresent">
+  <title>isNotPresent</title>
+
+  <para>This rule attribute specifies that a string <glossterm>must not</glossterm> be present in the target text.</para>
+  <para>For example, the following is valid:</para>
+<programlisting>
+&lt;unit id="1"&gt;
+  &lt;val:validation&gt;
+    &lt;val:rule isNotPresent="store" /&gt;
+  &lt;/val:validation&gt;
+  &lt;segment id="1"&gt;
+    &lt;source&gt;Choose an option in the online store.&lt;/source&gt;
+    &lt;target&gt;Escolha uma opção na loja online.&lt;/target&gt;
+  &lt;/segment&gt;
+&lt;/unit&gt;
+ </programlisting>
+ <para>Whereas the following is invalid:</para>
+<programlisting>
+&lt;unit id="1"&gt;
+  &lt;val:validation&gt;
+    &lt;val:rule isNotPresent="store" /&gt;
+  &lt;/val:validation&gt;
+  &lt;segment id="1"&gt;
+    &lt;source&gt;Choose an option in the online store.&lt;/source&gt;
+    &lt;target&gt;Escolha uma opção na online store.&lt;/target&gt;
+  &lt;/segment&gt;
+&lt;/unit&gt;
+ </programlisting>
+  <para><emphasis>Value description:</emphasis> Text.</para>
+  <para><emphasis>Default value:</emphasis> none</para>
+  <para><emphasis>Used in:</emphasis> <olink targetdoc="../../elements/validation/rule.xml" targetptr="rule"><code>&lt;rule></code></olink></para>
+
+</section>

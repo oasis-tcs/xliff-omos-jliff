@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="approved">
+    <!-- This flag is no longer used, it got killed in the August 20 meeting-->
+    <title>approved</title>
+    
+    <para>Approved - indicates whether the holding <olink
+            targetdoc="../elements/structural/segment.xml" targetptr="segment"
+                ><code>&lt;segment></code></olink> element contains a <firstterm>Translation</firstterm> suitable to be
+        used when <firstterm>Merging</firstterm> the <firstterm>XLIFF Document</firstterm> back to the original format.</para>
+    
+    <para><emphasis>Value description:</emphasis> <code>yes</code> or <code>no</code>.</para>
+        
+    <para><emphasis>Default value:</emphasis> undefined</para>
+       
+    
+    <para><emphasis>Used in:</emphasis>
+    <!-- removed inheritance form higher levels as it caused trouble 
+        <olink targetdoc="../elements/structural/file.xml" targetptr="file"><code>&lt;file></code></olink>
+        <olink targetdoc="../elements/structural/group.xml" targetptr="group"><code>&lt;group></code></olink>
+        <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink>, and-->        
+        <olink targetdoc="../elements/structural/segment.xml" targetptr="segment"><code>&lt;segment></code></olink>.</para>
+    
+</section>

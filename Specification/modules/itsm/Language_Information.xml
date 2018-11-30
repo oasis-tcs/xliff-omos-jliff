@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="Language_Information">
+  <title>Language Information</title>
+
+  <para>Indicates the natural langauge in which content is expressed. See
+    <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+    <ulink url="http://www.w3.org/TR/its20/#language-information">Language Information</ulink> for details.</para>
+
+
+  <section id="Language_Information_Structural">
+    <title>Structural Elements</title>
+    <para><firstterm>XLIFF Documents</firstterm> are normally bilingual, hence the source and target
+      language are indicated at the top level using the <olink targetdoc="../attributes/srcLang.xml"
+        targetptr="srcLang"><code>srcLang</code></olink> and <olink
+        targetdoc="../attributes/trgLang.xml" targetptr="trgLang"><code>trgLang</code></olink>
+      attributes set on the <olink targetdoc="../elements/structural/xliff.xml" targetptr="xliff"
+          ><code>xliff</code></olink> element. The Language Information values set on the top level,
+      strictly constrain the values of <olink targetdoc="../attributes/xml_lang.xml"
+        targetptr="xml_space"><code>xml:lang</code></olink> set or inherited on the <olink
+        targetdoc="../elements/structural/source.xml" targetptr="source"
+        ><code>&lt;source></code></olink> element for source content and on the <olink
+        targetdoc="../elements/structural/target.xml" targetptr="target"
+        ><code>&lt;target></code></olink> element for target content.</para>
+    <note>
+    <para>Because <firstterm>XLIFF Documents</firstterm> are normally source-monolingual, whole
+        paragraphs in the source document that are not in the main source language are generally not
+        to be extracted. If there is a need to extract such content into a single <firstterm>XLIFF
+          Documents</firstterm>, the XLIFF output has to use the inline <olink
+          targetdoc="../../inline/inline.xml" targetptr="annotations">Annotations</olink> mechanism
+        together with the <link linkend="langAnnotation"> ITS Language Information
+        Annotation</link>, because the structurally set or inherited source language is constrained
+        by the <firstterm>XLIFF Core</firstterm>
+        <olink targetdoc="../attributes/srcLang.xml" targetptr="srcLang"
+          ><code>srcLang</code></olink> attribute value. Analogically, the structurally set target
+        language is constrained by the <olink targetdoc="../attributes/trgLang.xml"
+          targetptr="trgLang"><code>trgLang</code></olink> attribute value. Thus also paragraphs
+        other than in the main target language have to be annotated inline using the same
+        mechanism.</para>
+    </note>
+  </section>
+  <section id="Language_Information_Inline">
+    <title>Inline Elements</title>
+    <para> It is not possible to use <olink targetdoc="../xliff21.xml" targetptr="xml_namespace"
+        >[XML namespace]</olink> on XLIFF inline elements. It is advised that content in different
+      languages is NOT used inline in source formats. Still there are use cases for mixed language
+      use inline, like referencing non-localized UI or hardware elements, discussing foreign
+      vocabulary or analyzing poetry in the original language using short inline examples. These
+      scenarios cannot be fully supported with <firstterm>XLIFF Core</firstterm> only.</para>
+    <para>In case the inline elements in other than the main language are not supposed to be
+      translated (e.g. referenced non localized UI or hardware elements), they can be marked as not
+      translatable using the <firstterm>XLIFF Core</firstterm>
+      <olink targetdoc="../inline/inline.xml" targetptr="translateAnnotation">Translate
+        annotation</olink>. However, the specific Language Information would not be readily
+      accessible during the roundtrip if not combined with the Language Information Annotation
+      defined here in the ITS Module.</para>
+    <note>
+    <para>If there is a need to make the different language information available throughout the
+      roundtrip, the XLIFF output has to use the inline <olink targetdoc="../../inline/inline.xml"
+        targetptr="annotations">Annotations</olink> mechanism together with the <link
+        linkend="langAnnotation"> ITS Language Information Annotation</link>, because the structurally set and thus inherited
+      inline source language is constrained by the <firstterm>XLIFF Core</firstterm>
+      <olink targetdoc="../attributes/srcLang.xml" targetptr="srcLang"><code>srcLang</code></olink>
+      attribute value. Analogaically, the structurally set (and inline inherited) target language is
+      constrained by the <olink targetdoc="../attributes/trgLang.xml" targetptr="trgLang"
+          ><code>trgLang</code></olink> attribute value. Thus also inline portions in other than the
+      main target language have to be inline annotated using the same mechanism.</para>
+    </note>
+
+    <warning><para>Preserving source elements content that is in other than the main source language as original
+        data stored outside of the translatable content at the unit level and referenced from
+        placeholder codes is NOT advised, as important context would be very likely hidden from
+        translators, human or machine.</para></warning>
+
+
+
+
+   <example>
+      <title>Core only extraction and roundtrip of a non localized hardware reference in other than
+        the main source language</title>
+
+     <para>Original:</para>
+     <programlisting>
+&lt;p> Use the &lt;span class="HWbutton" xml:lang="DE-DE">Aus&lt;/span> button to
+    completely switch off the machine. &lt;/p>
+ </programlisting>
+     <para>Extraction:</para>
+     <programlisting>
+&lt;unit id='1'>
+  &lt;originalData>
+    &lt;data id="d1">&amp;lt;span class="HWbutton" xml:lang="DE-DE">&lt;/data>
+    &lt;data id="d2">&amp;lt;/span>&lt;/data>
+  &lt;/originalData>
+  &lt;segment>
+    &lt;source> Use the &lt;pc id="1" dataRefStart="d1" dataRefEnd="d2">
+        &lt;mrk id=2 translate="no">Aus&lt;/mrk>&lt;/pc> button to completely
+        switch off the machine. &lt;/source>
+  &lt;/segment>
+&lt;/unit>
+ </programlisting>
+
+     <para> Please note that the Language Information has been preserved for
+          <firstterm>Merging</firstterm> back in the referenced original data, is however not
+        available in an interoperable way during the roundtrip.</para>
+
+    </example>
+    </section>
+  <section id="langAnnotation">
+    <title>ITS Language Information Annotation</title>
+    <para>This is used to fully map to and from the <olink targetdoc="../xliff21.xml"
+      targetptr="ITS20">[ITS]</olink>
+      <ulink url="http://www.w3.org/TR/its20/#language-information">Language Information</ulink> data category,
+      including full inline support that cannot be provided via the <firstterm>XLIFF
+        Core</firstterm> due to normative Constraints. </para>
+    <para>Usage:</para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>The <olink targetdoc="../../attributes/id.xml" targetptr="id"
+          ><code>id</code></olink> attribute is <glossterm>required</glossterm>.</para>
+      </listitem>
+      <listitem>
+        <para>The <olink targetdoc="../../attributes/itsm/itsm_lang.xml" targetptr="itsm_lang"
+              ><code>itsm:lang</code></olink> attribute is <glossterm>required</glossterm>.</para>
+      </listitem>
+
+      <listitem>
+        <para>The <olink targetdoc="../../attributes/type.xml" targetptr="type"
+          ><code>type</code></olink> attribute is <glossterm>optional</glossterm> and set to
+          <code>its:generic</code>.</para>
+
+      </listitem>
+
+
+      <listitem>
+        <para>The <olink targetdoc="../../attributes/translate.xml" targetptr="translate"
+          ><code>translate</code></olink> attribute is <glossterm>optional</glossterm>.</para>
+      </listitem>
+    </itemizedlist>
+    <example>
+      <title>Extraction of Language Information</title>
+
+      <para>Original:</para>
+      <programlisting>
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;My Document&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;Span of text &lt;span lang="fr"&gt;en français&lt;/span&gt;.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+ </programlisting>
+      <para>Extraction:</para>
+      <programlisting>
+...
+&lt;unit id='2'&gt;
+  &lt;segment&gt;
+    &lt;source&gt;Span of text &lt;pc id='1'&gt;&lt;mrk id="m1" itsm:lang="fr"
+        type="its:generic" &gt;en français&lt;/mrk&gt;&lt;/pc&gt;.&lt;/source&gt;
+  &lt;/segment&gt;
+&lt;/unit&gt;
+...
+</programlisting>
+    </example>
+  <warning><para>Please note that the <link linkend="langAnnotation">Language Information Annotation</link>
+    uses the <olink targetdoc="../attributes/itsm/itsm_lang.xml" targetptr="itsm_lang"><code>itsm:lang</code></olink> attribute that belongs
+          to the <code>urn:oasis:names:tc:xliff:itsm:2.1</code> namespace (prefixed with <code>itsm:</code>) and not to the
+            <code>https://www.w3.org/2005/11/its/</code> (prefixed with <code>its</code>) as most of the other attributes described
+          in this module.
+      </para></warning>
+  </section>
+
+
+</section>

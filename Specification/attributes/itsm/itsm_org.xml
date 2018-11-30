@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="itsm_org">
+    <title>org</title>
+    
+    <para>Organization - the <code>org</code> attribute is the <olink
+        targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> defined <code>org</code> attribute.</para>
+    
+    
+    <para><emphasis>Value description:</emphasis> Text</para>
+    <para>The text string is supposed to identify an organizational translation agent as per <ulink url="https://www.w3.org/TR/its20/#provenanceDefs">Organizational provenance information</ulink>.</para>
+    
+    <para><emphasis>Default value:</emphasis> default values for this attribute
+        depend on the element in which it is used:</para>
+    
+    <itemizedlist>
+        <listitem>
+            <para>When used in any admissible element WITH the <olink targetdoc="itsm_provenanceRecordsRef.xml" targetptr="itsm_provenanceRecordsRef"><code>provenanceRecordsRef</code></olink> attribute set:</para>
+            <para>The value of the <link linkend="itsm_org"><code>org</code></link> attribute
+                of the first <olink targetdoc="../../elements/itsm/provenanceRecord.xml" targetptr="itsm_provenanceRecord"><code>&lt;provenanceRecord></code></olink> element with the <link linkend="itsm_org"><code>org</code></link> attribute set within the referenced <olink targetdoc="../../elements/itsm/provenanceRecords.xml" targetptr="itsm_provenanceRecords"><code>&lt;provenanceRecords></code></olink> element (which can be undefined).</para>
+            
+        </listitem>
+        
+        <listitem>
+            <para>When used in any admissible element WITHOUT the <olink targetdoc="itsm_provenanceRecordsRef.xml" targetptr="itsm_provenanceRecordsRef"><code>provenanceRecordsRef</code></olink> attribute set:</para>
+            <para>The default values depending on the element in which it is used:</para>
+              
+            
+    <itemizedlist>
+        <listitem>
+            <para>When used in <olink targetdoc="../../elements/structural/file.xml"
+                targetptr="file"><code>&lt;file&gt;</code></olink> or <olink
+                    targetdoc="../../elements/itsm/provenanceRecord.xml" targetptr="revision"
+                    ><code>&lt;its:provencanceRecord></code></olink>:</para>
+            
+            <para>The value is undefined.</para>
+        </listitem>
+        <listitem>
+            <para>When used in any other admissible structural element (<olink
+                targetdoc="../../elements/structural/group.xml" targetptr="group"
+                ><code>&lt;group></code></olink> or <olink
+                    targetdoc="../../elements/structural/unit.xml" targetptr="unit"
+                    ><code>&lt;unit></code></olink>):</para>
+            <para>The value of the <link linkend="itsm_org"
+                ><code>org</code></link> attribute of its parent element
+                (which can be undefined).</para>
+        </listitem>
+        <listitem>
+            <para>When used in annotations markers <olink targetdoc="../../elements/inline/mrk.xml"
+                    targetptr="mrk"><code>&lt;mrk></code></olink> or <olink
+                    targetdoc="../../elements/inline/sm.xml" targetptr="sm"
+                    ><code>&lt;sm></code></olink>:</para>
+            <para>The value of the <link linkend="itsm_org"><code>org</code></link> attribute
+                        of the innermost <olink targetdoc="../../elements/inline/mrk.xml"
+                            targetptr="mrk"><code>&lt;mrk></code></olink>, <olink
+                            targetdoc="../../elements/structural/unit.xml" targetptr="unit"
+                                ><code>&lt;unit&gt;</code></olink>, <olink
+                            targetdoc="../../elements/candidates/match.xml" targetptr="match"
+                                ><code>&lt;mtc:match></code></olink>, or <olink
+                            targetdoc="../../elements/change-tracking/revision.xml"
+                            targetptr="revision"
+                        ><code>&lt;ctr:revision></code></olink><!-- relationship with the ctr:author atribute will be described in teh Provenance category spec <para>In the special case that the parent element of the marker is a <olink
+                    targetdoc="../../elements/itms/revision.xml" targetptr="revision"
+                        ><code>&lt;ctr:revision></code></olink> element, the value is need to be reflected in the value of the <olink targetdoc="../../attributes/change-tracking/ctr_author.xml"
+                    targetptr="ctr_author"><code>ctr:author</code></olink> attribute of the parent
+                    <olink targetdoc="../../elements/itms/revision.xml" targetptr="revision"
+                        ><code>&lt;ctr:revision></code></olink> (which can be undefined ???).</para>-->
+                        element, in which the marker in question is located (which can be
+                        undefined).</para>
+        </listitem>
+        
+        </itemizedlist>
+        </listitem>
+        
+        
+        
+        
+        
+    </itemizedlist>
+    
+    
+    
+    <para><emphasis>Used in:</emphasis>
+        <olink targetdoc="../../elements/structural/file.xml" targetptr="file"><code>&lt;file></code></olink>, <olink targetdoc="../../elements/structural/group.xml" targetptr="group"><code>&lt;goup></code></olink>, <olink targetdoc="../../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink>, 
+        <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
+            ><code>&lt;mrk></code></olink>,
+        <olink targetdoc="../../elements/inline/sm.xml"
+            targetptr="sm"><code>&lt;sm></code></olink>, <olink targetdoc="../../elements/itsm/provenanceRecord.xml" targetptr="itsm_provenanceRecord"><code>&lt;provenanceRecord></code></olink>, <olink
+                targetdoc="../../elements/candidates/match.xml" targetptr="match"
+                ><code>&lt;mtc:match></code></olink>, and <olink
+                    targetdoc="../../elements/itms/revision.xml" targetptr="revision"
+                    ><code>&lt;ctr:revision></code></olink>.
+    </para>
+    
+    
+    <para>See the <olink targetdoc="../../modules/itsm/Provenance.xml" targetptr="provenanceAnnotation">ITS Provenance Annotation</olink> for the normative usage description of this attribute on inline elements. Advanced Constraints follow from that normative usage description.</para>
+    
+</section>

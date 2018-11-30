@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="pc">
+  <title>pc</title>
+
+  <para>Represents a well-formed spanning original code.</para>
+
+  <para><emphasis>Contains:</emphasis></para>
+
+  <simplelist>
+    <member>- Text</member>
+
+    <member>- Zero, one or more <olink targetdoc="../inline/cp.xml"
+    targetptr="cp"><code>&lt;cp&gt;</code></olink> elements</member>
+
+    <member>- Zero, one or more <olink targetdoc="../inline/ph.xml"
+    targetptr="ph"><code>&lt;ph&gt;</code></olink> elements</member>
+
+    <member>- Zero, one or more <olink targetdoc="../inline/pc.xml"
+    targetptr="pc"><code>&lt;pc&gt;</code></olink> elements</member>
+
+    <member>- Zero, one or more <olink targetdoc="../inline/cs.xml"
+    targetptr="sc"><code>&lt;sc&gt;</code></olink> elements</member>
+
+    <member>- Zero, one or more <olink targetdoc="../inline/cs.xml"
+    targetptr="ec"><code>&lt;ec&gt;</code></olink> elements</member>
+
+    <member>- Zero, one or more <olink targetdoc="../inline/mrk.xml"
+    targetptr="mrk"><code>&lt;mrk&gt;</code></olink> elements</member>
+
+    <member>- Zero, one or more <olink targetdoc="../inline/sm.xml"
+    targetptr="sm"><code>&lt;sm&gt;</code></olink> elements</member>
+
+    <member>- Zero, one or more <olink targetdoc="../inline/em.xml"
+    targetptr="em"><code>&lt;em&gt;</code></olink> elements</member>
+  </simplelist>
+
+  <para>Text and inline elements may appear in any order.</para>
+
+  <para><emphasis>Parents:</emphasis></para>
+
+  <simplelist>
+    <member>- <olink targetdoc="structural/source.xml"
+    targetptr="source"><code>&lt;source&gt;</code></olink></member>
+    <member>- <olink
+    targetdoc="structural/target.xml"
+    targetptr="target"><code>&lt;target&gt;</code></olink></member>
+    <member>- <link
+    linkend="pc"><code>&lt;pc&gt;</code></link></member>
+    <member>-<olink targetdoc="mrk.xml" targetptr="mrk"><code>&lt;mrk&gt;</code></olink></member>
+  </simplelist>
+
+  <para><emphasis>Attributes:</emphasis></para>
+
+  <simplelist>
+    <member>- <olink targetdoc="../../attributes/cancopy.xml"
+    targetptr="cancopy"><code>canCopy</code></olink>, <glossterm>optional</glossterm></member>
+
+    <member>- <olink targetdoc="../../attributes/candelete.xml"
+    targetptr="cancopy"><code>canDelete</code></olink>, <glossterm>optional</glossterm></member>
+
+    <member>- <olink targetdoc="../../attributes/canoverlap.xml"
+    targetptr="canoverlap"><code>canOverlap</code></olink>, <glossterm>optional</glossterm></member>
+
+    <member>- <olink targetdoc="../../attributes/canreorder.xml"
+    targetptr="canreorder"><code>canReorder</code></olink>, <glossterm>optional</glossterm></member>
+
+    <member>- <olink targetdoc="../../attributes/copyof.xml"
+    targetptr="copyof"><code>copyOf</code></olink>, <glossterm>optional</glossterm></member>
+
+    <member>- <olink targetdoc="../../attributes/dispend.xml"
+    targetptr="dispend"><code>dispEnd</code></olink>, <glossterm>optional</glossterm></member>
+
+    <member>- <olink targetdoc="../../attributes/dispstart.xml"
+    targetptr="dispstart"><code>dispStart</code></olink>, <glossterm>optional</glossterm></member>
+
+    <member>- <olink targetdoc="../../attributes/equivend.xml"
+    targetptr="equivend"><code>equivEnd</code></olink>, <glossterm>optional</glossterm></member>
+
+    <member>- <olink targetdoc="../../attributes/equivstart.xml"
+    targetptr="equivstart"><code>equivStart</code></olink>, <glossterm>optional</glossterm></member>
+
+    <member>- <olink targetdoc="../../attributes/id.xml"
+    targetptr="id"><code>id</code></olink>, <glossterm>required</glossterm></member>
+
+    <member>- <olink targetdoc="../../attributes/datarefend.xml"
+    targetptr="datarefend"><code>dataRefEnd</code></olink>, <glossterm>optional</glossterm></member>
+
+    <member>- <olink targetdoc="../../attributes/datarefstart.xml"
+    targetptr="datarefstart"><code>dataRefStart</code></olink>, <glossterm>optional</glossterm></member>
+
+    <member>- <olink targetdoc="../../attributes/subflowsend.xml"
+    targetptr="subflowsend"><code>subFlowsEnd</code></olink>,
+    <glossterm>optional</glossterm></member>
+
+    <member>- <olink targetdoc="../../attributes/subflowsstart.xml"
+    targetptr="subflowsstart"><code>subFlowsStart</code></olink>,
+    <glossterm>optional</glossterm></member>
+
+    <member>- <olink targetdoc="../../attributes/subtype.xml"
+    targetptr="subtype"><code>subType</code></olink>, <glossterm>optional</glossterm></member>
+
+    <member>- <olink targetdoc="../../attributes/type.xml"
+    targetptr="type"><code>type</code></olink>, <glossterm>optional</glossterm></member>
+
+    <member>- <olink targetdoc="../../attributes/dir.xml"
+    targetptr="dir"><code>dir</code></olink>, <glossterm>optional</glossterm></member>
+    <member>- attributes from other namespaces, <glossterm>optional</glossterm></member>
+
+
+
+
+  </simplelist>
+
+  <para><emphasis>Example:</emphasis></para>
+
+  <programlisting format="linespecific">
+&lt;unit id="1"&gt;
+  &lt;originalData&gt;
+    &lt;data id="1"&gt;&amp;lt;B&amp;gt;&lt;/data&gt;
+    &lt;data id="2"&gt;&amp;lt;/B&amp;gt;&lt;/data&gt;
+  &lt;/originalData&gt;
+  &lt;segment&gt;&lt;pc id="1" dataRefStart="1" dataRefEnd="2"&gt;
+      Important&lt;/pc&gt; text&lt;/source&gt;&lt;/segment&gt;
+&lt;/unit&gt;
+</programlisting>
+
+  <itemizedlist>
+    <title>Constraints</title>
+    <listitem>
+      <para>The following <firstterm>XLIFF Module</firstterm> attributes are explicitly
+        allowed by the wildcard <code>other</code>:</para>
+      <simplelist>
+        <member>- attributes from the namespace <code>urn:oasis:names:tc:xliff:fs:2.0</code>,
+            <glossterm>optional</glossterm>, provided that the Constraints specified in the <olink
+            targetdoc="modules/fs/fs.xml" targetptr="fs-mod">Format Style Module</olink> are
+          met.</member>
+        <member>- attributes from the namespace
+            <code>urn:oasis:names:tc:xliff:sizerestriction:2.0</code>,
+            <glossterm>optional</glossterm>, provided that the Constraints specified in the <olink
+            targetdoc="modules/size_restriction/specification.xml"
+            targetptr="size_restriction_module">Size and Length Restriction Module</olink> are
+          met.</member>
+        <!-- may need to allow ITSM at a later stage, but not needed by now 7th Aug, 2015. -->
+      </simplelist>
+    </listitem>
+    <listitem><para>No other attributes <glossterm>must</glossterm> be used.</para></listitem>
+
+  </itemizedlist>
+
+  <itemizedlist>
+    <title>Processing Requirements</title>
+
+    <listitem>
+      <para><firstterm>Extractors</firstterm>
+        <glossterm>must not</glossterm> use the <olink targetdoc="../inline/pc.xml"
+          targetptr="pc"><code>&lt;pc&gt;</code></olink> element to represent standalone codes.</para>
+      <para>Rationale: Using a spanning code for a standalone code can easily result in having
+        text inside a span where the original format does not allow it.</para>
+          </listitem>
+  </itemizedlist>
+</section>

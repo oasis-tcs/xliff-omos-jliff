@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="trgdir">
+  <title>trgDir</title>
+
+  <para>Target directionality - indicates the directionality of the target content.</para>
+
+  <para><emphasis>Value description:</emphasis>
+    <code>ltr</code> (Left-To-Right), <code>rtl</code> (Right-To-Left), or <code>auto</code>
+    (determined heuristically, based on the first strong directional character in scope, see <olink
+      targetdoc="xliff20.xml" targetptr="uax9">[UAX #9]</olink>).</para>
+
+  <para><emphasis>Default value:</emphasis> default values for this attribute
+  depend on the element in which it is used:</para>
+
+  <itemizedlist>
+    <listitem>
+      <para>When used in <olink targetdoc="../elements/structural/file.xml"
+        targetptr="file"><code>&lt;file&gt;</code></olink>:</para>
+
+      <para>The value <code>auto</code>.</para>
+    </listitem>
+
+    <listitem>
+      <para>When used in any other element:</para>
+
+      <para>The value of the <olink targetdoc="trgdir.xml"
+        targetptr="trgdir"><code>trgDir</code></olink> attribute of its parent element.</para>
+    </listitem>
+  </itemizedlist>
+
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../elements/structural/file.xml" targetptr="file"
+      ><code>&lt;file&gt;</code></olink>, <olink targetdoc="../elements/structural/group.xml"
+        targetptr="group"><code>&lt;group&gt;</code></olink>, and <olink
+          targetdoc="../elements/structural/unit.xml" targetptr="unit"
+          ><code>&lt;unit&gt;</code></olink>. </para>
+</section>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="dispstart">
+  <title>dispStart</title>
+
+  <para>Display text - holds an alternative user-friendly display representation of the original
+    data of the start marker of an inline code.</para>
+
+  <para><emphasis>Value description:</emphasis> Text.</para>
+
+  <para><emphasis>Default value:</emphasis> undefined</para>
+
+  <para><emphasis>Used in:</emphasis> <olink
+  targetdoc="../elements/inline/pc.xml"
+  targetptr="pc"><code>&lt;pc&gt;</code></olink>.</para>
+
+  <para><emphasis>Example:</emphasis></para>
+
+  <programlisting>
+&lt;unit id="1"&gt;
+  &lt;originalData&gt;
+    &lt;data id="d1"&gt;\cf1\ul\b\f1\fs24 &lt;/data&gt;
+    &lt;data id="d2"&gt;\cf0\ulnone\b0\f0\fs22 &lt;/data&gt;
+  &lt;/originalData&gt;
+  &lt;segment&gt;
+    &lt;source&gt;Example of &lt;pc id="1" dataRefStart="d1" dataRefEnd="d2"
+        dispStart="&amp;lt;span&gt;" dispEnd="&amp;lt;/span&gt;"&gt;
+        formatted text&lt;/pc&gt;.&lt;/source&gt;
+  &lt;/segment&gt;
+&lt;/unit&gt;
+</programlisting>
+
+  <para>In the example above, the <olink targetdoc="dispstart.xml"
+  targetptr="dispstart"><code>dispStart</code></olink> and <olink
+  targetdoc="dispend.xml" targetptr="dispend"><code>dispEnd</code></olink>
+  attributes provide a more user-friendly representation of the original
+  formatting codes.</para>
+
+  <note>
+    <para>To provide a plain text equivalent of the code, use the <olink
+    targetdoc="equivstart.xml"
+    targetptr="equivstart"><code>equivStart</code></olink> attribute.</para>
+  </note>
+</section>

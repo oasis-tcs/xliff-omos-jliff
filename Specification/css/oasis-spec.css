@@ -1,0 +1,187 @@
+/*
+  OASIS Specification CSS stylesheet
+
+  This forms part of the package of the DocBook XML publishing environment
+  and methodology found linked from http://docs.oasis-open.org/templates/
+
+  Derived from http://www.oasis-open.org/spectools/css/ with changes for
+  the colour of titles and headings.
+
+  One stylesheet is used for all phases of the document development.
+  
+  $Id: oasis-spec.css,v 1.2 2012/06/13 14:25:57 admin Exp $
+*/
+
+body     {
+           margin-left: 3pc;
+           font-family: arial, helvetica, sans-serif;
+           font-size: 90%;
+         }
+
+h1       {
+	   font-size: 250%;
+           padding-top: 0in;
+           color: #3B006F;
+         }
+
+h2       {
+	   font-size: 170%;
+           color: #3B006F;
+         }
+
+h3       {
+	   font-size: 120%;
+           color: #3B006F;
+         }
+
+h4       {
+           color: #3B006F;
+         }
+
+h5       {
+	   font-style: italic;
+           color: #3B006F;
+         }
+
+h6       {
+	   font-variant: small-caps;
+           color: #3B006F;
+         }
+
+.docid-heading {
+           font-size: 10pt;
+           font-weight: bold;
+           color: #3B006F;
+         }
+
+.uri-heading {
+           font-size: 12pt;
+           font-weight: bold;
+           color: #3B006F;
+         }
+
+.loc-heading {
+           font-size: 10pt;
+           font-weight: bold;
+           color: #3B006F;
+         }
+
+.abstract-heading {
+           font-size: 10pt;
+           font-weight: bold;
+           color: #3B006F;
+         }
+
+.status-heading {
+           font-size: 10pt;
+           font-weight: bold;
+           color: #3B006F;
+         }
+
+.thisver-heading {
+           font-size: 10pt;
+           font-weight: bold;
+           color: #3B006F;
+         }
+
+.prevver-heading {
+           font-size: 10pt;
+           font-weight: bold;
+           color: #3B006F;
+         }
+
+.editor-heading {
+           font-size: 10pt;
+           font-weight: bold;
+           color: #3B006F;
+         }
+
+.author-heading {
+           font-size: 10pt;
+           font-weight: bold;
+           color: #3B006F;
+         }
+
+.contrib-heading {
+           font-size: 10pt;
+           font-weight: bold;
+           color: #3B006F;
+         }
+
+.notices-heading {
+  font-size: 18pt;
+  font-weight: bold;
+  color: #3B006F;
+}
+
+div.section h1.title {
+           padding-top: 0in;
+           color: #3B006F;
+         }
+
+div.article h1.title { 
+           color: #3B006F;
+         }
+
+pre.programlisting {
+           background-color: #E7DEEF;
+         }
+
+div.informalexample pre {
+           margin-top: 0px;
+           padding-top: 0px;
+           margin-bottom: 0px;
+           padding-bottom: 0px;
+           background-color: #E7DEEF;
+         }
+
+div.informalexample {
+           margin-left: 2em;
+	   padding-top: 4px;
+	   padding-bottom: 4px;
+           border-top-width: 1px;
+           border-top-style: solid;
+           border-bottom-width: 1px;
+           border-bottom-style: solid;
+         }
+
+span.underline { text-decoration: underline; }
+
+span.term {
+           font-weight: bold;
+          }
+
+tr       { border-color: #AFAFAF;
+         }
+
+td       { border-color: #AFAFAF;
+           text-align: left;
+         }
+
+th       { border-color: #AFAFAF;
+           text-align: left;
+         }
+
+col      { border-color: #AFAFAF;
+         }
+
+colgroup { border-color: #AFAFAF;
+         }
+
+table    { border-color: #AFAFAF;
+         }
+
+tbody    { border-color: #AFAFAF;
+         }
+
+thead    { border-color: #AFAFAF;
+         }
+
+tfoot    { border-color: #AFAFAF;
+         }
+
+@media screen {  /* hide from IE3 */
+a[href]:hover { background: #ffa }
+}
+
+/* end of file */

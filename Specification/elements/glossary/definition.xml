@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="definition">
+    <title>definition</title>
+    <para>Optional definition in plain text for the term stored in the sibling
+        <olink targetdoc="term.xml" targetptr="term"><code>&lt;term></code></olink> element.</para>
+    <para><emphasis>Contains:</emphasis></para>
+    <simplelist>
+        <member>- Text</member>
+    </simplelist>
+
+  <para>
+    <emphasis>Attributes:</emphasis>
+  </para>
+  <simplelist>
+    <member>
+      - <olink targetdoc="../../elements/glossary/gls_source.xml" targetptr="gls_source">
+        <code>source</code>
+      </olink>, <glossterm>optional</glossterm>
+    </member>
+    <member>- attributes from other namespaces, <glossterm>optional</glossterm></member>
+  </simplelist>
+
+</section>

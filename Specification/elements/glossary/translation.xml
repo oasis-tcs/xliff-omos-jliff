@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="translation">
+    <title>translation</title>
+    <para>A translation of the sibling <olink targetdoc="term.xml" targetptr="term"><code>&lt;term></code></olink>
+        element expressed in the target language of the enclosing
+        <olink targetdoc="../structural/xliff.xml" targetptr="xliff"><code>&lt;xliff></code></olink> element. Multiple translations can be specified as synonyms.</para>
+    <para><emphasis>Contains:</emphasis></para>
+    <simplelist>
+        <member>- Text</member>
+    </simplelist>
+
+    <para><emphasis>Attributes:</emphasis></para>
+    <simplelist>
+      <member>- <olink targetdoc="../../elements/glossary/gls_id.xml" targetptr="gls_id"><code>id</code></olink>, <glossterm>optional</glossterm></member>
+        <member> - <olink targetdoc="../../elements/glossary/gls_ref.xml" targetptr="gls_ref">
+            <code>ref</code>
+        </olink>, <glossterm>optional</glossterm></member>
+        <member>- <olink targetdoc="../../elements/glossary/gls_source.xml" targetptr="gls_source"><code>source</code></olink>, <glossterm>optional</glossterm></member>
+      <member>- attributes from other namespaces, <glossterm>optional</glossterm></member>
+    </simplelist>
+
+</section>

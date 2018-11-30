@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="slr_normalization">
+    <title>normalization</title>
+    <para>This element is used to hold the attributes specifying the normalization form to apply to
+    storage and size restrictions defined in the standard profiles.</para>
+    <para><emphasis>Contains:</emphasis></para>
+    <simplelist>
+        <member>This element is always empty.</member>
+    </simplelist>
+
+    <para><emphasis>Attributes:</emphasis></para>
+    <simplelist>
+        <member>- <olink targetdoc="../../attributes/size_restriction/general.xml" targetptr="slr_general"><code>general</code></olink>, <glossterm>optional</glossterm></member>
+        <member>- <olink targetdoc="../../attributes/size_restriction/storage.xml" targetptr="slr_storage"><code>storage</code></olink>, <glossterm>optional</glossterm></member>
+    </simplelist>
+
+    <itemizedlist>
+    <title>Processing Requirements</title>
+    <listitem>
+      <para>If this element is not present no normalization <glossterm>should</glossterm> be performed for the standard profiles.</para>
+    </listitem>
+    <listitem>
+      <para>Other profiles <glossterm>may</glossterm> use this element in its specified form but <glossterm>must not</glossterm> add new extensions to it.</para>
+    </listitem>
+  </itemizedlist>
+
+</section>

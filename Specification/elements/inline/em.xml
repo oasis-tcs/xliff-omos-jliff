@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="em">
+  <title>em</title>
+
+  <para>End marker of an annotation where the spanning marker cannot be used for wellformedness
+    reasons.</para>
+
+  <para><emphasis>Contains:</emphasis></para>
+
+  <simplelist>
+    <member>This element is always empty.</member>
+  </simplelist>
+
+  <para><emphasis>Parents:</emphasis></para>
+
+  <simplelist>
+    <member><olink targetdoc="structural/source.xml"
+    targetptr="source"><code>&lt;source&gt;</code></olink>, <olink
+    targetdoc="structural/target.xml"
+    targetptr="target"><code>&lt;target&gt;</code></olink>, <olink
+    targetdoc="pc.xml" targetptr="pc"><code>&lt;pc&gt;</code></olink> and
+    <olink targetdoc="mrk.xml"
+    targetptr="mrk"><code>&lt;mrk&gt;</code></olink></member>
+  </simplelist>
+
+  <para><emphasis>Attributes:</emphasis></para>
+
+  <simplelist>
+    <member>- <olink targetdoc="../../attributes/startref.xml"
+    targetptr="startref"><code>startRef</code></olink>, <glossterm>required</glossterm></member>
+    <!-- Since markers do not have a provision for appeareing isolated, it does not seem to make sense to allow fs formatting on the end marker..  
+    <member>- <olink targetdoc="../../attributes/fs.xml" targetptr="fs"><code>fs:fs</code></olink>,
+      optional</member>
+    <member>- <olink targetdoc="../../attributes/subFs.xml" targetptr="subFs"
+        ><code>fs:subFs</code></olink>, optional</member> 
+    -->
+  </simplelist>
+
+  <para>See the <olink targetdoc="../../inline/inline.xml"
+  targetptr="annotations">Annotations section</olink> for more details and
+  examples on how to use the <olink targetdoc="em.xml"
+  targetptr="em"><code>&lt;em&gt;</code></olink> element.</para>
+</section>

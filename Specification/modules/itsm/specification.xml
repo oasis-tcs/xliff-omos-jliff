@@ -1,0 +1,706 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+<!--the document properties were transferred to "dockbook/dbgenent.mod"-->
+                         ]>
+<section id="ITS-module">
+  <title>ITS Module</title>
+  
+  <section>
+    <title>Introduction</title>
+    <para>This module defines <olink targetdoc="itsmAnnotations.xml" targetptr="itsmAnnotations"
+        >Inline Annotations</olink> (normative usage descriptions for attributes on inline
+      annotation markers), attributes and elements that are needed to map <olink
+        targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> data categories using only
+        <firstterm>XLIFF-defined</firstterm> elements and attributes. The module also defines an
+      external rules file to be used by generic ITS processors working with <firstterm>XLIFF
+        Documents</firstterm>. This module only defines attributes and annotations that are not
+      available through <firstterm>XLIFF Core</firstterm> or other <firstterm>Modules</firstterm>.
+      This module specification also contains normative provisions for mapping of <olink
+        targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> data categories and features that
+      are available via XLIFF <firstterm>Core</firstterm> and other modules (<olink
+        targetdoc="ITSInCore.xml" targetptr="ITSInCore">ITS data categories available through XLIFF Core
+        and other Modules</olink> and <olink targetdoc="ITSPartialOverlap.xml"
+        targetptr="ITSPartialOverlap">ITS data categories that have a partial overlap with XLIFF
+        features</olink>) or other <firstterm>Modules</firstterm> outside of the ITS Module (<olink
+        targetdoc="ITSPartialOverlap.xml" targetptr="ITSPartialOverlap">ITS data categories that have a
+        partial overlap with XLIFF features</olink>). Finally an overview of data categories is
+      provided where the information is or can be fully expressed by
+        <firstterm>Extraction</firstterm> behavior and therefore those categories or their parts
+      (sub-categories) cannot be represented as metadata within <firstterm>XLIFF
+        Documents</firstterm> (<olink targetdoc="ITSnonMetadata.xml" targetptr="ITSnonMetadata">ITS data categories that do not represent metadata after Extraction of content into
+      XLIFF</olink>).</para>
+    <!-- Yves thought this reading note wasn't needed <note><para>Since the ITS Module unlike other XLIFF Modules, defines many Inline Annotations, those
+        Annotations are specified where they're technically needed throughout the Module
+        specification and not broken out into a separate top level section as in other Modules that
+        typically introduce up to one custom annotation. </para>
+    </note>-->
+    <note><para>This module specification chiefly describes how the <olink targetdoc="../xliff21.xml"
+          targetptr="ITS20">[ITS]</olink> data categories need to be expressed within
+          <firstterm>XLIFF Documents</firstterm>. Some metadata categories are typically
+          <firstterm>Extracted</firstterm> from native source formats, others would be first
+        injected into <firstterm>XLIFF Documents</firstterm> by <firstterm>Enriching
+          Agents</firstterm> and might be useful or not in the target content after
+          <firstterm>Merging</firstterm> back to the native format in the target natural language.
+        For all metadata categories that can be encoded within <firstterm>XLIFF
+          Documents</firstterm>, there is an important XLIFF specific distinction between structural
+        and inline elements in XLIFF. Some categories can only be expressed inline in
+          <firstterm>XLIFF Documents</firstterm>. Others can be also expressed on structural markup
+        levels; in such a case, inheritance (or not) from the XLIFF structural levels is important.
+        Nevertheless, even the inline only metadata categories can be in scope of <link
+          linkend="itsToolsReferencing">ITS Tools Referencing</link> that can be set on structural
+        levels and possible inheritance of relevant <olink
+          targetdoc="../../attributes/itsm/itsm_annotatorsRef.xml" targetptr="itsm_annotatorsRef"
+            ><code>its:annotatorsRef</code></olink> values needs to be always checked by
+        implementers.</para></note>
+    <warning id="pseudo-spanWarning">
+      <para>There is an important scope difference between attributes from the namespace
+          <code>https://www.w3.org/2005/11/its/</code> as implemented in <firstterm>XLIFF
+          Documents</firstterm> and as defined in the <olink targetdoc="../xliff21.xml"
+          targetptr="ITS20">[ITS]</olink> specification itself. This affects all ITS attributes that
+        can be used on inline spans. In XLIFF, spans delimited by the well-formed <code><olink
+            targetdoc="../elements/inline/mrk.xml" targetptr="mrk">&lt;mrk></olink></code> are
+        always equivalent and interchangeable with pseudo-spans delimited by <code><olink
+            targetdoc="../elements/inline/sm.xml" targetptr="sm">&lt;sm/></olink></code> /
+            <code><olink targetdoc="../elements/inline/em.xml" targetptr="em"
+          >&lt;em/></olink></code> pairs. In many cases delimiting the needed spans by <code><olink
+            targetdoc="../elements/inline/mrk.xml" targetptr="mrk">&lt;mrk></olink></code> is
+        impossible due to overlap with other well-formed spans, while delimiting of inline spans
+        with <code><olink targetdoc="../elements/inline/sm.xml" targetptr="sm"
+          >&lt;sm/></olink></code> / <code><olink targetdoc="../elements/inline/em.xml"
+            targetptr="em">&lt;em/></olink></code> pairs is always possible and often preferable as
+        it allows the spans to persist even through a change of segmentation.</para>
+      <para>However, <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> doesn't
+        define a pseudo-span mechanism and thus generic ITS Processors cannot parse pseudo-spans.
+        ITS processors will generally identify ITS attributes or their mappings from XLIFF specific
+        namespaces on the <code><olink targetdoc="../elements/inline/sm.xml" targetptr="sm"
+            >&lt;sm/></olink></code> markers, but they will consider their scope to be the empty
+        marker itself, whereas the true scope of all attributes on such markers within
+          <firstterm>XLIFF Documents</firstterm> is between the start marker <code>&lt;sm
+          id="1"/></code> and it's corresponding end marker <code>&lt;em startRef="1"/></code>. </para>
+      <para>Implementers who wish to better access <olink targetdoc="../xliff21.xml"
+          targetptr="ITS20">[ITS]</olink> metadata categories information within  <firstterm>XLIFF
+          Documents</firstterm> can easily implement an additional capability in their ITS
+        Processors to detect spans like this one <code>&lt;sm id="1"/>span of text&lt;em startRef="1"/></code>
+        without going into any more XLIFF specific features and becoming full fledged XLIFF
+          <firstterm>Agents</firstterm>.</para>
+    </warning>
+  </section>
+  <section>
+    <title>Module Namespace and Validation Artifacts</title>
+    <para>The namespaces for the ITS module are: <code>https://www.w3.org/2005/11/its/</code> and
+      <code>urn:oasis:names:tc:xliff:itsm:2.1</code>.</para>
+    <para>Schemas and Schematron for this module are available at <ulink
+        url="&this-loc;/schemas/its.xsd">&this-loc;/schemas/its.xsd</ulink>, <ulink
+        url="&this-loc;/schemas/itsm.xsd">&this-loc;/schemas/itsm.xsd</ulink>, and <ulink
+        url="&this-loc;/schemas/its.sch">&this-loc;/schemas/its.sch</ulink>. </para>
+      <note>
+        <para>Although setting and usage of prefixes for namespaces in XML is arbitrary, we are using
+          <code>its:</code> for the <code>https://www.w3.org/2005/11/its/</code> namespace and <code>itsm:</code> for the <code>urn:oasis:names:tc:xliff:itsm:2.1</code> namespace throughout this specification.</para>
+      </note>
+  </section>
+  <section>
+    <title>Module Fragment Identification Prefix</title>
+    <para>The fragment identification prefix for the ITS module is: <code>its</code>.</para>
+    <note>
+      <para>Although this module has to use two different XML namespace prefixes it uses only one
+        fragment identification and authority prefix which is <code>its</code>.</para>
+    </note>
+  </section>
+  <section id="ITSM_Conformance">
+    <title>Conformance to the ITS Module Specification</title>
+    <note><para>Some ITS data categories like <ulink url="https://www.w3.org/TR/its20/#trans-datacat">Translate</ulink> are supported natively by XLIFF. Other data categories are not supported
+        by XLIFF because they are focusing on source content and not XLIFF content. The below
+        conformance statement is only relevant for data categories for which the usage in XLIFF 2.1
+        is normatively defined in this XLIFF 2.1 <link linkend="ITS-module">ITS Module</link>. Like
+      in the <olink
+        targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> 2.0 specification, there is no interrelation between data categories.</para></note>
+    
+    <!-- The contents of this paragrap should now be covered in the above Note and the below PRs <para>An implementation of the ITS Module needs to implement at least one of the ITS 2.0 data categories for which the usage in XLIFF 2.1 is normatively defined in the ITS Module. Like in the ITS 2.0 specification, there is no interrelation between data categories. The implementation MUST take into account the processing expectations for ITS markup, as defined in the ITS 2.0 specification (link to https://www.w3.org/TR/its20/#conformance-product-processing-expectations) , that is, the conformance clauses 2-1, 2-2, 2-3 and 2-4 in the ITS 2.0 specifications.</para>-->
+    <itemizedlist>
+      <title>Processing Requirements</title>
+      <listitem>
+        <para>Conformant ITS Processors <glossterm>must</glossterm> be able to use the external
+          global rules included in the module's Schematron file <ulink
+            url="&this-loc;/schemas/its.sch">&this-loc;/schemas/its.sch</ulink>
+          and compute ITS data categories encoded in <firstterm>XLIFF Documents</firstterm> as per
+            <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+          <ulink url="https://www.w3.org/TR/its20/#conformance-product-processing-expectations"
+            >Conformance clauses</ulink> 2-1, 2-2, 2-3, and 2-4.</para>
+        <itemizedlist>
+          <listitem>
+            <para>In cases where any of the above specified global rules identifies an empty <olink
+                targetdoc="../../elements/inline/sm.xml" targetptr="sm"><code>&lt;sm></code></olink>
+              element, conformant ITS Processors <glossterm>should</glossterm> be able identify the
+              closing <olink targetdoc="../../elements/inline/em.xml" targetptr="em"
+                  ><code>&lt;em></code></olink> marker and process the relevant ITS data category as
+              applied on the span delimited by those corresponding empty markers.</para>
+          </listitem>
+        </itemizedlist>
+        
+      </listitem>
+      
+      <listitem>
+        <para>Conformant <firstterm>Agents</firstterm>
+          <glossterm>must</glossterm> be XLIFF Conformant in the sense of XLIFF <olink
+            targetptr="ApplicationConformance" targetdoc="../conformance/conformance.xml"
+            >Application Conformance</olink> and also implement at least one <olink
+            targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> data category defined in the
+          section <link linkend="itsm_defined_categories">ITS data categories defined in the ITS
+            Module</link> of this <link linkend="ITS-module">ITS Module</link> or provide full
+          support for at least one of the <olink targetdoc="../xliff21.xml" targetptr="ITS20"
+            >[ITS]</olink> custom annotations (<olink targetdoc="itsmAnnotations.xml"
+            targetptr="itsmAnnotations">ITS Mapping Annotations</olink>) specified in the Section
+            <olink targetdoc="ITSPartialOverlap.xml" targetptr="ITSPartialOverlap">ITS data categories
+            that have a partial overlap with XLIFF features</olink>.</para>
+        <para>In particular:</para>
+        <itemizedlist>
+          <listitem>
+            <para>Conformant <firstterm>Extractors</firstterm>
+              <glossterm>must</glossterm> be capable of <firstterm>Extracting</firstterm> at least
+              one of the above specified ITS data categories from a source format and encode it in a
+              resulting conformant <firstterm>XLIFF Document</firstterm> with ITS Module based
+              metadata. </para>
+          </listitem>
+          <listitem>
+            <para> Conformant <firstterm>Enrichers</firstterm>
+              <glossterm>must</glossterm> be capable of <firstterm>Enriching</firstterm>
+              <firstterm>XLIFF Documents</firstterm> with at least one of the above specified ITS
+              data categories.</para>
+          </listitem>
+          <listitem>
+            <para>Conformant <firstterm>Modifiers</firstterm>
+              <glossterm>must</glossterm> be capable of updating at least one of the above specified
+              ITS data categories according to its own Constraints and Processing Requirements as
+              specified in the ITS Module.</para>
+          </listitem>
+          <listitem>
+            <para>Conformant <firstterm>Mergers</firstterm>
+              <glossterm>must</glossterm> be capable of <firstterm>Merging</firstterm> metadata of
+              at least one of the above specified ITS data categories back to the respective native
+              format (with full knowledge of the <firstterm>Extraction</firstterm> mechanism) in the target natural
+              language.</para>
+          </listitem>
+        </itemizedlist>
+        
+      </listitem>
+      
+      
+    </itemizedlist>
+  </section>
+  <section id="itsToolsReferencing">
+    <title>ITS Tools Referencing</title>
+    <para>
+    <!--  This is now addressed in the Note below COMMENT: MAKE CLEAR IF EACH ITS DATA CATEGORY NEEDS TO IMPLEMENT ANNOTATORS REF SUPPORT.
+      FELIX TO CHECK IN ITS SPEC - A.REF MAY BE ONLY MANADATORY FOR THREE DATA CATEGORIES. dF:
+      Although mandatory for only MT Confidence and conditionally mandatroy for a few more, it can
+      be provided by any other data category, so the mechanism is needed..</para>
+    <para>--> <olink
+      targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> <ulink url="http://www.w3.org/TR/2013/REC-its20-20131029/#its-tool-annotation
+        ">Tools Annotation</ulink> mechanism provides a way to record tools that produced <olink
+          targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> metadata.</para>
+    <warning><para>This mechanism is reserved for recording producers of ITS metadata. General provenance
+        information can be recorded using the <olink targetdoc="Provenance.xml"
+          targetptr="Provenance">Provenance</olink> data category mapping defined in this Module. If
+      an <firstterm>Agent</firstterm> records the revision history of previous versions, they need do this using the
+          <olink targetptr="changeTracking_module" targetdoc="../change-tracking/specification.xml"
+          >Change Tracking Module</olink>, possibly extended with ITS Module <olink
+          targetdoc="Provenance.xml" targetptr="Provenance">Provenance</olink> metadata. </para></warning>
+    <note><para>The <link linkend="itsToolsReferencing">ITS Tools Referencing</link> mechanism has to be
+        always used with the <olink targetdoc="MT_Confidence.xml" targetptr="MT_Confidence">MT
+          Confidence</olink> data category. The <olink targetdoc="Terminology.xml"
+          targetptr="Terminology_datacat">Terminology</olink> and <olink targetdoc="Text_Analysis.xml"
+          targetptr="Text_Analysis">Text Analysis</olink> metadata categories have to use <link
+          linkend="itsToolsReferencing">ITS Tools Referencing</link> conditionally, i.e. whenever
+        they specify <olink targetdoc="../../attributes/itsm/itsm_termConfidence.xml"
+          targetptr="itsm_termConfidence"><code>its:termConfidence</code></olink> or <olink
+          targetdoc="../../attributes/itsm/itsm_taConfidence.xml" targetptr="itsm_taConfidence"
+            ><code>its:taConfidence</code></olink> respectively.</para>
+      <para>With all other <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+        metadata categories, there is no express need to use the <link linkend="itsToolsReferencing"
+          >ITS Tools Referencing</link> mechanism. It is nevertheless advised that the relevant ITS
+        Tooling metadata is <firstterm>Extracted</firstterm> where available and
+          <firstterm>Modified</firstterm> when the relevant ITS metadata category information
+        changes during the <firstterm>XLIFF Document</firstterm> processing. Finally, all conformant
+          <firstterm>Agents</firstterm> and ITS Processors need to be able to compute the <link
+          linkend="itsToolsReferencing">ITS Tools Referencing</link> information in case this has
+        been provided by other conformant <firstterm>Agents</firstterm> earlier in the workflow as
+        per the <link linkend="ITS-module">ITS Module</link>
+        <link linkend="ITSM_Conformance">Conformance</link> section.</para></note>
+    <itemizedlist>
+      <title>Processing Requirements</title>
+      <listitem><para><firstterm>Writers</firstterm>
+          <glossterm>must</glossterm> use the attribute <olink
+            targetdoc="../../attributes/itsm/itsm_annotatorsRef.xml" targetptr="itsm_annotatorsRef"
+              ><code>its:annotatorsRef</code></olink> to express the information provided through
+          the <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+          <ulink url="http://www.w3.org/TR/2013/REC-its20-20131029/#its-tool-annotation">Tools
+            Annotation</ulink> mechanism in <firstterm>XLIFF Documents</firstterm>.</para></listitem>
+    </itemizedlist>
+    <section id="toolsAnnotation">
+      <title>ITS Tools Annotation</title>
+      <para>This is used to express the <olink targetdoc="../xliff21.xml"
+        targetptr="ITS20">[ITS]</olink>
+        <ulink url="http://www.w3.org/TR/2013/REC-its20-20131029/#its-tool-annotation
+          ">Tools Annotation</ulink> mechanism on inline markers.</para>
+      <para>Usage:</para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>The <olink targetdoc="../../attributes/id.xml" targetptr="id"
+            ><code>id</code></olink> attribute is <glossterm>required</glossterm>.</para>
+        </listitem>
+        <listitem>
+          <para>The <olink targetdoc="../../attributes/itsm/itsm_annotatorsRef.xml" targetptr="itsm_annotatorsRef"
+            ><code>its:annotatorsRef</code></olink> attribute is <glossterm>required</glossterm>.</para>
+        </listitem>
+        
+        <listitem>
+          <para>The <olink targetdoc="../../attributes/type.xml" targetptr="type"
+            ><code>type</code></olink> attribute is <glossterm>optional</glossterm> and set to
+            <code>its:generic</code>.</para>
+          
+        </listitem>
+        
+        
+        <listitem>
+          <para>The <olink targetdoc="../../attributes/translate.xml" targetptr="translate"
+            ><code>translate</code></olink> attribute is <glossterm>optional</glossterm>.</para>
+        </listitem>
+      </itemizedlist>
+      
+    </section>
+  </section>
+  
+  <section id="itsm_defined_categories">
+  <!-- sections reordered as per resolution for JIRA issue XLIFF-2 -->
+    <title>ITS data categories defined in the ITS Module</title>
+    <para>The following <olink
+      targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> data categories are fully specified within this module:</para>
+    <itemizedlist>
+      <!-- moved to non-metadata section
+      <listitem><para><olink targetdoc="Elements_Within_Text.xml" targetptr="Elements_Within_Text">Elements Within Text</olink></para></listitem>-->    
+      <listitem><para><olink targetdoc="Allowed_Characters.xml" targetptr="Allowed_Characters">Allowed Characters</olink></para></listitem>
+      <listitem><para><olink targetdoc="Domain.xml" targetptr="Domain">Domain</olink></para></listitem>
+      <listitem><para><olink targetdoc="Locale_Filter.xml" targetptr="Locale_Filter">Locale Filter</olink></para></listitem>
+      
+      <listitem><para><olink targetdoc="Localization_Quality_Issue.xml" targetptr="Localization_Quality_Issue">Localization Quality Issue</olink></para></listitem>
+      <listitem><para><olink targetdoc="Localization_Quality_Rating.xml" targetptr="Localization_Quality_Rating">Localization Quality Rating</olink></para></listitem>
+      <listitem><para><olink targetdoc="Text_Analysis.xml" targetptr="Text_Analysis">Text Analysis</olink></para></listitem>
+      <!--more olinks to itsm supported categories ?? check if the list is complete..-->
+    </itemizedlist>
+    <!-- moved to non-metadata section<xi:include href="Elements_Within_Text.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>-->
+    <xi:include href="Allowed_Characters.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Domain.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <!-- Moved partial overlap section for csprd02
+    <xi:include href="External_Resource.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>-->
+    
+    <xi:include href="Locale_Filter.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Localization_Quality_Issue.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Localization_Quality_Rating.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Text_Analysis.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <!--more includes of itsm supported categories -->
+
+
+  </section>
+  <xi:include href="ITSPartialOverlap.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  <xi:include href="ITSInCore.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  <xi:include href="ITSnonMetadata.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  
+
+  <xi:include href="itsmAnnotations.xml"/>
+  <section>
+    <title>Module Elements</title>
+    <para>All ITS Module elements belong to the <code>https://www.w3.org/2005/11/its/</code> namespace. The ITS Module defines the following
+      elements:</para>
+    <para>
+      <olink targetdoc="../../elements/itsm/itsm_locQualityIssue.xml" targetptr="itsm_locQualityIssue"><code>&lt;locQualityIssue></code></olink>,
+      <olink targetdoc="../../elements/itsm/itsm_locQualityIssues.xml" targetptr="itsm_locQualityIssues"><code>&lt;locQualityIssues></code></olink>,
+      <olink targetdoc="../../elements/itsm/itsm_provenanceRecord.xml" targetptr="itsm_provenanceRecord"><code>&lt;provenanceRecord></code></olink>, and
+      <olink targetdoc="../../elements/itsm/itsm_provenanceRecords.xml" targetptr="itsm_provenanceRecords"><code>&lt;provenanceRecords></code></olink>
+      
+      .
+
+    </para>
+    <section>
+
+      <title>Tree Structure</title>
+      <para>Legend:</para>
+      <simplelist type="vert">
+        <member>1 = one</member>
+        <member>+ = one or more</member>
+        <member>? = zero or one</member>
+        <member>* = zero, one or more</member>
+      </simplelist>
+      <programlisting format="linespecific">
+<olink targetdoc="../../elements/itsm/itsm_locQualityIssues.xml" targetptr="itsm_locQualityIssues"><code>&lt;locQualityIssues></code></olink>
+|
++---<olink targetdoc="../../elements/itsm/itsm_locQualityIssue.xml" targetptr="itsm_locQualityIssue"><code>&lt;locQualityIssue></code></olink> +
+  </programlisting>
+
+      <programlisting format="linespecific">
+<olink targetdoc="../../elements/itsm/itsm_provenanceRecords.xml" targetptr="itsm_provenanceRecords"><code>&lt;provenanceRecords></code></olink>
+|
++---<olink targetdoc="../../elements/itsm/itsm_provenanceRecord.xml" targetptr="itsm_provenanceRecord"><code>&lt;provenanceRecord></code></olink> +
+  </programlisting>
+
+    </section>
+
+    <xi:include href="../../elements/itsm/itsm_locQualityIssue.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../elements/itsm/itsm_locQualityIssues.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../elements/itsm/itsm_provenanceRecord.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../elements/itsm/itsm_provenanceRecords.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <!--
+            <xi:include href="../../elements/itsm/[element].xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+            -->
+  </section>
+  <section>
+    <title>Module Attributes</title>
+    <para>The <link linkend="ITS-module">ITS Module</link> uses the following attributes from the
+        <code>https://www.w3.org/2005/11/its/</code> namespace: <olink
+        targetdoc="../../attributes/itsm/itsm_allowedCharacters.xml"
+        targetptr="itsm_allowedCharacters"><code>allowedCharacters</code></olink>, <olink
+        targetdoc="../../attributes/itsm/itsm_annotatorsRef.xml" targetptr="itsm_annotatorsRef"
+          ><code>annotatorsRef</code></olink>, <olink
+        targetdoc="../../attributes/itsm/itsm_localeFilterList.xml"
+        targetptr="itsm_localeFilterList">
+        <code>localeFilterList</code></olink>, <olink
+        targetdoc="../../attributes/itsm/itsm_localeFilterType.xml"
+        targetptr="itsm_localeFilterType">
+        <code>localeFilterType</code></olink>, <olink
+        targetdoc="../../attributes/itsm/itsm_locQualityIssueComment.xml"
+        targetptr="itsm_locQualityIssueComment">
+        <code>locQualityIssueComment</code></olink>, <olink
+        targetdoc="../../attributes/itsm/itsm_locQualityIssueEnabled.xml"
+        targetptr="itsm_locQualityIssueEnabled">
+        <code>locQualityIssueEnabled</code></olink>, <olink
+        targetdoc="../../attributes/itsm/itsm_locQualityIssueProfileRef.xml"
+        targetptr="itsm_locQualityIssueProfileRef">
+        <code>locQualityIssueProfileRef</code></olink>, <olink
+        targetdoc="../../attributes/itsm/itsm_locQualityIssuesRef.xml"
+        targetptr="itsm_locQualityIssuesRef"><code>locQualityIssuesRef</code></olink>, <olink
+        targetdoc="../../attributes/itsm/itsm_locQualityIssueSeverity.xml"
+        targetptr="itsm_locQualityIssueSeverity">
+        <code>locQualityIssueSeverity</code></olink>, <olink
+        targetdoc="../../attributes/itsm/itsm_locQualityIssueType.xml"
+        targetptr="itsm_locQualityIssueType">
+        <code>locQualityIssueType</code></olink>, <olink
+        targetdoc="../../attributes/itsm/itsm_locQualityRatingProfileRef.xml"
+        targetptr="itsm_locQualityRatingProfileRef"><code>locQualityRatingProfileRef</code></olink>,
+        <olink targetdoc="../../attributes/itsm/itsm_locQualityRatingScore.xml"
+        targetptr="itsm_locQualityRatingScore"><code>locQualityRatingScore</code></olink>, <olink
+        targetdoc="../../attributes/itsm/itsm_locQualityRatingScoreThreshold.xml"
+        targetptr="itsm_locQualityRatingScoreThreshold"
+        ><code>locQualityRatingScoreThreshold</code></olink>, <olink
+        targetdoc="../../attributes/itsm/itsm_locQualityRatingVote.xml"
+        targetptr="itsm_locQualityRatingVote"><code>locQualityRatingVote</code></olink>, <olink
+        targetdoc="../../attributes/itsm/itsm_locQualityRatingVoteThreshold.xml"
+        targetptr="itsm_locQualityRatingVoteThreshold"
+        ><code>locQualityRatingVoteThreshold</code></olink>, <!-- As per TC consensus no its:space will be defined, for gneral xml interoperability reasons
+      <olink targetdoc="../../attributes/itsm/itsm_space.xml" targetptr="itsm_space"><code>space</code></olink>, -->
+      <olink targetdoc="../../attributes/itsm/itsm_mtConfidence.xml" targetptr="itsm_mtConfidence"
+          ><code>mtConfidence</code></olink>, <olink targetdoc="../../attributes/itsm/itsm_org.xml"
+        targetptr="itsm_org"><code>org</code></olink>, <olink
+        targetdoc="../../attributes/itsm/itsm_orgRef.xml" targetptr="itsm_orgRef"
+          ><code>orgRef</code></olink>, <olink targetdoc="../../attributes/itsm/itsm_person.xml"
+        targetptr="itsm_person"><code>person</code></olink>, <olink
+        targetdoc="../../attributes/itsm/itsm_personRef.xml" targetptr="itsm_personRef"
+          ><code>personRef</code></olink>, <olink
+        targetdoc="../../attributes/itsm/itsm_provenanceRecordsRef.xml"
+        targetptr="itsm_provenanceRecordsRef"><code>provenanceRecordsRef</code></olink>, <olink
+        targetdoc="../../attributes/itsm/itsm_revOrg.xml" targetptr="itsm_revOrg"
+          ><code>revOrg</code></olink>, <olink targetdoc="../../attributes/itsm/itsm_revOrgRef.xml"
+        targetptr="itsm_revOrgRef"><code>revOrgRef</code></olink>, <olink
+        targetdoc="../../attributes/itsm/itsm_revPerson.xml" targetptr="itsm_revPerson"
+          ><code>revPerson</code></olink>, <olink
+        targetdoc="../../attributes/itsm/itsm_revPersonRef.xml" targetptr="itsm_revPersonRef"
+          ><code>revPersonRef</code></olink>, <olink
+        targetdoc="../../attributes/itsm/itsm_revTool.xml" targetptr="itsm_revTool"
+          ><code>revTool</code></olink>, <olink
+        targetdoc="../../attributes/itsm/itsm_revToolRef.xml" targetptr="itsm_revToolRef"
+          ><code>revToolRef</code></olink>, <olink
+        targetdoc="../../attributes/itsm/itsm_taClassRef.xml" targetptr="itsm_taClassRef"
+          ><code>taClassRef</code></olink>, <olink
+        targetdoc="../../attributes/itsm/itsm_taConfidence.xml" targetptr="itsm_taConfidence"
+          ><code>taConfidence</code></olink>, <olink
+        targetdoc="../../attributes/itsm/itsm_taIdent.xml" targetptr="itsm_taIdent"
+          ><code>taIdent</code></olink>, <olink
+        targetdoc="../../attributes/itsm/itsm_taIdentRef.xml" targetptr="itsm_taIdentRef"
+          ><code>taIdentRef</code></olink>, <olink
+        targetdoc="../../attributes/itsm/itsm_taSource.xml" targetptr="itsm_taSource"
+          ><code>taSource</code></olink>, <olink
+        targetdoc="../../attributes/itsm/itsm_termConfidence.xml" targetptr="itsm_termConfidence"
+          ><code>termConfidence</code></olink>
+      <olink targetdoc="../../attributes/itsm/itsm_tool.xml" targetptr="itsm_tool"
+        ><code>tool</code></olink>
+      <olink targetdoc="../../attributes/itsm/itsm_toolRef.xml" targetptr="itsm_toolRef"
+          ><code>toolRef</code></olink>
+    </para>
+    <para>The attributes defined in the <link linkend="ITS-module">ITS Module</link> that belong to the <code>urn:oasis:names:tc:xliff:itsm:2.1</code> namespace are:
+
+      <olink targetdoc="../../attributes/itsm/itsm_domains.xml" targetptr="itsm_domains"><code>domains</code></olink> and 
+
+     <olink targetdoc="../../attributes/itsm/itsm_lang.xml" targetptr="itsm_lang"><code>lang</code></olink>.
+      
+    </para>
+      <para>
+        The <link linkend="ITS-module">ITS Module</link> also uses the <olink targetdoc="../../attributes/itsm/itsm_id.xml" targetptr="itsm_id"><code>xml:id</code></olink> attribute.  
+      </para>
+    <!-- Includes of the ITSM attributes from all three namespaces -->
+
+    <xi:include href="../../attributes/itsm/itsm_allowedCharacters.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/itsm/itsm_annotatorsRef.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/itsm/itsm_domains.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+
+<!-- attribute dropped as feature available through res: module    <xi:include href="../../attributes/itsm/itsm_externalResourceRef.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>-->
+
+    <xi:include href="../../attributes/itsm/itsm_id.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+
+    <xi:include href="../../attributes/itsm/itsm_lang.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/itsm/itsm_localeFilterList.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/itsm/itsm_localeFilterType.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/itsm/itsm_locQualityIssueComment.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/itsm/itsm_locQualityIssueEnabled.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/itsm/itsm_locQualityIssueProfileRef.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/itsm/itsm_locQualityIssuesRef.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/itsm/itsm_locQualityIssueSeverity.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/itsm/itsm_locQualityIssueType.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+
+
+    <xi:include href="../../attributes/itsm/itsm_locQualityRatingProfileRef.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/itsm/itsm_locQualityRatingScore.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/itsm/itsm_locQualityRatingScoreThreshold.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/itsm/itsm_locQualityRatingVote.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/itsm/itsm_locQualityRatingVoteThreshold.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    
+
+    <!-- As per TC consensus no its:space will be defined, for general xml interoperability reasons
+    <xi:include href="../../attributes/itsm/itsm_space.xml"
+        xmlns:xi="http://www.w3.org/2001/XInclude"/>-->
+
+    <xi:include href="../../attributes/itsm/itsm_mtConfidence.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    
+    <xi:include href="../../attributes/itsm/itsm_org.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/itsm/itsm_orgRef.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    
+    <xi:include href="../../attributes/itsm/itsm_person.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/itsm/itsm_personRef.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/itsm/itsm_provenanceRecordsRef.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/itsm/itsm_revOrg.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/itsm/itsm_revOrgRef.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/itsm/itsm_revPerson.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/itsm/itsm_revPersonRef.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/itsm/itsm_revTool.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/itsm/itsm_revToolRef.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+
+    <xi:include href="../../attributes/itsm/itsm_taClassRef.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+
+    <xi:include href="../../attributes/itsm/itsm_taConfidence.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/itsm/itsm_taIdent.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/itsm/itsm_taIdentRef.xml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"/>
+
+    <xi:include href="../../attributes/itsm/itsm_taSource.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/itsm/itsm_termConfidence.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+
+    <xi:include href="../../attributes/itsm/itsm_tool.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="../../attributes/itsm/itsm_toolRef.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+
+    <!-- more to be added as module progresses -->
+  </section>
+  <section>
+    <title>Example file</title>
+    <example>
+      <title>ITS Data Categories Example</title>
+      <para>The following example file includes markup related to several ITS 2.0 data categories.</para><programlisting>&lt;!-- xliff-its-example.xlf: Example file that shows several features of
+using ITS 2.0 as part of XLIFF 2.1
+Version: 0.2.1 
+Date: 04 April 2017 -->
+
+&lt;xliff version="2.1" xmlns="urn:oasis:names:tc:xliff:document:2.0"
+    srcLang="en" trgLang="fr"
+    xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsm="urn:oasis:names:tc:xliff:itsm:2.1">
+  &lt;!-- Each unit in the file element shows one ITS data category. -->
+  &lt;!-- The its:annotatorsRef attribute inherits through the whole file
+      but is only relevant for some elements-->
+  &lt;file id="f1" its:annotatorsRef="allowed-characters|
+      http://example.com/myAllowedCharactersAnnotationTool terminology|
+      http://example.com/mytermTool localization-quality-issue|
+      http://example.com/anotherQualityChecker">
+    &lt;unit id="u1">
+      &lt;its:locQualityIssues xml:id="lqi1">
+        &lt;its:locQualityIssue locQualityIssueType="misspelling"
+            locQualityIssueComment="'c'es' is unknown. Could be 'c'est'"
+            locQualityIssueSeverity="50"/>
+        &lt;its:locQualityIssue locQualityIssueType="grammar"
+            locQualityIssueComment="Sentence is not capitalized"
+            locQualityIssueSeverity="30"/>
+      &lt;/its:locQualityIssues>
+      &lt;its:provenanceRecords xml:id="prov1">
+        &lt;its:provenanceRecord revPerson="Franta Kocourek"
+            revOrg="Kocourkov s.r.o."/>
+        &lt;its:provenanceRecord person="Honza Novák"
+            org="Překlady Novák, sro" tool="GreatCATTool"/>
+        &lt;its:provenanceRecord tool="Microsoft Hub"/>
+      &lt;/its:provenanceRecords>
+      &lt;its:provenanceRecords xml:id="prov2">
+        &lt;its:provenanceRecord revPerson="Květoň Zřídkaveselý"
+            revOrg="CoolCopy"/>
+        &lt;its:provenanceRecord revTool="ACME QA Checker"
+            revOrg="CoolCopy"/>
+        &lt;its:provenanceRecord revPerson="Franta Kocourek"
+            revOrg="Kocourkov s.r.o."/>
+        &lt;its:provenanceRecord person="Honza Novák"
+            org="Preklady Novák, sro" tool="GreatCATTool"/>
+        &lt;its:provenanceRecord tool="Microsoft Hub"/>
+      &lt;/its:provenanceRecords>
+      &lt;notes>
+        &lt;note id="1" priority="1">Check with terminology engineer
+            &lt;/note>
+      &lt;/notes>
+
+      &lt;!-- Example for allowed characters data category -->
+
+      &lt;segment>
+        &lt;source>
+          &lt;mrk id="m1" type="its:generic"
+              its:allowedCharacters="[a-ZA-Z]">Text&lt;/mrk>
+        &lt;/source>
+      &lt;/segment>
+
+      &lt;!-- Example for domain data category -->
+
+      &lt;segment>
+        &lt;source>Text in the domain domain1&lt;/source>
+      &lt;/segment>
+
+      &lt;!-- Example for locale filter data category -->
+
+      &lt;segment>
+        &lt;source>Text &lt;pc id="2">&lt;mrk id="m2" type="its:generic"
+            its:localeFilterList="fr" its:localeFilterType="exclude">
+            text&lt;/mrk>&lt;/pc>&lt;/source>
+      &lt;/segment>
+
+      &lt;!-- Example for localization quality issue data category. The
+          standoff information in its:locQualityIssues has the
+          annotatorsRef information from this element: &lt;mrk id="m1"
+          type="its:generic" its:locQualityIssuesRef="#its=lqi1"
+          its:annotatorsRef="localization-quality-issue|
+          http://example.com/myQualityChecker">.  -->
+
+      &lt;segment>
+        &lt;source>This is the content&lt;/source>
+        &lt;target>
+          &lt;mrk id="m3" type="its:generic" its:locQualityIssuesRef="#its=lqi1"
+              its:annotatorsRef="localization-quality-issue|
+              http://example.com/myQualityChecker">c'es le contenu&lt;/mrk>
+        &lt;/target>
+      &lt;/segment>
+
+      &lt;!-- Example for localization quality rating data category -->
+
+      &lt;segment>
+        &lt;source>Some text and a term&lt;/source>
+        &lt;target>Du texte et un &lt;mrk id="m4" type="its:generic"
+            its:locQualityRatingVote="37"
+            its:locQualityRatingVoteThreshold="15"
+            its:locQualityRatingProfileRef="http://example.org/qaModel
+                /v13">terme&lt;/mrk>&lt;/target>
+      &lt;/segment>
+
+      &lt;!-- Example for text analytics data category -->
+
+      &lt;segment>
+        &lt;source>
+          &lt;mrk id="m5" type="its:generic"
+              its:taClassRef="http://nerd.eurecom.fr/ontology#Place"
+              its:taIdentRef="http://dbpedia.org/resource/Arizona">
+              Arizona&lt;/mrk>
+        &lt;/source>
+      &lt;/segment>
+
+      &lt;!-- Example for terminology data category, expressed via native XLIFF markup -->
+
+      &lt;segment>
+        &lt;source>This is a &lt;mrk id="m6" type="comment" ref="#n=1">
+            motherboard&lt;/mrk>.&lt;/source>
+      &lt;/segment>
+
+      &lt;!-- Example for terminology data category, expressed via native XLIFF markup, but with its:termConfidence attribute -->
+
+      &lt;segment>
+        &lt;source>Text with a &lt;pc id="3">&lt;mrk id="m7" type="term"
+            ref="http://en.wikipedia.org/wiki/Terminology"
+            its:termConfidence="0.9">term&lt;/mrk>&lt;/pc>.&lt;/source>
+      &lt;/segment>
+
+      &lt;!-- Example for language information data category -->
+
+      &lt;segment>
+        &lt;source>Span of text &lt;pc id="4">&lt;mrk id="m8" itsm:lang="fr"
+            type="its:generic">en français&lt;/mrk>&lt;/pc>.&lt;/source>
+      &lt;/segment>
+
+      &lt;!-- Example for provenance information data category -->
+
+      &lt;segment>
+        &lt;source>Economy has been growing in 2016.&lt;/source>
+        &lt;target>
+          &lt;mrk id="m9" type="its:generic"
+              its:provenanceRecordsRef="#its=prov1">Hospodářství v průbehu
+              roku 2016 rostlo. &lt;/mrk>
+        &lt;/target>
+      &lt;/segment>
+      &lt;segment>
+        &lt;source>Prognosis for 2017 is unclear.&lt;/source>
+        &lt;target>
+           &lt;mrk id="m10" type="its:generic"
+               its:provenanceRecordsRef="#its=prov2">Předpověď očekávaného růstu
+               pro rok 2017 je nejasná. &lt;/mrk>
+        &lt;/target>
+      &lt;/segment>
+
+      &lt;!-- Example for MT confidence data category -->
+
+      &lt;segment>
+        &lt;source>
+          &lt;mrk id="m11" type="its:generic" its:mtConfidence="0.8982"
+              its:annotatorsRef="mt-confidence|MTServices-XYZ">Some
+              Machine Translated text.&lt;/mrk>
+        &lt;/source>
+      &lt;/segment>
+
+      &lt;!-- Example for Translate data category, expressed via native XLIFF markup -->
+
+      &lt;segment>
+        &lt;source>&lt;mrk translate="no" id="m12">Non-translatable text
+            &lt;/mrk>&lt;/source>
+      &lt;/segment>
+
+    &lt;/unit>
+  &lt;/file>
+&lt;/xliff>
+</programlisting>
+    </example>
+  </section>
+
+</section>

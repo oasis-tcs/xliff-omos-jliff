@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="meta_appliesto">
+    <title>appliesTo</title>
+
+    <para>Indicates the element to which the content of the metagroup applies.</para>
+
+    <para><emphasis>Value description:</emphasis> <code>source</code>, <code>target</code>, or <code>ignorable</code>.</para>
+
+    <para><emphasis>Default value:</emphasis> undefined.</para>
+
+    <para><emphasis>Used in:</emphasis>
+        <olink targetdoc="../elements/metadata/metagroup.xml" targetptr="metagroup"
+                ><code>&lt;metaGroup></code></olink>.</para>
+
+</section>
+

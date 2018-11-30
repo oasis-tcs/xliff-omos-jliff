@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="val_disabled">
+  <title>disabled</title>
+
+  <para>This rule attribute determines whether a rule <glossterm>must</glossterm> or <glossterm>must
+      not</glossterm> be applied within the scope of its enclosing element. For example, a rule
+    defined at the <olink targetdoc="../../elements/structural/file.xml" targetptr="file"
+        ><code>&lt;file></code></olink> level can be disabled at the <olink
+      targetdoc="../../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink>
+    level.</para>
+  <para>This attribute is provided to allow for overriding execution of rules set at higher levels,
+    see <olink targetdoc="../../elements/validation/validation.xml" targetptr="validation"
+        ><code>&lt;val:validation></code></olink>.</para>
+
+  <para>In the following example, the isNotPresent rule is applied in its entirety to the first unit, but not to the second.</para>
+
+<programlisting>
+&lt;file id="f1"&gt;
+  &lt;val:validation&gt;
+    &lt;val:rule isPresent="store" /&gt;
+  &lt;/val:validation&gt;
+  &lt;unit id="1"&gt;
+    &lt;segment id="1"&gt;
+      &lt;source&gt;Choose an option in the online store:&lt;/source&gt;
+      &lt;target&gt;Escolha uma opção na loja online:&lt;/target&gt;
+    &lt;/segment&gt;
+  &lt;/unit&gt;
+  &lt;unit id="2"&gt;
+    &lt;val:validation&gt;
+      &lt;val:rule isPresent="store" disabled="yes" /&gt;
+    &lt;/val:validation&gt;
+    &lt;segment id="1"&gt;
+      &lt;source&gt;Choose an option in the application store:&lt;/source&gt;
+      &lt;target&gt;Escolha uma opção na application store:&lt;/target&gt;
+    &lt;/segment&gt;
+  &lt;/unit&gt;
+&lt;/file&gt;
+ </programlisting>
+
+  <para><emphasis>Value description:</emphasis> <code>yes</code> or <code>no</code></para>
+
+  <para><emphasis>Default value:</emphasis> <code>no</code></para>
+
+  <para><emphasis>Used in:</emphasis> <olink targetdoc="../../elements/validation/rule.xml" targetptr="rule"><code>&lt;rule></code></olink></para>
+
+</section>

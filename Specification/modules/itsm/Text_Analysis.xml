@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="Text_Analysis">
+  <title>Text Analysis</title>
+
+  <para>Annotates content with lexical or conceptual information for the purpose of contextual disambiguation
+    of words and multiword phrases meanings.
+     See <olink
+      targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+    <ulink url="http://www.w3.org/TR/its20/#textanalysis">Text Analysis</ulink> for
+    details.</para>
+  <itemizedlist>
+    <title>Processing Requirements</title>
+    <listitem><para><firstterm>Writers</firstterm> <glossterm>must</glossterm> use the <olink targetdoc="specification" targetptr="taAnnotation">ITS Text Analysis Annotation</olink> to express the <olink
+      targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+      <ulink url="http://www.w3.org/TR/its20/#textanalysis">Text Analysis</ulink> data category in <firstterm>XLIFF Documents</firstterm>.</para></listitem>
+
+  </itemizedlist>
+
+
+  <section id="Text_Analysis_Structural">
+    <title>Structural Elements</title>
+    <para>Text Analysis is not to be used at structural levels. If a structural element of the original document has <olink
+      targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+      <ulink url="http://www.w3.org/TR/its20/#textanalysis">Text Analysis</ulink> information associated, it <glossterm>may</glossterm> be <firstterm>Extracted</firstterm>
+      using the <link linkend="taAnnotation">ITS Text Analysis Annotation</link>.</para>
+
+
+    <example>
+      <title>Extraction of Text Analysis at structural levels</title>
+
+    <para>Original:</para>
+
+      <programlisting>
+&lt;p its-ta-class-ref="<ulink url="http://nerd.eurecom.fr/ontology#Place">http://nerd.eurecom.fr/ontology#Place</ulink>"
+    its-ta-ident-ref="<ulink url="http://dbpedia.org/resource/Arizona">http://dbpedia.org/resource/Arizona</ulink>"&gt;Arizona&lt;/p&gt;
+ </programlisting>
+
+
+    <para>Extraction:</para>
+
+
+      <programlisting>
+...
+&lt;unit id="1"&gt;
+  &lt;segment&gt;
+    &lt;source&gt;&lt;mrk id="m1" type="its:generic"
+        its:taClassRef="<ulink url="http://nerd.eurecom.fr/ontology#Place">http://nerd.eurecom.fr/ontology#Place</ulink>"
+        its:taIdentRef="<ulink url="http://dbpedia.org/resource/Arizona">http://dbpedia.org/resource/Arizona</ulink>"&gt;
+        Arizona&lt;/mrk>&lt;/source&gt;
+  &lt;/segment&gt;
+&lt;/unit&gt;
+...
+</programlisting>
+   </example>
+
+
+
+  </section>
+  <section id="Text_Analysis_Inline">
+    <title>Inline Elements</title>
+    <para> Use <code><olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
+        >&lt;mrk></olink></code> or an <code><olink targetdoc="../../elements/inline/sm.xml"
+          targetptr="sm">&lt;sm/></olink></code> / <code><olink
+          targetdoc="../../elements/inline/em.xml" targetptr="em">&lt;em/></olink></code> pair with the following attributes:
+       <olink targetdoc="../../attributes/itsm/itsm_taClassRef.xml" targetptr="itsm_taClassRef"
+        ><code>its:taClassRef</code></olink>,
+      <olink targetdoc="../../attributes/itsm/itsm_taConfidence.xml" targetptr="itsm_taConfidence"
+        ><code>its:taConfidence</code></olink>,
+      <olink targetdoc="../../attributes/itsm/itsm_taSource.xml" targetptr="itsm_taSource"
+          ><code>its:taSource</code></olink>, <olink targetdoc="../../attributes/itsm/itsm_taIdent.xml" targetptr="itsm_taIdent"
+            ><code>its:taIdent</code></olink>, and <olink targetdoc="../../attributes/itsm/itsm_taIdentRef.xml" targetptr="itsm_taIdentRef"
+              ><code>its:taIdentRef</code></olink>.</para>
+    <para>See the <link linkend="taAnnotation">ITS Text Analysis
+        Annotation</link> for the normative usage description of those attributes.</para>
+
+  </section>
+  <section id="taAnnotation">
+    <title>ITS Text Analysis Annotation</title>
+    <para>This is used to fully map to and from the <olink targetdoc="../xliff21.xml"
+      targetptr="ITS20">[ITS]</olink>
+      <ulink url="http://www.w3.org/TR/its20/#textanalysis">Text Analysis</ulink> data
+      category.</para>
+    <para>Usage:</para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>The <olink targetdoc="../../attributes/id.xml" targetptr="id"
+          ><code>id</code></olink> attribute is <glossterm>required</glossterm>.</para>
+      </listitem>
+      <listitem>
+        <para>The <olink targetdoc="../../attributes/type.xml" targetptr="type"
+          ><code>type</code></olink> attribute is <glossterm>optional</glossterm> and set to
+          <code>its:generic</code>.</para>
+
+      </listitem>
+      <listitem>
+        <para>At least one of the following <glossterm>must</glossterm> be set:</para>
+
+        <itemizedlist>
+          <listitem>
+
+            <para><olink targetdoc="../../attributes/itsm/itsm_taClassRef" targetptr="itsm_taClassRef"><code>its:taClassRef</code></olink>,</para>
+          </listitem>
+          <listitem>
+            <para>Exactly one of the following:</para>
+            <itemizedlist>
+              <listitem><para>A pair of a <olink targetdoc="../../attributes/itsm/itsm_taSource.xml" targetptr="itsm_taSource"><code>its:taSource</code></olink> and <olink targetdoc="../../attributes/itsm/itsm_taIdent.xml" targetptr="itsm_taIdent"><code>its:taIdent</code></olink> both set,</para></listitem>
+              <listitem><para><olink targetdoc="../../attributes/itsm/itsm_taIdentRef" targetptr="itsm_taIdentRef"><code>its:taIdentRef</code></olink>.</para></listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+      <listitem>
+        <para>The <olink targetdoc="../../attributes/translate.xml" targetptr="translate"
+          ><code>translate</code></olink> attribute is <glossterm>optional</glossterm>.</para>
+      </listitem>
+      <listitem>
+        <para>The <olink targetdoc="../../attributes/itsm/itsm_taConfidence.xml" targetptr="itsm_taConfidence"><code>its:taConfidence</code></olink> attribute is <glossterm>optional</glossterm> and used to map to and
+          from the <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> defined
+          <code>taConfidence</code> attribute.</para>
+      </listitem>
+      <listitem>
+        <para> The <olink targetdoc="../../attributes/itsm/itsm_annotatorsRef.xml"
+          targetptr="itsm_annotatorsRef"><code>its:annotatorsRef</code></olink> attribute is
+          <glossterm>required</glossterm> if and only if the <olink targetdoc="../../attributes/itsm/itsm_taConfidence.xml" targetptr="itsm_taConfidence"><code>its:taConfidence</code></olink> attribute is present
+          and not in scope of another relevant <olink
+            targetdoc="../../attributes/itsm/itsm_annotatorsRef.xml" targetptr="itsm_annotatorsRef"
+            ><code>its:annotatorsRef</code></olink> attribute, in all other cases it is
+          <glossterm>optional</glossterm>. </para>
+      </listitem>
+    </itemizedlist>
+
+    <warning><para>This annotation can be syntactically in scope of a relevant <olink
+          targetdoc="../../attributes/itsm/itsm_annotatorsRef.xml" targetptr="itsm_annotatorsRef"
+            ><code>its:annotatorsRef</code></olink> attribute, while it still fails to resolve with
+        the intended value. This can happen if more then one disambiguation providers were
+        used.</para></warning>
+    <example>
+      <title>Extraction of ITS Text Analytics metadata in scope of the <olink targetdoc="specification.xml" targetptr="toolsAnnotation">ITS tools annotation</olink></title>
+      <para>Original:</para>
+      <programlisting>
+&lt;div its-annotators-ref="text-analysis|<ulink url="http://enrycher.ijs.si/">http://enrycher.ijs.si</ulink>"&gt;
+    ...
+    &lt;p&gt;&lt;span its-ta-class-ref="<ulink url="http://nerd.eurecom.fr/ontology#Place">http://nerd.eurecom.fr/ontology#Place</ulink>"
+        its-ta-confidence="0.99"
+        its-ta-ident-ref="<ulink url="http://dbpedia.org/resource/Arizona">http://dbpedia.org/resource/Arizona</ulink>"&gt;Arizona
+        &lt;/span&gt;&lt;/p&gt; ... &lt;/div&gt;
+ </programlisting>
+      <para>Extracted:</para>
+      <programlisting>
+&lt;unit id="1" its:annotatorsRef="text-analysis|<ulink url="http://enrycher.ijs.si/">http://enrycher.ijs.si</ulink>">
+    &lt;segment>
+      &lt;source>&lt;mrk id="m1" type="its:generic"
+          its:taClassRef="<ulink url="http://nerd.eurecom.fr/ontology#Place">http://nerd.eurecom.fr/ontology#Place</ulink>"
+          its:taIdentRef="<ulink url="http://dbpedia.org/resource/Arizona">http://dbpedia.org/resource/Arizona</ulink>"
+          its:taConfidence="0.99" > Arizona&lt;/mrk>&lt;/source>
+    &lt;/segment&gt;&lt;/unit&gt;
+ </programlisting>
+    </example>
+  </section>
+
+</section>

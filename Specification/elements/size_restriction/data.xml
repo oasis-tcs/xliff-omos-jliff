@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="slr_data">
+    <title>data</title>
+    <para>This elements act as a container for data needed by the specified profile to check the part of the XLIFF document that is a sibling or descendant of a sibling of this element. It is not used by the default profiles.</para>
+    <para><emphasis>Contains:</emphasis></para>
+    <simplelist>
+        <member>- elements from other namespaces, <glossterm>optional</glossterm></member>
+    </simplelist>
+
+    <para><emphasis>Attributes:</emphasis></para>
+    <simplelist>
+        <member>- <olink targetdoc="../../attributes/size_restriction/profile.xml" targetptr="slr_profile"><code>profile</code></olink>, <glossterm>required</glossterm></member>
+        <member>- attributes from other namespaces, <glossterm>optional</glossterm></member>
+    </simplelist>
+
+    <itemizedlist>
+    <title>Processing Requirements</title>
+    <listitem>
+      <para>Third party profiles <glossterm>must</glossterm> place all  data in this element instead of using other extension points if the data serves no other purpose in the processing of the document.</para>
+    </listitem>
+    <listitem>
+      <para>Data not used by the specified profile <glossterm>must not</glossterm> be placed in this element.</para>
+    </listitem>
+  </itemizedlist>
+
+</section>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.docbook.org/xml/4.5/docbookx.dtd"[
+<!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+<!--the document properties were transferred to "dockbook/dbgenent.mod"-->
+]>
+<section id="fs-mod">
+<title>Format Style Module</title>
+
+<section>
+<title>Introduction</title>
+<para>This is intended as a namespace mechanism to carry inside an XLIFF document information needed for generating
+a quick at a glance HTML preview of XLIFF content using a predefined set of simple HTML formatting elements.</para>
+</section>
+<section>
+    <title>Module Namespace and Validation Artifacts</title>
+<para>The namespace for the Format style module is: <code>urn:oasis:names:tc:xliff:fs:2.0</code></para>
+<para>Schema and Schematron for this module are available at <ulink
+        url="&this-loc;/schemas/fs.xsd"
+        >&this-loc;/schemas/fs.xsd</ulink> and <ulink
+            url="&this-loc;/schemas/fs.sch"
+            >&this-loc;/schemas/fs.sch</ulink>.</para>
+    
+</section>
+<section>
+<title>Module Fragment Identification Prefix</title>
+<para>Format Style module does not have a fragment identification prefix. Prefix <code>fs</code> is reserved 
+in case it became needed in the future developments of this module.</para>
+</section>
+<section>
+<title>Module Specification</title>
+
+<para>Format Style module consists of just two attributes: <olink
+targetdoc="../../attributes/fs.xml" targetptr="fs"
+><code>fs</code></olink> and <olink targetdoc="../../attributes/subFs.xml"
+targetptr="subFs"><code>subFs</code></olink>. It does not specify any elements.</para>
+<para>Format Style allows most structural and inline XLIFF core elements to convey basic formatting
+information using a predefined subset of HTML formatting elements. It primarily enables the
+generation of HTML pages or snippets for preview and review purposes. It <glossterm>must not</glossterm>
+be used to prescribe a roundtrip to a source document format.</para>
+<para>The <olink targetdoc="../../attributes/fs.xml" targetptr="fs"
+><code>fs</code></olink> attribute holds the name of an HTML formatting element. If additional style
+information is needed, the <glossterm>optional</glossterm> <olink targetdoc="../../attributes/subFs.xml"
+targetptr="subFs"><code>subFs</code></olink> attribute is provided.</para>
+<itemizedlist>
+<title>Constraints</title>
+<listitem>
+<para>The Format Style attributes <glossterm>must</glossterm> be configured in such a way that the HTML <olink targetdoc="../xliff21.xml"
+targetptr="HTML5">[HTML5]</olink> snippet resulting at the <olink targetdoc="../../elements/structural/file.xml"
+targetptr="file"><code>&lt;file></code></olink> level is valid.</para>
+</listitem>
+</itemizedlist>
+<itemizedlist>
+<title>Processing Requirements</title>
+<listitem>
+<para><firstterm>Extractors</firstterm> and <firstterm>Enrichers</firstterm> <glossterm>should</glossterm> use the following method to validate their HTML snippets:</para>
+<orderedlist>
+<listitem>
+<para>Parse the snippet with the <olink targetdoc="../xliff21.xml"
+targetptr="HTML5">[HTML5]</olink> fragment parsing algorithm, see <ulink url="http://www.w3.org/TR/html5/syntax.html#parsing-html-fragments">http://www.w3.org/TR/html5/syntax.html#parsing-html-fragments</ulink>.</para>
+</listitem>
+<listitem>
+<para>the result <glossterm>must</glossterm> be a valid DOM tree as per <olink targetdoc="../xliff21.xml"
+targetptr="HTML5">[HTML5]</olink>, see <ulink url="http://www.w3.org/TR/html5/infrastructure.html#tree-order">http://www.w3.org/TR/html5/infrastructure.html#tree-order</ulink>.
+</para>
+</listitem>
+</orderedlist>
+</listitem>
+</itemizedlist>
+
+<note>
+<para>The above constraint and validation method will make sure that the snippets are renderable by
+standard HTML browsers.</para>
+</note>
+</section>
+<section>
+<title>Module Attributes</title>
+<para>The attributes defined in the <link linkend="fs-mod">Format Style</link> module are:
+<olink targetdoc="../../attributes/fs.xml" targetptr="fs"
+><code>fs</code></olink>,
+<olink targetdoc="../../attributes/subFs.xml"
+targetptr="subFs"><code>subFs</code></olink>.
+</para>
+
+<xi:include href="../../attributes/fs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="../../attributes/subFs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+
+</section>
+
+ 
+</section>

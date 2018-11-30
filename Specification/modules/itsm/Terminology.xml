@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="Terminology_datacat">
+  <title>Terminology</title>
+  <para>Marks terms and optionally associates them with information, such as definitions. See <olink
+      targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+    <ulink url="http://www.w3.org/TR/its20/#terminology">Terminology</ulink> for details.</para>
+  <para>ITS Terminology information is useful during <firstterm>Translation</firstterm> and related
+    localization processes. Thus it is beneficial when <firstterm>Extractors</firstterm> preserve
+    the ITS Terminology information in <firstterm>XLIFF Documents</firstterm>.</para>
+  <para>Target language terminology data and metada introduced during the
+      <firstterm>Translation</firstterm> can be <firstterm>Merged</firstterm> back into the target
+    language content in the original format.</para>
+  <para> </para>
+  <warning>
+    <para>The <firstterm>XLIFF Core</firstterm>
+      <olink targetdoc="../inline/inline.xml" targetptr="termAnnotation">Term Annotation</olink>
+      does not support all aspects of the <olink targetdoc="../xliff21.xml" targetptr="ITS20"
+        >[ITS]</olink>
+      <ulink url="http://www.w3.org/TR/its20/#terminology">Terminology</ulink> data category. For
+      instance, the <firstterm>XLIFF Core</firstterm> Term Annotation cannot be used to mark a span
+      as not a term, which is needed to map ITS <code>term="no"</code>. In case lossless roundtrip
+      of this category needs to be achieved, the Core Annotation needs to be extended as defined by
+      the <link linkend="nonTermAnnotation">ITS Terminology Annotation</link>.</para>
+  </warning>
+  <section id="Terminology_Structural">
+    <title>Structural Elements</title>
+    <para>Even if ITS Terminology metadata appears on structural elements in the source format, this
+      information needs to be <firstterm>Extracted</firstterm> using the <firstterm>XLIFF
+        Core</firstterm>
+      <olink targetdoc="../inline/inline.xml" targetptr="annotations">Annotations</olink> mechanism.
+      Use <code><olink targetdoc="../elements/inline/mrk.xml" targetptr="mrk"
+        >&lt;mrk></olink></code> or an <code><olink targetdoc="../elements/inline/sm.xml"
+          targetptr="sm">&lt;sm/></olink></code> / <code><olink
+          targetdoc="../elements/inline/em.xml" targetptr="em">&lt;em/></olink></code> pair with
+        <code>type="term"</code>. See <olink targetdoc="../inline/inline.xml"
+        targetptr="termAnnotation">Term Annotation</olink>.</para>
+    <example>
+      <title>Extraction of Terminology from structural elements</title>
+      <para>Original:</para>
+      <programlisting>
+&lt;p its-term='yes'&gt;Term&lt;/p&gt;
+ </programlisting>
+      <para>Extraction:</para>
+      <programlisting>
+&lt;unit id='1'&gt;
+  &lt;segment&gt;
+    &lt;source&gt;&lt;mrk id="m1" type="term"&gt;Term&lt;/mrk&gt;&lt;/source&gt;
+  &lt;/segment&gt;
+&lt;/unit&gt;
+ </programlisting>
+    </example>
+  </section>
+  <section id="Terminology_Inline">
+    <title>Inline Elements</title>
+    <para> Inline Terminology information <glossterm>may</glossterm> be <firstterm>Extracted</firstterm> using the
+        <firstterm>XLIFF Core</firstterm>
+      <olink targetdoc="../inline/inline.xml" targetptr="annotations">Annotations</olink> mechanism.
+      Use <code><olink targetdoc="../elements/inline/mrk.xml" targetptr="mrk"
+        >&lt;mrk></olink></code> or an <code><olink targetdoc="../elements/inline/sm.xml"
+          targetptr="sm">&lt;sm/></olink></code> / <code><olink
+          targetdoc="../elements/inline/em.xml" targetptr="em">&lt;em/></olink></code> pair with
+        <code>type="term"</code>. See <olink targetdoc="../inline/inline.xml"
+        targetptr="termAnnotation">Term Annotation</olink>.</para>
+    <example>
+      <title>Extraction of inline Terminology using Annotation markers</title>
+      <para>Original:</para>
+
+      <programlisting>
+&lt;p>Text with a &lt;span its-term='yes'>term&lt;/span>.&lt;/p>
+ </programlisting>
+
+      <para>Extraction:</para>
+      <programlisting>
+&lt;unit id='1'>
+  &lt;segment>
+    &lt;source>Text with a &lt;pc id='1'&gt;&lt;mrk id="m1" type="term">term&lt;/mrk>
+        &lt;/pc>.&lt;/source>
+  &lt;/segment>
+&lt;/unit>
+ </programlisting>
+    </example>
+  </section>
+  <section id="nonTermAnnotation">
+    <title>ITS Terminology Annotation</title>
+    <para>This is used to fully map to and from the <olink targetdoc="../xliff21.xml"
+      targetptr="ITS20">[ITS]</olink>
+      <ulink url="http://www.w3.org/TR/its20/#terminology">Terminology</ulink> data category,
+      including the aspects that are not supported via the <firstterm>XLIFF Core</firstterm>
+      <olink targetdoc="../inline/inline.xml" targetptr="termAnnotation">Term
+        Annotation</olink>.</para>
+    <para>Usage:</para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>The <olink targetdoc="../../attributes/id.xml" targetptr="id"
+          ><code>id</code></olink> attribute is <glossterm>required</glossterm>.</para>
+      </listitem>
+      <listitem>
+        <para>The <olink targetdoc="../../attributes/type.xml" targetptr="type"
+          ><code>type</code></olink> attribute is <glossterm>required</glossterm> and
+          set:</para>
+        <itemizedlist spacing="compact">
+          <listitem>
+            <para>either to <code>its:term-no</code>, which maps to and from the <olink
+              targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> defined
+              <code>term</code> attribute set to <code>no</code>,</para>
+          </listitem>
+          <listitem>
+            <para>or to <code>term</code>, which maps to and from the <olink
+              targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> defined
+              <code>term</code> attribute set to <code>yes</code>.</para>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+      <listitem>
+        <para>Not more than one of the following two attributes <glossterm>may</glossterm> be
+          set:</para>
+
+        <itemizedlist>
+          <listitem>
+
+            <para>The <olink targetdoc="../../attributes/value.xml" targetptr="value"
+              ><code>value</code></olink> attribute is <glossterm>optional</glossterm> and
+              contains a short definition of the term that an <firstterm>Extractor</firstterm>
+              obtained by dereferencing the <olink targetdoc="../xliff21.xml" targetptr="ITS20"
+                >[ITS]</olink> defined <code>termInfoPointer</code> or added by an
+              <firstterm>Enricher</firstterm>.</para>
+          </listitem>
+          <listitem>
+            <para>The <olink targetdoc="../../attributes/ref.xml" targetptr="ref"
+              ><code>ref</code></olink> attribute is <glossterm>optional</glossterm> and used to map
+              to and from the <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+              defined <code>termInfoRef</code> attribute.</para>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+      <listitem>
+        <para>The <olink targetdoc="../../attributes/translate.xml" targetptr="translate"
+          ><code>translate</code></olink> attribute is <glossterm>optional</glossterm>.</para>
+      </listitem>
+      <listitem>
+        <para>The <olink targetdoc="../../attributes/itsm/itsm_termConfidence.xml"
+          targetptr="itsm_termConfidence"><code>its:termConfidence</code></olink> attribute is <glossterm>optional</glossterm> and  used to map
+          to and from the <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+          defined <code>termConfidence</code> attribute.</para>
+      </listitem>
+      <listitem>
+        <para> The <olink targetdoc="../../attributes/itsm/itsm_annotatorsRef.xml"
+          targetptr="itsm_annotatorsRef"><code>its:annotatorsRef</code></olink> attribute is
+          <glossterm>required</glossterm> if and only if the <olink targetdoc="../../attributes/itsm/itsm_termConfidence.xml"
+            targetptr="itsm_termConfidence"><code>its:termConfidence</code></olink> attribute is
+          present and NOT in scope of another relevant <olink
+            targetdoc="../../attributes/itsm/itsm_annotatorsRef.xml"
+            targetptr="itsm_annotatorsRef"><code>its:annotatorsRef</code></olink> attribute, in
+          all other cases it is <glossterm>optional</glossterm>. </para>
+      </listitem>
+    </itemizedlist>
+
+    <warning><para>This annotation can be syntactically in scope of a relevant <olink
+      targetdoc="../../attributes/itsm/itsm_annotatorsRef.xml" targetptr="itsm_annotatorsRef"
+      ><code>its:annotatorsRef</code></olink> attribute, while it still fails to resolve with
+      the intended value. This can happen if more then one terminology providers were used.
+      COMMENT: HARD TO UNDERSTAND THE INTENTION OF THE WARNING, NEEDS REWRITING OR SHOULD BE
+      DROPPED.</para></warning>
+    <example>
+      <title>Extraction of ITS Terminology with termConfidence </title>
+      <programlisting>
+&lt;div its-annotators-ref="terminology|<ulink url="http://example.org/TermService">http://example.org/TermService</ulink>"&gt;
+  ...
+  &lt;p&gt;Text with a &lt;span its-term='yes'
+      its-term-info-ref='http://en.wikipedia.org/wiki/Terminology'
+      its-term-confidence='0.9'&gt;term&lt;/span&gt;.&lt;/p&gt;
+  ...
+&lt;/div>
+ </programlisting>
+      <para>Extracted:</para>
+      <programlisting>
+&lt;unit id='1'
+    its:annotatorsRef='terminology|http://example.com/termchecker'&gt;
+  &lt;segment&gt;
+    &lt;source&gt;Text with a &lt;pc id="1"&gt;&lt;mrk id="m1" type="term"
+        ref="http://en.wikipedia.org/wiki/Terminology"
+        its:termConfidence="0.9"&gt;term&lt;/mrk&gt;&lt;/pc&gt;.&lt;/source&gt;
+  &lt;/segment&gt;
+&lt;/unit&gt;
+ </programlisting>
+    </example>
+  </section>
+</section>

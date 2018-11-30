@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="unitItem">
+    <title>unitItem</title>
+  <para>Container for a specific revision associated with an element referenced from the enclosing
+      <olink targetdoc="revisions" targetptr="revisions"><code>&lt;revisions></code></olink>
+    element.</para>
+    <para><emphasis>Contains:</emphasis></para>
+  <simplelist>
+    <member>-
+      One or more <olink targetdoc="../strcutural/segment.xml" targetptr="segment"
+            ><code>&lt;xlf:segment></code></olink> or <olink targetdoc="../strcutural/ignorable.xml"
+          targetptr="ignorable"><code>&lt;xlf:ignorable></code></olink> elements in any
+        order.
+      
+    </member>
+    
+    
+  </simplelist>
+ 
+  
+
+    <para><emphasis>Attributes:</emphasis></para>
+    <simplelist>
+        <member>- <olink targetdoc="../../attributes/change-tracking/ctr_property.xml" targetptr="ctr_property"><code>property</code></olink>, <glossterm>required</glossterm></member>
+    <member>- <olink targetdoc="../../attributes/change-tracking/ctr_id.xml" targetptr="ctr_id"
+          ><code>id</code></olink>, <glossterm>optional</glossterm></member>
+        <member>- attributes from other namespaces, <glossterm>optional</glossterm></member>
+    </simplelist>
+<itemizedlist>
+  <title>Constraints</title>
+  <!-- mixed data prohibited at xsd level, so no need for an additional Constraint to that effect-->
+    <listitem>
+      <para>The value of the attribute <olink
+          targetdoc="../../attributes/change-tracking/ctr_property.xml" targetptr="ctr_property"
+            ><code>property</code></olink>
+        <glossterm>must</glossterm> be unique within the parent <olink targetdoc="reveision"
+          targetptr="revision"><code>&lt;revision></code></olink> element.</para>
+    </listitem>
+    <listitem>
+      <para>The <glossterm>required</glossterm> attribute <olink
+          targetdoc="../../attributes/change-tracking/ctr_property.xml" targetptr="ctr_property"
+            ><code>property</code></olink> is restricted to the value <code>content</code>, any other
+        values <glossterm>must not</glossterm> be used on <link linkend="unitItem"><code>&lt;unitItem></code></link>.</para>
+    </listitem>
+</itemizedlist>
+  
+  
+  <itemizedlist>
+    
+    <title>Processing Requirements</title>
+
+    <listitem>
+      <para><firstterm>Modifiers</firstterm> <glossterm>may</glossterm> create <olink targetdoc="../../elements/change-tracking/unitItem.xml" targetptr="unitItem"><code>&lt;unitItem></code></olink> elements with attributes.</para>
+    </listitem>
+
+    <listitem>
+      <para><firstterm>Modifiers</firstterm> <glossterm>should not</glossterm> change <olink targetdoc="../../elements/change-tracking/unitItem.xml" targetptr="unitItem"><code>&lt;unitItem></code></olink> and its attributes defined in this module.</para>
+    </listitem>
+
+    <listitem>
+      <para><firstterm>Modifiers</firstterm> <glossterm>should not</glossterm> remove <olink
+        targetdoc="../../elements/change-tracking/unitItem.xml" targetptr="unitItem"
+        ><code>&lt;unitItem></code></olink> and its attributes defined in this module, unless they
+        are removed as part of a <olink targetdoc="../../elements/change-tracking/revision.xml"
+          targetptr="revision"><code>&lt;revision></code></olink> element removed according to its
+        own Processing Requirements.</para>
+     </listitem>
+
+  </itemizedlist>
+</section>

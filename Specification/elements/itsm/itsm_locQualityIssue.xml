@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="itsm_locQualityIssue">
+    <title>locQualityIssue</title>
+    <para>Localization Quality Issue - a standoff element to hold information about a single <olink
+        targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> defined Localization Quality Issue.</para>
+    <para><emphasis>Contains:</emphasis></para>
+    <simplelist>
+        <member>This element is always empty.</member>
+    </simplelist>
+    
+    <para><emphasis>Parents:</emphasis></para>
+    
+    <simplelist>
+        <member>- <olink targetdoc="itsm_locQualityIssues.xml"
+            targetptr="itsm_locQualityIssues"><code>&lt;locQualityIssues></code></olink></member>
+        
+    </simplelist>
+    
+
+    <para><emphasis>Attributes:</emphasis></para>
+    <simplelist>
+      <member>- <olink targetdoc="../../attributes/itsm/itsm_locQualityIssueType.xml"
+                targetptr="itsm_locQualityIssueType">
+                <code>locQualityIssueType</code></olink>, <glossterm>optional</glossterm>
+        </member>
+        <member>- <olink targetdoc="../../attributes/itsm/itsm_locQualityIssueComment.xml" targetptr="itsm_locQualityIssueComment">
+            <code>locQualityIssueComment</code></olink>, <glossterm>optional</glossterm></member>
+        
+        <member>- <olink targetdoc="../../attributes/itsm/itsm_locQualityIssueSeverity.xml" targetptr="itsm_locQualityIssueSeverity">
+            <code>locQualityIssueSeverity</code></olink>, <glossterm>optional</glossterm></member>
+        <member>- <olink targetdoc="../../attributes/itsm/itsm_locQualityIssueProfileRef.xml" targetptr="itsm_locQualityIssueProfileRef">
+            <code>locQualityIssueProfileRef</code></olink>, <glossterm>optional</glossterm></member>
+        <member>- <olink targetdoc="../../attributes/itsm/itsm_locQualityIssueEnabled.xml" targetptr="itsm_locQualityIssueEnabled">
+            <code>locQualityIssueEnabled</code></olink>, <glossterm>optional</glossterm></member>
+        <!--  not allowed on ITS stand off elements <member>-<olink targetdoc="../../attributes/itsm/itsm_annotatorsRef.xml"
+            targetptr="itsm_annotatorsRef">
+            <code>annotatorsRef</code></olink>,
+            <glossterm>optional</glossterm></member>-->
+    </simplelist>
+
+    <itemizedlist>
+        <title>Constraints</title>
+        <listitem>
+            <para>At least one of the attributes <olink targetdoc="../../attributes/itsm/itsm_locQualityIssueType" targetptr="itsm_locQualityIssueType">
+                <code>locQualityIssueType</code></olink> or <olink targetdoc="../../attributes/itsm/itsm_locQualityIssueComment" targetptr="itsm_locQualityIssueComment">
+                    <code>locQualityIssueComment</code></olink> <glossterm>must</glossterm> be set.</para>
+        </listitem>
+    </itemizedlist>
+    <itemizedlist>
+        <title>Processing Requirements</title>
+        <listitem><para> For all <firstterm>Agents</firstterm>, when any of the attributes <olink
+                    targetdoc="../../attributes/itsm/itsm_locQualityIssueType"
+                    targetptr="itsm_locQualityIssueType">
+                    <code>locQualityIssueType</code></olink>, <olink
+                    targetdoc="../../attributes/itsm/itsm_locQualityIssueComment"
+                    targetptr="itsm_locQualityIssueComment">
+                    <code>locQualityIssueComment</code></olink>, <olink
+                    targetdoc="../../attributes/itsm/itsm_locQualityIssueSeverity"
+                    targetptr="itsm_locQualityIssueSeverity">
+                    <code>locQualityIssueSeverity</code></olink>, <olink
+                    targetdoc="../../attributes/itsm/itsm_locQualityIssueProfileRef"
+                    targetptr="itsm_locQualityIssueProfileRef">
+                    <code>locQualityIssueProfileRef</code></olink>, or <olink
+                    targetdoc="../../attributes/itsm/itsm_locQualityIssueEnabled"
+                    targetptr="itsm_locQualityIssueEnabled">
+                    <code>locQualityIssueEnabled</code></olink> are declared on the <link
+                    linkend="itsm_locQualityIssue"><code>&lt;locQualityIssue</code></link> element,
+                these apply to the respective marker delimited inline spans of <olink
+                    targetdoc="../../modules/specification.xml" targetptr="lqiAnnotation">ITS
+                    Localization Issue Annotation</olink>, from which their enclosing <olink
+                    targetdoc="itsm_locQualityIssues.xml" targetptr="itsm_locQualityIssues"
+                        ><code>&lt;locQualityIssues></code></olink> element is referenced. </para></listitem>
+    </itemizedlist>
+</section>

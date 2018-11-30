@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="matchSuitability">
+    <title>matchSuitability</title>
+    
+    <para>Match suitability - indicates the general suitability and relevance of its <olink
+            targetdoc="../elements/structural/match.xml" targetptr="match"
+            ><code>&lt;match></code></olink> element based on various external benchmarks or metrics
+        pertaining to both the <olink targetdoc="../elements/structural/source.xml"
+            targetptr="source"><code>&lt;source></code></olink>  and the <olink
+            targetdoc="../elements/structural/target.xml" targetptr="target"
+                ><code>&lt;target></code></olink> children of the <olink
+            targetdoc="../elements/structural/match.xml" targetptr="match"
+            ><code>&lt;match></code></olink>. </para>
+    <para> This attribute is intended to carry a value that can be combined from values provided in
+        <olink targetdoc="../../attributes/candidates_similarity.xml" targetptr="candidates_similarity"
+                ><code>similarity</code></olink> and <olink
+            targetdoc="../../attributes/candidates/matchQuality.xml" targetptr="matchQuality"
+                ><code>matchQuality</code></olink> attributes based on an externally provided
+        algorithm.</para>
+    
+    <para><emphasis>Value description:</emphasis> a decimal number between 0.0 and 100.0.</para>
+        
+    <para><emphasis>Default value:</emphasis> undefined</para>
+    
+    <para><emphasis>Used in:</emphasis> <olink targetdoc="../elements/structural/match.xml" targetptr="match"><code>&lt;match></code></olink>.</para>
+    
+    <note>
+        <para> This attribute is also useful for mapping match-quality as specified in XLIFF 1.2
+            because 1.2 is not capable of discerning between the source similarity and the target
+            quality.</para>
+    </note>
+    <itemizedlist>
+        <title>Processing Requirements</title>
+        <listitem>
+            <para><firstterm>Agents</firstterm> processing this module <glossterm>must</glossterm> make use of <olink targetdoc="../../attributes/candidates/matchSuitability.xml" 
+            targetptr="matchSuitability"><code>matchSuitability</code></olink> for match ordering purposes if the attribute is specified.
+            </para>
+        </listitem>
+    </itemizedlist>
+</section>

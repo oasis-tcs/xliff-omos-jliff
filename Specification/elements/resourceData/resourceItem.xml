@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="res_resourceItem">
+    <title>resourceItem</title>
+    <para>Container for specific resource data that is either intended for
+      <firstterm>Modification</firstterm>, or to be used as contextual reference during
+      <firstterm>Translation</firstterm>.</para>
+    <para><emphasis>Contains:</emphasis></para>
+    <para>At least one of the following</para>
+    <simplelist>
+        <member>- Zero or one <olink targetdoc="../../elements/resourceData/res_source.xml" targetptr="res_source"><code>&lt;source></code></olink> element followed by</member>
+        <member>- Zero or one <olink targetdoc="../../elements/resourceData/res_target.xml" targetptr="res_target"><code>&lt;target></code></olink> element followed by</member>
+        <member>- Zero, one or more <olink targetdoc="../../elements/resourceData/reference.xml" targetptr="res_reference"><code>&lt;reference></code></olink> elements</member>
+    </simplelist>
+    <para><emphasis>Attributes:</emphasis></para>
+    <simplelist>
+      <member>- <olink targetdoc="../../attributes/resourceData/res_mimeType.xml" targetptr="res_mimeType"><code>mimeType</code></olink>, <glossterm>optional</glossterm></member>
+      <member>- <olink targetdoc="../../attributes/resourceData/res_id.xml" targetptr="res_id"><code>id</code></olink>, <glossterm>optional</glossterm></member>
+      <member>- <olink targetdoc="../../attributes/resourceData/res_context.xml" targetptr="res_context"><code>context</code></olink>, <glossterm>optional</glossterm></member>
+       <member>- attributes from other namespaces, <glossterm>optional</glossterm></member>
+
+    </simplelist>
+  <itemizedlist>
+    <title>Constraints</title>
+    <listitem><para>The <olink targetdoc="../../attributes/resourceData/res_mimeType.xml" targetptr="res_mimeType"
+            ><code>mimeType</code></olink> attribute is <glossterm>required</glossterm> if <olink
+          targetdoc="../../elements/resourceData/res_target.xml" targetptr="res_target"
+            ><code>&lt;target></code></olink> and <olink
+          targetdoc="../../elements/resourceData/res_source.xml" targetptr="res_source"
+            ><code>&lt;source></code></olink> child elements are empty, otherwise it is
+          <glossterm>optional</glossterm>.</para></listitem>
+    <listitem>
+      <para>The value of the <glossterm>optional</glossterm> <olink targetdoc="../../attributes/resourceData/res_id.xml" targetptr="res_id">id</olink> attribute
+        <glossterm>must</glossterm> be unique among all <olink targetdoc="../../elements/resourceData/resourceItem.xml" targetptr="res_resourceItem"><code>&lt;resourceItem></code></olink>
+        and <olink targetdoc="../../elements/resourceData/resourceItemRef.xml" targetptr="res_resourceItemRef"><code>&lt;resourceItemRef></code></olink>
+        elements of the enclosing <olink targetdoc="../../elements/resourceData/resourceData.xml" targetptr="res_resourceData"><code>&lt;resourceData></code></olink> element.</para>
+    </listitem>
+  </itemizedlist>
+
+  <itemizedlist>
+    <title>Processing Requirements</title>
+
+    <listitem>
+      <para>If a <firstterm>Modifier</firstterm> does not understand how to process the <olink targetdoc="../../attributes/resourceData/res_mimeType.xml" targetptr="res_mimeType"><code>mimeType</code></olink> attribute, or the file it references, the <olink targetdoc="../../elements/resourceData/resourceItem.xml" targetptr="res_resourceItem"><code>&lt;resourceItem></code></olink> element <glossterm>may</glossterm>
+        be ignored, but still <glossterm>must</glossterm> be preserved.</para>
+    </listitem>
+
+    <listitem>
+      <para>The <olink targetdoc="../../attributes/resourceData/res_mimeType.xml" targetptr="res_mimeType"><code>mimeType</code></olink> attribute <glossterm>should</glossterm> only be modified or removed if the referenced files are modified or removed.</para>
+    </listitem>
+
+    <listitem>
+      <para>For each instance of <olink targetdoc="../../elements/resourceData/resourceItem.xml" targetptr="res_resourceItem"><code>&lt;resourceItem></code></olink> containing only <olink targetdoc="../../elements/resourceData/res_source.xml" targetptr="res_source"><code>&lt;source></code></olink>:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para><firstterm>Modifiers</firstterm>
+            <glossterm>may</glossterm> leave <olink
+              targetdoc="../../elements/resourceData/resourceItem.xml" targetptr="res_resourceItem"
+                ><code>&lt;resourceItem></code></olink> unchanged, i.e. they are not <glossterm>required</glossterm> to
+            create <olink targetdoc="../../elements/resourceData/res_target.xml"
+              targetptr="res_target"><code>&lt;target></code></olink> or <olink
+              targetdoc="../../elements/resourceData/reference.xml" targetptr="res_reference"
+                ><code>&lt;reference></code></olink>.</para>
+          </listitem>
+          <listitem>
+            <para><firstterm>Modifiers</firstterm>
+            <glossterm>may</glossterm> create <olink
+              targetdoc="../../elements/resourceData/res_target.xml" targetptr="res_target"
+                ><code>&lt;target></code></olink> or <olink
+              targetdoc="../../elements/resourceData/reference.xml" targetptr="res_reference"
+                ><code>&lt;reference></code></olink> as a siblings of <olink
+              targetdoc="../../elements/resourceData/res_source.xml" targetptr="res_source"
+                ><code>&lt;source></code></olink>.</para>
+          </listitem>
+        </itemizedlist>
+
+    </listitem>
+
+  </itemizedlist>
+</section>

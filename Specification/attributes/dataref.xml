@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="dataref">
+  <title>dataRef</title>
+
+  <para>Original data reference - holds the identifier of the <olink
+      targetdoc="../elements/structural/data.xml" targetptr="data"><code>&lt;data&gt;</code></olink>
+    element that contains the original data for a given inline code.</para>
+
+  <para><emphasis>Value description:</emphasis> An <olink targetdoc="../xliff21.xml" targetptr="XMLSchema2">[XML Schema Datatypes]</olink> NMTOKEN that
+    <glossterm>must</glossterm> be the value of the <olink targetdoc="id.xml" targetptr="id"><code>id</code></olink> attribute of
+  one of the <olink targetdoc="../elements/structural/data.xml"
+  targetptr="data"><code>&lt;data&gt;</code></olink> element listed in the
+  same <olink targetdoc="../elements/structural/unit.xml"
+  targetptr="unit"><code>&lt;unit&gt;</code></olink> element.</para>
+
+  <para><emphasis>Default value:</emphasis> undefined.</para>
+
+  <para><emphasis>Used in:</emphasis> <olink
+  targetdoc="../elements/inline/ph.xml"
+  targetptr="ph"><code>&lt;ph&gt;</code></olink>, <olink
+  targetdoc="../elements/inline/sc.xml"
+  targetptr="sc"><code>&lt;sc&gt;</code></olink>, <olink
+  targetdoc="../elements/inline/ec.xml"
+  targetptr="ec"><code>&lt;ec&gt;</code></olink>.</para>
+
+  <para><emphasis>Example:</emphasis></para>
+
+  <programlisting>
+&lt;unit id="1"&gt;
+  &lt;originalData&gt;
+    &lt;data id="d1"&gt;{0}&lt;/data&gt;
+  &lt;/originalData&gt;
+  &lt;segment&gt;
+    &lt;source&gt;Error in '&lt;ph id="1" dataRef="d1"/&gt;'.&lt;/source&gt;
+    &lt;target&gt;Erreur dans '&lt;ph id="1" dataRef="d1"/&gt;'.&lt;/target&gt;
+  &lt;/segment&gt;
+&lt;/unit&gt;
+</programlisting>
+
+  <para>The example above shows a <olink targetdoc="../elements/inline/ph.xml"
+  targetptr="ph"><code>&lt;ph&gt;</code></olink> element that has its original
+  data stored outside the content, in a <olink
+  targetdoc="../elements/structural/data.xml"
+  targetptr="data"><code>&lt;data&gt;</code></olink> element.</para>
+
+ </section>

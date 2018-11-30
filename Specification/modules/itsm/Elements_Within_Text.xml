@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="Elements_Within_Text">
+  <title>Elements Within Text</title>
+  <para>The <ulink url="http://www.w3.org/TR#elements-within-text">Elements Within Text</ulink> data
+    category reveals if and how an element affects the way text content behaves from a linguistic
+    viewpoint. This information is for example relevant to provide basic text segmentation hints for
+    tools such as translation memory systems. See <olink targetdoc="../xliff21.xml"
+      targetptr="ITS20">[ITS]</olink>
+    <ulink url="http://www.w3.org/TR#elements-within-text">Elements Within Text</ulink> for
+    details.</para>
+  <para>The <ulink url="http://www.w3.org/TR/its20#elements-within-text">Elements Within
+      Text</ulink> data category is used by ITS processors to generate XLIFF documents. This process
+    is done by ITS processors, not by XLIFF <firstterm>Writers</firstterm> or other types of XLIFF
+    implementations, to understand how to extract source content. The data category is not
+    represented directly in <firstterm>XLIFF Documents</firstterm>.</para>
+  <para>The data category provides three values: <code>yes</code>, <code>no</code> and
+      <code>nested</code>. See the <ulink url="http://www.w3.org/TR/its20#within-text-definition"
+      >ITS 2.0 specification</ulink> for examples of how to use these values in general XML
+    vocabularies or in HTML. The below examples show how to deal with the values in XLIFF. </para>
+  <section>
+    <title>Elements Within Text Value <code>Yes</code></title>
+    <para>The element needs to be mapped to one of the XLIFF 2.1 inline elements: &lt;pc>,
+      &lt;sc>/&lt;ec> or &lt;ph>, while its content is extracted.</para>
+    <para>Example for using <code>pc</code> - Original: </para>
+    <programlisting>
+...
+&lt;p>This paragraph contains &lt;span its-within-text="yes">a spanned part
+    &lt;/span>.&lt;/p>
+...
+</programlisting>
+    <para>Extraction:</para>
+    <programlisting>
+...
+&lt;unit id="u1">
+  &lt;originalData>
+    &lt;data id="d1">&amp;lt;span its-within-text="yes"&amp;gt;&lt;/data>
+    &lt;data id="d2">&amp;lt;/span&amp;gt;&lt;/data>
+  &lt;/originalData>
+  &lt;segment>
+    &lt;source>This paragraph contains &lt;pc id="pc1" dataRefStart="d1"
+        dataRefEnd="d2">a spanned part &lt;/pc>. &lt;/source>
+  &lt;/segment>
+&lt;/unit>
+...
+</programlisting>
+    <para>Example for using <code>sc</code>/<code>ec</code> - Original: </para>
+    <programlisting>
+...
+&lt;p>A paragraph where &lt;u>the formatted text appears in more than one
+    segment. The second sentence here.&lt;/u>&lt;/p>
+...
+</programlisting>
+    <para>Extraction:</para>
+    <programlisting>
+...
+&lt;unit id="u1">
+  &lt;originalData>
+    &lt;data id="d1">&amp;lt;u&amp;gt;&lt;/data>
+    &lt;data id="d2">&amp;lt;/u&amp;gt;&lt;/data>
+  &lt;/originalData>
+  &lt;segment>
+    &lt;source>A paragraph where &lt;sc id="sc1" dataRef=”d1” type="fmt"
+        subType="xlf:u"/>the formatted text takes more than one segment.
+        &lt;/source>
+  &lt;/segment>
+  &lt;segment>
+    &lt;source> The second sentence here.&lt;ec dataRef=”d2” startRef="sc1"/>
+        &lt;/source>
+  &lt;/segment>
+&lt;/unit>
+...
+</programlisting>
+    <para>Example for using <code>ph</code> - Original: </para>
+    <programlisting>
+...
+&lt;p>This sentence has a breakpoint&lt;br/>inside.&lt;/p>
+...
+</programlisting>
+    <para>Extraction:</para>
+    <programlisting>
+...
+&lt;unit id="u1">
+  &lt;originalData>
+    &lt;data id="d1">&amp;lt;br/&amp;gt;&lt;/data>
+  &lt;/originalData>
+  &lt;segment>
+    &lt;source>This sentence has a breakpoint&lt;ph id="ph1" dataRef="d1"
+        type=”fmt” subType=”xlf:lb”/>inside. &lt;/source>
+  &lt;/segment>
+&lt;/unit>
+...
+</programlisting>
+  </section>
+  <section>
+    <title>Elements Within Text Value <code>Nested</code></title>
+    <para>The sub-flow (i.e. element’s content) should be stored in a different <code>unit</code>
+      while the original element is replaced by a <code>ph</code> element and order of the flow
+      defined by the <code>subFlows</code> attribute.
+      <!-- Work on example done, along the lines of the comment. Comment can be removed. COMMENT: NEED TO REFINE THE EXAMPLE E.G. WITH
+      AN IMAGE WHICH HAS THEN A TITLE AND AN ALT ATTRIBUTE; IMAGE WOULD NOT BE FROM HTML SINCE
+      ATTRIBUTES ARE NOT TAKEN INTO ACCOUNT IN ELEMENTS WITHIN TEXT; MAYBE USE DITA OR DOCBOOK
+      "FIGURE" ELEMENTS?--></para>
+    <para>Example - Original: </para>
+    <programlisting>
+...
+&lt;para>Some text with a figure:
+  &lt;figure>
+    &lt;title its:withinText="nested">Some image description&lt;/title>
+    &lt;mediaobject>
+      &lt;imageobject>
+        &lt;imagedata fileref="images/example.jpg" scale="75"/>
+      &lt;/imageobject>
+    &lt;/mediaobject>
+  &lt;/figure>
+&lt;/para>
+...
+</programlisting>
+    <para>Extraction:</para>
+    <programlisting>
+...
+&lt;unit id="u1">
+  &lt;segment>
+    &lt;source>Some image description&lt;/source>
+  &lt;/segment>
+&lt;/unit>
+&lt;unit id="u2">
+  &lt;segment>
+    &lt;source>Some text with a figure: &lt;ph id="ph1" subFlows="u1"/>&lt;/source>
+  &lt;/segment>
+&lt;/unit>
+...
+</programlisting>
+    <para>All the sub-flows and the <code>unit</code> element which invokes them have to be in the
+      same <code>file</code> element. </para>
+  </section>
+  <section>
+    <title>Elements Within Text Value <code>No</code></title>
+    <para>In XLIFF 2.1 such element content should be stored in separate <code>unit</code> elements. </para>
+    <para>Example - Original: </para>
+    <programlisting>
+...
+&lt;ul>
+  &lt;li>First sentence&lt;/li>
+  &lt;li>Second sentence&lt;/li>
+&lt;/ul>
+...
+</programlisting>
+    <para>Extraction:</para>
+    <programlisting>
+...
+&lt;unit id="u1">
+  &lt;segment>
+    &lt;source>First sentence&lt;/source>
+  &lt;/segment>
+&lt;/unit>
+&lt;unit id="u2">
+  &lt;segment>
+    &lt;source>Second sentence&lt;/source>
+  &lt;/segment>
+&lt;/unit>
+...
+</programlisting>
+  </section>
+</section>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="canResegment">
+    <title>canResegment</title>
+    
+    <para>Can resegment - indicates whether or not the source text in the scope of the given
+            <code>canResegment</code> flag can be reorganized into a different structure of <olink
+            targetdoc="../elements/structural/segment.xml" targetptr="segment"
+                ><code>&lt;segment></code></olink> elements within the same parent <olink
+            targetdoc="../elements/structural/unit.xml" targetptr="unit"
+            ><code>&lt;unit></code></olink>.</para>
+    
+    <para><emphasis>Value description:</emphasis> <code>yes</code> or <code>no</code>.</para>
+        
+    <para><emphasis>Default value:</emphasis> default values for this attribute
+        depend on the element in which it is used:</para>
+    
+    <itemizedlist>
+        <listitem>
+            <para>When used in <olink targetdoc="../elements/structural/file.xml"
+                targetptr="file"><code>&lt;file&gt;</code></olink>:</para>
+            
+            <para>The value <code>yes</code>.</para>
+        </listitem>
+        <listitem>
+            <para>When used in any other element:</para>
+            <para>The value of the <olink targetdoc="canResegment.xml"
+                targetptr="canResegment"><code>canResegment</code></olink> attribute of its parent element.
+            </para>   
+                
+        </listitem>
+        
+        
+        
+    </itemizedlist>
+    
+    
+    <para><emphasis>Used in:</emphasis>
+        <olink targetdoc="../elements/structural/file.xml" targetptr="file"><code>&lt;file></code></olink>
+        <olink targetdoc="../elements/structural/group.xml" targetptr="group"><code>&lt;group></code></olink>
+        <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink>, and
+        <olink targetdoc="../elements/structural/segment.xml" targetptr="segment"><code>&lt;segment></code></olink>.    
+    </para>
+    
+</section>

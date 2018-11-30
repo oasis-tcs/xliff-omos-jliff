@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="value">
+  <title>value</title>
+
+  <para>Value - holds a value for the associated annotation.</para>
+
+  <para><emphasis>Value description:</emphasis> Text.</para>
+
+  <itemizedlist>
+    <listitem>
+      <para>When used in a <olink targetdoc="../inline/inline.xml"
+      targetptr="termAnnotation">term annotation</olink>, the value is a
+      definition of the term.</para>
+    </listitem>
+
+    <listitem>
+      <para>When used in a <olink targetdoc="../inline/inline.xml"
+      targetptr="commentAnnotation">comment annotation</olink>, the value is
+      the text of the comment.</para>
+    </listitem>
+
+    <listitem>
+      <para>When used in a <olink targetdoc="../inline/inline.xml"
+      targetptr="customAnnotation">custom annotation</olink>, the value is
+      defined by each custom annotation.</para>
+    </listitem>
+  </itemizedlist>
+
+  <para><emphasis>Default value:</emphasis> undefined</para>
+
+  <para><emphasis>Used in:</emphasis> <olink
+  targetdoc="../elements/inline/mrk.xml"
+  targetptr="mrk"><code>&lt;mrk&gt;</code></olink> and <olink
+    targetdoc="../elements/inline/sm.xml"
+    targetptr="sm"><code>&lt;sm&gt;</code></olink>.</para>
+</section>

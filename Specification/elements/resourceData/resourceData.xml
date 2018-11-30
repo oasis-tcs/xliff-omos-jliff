@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="res_resourceData">
+    <title>resourceData</title>
+    <para>Parent container for resource data associated with the enclosing element.</para>
+    <para><emphasis>Contains:</emphasis></para>
+    <para>At least one of the following</para>
+    <simplelist>
+        <member>- Zero, one or more <olink targetdoc="../../elements/resourceItem/resourceItemRef.xml" targetptr="res_resourceItemRef"><code>&lt;resourceItemRef></code></olink> elements.</member>
+        <member>- Zero, one or more <olink targetdoc="../../elements/resourceItem/resourceItem.xml" targetptr="res_resourceItem"><code>&lt;resourceItem></code></olink> elements.</member>
+    </simplelist>  
+</section>
