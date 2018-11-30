@@ -321,8 +321,6 @@
       "type": "object",
       "properties": {
         "id": { "$ref": "#/definitions/NMTOKEN" },
-        "fs": { "$ref": "#/definitions/formatStyle" },
-        "subFs": { "$ref": "#/definitions/subFormatStyle" },
         "kind": { "type": "string", "enum": [ "unit" ] },
         "name": { "type": "string" },
         "canResegment": { "type": "string", "enum": [ "yes", "no" ], "default": "yes" },
@@ -333,6 +331,8 @@
         "notes": { "$ref": "#/definitions/notes" },
         "subunits": { "$ref": "#/definitions/subunits" },
         "originalData": { "$ref": "#/definitions/originalData" },
+        "fs": { "$ref": "#/definitions/formatStyle" },
+        "subFs": { "$ref": "#/definitions/subFormatStyle" },
         "matches": { "$ref": "#/definitions/translationCandidates" },
         "glossary": { "$ref": "#/definitions/glossary" },
         "metadata": { "$ref": "#/definitions/metadata" },
@@ -1157,7 +1157,7 @@
     },
 
     "IRI": {
-      "description": "IRI type for XLIFF interoperability",
+      "description": "IRI type for XLIFF interoperability with XSD AnyURI (string type is left unconstrained because the uri format RFC3986 rejects IRI values defined by RFC3987)",
       "type": "string"
     },
 

@@ -1,9 +1,8 @@
 {
     "jliff": "2.1",
     "@context": {
-      "ctr": "urn:oasis:names:tc:xliff:changetracking:2.0",
-      "its": "https://www.w3.org/2005/11/its/",
-      "uext": "http://example.com/userextension/1.0"
+      "uext1": "http://example.com/userextension/1.0",
+      "uext2": "http://example.com/userextension/2.0"
     },
     "srcLang": "en",
     "trgLang": "fr",
@@ -62,9 +61,13 @@
                 }
             ],
             "userdata": {
-              "uext": {
+              "uext1:data": {
                 "id": "x1",
                 "extension": "data"
+              },
+              "uext2:table": {
+                "e": "exempli",
+                "g": "gratia"
               }
             }
         }

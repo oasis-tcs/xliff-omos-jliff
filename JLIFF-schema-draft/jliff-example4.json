@@ -23,9 +23,9 @@
                     ]
                 }
             ],
-            "glossary": [
+            "gls_glossary": [
                 {
-                    "ref": "m1",
+                    "ref": "#m1",
                     "term": {
                         "text": "TAB key",
                         "source": "publicTermbase"
@@ -37,7 +37,7 @@
                             "text": "Tabstopptaste"
                         },
                         {
-                            "ref": "m2",
+                            "ref": "#m2",
                             "source": "myTermbase",
                             "text": "TAB-TASTE"
                         }
