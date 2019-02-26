@@ -118,10 +118,10 @@
       <itemizedlist spacing="compact">
         
         <listitem>
-          <para><emphasis>XLIFF 2 Object Model Version 1.0.</emphasis> Edited by David Filip. XX Month 2018. OASIS Standard.
-            <ulink
-              url="http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html"
-              >http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html</ulink></para>
+          <para><emphasis>XLIFF 2 Object Model Version 1.0.</emphasis>. Edited by David Filip.
+            &pubdate;. OASIS &standard;. <ulink url="&this-loc;/&name;-&stage;.html"
+              >&this-loc;/&name;-&stage;.html</ulink>. Latest version: <ulink
+              url="&latest-loc;/&name;.html">&latest-loc;/&name;.html</ulink>. </para>
         </listitem>
         
         <listitem>
@@ -148,7 +148,7 @@
       <title>Normatively Used Namespaces</title>
 
 <para> This specification doesn't declare any namespaces. However, it provides JSON specific methods
-        to represent objects from the following namespaces: </para>
+        to represent objects and properties from the following namespaces: </para>
 
       <itemizedlist spacing="compact">
         <title>Namespaces used normatively in both <olink targetptr="XLIFF21">[XLIFF 2.1]</olink> and <olink targetptr="XLIFF20">[XLIFF 2.0]</olink>:</title>
@@ -596,7 +596,7 @@
                   <firstterm>Translation</firstterm> of the <firstterm>Extracted</firstterm> text,
                 and (c) allow the generation of <firstterm>Translated</firstterm> versions of the
                 original document.</para>
-              <para>The namespace that corresponds to the core subset of JLIFF &version; is
+              <para>The namespace that corresponds to the core subset of JLIFF Version &version; is
                   <code>"urn:oasis:names:tc:xliff:document:&bschversion;"</code>.</para>
               <para>
                 <note>
@@ -620,8 +620,8 @@
                 <member><code>https://www.w3.org/2005/11/its/</code></member>
               </simplelist>
               <para>However, the following namespaces are NOT considered
-                  <firstterm>XLIFF-defined</firstterm> for the purposes of the XLIFF &version;
-                specification:</para>
+                  <firstterm>XLIFF-defined</firstterm> for the purposes of the JLIFF Version
+                &version; specification:</para>
               <simplelist>
                 <member><code>urn:oasis:names:tc:xliff:document:1.0</code></member>
                 <member><code>urn:oasis:names:tc:xliff:document:1.1</code></member>
@@ -684,6 +684,8 @@
 
       <bibliography>
         <title/>
+        <para>ECMA TC 39, 2017. , 2nd ed, ECMA Standard. ECMA International, Geneva,
+          Switzerland.</para>
         
         <bibliomixed id="bcp47"><abbrev>BCP 47</abbrev>
         M. Davis, <title>Tags for Identifying Languages</title>, <citetitle> <ulink url="http://tools.ietf.org/html/bcp47">http://tools.ietf.org/html/bcp47</ulink>
@@ -700,12 +702,15 @@
             <ulink url="http://www.w3.org/TR/its20/">http://www.w3.org/TR/its20/</ulink>
           </citetitle> W3C Recommendation 29 October 2013.</bibliomixed>
         
-        <bibliomixed id="JSON"><abbrev>JSON</abbrev>
-          <title>The JavaScript Object Notation (JSON) Data Interchange Format</title>,
-          <citetitle>
-            <ulink url="https://tools.ietf.org/html/rfc8259">https://tools.ietf.org/html/rfc8259</ulink> 
-          </citetitle> IETF RFC 8259 December 2017.
-        </bibliomixed>
+        <bibliomixed id="JSON"><abbrev>JSON</abbrev> Tim Bray, ed. <title>The JavaScript Object
+            Notation (JSON) Data Interchange Format</title>, <citetitle>
+            <ulink url="https://tools.ietf.org/html/rfc8259"
+              >https://tools.ietf.org/html/rfc8259</ulink>
+          </citetitle> IETF RFC 8259 December 2017. </bibliomixed>
+
+        <bibliomixed><abbrev>ECMAJSON</abbrev>
+          <title>The JSON Data Interchange Syntax</title>, 2nd Edition. <citetitle><ulink url="http://www.ecma-international.org/publications/standards/Ecma-404.htm">http://www.ecma-international.org/publications/standards/Ecma-404.htm</ulink></citetitle> Standard ECMA-404 December
+          2017.</bibliomixed>
        
         
         <bibliomixed id="bib_datetime"><abbrev>NOTE-datetime</abbrev>
