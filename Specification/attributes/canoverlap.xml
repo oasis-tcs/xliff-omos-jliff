@@ -8,42 +8,27 @@
 <section id="canoverlap">
   <title>canOverlap</title>
 
-  <para>Code can overlap - indicates whether or not the spanning code where this attribute is used
-    can enclose partial spanning codes (i.e. a start code without its corresponding end code, or an
-    end code without its corresponding start code).</para>
+  <para>Code can overlap - indicates whether or not the spanning code where this
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end?> is
+    used can enclose partial spanning codes (i.e. a start code without its corresponding end code,
+    or an end code without its corresponding start code).</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    string.<?oxy_custom_end?></para>
 
-  <para><emphasis>Value description:</emphasis> <code>yes</code> or
-  <code>no</code>.</para>
+  <para><emphasis>Value description:</emphasis>
+    <code>"yes"</code> or <code>"no"</code>.</para>
 
-  <para><emphasis>Default value:</emphasis> default values for this
-  attribute depend on the element in which it is used:</para>
+  <para><emphasis>Default value:</emphasis>
+    <code>"yes"</code>.</para>
 
-  <itemizedlist>
-    <listitem>
-      <para>When used in <olink targetdoc="../elements/inline/pc.xml"
-      targetptr="pc"><code>&lt;pc&gt;</code></olink>: <code>no</code>.</para>
-    </listitem>
-
-    <listitem>
-      <para>When used in <olink targetdoc="../elements/inline/sc.xml"
-      targetptr="sc"><code>&lt;sc&gt;</code></olink> or <olink
-      targetdoc="../elements/inline/ec.xml"
-      targetptr="ec"><code>&lt;ec&gt;</code></olink>: <code>yes</code>.</para>
-    </listitem>
-  </itemizedlist>
-
-  <para><emphasis>Used in:</emphasis> <olink
-  targetdoc="../elements/inline/pc.xml"
-  targetptr="pc"><code>&lt;pc&gt;</code></olink>, <olink
-  targetdoc="../elements/inline/sc.xml"
-  targetptr="sc"><code>&lt;sc&gt;</code></olink> and <olink
-  targetdoc="../elements/inline/ec.xml"
-  targetptr="ec"><code>&lt;ec&gt;</code></olink></para>
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../elements/inline/sc.xml" targetptr="sc"><code>sc</code></olink> and <olink
+      targetdoc="../elements/inline/ec.xml" targetptr="ec"><code>ec</code></olink></para>
 
   <para><emphasis>Example:</emphasis></para>
 
   <programlisting>
-&lt;unit id="1"&gt;
+<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>&lt;unit id="1"&gt;
   &lt;originalData&gt;
     &lt;data id="1"&gt;\i1 &lt;/data&gt;
     &lt;data id="2"&gt;\i0 &lt;/data&gt;
@@ -55,6 +40,32 @@
         Bold, &lt;sc id="2" dataRef="1" canOverlap="yes"/&gt;both&lt;/pc&gt;,
          italics&lt;ec startRef="2" dataRef="2"/&gt;&lt;/source&gt;
   &lt;/segment&gt;
-&lt;/unit&gt;
+&lt;/unit&gt;<?oxy_custom_end?>
+
+<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>"subfiles": [
+  {
+    "id": "1",
+    "originalData": {
+      "1": "\\i1 ",
+      "2": "\\i0 ",
+      "3": "{\\b ",
+      "4": "}"
+    },
+    "subunits": [
+      {
+        "kind": "segment",
+        "source": [
+<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>          { "id": "1", "kind": "sc", "dataRef": "3", "canOverlap": "no" },
+          { "text": "Bold, " },
+          { "id": "2", "kind": "sc", "dataRef": "1", "canOverlap": "yes" },
+          { "text": "both" },
+          { "id": "4", "kind": "ec", "startRef": "1", "dataRef": "4" },
+          { "text": ", italics" },
+          { "id": "5", "kind": "ec", "startRef": "2", "dataRef": "2" }<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+        ]
+      }
+    ]
+  }
+]<?oxy_custom_end?>
 </programlisting>
 </section>

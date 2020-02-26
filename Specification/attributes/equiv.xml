@@ -10,43 +10,61 @@
 
   <para>Equivalent text - holds a plain text representation of the original data of the inline code
     that can be used when generating a plain text representation of the content.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    string.<?oxy_custom_end?></para>
 
-  <para><emphasis>Value description:</emphasis> Text.</para>
+  <para><emphasis>Value description:</emphasis> text.</para>
 
-  <para><emphasis>Default value:</emphasis> an empty string.</para>
+  <para><emphasis>Default value:</emphasis> an empty string
+      <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>""</code><?oxy_custom_end?>.</para>
 
-  <para><emphasis>Used in:</emphasis> <olink
-  targetdoc="../elements/inline/ph.xml"
-  targetptr="ph"><code>&lt;ph&gt;</code></olink>, <olink
-  targetdoc="../elements/inline/sc.xml"
-  targetptr="sc"><code>&lt;sc&gt;</code></olink>, <olink
-  targetdoc="../elements/inline/ec.xml"
-  targetptr="ec"><code>&lt;ec&gt;</code></olink>.</para>
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../elements/inline/ph.xml" targetptr="ph"><code>ph</code></olink>, <olink
+      targetdoc="../elements/inline/sc.xml" targetptr="sc"><code>sc</code></olink>, <olink
+      targetdoc="../elements/inline/ec.xml" targetptr="ec"><code>ec</code></olink>.</para>
 
   <para><emphasis>Example:</emphasis></para>
 
   <programlisting>
-&lt;unit id="1"&gt;
+<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>&lt;unit id="1"&gt;
   &lt;originalData&gt;
     &lt;data id="d1"&gt;&amp;amp;&lt;/data&gt;
   &lt;/originalData&gt;
   &lt;segment&gt;
     &lt;source&gt;Open &lt;ph id="1" equiv="" dataRef="d1"/&gt;File&lt;/source&gt;
   &lt;/segment&gt;
-&lt;/unit&gt;
+&lt;/unit&gt;<?oxy_custom_end?>
+
+<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>"subfiles": [
+  {
+    "id": "1",
+    "originalData": { "d1": "&amp;" },
+    "subunits": [
+      {
+        "kind": "segment",
+        "source": [
+          { "text": "Open " },
+          { "id": "1", "kind": "ph", "equiv": "", "dataRef": "d1" },
+          { "text": "File" }
+        ]
+      }
+    ]
+  }
+]<?oxy_custom_end?>
 </programlisting>
 
-  <para>In this example the <olink targetdoc="equiv.xml"
-  targetptr="equiv"><code>equiv</code></olink> attribute of the <olink
-  targetdoc="../elements/inline/ph.xml"
-  targetptr="ph"><code>&lt;ph&gt;</code></olink> element is used to indicate
-  that the original data of the code can be ignored in the text representation
-  of the string. This could, for instance, help a spell-checker tool to
-  process the content as "Open File".</para>
+  <para>In this example the <olink targetdoc="equiv.xml" targetptr="equiv"
+      ><code>equiv</code></olink>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?> of
+    the <olink targetdoc="../elements/inline/ph.xml" targetptr="ph"><code>ph</code></olink>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?> is
+    used to indicate that the original data of the code can be ignored in the text representation of
+    the string. This could, for instance, help a spell-checker tool to process the content as "Open
+    File".</para>
 
   <note>
-    <para>To provide a user-friendly representation, use the <olink
-    targetdoc="disp.xml" targetptr="disp"><code>disp</code></olink>
-    attribute.</para>
+    <para>To provide a user-friendly representation, use the <olink targetdoc="disp.xml"
+        targetptr="disp"><code>disp</code></olink>
+      <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>.</para>
   </note>
 </section>

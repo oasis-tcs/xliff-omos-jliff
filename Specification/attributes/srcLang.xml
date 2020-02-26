@@ -10,12 +10,16 @@
     
     <para>Source language - the code of the language, in which the text to be <firstterm>Translated</firstterm> is
         expressed.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis><?oxy_custom_end?>
+        string.</para>
     
-    <para><emphasis>Value description:</emphasis> A language code as described in <olink targetdoc="../xliff21.xml"
-        targetptr="bcp47">[BCP 47]</olink>.</para>
+    <para><emphasis>Value description:</emphasis> a language code as described in <olink
+            targetdoc="../xliff21.xml" targetptr="bcp47">[BCP 47]</olink>.</para>
     
-    <para><emphasis>Default value:</emphasis> undefined</para>
+    <para><emphasis>Default value:</emphasis> undefined.</para>
     
-    <para><emphasis>Used in:</emphasis> <olink targetdoc="../elements/structural/xliff.xml" targetptr="xliff"><code>&lt;xliff></code></olink>.</para>
+    <para><emphasis>Used in:</emphasis>
+        <olink targetdoc="../elements/structural/xliff.xml" targetptr="xliff"
+                ><code><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>jliff<?oxy_custom_end?></code></olink>.</para>
 </section>
 

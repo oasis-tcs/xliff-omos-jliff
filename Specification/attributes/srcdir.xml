@@ -9,35 +9,42 @@
   <title>srcDir</title>
 
   <para>Source directionality - indicates the directionality of the source content.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    string.<?oxy_custom_end?></para>
 
   <para><emphasis>Value description:</emphasis>
-    <code>ltr</code> (Left-To-Right), <code>rtl</code> (Right-To-Left), , or <code>auto</code>
+    <code>"ltr"</code> (Left-To-Right), <code>"rtl"</code> (Right-To-Left), or <code>"auto"</code>
     (determined heuristically, based on the first strong directional character in scope, see <olink
       targetdoc="xliff20.xml" targetptr="uax9">[UAX #9]</olink>).</para>
 
-  <para><emphasis>Default value:</emphasis> default values for this attribute depend on the element
-    in which it is used:</para>
+  <para><emphasis>Default value:</emphasis> default values for this
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end?>
+    depend on the
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?> in
+    which it is used:</para>
 
   <itemizedlist>
     <listitem>
-      <para>When used in <olink targetdoc="../elements/structural/file.xml"
-      targetptr="file"><code>&lt;file&gt;</code></olink>:</para>
+      <para>When used in <olink targetdoc="../elements/structural/file.xml" targetptr="file"
+            ><code>file</code></olink>:</para>
 
-      <para>The value <code>auto</code>.</para>
+      <para>The value <code>"auto"</code>.</para>
     </listitem>
 
     <listitem>
       <para>When used in any other element:</para>
 
-      <para>The value of the <olink targetdoc="srcdir.xml"
-      targetptr="srcdir"><code>srcDir</code></olink> attribute of its parent element.</para>
+      <para>The value of the
+          <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"srcDir"</code> property<?oxy_custom_end?>
+        <olink targetdoc="srcdir.xml" targetptr="srcdir"><code>srcDir</code></olink> string of its
+        parent
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
     </listitem>
   </itemizedlist>
 
   <para><emphasis>Used in:</emphasis>
-    <olink targetdoc="../elements/structural/file.xml" targetptr="file"
-      ><code>&lt;file&gt;</code></olink>, <olink targetdoc="../elements/structural/group.xml"
-      targetptr="group"><code>&lt;group&gt;</code></olink>, and <olink
-      targetdoc="../elements/structural/unit.xml" targetptr="unit"
-    ><code>&lt;unit&gt;</code></olink>. </para>
+    <olink targetdoc="../elements/structural/file.xml" targetptr="file"><code>file</code></olink>,
+      <olink targetdoc="../elements/structural/group.xml" targetptr="group"
+      ><code>group</code></olink>, and <olink targetdoc="../elements/structural/unit.xml"
+      targetptr="unit"><code>unit</code></olink>. </para>
 </section>

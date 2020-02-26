@@ -7,38 +7,76 @@
                          ]>
 <section id="note">
     <title>note</title>
-    <para>This is an XLIFF specific way how to present end user readable comments and annotations. A
-        note can contain information about <olink targetdoc="source.xml" targetptr="source"
-                ><code>&lt;source></code></olink>, <olink targetdoc="target.xml" targetptr="target"
-                ><code>&lt;target></code></olink>, <olink targetdoc="unit.xml"
-                    targetptr="unit"><code>&lt;unit></code></olink>, <olink targetdoc="group.xml"
-                        targetptr="group"><code>&lt;group></code></olink>, or <olink targetdoc="file.xml"
-                            targetptr="file"><code>&lt;file></code></olink> elements.</para>
-    <para><emphasis>Contains:</emphasis></para>
+    <para>This is a JLIFF specific <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object<?oxy_custom_end?>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>way how
+        <?oxy_custom_end?>to present end-user readable comments and annotations. A note can contain
+        information about <olink targetdoc="source.xml" targetptr="source"
+            ><code>source</code></olink>, <olink targetdoc="target.xml" targetptr="target"
+                ><code>target</code></olink>, <olink targetdoc="unit.xml" targetptr="unit"
+                ><code>unit</code></olink>, <olink targetdoc="group.xml" targetptr="group"
+                ><code>group</code></olink>, or <olink targetdoc="file.xml" targetptr="file"
+                ><code>file</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end?>.</para>
+    <para><emphasis>Contains:</emphasis>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
+    <para><emphasis>Properties:</emphasis></para>
     <simplelist>
-        <member>- Text</member>
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"id"</code>,
+            a <?oxy_custom_end?><olink targetdoc="../../attributes/id.xml" targetptr="id"
+                    ><code>id</code></olink>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>string<?oxy_custom_end?>,
+                <glossterm>optional</glossterm></member>
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"appliesTo"</code>,
+            an <?oxy_custom_end?><olink targetdoc="../../attributes/appliesto.xml"
+                targetptr="appliesto"><code>appliesTo</code></olink>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>string<?oxy_custom_end?>,
+                <glossterm>optional</glossterm></member>
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"category"</code>,
+            a <?oxy_custom_end?><olink targetdoc="../../attributes/category.xml"
+                targetptr="category"><code>category</code></olink>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>string<?oxy_custom_end?>,
+                <glossterm>optional</glossterm></member>
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"priority"</code>,
+            a <?oxy_custom_end?><olink targetdoc="../../attributes/priority.xml"
+                targetptr="priority"><code>priority</code></olink>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>string<?oxy_custom_end?>,
+                <glossterm>optional</glossterm></member>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
+        <member>- attributes from other namespaces, <glossterm>optional</glossterm></member><?oxy_custom_end?>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>
     </simplelist>
-    <para><emphasis>Attributes:</emphasis></para>
-    <simplelist>
-        <member>- <olink targetdoc="../../attributes/id.xml" targetptr="id"><code>id</code></olink>, <glossterm>optional</glossterm></member>
-        <member>- <olink targetdoc="../../attributes/appliesto.xml" targetptr="appliesto"><code>appliesTo</code></olink>, <glossterm>optional</glossterm></member>
-        <member>- <olink targetdoc="../../attributes/category.xml" targetptr="category"><code>category</code></olink>, <glossterm>optional</glossterm></member>
-        <member>- <olink targetdoc="../../attributes/priority.xml" targetptr="priority"><code>priority</code></olink>, <glossterm>optional</glossterm></member>
-
-
-        <member>- attributes from other namespaces, <glossterm>optional</glossterm></member>
-    </simplelist>
-
     <itemizedlist>
-        <title>Constraints</title>
+        <title><?oxy_custom_end?>Constraints</title>
         <listitem>
-            <para>The following <firstterm>XLIFF Module</firstterm> attributes are explicitly
-                allowed by the wildcard <code>other</code>:</para>
+            <para>The following <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>optional<?oxy_custom_end?>
+                <firstterm>JLIFF Module</firstterm>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>properties<?oxy_custom_end?>
+                are
+                <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>explicitly<?oxy_custom_end?>
+                allowed <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>by the
+                wildcard
+                <code>other</code><?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>:<?oxy_custom_end?></para>
             <simplelist>
-                <member>- <olink targetdoc="../../attributes/fs.xml" targetptr="fs"
-                    ><code>fs:fs</code></olink>, <glossterm>optional</glossterm></member>
-                <member>- <olink targetdoc="../../attributes/subFs.xml" targetptr="subFs"
-                    ><code>fs:subFs</code></olink>, <glossterm>optional</glossterm></member>
+                <member>-
+                        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"fs_fs"</code>,
+                    a <?oxy_custom_end?><olink targetdoc="../../attributes/fs.xml" targetptr="fs"
+                            ><code>fs_fs</code></olink>
+                    s<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>tring,
+                    provided that the Constraints specified in the <olink
+                        targetdoc="modules/fs/fs.xml" targetptr="fs-mod">Format Style Module</olink>
+                    are met.<?oxy_custom_end?></member>
+                <member>-
+                        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"fs_subFs"</code>,
+                    a <?oxy_custom_end?><olink targetdoc="../../attributes/subFs.xml"
+                        targetptr="subFs"><code>fs_subFs</code></olink>
+                    <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>string,
+                    provided that the Constraints specified in the <olink
+                        targetdoc="modules/fs/fs.xml" targetptr="fs-mod">Format Style Module</olink>
+                    are met.<?oxy_custom_end?></member>
             </simplelist>
         </listitem>
     </itemizedlist>

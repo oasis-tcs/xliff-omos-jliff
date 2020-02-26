@@ -10,27 +10,26 @@
 
   <para>Orphan code flag - indicates if the start or end marker of a spanning inline code is not in
     the same <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"
-        ><code>&lt;unit&gt;</code></olink> as its corresponding end or start code.</para>
+      ><code>unit</code></olink> as its corresponding end or start code.</para>
+  <para><emphasis>Contains:</emphasis> string.</para>
 
   <para><emphasis>Value description:</emphasis>
-    <code>yes</code> if this start or end code is not in the same <olink
-      targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit&gt;</code></olink>
-    as its corresponding end or start code, <code>no</code> if both codes are in the same <olink
-      targetdoc="../elements/structural/unit.xml" targetptr="unit"
-    ><code>&lt;unit&gt;</code></olink>.</para>
+    <code>"yes"</code> if this start or end code is not in the same <olink
+      targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>unit</code></olink> as its
+    corresponding end or start code, <code>"no"</code> if both codes are in the same <olink
+      targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>unit</code></olink>.</para>
 
-  <para><emphasis>Default value:</emphasis> <code>no</code>.</para>
+  <para><emphasis>Default value:</emphasis>
+    <code>"no"</code>.</para>
 
-  <para><emphasis>Used in:</emphasis> <olink
-  targetdoc="../elements/inline/sc.xml"
-  targetptr="sc"><code>&lt;sc&gt;</code></olink>, <olink
-  targetdoc="../elements/inline/ec.xml"
-  targetptr="ec"><code>&lt;ec&gt;</code></olink>.</para>
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../elements/inline/sc.xml" targetptr="sc"><code>sc</code></olink>, <olink
+      targetdoc="../elements/inline/ec.xml" targetptr="ec"><code>ec</code></olink>.</para>
 
   <para><emphasis>Example:</emphasis></para>
 
   <programlisting>
-<!--
+<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><!--
 &lt;unit id="1"&gt;
   &lt;segment&gt;
     &lt;source&gt;&lt;pc id="1"&gt;Warning: File not found.&lt;/pc&gt;&lt;/source&gt;
@@ -55,13 +54,57 @@
       &lt;source>&lt;pc id="1">Warning: File not found.&lt;/pc>&lt;/source>
     &lt;/segment>
   &lt;/unit>
-&lt;/file>
+&lt;/file><?oxy_custom_end?>
+
+<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>{
+  "files": [
+    {
+      "id": "f2",
+      "subfiles": [
+        {
+          "id": "1",
+          "mtc_matches": {
+            "matches": [
+              {
+                "id": "tc01",
+                "ref": "seg2",
+                "source": [
+                  { "id": "1", "kind": "sc", "isolated": "yes" },
+                  { "text": "Warning:" }
+                ],
+                "target": [
+                  { "id": "1", "kind": "sc", "isolated": "yes" },
+                  { "text": "Attention :" }
+                ]
+              }
+            ]
+          },
+          "subunits": [
+            {
+              "id": "seg2",
+              "kind": "segment",
+              "source": [
+                { "id": "1", "kind": "sc" },
+                { "text": "Warning: File not found." },
+                { "kind": "ec", "startRef": "1" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}<?oxy_custom_end?>
 </programlisting>
 
-  <para>In the example above the <olink targetdoc="../elements/inline/sc.xml"
-  targetptr="sc"><code>&lt;sc&gt;</code></olink> elements have their <olink
-  targetdoc="isolated.xml" targetptr="isolated"><code>isolated</code></olink>
-  attribute set to <code>yes</code> because they do not have their
-  corresponding <olink targetdoc="../elements/inline/ec.xml"
-  targetptr="ec"><code>&lt;ec&gt;</code></olink> elements.</para>
+  <para>In the example above the <olink targetdoc="../elements/inline/sc.xml" targetptr="sc"
+        ><code>sc</code></olink>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end?>
+    have their <olink targetdoc="isolated.xml" targetptr="isolated"><code>isolated</code></olink>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>strings<?oxy_custom_end?>
+    <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>of their
+      <code>"isolated"</code> property <?oxy_custom_end?>set to <code>"yes"</code> because they do
+    not have their corresponding <olink targetdoc="../elements/inline/ec.xml" targetptr="ec"
+        ><code>ec</code></olink>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end?>.</para>
 </section>

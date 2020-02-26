@@ -11,27 +11,41 @@
     <para>Can resegment - indicates whether or not the source text in the scope of the given
             <code>canResegment</code> flag can be reorganized into a different structure of <olink
             targetdoc="../elements/structural/segment.xml" targetptr="segment"
-                ><code>&lt;segment></code></olink> elements within the same parent <olink
-            targetdoc="../elements/structural/unit.xml" targetptr="unit"
-            ><code>&lt;unit></code></olink>.</para>
+            ><code>segment</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end?>
+        within the same parent <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"
+                ><code>unit</code></olink>.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis><?oxy_custom_end?>
+        string.</para>
     
-    <para><emphasis>Value description:</emphasis> <code>yes</code> or <code>no</code>.</para>
+    <para><emphasis>Value description:</emphasis>
+        <code>"yes"</code> or <code>"no"</code>.</para>
         
-    <para><emphasis>Default value:</emphasis> default values for this attribute
-        depend on the element in which it is used:</para>
+    <para><emphasis>Default value:</emphasis> default values for this
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end?>
+        depend on the
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+        in which the
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"canResegment"</code>
+        property<?oxy_custom_end?> is used:</para>
     
     <itemizedlist>
         <listitem>
-            <para>When used in <olink targetdoc="../elements/structural/file.xml"
-                targetptr="file"><code>&lt;file&gt;</code></olink>:</para>
+            <para>When used in <olink targetdoc="../elements/structural/file.xml" targetptr="file"
+                        ><code>file</code></olink>:</para>
             
-            <para>The value <code>yes</code>.</para>
+            <para>The value <code>"yes"</code>.</para>
         </listitem>
         <listitem>
-            <para>When used in any other element:</para>
-            <para>The value of the <olink targetdoc="canResegment.xml"
-                targetptr="canResegment"><code>canResegment</code></olink> attribute of its parent element.
-            </para>   
+            <para>When the
+                    <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"canResegment"</code>
+                property<?oxy_custom_end?> is used in any other
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>:</para>
+            <para>The value of the <olink targetdoc="canResegment.xml" targetptr="canResegment"
+                        ><code>canResegment</code></olink>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end?>
+                of its parent
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>. </para>   
                 
         </listitem>
         
@@ -41,10 +55,12 @@
     
     
     <para><emphasis>Used in:</emphasis>
-        <olink targetdoc="../elements/structural/file.xml" targetptr="file"><code>&lt;file></code></olink>
-        <olink targetdoc="../elements/structural/group.xml" targetptr="group"><code>&lt;group></code></olink>
-        <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink>, and
-        <olink targetdoc="../elements/structural/segment.xml" targetptr="segment"><code>&lt;segment></code></olink>.    
-    </para>
+        <olink targetdoc="../elements/structural/file.xml" targetptr="file"
+            ><code>file</code></olink>
+        <olink targetdoc="../elements/structural/group.xml" targetptr="group"
+            ><code>group</code></olink>
+        <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"
+            ><code>unit</code></olink>, and <olink targetdoc="../elements/structural/segment.xml"
+            targetptr="segment"><code>segment</code></olink>. </para>
     
 </section>

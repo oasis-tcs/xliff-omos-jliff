@@ -10,13 +10,16 @@
 
   <para>category - indicates a category for metadata contained in the enclosing <olink
       targetdoc="../elements/metadata/metagroup.xml" targetptr="metagroup"
-        ><code>&lt;metaGroup&gt;</code></olink> element.</para>
-  <para><emphasis>Value description:</emphasis> Text.</para>
+      ><code>metaGroup</code></olink>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    string.<?oxy_custom_end?></para>
+  <para><emphasis>Value description:</emphasis> text.</para>
 
   <para><emphasis>Default value:</emphasis> undefined.</para>
 
 
   <para><emphasis>Used in:</emphasis>
     <olink targetdoc="../elements/metadata/metagroup.xml" targetptr="metagroup"
-        ><code>&lt;metaGroup&gt;</code></olink>.</para>
+        ><code>metaGroup</code></olink>.</para>
 </section>

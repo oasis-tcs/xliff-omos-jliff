@@ -9,9 +9,11 @@
   <title>dir</title>
 
   <para>Directionality - indicates the directionality of content.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    string.<?oxy_custom_end?></para>
 
   <para><emphasis>Value description:</emphasis>
-    <code>ltr</code> (Left-To-Right), <code>rtl</code> (Right-To-Left), or <code>auto</code>
+    <code>"ltr"</code> (Left-To-Right), <code>"rtl"</code> (Right-To-Left), or <code>"auto"</code>
     (determined heuristically, based on the first strong directional character in scope, see <olink
       targetdoc="xliff20.xml" targetptr="uax9">[UAX #9]</olink>).</para>
 
@@ -20,67 +22,85 @@
 
   <itemizedlist>
     <listitem>
-      <para>When used in a <olink targetdoc="../elements/inline/pc.xml" targetptr="pc"
-            ><code>&lt;pc&gt;</code></olink>, <olink targetdoc="../elements/inline/sc.xml"
-          targetptr="sc"><code>&lt;sc&gt;</code></olink>, or <olink
-          targetdoc="../elements/inline/ec.xml" targetptr="ec"><code>&lt;ec&gt;</code></olink>
-        element that has a <olink targetdoc="../elements/structural/source.xml" targetptr="source"
-            ><code>&lt;source></code></olink> element as its parent:</para>
+      <para>When used in a <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
+          targetdoc="../elements/inline/pc.xml" targetptr="pc"><code>&lt;pc&gt;</code></olink>,
+          <?oxy_custom_end?><olink targetdoc="../elements/inline/sc.xml" targetptr="sc"
+            ><code>sc</code></olink>, or <olink targetdoc="../elements/inline/ec.xml" targetptr="ec"
+            ><code>ec</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+        that has a <olink targetdoc="../elements/structural/source.xml" targetptr="source"
+            ><code>source</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+        as its parent:</para>
 
       <para>The value of the <olink targetdoc="srcdir.xml" targetptr="srcdir"
-          ><code>srcDir</code></olink> attribute of the <olink
-          targetdoc="../elements/structural/unit.xml" targetptr="unit"
-          ><code>&lt;unit&gt;</code></olink> element, in which the elements are located.</para>
+          ><code>srcDir</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end?>
+        of the <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"
+          ><code>unit</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>,
+        in which the <code>"dir"</code>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>properties<?oxy_custom_end?>
+        are located.</para>
     </listitem>
 
     <listitem>
-      <para>When used in a <olink targetdoc="../elements/inline/pc.xml" targetptr="pc"
-            ><code>&lt;pc&gt;</code></olink>, <olink targetdoc="../elements/inline/sc.xml"
-          targetptr="sc"><code>&lt;sc&gt;</code></olink>, or <olink
-          targetdoc="../elements/inline/ec.xml" targetptr="ec"><code>&lt;ec&gt;</code></olink>
-        element that has a <olink targetdoc="../elements/structural/target.xml" targetptr="target"
-            ><code>&lt;target></code></olink> element as its parent: </para>
+      <para>When used in a <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
+          targetdoc="../elements/inline/pc.xml" targetptr="pc"><code>&lt;pc&gt;</code></olink>,
+          <?oxy_custom_end?><olink targetdoc="../elements/inline/sc.xml" targetptr="sc"
+            ><code>sc</code></olink>, or <olink targetdoc="../elements/inline/ec.xml" targetptr="ec"
+            ><code>ec</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+        that has a <olink targetdoc="../elements/structural/target.xml" targetptr="target"
+            ><code>target</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+        as its parent: </para>
 
       <para>The value of the <olink targetdoc="trgdir.xml" targetptr="trgdir"
-          ><code>trgDir</code></olink> attribute of the <olink
-          targetdoc="../elements/structural/unit.xml" targetptr="unit"
-          ><code>&lt;unit&gt;</code></olink> element, in which the elements are located.</para>
+          ><code>trgDir</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end?>
+        of the <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"
+          ><code>unit</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>,
+        in which the <code>"dir"</code>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>properties<?oxy_custom_end?>
+        are located.</para>
     </listitem>
 
     <listitem>
-      <para>When used in a <olink targetdoc="../elements/inline/pc.xml" targetptr="pc"
-            ><code>&lt;pc></code></olink>, <olink targetdoc="../elements/inline/sc.xml"
-          targetptr="sc"><code>&lt;sc></code></olink>, or <olink
-          targetdoc="../elements/inline/ec.xml" targetptr="ec"><code>&lt;ec&gt;</code></olink>
-        element that has a <olink targetdoc="../elements/inline/pc.xml" targetptr="pc"
-            ><code>&lt;pc></code></olink> element as its parent:</para>
-
+      <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>When used in a <olink
+          targetdoc="../elements/inline/pc.xml" targetptr="pc"><code>&lt;pc></code></olink>,
+          <?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?><olink
+          targetdoc="../elements/inline/sc.xml" targetptr="sc"><code>&lt;sc></code></olink>, or
+          <olink targetdoc="../elements/inline/ec.xml" targetptr="ec"
+          ><code>&lt;ec&gt;</code></olink> object that has a
+          <?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
+          targetdoc="../elements/inline/pc.xml" targetptr="pc"><code>&lt;pc></code></olink> element
+        as its parent:</para>
       <para>The value of the <olink targetdoc="dir.xml" targetptr="dir"><code>dir</code></olink>
         attribute of the parent <olink targetdoc="../elements/inline/pc.xml" targetptr="pc"
-            ><code>&lt;pc&gt;</code></olink> element.</para>
+            ><code>&lt;pc&gt;</code></olink> element.<?oxy_custom_end?></para>
     </listitem>
 
     <listitem>
-      <para>When used in <olink targetdoc="../elements/structural/data.xml"
-      targetptr="data"><code>&lt;data&gt;</code></olink>:</para>
-
-      <para>The value <code>auto</code>.</para>
+      <para><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>When used in <olink
+          targetdoc="../elements/structural/data.xml" targetptr="data"
+          ><code>&lt;data&gt;</code></olink>:</para>
+      <para>The value <code>"auto"</code>.<?oxy_custom_end?></para>
     </listitem>
   </itemizedlist>
 
-  <para><emphasis>Used in:</emphasis> 
+  <para><emphasis>Used in:</emphasis>
     <!-- killed on source and target to simplify re-segmentation PRs and to make use of BiDi control characters less likely 
       <olink
   targetdoc="../elements/structural/source.xml"
   targetptr="source"><code>&lt;source&gt;</code></olink>, <olink
   targetdoc="../elements/structural/target.xml"
-  targetptr="target"><code>&lt;target&gt;</code></olink>,--> <olink
-  targetdoc="../elements/structural/data.xml"
-  targetptr="data"><code>&lt;data&gt;</code></olink>, <olink
-  targetdoc="../elements/inline/pc.xml"
-  targetptr="pc"><code>&lt;pc&gt;</code></olink>, <olink
-  targetdoc="../elements/inline/sc.xml"
-  targetptr="sc"><code>&lt;sc&gt;</code></olink>, and <olink
-    targetdoc="../elements/inline/ec.xml"
-    targetptr="ec"><code>&lt;ec&gt;</code></olink>.</para>
+  targetptr="target"><code>&lt;target&gt;</code></olink>,-->
+    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
+      targetdoc="../elements/structural/data.xml" targetptr="data"
+    ><code>&lt;data&gt;</code></olink>, <?oxy_custom_end?><olink
+      targetdoc="../elements/inline/pc.xml" targetptr="pc"><code>pc</code></olink>, <olink
+      targetdoc="../elements/inline/sc.xml" targetptr="sc"><code>sc</code></olink>, and <olink
+      targetdoc="../elements/inline/ec.xml" targetptr="ec"><code>ec</code></olink>.</para>
 </section>

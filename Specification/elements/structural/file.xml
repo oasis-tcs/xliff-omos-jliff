@@ -11,79 +11,199 @@
         high level self contained logical node in a content structure that cannot be described in the terms of
         documents.</para>
         <note><para>Sub-document artifacts such as particular sheets, pages, chapters and similar are better
-            mapped onto the <olink targetdoc="group.xml" targetptr="group"><code>&lt;group></code></olink> element. The
-                <code>&lt;file></code> element is intended for the highest logical level. For
-            instance a collection of papers would map to a single <firstterm>XLIFF
-                Document</firstterm>, each paper will be represented with one <code>&lt;file></code>
-            element, whereas chapters and subsections will map onto nested
-            <olink targetdoc="group.xml" targetptr="group"><code>&lt;group></code></olink> elements.</para></note>
+            mapped onto the <olink targetdoc="group.xml" targetptr="group"
+                ><code>group</code></olink>
+            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.
+            The <code>file</code>
+            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+            is intended for the highest logical level. For instance a collection of papers would map
+            to a single <firstterm>JLIFF Document</firstterm>, each paper will be represented with
+            one <code>file</code>
+            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>,
+            whereas chapters and subsections will map onto
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>file</code>
+            property <code>"subfiles"</code> with an array of <?oxy_custom_end?><olink
+                targetdoc="group.xml" targetptr="group"><code>group</code></olink>
+            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end?>.</para></note>
 
 
 
-    <para><emphasis>Contains:</emphasis></para>
+    <para><emphasis>Contains:</emphasis>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
     <simplelist>
-        <member>- Zero or one <olink targetdoc="skeleton.xml" targetptr="skeleton"><code>&lt;skeleton></code></olink> element
-        followed by</member>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
+        <member>- Zero or one <olink targetdoc="skeleton.xml" targetptr="skeleton"
+                    ><code>&lt;skeleton></code></olink> element followed by</member>
         <member>- elements from other namespaces, <glossterm>optional</glossterm></member>
-
-        <member>- Zero or one
-            <olink targetdoc="notes.xml" targetptr="notes"><code>&lt;notes></code></olink>
-            element followed by</member>
-
-
+        <member>- Zero or one <olink targetdoc="notes.xml" targetptr="notes"
+                ><code>&lt;notes></code></olink> element followed by</member>
         <member>- One or more <olink targetdoc="unit.xml" targetptr="unit"
                 ><code>&lt;unit></code></olink> or <olink targetdoc="group.xml" targetptr="group"
-                    ><code>&lt;group></code></olink> elements in any order.</member>
-
+                    ><code>&lt;group></code></olink> elements in any
+            order.<?oxy_custom_end?></member>
     </simplelist>
 
-    <para><emphasis>Attributes:</emphasis></para>
+    <para><emphasis>Properties:</emphasis></para>
     <simplelist>
-        <member>- <olink targetdoc="../../attributes/id.xml" targetptr="id"><code>id</code></olink>,
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"skeleton"</code>,
+            a <?oxy_custom_end?><olink targetdoc="skeleton.xml" targetptr="skeleton"
+                    ><code>skeleton</code></olink>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object<?oxy_custom_end?>,
+                <glossterm>optional</glossterm></member>
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"notes"</code>,
+            a non-empty array of <olink targetdoc="note.xml" targetptr="note"
+                ><code>note</code></olink> objects<?oxy_custom_end?>,
+            <emphasis>optional</emphasis></member>
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"subfiles"</code>,
+            a non-empty array of <olink targetdoc="unit.xml" targetptr="unit"
+                ><code>unit</code></olink> and <olink targetdoc="group.xml" targetptr="group"
+                    ><code>group</code></olink> objects<?oxy_custom_end?>,
+                <emphasis>required</emphasis></member>
+    </simplelist>
+    <simplelist>
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"id"</code>,
+            a <?oxy_custom_end?><olink targetdoc="../../attributes/id.xml" targetptr="id"
+                    ><code>id</code></olink>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>string<?oxy_custom_end?>,
                 <glossterm>required</glossterm></member>
-        <member>- <olink targetdoc="../../attributes/canResegment.xml" targetptr="canResegment"><code>canResegment</code></olink>, <glossterm>optional</glossterm></member>
-        <member>- <olink targetdoc="../../attributes/original.xml" targetptr="original"><code>original</code></olink>, <glossterm>optional</glossterm></member>
-        <member>- <olink targetdoc="../../attributes/translate.xml" targetptr="translate"><code>translate</code></olink>, <glossterm>optional</glossterm></member>
-        <member>- <olink targetdoc="../../attributes/srcdir.xml" targetptr="srcdir"><code>srcDir</code></olink>, <glossterm>optional</glossterm></member>
-        <member>- <olink targetdoc="../../attributes/trgdir.xml" targetptr="trgdir"><code>trgDir</code></olink>, <glossterm>optional</glossterm></member>
-        <member>- <olink targetdoc="../../attributes/xml_space.xml" targetptr="xml_space"><code>xml:space</code></olink>, <glossterm>optional</glossterm></member>
-        <member>- attributes from other namespaces, <glossterm>optional</glossterm></member>
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"canResegment"</code>,
+            a <?oxy_custom_end?><olink targetdoc="../../attributes/canResegment.xml"
+                targetptr="canResegment"><code>canResegment</code></olink>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>string<?oxy_custom_end?>,
+                <glossterm>optional</glossterm></member>
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"original"</code>,
+            an <?oxy_custom_end?><olink targetdoc="../../attributes/original.xml"
+                targetptr="original"><code>original</code></olink>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>string<?oxy_custom_end?>,
+                <glossterm>optional</glossterm></member>
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"translate"</code>,
+            a <?oxy_custom_end?><olink targetdoc="../../attributes/translate.xml"
+                targetptr="translate"><code>translate</code></olink>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>string<?oxy_custom_end?>,
+                <glossterm>optional</glossterm></member>
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"srcDir"</code>,
+            a <?oxy_custom_end?><olink targetdoc="../../attributes/srcdir.xml" targetptr="srcdir"
+                    ><code>srcDir</code></olink>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>string<?oxy_custom_end?>,
+                <glossterm>optional</glossterm></member>
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"trgDir"</code>,
+            a <?oxy_custom_end?><olink targetdoc="../../attributes/trgdir.xml" targetptr="trgdir"
+                    ><code>trgDir</code></olink>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>string<?oxy_custom_end?>,
+                <glossterm>optional</glossterm></member>
+        <member>- <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
+                targetdoc="../../attributes/xml_space.xml" targetptr="xml_space"
+                    ><code>xml:space</code></olink>,
+            <glossterm>optional</glossterm><?oxy_custom_end?></member>
+        <member>- <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>attributes from
+            other namespaces, <glossterm>optional</glossterm><?oxy_custom_end?></member>
     </simplelist>
 
     <itemizedlist>
         <title>Constraints</title>
-        <listitem><para>The following <firstterm>XLIFF Module</firstterm> elements are explicitly allowed by the wildcard <code>other</code>:</para>
+        <listitem><para>The following <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>optional<?oxy_custom_end?>
+                <firstterm>JLIFF Module</firstterm>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>properties<?oxy_custom_end?>
+                are
+                <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>explicitly<?oxy_custom_end?>
+                allowed <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>by the
+                wildcard <code>other</code><?oxy_custom_end?>:</para>
             <simplelist>
                 <!--  Removing CTR module as per resolution to https://issues.oasis-open.org/browse/XLIFF-32
                     <member>- Zero or one <olink targetdoc="../change-tracking/changeTrack.xml"
                         targetptr="changeTrack"><code>&lt;ctr:changeTrack></code></olink>
                     elements</member>
 -->
-            <member>- Zero or one <olink targetdoc="../metadata/metadata.xml" targetptr="metadata"
-                            ><code>&lt;mda:metadata></code></olink> elements</member>
-            <member>- Zero or one <olink targetdoc="../resourceData/resourceData.xml"
-                        targetptr="res_resourceData"><code>&lt;res:resourceData></code></olink>
-                    element</member>
-            <member>- Zero or one <olink targetdoc="../size_restriction/profiles.xml"
-                        targetptr="slr_profiles"><code>&lt;slr:profiles></code></olink>
-                    elements</member>
-            <member>- Zero or one <olink targetdoc="../size_restriction/data.xml"
-                        targetptr="slr_data"><code>&lt;slr:data></code></olink> elements</member>
-            <member>- Zero or one <olink targetdoc="../validation/validation.xml"
-                        targetptr="validation"><code>&lt;val:validation></code></olink>
-                    elements</member>
-             <member>- Zero, one, or more <olink targetdoc="../itsm/itsm_provenanceRecords.xml" targetptr="itsm_provenanceRecords"><code>&lt;its:provenanceRecords></code></olink>
-                    elements</member>   
-            
+                <member>-
+                        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"fs_fs"</code>,
+                    a <olink targetdoc="../attributes/fs.xml" targetptr="fs"
+                        ><code>fs_fs</code></olink> string<?oxy_custom_end?>, provided that the
+                    Constraints specified in the <olink targetdoc="modules/fs/fs.xml"
+                        targetptr="fs-mod">Format Style Module</olink> are met.</member>
+                <member>-
+                        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"fs_subFs"</code>,
+                    a <olink targetdoc="../attributes/subfs.xml" targetptr="subfs"
+                            ><code>fs_subFs</code></olink> string,<?oxy_custom_end?> provided that
+                    the Constraints specified in the <olink targetdoc="modules/fs/fs.xml"
+                        targetptr="fs-mod">Format Style Module</olink> are met.</member>
+                <member>- <code>"mda_metadata"</code>, a <olink targetdoc="../metadata/metadata.xml"
+                        targetptr="metadata"><code>mda_metadata</code></olink>
+                    <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object<?oxy_custom_end?></member>
+                <member>- <code>"res_resourceData"</code>, a <olink
+                        targetdoc="../resourceData/resourceData.xml" targetptr="res_resourceData"
+                            ><code>res_resourceData</code></olink>
+                    <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object<?oxy_custom_end?></member>
+                <member>- <code>"slr_profiles"</code>, a <olink
+                        targetdoc="../size_restriction/profiles.xml" targetptr="slr_profiles"
+                            ><code>slr_profiles</code></olink> object</member>
+                <member>- <code>"slr_data"</code>, a <olink targetdoc="../size_restriction/data.xml"
+                        targetptr="slr_data"><code>slr_data</code></olink> object</member>
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+                <member>- <code>"slr_storageRestriction"</code>, a <olink
+                        targetdoc="../../attributes/size_restriction/storage-restriction.xml"
+                        targetptr="slr_storageRestriction"
+                        ><code>slr_storageRestriction</code></olink> string, provided that the
+                    Constraints specified in the <olink
+                        targetdoc="modules/size_restriction/specification.xml"
+                        targetptr="size_restriction_module">Size and Length Restriction
+                        Module</olink> are met.</member>
+                <member>- <code>"slr_sizeRestriction"</code>, a <olink
+                        targetdoc="../../attributes/size_restriction/size-restriction.xml"
+                        targetptr="slr_sizeRestriction"><code>slr_sizeRestriction</code></olink>
+                    string, provided that the Constraints specified in the <olink
+                        targetdoc="modules/size_restriction/specification.xml"
+                        targetptr="size_restriction_module">Size and Length Restriction
+                        Module</olink> are met.</member>
+                <member>- <code>"slr_sizeInfo"</code>, a <olink
+                        targetdoc="../../attributes/size_restriction/size-info.xml"
+                        targetptr="slr_sizeInfo"><code>slr_sizeInfo</code></olink> string, provided
+                    that the Constraints specified in the <olink
+                        targetdoc="modules/size_restriction/specification.xml"
+                        targetptr="size_restriction_module">Size and Length Restriction
+                        Module</olink> are met.</member>
+                <member>- <code>"slr_sizeInfoRef"</code>, a <olink
+                        targetdoc="../../attributes/size_restriction/size-info-ref.xml"
+                        targetptr="slr_sizeInfoRef"><code>slr_sizeInfoRef</code></olink> string,
+                    provided that the Constraints specified in the <?oxy_custom_end?><olink
+                        targetdoc="modules/size_restriction/specification.xml"
+                        targetptr="size_restriction_module">Size and Length Restriction
+                        Module</olink> are met.</member>
+                <member>- <code>"val_validation"</code>, a <olink
+                        targetdoc="../validation/validation.xml" targetptr="validation"
+                            ><code>val_validation</code></olink> object</member>
+                <member>-
+                        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"its_provenanceRecords"</code>,
+                    a non-empty array of<?oxy_custom_end?>
+                    <olink targetdoc="../itsm/itsm_provenanceRecords.xml"
+                        targetptr="itsm_provenanceRecords"
+                        ><code>its_provenanceRecords</code></olink> objects</member>
             </simplelist>
         </listitem>
         <listitem>
-            <para><firstterm>Module</firstterm> and Extension elements <glossterm>may</glossterm> be
-                used in any order.</para>
+            <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>The following
+                optional <emphasis>JLIFF Extension</emphasis> property is allowed:<simplelist>
+                    <member>- <code>"userdata"</code>, a <olink targetdoc="../../extensions/extensions.xml" targetptr="extensions"><code>userdata</code></olink>
+                        object<?oxy_custom_end?></member>
+                </simplelist></para>
         </listitem>
         <listitem>
-            <para>The following <firstterm>XLIFF Module</firstterm> attributes are explicitly
-                allowed by the wildcard <code>other</code>:</para>
+            <para><firstterm>Module</firstterm> and <emphasis>Extension</emphasis>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>properties<?oxy_custom_end?>
+                <glossterm>may</glossterm> be used in any order.</para>
+        </listitem>
+        <listitem>
+            <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>The following
+                    <firstterm>XLIFF Module</firstterm> properties are explicitly allowed by the
+                wildcard <code>other</code>:</para>
             <simplelist>
                 <member>- attributes from the namespace
                     <code>urn:oasis:names:tc:xliff:fs:2.0</code>, <glossterm>optional</glossterm>,
@@ -91,20 +211,21 @@
                         targetdoc="modules/fs/fs.xml" targetptr="fs-mod">Format Style Module</olink>
                     are met.</member>
                 <member>- attributes from the namespace
-                    <code>urn:oasis:names:tc:xliff:sizerestriction:2.0</code>, <glossterm>optional</glossterm>,
-                    provided that the Constraints specified in the <olink
-                        targetdoc="modules/size_restriction/specification.xml" targetptr="size_restriction_module">Size and Length Restriction Module</olink>
-                    are met.</member>
-                <member>- attributes from the namespace
-                        <code>http://www.w3.org/2005/11/its</code>,
+                        <code>urn:oasis:names:tc:xliff:sizerestriction:2.0</code>,
                         <glossterm>optional</glossterm>, provided that the Constraints specified in
-                    the <olink targetdoc="modules/itsm/specification.xml"
-                        targetptr="ITS-module">ITS Module</olink> are met.</member>
+                    the <olink targetdoc="modules/size_restriction/specification.xml"
+                        targetptr="size_restriction_module">Size and Length Restriction
+                        Module</olink> are met.</member>
+                <member>- attributes from the namespace <code>http://www.w3.org/2005/11/its</code>,
+                        <glossterm>optional</glossterm>, provided that the Constraints specified in
+                    the <olink targetdoc="modules/itsm/specification.xml" targetptr="ITS-module">ITS
+                        Module</olink> are met.</member>
                 <member>- attributes from the namespace
                         <code>urn:oasis:names:tc:xliff:itsm:2.1</code>,
                         <glossterm>optional</glossterm>, provided that the Constraints specified in
                     the <olink targetdoc="../../modules/itsm/specification.xml"
-                        targetptr="ITS-module">ITS Module</olink> are met.</member>
+                        targetptr="ITS-module">ITS Module</olink> are
+                    met.<?oxy_custom_end?></member>
             </simplelist>
         </listitem>
 
