@@ -9,18 +9,20 @@
     <title>canCopy</title>
     
     <para>Replication editing hint - indicates whether or not the inline code can be copied.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+        string.<?oxy_custom_end?></para>
     
     <para><emphasis>Value description:</emphasis>
-        <code>yes</code> if the code can be copied, <code>no</code> if the code is not intended to
-        be copied.</para>
+        <code>"yes"</code> if the code can be copied, <code>"no"</code> if the code is not intended
+        to be copied.</para>
     
-    <para><emphasis>Default value:</emphasis> <code>yes</code>.</para>
+    <para><emphasis>Default value:</emphasis>
+        <code>"yes"</code>.</para>
     
     <para><emphasis>Used in:</emphasis>
-     <olink targetdoc="../elements/inline/pc.xml" targetptr="pc"><code>&lt;pc></code></olink>,
-     <olink targetdoc="../elements/inline/sc.xml" targetptr="sc"><code>&lt;sc></code></olink>,
-     <olink targetdoc="../elements/inline/ec.xml" targetptr="ec"><code>&lt;ec></code></olink>,
-     <olink targetdoc="../elements/inline/ph.xml" targetptr="ph"><code>&lt;ph></code></olink>.</para>
+        <olink targetdoc="../elements/inline/sc.xml" targetptr="sc"><code>sc</code></olink>, <olink
+            targetdoc="../elements/inline/ec.xml" targetptr="ec"><code>ec</code></olink>, <olink
+            targetdoc="../elements/inline/ph.xml" targetptr="ph"><code>ph</code></olink>.</para>
     
 </section>
 

@@ -6,7 +6,8 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="equivend">
-  <title>equivEnd</title>
+  <title>equivEnd <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>not used in
+    JLIFF<?oxy_custom_end?></title>
 
   <para>Equivalent text - holds a plain text representation of the original data of the end marker
     of an inline code that can be used when generating a plain text representation of the

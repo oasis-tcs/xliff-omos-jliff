@@ -11,16 +11,21 @@
     <para>Resource name - the original identifier of the resource corresponding to the
             <firstterm>Extracted</firstterm>
         <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"
-            ><code>&lt;unit></code></olink> or <olink targetdoc="../elements/structural/group.xml"
-            targetptr="unit"><code>&lt;group></code></olink>.</para>
+            ><code>unit</code></olink> or <olink targetdoc="../elements/structural/group.xml"
+            targetptr="unit"><code>group</code></olink>.</para>
     <para>For example: the key in the key/value
         pair in a Java properties file, the ID of a string in a Windows string table, the index
         value of an entry in a database table, etc.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+        string.<?oxy_custom_end?></para>
 
-    <para><emphasis>Value description:</emphasis> Text.</para>
+    <para><emphasis>Value description:</emphasis> text.</para>
 
     <para><emphasis>Default value:</emphasis> undefined.</para>
 
-    <para><emphasis>Used in:</emphasis> <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink> and <olink targetdoc="../elements/structural/group.xml" targetptr="unit"><code>&lt;group></code></olink>.</para>
+    <para><emphasis>Used in:</emphasis>
+        <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"
+            ><code>unit</code></olink> and <olink targetdoc="../elements/structural/group.xml"
+            targetptr="unit"><code>group</code></olink>.</para>
 
 </section>

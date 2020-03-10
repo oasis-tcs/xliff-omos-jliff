@@ -6,7 +6,8 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="datarefstart">
-  <title>dataRefStart</title>
+  <title>dataRefStart <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>not used in
+    JLIFF<?oxy_custom_end?></title>
 
   <para>Original data reference - holds the identifier of the <olink
       targetdoc="../elements/structural/data.xml" targetptr="data"><code>&lt;data&gt;</code></olink>

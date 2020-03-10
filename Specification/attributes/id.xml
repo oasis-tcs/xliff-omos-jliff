@@ -9,74 +9,118 @@
   <title>id</title>
 
   <para>Identifier - a character string used to identify an element.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    string.<?oxy_custom_end?></para>
 
-  <para><emphasis>Value description:</emphasis> NMTOKEN. The scope of the values for this attribute
-    depends on the element, in which it is used.</para>
+  <para><emphasis>Value description:</emphasis> NMTOKEN. The scope of the values for this
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end?>
+    depends on <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>the object in
+    which the <code>"id"</code> property <?oxy_custom_end?>is used.</para>
 
   <itemizedlist>
     <listitem>
-      <para>When used in a <olink targetdoc="../elements/structural/file.xml"
-        targetptr="file"><code>&lt;file></code></olink> element:</para>
-      <para>The value <glossterm>must</glossterm> be unique among all <olink targetdoc="../elements/structural/file.xml"
-        targetptr="file"><code>&lt;file></code></olink> <code>id</code> attribute values within the enclosing  <olink
-              targetdoc="../elements/structural/xliff.xml" targetptr="xliff"
-              ><code>&lt;xliff></code></olink> element.</para>
+      <para>When used in a <olink targetdoc="../elements/structural/file.xml" targetptr="file"
+            ><code>file</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>:</para>
+      <para>The value <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>of the
+          <code>"id"</code> property strings <?oxy_custom_end?><glossterm>must</glossterm> be unique
+        among all <olink targetdoc="../elements/structural/file.xml" targetptr="file"
+            ><code>file</code></olink>
+        <code>id</code>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end?>
+        values within the enclosing <olink targetdoc="../elements/structural/xliff.xml"
+          targetptr="xliff"><code>jliff</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
     </listitem>
 
     <listitem>
-      <para>When used in <olink targetdoc="../elements/structural/group.xml"
-        targetptr="group"><code>&lt;group></code></olink> elements:</para>
-      <para>The value <glossterm>must</glossterm> be unique among all <olink targetdoc="../elements/structural/group.xml"
-        targetptr="group"><code>&lt;group></code></olink> <code>id</code> attribute values within the enclosing  <olink
-          targetdoc="../elements/structural/file.xml" targetptr="file"
-          ><code>&lt;file></code></olink> element.</para>
+      <para>When used in <olink targetdoc="../elements/structural/group.xml" targetptr="group"
+            ><code>group</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>:</para>
+      <para>The value <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>of the
+          <code>"id"</code> property strings <?oxy_custom_end?><glossterm>must</glossterm> be unique
+        among all <olink targetdoc="../elements/structural/group.xml" targetptr="group"
+            ><code>group</code></olink>
+        <code>id</code>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end?>
+        values within the enclosing <olink targetdoc="../elements/structural/file.xml"
+          targetptr="file"><code>file</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
     </listitem>
     
     <listitem>
-      <para>When used in <olink targetdoc="../elements/structural/unit.xml"
-        targetptr="unit"><code>&lt;unit></code></olink> elements:</para>
-      <para>The value <glossterm>must</glossterm> be unique among all <olink targetdoc="../elements/structural/unit.xml"
-        targetptr="unit"><code>&lt;unit></code></olink> <code>id</code> attribute values within the enclosing <olink
-          targetdoc="../elements/structural/file.xml" targetptr="file"
-          ><code>&lt;file></code></olink> element.</para>
+      <para>When used in <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"
+            ><code>unit</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>:</para>
+      <para>The value <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>of the
+          <code>"id"</code> property strings <?oxy_custom_end?><glossterm>must</glossterm> be unique
+        among all <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"
+            ><code>unit</code></olink>
+        <code>id</code>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end?>
+        values within the enclosing <olink targetdoc="../elements/structural/file.xml"
+          targetptr="file"><code>file</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
     </listitem>
     
     <listitem>
-      <para>When used in <olink targetdoc="../elements/structural/note.xml"
-        targetptr="note"><code>&lt;note></code></olink> elements:</para>
-      <para>The value <glossterm>must</glossterm> be unique among all <olink targetdoc="../elements/structural/note.xml"
-        targetptr="note"><code>&lt;note></code></olink> <code>id</code> attribute values within the immediate enclosing 
-        <olink targetdoc="../elements/structural/file.xml" targetptr="file"><code>&lt;file></code></olink>,
-        <olink targetdoc="../elements/structural/group.xml" targetptr="group"><code>&lt;group></code></olink>, or
-        <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink> element.</para>
+      <para>When used in <olink targetdoc="../elements/structural/note.xml" targetptr="note"
+            ><code>note</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end?>:</para>
+      <para>The value <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>of the
+          <code>"id"</code> property strings <?oxy_custom_end?><glossterm>must</glossterm> be unique
+        among all <olink targetdoc="../elements/structural/note.xml" targetptr="note"
+            ><code>note</code></olink>
+        <code>id</code>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end?>
+        values within the immediate enclosing <olink targetdoc="../elements/structural/file.xml"
+          targetptr="file"><code>file</code></olink>, <olink
+          targetdoc="../elements/structural/group.xml" targetptr="group"><code>group</code></olink>,
+        or <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"
+          ><code>unit</code></olink> object.</para>
     </listitem>
     
     <listitem>
-      <para>When used in <olink targetdoc="../elements/structural/data.xml"
-        targetptr="data"><code>&lt;data></code></olink> elements:</para>
-      <para>The value <glossterm>must</glossterm> be unique among all <olink targetdoc="../elements/structural/data.xml"
-        targetptr="data"><code>&lt;data></code></olink> <code>id</code> attribute values within the enclosing 
-        <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink> element.</para>
+      <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>When used in <olink
+          targetdoc="../elements/structural/data.xml" targetptr="data"
+          ><code>&lt;data></code></olink> elements:</para>
+      <para>The value <glossterm>must</glossterm> be unique among all <olink
+          targetdoc="../elements/structural/data.xml" targetptr="data"
+          ><code>&lt;data></code></olink>
+        <code>id</code> attribute values within the enclosing <olink
+          targetdoc="../elements/structural/unit.xml" targetptr="unit"
+          ><code>&lt;unit></code></olink> element.<?oxy_custom_end?></para>
     </listitem>
     
     <listitem>
-      <para>When used in 
-        <olink targetdoc="../elements/structural/segment.xml" targetptr="segment"><code>&lt;segment&gt;</code></olink>,
-        <olink targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"><code>&lt;ignorable&gt;</code></olink>,
-        <olink targetdoc="../elements/inline/mrk.xml" targetptr="mrk"><code>&lt;mrk&gt;</code></olink>,
-        <olink targetdoc="../elements/inline/sm.xml" targetptr="sm"><code>&lt;sm&gt;</code></olink>,
-        <olink targetdoc="../elements/inline/pc.xml" targetptr="pc"><code>&lt;pc&gt;</code></olink>,
-        <olink targetdoc="../elements/inline/sc.xml" targetptr="sc"><code>&lt;sc&gt;</code></olink>,
-        <olink targetdoc="../elements/inline/ec.xml" targetptr="ec"><code>&lt;ec&gt;</code></olink>,
-        or <olink targetdoc="../elements/inline/ph.xml" targetptr="ph"><code>&lt;ph&gt;</code></olink> elements:</para>
+      <para>When used in <olink targetdoc="../elements/structural/segment.xml" targetptr="segment"
+            ><code>segment</code></olink>, <olink targetdoc="../elements/structural/ignorable.xml"
+          targetptr="ignorable"><code>ignorable</code></olink>,
+          <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
+          targetdoc="../elements/inline/mrk.xml" targetptr="mrk"
+        ><code>&lt;mrk&gt;</code></olink><?oxy_custom_end?>, <olink
+          targetdoc="../elements/inline/sm.xml" targetptr="sm"><code>sm</code></olink>,
+          <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
+          targetdoc="../elements/inline/pc.xml" targetptr="pc"><code>&lt;pc&gt;</code></olink>,
+          <?oxy_custom_end?><olink targetdoc="../elements/inline/sc.xml" targetptr="sc"
+            ><code>sc</code></olink>, <olink targetdoc="../elements/inline/ec.xml" targetptr="ec"
+            ><code>ec</code></olink>, or <olink targetdoc="../elements/inline/ph.xml" targetptr="ph"
+            ><code>ph</code></olink> elements:</para>
       <itemizedlist>
         <listitem><para>The inline elements enclosed by a <olink targetdoc="../elements/structural/target.xml"
-      targetptr="target"><code>&lt;target></code></olink> element <glossterm>must</glossterm> use the duplicate <code>id</code> values
-      of their corresponding inline elements enclosed within the sibling <olink targetdoc="../elements/structural/source.xml"
-        targetptr="source"><code>&lt;source></code></olink> element if and only if those corresponding elements exist.</para></listitem>
-        <listitem><para>Except for the above exception, the value <glossterm>must</glossterm> be unique among all of the above within the
-          enclosing <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink> 
-          element.</para></listitem>
+              targetptr="target"><code>target</code></olink>
+            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+            <glossterm>must</glossterm> use the duplicate <code>id</code>
+            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end?>
+            values of their corresponding inline elements enclosed within the sibling <olink
+              targetdoc="../elements/structural/source.xml" targetptr="source"
+              ><code>source</code></olink>
+            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+            if and only if those corresponding elements exist.</para></listitem>
+        <listitem><para>Except for the above exception, the value <glossterm>must</glossterm> be unique among all of
+            the above within the enclosing <olink targetdoc="../elements/structural/unit.xml"
+              targetptr="unit"><code>unit</code></olink>
+            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para></listitem>
       </itemizedlist>
     </listitem>
   </itemizedlist>
@@ -89,42 +133,38 @@
       reusing <firstterm>Core</firstterm> need to specify their own uniqueness scopes for the <link
         linkend="id">xlf:id</link>. In general, <firstterm>Modules</firstterm> and
         <firstterm>Extensions</firstterm> are advised to mimic the <firstterm>Core</firstterm>
-      uniqueness requirement within their specific wrapper elements enclosing the reused
-        <firstterm>Core</firstterm> elements or attributes, yet <firstterm>Module</firstterm> or
-        <firstterm>Extensions</firstterm> are free to set wider uniqueness scopes if it makes
-      business sense.</para></note>
+      uniqueness requirement within their specific wrapper
+      <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>elements<?oxy_custom_end?>
+      enclosing the reused <firstterm>Core</firstterm>
+      <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>elements<?oxy_custom_end?>
+      or
+      <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>attributes<?oxy_custom_end?>,
+      yet <firstterm>Module</firstterm> or <firstterm>Extensions</firstterm> are free to set wider
+      uniqueness scopes if it makes
+      <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>business<?oxy_custom_end?>
+      sense <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>for
+      processing<?oxy_custom_end?>.</para></note>
 
-  <para><emphasis>Default value:</emphasis> undefined</para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
 
-  <para><emphasis>Used in:</emphasis> <olink
-  targetdoc="../elements/structural/file.xml"
-  targetptr="file"><code>&lt;file&gt;</code></olink>,
-    <olink
-      targetdoc="../elements/structural/group.xml"
-      targetptr="group"><code>&lt;group&gt;</code></olink>,
-    <olink
-  targetdoc="../elements/structural/unit.xml"
-  targetptr="unit"><code>&lt;unit&gt;</code></olink>,
-    <olink
-      targetdoc="../elements/structural/note.xml"
-      targetptr="note"><code>&lt;note&gt;</code></olink>,
-    <olink
-  targetdoc="../elements/structural/segment.xml"
-  targetptr="segment"><code>&lt;segment&gt;</code></olink>, <olink
-  targetdoc="../elements/structural/ignorable.xml"
-  targetptr="ignorable"><code>&lt;ignorable&gt;</code></olink>, <olink
-  targetdoc="../elements/structural/data.xml"
-  targetptr="data"><code>&lt;data&gt;</code></olink>, <olink
-  targetdoc="../elements/inline/sc.xml"
-  targetptr="sc"><code>&lt;sc&gt;</code></olink>, <olink
-  targetdoc="../elements/inline/ec.xml"
-  targetptr="ec"><code>&lt;ec&gt;</code></olink>, <olink
-  targetdoc="../elements/inline/ph.xml"
-  targetptr="ph"><code>&lt;ph&gt;</code></olink>, <olink
-  targetdoc="../elements/inline/pc.xml"
-  targetptr="pc"><code>&lt;pc&gt;</code></olink>, <olink
-    targetdoc="../elements/inline/mrk.xml"
-    targetptr="mrk"><code>&lt;mrk&gt;</code></olink> and <olink
-      targetdoc="../elements/inline/sm.xml"
-      targetptr="sm"><code>&lt;sm&gt;</code></olink>.</para>
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../elements/structural/file.xml" targetptr="file"><code>file</code></olink>,
+      <olink targetdoc="../elements/structural/group.xml" targetptr="group"
+      ><code>group</code></olink>, <olink targetdoc="../elements/structural/unit.xml"
+      targetptr="unit"><code>unit</code></olink>, <olink targetdoc="../elements/structural/note.xml"
+      targetptr="note"><code>note</code></olink>, <olink
+      targetdoc="../elements/structural/segment.xml" targetptr="segment"
+      ><code>segment</code></olink>, <olink targetdoc="../elements/structural/ignorable.xml"
+      targetptr="ignorable"><code>ignorable</code></olink>,
+      <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
+      targetdoc="../elements/structural/data.xml" targetptr="data"
+    ><code>&lt;data&gt;</code></olink>, <?oxy_custom_end?><olink
+      targetdoc="../elements/inline/sc.xml" targetptr="sc"><code>sc</code></olink>, <olink
+      targetdoc="../elements/inline/ec.xml" targetptr="ec"><code>ec</code></olink>, <olink
+      targetdoc="../elements/inline/ph.xml" targetptr="ph"><code>ph</code></olink>,
+      <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
+      targetdoc="../elements/inline/pc.xml" targetptr="pc"><code>&lt;pc&gt;</code></olink>, <olink
+      targetdoc="../elements/inline/mrk.xml" targetptr="mrk"
+    ><code>&lt;mrk&gt;</code></olink><?oxy_custom_end?> and <olink
+      targetdoc="../elements/inline/sm.xml" targetptr="sm"><code>sm</code></olink>.</para>
 </section>

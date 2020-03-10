@@ -9,14 +9,17 @@
     <title>appliesTo</title>
 
     <para>Indicates the element to which the content of the metagroup applies.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+        string.<?oxy_custom_end?></para>
 
-    <para><emphasis>Value description:</emphasis> <code>source</code>, <code>target</code>, or <code>ignorable</code>.</para>
+    <para><emphasis>Value description:</emphasis>
+        <code>"source"</code>, <code>"target"</code>, or <code>"ignorable"</code>.</para>
 
     <para><emphasis>Default value:</emphasis> undefined.</para>
 
     <para><emphasis>Used in:</emphasis>
         <olink targetdoc="../elements/metadata/metagroup.xml" targetptr="metagroup"
-                ><code>&lt;metaGroup></code></olink>.</para>
+                ><code>metaGroup</code></olink>.</para>
 
 </section>
 

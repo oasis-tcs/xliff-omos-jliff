@@ -10,23 +10,22 @@
 
   <para>Display text - holds an alternative user-friendly display representation of the original
     data of the inline code.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    string.<?oxy_custom_end?></para>
 
-  <para><emphasis>Value description:</emphasis> Text.</para>
+  <para><emphasis>Value description:</emphasis> text.</para>
 
-  <para><emphasis>Default value:</emphasis> undefined</para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
 
-  <para><emphasis>Used in:</emphasis> <olink
-  targetdoc="../elements/inline/ph.xml"
-  targetptr="ph"><code>&lt;ph&gt;</code></olink>, <olink
-  targetdoc="../elements/inline/sc.xml"
-  targetptr="sc"><code>&lt;sc&gt;</code></olink>, <olink
-  targetdoc="../elements/inline/ec.xml"
-  targetptr="ec"><code>&lt;ec&gt;</code></olink>.</para>
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../elements/inline/ph.xml" targetptr="ph"><code>ph</code></olink>, <olink
+      targetdoc="../elements/inline/sc.xml" targetptr="sc"><code>sc</code></olink>, <olink
+      targetdoc="../elements/inline/ec.xml" targetptr="ec"><code>ec</code></olink>.</para>
 
   <para><emphasis>Example:</emphasis></para>
 
   <programlisting>
-&lt;unit id="1"&gt;
+<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>&lt;unit id="1"&gt;
   &lt;originalData&gt;
     &lt;data id="d1"&gt;{1}&lt;/data&gt;
   &lt;/originalData&gt;
@@ -34,12 +33,29 @@
     &lt;source&gt;Welcome back &lt;ph id="1" disp="[UserName]" dataRef="d1"/&gt;!
         &lt;/source&gt;
   &lt;/segment&gt;
-&lt;/unit&gt;
+&lt;/unit&gt;<?oxy_custom_end?>
+
+<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>"subfiles": [
+  {
+    "id": "1",
+    "originalData": { "d1": "{1}" },
+    "subunits": [
+      {
+        "kind": "segment",
+        "source": [
+          { "text": "Welcome back " },
+          { "id": "1", "kind": "ph", "disp": "[UserName]", "dataRef": "d1" },
+          { "text": "!<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>" }
+        ]
+      }
+    ]
+  }
+]<?oxy_custom_end?>
 </programlisting>
 
   <note>
-    <para>To provide a plain text equivalent of the code, use the <olink
-    targetdoc="equiv.xml" targetptr="equiv"><code>equiv</code></olink>
-    attribute.</para>
+    <para>To provide a plain text equivalent of the code, use the <olink targetdoc="equiv.xml"
+        targetptr="equiv"><code>equiv</code></olink>
+      <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>.</para>
   </note>
 </section>

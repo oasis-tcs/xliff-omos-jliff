@@ -11,21 +11,25 @@
   <para>Re-ordering editing hint - indicates whether or not the inline code can be re-ordered. See
       <olink targetdoc="../inline/inline.xml" targetptr="editinghints">Editing Hints section</olink>
     for more details.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    string.<?oxy_custom_end?></para>
 
   <para><emphasis>Value description:</emphasis>
-    <code>yes</code> in case the code can be re-ordered, <code>firstNo</code> when the code is the
-    first element of a sequence that cannot be re-ordered, <code>no</code> when it is another
-    element of such a sequence.</para>
+    <code>"yes"</code> in case the code can be re-ordered, <code>"firstNo"</code> when the code is
+    the first
+    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>element<?oxy_custom_end?>
+    of a
+    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>sequence<?oxy_custom_end?>
+    that cannot be re-ordered, <code>"no"</code> when it is another
+    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>element<?oxy_custom_end?>
+    of such a
+    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>sequence<?oxy_custom_end?>.</para>
 
-  <para><emphasis>Default value:</emphasis> <code>yes</code>.</para>
+  <para><emphasis>Default value:</emphasis>
+    <code>"yes"</code>.</para>
 
-  <para><emphasis>Used in:</emphasis> <olink
-  targetdoc="../elements/inline/pc.xml"
-  targetptr="pc"><code>&lt;pc&gt;</code></olink>, <olink
-  targetdoc="../elements/inline/sc.xml"
-  targetptr="sc"><code>&lt;sc&gt;</code></olink>, <olink
-  targetdoc="../elements/inline/ec.xml"
-  targetptr="ec"><code>&lt;ec&gt;</code></olink>, <olink
-  targetdoc="../elements/inline/ph.xml"
-  targetptr="ph"><code>&lt;ph&gt;</code></olink>.</para>
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../elements/inline/sc.xml" targetptr="sc"><code>sc</code></olink>, <olink
+      targetdoc="../elements/inline/ec.xml" targetptr="ec"><code>ec</code></olink>, <olink
+      targetdoc="../elements/inline/ph.xml" targetptr="ph"><code>ph</code></olink>.</para>
 </section>

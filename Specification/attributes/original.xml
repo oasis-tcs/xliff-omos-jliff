@@ -10,13 +10,17 @@
     
     <para>Original file - a pointer to the location of the original document from which the content
         of the enclosing <olink targetdoc="../elements/structural/file.xml" targetptr="file"
-                ><code>&lt;file></code></olink> element is extracted.</para>
+                ><code>file</code></olink> object is extracted.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+        string.<?oxy_custom_end?></para>
     
     <para><emphasis>Value description:</emphasis> IRI.</para>
         
     <para><emphasis>Default value:</emphasis> undefined</para>
     
-    <para><emphasis>Used in:</emphasis> <olink targetdoc="../elements/structural/file.xml" targetptr="file"><code>&lt;file></code></olink>.</para>
+    <para><emphasis>Used in:</emphasis>
+        <olink targetdoc="../elements/structural/file.xml" targetptr="file"
+            ><code>file</code></olink>.</para>
     
 </section>
 

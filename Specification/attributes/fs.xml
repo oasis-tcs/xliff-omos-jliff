@@ -5,314 +5,374 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="fs">
-<title>fs</title>
-<para>Format style attribute, fs - allows most structural and inline XLIFF core elements to convey
-basic formatting information using a predefined subset of HTML formatting elements (for example,
-HTML elements names like &lt;script&gt; are not included). It enables the generation of HTML pages
-or snippets for preview and review purposes. If additional style information is needed, the <glossterm>optional</glossterm>
-<olink targetdoc="subFs.xml" targetptr="subFs"><code>subFs</code></olink> attribute is
-provided.</para>
-<para><emphasis>Value description:</emphasis><table>
-<title>Values</title>
-<tgroup cols="2">
-<colspec colname="col1"/>
-<colspec colname="col2"/>
-<tbody>
-<row><entry colname="col1">a</entry><entry colname="col2">anchor</entry></row><row>
-<entry>	b	</entry>
-<entry>	bold text style	</entry>
-</row>
-
-<row>
-<entry>	bdo	</entry>
-<entry>	I18N BiDi over-ride	</entry>
-</row>
-<row>
-<entry>	big	</entry>
-<entry>	large text style	</entry>
-</row>
-<row>
-<entry>	blockquote	</entry>
-<entry>	long quotation	</entry>
-</row>
-<row>
-<entry>	body	</entry>
-<entry>	document body	</entry>
-</row>
-<row>
-<entry>	br	</entry>
-<entry>	forced line break	</entry>
-</row>
-<row>
-<entry>	button	</entry>
-<entry>	push button	</entry>
-</row>
-<row>
-<entry>	caption	</entry>
-<entry>	table caption	</entry>
-</row>
-<row>
-<entry>	center	</entry>
-<entry>	shorthand for DIV align=center	</entry>
-</row>
-<row>
-<entry>	cite	</entry>
-<entry>	citation	</entry>
-</row>
-<row>
-<entry>	code	</entry>
-<entry>	computer code fragment	</entry>
-</row>
-<row>
-<entry>	col	</entry>
-<entry>	table column	</entry>
-</row>
-<row>
-<entry>	colgroup	</entry>
-<entry>	table column group	</entry>
-</row>
-<row>
-<entry>	dd	</entry>
-<entry>	definition description	</entry>
-</row>
-<row>
-<entry>	del	</entry>
-<entry>	deleted text	</entry>
-</row>
-<row>
-<entry>	div	</entry>
-<entry>	generic language/style container	</entry>
-</row>
-<row>
-<entry>	dl	</entry>
-<entry>	definition list	</entry>
-</row>
-<row>
-<entry>	dt	</entry>
-<entry>	definition term	</entry>
-</row>
-<row>
-<entry>	em	</entry>
-<entry>	emphasis	</entry>
-</row>
-
-<row>
-<entry>	h1	</entry>
-<entry>	heading	</entry>
-</row>
-<row>
-<entry>	h2	</entry>
-<entry>	heading	</entry>
-</row>
-<row>
-<entry>	h3	</entry>
-<entry>	heading	</entry>
-</row>
-<row>
-<entry>	h4	</entry>
-<entry>	heading	</entry>
-</row>
-<row>
-<entry>	h5	</entry>
-<entry>	heading	</entry>
-</row>
-<row>
-<entry>	h6	</entry>
-<entry>	heading	</entry>
-</row>
-<row>
-<entry>	head	</entry>
-<entry>	document head	</entry>
-</row>
-<row>
-<entry>	hr	</entry>
-<entry>	horizontal rule	</entry>
-</row>
-<row>
-<entry>	html	</entry>
-<entry>	document root element	</entry>
-</row>
-<row>
-<entry>	i	</entry>
-<entry>	italic text style	</entry>
-</row>
-
-<row><entry>img</entry><entry>image</entry></row><row>
-<entry>	label	</entry>
-<entry>	form field label text	</entry>
-</row>
-<row>
-<entry>	legend	</entry>
-<entry>	fieldset legend	</entry>
-</row>
-<row>
-<entry>	li</entry>
-<entry>	list item	</entry>
-</row>
-<row>
-<entry>	ol	</entry>
-<entry>	ordered list	</entry>
-</row>
-<row>
-<entry>	p	</entry>
-<entry>	paragraph	</entry>
-</row>
-<row>
-<entry>	pre	</entry>
-<entry>	preformatted text	</entry>
-</row>
-<row>
-<entry>	q	</entry>
-<entry>	short inline quotation	</entry>
-</row>
-<row>
-<entry>	s	</entry>
-<entry>	strike-through text style	</entry>
-</row>
-<row>
-<entry>	samp	</entry>
-<entry>	sample program output, scripts, etc.	</entry>
-</row>
-<row>
-<entry>	select	</entry>
-<entry>	option selector	</entry>
-</row>
-<row>
-<entry>	small	</entry>
-<entry>	small text style	</entry>
-</row>
-<row>
-<entry>	span	</entry>
-<entry>	generic language/style container	</entry>
-</row>
-<row>
-<entry>	strike	</entry>
-<entry>	strike-through text	</entry>
-</row>
-<row>
-<entry>	strong	</entry>
-<entry>	strong emphasis	</entry>
-</row>
-
-<row>
-<entry>	sub	</entry>
-<entry>	subscript	</entry>
-</row>
-<row>
-<entry>	sup	</entry>
-<entry>	superscript	</entry>
-</row>
-<row>
-<entry>	table	</entry>
-<entry>		</entry>
-</row>
-<row>
-<entry>	tbody	</entry>
-<entry>	table body	</entry>
-</row>
-<row>
-<entry>	td	</entry>
-<entry>	table data cell	</entry>
-</row>
-
-<row>
-<entry>	tfoot	</entry>
-<entry>	table footer	</entry>
-</row>
-<row>
-<entry>	th	</entry>
-<entry>	table header cell	</entry>
-</row>
-<row>
-<entry>	thead	</entry>
-<entry>	table header	</entry>
-</row>
-<row>
-<entry>	title	</entry>
-<entry>	document title	</entry>
-</row>
-<row>
-<entry>	tr	</entry>
-<entry>	table row	</entry>
-</row>
-<row>
-<entry>	tt	</entry>
-<entry>	teletype or monospaced text style	</entry>
-</row>
-<row>
-<entry>	u	</entry>
-<entry>	underlined text style	</entry>
-</row>
-<row>
-<entry>	ul	</entry>
-<entry>	unordered list	</entry>
-</row>
-</tbody>
-</tgroup>
-</table>
- </para>
-<para><emphasis>Default value:</emphasis> undefined.</para>
-<para><emphasis>Used in:</emphasis>
-<olink targetdoc="../elements/structural/file.xml" targetptr="file"
-><code>&lt;file&gt;</code></olink>,
-<olink targetdoc="../elements/structural/unit.xml" targetptr="unit"
-><code>&lt;unit&gt;</code></olink>,
-
-
-<!-- modules not allowed in segment
+  <title>fs</title>
+  <para>Format style
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end?>,
+      <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>fs_fs</code><?oxy_custom_end?>
+    - allows most structural and inline
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>JLIFF<?oxy_custom_end?> core
+    elements to convey basic formatting information using a predefined subset of HTML formatting
+    elements (for example, HTML elements names like &lt;script&gt; are not included). It enables the
+    generation of HTML pages or snippets for preview and review purposes. If additional style
+    information is needed, the <glossterm>optional</glossterm>
+    <olink targetdoc="subFs.xml" targetptr="subFs"><code>fs_subFs</code></olink> string is
+    provided.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    string.<?oxy_custom_end?></para>
+  <para><emphasis>Value description:</emphasis><table>
+      <title>Values</title>
+      <tgroup cols="2">
+        <colspec colname="col1"/>
+        <colspec colname="col2"/>
+        <tbody>
+          <row>
+            <entry colname="col1"
+                ><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?><code>"a"</code><?oxy_custom_end?></entry>
+            <entry colname="col2">anchor</entry>
+          </row>
+          <row>
+            <entry><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?><code>"b"</code><?oxy_custom_end?>
+            </entry>
+            <entry> bold text style </entry>
+          </row>
+          <row>
+            <entry><code>"bdo"</code>
+            </entry>
+            <entry> I18N BiDi over-ride </entry>
+          </row>
+          <row>
+            <entry><code>"big"</code>
+            </entry>
+            <entry> large text style </entry>
+          </row>
+          <row>
+            <entry><code>"blockquote"</code>
+            </entry>
+            <entry> long quotation </entry>
+          </row>
+          <row>
+            <entry><code>"body"</code>
+            </entry>
+            <entry> document body </entry>
+          </row>
+          <row>
+            <entry><code>"br"</code>
+            </entry>
+            <entry> forced line break </entry>
+          </row>
+          <row>
+            <entry><code>"button"</code>
+            </entry>
+            <entry> push button </entry>
+          </row>
+          <row>
+            <entry><code>"caption"</code>
+            </entry>
+            <entry> table caption </entry>
+          </row>
+          <row>
+            <entry><code>"center"</code>
+            </entry>
+            <entry> shorthand for DIV align=center </entry>
+          </row>
+          <row>
+            <entry><code>"cite"</code>
+            </entry>
+            <entry> citation </entry>
+          </row>
+          <row>
+            <entry><code>"code"</code>
+            </entry>
+            <entry> computer code fragment </entry>
+          </row>
+          <row>
+            <entry><code>"col"</code>
+            </entry>
+            <entry> table column </entry>
+          </row>
+          <row>
+            <entry><code>"colgroup"</code>
+            </entry>
+            <entry> table column group </entry>
+          </row>
+          <row>
+            <entry><code>"dd"</code>
+            </entry>
+            <entry> definition description </entry>
+          </row>
+          <row>
+            <entry><code>"del"</code>
+            </entry>
+            <entry> deleted text </entry>
+          </row>
+          <row>
+            <entry><code>"div"</code>
+            </entry>
+            <entry> generic language/style container </entry>
+          </row>
+          <row>
+            <entry><code>"dl"</code>
+            </entry>
+            <entry> definition list </entry>
+          </row>
+          <row>
+            <entry><code>"dt"</code>
+            </entry>
+            <entry> definition term </entry>
+          </row>
+          <row>
+            <entry><code>"em"</code>
+            </entry>
+            <entry> emphasis </entry>
+          </row>
+          <row>
+            <entry><code>"h1"</code>
+            </entry>
+            <entry> heading </entry>
+          </row>
+          <row>
+            <entry><code>"h2"</code>
+            </entry>
+            <entry> heading </entry>
+          </row>
+          <row>
+            <entry><code>"h3"</code>
+            </entry>
+            <entry> heading </entry>
+          </row>
+          <row>
+            <entry><code>"h4"</code>
+            </entry>
+            <entry> heading </entry>
+          </row>
+          <row>
+            <entry><code>"h5"</code>
+            </entry>
+            <entry> heading </entry>
+          </row>
+          <row>
+            <entry><code>"h6"</code>
+            </entry>
+            <entry> heading </entry>
+          </row>
+          <row>
+            <entry><code>"head"</code>
+            </entry>
+            <entry> document head </entry>
+          </row>
+          <row>
+            <entry><code>"hr"</code>
+            </entry>
+            <entry> horizontal rule </entry>
+          </row>
+          <row>
+            <entry><code>"html"</code>
+            </entry>
+            <entry> document root element </entry>
+          </row>
+          <row>
+            <entry><code>"I"</code>
+            </entry>
+            <entry> italic text style </entry>
+          </row>
+          <row>
+            <entry><code>"img"</code></entry>
+            <entry>image</entry>
+          </row>
+          <row>
+            <entry><code>"label"</code>
+            </entry>
+            <entry> form field label text </entry>
+          </row>
+          <row>
+            <entry><code>"legend"</code>
+            </entry>
+            <entry> fieldset legend </entry>
+          </row>
+          <row>
+            <entry><code>"li"</code></entry>
+            <entry> list item </entry>
+          </row>
+          <row>
+            <entry><code>"ol"</code>
+            </entry>
+            <entry> ordered list </entry>
+          </row>
+          <row>
+            <entry><code>"p"</code>
+            </entry>
+            <entry> paragraph </entry>
+          </row>
+          <row>
+            <entry><code>"pre"</code>
+            </entry>
+            <entry> preformatted text </entry>
+          </row>
+          <row>
+            <entry><code>"q"</code>
+            </entry>
+            <entry> short inline quotation </entry>
+          </row>
+          <row>
+            <entry><code>"s"</code>
+            </entry>
+            <entry> strike-through text style </entry>
+          </row>
+          <row>
+            <entry><code>"samp"</code>
+            </entry>
+            <entry> sample program output, scripts, etc. </entry>
+          </row>
+          <row>
+            <entry><code>"select"</code>
+            </entry>
+            <entry> option selector </entry>
+          </row>
+          <row>
+            <entry><code>"small"</code>
+            </entry>
+            <entry> small text style </entry>
+          </row>
+          <row>
+            <entry><code>"span"</code>
+            </entry>
+            <entry> generic language/style container </entry>
+          </row>
+          <row>
+            <entry><code>"strike"</code>
+            </entry>
+            <entry> strike-through text </entry>
+          </row>
+          <row>
+            <entry><code>"strong"</code>
+            </entry>
+            <entry> strong emphasis </entry>
+          </row>
+          <row>
+            <entry><code>"sub"</code>
+            </entry>
+            <entry> subscript </entry>
+          </row>
+          <row>
+            <entry><code>"sup"</code>
+            </entry>
+            <entry> superscript </entry>
+          </row>
+          <row>
+            <entry><code>"table"</code>
+            </entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><code>"tbody"</code>
+            </entry>
+            <entry> table body </entry>
+          </row>
+          <row>
+            <entry><code>"td"</code>
+            </entry>
+            <entry> table data cell </entry>
+          </row>
+          <row>
+            <entry><code>"tfoot"</code>
+            </entry>
+            <entry> table footer </entry>
+          </row>
+          <row>
+            <entry><code>"th"</code>
+            </entry>
+            <entry> table header cell </entry>
+          </row>
+          <row>
+            <entry><code>"thead"</code>
+            </entry>
+            <entry> table header </entry>
+          </row>
+          <row>
+            <entry><code>"title"</code>
+            </entry>
+            <entry> document title </entry>
+          </row>
+          <row>
+            <entry><code>"tr"</code>
+            </entry>
+            <entry> table row </entry>
+          </row>
+          <row>
+            <entry><code>"tt"</code>
+            </entry>
+            <entry> teletype or monospaced text style </entry>
+          </row>
+          <row>
+            <entry><code>"u"</code>
+            </entry>
+            <entry> underlined text style </entry>
+          </row>
+          <row>
+            <entry><code>"ul"</code>
+            </entry>
+            <entry> unordered list </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table></para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../elements/structural/file.xml" targetptr="file"><code>file</code></olink>,
+      <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>unit</code></olink>, <!-- modules not allowed in segment
 
 <olink targetdoc="../elements/structural/segment.xml"
 targetptr="segment"><code>&lt;segment&gt;</code></olink>,
 -->
-
-
- <olink
-targetdoc="../elements/structural/note.xml" targetptr="note"><code>&lt;note&gt;</code></olink>,
-
-
-
-<!-- modules not allowed in segment
+    <olink targetdoc="../elements/structural/note.xml" targetptr="note"><code>note</code></olink>, <!-- modules not allowed in segment
 <olink
 targetdoc="../elements/structural/source.xml" targetptr="source"
 ><code>&lt;source&gt;</code></olink>, <olink targetdoc="../elements/structural/target.xml"
 targetptr="target"><code>&lt;target&gt;</code></olink>,
 
 -->
-
-<olink targetdoc="../elements/inline/sc.xml"
-targetptr="sc"><code>&lt;sc&gt;</code></olink>, <olink targetdoc="../elements/inline/ec.xml"
-targetptr="ec"><code>&lt;ec&gt;</code></olink>, <olink targetdoc="../elements/inline/ph.xml"
-targetptr="ph"><code>&lt;ph&gt;</code></olink>, <olink targetdoc="../elements/inline/pc.xml"
-targetptr="pc"><code>&lt;pc&gt;</code></olink>, <olink targetdoc="../elements/inline/mrk.xml"
-targetptr="mrk"><code>&lt;mrk&gt;</code></olink>, and  <olink targetdoc="../elements/inline/sm.xml"
-targetptr="sm"><code>&lt;sm&gt;</code></olink>. </para>
-
-<warning><para>The <link linkend="fs"><code>fs</code></link> attribute is not intended to facilitate <firstterm>Merging</firstterm> back into the original format. </para></warning>
-
-<itemizedlist>
-<title>Constraints</title>
-<listitem><para>The <link linkend="fs"><code>fs</code></link> <glossterm>must</glossterm> only be used with <olink targetdoc="../elements/inline/ec.xml"
-targetptr="ec"><code>&lt;ec&gt;</code></olink> in cases where the <code>isolated</code> attribute is set to 'yes'.</para>
-</listitem>
-
-</itemizedlist>
-
-
-<itemizedlist>
-<title>Processing Requirements</title>
-<listitem>
-<para><firstterm>Writers</firstterm> updating the attribute <link
- linkend="fs"><code>fs</code></link> <glossterm>must</glossterm> also update or delete <olink targetdoc="subFs.xml" targetptr="subFs"><code>subFs</code></olink>.</para>
-</listitem>
-</itemizedlist>
-
-<para><emphasis>Example: </emphasis>To facilitate HTML preview, <link linkend="fs">fs</link> can be applied to XLIFF like this like:</para>
-<!-- seems like a stray
+    <olink targetdoc="../elements/inline/sc.xml" targetptr="sc"><code>sc</code></olink>, <olink
+      targetdoc="../elements/inline/ec.xml" targetptr="ec"><code>ec</code></olink>, <olink
+      targetdoc="../elements/inline/ph.xml" targetptr="ph"><code>ph</code></olink>,
+      <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
+      targetdoc="../elements/inline/pc.xml" targetptr="pc"><code>&lt;pc&gt;</code></olink>, <olink
+      targetdoc="../elements/inline/mrk.xml" targetptr="mrk"
+    ><code>&lt;mrk&gt;</code></olink><?oxy_custom_end?>, and <olink
+      targetdoc="../elements/inline/sm.xml" targetptr="sm"><code>sm</code></olink>. </para>
+  <warning>
+    <para>The <link linkend="fs"><code>fs_fs</code></link>
+      <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end?> is
+      not intended to facilitate <firstterm>Merging</firstterm> back into the original format.
+    </para>
+  </warning>
+  <itemizedlist>
+    <title>Constraints</title>
+    <listitem>
+      <para>The <link linkend="fs"><code>fs_fs</code></link>
+        <glossterm>must</glossterm> only be used with <olink targetdoc="../elements/inline/ec.xml"
+          targetptr="ec"><code>ec</code></olink> in cases where the <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>property<?oxy_custom_end?>
+        <code>"isolated"</code>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end?>
+        is set to 'yes'.</para>
+    </listitem>
+  </itemizedlist>
+  <itemizedlist>
+    <title>Processing Requirements</title>
+    <listitem>
+      <para><firstterm>Writers</firstterm> updating the <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end?>
+        <link linkend="fs"><code>fs_fs</code></link>
+        <glossterm>must</glossterm> also update or delete the <olink targetdoc="subFs.xml"
+          targetptr="subFs"><code>fs_subFs</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>string<?oxy_custom_end?>.</para>
+    </listitem>
+  </itemizedlist>
+  <para><emphasis>Example: </emphasis>To facilitate HTML preview, <link linkend="fs"
+        ><code>fs_fs</code></link> can be applied to JLIFF like this like:</para>
+  <!-- seems like a stray
 <programlisting>&lt;ph id="ph1" fs:fs="img" fs:subFs="src,smileface.png" /></programlisting>
 -->
-
-<programlisting>
-&lt;xliff xmlns:fs="urn:oasis:names:tc:xliff:fs:2.0"&gt;
+  <programlisting>
+<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>&lt;xliff xmlns:fs="urn:oasis:names:tc:xliff:fs:2.0"&gt;
   &lt;file fs:fs="html"&gt;
     &lt;unit id="1" fs:fs="p"&gt;
       &lt;segment&gt;
@@ -324,13 +384,43 @@ targetptr="ec"><code>&lt;ec&gt;</code></olink> in cases where the <code>isolated
       &lt;/segment&gt;
     &lt;/unit&gt;
   &lt;/file&gt;
-&lt;/xliff&gt;
+&lt;/xliff&gt;<?oxy_custom_end?>
+
+<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>{
+  "jliff": "2.0",
+  "files": [
+    {
+      "subfiles": [
+        {
+          "id": "1",
+          "fs_fs": "p",
+          "subunits": [
+            {
+              "kind": "segment",
+              "source": [
+                { "text": "Mick Jones renewed his interest in the Vintage " },
+                { "id: "1", "kind": "sc", "fs_fs": "strong" },
+                { "text": "'72 Telecaster Thinline " },
+                { "id": "2", "kind": "ec", "startRef": "1" },
+                { "text": "guitar.<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>" },
+                { "id": "ph2", "kind": "ph", "fs_fs": "br" },
+                { "text": "He says " },
+                { "id": "3", "kind": "sc", "fs_fs": "q" },
+                { "text": "I love 'em" },
+                { "id": "4", "kind": "ec", "startRef": "3" },
+                { "id": "ph1", "kind": "ph", "fs_fs": "img", "fs_subFs": "src,smileFace.png" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}<?oxy_custom_end?>
 </programlisting>
-
-
-<para>With an XSL stylesheet like this: </para>
-
-<programlisting>
+  <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
+  <para>With an XSL stylesheet like this: </para>
+  <programlisting>
 &lt;xsl:template match="*" priority="2"
     xmlns:fs="urn:oasis:names:tc:xliff:fs:2.0">
   &lt;xsl:choose>
@@ -352,20 +442,17 @@ targetptr="ec"><code>&lt;ec&gt;</code></olink> in cases where the <code>isolated
       &lt;xsl:apply-templates />
     &lt;/xsl:otherwise>
   &lt;/xsl:choose>
-&lt;/xsl:template>
+&lt;/xsl:template><?oxy_custom_end?>
 </programlisting>
-
-<para>You can generate a an HTML page like this: </para>
-
-<programlisting>
+  <para>You can generate a an HTML page like this: </para>
+  <programlisting>
 &lt;html>
-  &lt;p>Mick Jones renewed his interest in the Vintage &lt;strong>'72
-      Telecaster Thinline &lt;/strong> guitar. &lt;br/>He says &lt;q>I love 'em
-      &lt;/q>&lt;img src="smileface.png"/>&lt;/p>
+  &lt;p>Mick Jones renewed his interest in the Vintage <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>&lt;strong><?oxy_custom_end?>'72
+      Telecaster Thinline <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>&lt;/strong><?oxy_custom_end?> guitar. &lt;br/>He says <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>&lt;q><?oxy_custom_end?>I love 'em
+      <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>&lt;/q><?oxy_custom_end?>&lt;img src="smileface.png"/>&lt;/p>
 &lt;/html>
 </programlisting>
-
-<!-- move to subFS
+  <!-- move to subFS
 <para>For complex HTML previews that require more than one attribute on an HTML preview element, attribute pairs are separated by backslashes (\). Any literal comma or backslash in an attribute value <glossterm>must</glossterm> be escaped with a backslash.</para>
 
 <para>For example, we would use this convention:</para>

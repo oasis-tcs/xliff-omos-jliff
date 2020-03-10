@@ -8,14 +8,17 @@
 <section id="meta_type">
   <title>type</title>
 
-  <para>type - indicates the type of metadata contained by the enclosing element.</para>
+  <para>type - indicates the type of metadata contained by the enclosing
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    string.<?oxy_custom_end?></para>
 
-  <para><emphasis>Value description:</emphasis> Text.</para>
+  <para><emphasis>Value description:</emphasis> text.</para>
 
   <para><emphasis>Default value:</emphasis> undefined.</para>
 
 
-  <para><emphasis>Used in:</emphasis> <olink
-    targetdoc="../elements/metadata/meta.xml"
-    targetptr="meta"><code>&lt;meta&gt;</code></olink>.</para>
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../elements/metadata/meta.xml" targetptr="meta"
+    ><code>meta</code></olink>.</para>
 </section>

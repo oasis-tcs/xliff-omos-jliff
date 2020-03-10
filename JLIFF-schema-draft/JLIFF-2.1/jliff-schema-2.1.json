@@ -68,6 +68,7 @@
         "original": { "type": "string" },
         "skeleton": { "$ref": "#/definitions/skeleton" },
         "subfiles": { "$ref": "#/definitions/subitems" },
+        "canResegment": { "type": "string", "enum": [ "yes", "no" ] },
         "translate": { "type": "string", "enum": [ "yes", "no" ] },
         "srcDir": { "$ref": "#/definitions/dir" },
         "trgDir": { "$ref": "#/definitions/dir" },
@@ -102,7 +103,7 @@
         "its_revToolRef": { "$ref": "#/definitions/IRI" },
         "its_tool": { "type": "string" },
         "its_toolRef": { "$ref": "#/definitions/IRI" },
-        "its_provenanceRecords": {  "$ref": "#/definitions/its_provenanceRecords" },
+        "its_provenanceRecords": {  "$ref": "#/definitions/its_provenanceRecordsArray" },
         "its_taClassRef": { "$ref": "#/definitions/IRI" },
         "its_taConfidence": { "type": "number", "minimum": 0, "maximum": 1 },
         "its_taSource": { "type": "string" },
@@ -118,7 +119,7 @@
     "skeleton": {
       "type": "object",
       "properties": {
-        "ref": { "type": "string" }
+        "ref": { "$ref": "#/definitions/IRI" }
       },
       "additionalProperties": false,
       "required": [ "ref" ]
@@ -150,6 +151,8 @@
             "originalData": { "$ref": "#/definitions/originalData" },
             "mtc_matches": { "$ref": "#/definitions/mtc_translationCandidates" },
             "gls_glossary": { "$ref": "#/definitions/gls_glossary" },
+            "fs_fs": { "$ref": "#/definitions/fs_formatStyle" },
+            "fs_subFs": { "$ref": "#/definitions/fs_subFormatStyle" },
             "mda_metadata": { "$ref": "#/definitions/mda_metadata" },
             "res_resourceData": { "$ref": "#/definitions/res_resourceData" },
             "ctr_changeTrack": { "$ref": "#/definitions/ctr_changeTrack" },
@@ -165,7 +168,7 @@
             "its_locQualityRatingScoreThreshold": { "type": "number", "minimum": 0, "maximum": 100 },
             "its_locQualityRatingVote": { "type": "integer" },
             "its_locQualityRatingVoteThreshold": { "type": "integer" },
-            "its_locQualityIssues": { "$ref": "#/definitions/its_locQualityIssues" },
+            "its_locQualityIssues": { "$ref": "#/definitions/its_locQualityIssuesArray" },
             "its_annotatorsRef": { "$ref": "#/definitions/its_annotatorsRef" },
             "its_org": { "type": "string" },
             "its_orgRef": { "$ref": "#/definitions/IRI" },
@@ -180,7 +183,7 @@
             "its_revToolRef": { "$ref": "#/definitions/IRI" },
             "its_tool": { "type": "string" },
             "its_toolRef": { "$ref": "#/definitions/IRI" },
-            "its_provenanceRecords": {  "$ref": "#/definitions/its_provenanceRecords" },
+            "its_provenanceRecords": {  "$ref": "#/definitions/its_provenanceRecordsArray" },
             "its_taClassRef": { "$ref": "#/definitions/IRI" },
             "its_taConfidence": { "type": "number", "minimum": 0, "maximum": 1 },
             "its_taSource": { "type": "string" },
@@ -232,7 +235,7 @@
             "its_revToolRef": { "$ref": "#/definitions/IRI" },
             "its_tool": { "type": "string" },
             "its_toolRef": { "$ref": "#/definitions/IRI" },
-            "its_provenanceRecords": {  "$ref": "#/definitions/its_provenanceRecords" },
+            "its_provenanceRecords": {  "$ref": "#/definitions/its_provenanceRecordsArray" },
             "its_taClassRef": { "$ref": "#/definitions/IRI" },
             "its_taConfidence": { "type": "number", "minimum": 0, "maximum": 1 },
             "its_taSource": { "type": "string" },
@@ -245,137 +248,6 @@
           "required": [ "id", "kind" ]
         }
       ]
-    },
-
-    "groups": {
-      "description": "An array of groups",
-      "type": "array",
-      "items": { "$ref": "#/definitions/group" },
-      "minItems": 1
-    },
-
-    "group": {
-      "description": "A group with optional subgroups (an array of units and groups)",
-      "type": "object",
-      "properties": {
-        "id": { "$ref": "#/definitions/NMTOKEN" },
-        "kind": { "type": "string", "enum": [ "group" ] },
-        "name": { "type": "string" },
-        "canResegment": { "type": "string", "enum": [ "yes", "no" ], "default": "yes" },
-        "translate": { "type": "string", "enum": [ "yes", "no" ] },
-        "srcDir": { "$ref": "#/definitions/dir" },
-        "trgDir": { "$ref": "#/definitions/dir" },
-        "type": { "$ref": "#/definitions/type" },
-        "subgroups": { "$ref": "#/definitions/subitems" },
-        "mda_metadata": { "$ref": "#/definitions/mda_metadata" },
-        "res_resourceData": { "$ref": "#/definitions/res_resourceData" },
-        "ctr_changeTrack": { "$ref": "#/definitions/ctr_changeTrack" },
-        "slr_profiles": { "$ref": "#/definitions/slr_profiles" },
-        "slr_data": { "$ref": "#/definitions/slr_data" },
-        "slr_storageRestriction": { "$ref": "#/definitions/slr_storageRestriction" },
-        "slr_sizeRestriction": { "$ref": "#/definitions/slr_sizeRestriction" },
-        "slr_sizeInfo": { "$ref": "#/definitions/slr_sizeInfo" },
-        "slr_sizeInfoRef": { "$ref": "#/definitions/slr_sizeInfoRef" },
-        "val_validation": { "$ref": "#/definitions/val_validation" },
-        "its_locQualityRatingProfileRef": { "$ref": "#/definitions/IRI" },
-        "its_locQualityRatingScore": { "type": "number", "minimum": 0, "maximum": 100 },
-        "its_locQualityRatingScoreThreshold": { "type": "number", "minimum": 0, "maximum": 100 },
-        "its_locQualityRatingVote": { "type": "integer" },
-        "its_locQualityRatingVoteThreshold": { "type": "integer" },
-        "its_annotatorsRef": { "$ref": "#/definitions/its_annotatorsRef" },
-        "its_org": { "type": "string" },
-        "its_orgRef": { "$ref": "#/definitions/IRI" },
-        "its_person": { "type": "string" },
-        "its_personRef": { "$ref": "#/definitions/IRI" },
-        "its_provenanceRecordsRef": { "$ref": "#/definitions/IRI" },
-        "its_revOrg": { "type": "string" },
-        "its_revOrgRef": { "$ref": "#/definitions/IRI" },
-        "its_revPerson": { "type": "string" },
-        "its_revPersonRef": { "$ref": "#/definitions/IRI" },
-        "its_revTool": { "type": "string" },
-        "its_revToolRef": { "$ref": "#/definitions/IRI" },
-        "its_tool": { "type": "string" },
-        "its_toolRef": { "$ref": "#/definitions/IRI" },
-        "its_provenanceRecords": {  "$ref": "#/definitions/its_provenanceRecords" },
-        "its_taClassRef": { "$ref": "#/definitions/IRI" },
-        "its_taConfidence": { "type": "number", "minimum": 0, "maximum": 1 },
-        "its_taSource": { "type": "string" },
-        "its_taIdent": { "type": "string" },
-        "its_taIdentRef": { "$ref": "#/definitions/IRI" },
-        "its_domains": { "$ref": "#/definitions/its_domains" },
-        "userdata": { "$ref": "#/definitions/extensionsData" }
-      },
-      "additionalProperties": false,
-      "required": [ "id" ]
-    },
-
-    "units": {
-      "description": "An array of units",
-      "type": "array",
-      "items": { "$ref": "#/definitions/unit" },
-      "minItems": 1
-    },
-
-    "unit": {
-      "description": "A unit with optional subunits (an array of segment and ignorable)",
-      "type": "object",
-      "properties": {
-        "id": { "$ref": "#/definitions/NMTOKEN" },
-        "kind": { "type": "string", "enum": [ "unit" ] },
-        "name": { "type": "string" },
-        "canResegment": { "type": "string", "enum": [ "yes", "no" ], "default": "yes" },
-        "translate": { "type": "string", "enum": [ "yes", "no" ] },
-        "srcDir": { "$ref": "#/definitions/dir" },
-        "trgDir": { "$ref": "#/definitions/dir" },
-        "type": { "$ref": "#/definitions/type" },
-        "notes": { "$ref": "#/definitions/notes" },
-        "subunits": { "$ref": "#/definitions/subunits" },
-        "originalData": { "$ref": "#/definitions/originalData" },
-        "fs_fs": { "$ref": "#/definitions/fs_formatStyle" },
-        "fs_subFs": { "$ref": "#/definitions/fs_subFormatStyle" },
-        "mtc_matches": { "$ref": "#/definitions/mtc_translationCandidates" },
-        "gls_glossary": { "$ref": "#/definitions/gls_glossary" },
-        "mda_metadata": { "$ref": "#/definitions/mda_metadata" },
-        "res_resourceData": { "$ref": "#/definitions/res_resourceData" },
-        "ctr_changeTrack": { "$ref": "#/definitions/ctr_changeTrack" },
-        "slr_profiles": { "$ref": "#/definitions/slr_profiles" },
-        "slr_data": { "$ref": "#/definitions/slr_data" },
-        "slr_storageRestriction": { "$ref": "#/definitions/slr_storageRestriction" },
-        "slr_sizeRestriction": { "$ref": "#/definitions/slr_sizeRestriction" },
-        "slr_sizeInfo": { "$ref": "#/definitions/slr_sizeInfo" },
-        "slr_sizeInfoRef": { "$ref": "#/definitions/slr_sizeInfoRef" },
-        "val_validation": { "$ref": "#/definitions/val_validation" },
-        "its_locQualityRatingProfileRef": { "$ref": "#/definitions/IRI" },
-        "its_locQualityRatingScore": { "type": "number", "minimum": 0, "maximum": 100 },
-        "its_locQualityRatingScoreThreshold": { "type": "number", "minimum": 0, "maximum": 100 },
-        "its_locQualityRatingVote": { "type": "integer" },
-        "its_locQualityRatingVoteThreshold": { "type": "integer" },
-        "its_locQualityIssues": { "$ref": "#/definitions/its_locQualityIssues" },
-        "its_annotatorsRef": { "$ref": "#/definitions/its_annotatorsRef" },
-        "its_org": { "type": "string" },
-        "its_orgRef": { "$ref": "#/definitions/IRI" },
-        "its_person": { "type": "string" },
-        "its_personRef": { "$ref": "#/definitions/IRI" },
-        "its_provenanceRecordsRef": { "$ref": "#/definitions/IRI" },
-        "its_revOrg": { "type": "string" },
-        "its_revOrgRef": { "$ref": "#/definitions/IRI" },
-        "its_revPerson": { "type": "string" },
-        "its_revPersonRef": { "$ref": "#/definitions/IRI" },
-        "its_revTool": { "type": "string" },
-        "its_revToolRef": { "$ref": "#/definitions/IRI" },
-        "its_tool": { "type": "string" },
-        "its_toolRef": { "$ref": "#/definitions/IRI" },
-        "its_provenanceRecords": {  "$ref": "#/definitions/its_provenanceRecords" },
-        "its_taClassRef": { "$ref": "#/definitions/IRI" },
-        "its_taConfidence": { "type": "number", "minimum": 0, "maximum": 1 },
-        "its_taSource": { "type": "string" },
-        "its_taIdent": { "type": "string" },
-        "its_taIdentRef": { "$ref": "#/definitions/IRI" },
-        "its_domains": { "$ref": "#/definitions/its_domains" },
-        "userdata": { "$ref": "#/definitions/extensionsData" }
-      },
-      "additionalProperties": false,
-      "required": [ "id" ]
     },
 
     "subunits": {
@@ -392,7 +264,7 @@
         {
           "properties": {
             "id": { "$ref": "#/definitions/NMTOKEN" },
-            "kind": { "type": "string", "default": "segment", "enum": [ "segment" ] },
+            "kind": { "type": "string", "enum": [ "segment" ] },
             "canResegment": { "type": "string", "enum": [ "yes", "no" ] },
             "state": { "type": "string", "enum": [ "initial", "translated", "reviewed", "final" ], "default": "initial" },
             "subState": { "type": "string", "pattern": "^.*:.*$" },
@@ -400,7 +272,7 @@
             "target": { "$ref": "#/definitions/elements" }
           },
           "additionalProperties": false,
-          "required": [ "source" ]
+          "required": [ "kind", "source" ]
         },
         {
           "properties": {
@@ -435,8 +307,7 @@
           "minItems": 1
         }
       },
-      "additionalProperties": false,
-      "required": [ "id", "type" ]
+      "additionalProperties": false
     },
 
     "mtc_translationCandidatesMatch": {
@@ -786,8 +657,15 @@
       "additionalProperties": true
     },
 
+    "its_provenanceRecordsArray": {
+      "description": "An array of standoff wrappers",
+      "type": "array",
+      "items": { "$ref": "#/definitions/its_provenanceRecords" },
+      "minItems": 1
+    },
+
     "its_provenanceRecords": {
-      "description": "A standoff wrapper element to group any number of single Provenance Record elements related to the same span of source or target content",
+      "description": "A standoff wrapper array to group any number of single Provenance Record elements related to the same span of source or target content",
       "type": "array",
       "items": { "$ref": "#/definitions/its_provenanceRecord" },
       "minItems": 1
@@ -813,8 +691,15 @@
       "additionalProperties": false
     },
 
+    "its_locQualityIssuesArray": {
+      "description": "An array of standoff wrappers",
+      "type": "array",
+      "items": { "$ref": "#/definitions/its_locQualityIssues" },
+      "minItems": 1
+    },
+
     "its_locQualityIssues": {
-      "description": "A standoff wrapper element to group any number of single issue elements related to the same span of source or target content",
+      "description": "A standoff wrapper array to group any number of single issue elements related to the same span of source or target content",
       "type": "object",
       "properties": {
         "id": { "$ref": "#/definitions/NCName" },

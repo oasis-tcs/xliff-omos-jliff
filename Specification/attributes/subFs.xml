@@ -7,14 +7,20 @@
 <section id="subFs">
 <title>subFs</title>
 <para>Sub-format style, subFs - allows extra metadata, like URL for example, to be added in concert
-with the <olink targetdoc="../attributes/fs.xml" targetptr="fs"><code>fs</code></olink> attribute. </para>
+        with the <olink targetdoc="../attributes/fs.xml" targetptr="fs"><code>fs_fs</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end?>. </para>
 
-<para><emphasis>Value description:</emphasis> The subFs attribute is used to specify the HTML
-        attributes to use along with the HTML element declared in the <olink
-            targetdoc="../attributes/fs.xml" targetptr="fs"><code>fs</code></olink> attribute. It is
-        a list of name/value pairs. Each pair is separated from the next with a backslash (\). The
-        name and the value of a pair are separated with a comma (,). Both literal backslash and
-        comma characters are escaped with a backslash prefix.
+<para><emphasis>Value description:</emphasis> The subFs
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end?>
+        is used to specify the HTML attributes to use along with the HTML element declared in the
+            <olink targetdoc="../attributes/fs.xml" targetptr="fs"><code>fs_fs</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end?>.
+        It is a list of name/value pairs. Each pair is separated from the next with a backslash
+            (<?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?><code>\\</code> in
+        JSON<?oxy_custom_end?>). The name and the value of a pair are separated with a comma
+            (<code>,</code>). Both literal backslash and comma characters are escaped with a
+        backslash prefix<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>, i.e.
+            <code>\\\\</code> and <code>\,</code> in JSON, respectively<?oxy_custom_end?>.
         <!-- was
  The subFs <glossterm>must</glossterm> only be used to carry attribute name/value
 comma-delimited pairs for attributes that are valid for the HTML element identified by the
@@ -25,63 +31,51 @@ accompanied <olink targetdoc="../attributes/fs.xml" targetptr="fs"><code>fs</cod
 <para>Example:<code> fs:fs="img" fs:subFs="src,smileface.png"</code>. </para>-->
 <para><emphasis>Default value:</emphasis> undefined.</para>
 <para><emphasis>Used in:</emphasis>
-<olink targetdoc="../elements/structural/file.xml" targetptr="file"
-><code>&lt;file&gt;</code></olink>, <!--<olink targetdoc="../elements/structural/skeleton.xml"
+        <olink targetdoc="../elements/structural/file.xml" targetptr="file"
+            ><code>file</code></olink>, <!--<olink targetdoc="../elements/structural/skeleton.xml"
 targetptr="skeleton"><code>&lt;skeleton&gt;</code></olink>, [does not make sense for skeleton IMHO]-->
-<olink targetdoc="../elements/structural/unit.xml" targetptr="unit"
-><code>&lt;unit&gt;</code></olink>,
-
-
-
-
-
- <olink
-targetdoc="../elements/structural/note.xml" targetptr="note"><code>&lt;note&gt;</code></olink>, <!---
+        <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"
+            ><code>unit</code></olink>, <olink targetdoc="../elements/structural/note.xml"
+            targetptr="note"><code>note</code></olink>, <!---
 <olink targetdoc="../elements/candidates/match.xml"
 targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on this module as well]-->
-
-
-
-
-
-<olink
-targetdoc="../elements/structural/source.xml" targetptr="source"
-><code>&lt;source&gt;</code></olink>, <olink targetdoc="../elements/structural/target.xml"
-targetptr="target"><code>&lt;target&gt;</code></olink>,
-
-
-
-
-
-
-<olink targetdoc="../elements/inline/sc.xml"
-targetptr="sc"><code>&lt;sc&gt;</code></olink>, <olink targetdoc="../elements/inline/ec.xml"
-targetptr="ec"><code>&lt;ec&gt;</code></olink>, <olink targetdoc="../elements/inline/ph.xml"
-targetptr="ph"><code>&lt;ph&gt;</code></olink>, <olink targetdoc="../elements/inline/pc.xml"
-targetptr="pc"><code>&lt;pc&gt;</code></olink>, <olink targetdoc="../elements/inline/mrk.xml"
-targetptr="mrk"><code>&lt;mrk&gt;</code></olink>, and <olink targetdoc="../elements/inline/sm.xml"
-targetptr="sm"><code>&lt;sm&gt;</code></olink>. </para>
-<warning><para>The <link linkend="subFs"><code>subFs</code></link> attribute is not intended to facilitate <firstterm>Merging</firstterm> back into the original format. </para></warning>
+        <olink targetdoc="../elements/structural/source.xml" targetptr="source"
+            ><code>source</code></olink>, <olink targetdoc="../elements/structural/target.xml"
+            targetptr="target"><code>target</code></olink>, <olink
+            targetdoc="../elements/inline/sc.xml" targetptr="sc"><code>sc</code></olink>, <olink
+            targetdoc="../elements/inline/ec.xml" targetptr="ec"><code>ec</code></olink>, <olink
+            targetdoc="../elements/inline/ph.xml" targetptr="ph"><code>ph</code></olink>,
+            <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
+            targetdoc="../elements/inline/pc.xml" targetptr="pc"><code>&lt;pc&gt;</code></olink>,
+            <olink targetdoc="../elements/inline/mrk.xml" targetptr="mrk"
+            ><code>&lt;mrk&gt;</code></olink><?oxy_custom_end?>, and <olink
+            targetdoc="../elements/inline/sm.xml" targetptr="sm"><code>sm</code></olink>. </para>
+<warning><para>The <link linkend="subFs"><code>fs_subFs</code></link> string is not intended to facilitate
+                <firstterm>Merging</firstterm> back into the original format. </para></warning>
 
 <itemizedlist>
 <title>Constraints</title>
-<listitem><para>Commas (<code>,</code>) and backslashes (<code>\</code>) in the value parts of the <link linkend="subFs"><code>subFs</code></link> <glossterm>must</glossterm> be escaped with a
-backslash (<code>\</code>).</para>
+<listitem><para>Commas (<code>,</code>) and backslashes (<code>\\</code>) in the value parts of the <link
+                    linkend="subFs"><code>fs_subFs</code></link> string <glossterm>must</glossterm>
+                be escaped with a backslash (<code>\\</code>).</para>
 </listitem>
 <listitem>
-<para>If the attribute <link  linkend="subFs"><code>subFs</code></link> is used, the attribute <olink
-targetdoc="../attributes/fs.xml" targetptr="fs"><code>fs</code></olink>
-<glossterm>must</glossterm> be specified as well.</para>
+<para>If the <link linkend="subFs"><code>fs_subFs</code></link> string is used, the <olink
+                    targetdoc="../attributes/fs.xml" targetptr="fs"><code>fs_fs</code></olink>
+                string <glossterm>must</glossterm> be specified as well.</para>
 </listitem>
-<listitem><para>The <link linkend="subFs"><code>subFs</code></link> <glossterm>must</glossterm> only be used with <olink targetdoc="../elements/inline/ec.xml"
-targetptr="ec"><code>&lt;ec&gt;</code></olink> in cases where the <code>isolated</code> attribute is set to 'yes'.</para>
+<listitem><para>The <link linkend="subFs"><code>fs_subFs</code></link> string <glossterm>must</glossterm> only
+                be used with <olink targetdoc="../elements/inline/ec.xml" targetptr="ec"
+                        ><code>ec</code></olink> in cases where the <code>"isolated"</code> property
+                is set to <code>"yes"</code>.</para>
 </listitem>
 </itemizedlist>
 <itemizedlist>
 <title>Processing Requirements</title>
 <listitem>
-<para><firstterm>Writers</firstterm> updating the attribute <olink
-targetdoc="fs.xml" targetptr="fs"><code>fs</code></olink> <glossterm>must</glossterm> also update or delete <link  linkend="subFs"><code>subFs</code></link>.</para>
+<para><firstterm>Writers</firstterm> updating the <olink targetdoc="fs.xml" targetptr="fs"
+                        ><code>fs_fs</code></olink> string <glossterm>must</glossterm> also update
+                or delete the <link linkend="subFs"><code>fs_subFs</code></link> string.</para>
 </listitem>
 
 
@@ -90,18 +84,30 @@ targetdoc="fs.xml" targetptr="fs"><code>fs</code></olink> <glossterm>must</gloss
 
 
 
-<para><emphasis>Example: </emphasis>For complex HTML previews that require more than one attribute on an HTML preview element, attribute pairs are separated by backslashes (\). Any literal comma or backslash in an attribute value <glossterm>must</glossterm> be escaped with a backslash.</para>
+<para><emphasis>Example: </emphasis>For complex HTML previews that require more than one attribute
+        on an HTML preview element, attribute pairs are separated by backslashes (<code>\\</code> in
+        JSON). Any literal comma or backslash in an attribute value <glossterm>must</glossterm> be
+        escaped with a backslash.</para>
 
 <para>For example, we would use this convention:</para>
 
 <programlisting>
-&lt;ph id="p1" fs="img" subFs="src,c:\\docs\\images\\smile.png\alt,
-    My Happy Smile\title,Smiling faces\, are nice" /></programlisting>
+<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>&lt;ph id="p1" fs="img" subFs="src,c:\\docs\\images\\smile.png\alt,
+    My Happy Smile\title,Smiling faces\, are nice" /><?oxy_custom_end?>
+
+<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>{
+  "id": "p1",
+  "kind": "ph",
+  "fs_fs": "img",
+  "fs_subFs": "src,c:\\\\docs\\\\images\\\\smile.png\\alt,My Happy Smile\\title,Smiling faces\\, are nice"
+}<?oxy_custom_end?>
+</programlisting>
 
 <para>To produce this HTML preview:</para>
 
 <programlisting>
 &lt;img src="c:\docs\images\smile.png" alt="My Happy Smile" title="Smiling
-    faces, are nice" /></programlisting>
+    faces, are nice" />
+</programlisting>
 
 </section>

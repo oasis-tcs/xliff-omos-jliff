@@ -9,6 +9,8 @@
   <title>ref</title>
 
   <para>Reference - holds a reference for the associated annotation.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    string.<?oxy_custom_end?></para>
 
   <para><emphasis>Value description:</emphasis> A value of the <olink targetdoc="../xliff21.xml" targetptr="XMLSchema2">[XML Schema Datatypes]</olink> type
   anyURI. The semantics of the value depends on the type of annotation:</para>
@@ -29,10 +31,11 @@
     <listitem>
       <para>When used in a <olink targetdoc="../inline/inline.xml" targetptr="commentAnnotation"
           >comment annotation</olink>, the value is referring to a <olink
-          targetdoc="../elements/structural/note.xml" targetptr="note"
-            ><code>&lt;note&gt;</code></olink> element within the same enclosing <olink
-              targetdoc="../elements/structural/unit.xml" targetptr="unit"
-              ><code>&lt;unit&gt;</code></olink>.</para>
+          targetdoc="../elements/structural/note.xml" targetptr="note"><code>note</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+        within the same enclosing <olink targetdoc="../elements/structural/unit.xml"
+          targetptr="unit"><code>unit</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object<?oxy_custom_end?>.</para>
     </listitem>
 
     <listitem>
@@ -42,18 +45,18 @@
     </listitem>
   </itemizedlist>
 
-  <para><emphasis>Default value:</emphasis> undefined</para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
 
-  <para><emphasis>Used in:</emphasis> <olink
-  targetdoc="../elements/inline/mrk.xml"
-  targetptr="mrk"><code>&lt;mrk&gt;</code></olink> or <olink
-  targetdoc="../elements/inline/sm.xml"
-  targetptr="sm"><code>&lt;sm&gt;</code></olink>.</para>
+  <para><emphasis>Used in:</emphasis>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
+      targetdoc="../elements/inline/mrk.xml" targetptr="mrk"><code>&lt;mrk&gt;</code></olink> or
+      <?oxy_custom_end?><olink targetdoc="../elements/inline/sm.xml" targetptr="sm"
+      ><code>sm</code></olink>.</para>
 
   <para><emphasis>Example:</emphasis></para>
 
   <programlisting>
-&lt;unit id="1"&gt;
+<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>&lt;unit id="1"&gt;
   &lt;segment&gt;
     &lt;source&gt;The &lt;pc id="1"&gt;ref&lt;/pc&gt; attribute of a term
         annotation holds a &lt;mrk id="m1" type="term"
@@ -61,7 +64,32 @@
         URI&lt;/mrk&gt; pointing to more information about the given
         term.&lt;/source&gt;
   &lt;/segment&gt;
-&lt;/unit&gt;
+&lt;/unit&gt;<?oxy_custom_end?>
+
+<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>{
+  "subfiles": [
+    {
+      "id": "1",
+      "subunits": [
+        {
+          "kind": "segment",
+          "source": [
+            { "text": "The " },
+            { "id": "1", "kind": "sc" },
+            { "text": "ref" },
+            { "kind": "ec", "startRef": "1" },
+            { "text": " attribute of a term annotation holds a " },
+            { "id": "m1", "kind": "sm", "type": "term",
+              "ref": "http://dbpedia.org/page/Uniform_Resource_Identifier" },
+            { "text": "URI" },
+            { "kind": "em", "startRef": "m1" },
+            { "text": " pointing to more information about the given term." }
+          ]
+        }
+      ]
+    }
+  ]
+}<?oxy_custom_end?>       
 </programlisting>
 <!-- This Constraint does not make sense with the current fragmnt identifying mechanism
   <itemizedlist>
