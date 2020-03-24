@@ -6,7 +6,7 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="segment">
-  <title>anonymous subunit object "kind" : "segment"</title>
+  <title>anonymous subunit object "kind" : "segment|ignorable"</title>
   <para>This type is a union of two subtypes governed by the value of the key
     <code>kind</code>.</para>
 
@@ -18,7 +18,7 @@
   <para><emphasis>Properties:</emphasis></para>
 
   <simplelist>
-    <member>- <code>kind</code>, <glossterm>optional</glossterm></member>
+    <member>- <code>kind</code>, <glossterm>required</glossterm></member>
     <member> - <olink targetdoc="../../attributes/id.xml" targetptr="id"><code>id</code></olink>,
         <glossterm>optional</glossterm></member>
     <member>- One <olink targetdoc="source.xml" targetptr="source"><code>source</code></olink>
