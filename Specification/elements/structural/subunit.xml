@@ -6,7 +6,9 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="segment">
-  <title>anonymous subunit object <code>"kind" : "segment"</code></title>
+  <title>anonymous subunit object "kind" : "segment|ignorable"</title>
+  <para>This type is a union of two subtypes governed by the value of the key
+    <code>kind</code>.</para>
 
   <para>This object is a container to hold in its aligned pair of children objects the minimum
     portion of translatable source text and its <firstterm>Translation</firstterm> in the given
@@ -16,9 +18,7 @@
   <para><emphasis>Properties:</emphasis></para>
 
   <simplelist>
-    <member>- <code>kind</code> [to create a kind file and reference],
-        <glossterm>optional</glossterm> <!-- currently this is optional with the default set to segment, we could make it required to simplify -->
-    </member>
+    <member>- <code>kind</code>, <glossterm>required</glossterm></member>
     <member> - <olink targetdoc="../../attributes/id.xml" targetptr="id"><code>id</code></olink>,
         <glossterm>optional</glossterm></member>
     <member>- One <olink targetdoc="source.xml" targetptr="source"><code>source</code></olink>
@@ -26,15 +26,15 @@
 
     <member>- Zero or one <olink targetdoc="target.xml"
     targetptr="target"><code>&lt;target&gt;</code></olink> element</member>
-  
+  </simplelist>
 
-  <!--  <para><emphasis>Attributes:</emphasis></para>
+  <para><emphasis>Attributes:</emphasis></para>
 
   <simplelist>
-     This flag got killed in the August 20 2013 meeting <member>- <olink targetdoc="../../attributes/approved.xml"
+    <!-- This flag got killed in the August 20 2013 meeting <member>- <olink targetdoc="../../attributes/approved.xml"
       targetptr="approved"><code>approved</code></olink>, <glossterm>required</glossterm></member>-->
     
-    
+    <member/>
     
     <member>- <olink targetdoc="../../attributes/canResegment.xml"
       targetptr="canResegment"><code>canResegment</code></olink>, <glossterm>optional</glossterm></member>
