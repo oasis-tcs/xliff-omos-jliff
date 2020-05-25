@@ -5,8 +5,10 @@
     "subfiles": [
         {
             "id": "u1",
+            "kind": "unit",
             "subunits": [
                 {
+                    "kind": "segment",
                     "source": [
                         { "text": "Press the " },
                         { "id": "m1", "kind": "sm", "type": "term" },

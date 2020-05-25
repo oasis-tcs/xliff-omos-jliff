@@ -6,31 +6,30 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="state">
-  <title>state</title>
-
-  <para>State - indicates the state of the translation of a segment.</para>
-
-    <para><emphasis>Value description:</emphasis> The value <glossterm>must</glossterm> be set to one of the following values:</para>
-
-  <simplelist>
-   <member><code>initial</code> - indicates the segment is in its initial state.</member>
-   <member><code>translated</code> - indicates the segment has been translated.</member>
-   <member><code>reviewed</code> - indicates the segment has been reviewed.</member>
-   <member><code>final</code> - indicates the segment is finalized and ready to be used.</member>
-  </simplelist>
-  <para>The 4 defined states constitute a simple linear state machine that advances in the above
+    <title>state</title>
+    <para>State - indicates the state of the translation of a segment.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis><?oxy_custom_end?>
+        string.</para>
+    <para><emphasis>Value description:</emphasis> the value <glossterm>must</glossterm> be set to
+        one of the following values:</para>
+    <simplelist>
+        <member><code>"initial"</code> - indicates the segment is in its initial state.</member>
+        <member><code>"translated"</code> - indicates the segment has been translated.</member>
+        <member><code>"reviewed"</code> - indicates the segment has been reviewed.</member>
+        <member><code>"final"</code> - indicates the segment is finalized and ready to be
+            used.</member>
+    </simplelist>
+    <para>The 4 defined states constitute a simple linear state machine that advances in the above
         given order. No particular workflow or process is prescribed, except that the three states
         more advanced than the default <code>initial</code> assume the existence of a
             <firstterm>Translation</firstterm> within the segment. One can further specify the state
         of the <firstterm>Translation</firstterm> using the <olink targetdoc="substate.xml"
             targetptr="substate"><code>subState</code></olink> attribute.</para>
-
-    <para><emphasis>Default value:</emphasis> <code>initial</code></para>
-
-  <para><emphasis>Used in:</emphasis> <olink
-  targetdoc="../elements/structural/segment.xml"
-  targetptr="segment"><code>&lt;segment&gt;</code></olink></para>
-
+    <para><emphasis>Default value:</emphasis>
+        <code>initial</code></para>
+    <para><emphasis>Used in:</emphasis>
+        <olink targetdoc="../elements/structural/segment.xml" targetptr="segment"
+                ><code>segment</code></olink></para>
     <!-- This falg got killed in the August 20 2013 meeting <itemizedlist>
         <title>Constraints</title>
         <listitem>
@@ -54,24 +53,32 @@
                     ><code>state</code></link> attribute values to other than the default
                     <code>initial</code> if and only if the <olink
                     targetdoc="../elements/structural/segment.xml" targetptr="segment"
-                        ><code>&lt;segment></code></olink> element where the attribute is set
-                doesn't have the <olink targetdoc="../elements/structural/target.xml"
-                    targetptr="target"><code>&lt;target></code></olink> child. </para>
+                        ><code>segment</code></olink>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+                where the
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+                is set doesn't have the <olink targetdoc="../elements/structural/target.xml"
+                    targetptr="target"><code>target</code></olink> child. </para>
         </listitem>
-
-
         <listitem>
-            <para><firstterm>Writers</firstterm> updating the attribute <link linkend="state"><code>state</code></link> <glossterm>must</glossterm> also update or delete
-                <olink  targetdoc="subState.xml"
+            <para><firstterm>Writers</firstterm> updating the <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+                <link linkend="state"><code>state</code></link>
+                <glossterm>must</glossterm> also update or delete <olink targetdoc="subState.xml"
                     targetptr="substate"><code>subState</code></olink>.</para>
         </listitem>
     </itemizedlist>
-    
-    <note><para><link linkend="state"><code>state</code></link> is an <glossterm>optional</glossterm>
-            attribute of segments with a default value and segmentation can change as the XLIFF
-            roundtrip progresses, hence implementers don't have to make explicit use of the
-            attribute. However setting of the attribute is advantageous if a workflow needs to make
-            use of Advanced Validation methods. For instance missing non-removable codes will only
-            be reported as an Error by the <olink targetdoc="../xliff21.xml" targetptr="CoreSchematron">XLIFF Core Schematron Schema</olink> when the <link linkend="state"
-                    ><code>state</code></link> is <code>final</code>.</para></note>
+    <note>
+        <para><link linkend="state"><code>state</code></link> is an <glossterm>optional</glossterm>
+            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+            of segments with a default value and segmentation can change as the XLIFF roundtrip
+            progresses, hence implementers don't have to make explicit use of the
+            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>.
+            However setting of the
+            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+            is advantageous if a workflow needs to make use of Advanced Validation methods. For
+            instance missing non-removable codes will only be reported as an Error by the <olink
+                targetdoc="../xliff21.xml" targetptr="CoreSchematron">XLIFF Core Schematron
+                Schema</olink> when the <link linkend="state"><code>state</code></link> is
+                <code>"final"</code>.</para>
+    </note>
 </section>

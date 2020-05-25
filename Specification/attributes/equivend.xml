@@ -6,23 +6,17 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="equivend">
-  <title>equivEnd <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>not used in
-    JLIFF<?oxy_custom_end?></title>
-
+  <title>equivEnd <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>TO BE DELETED,
+    not used in JLIFF<?oxy_custom_end?></title>
   <para>Equivalent text - holds a plain text representation of the original data of the end marker
     of an inline code that can be used when generating a plain text representation of the
     content.</para>
-
   <para><emphasis>Value description:</emphasis> Text.</para>
-
   <para><emphasis>Default value:</emphasis> an empty string</para>
-
-  <para><emphasis>Used in:</emphasis> <olink
-  targetdoc="../elements/inline/pc.xml"
-  targetptr="pc"><code>&lt;pc&gt;</code></olink>.</para>
-
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../elements/inline/pc.xml" targetptr="pc"
+    ><code>&lt;pc&gt;</code></olink>.</para>
   <para><emphasis>Example:</emphasis></para>
-
   <programlisting>
 &lt;unit id="1"&gt;
   &lt;originalData&gt;
@@ -37,10 +31,8 @@
   &lt;/segment&gt;
 &lt;/unit&gt;
 </programlisting>
-
   <note>
-    <para>To provide a user-friendly representation, use the <olink
-    targetdoc="dispend.xml" targetptr="dispend"><code>dispEnd</code></olink>
-    attribute.</para>
+    <para>To provide a user-friendly representation, use the <olink targetdoc="dispend.xml"
+        targetptr="dispend"><code>dispEnd</code></olink> attribute.</para>
   </note>
 </section>

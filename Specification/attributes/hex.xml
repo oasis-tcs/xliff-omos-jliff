@@ -6,29 +6,22 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="hex">
-  <title>hex <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>not used in
-    JLIFF<?oxy_custom_end?></title>
-
+  <title>hex <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>TO BE DELETED, not
+    used in JLIFF<?oxy_custom_end?></title>
   <para>Hexadecimal code point - holds the value of a Unicode code point that is invalid in
     XML.</para>
-
-  <para><emphasis>Value description:</emphasis> A canonical representation of
-    the hexBinary <olink targetdoc="../xliff21.xml" targetptr="XMLSchema2">[XML Schema Datatypes]</olink> data type: Two hexadecimal digits to represent each octet
-  of the Unicode code point. The allowed values are any of the values
-  representing code points invalid in XML, between hexadecimal 0000 and 10FFFF
-  (both included).</para>
-
+  <para><emphasis>Value description:</emphasis> A canonical representation of the hexBinary <olink
+      targetdoc="../xliff21.xml" targetptr="XMLSchema2">[XML Schema Datatypes]</olink> data type:
+    Two hexadecimal digits to represent each octet of the Unicode code point. The allowed values are
+    any of the values representing code points invalid in XML, between hexadecimal 0000 and 10FFFF
+    (both included).</para>
   <para><emphasis>Default value:</emphasis> undefined</para>
-
-  <para><emphasis>Used in:</emphasis> <olink
-  targetdoc="../elements/inline/cp.xml"
-  targetptr="cp"><code>&lt;cp&gt;</code></olink>.</para>
-
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../elements/inline/cp.xml" targetptr="cp"
+    ><code>&lt;cp&gt;</code></olink>.</para>
   <para><emphasis>Example:</emphasis></para>
-
   <programlisting>
 &lt;cp hex="001A"/&gt;&lt;cp hex="0003"/&gt;</programlisting>
-
   <para>The example above shows a character U+001A and a character U+0003 as they have to be
     represented in XLIFF.</para>
 </section>

@@ -6,29 +6,23 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="datarefstart">
-  <title>dataRefStart <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>not used in
-    JLIFF<?oxy_custom_end?></title>
-
+  <title>dataRefStart <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>TO BE
+    DELETED, not used in JLIFF<?oxy_custom_end?></title>
   <para>Original data reference - holds the identifier of the <olink
       targetdoc="../elements/structural/data.xml" targetptr="data"><code>&lt;data&gt;</code></olink>
     element that contains the original data for the start marker of a given inline code.</para>
-
-  <para><emphasis>Value description:</emphasis> An <olink targetdoc="../xliff21.xml" targetptr="XMLSchema2">[XML Schema Datatypes]</olink> NMTOKEN that <glossterm>must</glossterm> be
-  the value of the <olink targetdoc="id.xml"
-  targetptr="id"><code>id</code></olink> attribute of one of the <olink
-  targetdoc="../elements/structural/data.xml"
-  targetptr="data"><code>&lt;data&gt;</code></olink> element listed in the
-  same <olink targetdoc="../elements/structural/unit.xml"
-  targetptr="unit"><code>&lt;unit&gt;</code></olink> element.</para>
-
+  <para><emphasis>Value description:</emphasis> An <olink targetdoc="../xliff21.xml"
+      targetptr="XMLSchema2">[XML Schema Datatypes]</olink> NMTOKEN that <glossterm>must</glossterm>
+    be the value of the <olink targetdoc="id.xml" targetptr="id"><code>id</code></olink> attribute
+    of one of the <olink targetdoc="../elements/structural/data.xml" targetptr="data"
+        ><code>&lt;data&gt;</code></olink> element listed in the same <olink
+      targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit&gt;</code></olink>
+    element.</para>
   <para><emphasis>Default value:</emphasis> undefined.</para>
-
-  <para><emphasis>Used in:</emphasis> <olink
-  targetdoc="../elements/inline/pc.xml"
-  targetptr="pc"><code>&lt;pc&gt;</code></olink>.</para>
-
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../elements/inline/pc.xml" targetptr="pc"
+    ><code>&lt;pc&gt;</code></olink>.</para>
   <para><emphasis>Example:</emphasis></para>
-
   <programlisting>
 &lt;unit id="1"&gt;
   &lt;originalData&gt;
@@ -43,11 +37,8 @@
   &lt;/segment&gt;
 &lt;/unit&gt;
 </programlisting>
-
-  <para>The example above shows two <olink
-  targetdoc="../elements/inline/pc.xml"
-  targetptr="pc"><code>&lt;pc&gt;</code></olink> elements with their original
-  data stored outside the content, in two <olink
-  targetdoc="../elements/structural/data.xml"
-  targetptr="data"><code>&lt;data&gt;</code></olink> elements.</para>
+  <para>The example above shows two <olink targetdoc="../elements/inline/pc.xml" targetptr="pc"
+        ><code>&lt;pc&gt;</code></olink> elements with their original data stored outside the
+    content, in two <olink targetdoc="../elements/structural/data.xml" targetptr="data"
+        ><code>&lt;data&gt;</code></olink> elements.</para>
 </section>

@@ -7,19 +7,15 @@
 ]>
 <section id="dir">
   <title>dir</title>
-
   <para>Directionality - indicates the directionality of content.</para>
   <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
     string.<?oxy_custom_end?></para>
-
   <para><emphasis>Value description:</emphasis>
     <code>"ltr"</code> (Left-To-Right), <code>"rtl"</code> (Right-To-Left), or <code>"auto"</code>
     (determined heuristically, based on the first strong directional character in scope, see <olink
       targetdoc="xliff20.xml" targetptr="uax9">[UAX #9]</olink>).</para>
-
-  <para><emphasis>Default value:</emphasis> default values for this attribute
-  depend on the element in which it is used:</para>
-
+  <para><emphasis>Default value:</emphasis> default values for this attribute depend on the element
+    in which it is used:</para>
   <itemizedlist>
     <listitem>
       <para>When used in a <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
@@ -32,7 +28,6 @@
             ><code>source</code></olink>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
         as its parent:</para>
-
       <para>The value of the <olink targetdoc="srcdir.xml" targetptr="srcdir"
           ><code>srcDir</code></olink>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end?>
@@ -43,7 +38,6 @@
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>properties<?oxy_custom_end?>
         are located.</para>
     </listitem>
-
     <listitem>
       <para>When used in a <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
           targetdoc="../elements/inline/pc.xml" targetptr="pc"><code>&lt;pc&gt;</code></olink>,
@@ -55,7 +49,6 @@
             ><code>target</code></olink>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
         as its parent: </para>
-
       <para>The value of the <olink targetdoc="trgdir.xml" targetptr="trgdir"
           ><code>trgDir</code></olink>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end?>
@@ -66,7 +59,6 @@
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>properties<?oxy_custom_end?>
         are located.</para>
     </listitem>
-
     <listitem>
       <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>When used in a <olink
           targetdoc="../elements/inline/pc.xml" targetptr="pc"><code>&lt;pc></code></olink>,
@@ -81,7 +73,6 @@
         attribute of the parent <olink targetdoc="../elements/inline/pc.xml" targetptr="pc"
             ><code>&lt;pc&gt;</code></olink> element.<?oxy_custom_end?></para>
     </listitem>
-
     <listitem>
       <para><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>When used in <olink
           targetdoc="../elements/structural/data.xml" targetptr="data"
@@ -89,7 +80,6 @@
       <para>The value <code>"auto"</code>.<?oxy_custom_end?></para>
     </listitem>
   </itemizedlist>
-
   <para><emphasis>Used in:</emphasis>
     <!-- killed on source and target to simplify re-segmentation PRs and to make use of BiDi control characters less likely 
       <olink
@@ -99,8 +89,8 @@
   targetptr="target"><code>&lt;target&gt;</code></olink>,-->
     <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
       targetdoc="../elements/structural/data.xml" targetptr="data"
-    ><code>&lt;data&gt;</code></olink>, <?oxy_custom_end?><olink
-      targetdoc="../elements/inline/pc.xml" targetptr="pc"><code>pc</code></olink>, <olink
-      targetdoc="../elements/inline/sc.xml" targetptr="sc"><code>sc</code></olink>, and <olink
+    ><code>&lt;data&gt;</code></olink>, <olink targetdoc="../elements/inline/pc.xml" targetptr="pc"
+        ><code>pc</code></olink>,<?oxy_custom_end?>
+    <olink targetdoc="../elements/inline/sc.xml" targetptr="sc"><code>sc</code></olink>, and <olink
       targetdoc="../elements/inline/ec.xml" targetptr="ec"><code>ec</code></olink>.</para>
 </section>

@@ -16,40 +16,73 @@
   <para><emphasis>Properties:</emphasis></para>
 
   <simplelist>
-    <member>- <code>kind</code> [to create a kind file and reference],
-        <glossterm>optional</glossterm> <!-- currently this is optional with the default set to segment, we could make it required to simplify -->
-    </member>
-    <member> - <olink targetdoc="../../attributes/id.xml" targetptr="id"><code>id</code></olink>,
+    <member>-
+      <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"id"</code>, a<?oxy_custom_end?>
+      <olink targetdoc="../../attributes/id.xml" targetptr="id"><code>id</code></olink>
+      <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>string with NMTOKEN
+      value<?oxy_custom_end?>, <glossterm>optional</glossterm></member>
+    <member>-
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"kind"</code>, a<?oxy_custom_end?>
+      <olink targetdoc="../../attributes/kind.xml" targetptr="kind"><code>kind</code></olink>
+      <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>string<?oxy_custom_end?>,
+        <glossterm>required</glossterm><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+      with fixed value <code>"segment"</code><?oxy_custom_end?></member>
+    <member>-
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"canResegment"</code>, a<?oxy_custom_end?>
+      <olink targetdoc="../../attributes/canResegment.xml" targetptr="canResegment"
+          ><code>canResegment</code></olink>
+      <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>string with value
+        <code>"yes"</code> or <code>"no"</code><?oxy_custom_end?>, <glossterm>optional</glossterm>
+      <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>with default value
+        <code>"yes"</code></member><?oxy_custom_end?>
+    <member>-
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"state"</code>, a
+        <olink targetdoc="../../attributes/state.xml" targetptr="state"><code>state</code></olink>
+      string of value <code>"initial"</code>, <code>"translated"</code>, <code>"reviewed"</code>, or
+        <code>"final"</code>, <glossterm>optional</glossterm> with default value
+        <code>"initial"</code><?oxy_custom_end?></member>
+    <member>-
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"subState"</code>,
+      a <olink targetdoc="../../attributes/subState.xml" targetptr="substate"
+        ><code>subState</code></olink> string,
+      <glossterm>optional</glossterm><?oxy_custom_end?></member>
+    <member>-
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"source"</code>,
+      a non-empty array of
+        <?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?><code>"element"</code>
+      objects<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>,
+        <glossterm>required</glossterm><?oxy_custom_end?></member>
+    <member>-
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"target"</code>,
+      a non-empty array of
+        <?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?><code>"element"</code>
+      objects<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>,
+        <glossterm>optional</glossterm><?oxy_custom_end?></member>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
+    <member>- <olink targetdoc="../../attributes/id.xml" targetptr="id"><code>id</code></olink>,
         <glossterm>optional</glossterm></member>
     <member>- One <olink targetdoc="source.xml" targetptr="source"><code>source</code></olink>
       object</member>
-
-    <member>- Zero or one <olink targetdoc="target.xml"
-    targetptr="target"><code>&lt;target&gt;</code></olink> element</member>
-  
-
-  <!--  <para><emphasis>Attributes:</emphasis></para>
+    <member>- Zero or one <olink targetdoc="target.xml" targetptr="target"
+          ><code>&lt;target&gt;</code></olink> element<?oxy_custom_end?></member>
+    <!--  <para><emphasis>Attributes:</emphasis></para>
 
   <simplelist>
      This flag got killed in the August 20 2013 meeting <member>- <olink targetdoc="../../attributes/approved.xml"
       targetptr="approved"><code>approved</code></olink>, <glossterm>required</glossterm></member>-->
-    
-    
-    
-    <member>- <olink targetdoc="../../attributes/canResegment.xml"
-      targetptr="canResegment"><code>canResegment</code></olink>, <glossterm>optional</glossterm></member>
-<!-- translate was killed on segment to simplify translatability state algorithm and to simplify re-segmentation PRs,
+    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
+    <member>- <olink targetdoc="../../attributes/canResegment.xml" targetptr="canResegment"
+          ><code>canResegment</code></olink>,
+      <glossterm>optional</glossterm><?oxy_custom_end?></member>
+    <!-- translate was killed on segment to simplify translatability state algorithm and to simplify re-segmentation PRs,
       the expressivity is the same due to inline markers
     <member>- <olink targetdoc="../../attributes/translate.xml"
     targetptr="translate"><code>translate</code></olink>, <glossterm>optional</glossterm></member>-->
-    
-    
-    <member>- <olink targetdoc="../../attributes/state.xml"
-    targetptr="state"><code>state</code></olink>, <glossterm>optional</glossterm></member>
-
-    <member>- <olink targetdoc="../../attributes/subState.xml"
-    targetptr="substate"><code>subState</code></olink>, <glossterm>optional</glossterm></member>
-
+    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
+    <member>- <olink targetdoc="../../attributes/state.xml" targetptr="state"
+        ><code>state</code></olink>, <glossterm>optional</glossterm></member>
+    <member>- <olink targetdoc="../../attributes/subState.xml" targetptr="substate"
+          ><code>subState</code></olink>, <glossterm>optional</glossterm><?oxy_custom_end?></member>
   </simplelist>
 
   <!--  The uniqueness scope is described on the id attribute 

@@ -6,9 +6,8 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="datarefend">
-  <title>dataRefEnd <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>not used in
-    JLIFF<?oxy_custom_end?></title>
-
+  <title>dataRefEnd <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>TO BE DELETED,
+    not used in JLIFF<?oxy_custom_end?></title>
   <para>Original data reference - holds the identifier of the
       <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
       targetdoc="../elements/structural/data.xml" targetptr="data"><code>&lt;data&gt;</code></olink> element<?oxy_custom_end?>
@@ -20,7 +19,6 @@
     code.</para>
   <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
     string.<?oxy_custom_end?></para>
-
   <para><emphasis>Value description:</emphasis> An <olink targetdoc="../xliff21.xml"
       targetptr="XMLSchema2">[XML Schema Datatypes]</olink> NMTOKEN that <glossterm>must</glossterm>
     be the value of the <olink targetdoc="id.xml" targetptr="id"><code>id</code></olink>
@@ -34,15 +32,11 @@
     object<?oxy_custom_end?> listed in the same <olink targetdoc="../elements/structural/unit.xml"
       targetptr="unit"><code>unit</code></olink>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
-
   <para><emphasis>Default value:</emphasis> undefined.</para>
-
-  <para><emphasis>Used in:</emphasis> <olink
-  targetdoc="../elements/inline/pc.xml"
-  targetptr="pc"><code>&lt;pc&gt;</code></olink>.</para>
-
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../elements/inline/pc.xml" targetptr="pc"
+    ><code>&lt;pc&gt;</code></olink>.</para>
   <para><emphasis>Example:</emphasis></para>
-
   <programlisting>
 <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>&lt;unit id="1"&gt;
   &lt;originalData&gt;
@@ -57,7 +51,6 @@
   &lt;/segment&gt;
 &lt;/unit&gt;<?oxy_custom_end?>
 </programlisting>
-
   <para>The example above shows
     t<?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>wo <olink
       targetdoc="../elements/inline/pc.xml" targetptr="pc"><code>&lt;pc&gt;</code></olink>
