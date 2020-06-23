@@ -45,6 +45,19 @@
             "trgLang": { "$ref": "#/definitions/language" },
             "srcDir": { "$ref": "#/definitions/dir" },
             "trgDir": { "$ref": "#/definitions/dir" },
+            "subgroups": { "$ref": "#/definitions/subitems" }
+          },
+          "additionalProperties": false,
+          "required": [ "jliff", "subgroups" ]
+        },
+        {
+          "properties": {
+            "jliff": { "type": "string" },
+            "@context": { "$ref": "#/definitions/JSON-LD-context" },
+            "srcLang": { "$ref": "#/definitions/language" },
+            "trgLang": { "$ref": "#/definitions/language" },
+            "srcDir": { "$ref": "#/definitions/dir" },
+            "trgDir": { "$ref": "#/definitions/dir" },
             "subunits": { "$ref": "#/definitions/subunits" }
           },
           "additionalProperties": false,
@@ -119,10 +132,10 @@
     "skeleton": {
       "type": "object",
       "properties": {
-        "ref": { "$ref": "#/definitions/IRI" }
+        "href": { "$ref": "#/definitions/IRI" }
       },
       "additionalProperties": false,
-      "required": [ "ref" ]
+      "required": [ "href" ]
     },
 
     "subitems": {

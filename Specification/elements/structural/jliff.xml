@@ -7,7 +7,7 @@
                          ]>
 <section id="xliff">
     <title>anonymous <code>jliff</code> object with property
-        <code>"files|subfiles|subunits"</code></title>
+            <code>"files|subfiles|subgroups|subunits"</code></title>
     <para>Root
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
         for JLIFF documents.</para>

@@ -13,8 +13,12 @@
                 ><code>&lt;target></code></olink> child of a <olink
             targetdoc="../elements/structural/match.xml" targetptr="match"
             ><code>&lt;match></code></olink> element based on an external benchmark or metric.</para>
+    <para><emphasis>Contains:</emphasis>
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>number<?oxy_custom_end?>.</para>
     
-    <para><emphasis>Value description:</emphasis> a decimal number between 0.0 and 100.0.</para>
+    <para><emphasis>Value description:</emphasis>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>number between 0.0 and
+        100.0, inclusive.<?oxy_custom_end?></para>
         
     <para><emphasis>Default value:</emphasis> undefined</para>
     

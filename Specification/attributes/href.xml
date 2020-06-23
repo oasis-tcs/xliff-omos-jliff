@@ -6,9 +6,7 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="href">
-    <title><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>ref<?oxy_custom_end?>
-        <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>(need to fold into
-        ref.xml: "ref" is used in JLIFF skeleton)<?oxy_custom_end?></title>
+    <title>h<?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>ref<?oxy_custom_end?></title>
     <para>ref - a pointer to the location of an external skeleton file pertaining to the enclosing
             <olink targetdoc="../elements/structural/file.xml" targetptr="file"
             ><code>file</code></olink>
