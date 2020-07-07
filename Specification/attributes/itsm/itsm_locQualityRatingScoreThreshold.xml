@@ -6,54 +6,81 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="itsm_locQualityRatingScoreThreshold">
-    <title>locQualityRatingScoreThreshold</title>
+    <title>its_locQualityRatingScoreThreshold</title>
     
-    <para>Localization Quality Rating Score Threshold - the <code>locQualityRatingScoreThreshold</code> attribute
-        is the <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
-        defined <code>locQualityRatingScoreThreshold</code> attribute. </para>
-    <para>This attribute provides the quality rating score threshold pertaining to any
-        <olink targetdoc="itsm_locQualityRatingScore.xml" targetptr="itsm_locQualityRatingScore"><code>locQualityRatingScore</code></olink> 
-        attribute in scope. Scores under the given threshold indicte a quality check fail.</para>
+    <para>Localization Quality Rating Score Threshold - the
+            <code>its_locQualityRatingScoreThreshold</code>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        is the <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> defined
+            <code>its_locQualityRatingScoreThreshold</code>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>. </para>
+    <para>This
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        provides the quality rating score threshold pertaining to any <olink
+            targetdoc="itsm_locQualityRatingScore.xml" targetptr="itsm_locQualityRatingScore"
+                ><code>its_locQualityRatingScore</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        in scope. Scores under the given threshold indicte a quality check fail.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+        number.<?oxy_custom_end?></para>
     
-    <para><emphasis>Value description:</emphasis> a decimal number between 0.0 and 100.0.</para>
+    <para><emphasis>Value description:</emphasis> a floating point number between 0.0 and 100.0,
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>inclusive<?oxy_custom_end?>.</para>
         
-    <para><emphasis>Default value:</emphasis> default values for this attribute
-        depend on the element in which it is used:</para>
+    <para><emphasis>Default value:</emphasis> default values for this
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        depend on the
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+        in which it is used:</para>
     
     <itemizedlist>
         <listitem>
             <para>When used in <olink targetdoc="../../elements/structural/file.xml"
-                targetptr="file"><code>&lt;file&gt;</code></olink>:</para>
+                    targetptr="file"><code>file</code></olink>:</para>
             
             <para>The value is undefined.</para>
         </listitem>
         <listitem>
-            <para>When used in any other admissible structural element (<olink targetdoc="../../elements/structural/group.xml"
-                targetptr="group"><code>&lt;group></code></olink> or <olink targetdoc="../../elements/structural/unit.xml"
-                    targetptr="unit"><code>&lt;unit></code></olink>):</para>
+            <para>When used in any other admissible structural element (<olink
+                    targetdoc="../../elements/structural/group.xml" targetptr="group"
+                        ><code>group</code></olink> or <olink
+                    targetdoc="../../elements/structural/unit.xml" targetptr="unit"
+                        ><code>unit</code></olink>):</para>
             <para>The value of the <link linkend="itsm_locQualityRatingScoreThreshold"
-                ><code>locQualityRatingScoreThreshold</code></link> attribute of its parent element
-                (which can be undefined).</para>
+                        ><code>its_locQualityRatingScoreThreshold</code></link>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+                of its parent element (which can be undefined).</para>
         </listitem>
         <listitem>
-            <para>When used in annotations markers
-                <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"><code>&lt;mrk></code></olink> or
-                <olink targetdoc="../../elements/inline/sm.xml" targetptr="sm"><code>&lt;sm></code></olink>:</para>
+            <para>When used in
+                <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>annotations
+                markers <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
+                        ><code>&lt;mrk></code></olink> or <?oxy_custom_end?><olink
+                    targetdoc="../../elements/inline/sm.xml" targetptr="sm"
+                ><code>sm</code></olink>:</para>
             
             
             <para>The value of the <link linkend="itsm_locQualityRatingScoreThreshold"
-                ><code>locQualityRatingScoreThreshold</code></link> attribute of the innermost
-                <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
-                    ><code>&lt;mrk></code></olink>, <olink
-                        targetdoc="../../elements/structural/unit.xml" targetptr="unit"
-                        ><code>&lt;unit&gt;</code></olink>, or <olink
-                            targetdoc="../../elements/candidates/match.xml" targetptr="match"
-                            ><code>&lt;mtc:match></code></olink> element, element, in which the marker
-                in question is located (which can be undefined). </para>
+                        ><code>its_locQualityRatingScoreThreshold</code></link>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+                of the innermost
+                    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
+                    targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
+                    ><code>&lt;mrk></code></olink>, <?oxy_custom_end?><olink
+                    targetdoc="../../elements/structural/unit.xml" targetptr="unit"
+                        ><code>unit</code></olink>, or <olink
+                    targetdoc="../../elements/candidates/match.xml" targetptr="match"
+                        ><code>mtc_matches</code></olink>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>array
+                element<?oxy_custom_end?> in which the marker in question is located (which can be
+                undefined). </para>
             
         </listitem>
         <listitem>
-            <para> When used in the <olink targetdoc="../../elements/candidates/match.xml" targetptr="match"><code>&lt;mtc:match></code></olink> element:</para>
+            <para> When used in the <olink targetdoc="../../elements/candidates/match.xml"
+                    targetptr="match"><code>&lt;mtc_matches</code></olink>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>array
+                element<?oxy_custom_end?>:</para>
             <para>The value is undefined.</para>
         </listitem>
         
@@ -61,40 +88,43 @@
         
     </itemizedlist>
     
-    <warning><para>The <link linkend="itsm_locQualityRatingScoreThreshold">locQualityRatingScoreThreshold</link>
-            attribute is intended to be used in concert with the <olink
+    <warning><para>The <link linkend="itsm_locQualityRatingScoreThreshold"
+                >its_locQualityRatingScoreThreshold</link>
+            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+            is intended to be used in concert with the <olink
                 targetdoc="itsm_locQualityRatingProfileRef.xml"
-                targetptr="itsm_locQualityRatingProfileRef">locQualityRatingProfileRef</olink>
-            attribute that is to provide information on the applicable Quality Assessment Model.
-            Without providing quality assessment model information behind the acceptance threshold,
-            the score between 0 and 100 is very likely to be useless and not interoperable.</para> </warning>
+                targetptr="itsm_locQualityRatingProfileRef">its_locQualityRatingProfileRef</olink>
+            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+            that is to provide information on the applicable Quality Assessment Model. Without
+            providing quality assessment model information behind the acceptance threshold, the
+            score between 0 and 100 is very likely to be useless and not interoperable.</para> </warning>
     
     
     <para><emphasis>Used in:</emphasis>
-        
-        <olink targetdoc="../../elements/structural/file.xml" targetptr="file"><code>&lt;file></code></olink>,
-        <olink targetdoc="../../elements/structural/group.xml" targetptr="group"><code>&lt;group></code></olink>,
-        <olink targetdoc="../../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink>,
-        
-        <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
-            ><code>&lt;mrk></code></olink>, and
-        <olink targetdoc="../../elements/inline/sm.xml"
-            targetptr="sm"><code>&lt;sm></code></olink>.</para>
+        <olink targetdoc="../../elements/structural/file.xml" targetptr="file"
+            ><code>file</code></olink>, <olink targetdoc="../../elements/structural/group.xml"
+            targetptr="group"><code>group</code></olink>, <olink
+            targetdoc="../../elements/structural/unit.xml" targetptr="unit"
+            ><code>unit</code></olink>,
+            <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
+            targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"><code>&lt;mrk></code></olink>,
+        <?oxy_custom_end?>and <olink targetdoc="../../elements/inline/sm.xml" targetptr="sm"
+                ><code>sm</code></olink>.</para>
     
     
     <para>See the <olink targetdoc="../../modules/itsm/specifcation.xml" targetptr="lqrAnnotation"
-            >ITS Localization Quality Rating Annotation</olink> for the normative usage description of this
-        attribute when used inline; advanced Constraints follow from that normative usage
-        description.</para>
+            >ITS Localization Quality Rating Annotation</olink> for the normative usage description
+        of this
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        when used inline; advanced Constraints follow from that normative usage description.</para>
     <para>See <olink targetdoc="../../modules/itsm/Localization_Quality_Rating.xml"
             targetptr="Localization_Quality_Rating_Structural"><code>Localization Quality Rating on
                 Structural Elements</code></olink> for advanced Constraints when used on strcutural
         elements (<olink targetdoc="../../elements/structural/file.xml" targetptr="file"
-                ><code>&lt;file></code></olink>, <olink
-            targetdoc="../../elements/structural/group.xml" targetptr="group"
-                ><code>&lt;group></code></olink>, and <olink
+                ><code>file</code></olink>, <olink targetdoc="../../elements/structural/group.xml"
+            targetptr="group"><code>group</code></olink>, and <olink
             targetdoc="../../elements/structural/unit.xml" targetptr="unit"
-            ><code>&lt;unit></code></olink>).</para>
+            ><code>unit</code></olink>).</para>
     <para>See <olink targetdoc="../../modules/itsm/Localization_Quality_Rating.xml"
             targetptr="Localization_Quality_Rating_Matches"><code>Localization Quality Rating in
                 Translation Candidates Module</code></olink> for advanced Constraints when used

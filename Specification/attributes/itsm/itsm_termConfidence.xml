@@ -6,14 +6,19 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="itsm_termConfidence">
-    <title>termConfidence</title>
+    <title>its_termConfidence</title>
     
-    <para>Terminology Confidence - the <code>termConfidence</code> attribute is the <olink
-            targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> defined
-            <code>termConfidence</code> attribute.</para>
+    <para>Terminology Confidence - the <code>its_termConfidence</code>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        is the <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> defined
+            <code>its_termConfidence</code>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+        number.<?oxy_custom_end?></para>
     
     
-    <para><emphasis>Value description:</emphasis> floating point number between 0 and 1.</para>
+    <para><emphasis>Value description:</emphasis> floating point number between 0.0 and 10,
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>inclusive<?oxy_custom_end?>.</para>
     <para>The number represents the self reported confidence of the application or service providing
         the <ulink url="http://www.w3.org/TR/its20/#terminology">Terminology</ulink> metadata, the higher the better.</para>
     
@@ -22,21 +27,28 @@
     
     
     <para><emphasis>Used in:</emphasis>
-        <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
-            ><code>&lt;mrk></code></olink>, and
-        <olink targetdoc="../../elements/inline/sm.xml"
-            targetptr="sm"><code>&lt;sm></code></olink>.</para>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
+            targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"><code>&lt;mrk></code></olink>,
+        and <?oxy_custom_end?><olink targetdoc="../../elements/inline/sm.xml" targetptr="sm"
+                ><code>sm</code></olink>.</para>
     
     <itemizedlist>
         <title>Constraints</title>
-        <listitem><para>When the attribute <link linkend="itsm_termConfidence"><code>termConfidence</code></link> is
-                set, the element where it is set <glossterm>must</glossterm> be in the scope of an
-                    <olink targetdoc="itsm_annotatorsRef.xml" targetptr="itsm_annotatorsRef"
-                        ><code>its:annotatorsRef</code></olink> attribute with the <olink targetdoc="../../xliff21.xml" targetptr="ITS20">[ITS]</olink><ulink url="https://www.w3.org/TR/its20/#datacategories-overview"
-                            >Data category
-                            identifier</ulink> part of exactly one list value equal to the string
-                    <code>terminology</code>.</para></listitem>
+        <listitem><para>When the <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+                <link linkend="itsm_termConfidence"><code>its_termConfidence</code></link> is set,
+                the element where it is set <glossterm>must</glossterm> be in the scope of an <olink
+                    targetdoc="itsm_annotatorsRef.xml" targetptr="itsm_annotatorsRef"
+                        ><code>its_annotatorsRef</code></olink>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+                with the <olink targetdoc="../../xliff21.xml" targetptr="ITS20">[ITS]</olink><ulink
+                    url="https://www.w3.org/TR/its20/#datacategories-overview">Data category
+                    identifier</ulink> part of exactly one list value equal to the string
+                    <code>"terminology"</code>.</para></listitem>
     </itemizedlist>
-    <para>See the <olink targetdoc="../../modules/itsm/Terminology.xml" targetptr="nonTermAnnotation">ITS Terminology Annotation</olink> for the full normative usage description of this attribute. Other advanced Constraints follow from that normative usage description.</para>
+    <para>See the <olink targetdoc="../../modules/itsm/Terminology.xml"
+            targetptr="nonTermAnnotation">ITS Terminology Annotation</olink> for the full normative
+        usage description of this
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>.
+        Other advanced Constraints follow from that normative usage description.</para>
     
 </section>

@@ -6,29 +6,38 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="itsm_localeFilterList">
-    <title>localeFilterList</title>
+    <title>its_localeFilterList</title>
     
-    <para>LocaleFilterList - the <code>localeFilterList</code> attribute is the
-            <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> defined
-            <code>localeFilterList</code> attribute. See the <ulink
-            url="https://www.w3.org/TR/its20/#localefilter-local">localeFilterList</ulink>
-        definition in the <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
-        specification for details on the purpose of the attribute and permitted values.</para>
-    <para><emphasis>Value description:</emphasis> See the <ulink
-            url="https://www.w3.org/TR/its20/#localefilter-local">localeFilterList</ulink>
+    <para>LocaleFilterList - the <code>its_localeFilterList</code>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        is the <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> defined
+            <code>its_localeFilterList</code>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>.
+        See the <ulink url="https://www.w3.org/TR/its20/#localefilter-local"
+            >its_localeFilterList</ulink> definition in the <olink targetdoc="../xliff21.xml"
+            targetptr="ITS20">[ITS]</olink> specification for details on the purpose of the
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        and permitted values.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+        string.<?oxy_custom_end?></para>
+    <para><emphasis>Value description:</emphasis> see the <ulink
+            url="https://www.w3.org/TR/its20/#localefilter-local">its_localeFilterList</ulink>
         definition in the <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
         specification.</para>
-    <para><emphasis>Default value:</emphasis> "*".</para>
+    <para><emphasis>Default value:</emphasis> "<code>*</code>"
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>(U+002A)<?oxy_custom_end?>.</para>
     
     <para><emphasis>Used in:</emphasis>
-        <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
-            ><code>&lt;mrk></code></olink> and <olink targetdoc="../../elements/inline/sm.xml"
-            targetptr="sm"><code>&lt;sm></code></olink>.</para>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
+            targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"><code>&lt;mrk></code></olink>
+        and <?oxy_custom_end?><olink targetdoc="../../elements/inline/sm.xml" targetptr="sm"
+                ><code>sm</code></olink>.</para>
     
     
-    <para>See the <olink targetdoc="../../modules/itsm/Locale_Filter.xml" targetptr="localeFilterAnnotation"
-        >ITS Locale Filter  Annotation</olink> for the normative usage description of this
-        attribute when used inline; advanced Constraints follow from that normative usage
-        description.</para>
+    <para>See the <olink targetdoc="../../modules/itsm/Locale_Filter.xml"
+            targetptr="localeFilterAnnotation">ITS Locale Filter Annotation</olink> for the
+        normative usage description of this
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        when used inline; advanced Constraints follow from that normative usage description.</para>
     
 </section>

@@ -6,68 +6,114 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="itsm_revTool">
-    <title>revTool</title>
+    <title>its_revTool</title>
     
-    <para>Revision Tool - the <code>revTool</code> attribute is the <olink
-            targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> defined <code>revTool</code>
-        attribute.</para>
+    <para>Revision Tool - the <code>its_revTool</code>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        is the <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> defined
+            <code>its_revTool</code>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+        string.<?oxy_custom_end?></para>
     
     
-    <para><emphasis>Value description:</emphasis> Text</para>
+    <para><emphasis>Value description:</emphasis> text.</para>
     <para>The text string is supposed to identify a software tool translation revision agent as per
             <ulink url="https://www.w3.org/TR/its20/#provenanceDefs">Tool-related revision
             provenance information</ulink>.</para>
     
-    <para><emphasis>Default value:</emphasis> default values for this attribute
-        depend on the element in which it is used:</para>
+    <para><emphasis>Default value:</emphasis> default values for this
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        depend on the
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+        in which it is used:</para>
     
     <itemizedlist>
         <listitem>
-            <para>When used in any admissible element WITH the <olink targetdoc="itsm_provenanceRecordsRef.xml" targetptr="itsm_provenanceRecordsRef"><code>provenanceRecordsRef</code></olink> attribute set:</para>
-            <para>The value of the <link linkend="itsm_revTool"><code>revTool</code></link> attribute
-                of the first <olink targetdoc="../../elements/itsm/provenanceRecord.xml" targetptr="itsm_provenanceRecord"><code>&lt;provenanceRecord></code></olink> element with the <link linkend="itsm_revTool"><code>revTool</code></link> attribute set within the referenced <olink targetdoc="../../elements/itsm/provenanceRecords.xml" targetptr="itsm_provenanceRecords"><code>&lt;provenanceRecords></code></olink> element (which can be undefined).</para>
+            <para>When used in any admissible
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+                WITH the <olink targetdoc="itsm_provenanceRecordsRef.xml"
+                    targetptr="itsm_provenanceRecordsRef"
+                    ><code>its_provenanceRecordsRef</code></olink>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+                set:</para>
+            <para>The value of the <link linkend="itsm_revTool"><code>its_revTool</code></link>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+                of the first <olink targetdoc="../../elements/itsm/provenanceRecord.xml"
+                    targetptr="itsm_provenanceRecord"><code>its_provenanceRecords</code></olink>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>array
+                element<?oxy_custom_end?> with the <link linkend="itsm_revTool"
+                        ><code>its_revTool</code></link>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+                set within the referenced <olink
+                    targetdoc="../../elements/itsm/provenanceRecords.xml"
+                    targetptr="itsm_provenanceRecords"><code>its_provenanceRecords</code></olink>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>array<?oxy_custom_end?>
+                (which can be undefined).</para>
             
         </listitem>
         
         <listitem>
-            <para>When used in any admissible element WITHOUT the <olink targetdoc="itsm_provenanceRecordsRef.xml" targetptr="itsm_provenanceRecordsRef"><code>provenanceRecordsRef</code></olink> attribute set:</para>
-            <para>The default values depening on the element in which it is used:</para>
+            <para>When used in any admissible
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+                WITHOUT the <olink targetdoc="itsm_provenanceRecordsRef.xml"
+                    targetptr="itsm_provenanceRecordsRef"
+                    ><code>its_provenanceRecordsRef</code></olink>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+                set:</para>
+            <para>The default values depening on the
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+                in which it is used:</para>
               
             
     <itemizedlist>
         <listitem>
             <para>When used in <olink targetdoc="../../elements/structural/file.xml"
-                targetptr="file"><code>&lt;file&gt;</code></olink> or <olink
-                    targetdoc="../../elements/itsm/provenanceRecord.xml" targetptr="revision"
-                    ><code>&lt;its:provencanceRecord></code></olink>:</para>
+                            targetptr="file"><code>file</code></olink> or <olink
+                            targetdoc="../../elements/itsm/provenanceRecord.xml"
+                            targetptr="revision"
+                                ><code>its_proven<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>c<?oxy_custom_end?>anceRecords</code></olink>
+                        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>array
+                        element<?oxy_custom_end?>:</para>
             
             <para>The value is undefined.</para>
         </listitem>
         <listitem>
-            <para>When used in any other admissible structural element (<olink
-                targetdoc="../../elements/structural/group.xml" targetptr="group"
-                ><code>&lt;group></code></olink> or <olink
-                    targetdoc="../../elements/structural/unit.xml" targetptr="unit"
-                    ><code>&lt;unit></code></olink>):</para>
-            <para>The value of the <link linkend="itsm_revTool"
-                ><code>revTool</code></link> attribute of its parent element
-                (which can be undefined).</para>
+            <para>When used in any other admissible structural
+                        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+                            (<olink targetdoc="../../elements/structural/group.xml"
+                            targetptr="group"><code>group</code></olink> or <olink
+                            targetdoc="../../elements/structural/unit.xml" targetptr="unit"
+                                ><code>unit</code></olink>):</para>
+            <para>The value of the <link linkend="itsm_revTool"><code>its_revTool</code></link>
+                        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+                        of its parent
+                        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+                        (which can be undefined).</para>
         </listitem>
         <listitem>
-            <para>When used in annotations markers <olink targetdoc="../../elements/inline/mrk.xml"
-                    targetptr="mrk"><code>&lt;mrk></code></olink> or <olink
-                    targetdoc="../../elements/inline/sm.xml" targetptr="sm"
-                    ><code>&lt;sm></code></olink>:</para>
-            <para>The value of the <link linkend="itsm_revTool"><code>revTool</code></link> attribute
-                        of the innermost <olink targetdoc="../../elements/inline/mrk.xml"
-                            targetptr="mrk"><code>&lt;mrk></code></olink>, <olink
+            <para>When used in
+                        <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>annotations
+                        markers <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
+                                ><code>&lt;mrk></code></olink> or <?oxy_custom_end?><olink
+                            targetdoc="../../elements/inline/sm.xml" targetptr="sm"
+                            ><code>sm</code></olink>:</para>
+            <para>The value of the <link linkend="itsm_revTool"><code>its_revTool</code></link>
+                        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+                        of the innermost
+                            <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
+                            targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
+                                ><code>&lt;mrk></code></olink>, <?oxy_custom_end?><olink
                             targetdoc="../../elements/structural/unit.xml" targetptr="unit"
-                                ><code>&lt;unit&gt;</code></olink>, <olink
+                                ><code>unit</code></olink>, <olink
                             targetdoc="../../elements/candidates/match.xml" targetptr="match"
-                                ><code>&lt;mtc:match></code></olink>, or <olink
+                                ><code>mtc_matches</code></olink>
+                        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>array
+                        element<?oxy_custom_end?>, or <olink
                             targetdoc="../../elements/change-tracking/revision.xml"
-                            targetptr="revision"
-                        ><code>&lt;ctr:revision></code></olink><!-- relationship with the ctr:author atribute will be described in teh Provenance category spec <para>In the special case that the parent element of the marker is a <olink
+                            targetptr="revision"><code>ctr_revision</code></olink>
+                        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+                        <!-- relationship with the ctr:author atribute will be described in teh Provenance category spec <para>In the special case that the parent element of the marker is a <olink
                     targetdoc="../../elements/itms/revision.xml" targetptr="revision"
                         ><code>&lt;ctr:revision></code></olink> element, the value is need to be reflected in the value of the <olink targetdoc="../../attributes/change-tracking/ctr_author.xml"
                     targetptr="ctr_author"><code>ctr:author</code></olink> attribute of the parent
@@ -89,18 +135,32 @@
     
     
     <para><emphasis>Used in:</emphasis>
-        <olink targetdoc="../../elements/structural/file.xml" targetptr="file"><code>&lt;file></code></olink>, <olink targetdoc="../../elements/structural/group.xml" targetptr="group"><code>&lt;goup></code></olink>, <olink targetdoc="../../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink>, 
-        <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
-            ><code>&lt;mrk></code></olink>,
-        <olink targetdoc="../../elements/inline/sm.xml"
-            targetptr="sm"><code>&lt;sm></code></olink>, <olink targetdoc="../../elements/itsm/provenanceRecord.xml" targetptr="itsm_provenanceRecord"><code>&lt;provenanceRecord></code></olink>, <olink
-                targetdoc="../../elements/candidates/match.xml" targetptr="match"
-                ><code>&lt;mtc:match></code></olink>, and <olink
-                    targetdoc="../../elements/itms/revision.xml" targetptr="revision"
-                    ><code>&lt;ctr:revision></code></olink>.
-    </para>
+        <olink targetdoc="../../elements/structural/file.xml" targetptr="file"
+            ><code>file</code></olink>, <olink targetdoc="../../elements/structural/group.xml"
+            targetptr="group"
+                ><code>g<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>r<?oxy_custom_end?>oup</code></olink>,
+            <olink targetdoc="../../elements/structural/unit.xml" targetptr="unit"
+            ><code>unit</code></olink>,
+            <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
+            targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"><code>&lt;mrk></code></olink>,
+            <?oxy_custom_end?><olink targetdoc="../../elements/inline/sm.xml" targetptr="sm"
+                ><code>sm</code></olink>, <olink
+            targetdoc="../../elements/itsm/provenanceRecord.xml" targetptr="itsm_provenanceRecord"
+                ><code>its_provenanceRecords</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>array
+        element<?oxy_custom_end?>, <olink targetdoc="../../elements/candidates/match.xml"
+            targetptr="match"><code>mtc_matches</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>array
+        element<?oxy_custom_end?>, and <olink targetdoc="../../elements/itms/revision.xml"
+            targetptr="revision"><code>ctr_revision</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>. </para>
     
     
-    <para>See the <olink targetdoc="../../modules/itsm/Provenance.xml" targetptr="provenanceAnnotation">ITS Provenance Annotation</olink> for the normative usage description of this attribute on inline elements. Advanced Constraints follow from that normative usage description.</para>
+    <para>See the <olink targetdoc="../../modules/itsm/Provenance.xml"
+            targetptr="provenanceAnnotation">ITS Provenance Annotation</olink> for the normative
+        usage description of this
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        on inline elements. Advanced Constraints follow from that normative usage
+        description.</para>
     
 </section>

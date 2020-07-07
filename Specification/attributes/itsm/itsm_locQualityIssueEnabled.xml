@@ -6,35 +6,46 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="itsm_locQualityIssueEnabled">
-    <title>locQualityIssueEnabled</title>
+    <title>its_locQualityIssueEnabled</title>
     
-    <para>Localization Quality Issue Enabled - the <code>locQualityIssueEnabled</code> attribute
-        is the <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
-        defined <code>locQualityIssueEnabled</code> attribute. </para>
+    <para>Localization Quality Issue Enabled - the <code>its_locQualityIssueEnabled</code>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        is the <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> defined
+            <code>its_locQualityIssueEnabled</code>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>. </para>
     <para> This is a flag to enable or disable a particular issue.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+        string.<?oxy_custom_end?></para>
     
     <para><emphasis>Value description:</emphasis>
-        <code>yes</code> when issue enabled , <code>no</code> otherwise. </para>
+        <code>"yes"</code> when issue enabled , <code>"no"</code> otherwise. </para>
         
-    <para><emphasis>Default value:</emphasis> <code>yes</code>.</para>
+    <para><emphasis>Default value:</emphasis>
+        <code>"yes"</code>.</para>
     
-    <note><para>The attribute <link linkend="itsm_locQualityIssueEnabled">locQualityIssueEnabled</link> set
-            to <code>no</code> can be used for instance to disable false positives that were
+    <note><para>The <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+            <link linkend="itsm_locQualityIssueEnabled">its_locQualityIssueEnabled</link> set to
+                <code>"no"</code> can be used for instance to disable false positives that were
             produced by an automated QA tool.</para> </note>
     
     
-    <para><emphasis>Used in:</emphasis>
+    <para><emphasis>Used
+            in:<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?></emphasis>
         <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
-            ><code>&lt;mrk></code></olink> and
-        <olink targetdoc="../../elements/inline/sm.xml"
-            targetptr="sm"><code>&lt;sm></code></olink>, or in <olink targetdoc="../../elements/itsm/itsm_locQualityIssue.xml"
-                targetptr="itsm_locQualityIssue"><code>&lt;locQualityIssue></code></olink>.</para>
+            ><code>&lt;mrk></code></olink> and <?oxy_custom_end?><olink
+            targetdoc="../../elements/inline/sm.xml" targetptr="sm"><code>sm</code></olink>, or in
+            <olink targetdoc="../../elements/itsm/itsm_locQualityIssue.xml"
+            targetptr="itsm_locQualityIssue"><code>its_locQualityIssues</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>array
+        elements<?oxy_custom_end?>.</para>
     
     
-    <para>See the <olink targetdoc="../../modules/itsm/Localization_Quality_Issue.xml" targetptr="lqiAnnotation"
-        >ITS Localization Issue Annotation</olink> for the normative usage description of this
-        attribute when used inline; advanced Constraints follow from that normative usage
-        description. See <olink targetdoc="../../elements/itsm/itsm_locQualityIssue.xml"
-            targetptr="itsm_locQualityIssue"><code>&lt;locQualityIssue></code></olink> for standoff
+    <para>See the <olink targetdoc="../../modules/itsm/Localization_Quality_Issue.xml"
+            targetptr="lqiAnnotation">ITS Localization Issue Annotation</olink> for the normative
+        usage description of this
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        when used inline; advanced Constraints follow from that normative usage description. See
+            <olink targetdoc="../../elements/itsm/itsm_locQualityIssue.xml"
+            targetptr="itsm_locQualityIssue"><code>its_locQualityIssues</code></olink> for standoff
         usage Constraints.</para>
 </section>
