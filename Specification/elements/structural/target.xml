@@ -5,42 +5,56 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="target">
-  <title>target</title>
-  <para>The translation of the sibling <olink targetdoc="source.xml" targetptr="source"><code>&lt;source&gt;</code></olink> element.</para>
+  <title>target <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>TO BE DELETED
+    since anonymous array is used</title><?oxy_custom_end?>
+  <para>The translation of the sibling <olink targetdoc="source.xml" targetptr="source"
+        ><code>&lt;source&gt;</code></olink> element.</para>
   <para><emphasis>Contains:</emphasis></para>
   <simplelist>
     <member>- Text</member>
-    <member>- Zero, one or more <olink targetdoc="../inline/cp.xml" targetptr="cp"><code>&lt;cp&gt;</code></olink> elements</member>
-    <member>- Zero, one or more <olink targetdoc="../inline/ph.xml" targetptr="ph"><code>&lt;ph&gt;</code></olink> elements</member>
-    <member>- Zero, one or more <olink targetdoc="../inline/pc.xml" targetptr="pc"><code>&lt;pc&gt;</code></olink> elements</member>
-    <member>- Zero, one or more <olink targetdoc="../inline/sc.xml" targetptr="sc"><code>&lt;sc&gt;</code></olink> elements</member>
-    <member>- Zero, one or more <olink targetdoc="../inline/ec.xml" targetptr="ec"><code>&lt;ec&gt;</code></olink> elements</member>
-    <member>- Zero, one or more <olink targetdoc="../inline/mrk.xml" targetptr="mrk"><code>&lt;mrk&gt;</code></olink> elements</member>
-    <member>- Zero, one or more <olink targetdoc="../inline/sm.xml" targetptr="sm"><code>&lt;sm&gt;</code></olink> elements</member>
-    <member>- Zero, one or more <olink targetdoc="../inline/em.xml" targetptr="em"><code>&lt;em&gt;</code></olink> elements</member>
+    <member>- Zero, one or more <olink targetdoc="../inline/cp.xml" targetptr="cp"
+          ><code>&lt;cp&gt;</code></olink> elements</member>
+    <member>- Zero, one or more <olink targetdoc="../inline/ph.xml" targetptr="ph"
+          ><code>&lt;ph&gt;</code></olink> elements</member>
+    <member>- Zero, one or more <olink targetdoc="../inline/pc.xml" targetptr="pc"
+          ><code>&lt;pc&gt;</code></olink> elements</member>
+    <member>- Zero, one or more <olink targetdoc="../inline/sc.xml" targetptr="sc"
+          ><code>&lt;sc&gt;</code></olink> elements</member>
+    <member>- Zero, one or more <olink targetdoc="../inline/ec.xml" targetptr="ec"
+          ><code>&lt;ec&gt;</code></olink> elements</member>
+    <member>- Zero, one or more <olink targetdoc="../inline/mrk.xml" targetptr="mrk"
+          ><code>&lt;mrk&gt;</code></olink> elements</member>
+    <member>- Zero, one or more <olink targetdoc="../inline/sm.xml" targetptr="sm"
+          ><code>&lt;sm&gt;</code></olink> elements</member>
+    <member>- Zero, one or more <olink targetdoc="../inline/em.xml" targetptr="em"
+          ><code>&lt;em&gt;</code></olink> elements</member>
   </simplelist>
   <para>Text and inline elements may appear in any order.</para>
   <para><emphasis>Attributes:</emphasis></para>
   <simplelist>
-    <member>- <olink targetdoc="../../attributes/xml_lang.xml" targetptr="xml_lang"><code>xml:lang</code></olink>, <glossterm>optional</glossterm></member>
-    <member>- <olink targetdoc="../../attributes/xml_space.xml" targetptr="xml_space"><code>xml:space</code></olink>, <glossterm>optional</glossterm></member>    
+    <member>- <olink targetdoc="../../attributes/xml_lang.xml" targetptr="xml_lang"
+          ><code>xml:lang</code></olink>, <glossterm>optional</glossterm></member>
+    <member>- <olink targetdoc="../../attributes/xml_space.xml" targetptr="xml_space"
+          ><code>xml:space</code></olink>, <glossterm>optional</glossterm></member>
     <!-- killed to simplify re-segmentation PRs and to make use of BiDi control characters less likely
     <member>- <olink targetdoc="../../attributes/dir.xml" targetptr="dir"><code>dir</code></olink>, <glossterm>optional</glossterm></member>-->
-    <member>- <olink targetdoc="../../attributes/order.xml" targetptr="order"><code>order</code></olink>, <glossterm>optional</glossterm></member>
-  </simplelist>  
+    <member>- <olink targetdoc="../../attributes/order.xml" targetptr="order"
+        ><code>order</code></olink>, <glossterm>optional</glossterm></member>
+  </simplelist>
   <itemizedlist>
     <title>Constraints</title>
     <listitem>
-      <para>When a <link linkend="target"><code>&lt;target></code></link> element is a child of 
-        <olink targetdoc="segment.xml" targetptr="segment"><code>&lt;segment></code></olink> or 
-        <olink targetdoc="ignorable.xml" targetptr="ignorable"><code>&lt;ignorable></code></olink>, 
-        the explicit or inherited value of the <glossterm>optional</glossterm>
-        <olink targetdoc="../../attributes/xml_lang.xml" targetptr="xml_lang"><code>xml:lang</code></olink> 
-        <glossterm>must</glossterm> be equal to the value of the 
-        <olink targetdoc="../../attributes/trgLang.xml" targetptr="trgLang"><code>trgLang</code></olink> 
-        attribute of the enclosing 
-        <olink targetdoc="xliff.xml" targetptr="xliff"><code>&lt;xliff></code></olink> 
-        element.</para>
+      <para>When a <link linkend="target"><code>&lt;target></code></link> element is a child of
+          <olink targetdoc="segment.xml" targetptr="segment"><code>&lt;segment></code></olink> or
+          <olink targetdoc="ignorable.xml" targetptr="ignorable"
+        ><code>&lt;ignorable></code></olink>, the explicit or inherited value of the
+          <glossterm>optional</glossterm>
+        <olink targetdoc="../../attributes/xml_lang.xml" targetptr="xml_lang"
+          ><code>xml:lang</code></olink>
+        <glossterm>must</glossterm> be equal to the value of the <olink
+          targetdoc="../../attributes/trgLang.xml" targetptr="trgLang"><code>trgLang</code></olink>
+        attribute of the enclosing <olink targetdoc="xliff.xml" targetptr="xliff"
+            ><code>&lt;xliff></code></olink> element.</para>
     </listitem>
     <!-- removed per csprd03 235 xml:lang-related text and Translation Candidate module
     <listitem>
@@ -53,5 +67,4 @@
     </listitem>
     -->
   </itemizedlist>
-  
 </section>

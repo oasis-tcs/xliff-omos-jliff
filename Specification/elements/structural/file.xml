@@ -8,10 +8,11 @@
 <section id="file">
     <title>file</title>
     <para>Container for localization material extracted from an entire single document, or another
-        high level self contained logical node in a content structure that cannot be described in the terms of
-        documents.</para>
-        <note><para>Sub-document artifacts such as particular sheets, pages, chapters and similar are better
-            mapped onto the <olink targetdoc="group.xml" targetptr="group"
+        high level self contained logical node in a content structure that cannot be described in
+        the terms of documents.</para>
+    <note>
+        <para>Sub-document artifacts such as particular sheets, pages, chapters and similar are
+            better mapped onto the <olink targetdoc="group.xml" targetptr="group"
                 ><code>group</code></olink>
             <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.
             The <code>file</code>
@@ -24,10 +25,8 @@
                 <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>file</code>
             property <code>"subfiles"</code> with an array of <?oxy_custom_end?><olink
                 targetdoc="group.xml" targetptr="group"><code>group</code></olink>
-            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end?>.</para></note>
-
-
-
+            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end?>.</para>
+    </note>
     <para><emphasis>Contains:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
     <simplelist>
@@ -42,7 +41,6 @@
                     ><code>&lt;group></code></olink> elements in any
             order.<?oxy_custom_end?></member>
     </simplelist>
-
     <para><emphasis>Properties:</emphasis></para>
     <simplelist>
         <member>-
@@ -107,10 +105,10 @@
         <member>- <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>attributes from
             other namespaces, <glossterm>optional</glossterm><?oxy_custom_end?></member>
     </simplelist>
-
     <itemizedlist>
         <title>Constraints</title>
-        <listitem><para>The following <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>optional<?oxy_custom_end?>
+        <listitem>
+            <para>The following <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>optional<?oxy_custom_end?>
                 <firstterm>JLIFF Module</firstterm>
                 <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>properties<?oxy_custom_end?>
                 are
@@ -122,7 +120,7 @@
                     <member>- Zero or one <olink targetdoc="../change-tracking/changeTrack.xml"
                         targetptr="changeTrack"><code>&lt;ctr:changeTrack></code></olink>
                     elements</member>
--->
+                -->
                 <member>-
                         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"fs_fs"</code>,
                     a <olink targetdoc="../attributes/fs.xml" targetptr="fs"
@@ -137,16 +135,20 @@
                         targetptr="fs-mod">Format Style Module</olink> are met.</member>
                 <member>- <code>"mda_metadata"</code>, a <olink targetdoc="../metadata/metadata.xml"
                         targetptr="metadata"><code>mda_metadata</code></olink>
-                    <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object<?oxy_custom_end?></member>
+                    <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object<?oxy_custom_end?>.</member>
                 <member>- <code>"res_resourceData"</code>, a <olink
                         targetdoc="../resourceData/resourceData.xml" targetptr="res_resourceData"
                             ><code>res_resourceData</code></olink>
-                    <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object<?oxy_custom_end?></member>
+                    <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object<?oxy_custom_end?>.</member>
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+                <member>- <code>"ctr_changeTrack"</code>, a <olink
+                        targetdoc="../change-track/changeTrack.xml" targetptr="ctr_changeTrack"
+                            ><code>ctr_changeTrack</code></olink> object<?oxy_custom_end?>.</member>
                 <member>- <code>"slr_profiles"</code>, a <olink
                         targetdoc="../size_restriction/profiles.xml" targetptr="slr_profiles"
-                            ><code>slr_profiles</code></olink> object</member>
+                            ><code>slr_profiles</code></olink> object.</member>
                 <member>- <code>"slr_data"</code>, a <olink targetdoc="../size_restriction/data.xml"
-                        targetptr="slr_data"><code>slr_data</code></olink> object</member>
+                        targetptr="slr_data"><code>slr_data</code></olink> object.</member>
                 <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
                 <member>- <code>"slr_storageRestriction"</code>, a <olink
                         targetdoc="../../attributes/size_restriction/storage-restriction.xml"
@@ -179,26 +181,153 @@
                         Module</olink> are met.</member>
                 <member>- <code>"val_validation"</code>, a <olink
                         targetdoc="../validation/validation.xml" targetptr="validation"
-                            ><code>val_validation</code></olink> object</member>
+                            ><code>val_validation</code></olink> object.</member>
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+                <member>- <code>"its_locQualityRatingProfileRef"</code>, a <olink
+                        targetdoc="../../attributes/itsm/itsm_locaQualityRatingProfileRef.xml"
+                        targetptr="itsm_locQualityRatingProfileRef"
+                            ><code>its_locQualityRatingProfileRef</code></olink> string with IRI
+                    value. <?oxy_custom_end?></member>
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+                <member>- <code>"its_locQualityRatingScore"</code>, a <olink
+                        targetdoc="../../attributes/itsm/itsm_locQualityRatingScore.xml"
+                        targetptr="itsm_locQualityRatingScore"
+                            ><code>its_locQualityRatingScore</code></olink> number between 0 and 100
+                    inclusive. <?oxy_custom_end?></member>
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+                <member>- <code>"its_locQualityRatingScoreThreshold"</code>, a <olink
+                        targetdoc="../../attributes/itsm/itsm_locQualityRatingScoreThreshold.xml"
+                        targetptr="itsm_locQualityRatingScoreThreshold"
+                            ><code>its_locQualityRatingScoreThreshold</code></olink> number between
+                    0 and 100 inclusive. <?oxy_custom_end?></member>
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+                <member>- <code>"its_locQualityRatingVote"</code>, a <olink
+                        targetdoc="../../attributes/itsm/itsm_locQualityRatingVote.xml"
+                        targetptr="itsm_locQualityRatingVote"
+                        ><code>its_locQualityRatingVote</code></olink> integer.
+                    <?oxy_custom_end?></member>
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+                <member>- <code>"its_locQualityRatingVoteThreshold"</code>, a <olink
+                        targetdoc="../../attributes/itsm/itsm_locQualityRatingVoteThreshold.xml"
+                        targetptr="itsm_locQualityRatingVoteThreshold"
+                            ><code>its_locQualityRatingVoteThreshold</code></olink> integer.
+                    <?oxy_custom_end?></member>
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+                <member>- <code>"its_annotatorsRef"</code>, a <olink
+                        targetdoc="../../attributes/itsm/itsm_annotatorsRef.xml"
+                        targetptr="itsm_annotatorsRef"><code>its_annotatorsRef</code></olink>
+                    object. <?oxy_custom_end?></member>
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+                <member>- <code>"its_org"</code>, a <olink
+                        targetdoc="../../attributes/itsm/itsm_org.xml" targetptr="itsm_org"
+                            ><code>its_org</code></olink> string. <?oxy_custom_end?></member>
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+                <member>- <code>"its_orgRef"</code>, a <olink
+                        targetdoc="../../attributes/itsm/itsm_orgRef.xml" targetptr="itsm_orgRef"
+                            ><code>its_orgRef</code></olink> string with IRI value.
+                    <?oxy_custom_end?></member>
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+                <member>- <code>"its_person"</code>, a <olink
+                        targetdoc="../../attributes/itsm/itsm_person.xml" targetptr="itsm_person"
+                            ><code>its_person</code></olink> string. <?oxy_custom_end?></member>
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+                <member>- <code>"its_personRef"</code>, a <olink
+                        targetdoc="../../attributes/itsm/itsm_personRef.xml"
+                        targetptr="itsm_personRef"><code>its_personRef</code></olink> string with
+                    IRI value. <?oxy_custom_end?></member>
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+                <member>- <code>"its_provenanceRecordsRef"</code>, a <olink
+                        targetdoc="../../attributes/itsm/itsm_provenanceRecordsRef.xml"
+                        targetptr="itsm_provenanceRecordsRef"
+                        ><code>its_provenanceRecordsRef</code></olink> string with IRI value.
+                    <?oxy_custom_end?></member>
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+                <member>- <code>"its_revOrg"</code>, a <olink
+                        targetdoc="../../attributes/itsm/itsm_revOrg.xml" targetptr="itsm_revOrg"
+                            ><code>its_revOrg</code></olink> string. <?oxy_custom_end?></member>
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+                <member>- <code>"its_revOrgRef"</code>, a <olink
+                        targetdoc="../../attributes/itsm/itsm_revOrgRef.xml"
+                        targetptr="itsm_revOrgRef"><code>its_revOrgRef</code></olink> string with
+                    IRI value. <?oxy_custom_end?></member>
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+                <member>- <code>"its_revPerson"</code>, a <olink
+                        targetdoc="../../attributes/itsm/itsm_revPerson.xml"
+                        targetptr="itsm_revPerson"><code>its_revPerson</code></olink> string.
+                    <?oxy_custom_end?></member>
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+                <member>- <code>"its_revPersonRef"</code>, a <olink
+                        targetdoc="../../attributes/itsm/itsm_revPersonRef.xml"
+                        targetptr="itsm_revPersonRef"><code>its_revPersonRef</code></olink> string
+                    with IRI value. <?oxy_custom_end?></member>
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+                <member>- <code>"its_revTool"</code>, a <olink
+                        targetdoc="../../attributes/itsm/itsm_revTool.xml" targetptr="itsm_revTool"
+                            ><code>its_revTool</code></olink> string. <?oxy_custom_end?></member>
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+                <member>- <code>"its_revToolRef"</code>, a <olink
+                        targetdoc="../../attributes/itsm/itsm_revToolRef.xml"
+                        targetptr="itsm_revToolRef"><code>its_revToolRef</code></olink> string with
+                    IRI value. <?oxy_custom_end?></member>
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+                <member>- <code>"its_tool"</code>, a <olink
+                        targetdoc="../../attributes/itsm/itsm_tool.xml" targetptr="itsm_tool"
+                            ><code>its_tool</code></olink> string. <?oxy_custom_end?></member>
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+                <member>- <code>"its_toolRef"</code>, a <olink
+                        targetdoc="../../attributes/itsm/itsm_toolRef.xml" targetptr="itsm_toolRef"
+                            ><code>its_toolRef</code></olink> string with IRI value.
+                    <?oxy_custom_end?></member>
                 <member>-
                         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"its_provenanceRecords"</code>,
                     a non-empty array of<?oxy_custom_end?>
                     <olink targetdoc="../itsm/itsm_provenanceRecords.xml"
                         targetptr="itsm_provenanceRecords"
-                        ><code>its_provenanceRecords</code></olink> objects</member>
+                        ><code>its_provenanceRecords</code></olink> objects.</member>
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+                <member>- <code>"its_taClassRef"</code>, a <olink
+                        targetdoc="../../attributes/itsm/itsm_taClassRef.xml"
+                        targetptr="itsm_taClassRef"><code>its_taClassRef</code></olink> string with
+                    IRI value. <?oxy_custom_end?></member>
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+                <member>- <code>"its_taConfidence"</code>, a <olink
+                        targetdoc="../../attributes/itsm/itsm_taConfidence.xml"
+                        targetptr="itsm_taConfidence"><code>its_taConfidence</code></olink> number
+                    between 0 and 1 inclusive. <?oxy_custom_end?></member>
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+                <member>- <code>"its_taSource"</code>, a <olink
+                        targetdoc="../../attributes/itsm/itsm_taSource.xml"
+                        targetptr="itsm_taSource"><code>its_taSource</code></olink> string.
+                    <?oxy_custom_end?></member>
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+                <member>- <code>"its_taIdent"</code>, a <olink
+                        targetdoc="../../attributes/itsm/itsm_taIdent.xml" targetptr="itsm_taIdent"
+                            ><code>its_taIdent</code></olink> string. <?oxy_custom_end?></member>
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+                <member>- <code>"its_taIdentRef"</code>, a <olink
+                        targetdoc="../../attributes/itsm/itsm_taIdentRef.xml"
+                        targetptr="itsm_taIdentRef"><code>its_taIdentRef</code></olink> string with
+                    IRI value. <?oxy_custom_end?></member>
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+                <member>- <code>"its_domains"</code>, a <olink
+                        targetdoc="../../attributes/itsm/itsm_domains.xml" targetptr="itsm_domains"
+                            ><code>its_domains</code></olink> a non-empty array of non-empty strings
+                    not containing the <code>,</code> chatacter (U+002C).
+                    <?oxy_custom_end?></member>
             </simplelist>
         </listitem>
         <listitem>
             <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>The following
                 optional <emphasis>JLIFF Extension</emphasis> property is allowed:<simplelist>
-                    <member>- <code>"userdata"</code>, a <olink targetdoc="../../extensions/extensions.xml" targetptr="extensions"><code>userdata</code></olink>
-                        object<?oxy_custom_end?></member>
+                    <member>- <code>"userdata"</code>, a <olink
+                            targetdoc="../../extensions/extensions.xml" targetptr="extensions"
+                                ><code>userdata</code></olink> object<?oxy_custom_end?>.</member>
                 </simplelist></para>
         </listitem>
         <listitem>
-            <para><firstterm>Module</firstterm> and <emphasis>Extension</emphasis>
-                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>properties<?oxy_custom_end?>
-                <glossterm>may</glossterm> be used in any order.</para>
+            <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><firstterm>Module</firstterm>
+                and <emphasis>Extension</emphasis> properties <glossterm>may</glossterm> be used in
+                any order.<?oxy_custom_end?></para>
         </listitem>
         <listitem>
             <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>The following
@@ -228,8 +357,7 @@
                     met.<?oxy_custom_end?></member>
             </simplelist>
         </listitem>
-
-    <!-- This was moved to the id attribute together with all other id uniqueness constraints
+        <!-- This was moved to the id attribute together with all other id uniqueness constraints
 
         <listitem><para>The value of the <glossterm>optional</glossterm>
             <olink targetdoc="../../attributes/id.xml" targetptr="id"><code>id</code></olink>
@@ -239,7 +367,6 @@
             <olink targetdoc="xliff.xml" targetptr="xliff"><code>&lt;xliff></code></olink>
             element.</para>
         </listitem>
-
     -->
     </itemizedlist>
 </section>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >                         
+                         ]>
+<section id="xliff">
+    <title>anonymous <code>jliff</code> object with property
+            <code>"files|subfiles|subgroups|subunits"</code></title>
+    <para>Root
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+        for JLIFF documents.</para>
+    <para><emphasis>Contains:</emphasis>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
+    <simplelist>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
+        <member>- One or more <olink targetdoc="structural" targetptr="file"
+                ><code>&lt;file></code></olink> elements<?oxy_custom_end?></member>
+    </simplelist>
+    
+    
+    <para><emphasis>Properties:</emphasis></para>
+    <simplelist>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
+        <member>- <olink targetdoc="../../attributes/version.xml" targetptr="version"
+                    ><code>version</code></olink>, <glossterm>required</glossterm></member>
+        <member>- <olink targetdoc="../../attributes/srcLang.xml" targetptr="srcLang"
+                    ><code>srcLang</code></olink>, <glossterm>required</glossterm></member>
+        <member>- <olink targetdoc="../../attributes/trgLang.xml" targetptr="trgLang"
+                    ><code>trgLang</code></olink>, <glossterm>optional</glossterm></member>
+        <member>- <olink targetdoc="../../attributes/xml_space.xml" targetptr="xml_space"
+                    ><code>xml:space</code></olink>, <glossterm>optional</glossterm></member>
+        <member>- attributes from other namespaces,
+        <glossterm>optional</glossterm></member><?oxy_custom_end?>
+    </simplelist>
+    
+    <itemizedlist>
+        <title>Constraints</title>
+        <listitem>
+            <para>The <olink targetdoc="../../attributes/trgLang.xml" targetptr="trgLang"
+                        ><code>"trgLang"</code></olink> property is <glossterm>required</glossterm>
+                if and only if the <firstterm>JLIFF Document</firstterm> contains <olink
+                    targetdoc="target.xml" targetptr="target"><code>"target"</code></olink> array
+                property in <olink targetdoc="segment.xml" targetptr="segment"
+                    ><code>segment</code></olink> or <olink targetdoc="ignorable.xml"
+                    targetptr="ignorable"><code>ignorable</code></olink>. </para>
+        </listitem>
+    </itemizedlist>
+</section>

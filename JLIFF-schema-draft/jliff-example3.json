@@ -9,8 +9,10 @@
       "subfiles": [
         {
           "id": "1",
+          "kind": "unit",
           "subunits": [
             {
+              "kind": "segment",
               "source": [ { "text": "Quetzal" } ],
               "target": [ { "text": "Quetzal" } ]
             }
@@ -37,8 +39,10 @@
         },
         {
           "id": "2",
+          "kind": "unit",
           "subunits": [
             {
+              "kind": "segment",
               "source": [ { "text": "An application to manipulate and process XLIFF documents" } ],
               "target": [ { "text": "XLIFF 文書を編集、または処理 するアプリケーションです。" } ]
             }
@@ -46,8 +50,10 @@
         },
         {
           "id": "3",
+          "kind": "unit",
           "subunits": [
             {
+              "kind": "segment",
               "source": [ { "text": "XLIFF Data Manager" } ],
               "target": [ { "text": "XLIFF データ・マネージャ" } ]
             }

@@ -10,12 +10,14 @@
 
   <para>subState - indicates a user-defined status for the <olink
       targetdoc="../elements/structural/segment.xml" targetptr="segment"
-        ><code>&lt;segment&gt;</code></olink> element.</para>
+      ><code>segment</code></olink>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
 
   <para><emphasis>Value description:</emphasis></para>
 
-  <para>The value is composed of a prefix and a sub-value separated by a
-  character <code>:</code> (U+003A).</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>A string
+    <?oxy_custom_end?>value composed of a prefix and a sub-value separated by a character
+      <code>:</code> (U+003A).</para>
 
   <para>The prefix is a string uniquely identifying a collection of values for
   a specific authority. The sub-value is any string value defined by an
@@ -27,17 +29,18 @@
 
   <para><emphasis>Default value:</emphasis> undefined</para>
 
-  <para><emphasis>Used in:</emphasis> <olink
-  targetdoc="../elements/structural/segment.xml"
-  targetptr="segment"><code>&lt;segment&gt;</code></olink></para>
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../elements/structural/segment.xml" targetptr="segment"
+      ><code>segment</code></olink></para>
 
   <itemizedlist>
     <title>Constraints</title>
 
     <listitem>
-      <para>If the attribute <olink targetdoc="subState.xml" targetptr="substate"
-            ><code>subState</code></olink> is used, the attribute <olink targetdoc="state.xml"
-          targetptr="state"><code>state</code></olink>
+      <para>If the <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        <olink targetdoc="subState.xml" targetptr="substate"><code>subState</code></olink> is used,
+        the <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        <olink targetdoc="state.xml" targetptr="state"><code>state</code></olink>
         <glossterm>must</glossterm> be explicitly set.</para>
     </listitem>
     </itemizedlist>
@@ -46,8 +49,10 @@
       
   
     <listitem>
-      <para><firstterm>Writers</firstterm> updating the attribute <olink targetdoc="state.xml"
-        targetptr="state"><code>state</code></olink> <glossterm>must</glossterm> also update or delete <link  linkend="substate"><code>subState</code></link>.</para>
+      <para><firstterm>Writers</firstterm> updating the <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        <olink targetdoc="state.xml" targetptr="state"><code>state</code></olink>
+        <glossterm>must</glossterm> also update or delete <link linkend="substate"
+            ><code>subState</code></link>.</para>
       </listitem>
   </itemizedlist>
 </section>

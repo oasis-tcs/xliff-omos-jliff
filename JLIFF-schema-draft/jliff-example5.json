@@ -9,9 +9,10 @@
             "subgroups": [
                 {
                     "id": "u2",
+                    "kind": "unit",
                     "subunits": [
                         {
-                            "kind": "ignorable",
+                            "kind": "segment",
                             "source": [
                                 { "text": "Press the " },
                                 { "id": "m1", "kind": "sm", "type": "term" },

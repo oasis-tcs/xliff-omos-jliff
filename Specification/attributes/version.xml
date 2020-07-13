@@ -6,16 +6,23 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="version">
-    <title>version</title>
+    <title>version <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>TO DELETE &amp;
+        REPLACE with jliff<?oxy_custom_end?></title>
 
-    <para>XLIFF Version - is used to specify the Version of the <firstterm>XLIFF Document</firstterm>. This corresponds to
-        the Version number of the XLIFF specification that the <firstterm>XLIFF Document</firstterm> adheres to.</para>
+    <para>JLIFF jliff string - is used to specify the version of the <firstterm>JLIFF
+            Document</firstterm>. This string corresponds to the version number of the JLIFF
+        specification that the <firstterm>JLIFF Document</firstterm> adheres to.</para>
 
-    <para><emphasis>Value description:</emphasis> Text.</para>
+    <para><emphasis>Value description:</emphasis>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end?>,
+        e.g. <code>"2.1"</code>.</para>
 
     <para><emphasis>Default value:</emphasis> undefined</para>
 
-    <para><emphasis>Used in:</emphasis> <olink targetdoc="../elements/structural/xliff.xml" targetptr="xliff"><code>&lt;xliff></code></olink>.</para>
+    <para><emphasis>Used in:</emphasis>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?><olink
+            targetdoc="../elements/structural/jliff.xml" targetptr="jliff"
+            ><code>jliff</code></olink>.<?oxy_custom_end?></para>
 
 </section>
 

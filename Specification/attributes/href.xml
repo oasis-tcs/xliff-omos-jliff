@@ -6,22 +6,16 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="href">
-    <title><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>ref<?oxy_custom_end?></title>
-    
+    <title>h<?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>ref<?oxy_custom_end?></title>
     <para>ref - a pointer to the location of an external skeleton file pertaining to the enclosing
             <olink targetdoc="../elements/structural/file.xml" targetptr="file"
             ><code>file</code></olink>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
     <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
         string.<?oxy_custom_end?></para>
-    
     <para><emphasis>Value description:</emphasis> IRI.</para>
-        
     <para><emphasis>Default value:</emphasis> undefined.</para>
-    
     <para><emphasis>Used in:</emphasis>
         <olink targetdoc="../elements/structural/skeleton.xml" targetptr="skeleton"
                 ><code>skeleton</code></olink>.</para>
-    
 </section>
-

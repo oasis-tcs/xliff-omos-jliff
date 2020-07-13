@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="element">
+  <title><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>anonymous element
+    object <code>"text"</code> or <code>"kind" : "ec|em|ph|sc|sm"</code><?oxy_custom_end?></title>
+
+  <para>Represents a Unicode character that is invalid in XML.</para>
+
+  <para><emphasis>Contains:</emphasis>
+    <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object with property <olink
+      targetdoc="text.xml" targetptr="text"><code>"text"</code></olink> or <olink targetdoc="ec.xml"
+      targetptr="ec"><code>"kind" : "ec"</code></olink>, <olink targetdoc="em.xml" targetptr="em"
+        ><code>"kind" : "em"</code></olink>, <olink targetdoc="ph.xml" targetptr="ph"><code>"kind" :
+        "ph"</code></olink>, <olink targetdoc="sc.xml" targetptr="sc"><code>"kind" :
+      "sc"</code></olink>, or <olink targetdoc="sm.xml" targetptr="sm"><code>"kind" :
+      "sm"</code></olink>.<?oxy_custom_end?></para>
+</section>

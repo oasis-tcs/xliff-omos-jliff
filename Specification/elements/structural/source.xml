@@ -6,7 +6,8 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="source">
-    <title>source</title>
+    <title>source <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>TO BE DELETED
+        since anonymous array is used<?oxy_custom_end?></title>
     <para>Portion of text to be translated.</para>
     <para><emphasis>Contains:</emphasis></para>
     <simplelist>

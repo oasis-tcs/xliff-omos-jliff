@@ -6,14 +6,18 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="itsm_taSource">
-    <title>taSource</title>
+    <title>its_taSource</title>
     
-    <para>Text Analysis Source - the <code>taSource</code> attribute is the <olink
-            targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> defined <code>taSource</code>
-        attribute.</para>
+    <para>Text Analysis Source - the <code>its_taSource</code>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        is the <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> defined
+            <code>its_taSource</code>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+        string.<?oxy_custom_end?></para>
     
     
-    <para><emphasis>Value description:</emphasis> text string</para>
+    <para><emphasis>Value description:</emphasis> text.</para>
     <para>The text string is supposed to be a human or machine redable name of a collection of text
         analysis concept resources, in the sense of an <ulink
             url="http://www.w3.org/TR/its20/#textAnalysis-info-pieces"> identifier of the collection
@@ -24,18 +28,23 @@
     
     
     <para><emphasis>Used in:</emphasis>
-        <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
-            ><code>&lt;mrk></code></olink>, and
-        <olink targetdoc="../../elements/inline/sm.xml"
-            targetptr="sm"><code>&lt;sm></code></olink>.</para>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
+            targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"><code>&lt;mrk></code></olink>,
+        and <?oxy_custom_end?><olink targetdoc="../../elements/inline/sm.xml" targetptr="sm"
+                ><code>&lt;sm></code></olink>.</para>
     
     <itemizedlist>
         <title>Constraints</title>
-        <listitem><para>When the attribute <link linkend="itsm_taSource"><code>taSource</code></link> is set, the
-                    <olink targetdoc="itsm_taIdent.xml" targetptr="itsm_taIdent"
-                        ><code>taIdent</code></olink> attribute <glossterm>must</glossterm> be set
-                as well.</para></listitem>
+        <listitem><para>When the <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+                <link linkend="itsm_taSource"><code>its_taSource</code></link> is set, the <olink
+                    targetdoc="itsm_taIdent.xml" targetptr="itsm_taIdent"
+                    ><code>its_taIdent</code></olink>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+                <glossterm>must</glossterm> be set as well.</para></listitem>
     </itemizedlist>
-    <para>See the <olink targetdoc="../../modules/itsm/Text_Analysis.xml" targetptr="taAnnotation">ITS Text Analysis Annotation</olink> for the full normative usage description of this attribute. Other advanced Constraints follow from that normative usage description.</para>
+    <para>See the <olink targetdoc="../../modules/itsm/Text_Analysis.xml" targetptr="taAnnotation"
+            >ITS Text Analysis Annotation</olink> for the full normative usage description of this
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>.
+        Other advanced Constraints follow from that normative usage description.</para>
     
 </section>

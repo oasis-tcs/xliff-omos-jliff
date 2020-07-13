@@ -6,84 +6,112 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="itsm_provenanceRecordsRef">
-    <title>provenanceRecordsRef</title>
+    <title>its_provenanceRecordsRef</title>
     
-    <para>Provenance Records Standoff Reference - the <code>provenanceRecordsRef</code> attribute
-        is the <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
-        defined <code>provenanceRecordsRef</code> attribute.</para>
-    <para>This attribute references the collection of Provenance Records that pertain to the content
-        span or structural element content from where the reference is declared.</para>
+    <para>Provenance Records Standoff Reference - the <code>its_provenanceRecordsRef</code>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        is the <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> defined
+            <code>its_provenanceRecordsRef</code>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>.</para>
+    <para>This
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        references the collection of Provenance Records that pertain to the content span or
+        structural element content from where the reference is declared.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+        string.<?oxy_custom_end?></para>
     
-    <para><emphasis>Value description:</emphasis> IRI</para>
+    <para><emphasis>Value description:</emphasis> IRI.</para>
         
     <para><emphasis>Default value:</emphasis> undefined.</para>
     
     
     <para><emphasis>Used in:</emphasis>
-        <olink targetdoc="../../elements/structural/file.xml" targetptr="file"><code>&lt;file></code></olink>, <olink targetdoc="../../elements/structural/group.xml" targetptr="group"><code>&lt;goup></code></olink>, <olink targetdoc="../../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink>, 
-        <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
-            ><code>&lt;mrk></code></olink>,
-        <olink targetdoc="../../elements/inline/sm.xml"
-            targetptr="sm"><code>&lt;sm></code></olink>, <olink
-                targetdoc="../../elements/candidates/match.xml" targetptr="match"
-                ><code>&lt;mtc:match></code></olink>, and <olink
-                    targetdoc="../../elements/itms/revision.xml" targetptr="revision"
-                    ><code>&lt;ctr:revision></code></olink>.
-        
-    </para>
+        <olink targetdoc="../../elements/structural/file.xml" targetptr="file"
+            ><code>file</code></olink>, <olink targetdoc="../../elements/structural/group.xml"
+            targetptr="group"><code>group</code></olink>, <olink
+            targetdoc="../../elements/structural/unit.xml" targetptr="unit"
+            ><code>unit</code></olink>,
+            <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
+            targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"><code>&lt;mrk></code></olink>,
+            <?oxy_custom_end?><olink targetdoc="../../elements/inline/sm.xml" targetptr="sm"
+                ><code>sm</code></olink>, <olink targetdoc="../../elements/candidates/match.xml"
+            targetptr="match"><code>mtc_matches</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>array
+        elements<?oxy_custom_end?>, and <olink targetdoc="../../elements/itms/revision.xml"
+            targetptr="revision"><code>ctr_revision</code></olink>. </para>
     
-    <para>See the <olink targetdoc="../../modules/itsm/Provenance.xml" targetptr="provenanceAnnotation"
-            >ITS Localization Issue Annotation</olink> for the normative usage description of this
-        attribute inline. </para>
+    <para>See the <olink targetdoc="../../modules/itsm/Provenance.xml"
+            targetptr="provenanceAnnotation">ITS Localization Issue Annotation</olink> for the
+        normative usage description of this
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        inline. </para>
     <itemizedlist>
         <title>Constraints</title>
         <listitem>
-            <para>Multiple <link linkend="itsm_provenanceRecordsRef">provenanceRecordsRef</link>
-                attributes <glossterm>may</glossterm> reference the same <olink targetdoc="../../elements/itsm/itsm_provenanceRecords.xml"
-                    targetptr="itsm_provenanceRecords"><code>&lt;provenanceRecords></code></olink>
-                element.</para>
+            <para>Multiple <link linkend="itsm_provenanceRecordsRef">its_provenanceRecordsRef</link>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>propert<?oxy_custom_end?>ies
+                    <glossterm>may</glossterm> reference the same <olink
+                    targetdoc="../../elements/itsm/itsm_provenanceRecords.xml"
+                    targetptr="itsm_provenanceRecords"><code>its_provenanceRecords</code></olink>
+                array elements.</para>
         </listitem>
         <listitem>
-            <para>In case the <link linkend="itsm_provenanceRecordsRef">provenanceRecordsRef</link>
-                attribute is used on an <olink targetdoc="../../elements/inline/mrk.xml"
-                    targetptr="mrk"><code>&lt;mrk></code></olink> or <olink
-                    targetdoc="../../elements/inline/sm.xml" targetptr="sm"
-                    ><code>&lt;sm></code></olink> element, <itemizedlist>
+            <para>In case the <link linkend="itsm_provenanceRecordsRef"
+                    >its_provenanceRecordsRef</link>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+                is used on a <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>n
+                    <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
+                        ><code>&lt;mrk></code></olink> or <?oxy_custom_end?><olink
+                    targetdoc="../../elements/inline/sm.xml" targetptr="sm"><code>sm</code></olink>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>, <itemizedlist>
                     <listitem>
                         <para>The value of the <link linkend="itsm_provenanceRecordsRef"
-                                >provenanceRecordsRef</link> attribute <glossterm>must</glossterm>
-                            be an IRI referencing a <olink
+                                >its_provenanceRecordsRef</link>
+                            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+                            <glossterm>must</glossterm> be an IRI referencing a <olink
                                 targetdoc="../../elements/itsm/itsm_provenanceRecords.xml"
                                 targetptr="itsm_provenanceRecords"
-                                    ><code>&lt;provenanceRecords></code></olink> element within the
-                            innermost enclosing <olink
+                                    ><code>its_provenanceRecords</code></olink> array element within
+                            the innermost enclosing <olink
                                 targetdoc="../../elements/structural/unit.xml" targetptr="unit"
-                                    ><code>&lt;unit></code></olink>, <olink
+                                    ><code>unit</code></olink>, <olink
                                 targetdoc="../../elements/candidates/match.xml" targetptr="match"
-                                    ><code>&lt;mtc:match></code></olink>, or <olink
+                                    ><code>mtc_matches</code></olink>
+                            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>array
+                            element<?oxy_custom_end?>, or <olink
                                 targetdoc="../../elements/itms/revision.xml" targetptr="revision"
-                                    ><code>&lt;ctr:revision></code></olink>element. </para>
+                                    ><code>ctr_revision</code></olink><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.
+                        </para>
                     </listitem>
                 </itemizedlist></para>
             
         </listitem>
         
         <listitem>
-            <para>In case the <link linkend="itsm_provenanceRecordsRef">provenanceRecordsRef</link>
-                attribute is used on a <olink targetdoc="../../elements/structural/file.xml"
-                    targetptr="file"><code>&lt;file></code></olink>, <olink
+            <para>In case the <link linkend="itsm_provenanceRecordsRef"
+                    >its_provenanceRecordsRef</link>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+                is used on a <olink targetdoc="../../elements/structural/file.xml" targetptr="file"
+                        ><code>file</code></olink>, <olink
                     targetdoc="../../elements/structural/group.xml" targetptr="group"
-                        ><code>&lt;goup></code></olink>, or <olink
+                        ><code>group</code></olink>, or <olink
                     targetdoc="../../elements/structural/unit.xml" targetptr="unit"
-                        ><code>&lt;unit></code></olink> element, <itemizedlist>
+                        ><code>unit</code></olink>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>, <itemizedlist>
                     <listitem>
                         <para>The value of the <link linkend="itsm_provenanceRecordsRef"
-                                >provenanceRecordsRef</link> attribute <glossterm>must</glossterm>
-                            be an IRI referencing a <olink
+                                >its_provenanceRecordsRef</link>
+                            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+                            <glossterm>must</glossterm> be an IRI referencing a <olink
                                 targetdoc="../../elements/itsm/itsm_provenanceRecords.xml"
                                 targetptr="itsm_provenanceRecords"
-                                    ><code>&lt;provenanceRecords></code></olink> element within the
-                            same element or its ancestor element. </para>
+                                    ><code>its_provenanceRecords</code></olink>
+                            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>array
+                            element<?oxy_custom_end?> within the same
+                            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+                            or its ancestor
+                            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.
+                        </para>
                     </listitem>
                 </itemizedlist></para>
             
@@ -94,13 +122,15 @@
         <title>Processing Requirements</title>
         <listitem>
             <para><firstterm>Modifiers</firstterm> removing the last <link
-                    linkend="itsm_provenanceRecordsRef"><code>provenanceRecordsRef</code></link>
-                attribute referencing a <olink targetptr="itsm_provenanceRecords"
+                    linkend="itsm_provenanceRecordsRef"><code>its_provenanceRecordsRef</code></link>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+                referencing a <olink targetptr="itsm_provenanceRecords"
                     targetdoc="../../elements/itsm/itsm_provenanceRecords.xml"
-                        ><code>provenanceRecords</code></olink> element <glossterm>must</glossterm>
-                delete that <olink targetptr="itsm_provenanceRecords"
+                        ><code>its_provenanceRecords</code></olink> array
+                    <glossterm>must</glossterm> delete that <olink
+                    targetptr="itsm_provenanceRecords"
                     targetdoc="../../elements/itsm/itsm_provenanceRecords.xml"
-                        ><code>provenanceRecords</code></olink> element.</para>
+                        ><code>its_provenanceRecords</code></olink> array element.</para>
         </listitem>
         
     </itemizedlist>

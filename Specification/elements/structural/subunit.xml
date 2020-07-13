@@ -5,51 +5,52 @@
 %xinclude;
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
-<section id="segment">
+<section id="subunit">
   <title>anonymous subunit object "kind" : "segment|ignorable"</title>
-  <para>This type is a union of two subtypes governed by the value of the key
-    <code>kind</code>.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>This type is a union of
+    two subtypes governed by the value of the key <code>kind</code>.<?oxy_custom_end?></para>
 
-  <para>This object is a container to hold in its aligned pair of children objects the minimum
-    portion of translatable source text and its <firstterm>Translation</firstterm> in the given
-      <olink targetdoc="../../segmentation/segmentation.xml" targetptr="segmentation"
-      >Segmentation</olink>.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>This object is an
+    anonymous container to hold in its aligned pair of children objects the minimum portion of
+    translatable source text and its <firstterm>Translation</firstterm> in the given <olink
+      targetdoc="../../segmentation/segmentation.xml" targetptr="segmentation"
+    >Segmentation</olink>.<?oxy_custom_end?></para>
 
-  <para><emphasis>Properties:</emphasis></para>
+  <para><emphasis>Contains:</emphasis>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object with property <olink
+      targetdoc="segment.xml" targetptr="segment"><code>"kind" : "segment"</code></olink> or <olink
+      targetdoc="ignorable.xml" targetptr="ignorable"><code>"kind" :
+    "ignorable"</code></olink><?oxy_custom_end?></para>
 
   <simplelist>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
     <member>- <code>kind</code>, <glossterm>required</glossterm></member>
     <member> - <olink targetdoc="../../attributes/id.xml" targetptr="id"><code>id</code></olink>,
         <glossterm>optional</glossterm></member>
     <member>- One <olink targetdoc="source.xml" targetptr="source"><code>source</code></olink>
       object</member>
-
-    <member>- Zero or one <olink targetdoc="target.xml"
-    targetptr="target"><code>&lt;target&gt;</code></olink> element</member>
+    <member>- Zero or one <olink targetdoc="target.xml" targetptr="target"
+          ><code>&lt;target&gt;</code></olink> element<?oxy_custom_end?></member>
   </simplelist>
 
-  <para><emphasis>Attributes:</emphasis></para>
+  <para><emphasis>Properties:</emphasis></para>
 
   <simplelist>
     <!-- This flag got killed in the August 20 2013 meeting <member>- <olink targetdoc="../../attributes/approved.xml"
       targetptr="approved"><code>approved</code></olink>, <glossterm>required</glossterm></member>-->
-    
-    <member/>
-    
-    <member>- <olink targetdoc="../../attributes/canResegment.xml"
-      targetptr="canResegment"><code>canResegment</code></olink>, <glossterm>optional</glossterm></member>
-<!-- translate was killed on segment to simplify translatability state algorithm and to simplify re-segmentation PRs,
+    <member><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?></member>
+    <member>- <olink targetdoc="../../attributes/canResegment.xml" targetptr="canResegment"
+          ><code>canResegment</code></olink>,
+      <glossterm>optional</glossterm><?oxy_custom_end?></member>
+    <!-- translate was killed on segment to simplify translatability state algorithm and to simplify re-segmentation PRs,
       the expressivity is the same due to inline markers
     <member>- <olink targetdoc="../../attributes/translate.xml"
     targetptr="translate"><code>translate</code></olink>, <glossterm>optional</glossterm></member>-->
-    
-    
-    <member>- <olink targetdoc="../../attributes/state.xml"
-    targetptr="state"><code>state</code></olink>, <glossterm>optional</glossterm></member>
-
-    <member>- <olink targetdoc="../../attributes/subState.xml"
-    targetptr="substate"><code>subState</code></olink>, <glossterm>optional</glossterm></member>
-
+    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
+    <member>- <olink targetdoc="../../attributes/state.xml" targetptr="state"
+        ><code>state</code></olink>, <glossterm>optional</glossterm></member>
+    <member>- <olink targetdoc="../../attributes/subState.xml" targetptr="substate"
+          ><code>subState</code></olink>, <glossterm>optional</glossterm><?oxy_custom_end?></member>
   </simplelist>
 
   <!--  The uniqueness scope is described on the id attribute 

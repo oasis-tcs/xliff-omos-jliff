@@ -39,35 +39,38 @@
 
   <para><emphasis>Default value:</emphasis> undefined</para>
 
-  <para><emphasis>Used in:</emphasis> <olink
-  targetdoc="../elements/inline/pc.xml"
-  targetptr="pc"><code>&lt;pc&gt;</code></olink>, <olink
-  targetdoc="../elements/inline/sc.xml"
-  targetptr="sc"><code>&lt;sc&gt;</code></olink>, <olink
-  targetdoc="../elements/inline/ec.xml"
-  targetptr="ec"><code>&lt;ec&gt;</code></olink> and <olink
-  targetdoc="../elements/inline/ph.xml"
-  targetptr="ph"><code>&lt;ph&gt;</code></olink></para>
+  <para><emphasis>Used in:</emphasis>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
+      targetdoc="../elements/inline/pc.xml" targetptr="pc"><code>&lt;pc&gt;</code></olink>,
+      <?oxy_custom_end?><olink targetdoc="../elements/inline/sc.xml" targetptr="sc"
+      ><code>sc</code></olink>, <olink targetdoc="../elements/inline/ec.xml" targetptr="ec"
+        ><code>ec</code></olink> and <olink targetdoc="../elements/inline/ph.xml" targetptr="ph"
+        ><code>ph</code></olink></para>
 
   <itemizedlist>
     <title>Constraints</title>
 
     <listitem>
-      <para>If the attribute <olink targetdoc="subtype.xml" targetptr="subtype"
-          ><code>subType</code></olink> is used, the attribute <olink targetdoc="type.xml"
-          targetptr="type"><code>type</code></olink>
+      <para>If the <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        <olink targetdoc="subtype.xml" targetptr="subtype"><code>subType</code></olink> is used, the <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        <olink targetdoc="type.xml" targetptr="type"><code>type</code></olink>
         <glossterm>must</glossterm> be specified as well.</para>
     </listitem>
     <listitem>
-      <para>The reserved <code>xlf:</code> prefixed values map onto the <olink targetdoc="type.xml" targetptr="type"><code>type</code></olink> attribute values as follows:</para>
+      <para>The reserved <code>xlf:</code> prefixed values map onto the <olink targetdoc="type.xml"
+          targetptr="type"><code>type</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        values as follows:</para>
       <simplelist>
         <member> For <code>xlf:b</code>, <code>xlf:i</code>, <code>xlf:u</code>,
           <code>xlf:lb</code>, and <code>xlf:pb</code>, the <glossterm>required</glossterm> value of
-          the <olink targetdoc="type.xml" targetptr="type"><code>type</code></olink> attribute is
-            <code>fmt</code>.</member>
+          the <olink targetdoc="type.xml" targetptr="type"><code>type</code></olink>
+          <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+          is <code>"fmt"</code>.</member>
         <member> For <code>xlf:var</code>, the <glossterm>required</glossterm> value of the <olink
-            targetdoc="type.xml" targetptr="type"><code>type</code></olink> attribute is
-            <code>ui</code>.</member>
+            targetdoc="type.xml" targetptr="type"><code>type</code></olink>
+          <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+          is <code>"ui"</code>.</member>
       </simplelist>
     </listitem>
   </itemizedlist>
@@ -76,8 +79,8 @@
     
     
     <listitem>
-      <para><firstterm>Modifiers</firstterm> updating the attribute <olink targetdoc="type.xml"
-          targetptr="type"><code>type</code></olink>
+      <para><firstterm>Modifiers</firstterm> updating the <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        <olink targetdoc="type.xml" targetptr="type"><code>type</code></olink>
         <glossterm>must</glossterm> also update or delete <link linkend="subtype"
             ><code>subType</code></link>.</para>
     </listitem>

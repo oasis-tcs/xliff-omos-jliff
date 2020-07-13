@@ -6,53 +6,68 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="itsm_domains">
-    <title>itsm:domains</title>
+    <title>its_domains</title>
     
-    <para>Domains - the <code>itsm:domains</code> attribute expresses the <olink
-            targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
+    <para>Domains - the <code>its_domains</code>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end?>
+        expresses the <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
         <ulink url="http://www.w3.org/TR/its20/#domain">Domain</ulink> data category.</para>
     
     
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+        string.<?oxy_custom_end?></para>
     <para><emphasis>Value description:</emphasis>
-        The value is a text string, however commas if present separate distinct domain values within the string.</para>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>a non-empty string value
+        not containing the character "<code>,</code>" (U+002C).<?oxy_custom_end?></para>
     
-    <para><emphasis>Default value:</emphasis>: default values for this attribute
-        depend on the element in which it is used:</para>
+    <para><emphasis>Default value:</emphasis>: default values for this
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        depend on the
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+        in which it is used:</para>
     
     <itemizedlist>
         <listitem>
             <para>When used in <olink targetdoc="../../elements/structural/file.xml"
-                targetptr="file"><code>&lt;file&gt;</code></olink>:</para>
+                    targetptr="file"><code>file</code></olink>:</para>
             
             <para>The value is undefined.</para>
         </listitem>
         <listitem>
-            <para>When used in any other admissible structural element (<olink targetdoc="../../elements/structural/group.xml"
-                targetptr="group"><code>&lt;group></code></olink> or <olink targetdoc="../../elements/structural/unit.xml"
-                    targetptr="unit"><code>&lt;unit></code></olink>):</para>
-            <para>The value of the <link linkend="itsm_domains"
-                ><code>domains</code></link> attribute of its parent element
-                (which can be undefined).</para>
+            <para>When used in any other admissible structural element (<olink
+                    targetdoc="../../elements/structural/group.xml" targetptr="group"
+                        ><code>group</code></olink> or <olink
+                    targetdoc="../../elements/structural/unit.xml" targetptr="unit"
+                        ><code>unit</code></olink>):</para>
+            <para>The value of the <link linkend="itsm_domains"><code>its_domains</code></link>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end?>
+                of its parent element (which can be undefined).</para>
         </listitem>
         <listitem>
-            <para>When used in annotations markers
-                <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"><code>&lt;mrk></code></olink> or
-                <olink targetdoc="../../elements/inline/sm.xml" targetptr="sm"><code>&lt;sm></code></olink>:</para>
-            
-            
-            <para>The value of the <link linkend="itsm_domains"
-                ><code>domains</code></link> attribute of the innermost
-                <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
-                    ><code>&lt;mrk></code></olink>, <olink
-                        targetdoc="../../elements/structural/unit.xml" targetptr="unit"
-                        ><code>&lt;unit&gt;</code></olink>, or <olink
-                            targetdoc="../../elements/candidates/match.xml" targetptr="match"
-                            ><code>&lt;mtc:match></code></olink> element, element, in which the marker
-                in question is located (which can be undefined). </para>
-            
+            <para>When used in<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
+                annotations markers <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
+                        ><code>&lt;mrk></code></olink> or <?oxy_custom_end?><olink
+                    targetdoc="../../elements/inline/sm.xml" targetptr="sm"
+                ><code>sm</code></olink>:<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?></para>
+            <para><?oxy_custom_end?>The value of the <link linkend="itsm_domains"
+                        ><code>its_domains</code></link>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>of the innermost
+                    <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
+                        ><code>&lt;mrk></code></olink>, <?oxy_custom_end?><olink
+                    targetdoc="../../elements/structural/unit.xml" targetptr="unit"
+                        ><code>unit</code></olink>, or <olink
+                    targetdoc="../../elements/candidates/match.xml" targetptr="match"
+                        ><code>mtc_matches</code></olink>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>array
+                element<?oxy_custom_end?>, in which the marker in question is located (which can be
+                undefined). </para>
         </listitem>
         <listitem>
-            <para> When used in the <olink targetdoc="../../elements/candidates/match.xml" targetptr="match"><code>&lt;mtc:match></code></olink> element:</para>
+            <para>When used in the <olink targetdoc="../../elements/candidates/match.xml"
+                    targetptr="match"><code>mtc_matches</code></olink>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>array
+                element<?oxy_custom_end?>:</para>
             <para>The value is undefined.</para>
         </listitem>
         
@@ -64,23 +79,24 @@
     
     <para><emphasis>Used in:</emphasis>
         <olink targetdoc="../../elements/structural/file.xml" targetptr="file"
-                ><code>&lt;file></code></olink>
-        <olink targetdoc="../../elements/structural/group.xml" targetptr="group"
-                ><code>&lt;group></code></olink>
+            ><code>file</code></olink> object <olink targetdoc="../../elements/structural/group.xml"
+            targetptr="group"><code>group</code></olink>
         <olink targetdoc="../../elements/structural/unit.xml" targetptr="unit"
-                ><code>&lt;unit></code></olink>, <olink targetdoc="../../elements/inline/mrk.xml"
-            targetptr="mrk"><code>&lt;mrk></code></olink>, <olink
-            targetdoc="../../elements/inline/sm.xml" targetptr="sm"><code>&lt;sm></code></olink>,
-        and <olink targetdoc="../../elements/modules/match.xml" targetptr="match"
-                ><code>&lt;mtc:match></code></olink>.</para>
+            ><code>unit</code></olink>,<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
+        <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
+            ><code>&lt;mrk></code></olink><?oxy_custom_end?>, <olink
+            targetdoc="../../elements/inline/sm.xml" targetptr="sm"><code>sm</code></olink>,
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>and <olink
+            targetdoc="../../elements/modules/match.xml" targetptr="match"
+            ><code>mtc_matches</code></olink><?oxy_custom_end?>.</para>
     
     <para>See the <olink targetdoc="../../modules/itsm/Domain.xml" targetptr="domainsAnnotation">ITS Domain Annotation</olink> for the normative usage description of this attribute inline.</para>
     <warning>
-        <para>This attribute belongs to the <code>urn:oasis:names:tc:xliff:itsm:2.1</code>
-            namespace that is being prefixed with <code>itsm:</code> throughout this
-            specification, unlike the original W3C ITS namespace
-            <code>https://www.w3.org/2005/11/its/</code> that is being prefixed with
-            <code>its:</code>.</para>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
+        <para>This attribute belongs to the <code>urn:oasis:names:tc:xliff:itsm:2.1</code> namespace
+            that is being prefixed with <code>itsm:</code> throughout this specification, unlike the
+            original W3C ITS namespace <code>https://www.w3.org/2005/11/its/</code> that is being
+            prefixed with <code>its:</code>.<?oxy_custom_end?></para>
     </warning>
     
 </section>

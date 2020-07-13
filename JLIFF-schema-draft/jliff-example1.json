@@ -12,6 +12,7 @@
             "subfiles": [
                 {
                     "id": "u1",
+                    "kind": "unit",
                     "originalData": {
                         "d1": "[C1/]",
                         "d2": "[C2]",
@@ -46,8 +47,8 @@
                     ]
                 },
                 {
-                    "kind": "group",
                     "id": "g1",
+                    "kind": "group",
                     "subgroups": [
                         {
                             "kind": "unit",

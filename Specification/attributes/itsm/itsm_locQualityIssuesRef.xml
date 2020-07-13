@@ -6,13 +6,19 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="itsm_locQualityIssuesRef">
-    <title>locQualityIssuesRef</title>
+    <title>its_locQualityIssuesRef</title>
     
-    <para>Localization Quality Standoff Reference - the <code>locQualityIssuesRef</code> attribute
-        is the <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
-        defined <code>locQualityIssuesRef</code> attribute.</para>
-    <para>This attribute references the collection of Localization Issues that pertain to the
-        content span from where the reference is declared.</para>
+    <para>Localization Quality Standoff Reference - the <code>its_locQualityIssuesRef</code>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        is the <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> defined
+            <code>its_locQualityIssuesRef</code>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>.</para>
+    <para>This
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        references the collection of Localization Issues that pertain to the content span from where
+        the reference is declared.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+        string.<?oxy_custom_end?></para>
     
     <para><emphasis>Value description:</emphasis> IRI</para>
         
@@ -20,45 +26,50 @@
     
     
     <para><emphasis>Used in:</emphasis>
-        <olink targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"
-            ><code>&lt;mrk></code></olink> and
-        <olink targetdoc="../../elements/inline/sm.xml"
-            targetptr="sm"><code>&lt;sm></code></olink>.</para>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
+            targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"><code>&lt;mrk></code></olink>
+        and <?oxy_custom_end?><olink targetdoc="../../elements/inline/sm.xml" targetptr="sm"
+                ><code>sm</code></olink>.</para>
     
     
-    <para>See the <olink targetdoc="../../modules/itsm/Localization_Quality_Issue.xml" targetptr="lqiAnnotation"
-            >ITS Localization Issue Annotation</olink> for the normative usage description of this
-        attribute. </para>
+    <para>See the <olink targetdoc="../../modules/itsm/Localization_Quality_Issue.xml"
+            targetptr="lqiAnnotation">ITS Localization Issue Annotation</olink> for the normative
+        usage description of this
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>. </para>
     <itemizedlist>
         <title>Constraints</title>
         <listitem>
             <para>The IRI value of the <link linkend="itsm_locQualityIssuesRef"
-                    >locQualityIssuesRef</link> attribute <glossterm>must</glossterm> be an
-                    IRI referencing a <olink
+                    >its_locQualityIssuesRef</link>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+                <glossterm>must</glossterm> be an IRI referencing a <olink
                     targetdoc="../../elements/itsm/itsm_locQualityIssues.xml"
-                    targetptr="itsm_locQualityIssues"><code>&lt;locQualityIssues></code></olink>
-                element within the same <olink targetdoc="../../elements/structural/unit.xml"
-                    targetptr="unit"><code>&lt;unit></code></olink>.</para>
+                    targetptr="itsm_locQualityIssues"><code>its_locQualityIssues</code></olink>
+                array element within the same <olink targetdoc="../../elements/structural/unit.xml"
+                    targetptr="unit"><code>unit</code></olink>.</para>
         </listitem>
         <listitem>
             <para>Multiple <link linkend="itsm_locQualityIssuesRef">locQualityIssuesRef</link>
-                attributes <glossterm>may</glossterm> reference the same <olink
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>propert<?oxy_custom_end?>ies
+                    <glossterm>may</glossterm> reference the same <olink
                     targetdoc="../../elements/itsm/itsm_locQualityIssues.xml"
-                    targetptr="itsm_locQualityIssues"><code>&lt;locQualityIssues></code></olink>
-                element.</para>
+                    targetptr="itsm_locQualityIssues"><code>its_locQualityIssues</code></olink>
+                array element.</para>
         </listitem>
     </itemizedlist>
     <itemizedlist>
         <title>Processing Requirements</title>
         <listitem>
             <para><firstterm>Modifiers</firstterm> removing the last <link
-                linkend="itsm_locQualityIssuesRef"><code>locQualityIssuesRef</code></link>
-                attribute referencing a <olink targetptr="itsm_locQualityIssues"
+                    linkend="itsm_locQualityIssuesRef"><code>its_locQualityIssuesRef</code></link>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+                referencing a <olink targetptr="itsm_locQualityIssues"
                     targetdoc="../../elements/itsm/itsm_locQualityIssues.xml"
-                    ><code>locQualityIssues</code></olink> element <glossterm>must</glossterm>
-                delete that <olink targetptr="itsm_provenanceRecords"
+                        ><code>its_locQualityIssues</code></olink> array element
+                    <glossterm>must</glossterm> delete that <olink
+                    targetptr="itsm_provenanceRecords"
                     targetdoc="../../elements/itsm/itsm_provenanceRecords.xml"
-                    ><code>locQualityIssues</code></olink> element.</para>
+                        ><code>its_locQualityIssues</code></olink> array element.</para>
         </listitem>
         
     </itemizedlist>

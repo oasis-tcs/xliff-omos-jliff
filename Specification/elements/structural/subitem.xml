@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+                         <!ENTITY % xinclude SYSTEM "../../docbook/xinclude.mod" >
+                         %xinclude;
+                         <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
+                         ]>
+<section id="subitem">
+    <title>anonymous subitem object <code>"kind" : "unit|group"</code></title>
+    <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+    <para>This type is a union of two subtypes governed by the value of the key
+        <code>kind</code>.<?oxy_custom_end?></para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>This object is an
+        anonymous container for a dynamic structure of unit and group objects. Unit objects hold the
+        extracted translatable source text, aligned with the <firstterm>Translated</firstterm> text.
+        Group objects provide a way to organize units into a structured
+        hierarchy.<?oxy_custom_end?></para>
+    <para><emphasis>Contains:</emphasis>
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object with property
+            <olink targetdoc="unit.xml" targetptr="unit"><code>"kind" : "unit"</code></olink> or
+            <olink targetdoc="group.xml" targetptr="group"><code>"kind" :
+        "group"</code></olink><?oxy_custom_end?></para>
+    <simplelist>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
+        <member>- elements from other namespaces, <glossterm>optional</glossterm></member>
+        <member>- Zero or one <olink targetdoc="notes.xml" targetptr="notes"
+                ><code>&lt;notes></code></olink> elements followed by</member>
+        <member>- Zero or one <olink targetdoc="originaldata.xml" targetptr="originaldata"
+                    ><code>&lt;originalData></code></olink> element followed by</member>
+        <member>- One or more <olink targetdoc="segment.xml" targetptr="segment"
+                    ><code>&lt;segment></code></olink> or <olink targetdoc="ignorable"
+                targetptr="ignorable"><code>&lt;ignorable></code></olink> elements in any
+            order.<?oxy_custom_end?></member>
+    </simplelist>
+    <para><emphasis>Properties:</emphasis></para>
+    <simplelist>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
+        <member>- <olink targetdoc="../../attributes/id.xml" targetptr="id"><code>id</code></olink>,
+                <glossterm>required</glossterm></member>
+        <member>- <olink targetdoc="../../attributes/name.xml" targetptr="name"
+                ><code>name</code></olink>, <glossterm>optional</glossterm></member>
+        <member>- <olink targetdoc="../../attributes/canResegment.xml" targetptr="canResegment"
+                    ><code>canResegment</code></olink>, <glossterm>optional</glossterm></member>
+        <member>- <olink targetdoc="../../attributes/translate.xml" targetptr="translate"
+                    ><code>translate</code></olink>, <glossterm>optional</glossterm></member>
+        <member>- <olink targetdoc="../../attributes/srcdir.xml" targetptr="srcdir"
+                    ><code>srcDir</code></olink>, <glossterm>optional</glossterm></member>
+        <member>- <olink targetdoc="../../attributes/trgdir.xml" targetptr="trgdir"
+                    ><code>trgDir</code></olink>, <glossterm>optional</glossterm></member>
+        <member>- <olink targetdoc="../../attributes/xml_space.xml" targetptr="xml_space"
+                    ><code>xml:space</code></olink>, <glossterm>optional</glossterm></member>
+        <member>- <olink targetdoc="../../attributes/type.xml" targetptr="type"
+                ><code>type</code></olink>, <glossterm>optional</glossterm></member>
+        <member>- attributes from other namespaces,
+            <glossterm>optional</glossterm><?oxy_custom_end?></member>
+    </simplelist>
+</section>
