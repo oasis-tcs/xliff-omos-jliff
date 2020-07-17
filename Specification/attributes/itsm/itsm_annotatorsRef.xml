@@ -8,7 +8,7 @@
 <section id="itsm_annotatorsRef">
     <title>its_annotatorsRef</title>
     
-    <para>Annotators Reference - the <code>annotatorsRef</code>
+    <para>Annotators Reference - the <code>its_annotatorsRef</code>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
         holds provenance information about tools that produced <olink targetdoc="../xliff21.xml"
             targetptr="ITS20">[ITS]</olink> metadata. See <olink targetdoc="../xliff21.xml"

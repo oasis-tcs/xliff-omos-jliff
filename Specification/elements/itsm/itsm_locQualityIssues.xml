@@ -6,61 +6,76 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="itsm_locQualityIssues">
-    <title>locQualityIssues</title>
-    <para>Localization Quality Issues - a standoff wrapper element to group any number of single issue elements related to the same span of source or target content.</para>
-    <para><emphasis>Contains:</emphasis></para>
-    <simplelist>
-        <member>- One or more <olink targetdoc="itsm_locQualityIssue.xml" targetptr="itsm_locQualityIssue"><code>&lt;locQualityIssue></code></olink>
-            elements</member>
-        
-    </simplelist>
-  
-  <para><emphasis>Parents:</emphasis></para>
-  
+  <title>its_locQualityIssues</title>
+  <para>Localization Quality Issues - an array of standoff wrapper objects to group any number of
+    single issue elements related to the same span of source or target content.</para>
+  <para><emphasis>Contains:</emphasis>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>non-empty array of
+    objects<?oxy_custom_end?>.</para>
   <simplelist>
-    <member>- <olink targetdoc="../structural/unit.xml"
-      targetptr="unit"><code>&lt;unit></code></olink></member>
-    
+    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
+    <member>- One or more <olink targetdoc="itsm_locQualityIssue.xml"
+        targetptr="itsm_locQualityIssue"><code>&lt;locQualityIssue></code></olink>
+      elements<?oxy_custom_end?></member>
   </simplelist>
-  
-
-    <para><emphasis>Attributes:</emphasis></para>
-    <simplelist>
-      <member>- <olink targetdoc="../../attributes/itsm/itsm_id.xml" targetptr="itsm_id">
-        <code>xml:id</code>
-      </olink>, <glossterm>required</glossterm>
+  <para><emphasis><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Used
+      in<?oxy_custom_end?>:</emphasis></para>
+  <simplelist>
+    <member>- <olink targetdoc="../structural/unit.xml" targetptr="unit"
+      ><code>unit</code></olink></member>
+  </simplelist>
+  <para><emphasis><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Properties of
+      array objects<?oxy_custom_end?>:</emphasis></para>
+  <simplelist>
+    <member>-
+      <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"id"</code>, an
+        <?oxy_custom_end?><olink targetdoc="../../attributes/itsm/itsm_id.xml" targetptr="itsm_id">
+        <code>id</code>
+      </olink><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?> string with
+      NCNAME value<?oxy_custom_end?>, <glossterm>required</glossterm>
     </member>
-      <!--  not allowed on ITS stand off elements <member>-<olink targetdoc="../../attributes/itsm/itsm_annotatorsRef.xml"
+    <member>-
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"items"</code>, a
+      non-empty array of <?oxy_custom_end?><olink targetdoc="itsm_locQualityIssue.xml"
+        targetptr="itsm_locQualityIssue"
+        > </olink><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>its_locQualityIssue</code>
+      objects<?oxy_custom_end?>, <glossterm>required</glossterm>
+    </member>
+    <!--  not allowed on ITS stand off elements <member>-<olink targetdoc="../../attributes/itsm/itsm_annotatorsRef.xml"
         targetptr="itsm_annotatorsRef">
         <code>annotatorsRef</code></olink>,
         <glossterm>optional</glossterm></member>-->
-        
-    </simplelist>
-
+  </simplelist>
   <itemizedlist>
     <title>Constraints</title>
     <listitem>
-      <para>Each <link linkend="itsm_locQualityIssues">locQualityIssues</link> element
+      <para>Each <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object in the
+          <?oxy_custom_end?><link linkend="itsm_locQualityIssues">its_locQualityIssues</link>
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>array<?oxy_custom_end?>
         <glossterm>should</glossterm> be referenced by at least one <olink
           targetdoc="../../attributes/itsm/itsm_locQualityIssuesRef.xml"
-          targetptr="itsm_locQualityIssuesRef"><code>locQualityIssuesRef</code></olink> attribute
-        within the same <olink targetdoc="../strcutural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink> element as per Constraints
-        for the <olink targetdoc="../../attributes/itsm/itsm_locQualityIssuesRef.xml"
-          targetptr="itsm_locQualityIssuesRef"><code>locQualityIssuesRef</code></olink>
-        attribute.</para>
+          targetptr="itsm_locQualityIssuesRef"><code>its_locQualityIssuesRef</code></olink> property
+        within the same <olink targetdoc="../strcutural/unit.xml" targetptr="unit"
+          ><code>unit</code></olink> as per Constraints for the <olink
+          targetdoc="../../attributes/itsm/itsm_locQualityIssuesRef.xml"
+          targetptr="itsm_locQualityIssuesRef"><code>its_locQualityIssuesRef</code></olink>
+        property.</para>
     </listitem>
   </itemizedlist>
-  
-
   <itemizedlist>
     <title>Processing Requirements</title>
     <listitem>
       <para><firstterm>Modifiers</firstterm> detecting an orphaned <link
-        linkend="itsm_locQualityIssues">locQualityIssues</link> element
+          linkend="itsm_locQualityIssues">its_locQualityIssues</link>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>array element<?oxy_custom_end?>
         <glossterm>may</glossterm> delete that <link linkend="itsm_locQualityIssues"
-          >locQualityIssues</link> element.</para>
+          >its_locQualityIssues</link> array
+        element.<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?> If the
+        resulting <link linkend="itsm_locQualityIssues">its_locQualityIssues</link> array is empty,
+        the <code>"its_locQualityIssues"</code> property with the empty array should be removed
+        entirely from <olink targetdoc="../structural/unit.xml" targetptr="unit"
+          ><code>unit</code></olink>.</para>
     </listitem>
   </itemizedlist>
-    
-    
 </section>
+<?oxy_custom_end?>

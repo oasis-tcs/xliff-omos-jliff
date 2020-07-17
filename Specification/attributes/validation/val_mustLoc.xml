@@ -6,13 +6,15 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="val_mustLoc">
-  <title>mustLoc</title>
+  <title>val_mustLoc</title>
 
   <para>Must localize, mustLoc - is a test for the presence of a string (substring) in the source
     text and a verification that it does not exist in the target text. Alternatively it can be used
     to verify presence of a prescribed replacement string in the target text.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains</emphasis>:
+    string.<?oxy_custom_end?></para>
 
-  <para><emphasis>Value description:</emphasis> Text.</para>
+  <para><emphasis>Value description:</emphasis> text.</para>
     <para>Characters left parenthesis <code>(</code> (U+0028), right parenthesis <code>)</code>
     (U+0029), and quotation mark <code>"</code> (U+0022) <glossterm>must</glossterm> be escaped by
     enclosing within a pair of quotation marks, <code>"</code> (U+0022). The value
@@ -20,21 +22,25 @@
     or <code>mustLoc="(string)(string)"</code>, where the prescribed replacement string is enclosed
     within the second pair of parentheses.</para>
 
-  <para><emphasis>Default value:</emphasis> none</para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
 
-  <para><emphasis>Used in:</emphasis> <olink targetdoc="../../elements/validation/rule.xml" targetptr="rule"><code>&lt;val:rule></code></olink></para>
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../../elements/validation/rule.xml" targetptr="rule"
+      ><code>val_rule</code></olink></para>
   
   <itemizedlist>
     <title>Processing Requirements</title>
-    <listitem><para>When <olink targetdoc="../../attributes/validation/val_mustLoc.xml" targetptr="val_mustLoc"
-            ><code>mustLoc</code></olink> contains only one <code>string</code> from the source text,
-        for example: <code>mustLoc="hello world"</code>; the target text <glossterm>must
+    <listitem><para>When <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        <olink targetdoc="../../attributes/validation/val_mustLoc.xml" targetptr="val_mustLoc"
+            ><code>"mustLoc"</code></olink> contains only one <code>string</code> from the source
+        text, for example: <code>"mustLoc": "hello world"</code>; the target text <glossterm>must
           not</glossterm> contain that <code>string</code>.</para></listitem>
-    <listitem><para>When <olink targetdoc="../../attributes/validation/val_mustLoc.xml" targetptr="val_mustLoc"
-      ><code>mustLoc</code></olink> contains a <code>string</code> from the source text and a
-      replacement <code>string</code> for the target text, for example: <code>mustLoc="(Hello world)(Hallo
-        Welt)"</code>; the target text <glossterm>must</glossterm>
-      contain that replacement <code>string</code>.</para>
+    <listitem><para>When <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        <olink targetdoc="../../attributes/validation/val_mustLoc.xml" targetptr="val_mustLoc"
+            ><code>"mustLoc"</code></olink> contains a <code>string</code> from the source text and
+        a replacement <code>string</code> for the target text, for example: <code>"mustLoc": "(Hello
+          world)(Hallo Welt)"</code>; the target text <glossterm>must</glossterm> contain that
+        replacement <code>string</code>.</para>
       </listitem>
   </itemizedlist>
   

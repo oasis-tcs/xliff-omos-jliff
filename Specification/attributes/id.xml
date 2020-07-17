@@ -12,7 +12,8 @@
   <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
     string.<?oxy_custom_end?></para>
 
-  <para><emphasis>Value description:</emphasis> NMTOKEN. The scope of the values for this
+  <para><emphasis>Value description:</emphasis> NMTOKEN: a string matching the pattern
+      <code>[-._:A-Za-z0-9]+</code>. The scope of the values for this
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end?>
     depends on <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>the object in
     which the <code>"id"</code> property <?oxy_custom_end?>is used.</para>

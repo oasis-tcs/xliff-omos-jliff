@@ -6,22 +6,27 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="val_disabled">
-  <title>disabled</title>
+  <title>val_disabled</title>
 
-  <para>This rule attribute determines whether a rule <glossterm>must</glossterm> or <glossterm>must
-      not</glossterm> be applied within the scope of its enclosing element. For example, a rule
-    defined at the <olink targetdoc="../../elements/structural/file.xml" targetptr="file"
-        ><code>&lt;file></code></olink> level can be disabled at the <olink
-      targetdoc="../../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink>
+  <para>This rule
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+    determines whether a rule <glossterm>must</glossterm> or <glossterm>must not</glossterm> be
+    applied within the scope of its enclosing
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>. For
+    example, a rule defined at the <olink targetdoc="../../elements/structural/file.xml"
+      targetptr="file"><code>file</code></olink> level can be disabled at the <olink
+      targetdoc="../../elements/structural/unit.xml" targetptr="unit"><code>unit</code></olink>
     level.</para>
-  <para>This attribute is provided to allow for overriding execution of rules set at higher levels,
-    see <olink targetdoc="../../elements/validation/validation.xml" targetptr="validation"
-        ><code>&lt;val:validation></code></olink>.</para>
+  <para>This
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?> is
+    provided to allow for overriding execution of rules set at higher levels, see <olink
+      targetdoc="../../elements/validation/validation.xml" targetptr="validation"
+        ><code>val_validation</code></olink>.</para>
 
   <para>In the following example, the isNotPresent rule is applied in its entirety to the first unit, but not to the second.</para>
 
 <programlisting>
-&lt;file id="f1"&gt;
+<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>&lt;file id="f1"&gt;
   &lt;val:validation&gt;
     &lt;val:rule isPresent="store" /&gt;
   &lt;/val:validation&gt;
@@ -40,13 +45,58 @@
       &lt;target&gt;Escolha uma opção na application store:&lt;/target&gt;
     &lt;/segment&gt;
   &lt;/unit&gt;
-&lt;/file&gt;
+&lt;/file&gt;<?oxy_custom_end?>
+<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>{
+  "jliff": "2.1",
+  "files": [
+    "val_validation": [
+      "isPresent": "store"
+    ],
+    "id": "f1",
+    "subfiles": [
+      {
+        "id": "1",
+        "kind": "unit",
+        "subunits": [
+          {
+            "id": "1",
+            "kind": "segment",
+            "source": [ { "text": "Choose an option in the online store:" } ],
+            "target": [ { "text": "Escolha uma opção na loja online:" } ]
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "kind": "unit",
+        "subunits": [
+          {
+            "id": "1",
+            "kind": "segment",
+            "source": [ { "text": "Choose an option in the application store:" } ],
+            "target": [ { "text": "Escolha uma opção na application store:" } ],
+            "val_validation": [
+              "isPresent": "store",
+              "disabled": "yes"
+            ],
+          }
+        ]
+      }
+    ]
+  ]
+}<?oxy_custom_end?>
  </programlisting>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains</emphasis>:
+    string.<?oxy_custom_end?></para>
 
-  <para><emphasis>Value description:</emphasis> <code>yes</code> or <code>no</code></para>
+  <para><emphasis>Value description:</emphasis>
+    <code>"yes"</code> or <code>"no"</code></para>
 
-  <para><emphasis>Default value:</emphasis> <code>no</code></para>
+  <para><emphasis>Default value:</emphasis>
+    <code>"no"</code></para>
 
-  <para><emphasis>Used in:</emphasis> <olink targetdoc="../../elements/validation/rule.xml" targetptr="rule"><code>&lt;rule></code></olink></para>
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../../elements/validation/rule.xml" targetptr="rule"
+      ><code>val_rule</code></olink></para>
 
 </section>

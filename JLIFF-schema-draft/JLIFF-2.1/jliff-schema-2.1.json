@@ -116,7 +116,7 @@
         "its_revToolRef": { "$ref": "#/definitions/IRI" },
         "its_tool": { "type": "string" },
         "its_toolRef": { "$ref": "#/definitions/IRI" },
-        "its_provenanceRecords": {  "$ref": "#/definitions/its_provenanceRecordsArray" },
+        "its_provenanceRecords": {  "$ref": "#/definitions/its_provenanceRecords" },
         "its_taClassRef": { "$ref": "#/definitions/IRI" },
         "its_taConfidence": { "type": "number", "minimum": 0, "maximum": 1 },
         "its_taSource": { "type": "string" },
@@ -181,7 +181,7 @@
             "its_locQualityRatingScoreThreshold": { "type": "number", "minimum": 0, "maximum": 100 },
             "its_locQualityRatingVote": { "type": "integer" },
             "its_locQualityRatingVoteThreshold": { "type": "integer" },
-            "its_locQualityIssues": { "$ref": "#/definitions/its_locQualityIssuesArray" },
+            "its_locQualityIssues": { "$ref": "#/definitions/its_locQualityIssues" },
             "its_annotatorsRef": { "$ref": "#/definitions/its_annotatorsRef" },
             "its_org": { "type": "string" },
             "its_orgRef": { "$ref": "#/definitions/IRI" },
@@ -196,7 +196,7 @@
             "its_revToolRef": { "$ref": "#/definitions/IRI" },
             "its_tool": { "type": "string" },
             "its_toolRef": { "$ref": "#/definitions/IRI" },
-            "its_provenanceRecords": {  "$ref": "#/definitions/its_provenanceRecordsArray" },
+            "its_provenanceRecords": {  "$ref": "#/definitions/its_provenanceRecords" },
             "its_taClassRef": { "$ref": "#/definitions/IRI" },
             "its_taConfidence": { "type": "number", "minimum": 0, "maximum": 1 },
             "its_taSource": { "type": "string" },
@@ -249,7 +249,7 @@
             "its_revToolRef": { "$ref": "#/definitions/IRI" },
             "its_tool": { "type": "string" },
             "its_toolRef": { "$ref": "#/definitions/IRI" },
-            "its_provenanceRecords": {  "$ref": "#/definitions/its_provenanceRecordsArray" },
+            "its_provenanceRecords": {  "$ref": "#/definitions/its_provenanceRecords" },
             "its_taClassRef": { "$ref": "#/definitions/IRI" },
             "its_taConfidence": { "type": "number", "minimum": 0, "maximum": 1 },
             "its_taSource": { "type": "string" },
@@ -620,11 +620,11 @@
     "val_validation": {
       "description": "The validation module defines a specific set of validation rules that can be applied to target text both globally and locally",
       "type": "array",
-      "items": { "$ref": "#/definitions/val_validationRule" },
+      "items": { "$ref": "#/definitions/val_rule" },
       "minItems": 1
     },
 
-    "val_validationRule": {
+    "val_rule": {
       "type": "object",
       "oneOf": [
         {
@@ -671,18 +671,24 @@
       "additionalProperties": true
     },
 
-    "its_provenanceRecordsArray": {
-      "description": "An array of standoff wrappers",
+    "its_provenanceRecords": {
+      "description": "An array of standoff wrapper objects",
       "type": "array",
-      "items": { "$ref": "#/definitions/its_provenanceRecords" },
+      "items": { "$ref": "#/definitions/its_provenanceRecordsWrapper" },
       "minItems": 1
     },
 
-    "its_provenanceRecords": {
-      "description": "A standoff wrapper array to group any number of single Provenance Record elements related to the same span of source or target content",
-      "type": "array",
-      "items": { "$ref": "#/definitions/its_provenanceRecord" },
-      "minItems": 1
+    "its_provenanceRecordsWrapper": {
+      "description": "A standoff wrapper object with an id and an array to group any number of single Provenance Record elements related to the same span of source or target content",
+      "type": "object",
+      "properties": {
+        "id": { "$ref": "#/definitions/NCName" },
+        "items": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/its_provenanceRecord" },
+          "minItems": 1
+        }
+      }
     },
 
     "its_provenanceRecord": {
@@ -705,15 +711,15 @@
       "additionalProperties": false
     },
 
-    "its_locQualityIssuesArray": {
-      "description": "An array of standoff wrappers",
+    "its_locQualityIssues": {
+      "description": "An array of standoff wrapper objects",
       "type": "array",
-      "items": { "$ref": "#/definitions/its_locQualityIssues" },
+      "items": { "$ref": "#/definitions/its_locQualityIssuesWrapper" },
       "minItems": 1
     },
 
-    "its_locQualityIssues": {
-      "description": "A standoff wrapper array to group any number of single issue elements related to the same span of source or target content",
+    "its_locQualityIssuesWrapper": {
+      "description": "A standoff wrapper object with an id and an array to group any number of single issue elements related to the same span of source or target content",
       "type": "object",
       "properties": {
         "id": { "$ref": "#/definitions/NCName" },
@@ -1047,12 +1053,6 @@
       "description": "XSD NMTOKEN type for XLIFF interoperability, the type of id properties",
       "type": "string",
       "pattern": "^[-._:A-Za-z0-9]+$"
-    },
-
-    "NMTOKENS": {
-      "description": "List of XSD NMTOKEN separated by spaces for XLIFF interoperability",
-      "type": "string",
-      "pattern": "^([-._:A-Za-z0-9]+[ ]+)*[-._:A-Za-z0-9]+$"
     },
 
     "IRI": {

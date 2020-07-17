@@ -6,27 +6,39 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="val_occurrences">
-  <title>occurrences</title>
+  <title>val_occurrences</title>
 
   <para>occurrences - is a test to verify that a certain number of occurences of a specified string
     exists in the target text.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains</emphasis>:
+    string.<?oxy_custom_end?></para>
 
-  <para><emphasis>Value description:</emphasis> Text.</para>
+  <para><emphasis>Value description:</emphasis> text.</para>
   <para>Characters left parenthesis <code>(</code> (U+0028), right parenthesis <code>)</code>
     (U+0029), and quotation mark <code>"</code> (U+0022) <glossterm>must</glossterm> be escaped by
-    enclosing within a pair of quotation marks, <code>"</code> (U+0022). The value
-    <glossterm>must</glossterm> follow this pattern: <code>"(string)(integer)"</code>.
-    </para><para> For example: In this <code>occurrences="(&amp;nbsp;&amp;nbsp;)(0)"</code>, the value patern
-    prohibits any occurences of two non-breaking spaces next to each other. Here
-      <code>occurrences="(:)(1)"</code>, exactly one occurrence of the colon is enforced.</para>
+    enclosing within a pair of quotation marks <code>"</code> (U+0022),
+    <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>which
+      <emphasis>must</emphasis> be escaped with a backslash <code>\</code> (U+005C) in JSON
+    strings<?oxy_custom_end?> to produce the sequence <code>\"\"\"</code>. The value
+      <glossterm>must</glossterm> follow this pattern: <code>"(string)(integer)"</code>. </para><para>For example: in this <code>"occurrences":
+      "<?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>(&amp;nbsp;&amp;nbsp;)(0)<?oxy_custom_end?>"</code>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[ASSUME THAT THIS SHOULD BE
+    JSON LIKE <code>"(\u00a0\u00a0)[0]"<?oxy_custom_end?></code>], the value patern prohibits any
+    occurences of two non-breaking spaces next to each other. Here <code>"occurrences":
+      "(:)(1)"</code>, exactly one occurrence of the colon is enforced.</para>
 
-  <para><emphasis>Default value:</emphasis> none</para>
+  <para><emphasis>Default value:</emphasis> undefned.</para>
 
-  <para><emphasis>Used in:</emphasis> <olink targetdoc="../../elements/validation/rule.xml" targetptr="rule"><code>&lt;val:rule></code></olink></para>
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../../elements/validation/rule.xml" targetptr="rule"
+      ><code>val_rule</code></olink></para>
   
   <itemizedlist>
     <title>Processing Requirements</title>
-    <listitem><para>The target text <glossterm>must</glossterm> contain the <code>integer</code> number of occurences of the <code>string</code> as specified in <olink targetdoc="../../attributes/validation/val_occurrences.xml" targetptr="val_occurrences"><code>occurrences</code></olink>.</para></listitem>
+    <listitem><para>The target text <glossterm>must</glossterm> contain the <code>integer</code> number of
+        occurences of the <code>string</code> as specified in property <olink
+          targetdoc="../../attributes/validation/val_occurrences.xml" targetptr="val_occurrences"
+            ><code>"occurrences"</code></olink>.</para></listitem>
   </itemizedlist>
   
 </section>

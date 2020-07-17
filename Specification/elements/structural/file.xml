@@ -66,7 +66,7 @@
     <simplelist>
         <member>-
                 <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"id"</code>,
-            a <?oxy_custom_end?><olink targetdoc="../../attributes/id.xml" targetptr="id"
+            an <?oxy_custom_end?><olink targetdoc="../../attributes/id.xml" targetptr="id"
                     ><code>id</code></olink>
             <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>string<?oxy_custom_end?>,
                 <glossterm>required</glossterm></member>

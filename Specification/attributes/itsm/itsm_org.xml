@@ -8,7 +8,7 @@
 <section id="itsm_org">
     <title>its_org</title>
     
-    <para>Organization - the <code>org</code> attribute is the <olink targetdoc="../xliff21.xml"
+    <para>Organization - the <code>its_org</code> attribute is the <olink targetdoc="../xliff21.xml"
             targetptr="ITS20">[ITS]</olink> defined <code>its_org</code>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>.</para>
     <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>

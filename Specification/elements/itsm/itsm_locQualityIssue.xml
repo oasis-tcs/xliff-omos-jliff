@@ -6,38 +6,67 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="itsm_locQualityIssue">
-    <title>locQualityIssue</title>
-    <para>Localization Quality Issue - a standoff element to hold information about a single <olink
-        targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> defined Localization Quality Issue.</para>
-    <para><emphasis>Contains:</emphasis></para>
+    <title>anonymous its_locQualityIssue object</title>
+    <para>Localization Quality Issue - a standoff object to hold information about a single <olink
+            targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> defined Localization Quality
+        Issue.</para>
+    <para><emphasis>Contains:</emphasis>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
     <simplelist>
-        <member>This element is always empty.</member>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
+        <member>This element is always empty.<?oxy_custom_end?></member>
     </simplelist>
     
-    <para><emphasis>Parents:</emphasis></para>
+    <para><emphasis><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Used
+            in<?oxy_custom_end?>:</emphasis></para>
     
     <simplelist>
-        <member>- <olink targetdoc="itsm_locQualityIssues.xml"
-            targetptr="itsm_locQualityIssues"><code>&lt;locQualityIssues></code></olink></member>
+        <member>- <olink targetdoc="itsm_locQualityIssues.xml" targetptr="itsm_locQualityIssues"
+                    ><code>its_locQualityIssues</code></olink><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            array object <code>items</code> array<?oxy_custom_end?>.</member>
         
     </simplelist>
     
 
-    <para><emphasis>Attributes:</emphasis></para>
+    <para><emphasis>Properties:</emphasis></para>
     <simplelist>
-      <member>- <olink targetdoc="../../attributes/itsm/itsm_locQualityIssueType.xml"
+      <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"locQualityIssueType"</code>, a<?oxy_custom_end?>
+            <olink targetdoc="../../attributes/itsm/itsm_locQualityIssueType.xml"
                 targetptr="itsm_locQualityIssueType">
-                <code>locQualityIssueType</code></olink>, <glossterm>optional</glossterm>
+                <code>its_locQualityIssueType</code></olink>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object<?oxy_custom_end?>,
+                <glossterm>optional</glossterm>
         </member>
-        <member>- <olink targetdoc="../../attributes/itsm/itsm_locQualityIssueComment.xml" targetptr="itsm_locQualityIssueComment">
-            <code>locQualityIssueComment</code></olink>, <glossterm>optional</glossterm></member>
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"locQualityIssueComment"</code>, a<?oxy_custom_end?>
+            <olink targetdoc="../../attributes/itsm/itsm_locQualityIssueComment.xml"
+                targetptr="itsm_locQualityIssueComment">
+                <code>its_locQualityIssueComment</code></olink>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>string<?oxy_custom_end?>,
+                <glossterm>optional</glossterm></member>
         
-        <member>- <olink targetdoc="../../attributes/itsm/itsm_locQualityIssueSeverity.xml" targetptr="itsm_locQualityIssueSeverity">
-            <code>locQualityIssueSeverity</code></olink>, <glossterm>optional</glossterm></member>
-        <member>- <olink targetdoc="../../attributes/itsm/itsm_locQualityIssueProfileRef.xml" targetptr="itsm_locQualityIssueProfileRef">
-            <code>locQualityIssueProfileRef</code></olink>, <glossterm>optional</glossterm></member>
-        <member>- <olink targetdoc="../../attributes/itsm/itsm_locQualityIssueEnabled.xml" targetptr="itsm_locQualityIssueEnabled">
-            <code>locQualityIssueEnabled</code></olink>, <glossterm>optional</glossterm></member>
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"locQualityIssueSeverit"</code>, a<?oxy_custom_end?>
+            <olink targetdoc="../../attributes/itsm/itsm_locQualityIssueSeverity.xml"
+                targetptr="itsm_locQualityIssueSeverity">
+                <code>its_locQualityIssueSeverity</code></olink>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>floating points
+            number between 0.0 and 100.0, inclusive<?oxy_custom_end?>,
+                <glossterm>optional</glossterm></member>
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"locQualityIssueProfileRef"</code>, a<?oxy_custom_end?>
+            <olink targetdoc="../../attributes/itsm/itsm_locQualityIssueProfileRef.xml"
+                targetptr="itsm_locQualityIssueProfileRef">
+                <code>its_locQualityIssueProfileRef</code></olink><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            string with IRI value<?oxy_custom_end?>, <glossterm>optional</glossterm></member>
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"locQualityIssueEnabled"</code>, a<?oxy_custom_end?>
+            <olink targetdoc="../../attributes/itsm/itsm_locQualityIssueEnabled.xml"
+                targetptr="itsm_locQualityIssueEnabled">
+                <code>its_locQualityIssueEnabled</code></olink><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            string with <code>"yes"</code> or <code>"no"</code> value<?oxy_custom_end?>,
+                <glossterm>optional</glossterm></member>
         <!--  not allowed on ITS stand off elements <member>-<olink targetdoc="../../attributes/itsm/itsm_annotatorsRef.xml"
             targetptr="itsm_annotatorsRef">
             <code>annotatorsRef</code></olink>,
@@ -47,34 +76,42 @@
     <itemizedlist>
         <title>Constraints</title>
         <listitem>
-            <para>At least one of the attributes <olink targetdoc="../../attributes/itsm/itsm_locQualityIssueType" targetptr="itsm_locQualityIssueType">
-                <code>locQualityIssueType</code></olink> or <olink targetdoc="../../attributes/itsm/itsm_locQualityIssueComment" targetptr="itsm_locQualityIssueComment">
-                    <code>locQualityIssueComment</code></olink> <glossterm>must</glossterm> be set.</para>
+            <para>At least one of the <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>properties<?oxy_custom_end?>
+                <olink targetdoc="../../attributes/itsm/itsm_locQualityIssueType"
+                    targetptr="itsm_locQualityIssueType">
+                    <code>its_locQualityIssueType</code></olink> or <olink
+                    targetdoc="../../attributes/itsm/itsm_locQualityIssueComment"
+                    targetptr="itsm_locQualityIssueComment">
+                    <code>its_locQualityIssueComment</code></olink>
+                <glossterm>must</glossterm> be set.</para>
         </listitem>
     </itemizedlist>
     <itemizedlist>
         <title>Processing Requirements</title>
-        <listitem><para> For all <firstterm>Agents</firstterm>, when any of the attributes <olink
-                    targetdoc="../../attributes/itsm/itsm_locQualityIssueType"
+        <listitem><para> For all <firstterm>Agents</firstterm>, when any of the <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>properties<?oxy_custom_end?>
+                <olink targetdoc="../../attributes/itsm/itsm_locQualityIssueType"
                     targetptr="itsm_locQualityIssueType">
-                    <code>locQualityIssueType</code></olink>, <olink
+                    <code>"locQualityIssueType"</code></olink>, <olink
                     targetdoc="../../attributes/itsm/itsm_locQualityIssueComment"
                     targetptr="itsm_locQualityIssueComment">
-                    <code>locQualityIssueComment</code></olink>, <olink
+                    <code>"locQualityIssueComment"</code></olink>, <olink
                     targetdoc="../../attributes/itsm/itsm_locQualityIssueSeverity"
                     targetptr="itsm_locQualityIssueSeverity">
-                    <code>locQualityIssueSeverity</code></olink>, <olink
+                    <code>"locQualityIssueSeverity"</code></olink>, <olink
                     targetdoc="../../attributes/itsm/itsm_locQualityIssueProfileRef"
                     targetptr="itsm_locQualityIssueProfileRef">
-                    <code>locQualityIssueProfileRef</code></olink>, or <olink
+                    <code>"locQualityIssueProfileRef"</code></olink>, or <olink
                     targetdoc="../../attributes/itsm/itsm_locQualityIssueEnabled"
                     targetptr="itsm_locQualityIssueEnabled">
-                    <code>locQualityIssueEnabled</code></olink> are declared on the <link
-                    linkend="itsm_locQualityIssue"><code>&lt;locQualityIssue</code></link> element,
+                    <code>"locQualityIssueEnabled"</code></olink> are declared on the <link
+                    linkend="itsm_locQualityIssue"><code>its_locQualityIssue</code></link>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>,
                 these apply to the respective marker delimited inline spans of <olink
                     targetdoc="../../modules/specification.xml" targetptr="lqiAnnotation">ITS
                     Localization Issue Annotation</olink>, from which their enclosing <olink
                     targetdoc="itsm_locQualityIssues.xml" targetptr="itsm_locQualityIssues"
-                        ><code>&lt;locQualityIssues></code></olink> element is referenced. </para></listitem>
+                        ><code>its_locQualityIssues</code></olink>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+                is referenced. </para></listitem>
     </itemizedlist>
 </section>

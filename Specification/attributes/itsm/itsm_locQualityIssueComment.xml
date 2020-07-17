@@ -9,12 +9,12 @@
     <title>its_locQualityIssueComment</title>
     
     <para>Localization Quality Issue Comment - the <code>its_locQualityIssueComment</code>
-        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>propery<?oxy_custom_end?>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
         is the <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> defined
             <code>its_locQualityIssueComment</code>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>.</para>
     <para>This
-        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>propery<?oxy_custom_end?>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
         is intended for human readable comments pertaining to or guidance how to address a specific
         Localization Quality Issue.</para>
     <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
@@ -23,7 +23,7 @@
     
     <para><emphasis>Value description:</emphasis> text. </para>
     
-    <para><emphasis>Default value:</emphasis>: undefined</para>
+    <para><emphasis>Default value:</emphasis>: undefined.</para>
     
     
     
@@ -35,17 +35,13 @@
             targetdoc="../../elements/itsm/itsm_locQualityIssue.xml"
             targetptr="itsm_locQualityIssue"><code>its_locQualityIssues</code></olink>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>array
-        element<?oxy_custom_end?>s.
-        <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[There is no
-        its_locQualityIssue element, but an array of "its_locQualityIssues" objects, each with an
-        "id" and an "items" array so this needs to be addressed throughout this
-        Spec]<?oxy_custom_end?></para>
+        element<?oxy_custom_end?>s.</para>
     
     
     <para>See the <olink targetdoc="../../modules/itsm/Localization_Quality_Issue.xml"
             targetptr="lqiAnnotation">ITS Localization Issue Annotation</olink> for the normative
         usage description of this
-        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>propery<?oxy_custom_end?>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
         when used inline; advanced Constraints follow from that normative usage description.</para>
     <para>See <olink targetdoc="../../elements/itsm/itsm_locQualityIssue.xml"
             targetptr="itsm_locQualityIssue"><code>its_locQualityIssues</code></olink> for standoff

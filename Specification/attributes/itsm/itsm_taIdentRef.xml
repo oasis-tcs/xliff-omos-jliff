@@ -21,7 +21,7 @@
     <para>The IRI is supposed to reference an external resource for the disambiguated entity in the
         sense of <ulink url="http://www.w3.org/TR/its20/#textAnalysis-info-pieces">identifier of the text analysis target</ulink>.</para>
     
-    <para><emphasis>Default value:</emphasis>: undefined</para>
+    <para><emphasis>Default value:</emphasis>: undefined.</para>
     
     
     

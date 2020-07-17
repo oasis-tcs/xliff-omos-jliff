@@ -20,7 +20,7 @@
     <para><emphasis>Value description:</emphasis> IRI.</para>
     <para>The IRI is supposed to resolve as human or machine readable <ulink url="http://www.w3.org/TR/its20/#textAnalysis-info-pieces">Entity type / concept class</ulink> information.</para>
     
-    <para><emphasis>Default value:</emphasis>: undefined</para>
+    <para><emphasis>Default value:</emphasis>: undefined.</para>
     
     
     

@@ -533,11 +533,11 @@
     "val_validation": {
       "description": "The validation module defines a specific set of validation rules that can be applied to target text both globally and locally",
       "type": "array",
-      "items": { "$ref": "#/definitions/val_validationRule" },
+      "items": { "$ref": "#/definitions/val_rule" },
       "minItems": 1
     },
 
-    "val_validationRule": {
+    "val_rule": {
       "type": "object",
       "oneOf": [
         {
@@ -792,12 +792,6 @@
       "description": "XSD NMTOKEN type for XLIFF interoperability, the type of id properties",
       "type": "string",
       "pattern": "^[-._:A-Za-z0-9]+$"
-    },
-
-    "NMTOKENS": {
-      "description": "List of XSD NMTOKEN separated by spaces for XLIFF interoperability",
-      "type": "string",
-      "pattern": "^([-._:A-Za-z0-9]+[ ]+)*[-._:A-Za-z0-9]+$"
     },
 
     "IRI": {

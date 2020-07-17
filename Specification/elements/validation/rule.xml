@@ -6,69 +6,141 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="rule">
-    <title>rule</title>
-    <para>A specific rule and constraint to apply to the target text of the enclosing element.</para>
-    <para><emphasis>Contains:</emphasis></para>
+    <title>anonymous val_rule object</title>
+    <para>A specific rule and constraint to apply to the target text of the enclosing
+        element.</para>
+    <para><emphasis>Contains:</emphasis>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
     <simplelist>
-        <member>- This element is always empty.</member>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
+        <member>- This element is always empty.<?oxy_custom_end?></member>
     </simplelist>
-  
-    <para><emphasis>Attributes:</emphasis></para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Used
+            in:</emphasis></para>
     <simplelist>
-        <member>- <olink targetdoc="../../attributes/validation/val_isPresent.xml" targetptr="val_isPresent"><code>isPresent</code></olink>, <glossterm>optional</glossterm></member> 
-        <member>- <olink targetdoc="../../attributes/validation/val_occurs.xml" targetptr="val_occurs"><code>occurs</code></olink>, <glossterm>optional</glossterm></member>
-        <member>- <olink targetdoc="../../attributes/validation/val_isNotPresent.xml" targetptr="val_isNotPresent"><code>isNotPresent</code></olink>, <glossterm>optional</glossterm></member>
-        <member>- <olink targetdoc="../../attributes/validation/val_startsWith.xml" targetptr="val_startsWith"><code>startsWith</code></olink>, <glossterm>optional</glossterm></member>
-        <member>- <olink targetdoc="../../attributes/validation/val_endsWith.xml" targetptr="val_endsWith"><code>endsWith</code></olink>, <glossterm>optional</glossterm></member>
-        <member>- <olink targetdoc="../../attributes/validation/val_existsInSource.xml" targetptr="val_existsInSource"><code>existsInSource</code></olink>, <glossterm>optional</glossterm></member>
-        <member>- <olink targetdoc="../../attributes/validation/val_caseSensitive.xml" targetptr="val_caseSensitive"><code>caseSensitive</code></olink>,  <glossterm>optional</glossterm></member>
-        <member>- <olink targetdoc="../../attributes/validation/val_normalization.xml" targetptr="val_normalization"><code>normalization</code></olink>,  <glossterm>optional</glossterm></member>
-        <member>- <olink targetdoc="../../attributes/validation/val_disabled.xml" targetptr="val_disabled"><code>disabled</code></olink>, <glossterm>optional</glossterm></member>
-        <member>- attributes from other namespaces, <glossterm>optional</glossterm></member>
+        <member>- <olink targetdoc="val_validation.xml" targetptr="val_validation"
+                    ><code>val_validation</code></olink> array<?oxy_custom_end?></member>
     </simplelist>
-    
+    <para><emphasis>Properties:</emphasis></para>
+    <simplelist>
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"isPresent"</code>,
+            a <?oxy_custom_end?><olink targetdoc="../../attributes/validation/val_isPresent.xml"
+                targetptr="val_isPresent"><code>val_isPresent</code></olink> string,
+                <glossterm>optional</glossterm></member>
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"occurs"</code>, a<?oxy_custom_end?>
+            <olink targetdoc="../../attributes/validation/val_occurs.xml" targetptr="val_occurs"
+                    ><code>val_occurs</code></olink> integer larger or equal to 1,
+                <glossterm>optional</glossterm></member>
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"isNotPresent"</code>, a<?oxy_custom_end?>
+            <olink targetdoc="../../attributes/validation/val_isNotPresent.xml"
+                targetptr="val_isNotPresent"><code>val_isNotPresent</code></olink> string with value
+                <code>"yes"</code> or <code>"no"</code>, <glossterm>optional</glossterm></member>
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"startsWith"</code>, a<?oxy_custom_end?>
+            <olink targetdoc="../../attributes/validation/val_startsWith.xml"
+                targetptr="val_startsWith"><code>val_startsWith</code></olink> string,
+                <glossterm>optional</glossterm></member>
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"endsWith"</code>, a<?oxy_custom_end?>
+            <olink targetdoc="../../attributes/validation/val_endsWith.xml" targetptr="val_endsWith"
+                    ><code>val_endsWith</code></olink> string,
+            <glossterm>optional</glossterm></member>
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"existsInSource"</code>, a<?oxy_custom_end?>
+            <olink targetdoc="../../attributes/validation/val_existsInSource.xml"
+                targetptr="val_existsInSource"><code>val_existsInSource</code></olink> string with
+            value <code>"yes"</code> or <code>"no"</code>, <glossterm>optional</glossterm></member>
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"caseSentitive"</code>, a<?oxy_custom_end?>
+            <olink targetdoc="../../attributes/validation/val_caseSensitive.xml"
+                targetptr="val_caseSensitive"><code>val_caseSensitive</code></olink> string with
+            value <code>"yes"</code> or <code>"no"</code>, <glossterm>optional</glossterm></member>
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"normalization"</code>, a<?oxy_custom_end?>
+            <olink targetdoc="../../attributes/validation/val_normalization.xml"
+                targetptr="val_normalization"><code>val_normalization</code></olink> string with
+            value <code>"none"</code>, <code>"nfc"</code> or <code>"nfd"</code>,
+                <glossterm>optional</glossterm></member>
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"disabled"</code>, a<?oxy_custom_end?>
+            <olink targetdoc="../../attributes/validation/val_disabled.xml" targetptr="val_disabled"
+                    ><code>val_disabled</code></olink> string with value <code>"yes"</code> or
+                <code>"no"</code>, <glossterm>optional</glossterm></member>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
+        <member>- attributes from other namespaces,
+            <glossterm>optional</glossterm><?oxy_custom_end?></member>
+    </simplelist>
     <itemizedlist>
         <title>Constraints</title>
-        <listitem><para>Exactly one of the following attributes: <itemizedlist>
+        <listitem>
+            <para>Exactly one of the following properties: <itemizedlist>
                     <listitem>
-                        <para><olink targetdoc="../../attributes/validation/val_isPresent.xml"
-                                targetptr="val_isPresent"><code>isPresent</code></olink></para>
+                        <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"isPresent"</code>,
+                            a <?oxy_custom_end?><olink
+                                targetdoc="../../attributes/validation/val_isPresent.xml"
+                                targetptr="val_isPresent"><code>val_isPresent</code></olink>
+                            string</para>
                     </listitem>
                     <listitem>
-                        <para><olink targetdoc="../../attributes/validation/val_isNotPresent.xml"
-                                targetptr="val_isNotPresent"
-                            ><code>isNotPresent</code></olink></para>
+                        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+                        <para><code>"isNotPresent"</code>, a<?oxy_custom_end?>
+                            <olink targetdoc="../../attributes/validation/val_isNotPresent.xml"
+                                targetptr="val_isNotPresent"><code>val_isNotPresent</code></olink>
+                            string</para>
                     </listitem>
                     <listitem>
-                        <para><olink targetdoc="../../attributes/validation/val_startsWith.xml"
-                                targetptr="val_startsWith"><code>startsWith</code></olink></para>
+                        <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"startsWith"</code>, a<?oxy_custom_end?>
+                            <olink targetdoc="../../attributes/validation/val_startsWith.xml"
+                                targetptr="val_startsWith"><code>val_startsWith</code></olink>
+                            string</para>
                     </listitem>
                     <listitem>
-                        <para><olink targetdoc="../../attributes/validation/val_endsWith.xml"
-                                targetptr="val_endsWith"><code>endsWith</code></olink></para>
+                        <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"endsWith"</code>, a<?oxy_custom_end?>
+                            <olink targetdoc="../../attributes/validation/val_endsWith.xml"
+                                targetptr="val_endsWith"><code>val_endsWith</code></olink>
+                            string</para>
                     </listitem>
                     <listitem>
-                        <para>a custom rule defined by attributes from any namespace</para>
+                        <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>
+                        <para>a custom rule defined by attributes from any
+                            namespace<?oxy_custom_end?></para>
                     </listitem>
                 </itemizedlist>is <glossterm>required</glossterm> in any one <olink
                     targetdoc="../../elements/validation/rule.xml" targetptr="rule"
-                        ><code>&lt;rule></code></olink> element.</para></listitem>
+                        ><code>val_rule</code></olink> objects.</para>
+        </listitem>
     </itemizedlist>
-        <itemizedlist>
-    <title>Processing Requirements</title>
-      
-            <listitem><para><firstterm>Writers</firstterm>
+    <itemizedlist>
+        <title>Processing Requirements</title>
+        <listitem>
+            <para><firstterm>Writers</firstterm>
                 <glossterm>may</glossterm> create and add new <olink
                     targetdoc="../../elements/validation/rule.xml" targetptr="rule"
-                        ><code>&lt;rule></code></olink> elements, provided that the new rules do not
-                contradict rules already present.</para></listitem>
-            <listitem><para><firstterm>Modifiers</firstterm>
-                <glossterm>must not</glossterm> change attributes defined in this module that are
-                already present in any <olink targetdoc="../../elements/validation/rule.xml"
-                    targetptr="rule"><code>&lt;rule></code></olink> element.</para></listitem>
-            <listitem><para><firstterm>Modifiers</firstterm> <glossterm>must not</glossterm> remove either <olink
+                        ><code>val_rule</code></olink>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end?>,
+                provided that the new rules do not contradict rules already present.</para>
+        </listitem>
+        <listitem>
+            <para><firstterm>Modifiers</firstterm>
+                <glossterm>must not</glossterm> change
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>properties<?oxy_custom_end?>
+                defined in this module that are already present in any <olink
                     targetdoc="../../elements/validation/rule.xml" targetptr="rule"
-                        ><code>&lt;rule></code></olink> elements or their attributes defined in this
-                module.</para></listitem>
-       </itemizedlist>
+                        ><code>val_rule</code></olink>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
+        </listitem>
+        <listitem>
+            <para><firstterm>Modifiers</firstterm>
+                <glossterm>must not</glossterm> remove either <olink
+                    targetdoc="../../elements/validation/rule.xml" targetptr="rule"
+                        ><code>val_rule</code></olink>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end?>
+                or their
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>properties<?oxy_custom_end?>
+                defined in this module.</para>
+        </listitem>
+    </itemizedlist>
 </section>

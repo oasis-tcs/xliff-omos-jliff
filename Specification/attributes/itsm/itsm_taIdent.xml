@@ -21,7 +21,7 @@
     <para>The text string is supposed to be a human or machine redable identifier of a concept within a collection of text analysis concept resources, in the
         sense of an <ulink url="http://www.w3.org/TR/its20/#textAnalysis-info-pieces">identifier of the concept in the collection</ulink>.</para>
 
-    <para><emphasis>Default value:</emphasis>: undefined</para>
+    <para><emphasis>Default value:</emphasis>: undefined.</para>
 
 
 
