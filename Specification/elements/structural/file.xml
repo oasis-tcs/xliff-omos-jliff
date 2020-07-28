@@ -150,11 +150,6 @@
                                 targetdoc="../resourceData/resourceData.xml"
                                 targetptr="res_resourceData"><code>res_resourceData</code></olink>
                             <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object<?oxy_custom_end?>.</member>
-                        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-                        <member>- <code>"ctr_changeTrack"</code>, a <olink
-                                targetdoc="../change-track/changeTrack.xml"
-                                targetptr="ctr_changeTrack"><code>ctr_changeTrack</code></olink>
-                            object<?oxy_custom_end?>.</member>
                         <member>- <code>"slr_profiles"</code>, a <olink
                                 targetdoc="../size_restriction/profiles.xml"
                                 targetptr="slr_profiles"><code>slr_profiles</code></olink>
