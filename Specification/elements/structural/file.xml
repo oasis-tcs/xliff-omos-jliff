@@ -104,9 +104,10 @@
             TO DESCRIBE xml:space ROUNDTRIPPING]<olink targetdoc="../../attributes/xml_space.xml"
                 targetptr="xml_space"><code>xml:space</code></olink>,
                 <glossterm>optional</glossterm><?oxy_custom_end?></member>
+        <!-- covered by the userdata property allowed below
         <member>- <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>[NEED A
             REFORMULATION WITH THE userdata PROPERTY] attributes from other namespaces,
-                <glossterm>optional</glossterm><?oxy_custom_end?></member>
+                <glossterm>optional</glossterm><?oxy_custom_end?></member>-->
     </simplelist>
     <itemizedlist>
         <title>Constraints</title>
@@ -119,7 +120,7 @@
                 Requirements:<?oxy_custom_end?></para>
             <itemizedlist>
                 <listitem>
-                    <para>Properties allowed in both JLIFF 2.1 and JLIFF 2:</para>
+                    <para>Properties allowed in both JLIFF 2.1 and JLIFF 2.0:</para>
                     <simplelist>
                         <!--  Removing CTR module from XLIFF and hence JLIFF 2.1 as per resolution to https://issues.oasis-open.org/browse/XLIFF-32
                     <member>- Zero or one <olink targetdoc="../change-tracking/changeTrack.xml"
@@ -345,10 +346,11 @@
                 <listitem>
                     <para>Properties allowed only in JLIFF 2.0</para>
                     <simplelist>
-                        <member><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>-
-                            Zero or one <olink targetdoc="../change-tracking/changeTrack.xml"
-                                targetptr="changeTrack"><code>&lt;ctr:changeTrack></code></olink>
-                            elements<?oxy_custom_end?></member>
+                        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+                        <member>- <code>"ctr_changeTrack"</code>, a <olink
+                                targetdoc="../change-track/changeTrack.xml"
+                                targetptr="ctr_changeTrack"><code>ctr_changeTrack</code></olink>
+                            object.</member><?oxy_custom_end?>
                     </simplelist>
                 </listitem>
             </itemizedlist>
