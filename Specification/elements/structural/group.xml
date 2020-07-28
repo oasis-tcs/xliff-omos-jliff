@@ -92,11 +92,11 @@
     <itemizedlist>
         <title>Constraints</title>
         <listitem>
-            <para>The following <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>optional<?oxy_custom_end?>
+            <para>The following <glossterm>optional</glossterm>
                 <firstterm>JLIFF
                 Module</firstterm><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
                 properties are explicitly allowed by the wildcard <code>other</code> provided that
-                they don't violate its own modules Constraints or Processing
+                they don't violate its own module's Constraints or Processing
                 Requirements:<?oxy_custom_end?></para>
             <itemizedlist>
                 <listitem>
