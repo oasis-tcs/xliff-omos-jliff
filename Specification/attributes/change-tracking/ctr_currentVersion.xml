@@ -6,22 +6,41 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="ctr_currentVersion">
-  <title>currentVersion</title>
+  <title>ctr_currentVersion</title>
 
-  <para>currentVersion - holds a reference to the most current version of a revision.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>ChangeTrack<?oxy_custom_end?>
+    ctr_currentVersion - holds a reference to the most current version of a revision.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    string.<?oxy_custom_end?></para>
 
-  <para><emphasis>Value description:</emphasis> An <olink targetdoc="../../xliff21.xml" targetptr="XMLSchema2">[XML Schema Datatypes]</olink> NMTOKEN</para> 
+  <para><emphasis>Value description:</emphasis> an <olink targetdoc="../../xliff21.xml"
+      targetptr="XMLSchema2">[XML Schema Datatypes]</olink> NMTOKEN:
+    <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>a string matching the
+    pattern <code>[-._:A-Za-z0-9]+</code><?oxy_custom_end?>.</para> 
 
   <para><emphasis>Default value:</emphasis> none</para>
 
-  <para><emphasis>Used in:</emphasis><olink targetdoc="../../elements/change-tracking/revisions.xml" targetptr="revisions"><code>&lt;revisions></code></olink>.</para>
+  <para><emphasis>Used in:</emphasis><olink targetdoc="../../elements/change-tracking/revisions.xml"
+      targetptr="revisions"><code>ctr_revisions</code></olink>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[CURRENTLY
+    ctr_changeTrackRevisions]<?oxy_custom_end?>.</para>
 
 <itemizedlist>
   <title>Constraints</title>
-  <listitem><para>The value of the <link linkend="ctr_currentVersion"><code>currentVersion</code></link> attribute <glossterm>must</glossterm> be 
-    the value of the <olink targetdoc="../../attributes/change-tracking/ctr_version.xml" targetptr="ctr_version"><code>version</code></olink> attribute of one 
-    of the <olink targetdoc="../../elements/change-tracking/revision.xml" targetptr="revision"><code>&lt;revision></code></olink> elements 
-    listed in the same <olink targetdoc="../../elements/change-tracking/revisions.xml" targetptr="revisions"><code>&lt;revisions></code></olink> element.</para></listitem>
+  <listitem><para>The value of the <link linkend="ctr_currentVersion"><code>ctr_currentVersion</code></link>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        <glossterm>must</glossterm> be the value of the <olink
+          targetdoc="../../attributes/change-tracking/ctr_version.xml" targetptr="ctr_version"
+            ><code>ctr_version</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        of one of the <olink targetdoc="../../elements/change-tracking/revision.xml"
+          targetptr="revision"><code>ctr_revision</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>array
+        <?oxy_custom_end?>elements listed in the same <olink
+          targetdoc="../../elements/change-tracking/revisions.xml" targetptr="revisions"
+            ><code>ctr_revisions</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>anonymous
+        object<?oxy_custom_end?>.</para></listitem>
 </itemizedlist>
   
 </section>
