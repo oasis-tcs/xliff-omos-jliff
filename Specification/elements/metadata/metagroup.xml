@@ -6,21 +6,43 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="metagroup">
-    <title>metaGroup</title>
+    <title><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>anonymous<?oxy_custom_end?>
+        mda_metaGroup
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object<?oxy_custom_end?></title>
     <para>Provides a way to organize metadata into a structured hierarchy.</para>
-    <para><emphasis>Contains:</emphasis></para>
+    <para><emphasis>Contains:</emphasis> object.</para>
     <simplelist>
-        <member>- One or more <olink targetdoc="metagroup.xml" targetptr="metagroup"
-                    ><code>&lt;metaGroup></code></olink> or <olink targetdoc="meta.xml"
-                targetptr="meta"><code>&lt;meta></code></olink> elements in any order.</member>
+        <member><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>- One or more
+                <olink targetdoc="metagroup.xml" targetptr="metagroup"
+                ><code>&lt;metaGroup></code></olink> or <olink targetdoc="meta.xml" targetptr="meta"
+                    ><code>&lt;meta></code></olink> elements in any
+        order.</member><?oxy_custom_end?>
     </simplelist>
-    <para><emphasis>Attributes:</emphasis></para>
+    <para><emphasis>Properties:</emphasis></para>
     <simplelist>
-	     <member>- <olink targetdoc="../../attributes/meta_id.xml" targetptr="meta_id"><code>id</code></olink>,
-                <glossterm>optional</glossterm></member>
-        <member>- <olink targetdoc="../../atributes/meta_category.xml" targetptr="meta_category"><code>category</code></olink>, <glossterm>optional</glossterm>
-    </member>
-	<member>- <olink targetdoc="../../atributes/meta_appliesto.xml" targetptr="meta_appliesto"><code>appliesTo</code></olink>, <glossterm>optional</glossterm>
-    </member>
+	     <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"mda_id"</code>, a<?oxy_custom_end?>
+            <olink targetdoc="../../attributes/meta_id.xml" targetptr="meta_id"
+                ><code>mda_id</code></olink> string with IRI value,
+            <glossterm>optional</glossterm></member>
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"mda_category"</code>, a<?oxy_custom_end?>
+            <olink targetdoc="../../atributes/meta_category.xml" targetptr="meta_category"
+                    ><code>mda_category</code></olink> string, <glossterm>optional</glossterm>
+        </member>
+	<member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"mda_appliesTo"</code>, a<?oxy_custom_end?>
+            <olink targetdoc="../../atributes/meta_appliesto.xml" targetptr="meta_appliesto"
+                    ><code>mda_appliesTo</code></olink> string with value <code>"source"</code>,
+                <code>"target"</code>, or <code>"ignorable"</code>, <glossterm>optional</glossterm>
+        </member>
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"items"</code>,
+            a non-empty array of<?oxy_custom_end?>
+            <olink targetdoc="metagroup.xml" targetptr="metagroup"
+                ><code>mda_metaGroup</code></olink> and <olink targetdoc="meta.xml" targetptr="meta"
+                    ><code>mda_meta</code></olink>
+            objects<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?> in any
+            order<?oxy_custom_end?>, <emphasis>required</emphasis>.</member>
   </simplelist>
 </section>

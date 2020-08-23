@@ -6,34 +6,58 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="match">
-    <title><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>anonymous
+  <title><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>anonymous
     <?oxy_custom_end?>mtc_match object</title>
-    <para>A potential translation suggested for a part of the source content of the enclosing <olink
-            targetdoc="unit.xml" targetptr="unit"><code>&lt;unit></code></olink> element.</para>
-    <para><emphasis>Contains:</emphasis></para>
-    <simplelist>
-      <member>- Zero or one <olink targetdoc="../../elements/metadata/metadata.xml" targetptr="metadata"><code>&lt;mda:metadata></code></olink> element followed by.</member>
-      <member>- Zero or one <olink targetdoc="../../elements/structural/originaldata.xml" targetptr="originaldata"><code>&lt;originalData></code></olink> element followed by</member>
-      <member>- One <olink targetdoc="../../elements/structural/source.xml" targetptr="source"><code>&lt;source></code></olink> element followed by</member>
-      <member>- One <olink targetdoc="../../elements/structural/target.xml" targetptr="target"><code>&lt;target></code></olink> element followed by</member>
-      <member>- elements from other namespaces, <glossterm>optional</glossterm></member>
-    </simplelist>
-
-    <para><emphasis>Attributes:</emphasis></para>
-    <simplelist>
-        <member>- <olink targetdoc="../../attributes/candidates/candidates_id.xml" targetptr="candidates_id"><code>id</code></olink>, <glossterm>optional</glossterm></member>
-        <member>- <olink targetdoc="../../attributes/candidates/matchQuality.xml" targetptr="matchQuality"><code>matchQuality</code></olink>, <glossterm>optional</glossterm></member>
-        <member>- <olink targetdoc="../../attributes/candidates/matchSuitability.xml" targetptr="matchSuitability"><code>matchSuitability</code></olink>, <glossterm>optional</glossterm></member>
-      <member>- <olink targetdoc="../../attributes/candidates/candidates_origin.xml" targetptr="candidates_origin"><code>origin</code></olink>, <glossterm>optional</glossterm></member>
-        <member>- <olink targetdoc="../../attributes/candidates/candidates_ref.xml" targetptr="candidates_ref"><code>ref</code></olink>, <glossterm>required</glossterm></member>
-      <member>- <olink targetdoc="../../attributes/candidates/candidates_reference.xml" targetptr="candidates_reference"><code>reference</code></olink>, <glossterm>optional</glossterm></member>
-      <member>- <olink targetdoc="../../attributes/candidates/candidates_similarity.xml" targetptr="candidates_similarity"><code>similarity</code></olink>, <glossterm>optional</glossterm></member>
-      <member>- <olink targetdoc="../../attributes/candidates/candidates_subtype.xml" targetptr="candidates_subtype"><code>subType</code></olink>, <glossterm>optional</glossterm></member>
-      <member>- <olink targetdoc="../../attributes/candidates/candidates_type.xml" targetptr="candidates_type"><code>type</code></olink>, <glossterm>optional</glossterm></member>
-        <member>- attributes from other namespaces, <glossterm>optional</glossterm></member>
-    </simplelist>
-
-    <itemizedlist>
+  <para>A potential translation suggested for a part of the source content of the enclosing <olink
+      targetdoc="unit.xml" targetptr="unit"><code>unit</code></olink> object.</para>
+  <para><emphasis>Contains:</emphasis> object.</para>
+  <simplelist>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
+    <member>- Zero or one <olink targetdoc="../../elements/metadata/metadata.xml"
+        targetptr="metadata"><code>&lt;mda:metadata></code></olink> element followed by.</member>
+    <member>- Zero or one <olink targetdoc="../../elements/structural/originaldata.xml"
+        targetptr="originaldata"><code>&lt;originalData></code></olink> element followed by</member>
+    <member>- One <olink targetdoc="../../elements/structural/source.xml" targetptr="source"
+          ><code>&lt;source></code></olink> element followed by</member>
+    <member>- One <olink targetdoc="../../elements/structural/target.xml" targetptr="target"
+          ><code>&lt;target></code></olink> element followed by</member>
+    <member>- elements from other namespaces,
+      <glossterm>optional</glossterm><?oxy_custom_end?></member>
+  </simplelist>
+  <para><emphasis>Properties of array objects:</emphasis>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>THIS IS NOT COMPLETED
+    YE<?oxy_custom_end?>T</para>
+  <simplelist>
+    <member>- <olink targetdoc="../../attributes/candidates/candidates_id.xml"
+        targetptr="candidates_id"><code>mtc_id</code></olink>,
+      <glossterm>optional</glossterm></member>
+    <member>- <olink targetdoc="../../attributes/candidates/matchQuality.xml"
+        targetptr="matchQuality"><code>mtc_matchQuality</code></olink>,
+        <glossterm>optional</glossterm></member>
+    <member>- <olink targetdoc="../../attributes/candidates/matchSuitability.xml"
+        targetptr="matchSuitability"><code>mtc_matchSuitability</code></olink>,
+        <glossterm>optional</glossterm></member>
+    <member>- <olink targetdoc="../../attributes/candidates/candidates_origin.xml"
+        targetptr="candidates_origin"><code>mtc_origin</code></olink>,
+        <glossterm>optional</glossterm></member>
+    <member>- <olink targetdoc="../../attributes/candidates/candidates_ref.xml"
+        targetptr="candidates_ref"><code>ref</code></olink>,
+      <glossterm>required</glossterm></member>
+    <member>- <olink targetdoc="../../attributes/candidates/candidates_reference.xml"
+        targetptr="candidates_reference"><code>reference</code></olink>,
+        <glossterm>optional</glossterm></member>
+    <member>- <olink targetdoc="../../attributes/candidates/candidates_similarity.xml"
+        targetptr="candidates_similarity"><code>similarity</code></olink>,
+        <glossterm>optional</glossterm></member>
+    <member>- <olink targetdoc="../../attributes/candidates/candidates_subtype.xml"
+        targetptr="candidates_subtype"><code>subType</code></olink>,
+      <glossterm>optional</glossterm></member>
+    <member>- <olink targetdoc="../../attributes/candidates/candidates_type.xml"
+        targetptr="candidates_type"><code>type</code></olink>,
+      <glossterm>optional</glossterm></member>
+    <member>- attributes from other namespaces, <glossterm>optional</glossterm></member>
+  </simplelist>
+  <itemizedlist>
     <title>Constraints</title>
     <listitem>
       <para> When a <olink targetdoc="../../elements/structural/target.xml" targetptr="target"
@@ -55,15 +79,15 @@
       <simplelist>
         <member>- attributes from the namespace <code>http://www.w3.org/2005/11/its</code>,
             <glossterm>optional</glossterm>, provided that the Constraints specified in the <olink
-            targetdoc="../../modules/itsm/specification.xml" targetptr="ITS-module">ITS Module</olink> are
-          met.</member>
+            targetdoc="../../modules/itsm/specification.xml" targetptr="ITS-module">ITS
+            Module</olink> are met.</member>
         <member>- attributes from the namespace <code>urn:oasis:names:tc:xliff:itsm:2.1</code>,
             <glossterm>optional</glossterm>, provided that the Constraints specified in the <olink
             targetdoc="../../modules/itsm/specification.xml" targetptr="ITS-module">ITS
             Module</olink> are met.</member>
       </simplelist>
     </listitem>
-      <!-- removed per  csprd03 235 xml:lang-related text and Translation Candidate module
+    <!-- removed per  csprd03 235 xml:lang-related text and Translation Candidate module
       <listitem>
         <para><olink targetdoc="../../attributes/xml_lang.xml" targetptr="xml_lang"><code>xml:lang</code></olink>
           <glossterm>must not</glossterm> be set on the <code>match</code> element.</para>

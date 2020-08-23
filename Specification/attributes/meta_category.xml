@@ -6,11 +6,11 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="meta_category">
-  <title>category</title>
+  <title>mda_category</title>
 
-  <para>category - indicates a category for metadata contained in the enclosing <olink
+  <para>Property indicating a category for metadata contained in the enclosing <olink
       targetdoc="../elements/metadata/metagroup.xml" targetptr="metagroup"
-      ><code>metaGroup</code></olink>
+        ><code>mda_metaGroup</code></olink>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
   <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
     string.<?oxy_custom_end?></para>
@@ -21,5 +21,5 @@
 
   <para><emphasis>Used in:</emphasis>
     <olink targetdoc="../elements/metadata/metagroup.xml" targetptr="metagroup"
-        ><code>metaGroup</code></olink>.</para>
+        ><code>mda_metaGroup</code></olink>.</para>
 </section>

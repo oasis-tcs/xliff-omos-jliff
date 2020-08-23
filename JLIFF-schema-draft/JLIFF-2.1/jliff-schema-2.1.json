@@ -102,7 +102,7 @@
         "its_locQualityRatingScoreThreshold": { "type": "number", "minimum": 0, "maximum": 100 },
         "its_locQualityRatingVote": { "type": "integer" },
         "its_locQualityRatingVoteThreshold": { "type": "integer" },
-        "its_annotatorsRef": { "$ref": "#/definitions/its_annotatorsRef" },
+        "its_annotatorsRef": { "type": "string" },
         "its_org": { "type": "string" },
         "its_orgRef": { "$ref": "#/definitions/IRI" },
         "its_person": { "type": "string" },
@@ -122,7 +122,7 @@
         "its_taSource": { "type": "string" },
         "its_taIdent": { "type": "string" },
         "its_taIdentRef": { "$ref": "#/definitions/IRI" },
-        "its_domains": { "$ref": "#/definitions/its_domains" },
+        "itsm_domains": { "$ref": "#/definitions/itsm_domains" },
         "userdata": { "$ref": "#/definitions/extensionsData" }
       },
       "additionalProperties": false,
@@ -162,7 +162,7 @@
             "notes": { "$ref": "#/definitions/notes" },
             "subunits": { "$ref": "#/definitions/subunits" },
             "originalData": { "$ref": "#/definitions/originalData" },
-            "mtc_matches": { "$ref": "#/definitions/mtc_translationCandidates" },
+            "mtc_matches": { "$ref": "#/definitions/mtc_matches" },
             "gls_glossary": { "$ref": "#/definitions/gls_glossary" },
             "fs_fs": { "$ref": "#/definitions/fs_formatStyle" },
             "fs_subFs": { "$ref": "#/definitions/fs_subFormatStyle" },
@@ -182,7 +182,7 @@
             "its_locQualityRatingVote": { "type": "integer" },
             "its_locQualityRatingVoteThreshold": { "type": "integer" },
             "its_locQualityIssues": { "$ref": "#/definitions/its_locQualityIssues" },
-            "its_annotatorsRef": { "$ref": "#/definitions/its_annotatorsRef" },
+            "its_annotatorsRef": { "type": "string" },
             "its_org": { "type": "string" },
             "its_orgRef": { "$ref": "#/definitions/IRI" },
             "its_person": { "type": "string" },
@@ -202,7 +202,7 @@
             "its_taSource": { "type": "string" },
             "its_taIdent": { "type": "string" },
             "its_taIdentRef": { "$ref": "#/definitions/IRI" },
-            "its_domains": { "$ref": "#/definitions/its_domains" },
+            "itsm_domains": { "$ref": "#/definitions/itsm_domains" },
             "userdata": { "$ref": "#/definitions/extensionsData" }
           },
           "additionalProperties": false,
@@ -235,7 +235,7 @@
             "its_locQualityRatingScoreThreshold": { "type": "number", "minimum": 0, "maximum": 100 },
             "its_locQualityRatingVote": { "type": "integer" },
             "its_locQualityRatingVoteThreshold": { "type": "integer" },
-            "its_annotatorsRef": { "$ref": "#/definitions/its_annotatorsRef" },
+            "its_annotatorsRef": { "type": "string" },
             "its_org": { "type": "string" },
             "its_orgRef": { "$ref": "#/definitions/IRI" },
             "its_person": { "type": "string" },
@@ -255,7 +255,7 @@
             "its_taSource": { "type": "string" },
             "its_taIdent": { "type": "string" },
             "its_taIdentRef": { "$ref": "#/definitions/IRI" },
-            "its_domains": { "$ref": "#/definitions/its_domains" },
+            "itsm_domains": { "$ref": "#/definitions/itsm_domains" },
             "userdata": { "$ref": "#/definitions/extensionsData" }
           },
           "additionalProperties": false,
@@ -307,35 +307,35 @@
       "additionalProperties": false
     },
 
-    "mtc_translationCandidates": {
+    "mtc_matches": {
       "description": "The translationCandidates module provides a capability to store lists of possible translations along with information about the similarity of the match, the quality of the translation, its provenance, etc.",
       "type": "object",
       "properties": {
-        "id": { "$ref": "#/definitions/NMTOKEN" },
-        "type": { "$ref": "#/definitions/type", "enum": [ "mtc:match" ] },
-        "ref": { "$ref": "#/definitions/NMTOKEN" },
-        "translate": { "type": "string", "enum": [ "yes", "no" ] },
-        "matches": {
+        "mtc_id": { "$ref": "#/definitions/NMTOKEN" },
+        "mtc_type": { "$ref": "#/definitions/type", "enum": [ "mtc:match" ] },
+        "mtc_ref": { "$ref": "#/definitions/NMTOKEN" },
+        "mtc_translate": { "type": "string", "enum": [ "yes", "no" ] },
+        "items": {
           "type": "array",
-          "items": { "$ref": "#/definitions/mtc_translationCandidatesMatch" },
+          "items": { "$ref": "#/definitions/mtc_match" },
           "minItems": 1
         }
       },
       "additionalProperties": false
     },
 
-    "mtc_translationCandidatesMatch": {
+    "mtc_match": {
       "type": "object",
       "properties": {
-        "id": { "$ref": "#/definitions/NMTOKEN" },
-        "ref": { "$ref": "#/definitions/IRI" },
-        "matchQuality": { "type": "number", "minimum": 0, "maximum": 100 },
-        "matchSuitability": { "type": "number", "minimum": 0, "maximum": 100 },
-        "origin": { "type": "string" },
-        "reference": { "type": "string", "enum": [ "yes", "no" ], "default": "no" },
-        "similarity": { "type": "number", "minimum": 0, "maximum": 100 },
-        "subType": { "type": "string" },
-        "type": { "type": "string", "enum": [ "am", "mt", "icm", "idm", "tb", "tm", "other" ], "default": "tm" },
+        "mtc_id": { "$ref": "#/definitions/NMTOKEN" },
+        "mtc_ref": { "$ref": "#/definitions/IRI" },
+        "mtc_matchQuality": { "type": "number", "minimum": 0, "maximum": 100 },
+        "mtc_matchSuitability": { "type": "number", "minimum": 0, "maximum": 100 },
+        "mtc_origin": { "type": "string" },
+        "mtc_reference": { "type": "string", "enum": [ "yes", "no" ], "default": "no" },
+        "mtc_similarity": { "type": "number", "minimum": 0, "maximum": 100 },
+        "mtc_subType": { "type": "string" },
+        "mtc_type": { "type": "string", "enum": [ "am", "mt", "icm", "idm", "tb", "tm", "other" ], "default": "tm" },
         "source": { "$ref": "#/definitions/elements" },
         "target": { "$ref": "#/definitions/elements" },
         "originalData": { "$ref": "#/definitions/originalData" },
@@ -345,10 +345,11 @@
         "its_locQualityRatingScoreThreshold": { "type": "number", "minimum": 0, "maximum": 100 },
         "its_locQualityRatingVote": { "type": "integer" },
         "its_locQualityRatingVoteThreshold": { "type": "integer" },
-        "its_domains": { "$ref": "#/definitions/its_domains" }
+        "its_annotatorsRef": { "type": "string" },
+        "itsm_domains": { "$ref": "#/definitions/itsm_domains" }
       },
       "additionalProperties": true,
-      "required": [ "ref", "source", "target" ]
+      "required": [ "mtc_ref", "source", "target" ]
     },
 
     "gls_glossary": {
@@ -360,43 +361,44 @@
     "gls_glossEntry": {
       "type": "object",
       "properties": {
-        "ref": { "$ref": "#/definitions/IRI" },
-        "term": {
+        "gls_id": { "$ref": "#/definitions/NMTOKEN" },
+        "gls_ref": { "$ref": "#/definitions/IRI" },
+        "gls_term": {
           "type": "object",
-          "ref": "#/definitions/gls_glossEntryData"
+          "properties": {
+            "gls_text": { "type": "string" },
+            "gls_source": { "type": "string" }
+          },
+          "additionalProperties": true,
+          "required": [ "gls_text" ]
         },
-        "definition": {
-          "type": "object",
-          "ref": "#/definitions/gls_glossEntryData"
-        },
-        "translations": {
+        "gls_translations": {
           "type": "array",
           "items": { 
             "type": "object",
             "properties": {
-              "id": { "$ref": "#/definitions/NMTOKEN" },
-              "ref": { "$ref": "#/definitions/IRI" },
-              "text": { "type": "string" },
-              "source": { "type": "string" }
+              "gls_id": { "$ref": "#/definitions/NMTOKEN" },
+              "gls_ref": { "$ref": "#/definitions/IRI" },
+              "gls_text": { "type": "string" },
+              "gls_source": { "type": "string" }
             },
             "additionalProperties": true,
-            "required": [ "text" ]
+            "required": [ "gls_text" ]
           },
           "minItems": 1
+        },
+        "gls_definition": {
+          "type": "object",
+          "properties": {
+            "gls_text": { "type": "string" },
+            "gls_source": { "type": "string" }
+          },
+          "additionalProperties": true,
+          "required": [ "gls_text" ]
         }
       },
       "additionalProperties": true,
-      "required": [ "term" ]
-    },
-
-    "gls_glossEntryData": {
-      "type": "object",
-      "properties": {
-        "text": { "type": "string" },
-        "source": { "type": "string" }
-      },
-      "additionalProperties": true,
-      "required": [ "text" ]
+      "required": [ "gls_term" ]
     },
 
     "fs_formatStyle": {
@@ -414,8 +416,8 @@
       "description": "The metadata module: provides a mechanism for storing custom metadata",
       "type": "object",
       "properties": {
-        "id": { "$ref": "#/definitions/NMTOKEN" },
-        "metaGroups": {
+        "mda_id": { "$ref": "#/definitions/NMTOKEN" },
+        "mda_metaGroups": {
           "type": "array",
           "items": { "$ref": "#/definitions/mda_metaGroup" },
           "minItems": 1
@@ -427,20 +429,21 @@
     "mda_metaGroup": {
       "type": "object",
       "properties": {
-        "id": { "$ref": "#/definitions/NMTOKEN" },
-        "appliesTo": { "type": "string", "enum": [ "source", "target", "ignorable" ] },
-        "category": { "type": "string" },
-        "meta": { 
+        "mda_id": { "$ref": "#/definitions/NMTOKEN" },
+        "mda_appliesTo": { "type": "string", "enum": [ "source", "target", "ignorable" ] },
+        "mda_category": { "type": "string" },
+        "items": { 
           "type": "array",
           "items": {
             "oneOf": [
               {
                 "type": "object",
                 "properties": {
-                  "type": { "type": "string" },
-                  "value": { "type": "string" }
+                  "mda_type": { "type": "string" },
+                  "mda_text": { "type": "string" }
                 },
-                "additionalProperties": false
+                "additionalProperties": false,
+                "required": [ "mda_type", "mda_text" ]
               },
               { "$ref": "#/definitions/mda_metaGroup" }
             ]
@@ -448,20 +451,20 @@
         }
       },
       "additionalProperties": false,
-      "required": [ "meta" ]
+      "required": [ "items" ]
     },
 
     "res_resourceData": {
       "description": "The resourceData module: provides a mechanism for referencing external resource data that MAY need to be modified or used as contextual reference during translation",
       "type": "object",
       "properties": {
-        "id": { "$ref": "#/definitions/NMTOKEN" },
-        "resourceItemRefs": {
+        "res_id": { "$ref": "#/definitions/NMTOKEN" },
+        "res_resourceItemRefs": {
           "type": "array",
           "items": { "$ref": "#/definitions/res_resourceItemRef" },
           "minItems": 1
         },
-        "resourceItems": {
+        "res_resourceItems": {
           "type": "array",
           "items": { "$ref": "#/definitions/res_resourceItem" },
           "minItems": 1
@@ -473,32 +476,32 @@
     "res_resourceItemRef": {
       "type": "object",
       "properties": {
-        "id": { "$ref": "#/definitions/NMTOKEN" },
-        "ref": { "$ref": "#/definitions/NMTOKEN" }
+        "res_id": { "$ref": "#/definitions/NMTOKEN" },
+        "res_ref": { "$ref": "#/definitions/NMTOKEN" }
       },
-      "additionalProperties": false,
-      "required": [ "ref" ]
+      "additionalProperties": true,
+      "required": [ "res_ref" ]
     },
 
     "res_resourceItem": {
       "type": "object",
       "properties": {
-        "id": { "$ref": "#/definitions/NMTOKEN" },
-        "mimeType": { "type": "string" },
-        "context": { "type": "string", "enum": [ "yes", "no" ], "default": "yes" },
-        "source": {
+        "res_id": { "$ref": "#/definitions/NMTOKEN" },
+        "res_mimeType": { "type": "string" },
+        "res_context": { "type": "string", "enum": [ "yes", "no" ], "default": "yes" },
+        "res_source": {
           "type": "object",
           "properties": {
-            "href": { "type": "string" },
-            "lang": { "$ref": "#/definitions/language" }
+            "res_href": { "type": "string" },
+            "res_lang": { "$ref": "#/definitions/language" }
           },
           "additionalProperties": true
         },
-        "target": {
+        "res_target": {
           "type": "object",
           "properties": {
-            "href": { "type": "string" },
-            "lang": { "$ref": "#/definitions/language" }
+            "res_href": { "type": "string" },
+            "res_lang": { "$ref": "#/definitions/language" }
           },
           "additionalProperties": true
         },
@@ -507,11 +510,11 @@
           "items": {
             "type": "object",
             "properties": {
-              "href": { "type": "string" },
-              "lang": { "$ref": "#/definitions/language" }
+              "res_href": { "type": "string" },
+              "res_lang": { "$ref": "#/definitions/language" }
             },
             "additionalProperties": true,
-            "required": [ "href" ]
+            "required": [ "res_href" ]
           }
         }
       },
@@ -522,66 +525,67 @@
       "description": "The changeTrack module is used to store revision information",
       "type": "object",
       "properties": {
-        "revisions": {
+        "ctr_revisions": {
           "type": "array",
-          "items": { "$ref": "#/definitions/ctr_changeTrackRevisions" },
+          "items": { "$ref": "#/definitions/ctr_revisions" },
           "minItems": 1
-        },
-        "its_annotatorsRef": { "$ref": "#/definitions/its_annotatorsRef" }
+        }
       },
       "additionalProperties": false,
-      "required": [ "revisions" ]
+      "required": [ "ctr_revisions" ]
     },
 
-    "ctr_changeTrackRevisions": {
+    "ctr_revisions": {
       "type": "object",
       "properties": {
-        "appliesTo": { "$ref": "#/definitions/NMTOKEN" },
-        "ref": { "$ref": "#/definitions/NMTOKEN" },
-        "currentVersion": { "$ref": "#/definitions/NMTOKEN" },
+        "ctr_appliesTo": { "$ref": "#/definitions/NMTOKEN" },
+        "ctr_ref": { "$ref": "#/definitions/NMTOKEN" },
+        "ctr_currentVersion": { "$ref": "#/definitions/NMTOKEN" },
         "items": {
           "type": "array",
-          "items": { "$ref": "#/definitions/ctr_changeTrackRevisionItem" },
+          "items": { "$ref": "#/definitions/ctr_revision" },
           "minItems": 1
         },
-        "its_annotatorsRef": { "$ref": "#/definitions/its_annotatorsRef" }
+        "its_annotatorsRef": { "type": "string" }
       },
       "additionalProperties": true,
-      "required": [ "appliesTo" ]
+      "required": [ "ctr_appliesTo" ]
     },
 
-    "ctr_changeTrackRevisionItem": {
+    "ctr_revision": {
       "type": "object",
       "properties": {
-        "author": { "type": "string" },
-        "dateTime": { "type": "string" },
-        "version": { "$ref": "#/definitions/NMTOKEN" },
-        "item": { "$ref": "#/definitions/ctr_changeTrackRevisionItemText" }
+        "ctr_author": { "type": "string" },
+        "ctr_dateTime": { "type": "string" },
+        "ctr_version": { "$ref": "#/definitions/NMTOKEN" },
+        "items": { 
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ctr_property": { "type": "string" },
+              "ctr_text": { "type": "string" }
+            },
+            "additionalProperties": true,
+            "required": [ "property", "ctr_text" ]
+          },
+          "minitems": 1
+        }
       },
       "additionalProperties": true
-    },
-
-    "ctr_changeTrackRevisionItemText": {
-      "type": "object",
-      "properties": {
-        "property": { "type": "string" },
-        "text": { "type": "string" }
-      },
-      "additionalProperties": true,
-      "required": [ "property", "text" ]
     },
 
     "slr_profiles": {
       "description": "The Size and Length Restriction module provides a mechanism to annotate the XLIFF content with information on storage and general size restrictions",
       "type": "object",
       "properties": {
-        "generalProfile": { "type": "string" },
-        "storageProfile": { "type": "string" },
-        "normalization": {
+        "slr_generalProfile": { "type": "string" },
+        "slr_storageProfile": { "type": "string" },
+        "slr_normalization": {
           "type": "object",
           "properties": {
-            "general": { "type": "string", "enum": [ "none", "nfc", "nfd" ] },
-            "storage": { "type": "string", "enum": [ "none", "nfc", "nfd" ] }
+            "slr_general": { "type": "string", "enum": [ "none", "nfc", "nfd" ] },
+            "slr_storage": { "type": "string", "enum": [ "none", "nfc", "nfd" ] }
           }
         }
       },
@@ -591,10 +595,10 @@
     "slr_data": {
       "type": "object",
       "properties": {
-         "profile": { "type": "string" }
+         "slr_profile": { "type": "string" }
       },
       "additionalProperties": true,
-      "required": [ "profile" ]
+      "required": [ "slr_profile" ]
     },
 
     "slr_storageRestriction": {
@@ -629,42 +633,42 @@
       "oneOf": [
         {
           "properties": {
-            "isPresent": { "type": "string" },
-            "occurs": { "type": "integer", "minimum": 1 },
-            "existsInSource": { "type": "string", "enum": [ "yes", "no" ] },
-            "caseSensitive": { "type": "string", "enum": [ "yes", "no" ] },
-            "normalization": { "type": "string", "enum": [ "none", "nfc", "nfd" ] },
-            "disabled": { "type": "string", "enum": [ "yes", "no" ] }
+            "val_isPresent": { "type": "string" },
+            "val_occurs": { "type": "integer", "minimum": 1 },
+            "val_existsInSource": { "type": "string", "enum": [ "yes", "no" ] },
+            "val_caseSensitive": { "type": "string", "enum": [ "yes", "no" ] },
+            "val_normalization": { "type": "string", "enum": [ "none", "nfc", "nfd" ] },
+            "val_disabled": { "type": "string", "enum": [ "yes", "no" ] }
           }
         },
         {
           "properties": {
-            "isNotPresent": { "type": "string" },
-            "occurs": { "type": "integer", "minimum": 1 },
-            "existsInSource": { "type": "string", "enum": [ "yes", "no" ] },
-            "caseSensitive": { "type": "string", "enum": [ "yes", "no" ] },
-            "normalization": { "type": "string", "enum": [ "none", "nfc", "nfd" ] },
-            "disabled": { "type": "string", "enum": [ "yes", "no" ] }
+            "val_isNotPresent": { "type": "string" },
+            "val_occurs": { "type": "integer", "minimum": 1 },
+            "val_existsInSource": { "type": "string", "enum": [ "yes", "no" ] },
+            "val_caseSensitive": { "type": "string", "enum": [ "yes", "no" ] },
+            "val_normalization": { "type": "string", "enum": [ "none", "nfc", "nfd" ] },
+            "val_disabled": { "type": "string", "enum": [ "yes", "no" ] }
           }
         },
         {
           "properties": {
-            "occurs": { "type": "integer", "minimum": 1 },
-            "startsWith": { "type": "string" },
-            "existsInSource": { "type": "string", "enum": [ "yes", "no" ] },
-            "caseSensitive": { "type": "string", "enum": [ "yes", "no" ] },
-            "normalization": { "type": "string", "enum": [ "none", "nfc", "nfd" ] },
-            "disabled": { "type": "string", "enum": [ "yes", "no" ] }
+            "val_occurs": { "type": "integer", "minimum": 1 },
+            "val_startsWith": { "type": "string" },
+            "val_existsInSource": { "type": "string", "enum": [ "yes", "no" ] },
+            "val_caseSensitive": { "type": "string", "enum": [ "yes", "no" ] },
+            "val_normalization": { "type": "string", "enum": [ "none", "nfc", "nfd" ] },
+            "val_disabled": { "type": "string", "enum": [ "yes", "no" ] }
           }
         },
         {
           "properties": {
-            "occurs": { "type": "integer", "minimum": 1 },
-            "endsWith": { "type": "string" },
-            "existsInSource": { "type": "string", "enum": [ "yes", "no" ] },
-            "caseSensitive": { "type": "string", "enum": [ "yes", "no" ] },
-            "normalization": { "type": "string", "enum": [ "none", "nfc", "nfd" ] },
-            "disabled": { "type": "string", "enum": [ "yes", "no" ] }
+            "val_occurs": { "type": "integer", "minimum": 1 },
+            "val_endsWith": { "type": "string" },
+            "val_existsInSource": { "type": "string", "enum": [ "yes", "no" ] },
+            "val_caseSensitive": { "type": "string", "enum": [ "yes", "no" ] },
+            "val_normalization": { "type": "string", "enum": [ "none", "nfc", "nfd" ] },
+            "val_disabled": { "type": "string", "enum": [ "yes", "no" ] }
           }
         }
       ],
@@ -672,75 +676,71 @@
     },
 
     "its_provenanceRecords": {
-      "description": "An array of standoff wrapper objects",
+      "description": "An array of standoff wrapper objects with an id and an array to group any number of single Provenance Record elements related to the same span of source or target content",
       "type": "array",
-      "items": { "$ref": "#/definitions/its_provenanceRecordsWrapper" },
+      "items": {
+        "type": "object",
+        "properties": {
+          "its_id": { "$ref": "#/definitions/NCName" },
+          "items": {
+            "type": "array",
+            "items": { "$ref": "#/definitions/its_provenanceRecord" },
+            "minItems": 1
+          }
+        },
+        "additionalProperties": false,
+        "required": [ "its_id", "items" ]
+      },
       "minItems": 1
-    },
-
-    "its_provenanceRecordsWrapper": {
-      "description": "A standoff wrapper object with an id and an array to group any number of single Provenance Record elements related to the same span of source or target content",
-      "type": "object",
-      "properties": {
-        "id": { "$ref": "#/definitions/NCName" },
-        "items": {
-          "type": "array",
-          "items": { "$ref": "#/definitions/its_provenanceRecord" },
-          "minItems": 1
-        }
-      }
     },
 
     "its_provenanceRecord": {
       "type": "object",
       "properties": {
-        "org": { "type": "string" },
-        "orgRef": { "$ref": "#/definitions/IRI" },
-        "person": { "type": "string" },
-        "personRef": { "$ref": "#/definitions/IRI" },
-        "provenanceRecordsRef": { "$ref": "#/definitions/IRI" },
-        "revOrg": { "type": "string" },
-        "revOrgRef": { "$ref": "#/definitions/IRI" },
-        "revPerson": { "type": "string" },
-        "revPersonRef": { "$ref": "#/definitions/IRI" },
-        "revTool": { "type": "string" },
-        "revToolRef": { "$ref": "#/definitions/IRI" },
-        "tool": { "type": "string" },
-        "toolRef": { "$ref": "#/definitions/IRI" }
+        "its_org": { "type": "string" },
+        "its_orgRef": { "$ref": "#/definitions/IRI" },
+        "its_person": { "type": "string" },
+        "its_personRef": { "$ref": "#/definitions/IRI" },
+        "its_provenanceRecordsRef": { "$ref": "#/definitions/IRI" },
+        "its_revOrg": { "type": "string" },
+        "its_revOrgRef": { "$ref": "#/definitions/IRI" },
+        "its_revPerson": { "type": "string" },
+        "its_revPersonRef": { "$ref": "#/definitions/IRI" },
+        "its_revTool": { "type": "string" },
+        "its_revToolRef": { "$ref": "#/definitions/IRI" },
+        "its_tool": { "type": "string" },
+        "its_toolRef": { "$ref": "#/definitions/IRI" }
       },
       "additionalProperties": false
     },
 
     "its_locQualityIssues": {
-      "description": "An array of standoff wrapper objects",
+      "description": "An array of standoff wrapper objects with an id and an array to group any number of single issue elements related to the same span of source or target content",
       "type": "array",
-      "items": { "$ref": "#/definitions/its_locQualityIssuesWrapper" },
-      "minItems": 1
-    },
-
-    "its_locQualityIssuesWrapper": {
-      "description": "A standoff wrapper object with an id and an array to group any number of single issue elements related to the same span of source or target content",
-      "type": "object",
-      "properties": {
-        "id": { "$ref": "#/definitions/NCName" },
-        "items": {
-          "type": "array",
-          "items": { "$ref": "#/definitions/its_locQualityIssue" },
-          "minItems": 1
-        }
+      "items": {
+        "type": "object",
+        "properties": {
+          "its_id": { "$ref": "#/definitions/NCName" },
+          "items": {
+            "type": "array",
+            "items": { "$ref": "#/definitions/its_locQualityIssue" },
+            "minItems": 1
+          }
+        },
+        "additionalProperties": false,
+        "required": [ "its_id", "items" ]
       },
-      "additionalProperties": false,
-      "required": [ "items" ]
+      "minItems": 1
     },
 
     "its_locQualityIssue": {
       "type": "object",
       "properties": {
-        "locQualityIssueType": { "$ref": "#/definitions/its_locQualityIssueType" },
-        "locQualityIssueComment": { "type": "string" },
-        "locQualityIssueSeverity": { "type": "number", "minimum": 0, "maximum": 100 },
-        "locQualityIssueProfileRef": { "$ref": "#/definitions/IRI" }, 
-        "locQualityIssueEnabled": { "type": "string", "enum": [ "yes", "no" ] }
+        "its_locQualityIssueType": { "$ref": "#/definitions/its_locQualityIssueType" },
+        "its_locQualityIssueComment": { "type": "string" },
+        "its_locQualityIssueSeverity": { "type": "number", "minimum": 0, "maximum": 100 },
+        "its_locQualityIssueProfileRef": { "$ref": "#/definitions/IRI" }, 
+        "its_locQualityIssueEnabled": { "type": "string", "enum": [ "yes", "no" ] }
       }
     },
 
@@ -777,32 +777,7 @@
       ]
     },
 
-    "its_annotatorsRef": {
-      "type": "object",
-      "properties": {
-        "translate": { "type": "string", "pattern": "^[^ |]+$" },
-        "localization-note": { "type": "string", "pattern": "^[^ |]+$" },
-        "terminology": { "type": "string", "pattern": "^[^ |]+$" },
-        "directionality": { "type": "string", "pattern": "^[^ |]+$" },
-        "language-information": { "type": "string", "pattern": "^[^ |]+$" },
-        "elements-within-text": { "type": "string", "pattern": "^[^ |]+$" },
-        "domain": { "type": "string", "pattern": "^[^ |]+$" },
-        "text-analysis": { "type": "string", "pattern": "^[^ |]+$" },
-        "locale-filter": { "type": "string", "pattern": "^[^ |]+$" },
-        "provenance": { "type": "string", "pattern": "^[^ |]+$" },
-        "external-resource": { "type": "string", "pattern": "^[^ |]+$" },
-        "target-pointer": { "type": "string", "pattern": "^[^ |]+$" },
-        "id-value": { "type": "string", "pattern": "^[^ |]+$" },
-        "preserve-space": { "type": "string", "pattern": "^[^ |]+$" },
-        "localization-quality-issue": { "type": "string", "pattern": "^[^ |]+$" },
-        "localization-quality-rating": { "type": "string", "pattern": "^[^ |]+$" },
-        "mt-confidence": { "type": "string", "pattern": "^[^ |]+$" },
-        "allowed-characters": { "type": "string", "pattern": "^[^ |]+$" },
-        "storage-size": { "type": "string", "pattern": "^[^ |]+$" }
-      }
-    },
-
-    "its_domains": {
+    "itsm_domains": {
       "type": "array",
       "items": { "type": "string", "pattern": "^[^,]+$" },
       "minitems": 1
@@ -982,7 +957,7 @@
         "its_locQualityRatingVoteThreshold": { "type": "integer" },
         "its_termConfidence": { "type": "number", "minimum": 0, "maximum": 1 },
         "its_mtConfidence": { "type": "number", "minimum": 0, "maximum": 1 },
-        "its_annotatorsRef": { "$ref": "#/definitions/its_annotatorsRef" },
+        "its_annotatorsRef": { "type": "string" },
         "its_org": { "type": "string" },
         "its_orgRef": { "$ref": "#/definitions/IRI" },
         "its_person": { "type": "string" },
@@ -1001,7 +976,8 @@
         "its_taSource": { "type": "string" },
         "its_taIdent": { "type": "string" },
         "its_taIdentRef": { "$ref": "#/definitions/IRI" },
-        "its_domains": { "$ref": "#/definitions/its_domains" }
+        "itsm_lang": { "$ref": "#/definitions/language" },
+        "itsm_domains": { "$ref": "#/definitions/itsm_domains" }
       },
       "additionalProperties": true,
       "required": [ "id", "kind" ]

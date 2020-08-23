@@ -6,23 +6,38 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="res_ref">
-  <title>ref</title>
+  <title>res_ref</title>
 
   <para>Resource Item Reference - holds a reference to an associated <olink
       targetdoc="../../elements/resourcedata/resourceItem.xml" targetptr="res_resourceItem"
-        ><code>&lt;resourceItem></code></olink> element located at the <olink
-      targetdoc="../../elements/structural/file.xml" targetptr="file"><code>&lt;file></code></olink>
-    level.</para>
+        ><code>res_resourceItem</code></olink>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+    located at the <olink targetdoc="../../elements/structural/file.xml" targetptr="file"
+        ><code>file</code></olink> level.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    object.<?oxy_custom_end?></para>
 
-  <para><emphasis>Value description:</emphasis> An <olink targetdoc="../../xliff21.xml" targetptr="XMLSchema2">[XML Schema Datatypes]</olink> NMTOKEN</para> 
+  <para><emphasis>Value description:</emphasis>
+    NMTOKEN<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>: a string matching
+    the pattern <code>[-._:A-Za-z0-9]+</code><?oxy_custom_end?>.</para> 
 
-  <para><emphasis>Default value:</emphasis> undefined</para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
 
-  <para><emphasis>Used in:</emphasis><olink targetdoc="../../elements/resourcedata/resourceItemRef.xml" targetptr="res_resourceItemRef"><code>&lt;resourceItemRef></code></olink></para>
+  <para><emphasis>Used in:</emphasis><olink
+      targetdoc="../../elements/resourcedata/resourceItemRef.xml" targetptr="res_resourceItemRef"
+        ><code>res_resourceItemRef</code></olink></para>
   
 <itemizedlist>
   <title>Constraints</title>
-  <listitem><para>The <link linkend="res_ref"><code>ref</code></link> attribute value <glossterm>must</glossterm> be the value of the <olink targetdoc="res_id.xml" targetptr="res_id"><code>id</code></olink> attribute of the <olink targetdoc="../../elements/resourcedata/resourceItem.xml" targetptr="res_resourceItem"><code>&lt;resourceItem></code></olink> element being referenced.</para></listitem>
+  <listitem><para>The <link linkend="res_ref"><code>res_ref</code></link>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        value <glossterm>must</glossterm> be the value of the <olink targetdoc="res_id.xml"
+          targetptr="res_id"><code>res_id</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        of the <olink targetdoc="../../elements/resourcedata/resourceItem.xml"
+          targetptr="res_resourceItem"><code>res_resourceItem</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+        being referenced.</para></listitem>
 </itemizedlist>
   
 </section>

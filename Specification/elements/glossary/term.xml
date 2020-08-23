@@ -6,24 +6,34 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="term">
-    <title>term</title>
-    <para>A term in the glossary, expressed in the source language of the enclosing
-        <olink targetdoc="../structural/xliff.xml" targetptr="xliff"><code>&lt;xliff></code></olink> element.</para>
-    <para><emphasis>Contains:</emphasis></para>
-    <simplelist>
-        <member>- Text</member>
-    </simplelist>
+    <title>gls_term</title>
+    <para>Term: a term in the glossary, expressed in the source language of the enclosing <olink
+      targetdoc="../structural/xliff.xml" targetptr="xliff"><code>jliff</code></olink>
+    object.</para>
+    <para><emphasis>Contains:</emphasis>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
 
   <para>
-    <emphasis>Attributes:</emphasis>
+    <emphasis>Properties:</emphasis>
   </para>
   <simplelist>
-    <member>
-      - <olink targetdoc="../../elements/glossary/gls_source.xml" targetptr="gls_source">
-        <code>source</code>
-      </olink>, <glossterm>optional</glossterm>
+    <member>-
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"gls_text"</code>, a<?oxy_custom_end?>
+      <olink targetdoc="../../elements/glossary/gls_text.xml" targetptr="gls_text">
+        <code>gls_text</code>
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>string<?oxy_custom_end?>
+      </olink>, <glossterm>required</glossterm>
     </member>
-    <member>- attributes from other namespaces, <glossterm>optional</glossterm></member>
+    <member>-
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"gls_source"</code><?oxy_custom_end?>,
+      a <olink targetdoc="../../elements/glossary/gls_source.xml" targetptr="gls_source">
+        <code>gls_source</code>
+      </olink>
+      <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>string<?oxy_custom_end?>,
+        <glossterm>optional</glossterm>
+    </member>
+    <member>- <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>additional
+      properties allowed.<?oxy_custom_end?></member>
   </simplelist>
 
 </section>

@@ -6,7 +6,9 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="res_resourceDataId">
-  <title>resourceDataId</title>
+  <title>res_resourceDataId
+    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[DOES NOT APPEAR TO BE
+    DEFINED OR USED IN XLIFF2.1 BUT REFERENCED BY res_resourceData]<?oxy_custom_end?></title>
 
   <para>Resopurce Data Reference - Holds a reference to an associated <olink targetdoc="../../elements/resourcedata/resourceData.xml" targetptr="res_resourceData"><code>&lt;resourceData></code></olink> element.</para>
 

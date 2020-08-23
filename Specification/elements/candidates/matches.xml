@@ -6,15 +6,20 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="matches">
-    <title>mtc_matches
-        <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[mtc_translationCandidates
-        in schema]<?oxy_custom_end?></title>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Array of
-        <?oxy_custom_end?>matches retrieved from any leveraging system (MT, TM, etc.)
-        <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[OBJECT WITH AN ARRAY
-        OF mtc_match OBJECTS IN PROPERTY "matches"] <?oxy_custom_end?></para>
-    <para><emphasis>Contains:</emphasis></para>
+    <title>mtc_matches</title>
+    <para>Collection of matches retrieved from any leveraging system (MT, TM, etc.)</para>
+    <para><emphasis>Contains:</emphasis> object.</para>
+    <para><emphasis>Properties:</emphasis></para>
     <simplelist>
-        <member>- One or more <olink targetdoc="match.xml" targetptr="match"><code>&lt;match></code></olink> elements</member>
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+        <member>- <code>"mtc_id"</code>, a non-empty array of <olink targetdoc="match.xml"
+                targetptr="match"><code>mtc_id</code></olink> objects,
+            <emphasis>required</emphasis></member>
+        <member>- <code>"mtc_ref"</code>, a non-empty array of <olink targetdoc="match.xml"
+                targetptr="match"><code>mtc_match</code></olink> objects,
+                <emphasis>required</emphasis></member>
+        <member>- <code>"items"</code>, a non-empty array of <olink targetdoc="match.xml"
+                targetptr="match"><code>mtc_match</code></olink> objects,
+                <emphasis>required</emphasis><?oxy_custom_end?></member>
     </simplelist>
 </section>

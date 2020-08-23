@@ -6,14 +6,25 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="meta">
-    <title>meta</title>
+    <title><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>anonymous<?oxy_custom_end?>
+        mda_meta
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object<?oxy_custom_end?></title>
     <para>Container for a single metadata component.</para>
-    <para><emphasis>Contains:</emphasis></para>
+    <para><emphasis>Contains:</emphasis>
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object<?oxy_custom_end?>.</para>
     <simplelist>
-        <member>- Non-translatable text</member>
+        <member><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>- Non-translatable
+            text</member><?oxy_custom_end?>
     </simplelist>
-    <para><emphasis>Attributes:</emphasis></para>
+    <para><emphasis>Properties:</emphasis></para>
     <simplelist>
-        <member>- <olink targetdoc="../../atributes/meta_type.xml" targetptr="meta_type"><code>type</code></olink>, <glossterm>required</glossterm></member>
+        <member>-
+                <code><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>"mda_type"</code>, a<?oxy_custom_end?>
+            <olink targetdoc="../../atributes/meta_type.xml" targetptr="meta_type"
+                    ><code>mda_type</code></olink> string, <glossterm>required</glossterm></member>
+        <member>-
+                <code><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>"mda_text"</code>, a<?oxy_custom_end?>
+            <olink targetdoc="../../atributes/meta_type.xml" targetptr="meta_type"
+                    ><code>mda_text</code></olink> string, <glossterm>required</glossterm></member>
     </simplelist>
 </section>
