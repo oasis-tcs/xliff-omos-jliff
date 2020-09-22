@@ -6,14 +6,20 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="res_context">
-  <title>context</title>
+  <title>res_context</title>
 
-  <para>Contextual Information - Indicates whether an external resource is to be used for context only and not modified.</para>
+  <para>Contextual Information - indicates whether an external resource is to be used for context
+    only and not modified.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    string.<?oxy_custom_end?></para>
 
-  <para><emphasis>Value description:</emphasis> <code>yes</code> or <code>no</code></para>
+  <para><emphasis>Value description:</emphasis>
+    <code>"yes"</code> or <code>"no"</code>.</para>
 
-  <para><emphasis>Default value:</emphasis> <code>yes</code></para>
+  <para><emphasis>Default value:</emphasis>
+    <code>"yes"</code>.</para>
 
-  <para><emphasis>Used in:</emphasis><olink targetdoc="../../elements/resourcedata/resourceItem.xml" targetptr="res_resourceItem"><code>&lt;resourceItem></code></olink></para>
+  <para><emphasis>Used in:</emphasis><olink targetdoc="../../elements/resourcedata/resourceItem.xml"
+      targetptr="res_resourceItem"><code>res_resourceItem</code></olink></para>
 
 </section>

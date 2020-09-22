@@ -6,12 +6,40 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="res_resourceData">
-    <title>resourceData</title>
-    <para>Parent container for resource data associated with the enclosing element.</para>
-    <para><emphasis>Contains:</emphasis></para>
-    <para>At least one of the following</para>
+    <title>res_resourceData</title>
+    <para>Parent container for resource data associated with the enclosing
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis><?oxy_custom_end?>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object.<?oxy_custom_end?></para>
+    <para><emphasis>Properties:</emphasis></para>
     <simplelist>
-        <member>- Zero, one or more <olink targetdoc="../../elements/resourceItem/resourceItemRef.xml" targetptr="res_resourceItemRef"><code>&lt;resourceItemRef></code></olink> elements.</member>
-        <member>- Zero, one or more <olink targetdoc="../../elements/resourceItem/resourceItem.xml" targetptr="res_resourceItem"><code>&lt;resourceItem></code></olink> elements.</member>
-    </simplelist>  
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"res_id"</code>,
+            a <olink targetdoc="../../attributes/resourceData/res_resourceDataId.xml"
+                targetptr="res_resourceDataId"><code>res_resourceDataId</code></olink> string with
+            NMTOKEN value, <glossterm>optional</glossterm><?oxy_custom_end?>
+            <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[SEE NOTE IN
+            res_resourceDataId]<?oxy_custom_end?></member>
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"res_resourceItemRefs"</code>,
+            an non-empty array of<?oxy_custom_end?>
+            <olink targetdoc="../../elements/resourceItem/resourceItemRef.xml"
+                targetptr="res_resourceItemRef"><code>res_resourceItemRef</code></olink> objects,
+                <emphasis>optional</emphasis></member>
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"res_resourceItems"</code>,
+            a non-empty array of<?oxy_custom_end?>
+            <olink targetdoc="../../elements/resourceItem/resourceItem.xml"
+                targetptr="res_resourceItem"><code>res_resourceItem</code></olink> objects,
+                <emphasis>optional</emphasis>.</member>
+    </simplelist>
+    <itemizedlist>
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+        <title>Constraints</title>
+        <listitem>
+            <para>At least one property <code>"res_resourceItemRefs"</code> or
+                    <code>"res_resourceItems"</code>
+                <emphasis>must</emphasis> be present.<?oxy_custom_end?></para>
+        </listitem>
+    </itemizedlist>  
 </section>

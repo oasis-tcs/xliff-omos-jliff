@@ -23,7 +23,7 @@
     
     <para><emphasis>Value description:</emphasis> IRI.</para>
         
-    <para><emphasis>Default value:</emphasis> undefined</para>
+    <para><emphasis>Default value:</emphasis> undefined.</para>
     
     <note><para>It is strongly advised that the IRI value of the <link
                 linkend="itsm_locQualityIssueProfileRef">its_locQualityIssueProfileRef</link>

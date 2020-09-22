@@ -22,7 +22,7 @@
     <para>The number represents the self reported confidence of the application or service providing
         the <ulink url="http://www.w3.org/TR/its20/#textanalysis">Text Analysis</ulink> metadata, the higher the better.</para>
     
-    <para><emphasis>Default value:</emphasis>: undefined</para>
+    <para><emphasis>Default value:</emphasis>: undefined.</para>
     
     
     

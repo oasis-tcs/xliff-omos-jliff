@@ -6,18 +6,23 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="val_occurs">
-  <title>occurs</title>
+  <title>val_occurs</title>
 
-  <para>This rule attribute is used with the <olink targetdoc="../../attributes/val_isPresent.xml"
-      targetptr="val_isPresent"><code>isPresent</code></olink> rule attribute to specify the exact
-    number of times a string <glossterm>must</glossterm> be present in the target text. When this
-    rule attribute is not used, then the string <glossterm>must</glossterm> be present in the target
-    text <emphasis>at least once</emphasis>.</para>
+  <para>This rule
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?> is
+    used with the <olink targetdoc="../../attributes/val_isPresent.xml" targetptr="val_isPresent"
+        ><code>val_isPresent</code></olink> rule
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?> to
+    specify the exact number of times a string <glossterm>must</glossterm> be present in the target
+    text. When this rule
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?> is
+    not used, then the string <glossterm>must</glossterm> be present in the target text <emphasis>at
+      least once</emphasis>.</para>
 
    <para>For example, the following is valid:</para>
 
 <programlisting>
-&lt;unit id="1"&gt;
+<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>&lt;unit id="1"&gt;
   &lt;val:validation&gt;
     &lt;val:rule isPresent="loja" occurs="2" /&gt;
   &lt;/val:validation&gt;
@@ -25,11 +30,27 @@
     &lt;source&gt;Choose a store option in the online store.&lt;/source&gt;
     &lt;target&gt;Escolha uma opção de loja na loja online.&lt;/target&gt;
   &lt;/segment&gt;
-&lt;/unit&gt;
- </programlisting>
+&lt;/unit&gt;<?oxy_custom_end?>
+<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>{
+  "id": "1",
+  "kind": "unit",
+  "val_validation": [
+    "isPresent": "loja",
+    "occurs": 2
+  ],
+  "subunits": [
+    {
+      "id": "1",
+      "kind": "segment",
+      "source": [ { "text": "Choose a store option in the online store." } ],
+      "target": [ { "text": "Escolha uma opção de loja na loja online." } ],
+     }
+  ]
+}<?oxy_custom_end?>
+</programlisting>
   <para>Whereas the following is invalid:</para>
 <programlisting>
-&lt;unit id="1"&gt;
+<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>&lt;unit id="1"&gt;
   &lt;val:validation&gt;
     &lt;val:rule isPresent="loja" occurs="2" /&gt;
   &lt;/val:validation&gt;
@@ -37,11 +58,33 @@
     &lt;source&gt;Choose a store option in the online store.&lt;/source&gt;
     &lt;target&gt;Escolha uma opção de loja na online store.&lt;/target&gt;
   &lt;/segment&gt;
-&lt;/unit&gt;
- </programlisting>
+&lt;/unit&gt;<?oxy_custom_end?>
+<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>{
+  "id": "1",
+  "kind": "unit",
+  "val_validation": [
+    "isPresent": "loja",
+    "occurs": 2
+  ],
+  "subunits": [
+    {
+      "id": "1",
+      "kind": "segment",
+      "source": [ { "text": "Choose a store option in the online store." } ],
+      "target": [ { "text": "Escolha uma opção de loja na online store." } ],
+     }
+  ]
+}<?oxy_custom_end?>
+</programlisting>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains</emphasis>:
+    string.<?oxy_custom_end?></para>
 
-  <para><emphasis>Value description:</emphasis> A number of 1 or greater.</para>
-  <para><emphasis>Default value:</emphasis> none</para>
-  <para><emphasis>Used in:</emphasis> <olink targetdoc="../../elements/validation/rule.xml" targetptr="rule"><code>&lt;rule></code></olink></para>
+  <para><emphasis>Value description:</emphasis>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>an integer
+    value<?oxy_custom_end?> of 1 or greater.</para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../../elements/validation/rule.xml" targetptr="rule"
+      ><code>val_rule</code></olink></para>
 
 </section>

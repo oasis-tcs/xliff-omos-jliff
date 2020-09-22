@@ -6,35 +6,38 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="meta_id">
-  <title>id</title>
+  <title>mda_id</title>
 
-  <para>Identifier - a character string used to identify a <olink
-      targetdoc="../elements/metadata/metadata.xml" targetptr="metadata"
-      ><code>metadata</code></olink> or a <olink targetdoc="../elements/metadata/metagroup.xml"
-      targetptr="metagroup"><code>metaGroup</code></olink> object.</para>
+  <para>Property string used to identify a <olink targetdoc="../elements/metadata/metadata.xml"
+      targetptr="metadata"><code>mda_metadata</code></olink> or a <olink
+      targetdoc="../elements/metadata/metagroup.xml" targetptr="metagroup"
+        ><code>mda_metaGroup</code></olink> object.</para>
   <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis><?oxy_custom_end?>
     string.</para>
 
-  <para><emphasis>Value description:</emphasis> NMTOKEN</para>
+  <para><emphasis>Value description:</emphasis>
+    NMTOKEN<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>: a string matching
+    the pattern <code>[-._:A-Za-z0-9]+</code>.<?oxy_custom_end?></para>
 
   <para><emphasis>Default value:</emphasis> undefined.</para>
 
   <para><emphasis>Used in:</emphasis><olink targetdoc="../elements/metadata/metadata.xml"
-      targetptr="metadata"><code>metadata</code></olink> and <olink
+      targetptr="metadata"><code>mda_metadata</code></olink> and <olink
       targetdoc="../elements/metadata/metagroup.xml" targetptr="metagroup"
-      ><code>metaGroup</code></olink></para>
+        ><code>mda_metaGroup</code></olink></para>
 <itemizedlist>
   <title>Constraints</title>
   <listitem>
     <para>The value of <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>the
-          <code>"id"</code> property <?oxy_custom_end?><link linkend="meta_id"
+          <code>"mda_id"</code> property <?oxy_custom_end?><link linkend="meta_id"
           ><code>id</code></link> strings <glossterm>must</glossterm> be unique among all <olink
           targetdoc="../elements/metadata/metagroup.xml" targetptr="metagroup"
-            ><code>metaGroup</code></olink> and <olink targetdoc="../elements/metadata/metadata.xml"
-          targetptr="metadata"><code>metadata</code></olink>
+            ><code>mda_metaGroup</code></olink> and <olink
+          targetdoc="../elements/metadata/metadata.xml" targetptr="metadata"
+            ><code>mda_metadata</code></olink>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end?>
         within the given enclosing <olink targetdoc="../elements/metadata/metadata.xml"
-          targetptr="metadata"><code>metadata</code></olink>
+          targetptr="metadata"><code>mda_metadata</code></olink>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>. </para>
   </listitem>
 </itemizedlist>  

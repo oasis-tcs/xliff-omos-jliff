@@ -6,22 +6,28 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="val_noLoc">
-  <title>noLoc</title>
+  <title>val_noLoc <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>[THIS FILE TO
+    BE DELETED]<?oxy_custom_end?>
+  </title>
 
   <para>Not to localize, noLoc - is a test for the presence of a string (substring) in the source
     text and verification that it exists also in the target text.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains</emphasis>:
+    string.<?oxy_custom_end?></para>
 
-  <para><emphasis>Value description:</emphasis> Text</para>
+  <para><emphasis>Value description:</emphasis> text.</para>
 
-  <para><emphasis>Default value:</emphasis> none</para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
 
-  <para><emphasis>Used in:</emphasis> <olink targetdoc="../../elements/validation/rule.xml" targetptr="rule"><code>&lt;rule></code></olink></para>
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../../elements/validation/rule.xml" targetptr="rule"
+      ><code>val_rule</code></olink></para>
   
   <itemizedlist>
     <title>Processing Requirements</title>
-    <listitem><para>The target text <glossterm>must</glossterm> contain the string specified by the value of <olink
-          targetdoc="../../attributes/validation/val_noLoc.xml" targetptr="val_noLoc"
-            ><code>noLoc</code></olink>.</para></listitem>
+    <listitem><para>The target text <glossterm>must</glossterm> contain the string specified by the value of <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>property<?oxy_custom_end?>
+        <olink targetdoc="../../attributes/validation/val_noLoc.xml" targetptr="val_noLoc"
+            ><code>"noLoc"</code></olink>.</para></listitem>
   </itemizedlist>
   
 </section>

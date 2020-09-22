@@ -6,26 +6,27 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="itsm_id">
-  <title>id
-    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[problem]<?oxy_custom_end?></title>
+  <title>id</title>
 
-  <para>Identifier - the <code>id</code> attribute from the <code>http://www.w3.org/XML/1998/</code>
-    namespace is used to identify a <olink targetdoc="../../elements/itsm/itsm_locQualityIssues.xml"
+  <para>Identifier - the <code>id</code>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>from the
+      <code>http://www.w3.org/XML/1998/</code> namespace is used <?oxy_custom_end?>to identify a
+      <olink targetdoc="../../elements/itsm/itsm_locQualityIssues.xml"
       targetptr="itsm_locQualityIssues"><code>its_locQualityIssues</code></olink>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>array
     element<?oxy_custom_end?> or <olink targetdoc="../../elements/itsm/itsm_provenanceRecords.xml"
       targetptr="itsm_provenanceRecords"><code>its_provenanceRecords</code></olink>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>array element<?oxy_custom_end?>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[problem: there is no id
-    property on its_provenanceRecords as of the current JLIFF schema 2.1, should add as in
-    its_locQualityIssues wrapper object that has "id" and "items"?]<?oxy_custom_end?>.</para>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>array
+    element<?oxy_custom_end?>.</para>
 
   <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
     string.<?oxy_custom_end?></para>
   <para><emphasis>Value description:</emphasis>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>NCNAME<?oxy_custom_end?></para>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>NCNAME: a string matching the
+    pattern <code>[_A-Za-z][-._A-Za-z0-9]*</code><?oxy_custom_end?>.</para>
 
-  <para><emphasis>Default value:</emphasis> undefined</para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
 
   <para><emphasis>Used in:</emphasis><olink
       targetdoc="../../elements/itsm/itsm_locQualityIssues.xml" targetptr="itsm_locQualityIssues"
@@ -36,11 +37,11 @@
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>array
     elements<?oxy_custom_end?>.</para>
   <warning>
-    <para>Since the ITS Module reuses the W3C namespace <code>http://www.w3.org/2005/11/its</code>
-      it cannot use <code>xs:NMTOKEN</code> identifiers as the <firstterm>XLIFF Core</firstterm> or
-      other <firstterm>Modules</firstterm>. Implementers need to be aware that
-        <code><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>xs:ID<?oxy_custom_end?></code>
-      has to be globally unique.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>Since the ITS Module
+      reuses the W3C namespace <code>http://www.w3.org/2005/11/its</code> it cannot use
+        <code>xs:NMTOKEN</code> identifiers as the <firstterm>XLIFF Core</firstterm> or other
+        <firstterm>Modules</firstterm>. <?oxy_custom_end?>Implementers need to be aware that the
+        <code>id</code> value has to be globally unique.</para>
   </warning>
   
   

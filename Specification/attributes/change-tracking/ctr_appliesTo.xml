@@ -6,17 +6,27 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="ctr_appliesTo">
-  <title>appliesTo</title>
+  <title>ctr_appliesTo</title>
 
-  <para>appliesTo – Indicates a specific XLIFF element which is a sibling, or a child of a sibling
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>ChangeTrack<?oxy_custom_end?>
+    ctr_appliesTo – Indicates a specific XLIFF element which is a sibling, or a child of a sibling
     element, to the change track extension within the scope of the enclosing element.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    string.<?oxy_custom_end?></para>
 
-  <para><emphasis>Value description:</emphasis> NMTOKEN name of any valid XLIFF element which is a
-    sibling, or a child of a sibling element, to the change track extension within the scope of the
-    enclosing element. </para>
+  <para><emphasis>Value description:</emphasis>
+    NMTOKEN<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>: a string matching
+    the pattern <code>[-._:A-Za-z0-9]+</code><?oxy_custom_end?>
+    <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>with the
+    <?oxy_custom_end?>name of any valid JLIFF element which is a sibling, or a child of a sibling
+    element, to the change track extension within the scope of the enclosing element. </para>
 
   <para><emphasis>Default value:</emphasis> undefined</para>
 
-  <para><emphasis>Used in:</emphasis><olink targetdoc="../../elements/change-tracking/revisions.xml" targetptr="revisions"><code>&lt;revisions></code></olink></para>
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../../elements/change-tracking/revisions.xml" targetptr="revisions"
+        ><code>ctr_revisions</code></olink>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[CURRENTLY
+    ctr_changeTrackRevisions]<?oxy_custom_end?></para>
   
 </section>

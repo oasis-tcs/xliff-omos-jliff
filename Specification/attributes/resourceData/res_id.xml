@@ -6,14 +6,24 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="res_id">
-  <title>id</title>
+  <title>res_id</title>
 
-  <para>Identifier - A character string used to identify a <olink targetdoc="../../elements/resourcedata/resourceData.xml" targetptr="res_resourceData"><code>&lt;resourceData></code></olink> element.</para>
+  <para>Identifier - a character string used to identify a <olink
+      targetdoc="../../elements/resourcedata/resourceData.xml" targetptr="res_resourceData"
+        ><code>res_resourceData</code></olink>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    string.<?oxy_custom_end?></para>
 
-  <para><emphasis>Value description:</emphasis> NMTOKEN</para>
+  <para><emphasis>Value description:</emphasis>
+    NMTOKEN<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>: a string matching
+    the pattern <code>[-._:A-Za-z0-9]+</code><?oxy_custom_end?>.</para>
 
-  <para><emphasis>Default value:</emphasis> undefined</para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
 
-  <para><emphasis>Used in:</emphasis><olink targetdoc="../../elements/resourcedata/resourceItem.xml" targetptr="res_resourceItem"><code>&lt;resourceItem></code></olink> and <olink targetdoc="../../elements/resourcedata/resourceItemRef.xml" targetptr="res_resourceItemRef"><code>&lt;resourceItemRef></code></olink></para>
+  <para><emphasis>Used in:</emphasis><olink targetdoc="../../elements/resourcedata/resourceItem.xml"
+      targetptr="res_resourceItem"><code>res_resourceItem</code></olink> object and <olink
+      targetdoc="../../elements/resourcedata/resourceItemRef.xml" targetptr="res_resourceItemRef"
+        ><code>res_resourceItemRef</code></olink> object.</para>
   
 </section>

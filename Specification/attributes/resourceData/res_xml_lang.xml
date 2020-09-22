@@ -6,18 +6,26 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="res_xml_lang">
-    <title>xml:lang</title>
+    <title>res_lang</title>
     
-    <para>Language - The xml:lang attribute specifies the language variant of the text of a given element. 
-        For example: <code>xml:lang="fr-FR"</code> indicates the French language as spoken in France.</para>
+    <para>Language - specifies the language variant of the text of a given element. For example:
+            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?><code>"res_lang":
+            "fr-FR"</code><?oxy_custom_end?> indicates the French language as spoken in
+        France.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis><?oxy_custom_end?>
+        string.</para>
     
-    <para><emphasis>Value description:</emphasis> A language code as described in <olink targetdoc="../../xliff21.xml"
-        targetptr="bcp47">[BCP 47]</olink>.</para>
+    <para><emphasis>Value description:</emphasis> a language code as described in <olink
+            targetdoc="../../xliff21.xml" targetptr="bcp47">[BCP 47]</olink>.</para>
     
-    <para><emphasis>Default value:</emphasis> undefined</para>
+    <para><emphasis>Default value:</emphasis> undefined.</para>
     
-    <para><emphasis>Used in:</emphasis> <olink targetdoc="../../elements/resourcedata/res_source.xml" targetptr="res_source"><code>&lt;source></code></olink>, 
-        <olink targetdoc="../../elements/resourcedata/res_target.xml" targetptr="res_target"><code>&lt;target></code></olink>, and 
-        <olink targetdoc="../../elements/resourcedata/reference.xml" targetptr="res_reference"><code>&lt;reference></code></olink>.</para>
+    <para><emphasis>Used in:</emphasis>
+        <olink targetdoc="../../elements/resourcedata/res_source.xml" targetptr="res_source"
+                ><code>res_source</code></olink>, <olink
+            targetdoc="../../elements/resourcedata/res_target.xml" targetptr="res_target"
+                ><code>res_target</code></olink>, and <olink
+            targetdoc="../../elements/resourcedata/reference.xml" targetptr="res_reference"
+                ><code>res_reference</code></olink>.</para>
 </section>
 

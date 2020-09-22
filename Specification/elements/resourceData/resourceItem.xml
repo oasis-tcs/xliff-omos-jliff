@@ -6,81 +6,155 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="res_resourceItem">
-    <title>resourceItem</title>
-    <para>Container for specific resource data that is either intended for
+  <title>res_resourceItem</title>
+  <para>Container for specific resource data that is either intended for
       <firstterm>Modification</firstterm>, or to be used as contextual reference during
       <firstterm>Translation</firstterm>.</para>
-    <para><emphasis>Contains:</emphasis></para>
-    <para>At least one of the following</para>
-    <simplelist>
-        <member>- Zero or one <olink targetdoc="../../elements/resourceData/res_source.xml" targetptr="res_source"><code>&lt;source></code></olink> element followed by</member>
-        <member>- Zero or one <olink targetdoc="../../elements/resourceData/res_target.xml" targetptr="res_target"><code>&lt;target></code></olink> element followed by</member>
-        <member>- Zero, one or more <olink targetdoc="../../elements/resourceData/reference.xml" targetptr="res_reference"><code>&lt;reference></code></olink> elements</member>
-    </simplelist>
-    <para><emphasis>Attributes:</emphasis></para>
-    <simplelist>
-      <member>- <olink targetdoc="../../attributes/resourceData/res_mimeType.xml" targetptr="res_mimeType"><code>mimeType</code></olink>, <glossterm>optional</glossterm></member>
-      <member>- <olink targetdoc="../../attributes/resourceData/res_id.xml" targetptr="res_id"><code>id</code></olink>, <glossterm>optional</glossterm></member>
-      <member>- <olink targetdoc="../../attributes/resourceData/res_context.xml" targetptr="res_context"><code>context</code></olink>, <glossterm>optional</glossterm></member>
-       <member>- attributes from other namespaces, <glossterm>optional</glossterm></member>
-
-    </simplelist>
+  <para><emphasis>Contains:</emphasis>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>At least one of the
+    following</para>
+  <simplelist>
+    <member>- Zero or one <olink targetdoc="../../elements/resourceData/res_source.xml"
+        targetptr="res_source"><code>&lt;source></code></olink> element followed by</member>
+    <member>- Zero or one <olink targetdoc="../../elements/resourceData/res_target.xml"
+        targetptr="res_target"><code>&lt;target></code></olink> element followed by</member>
+    <member>- Zero, one or more <olink targetdoc="../../elements/resourceData/reference.xml"
+        targetptr="res_reference"><code>&lt;reference></code></olink>
+      elements<?oxy_custom_end?></member>
+  </simplelist>
+  <para><emphasis>Properties:</emphasis></para>
+  <simplelist>
+    <member>-
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"res_id"</code>, a<?oxy_custom_end?>
+      <olink targetdoc="../../attributes/resourceData/res_id.xml" targetptr="res_id"
+          ><code>res_id</code></olink>
+      s<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>tring with NMTOKEN
+      value<?oxy_custom_end?>, <glossterm>optional</glossterm></member>
+    <member>-
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"res_mimeType"</code>, a<?oxy_custom_end?>
+      <olink targetdoc="../../attributes/resourceData/res_mimeType.xml" targetptr="res_mimeType"
+          ><code>res_mimeType</code></olink>
+      s<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>tring with a standard
+      MIME type value<?oxy_custom_end?>, <glossterm>optional</glossterm></member>
+    <member>-
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"res_context"</code>, a<?oxy_custom_end?>
+      <olink targetdoc="../../attributes/resourceData/res_context.xml" targetptr="res_context"
+          ><code>res_context</code></olink>
+      <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>string with value
+        <code>"yes"</code> or <code>"no"</code><?oxy_custom_end?> with default value
+        <code>"yes"</code>, <glossterm>optional</glossterm></member>
+    <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+    <member>- <code>"res_source"</code>, a <olink
+        targetdoc="../../elements/resourceData/res_source.xml" targetptr="res_source"
+          ><code>res_source</code></olink> object, <emphasis>optional</emphasis></member>
+    <member>- <code>"res_target"</code>, a <olink
+        targetdoc="../../elements/resourceData/res_target.xml" targetptr="res_target"
+          ><code>res_target</code></olink> object, <emphasis>optional</emphasis></member>
+    <member>- <code>"res_references"</code>, a non-empty array of <olink
+        targetdoc="../../elements/resourceData/reference.xml" targetptr="res_reference"
+          ><code>res_reference</code></olink> objects,
+      <emphasis>optional</emphasis><?oxy_custom_end?></member>
+    <member>- <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>additional
+      aproperties are allowed.<?oxy_custom_end?></member>
+  </simplelist>
   <itemizedlist>
     <title>Constraints</title>
-    <listitem><para>The <olink targetdoc="../../attributes/resourceData/res_mimeType.xml" targetptr="res_mimeType"
-            ><code>mimeType</code></olink> attribute is <glossterm>required</glossterm> if <olink
-          targetdoc="../../elements/resourceData/res_target.xml" targetptr="res_target"
-            ><code>&lt;target></code></olink> and <olink
-          targetdoc="../../elements/resourceData/res_source.xml" targetptr="res_source"
-            ><code>&lt;source></code></olink> child elements are empty, otherwise it is
-          <glossterm>optional</glossterm>.</para></listitem>
     <listitem>
-      <para>The value of the <glossterm>optional</glossterm> <olink targetdoc="../../attributes/resourceData/res_id.xml" targetptr="res_id">id</olink> attribute
-        <glossterm>must</glossterm> be unique among all <olink targetdoc="../../elements/resourceData/resourceItem.xml" targetptr="res_resourceItem"><code>&lt;resourceItem></code></olink>
-        and <olink targetdoc="../../elements/resourceData/resourceItemRef.xml" targetptr="res_resourceItemRef"><code>&lt;resourceItemRef></code></olink>
-        elements of the enclosing <olink targetdoc="../../elements/resourceData/resourceData.xml" targetptr="res_resourceData"><code>&lt;resourceData></code></olink> element.</para>
+      <para><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>At  least one of the properties<?oxy_custom_end?>
+        <code>"res_source"</code>, <code>"res_target"</code>, or <code>"res_references"</code>
+        <emphasis>must</emphasis> be present.</para>
+      <simplelist>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
+        <member>- Zero or one <olink targetdoc="../../elements/resourceData/res_source.xml"
+            targetptr="res_source"><code>&lt;source></code></olink> element followed by</member>
+        <member>- Zero or one <olink targetdoc="../../elements/resourceData/res_target.xml"
+            targetptr="res_target"><code>&lt;target></code></olink> element followed by</member>
+        <member>- Zero, one or more <olink targetdoc="../../elements/resourceData/reference.xml"
+            targetptr="res_reference"><code>&lt;reference></code></olink>
+          elements<?oxy_custom_end?></member>
+      </simplelist>
+    </listitem>
+    <listitem>
+      <para>The <olink targetdoc="../../attributes/resourceData/res_mimeType.xml"
+          targetptr="res_mimeType"><code>res_mimeType</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        is <glossterm>required</glossterm> if <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>both<?oxy_custom_end?>
+        <olink targetdoc="../../elements/resourceData/res_target.xml" targetptr="res_target"
+            ><code>res_target</code></olink> and <olink
+          targetdoc="../../elements/resourceData/res_source.xml" targetptr="res_source"
+            ><code>res_source</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>properties are
+        absent<?oxy_custom_end?>, otherwise it is <glossterm>optional</glossterm>.</para>
+    </listitem>
+    <listitem>
+      <para>The value of the <glossterm>optional</glossterm>
+        <olink targetdoc="../../attributes/resourceData/res_id.xml" targetptr="res_id"
+            ><code>res_id</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        <glossterm>must</glossterm> be unique among all <olink
+          targetdoc="../../elements/resourceData/resourceItem.xml" targetptr="res_resourceItem"
+            ><code>res_resourceItem</code></olink> and <olink
+          targetdoc="../../elements/resourceData/resourceItemRef.xml"
+          targetptr="res_resourceItemRef"><code>res_resourceItemRef</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end?>
+        of the enclosing <olink targetdoc="../../elements/resourceData/resourceData.xml"
+          targetptr="res_resourceData"><code>res_resourceData</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
     </listitem>
   </itemizedlist>
-
   <itemizedlist>
     <title>Processing Requirements</title>
-
     <listitem>
-      <para>If a <firstterm>Modifier</firstterm> does not understand how to process the <olink targetdoc="../../attributes/resourceData/res_mimeType.xml" targetptr="res_mimeType"><code>mimeType</code></olink> attribute, or the file it references, the <olink targetdoc="../../elements/resourceData/resourceItem.xml" targetptr="res_resourceItem"><code>&lt;resourceItem></code></olink> element <glossterm>may</glossterm>
-        be ignored, but still <glossterm>must</glossterm> be preserved.</para>
+      <para>If a <firstterm>Modifier</firstterm> does not understand how to process the <olink
+          targetdoc="../../attributes/resourceData/res_mimeType.xml" targetptr="res_mimeType"
+            ><code>res_mimeType</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end?>,
+        or the file it references, the <olink
+          targetdoc="../../elements/resourceData/resourceItem.xml" targetptr="res_resourceItem"
+            ><code>res_resourceItem</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+        <glossterm>may</glossterm> be ignored, but still <glossterm>must</glossterm> be
+        preserved.</para>
     </listitem>
-
     <listitem>
-      <para>The <olink targetdoc="../../attributes/resourceData/res_mimeType.xml" targetptr="res_mimeType"><code>mimeType</code></olink> attribute <glossterm>should</glossterm> only be modified or removed if the referenced files are modified or removed.</para>
+      <para>The <olink targetdoc="../../attributes/resourceData/res_mimeType.xml"
+          targetptr="res_mimeType"><code>res_mimeType</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        <glossterm>should</glossterm> only be modified or removed if the referenced files are
+        modified or removed.</para>
     </listitem>
-
     <listitem>
-      <para>For each instance of <olink targetdoc="../../elements/resourceData/resourceItem.xml" targetptr="res_resourceItem"><code>&lt;resourceItem></code></olink> containing only <olink targetdoc="../../elements/resourceData/res_source.xml" targetptr="res_source"><code>&lt;source></code></olink>:</para>
-
-        <itemizedlist>
-          <listitem>
-            <para><firstterm>Modifiers</firstterm>
+      <para>For each instance of <olink targetdoc="../../elements/resourceData/resourceItem.xml"
+          targetptr="res_resourceItem"><code>res_resourceItem</code></olink> containing only <olink
+          targetdoc="../../elements/resourceData/res_source.xml" targetptr="res_source"
+            ><code>res_source</code></olink>:</para>
+      <itemizedlist>
+        <listitem>
+          <para><firstterm>Modifiers</firstterm>
             <glossterm>may</glossterm> leave <olink
               targetdoc="../../elements/resourceData/resourceItem.xml" targetptr="res_resourceItem"
-                ><code>&lt;resourceItem></code></olink> unchanged, i.e. they are not <glossterm>required</glossterm> to
-            create <olink targetdoc="../../elements/resourceData/res_target.xml"
-              targetptr="res_target"><code>&lt;target></code></olink> or <olink
+                ><code>res_resourceItem</code></olink> unchanged, i.e. they are not
+              <glossterm>required</glossterm> to create <olink
+              targetdoc="../../elements/resourceData/res_target.xml" targetptr="res_target"
+                ><code>res_target</code></olink> or <olink
               targetdoc="../../elements/resourceData/reference.xml" targetptr="res_reference"
-                ><code>&lt;reference></code></olink>.</para>
-          </listitem>
-          <listitem>
-            <para><firstterm>Modifiers</firstterm>
+                ><code>res_reference</code></olink>
+            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end?>.</para>
+        </listitem>
+        <listitem>
+          <para><firstterm>Modifiers</firstterm>
             <glossterm>may</glossterm> create <olink
               targetdoc="../../elements/resourceData/res_target.xml" targetptr="res_target"
-                ><code>&lt;target></code></olink> or <olink
+                ><code>res_target</code></olink> or <olink
               targetdoc="../../elements/resourceData/reference.xml" targetptr="res_reference"
-                ><code>&lt;reference></code></olink> as a siblings of <olink
-              targetdoc="../../elements/resourceData/res_source.xml" targetptr="res_source"
-                ><code>&lt;source></code></olink>.</para>
-          </listitem>
-        </itemizedlist>
-
+                ><code>res_reference</code></olink>
+            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects to complement a<?oxy_custom_end?>
+            <olink targetdoc="../../elements/resourceData/res_source.xml" targetptr="res_source"
+                ><code>res_source</code></olink>
+            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
+        </listitem>
+      </itemizedlist>
     </listitem>
-
   </itemizedlist>
 </section>

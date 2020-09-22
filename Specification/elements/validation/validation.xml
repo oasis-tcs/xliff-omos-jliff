@@ -6,44 +6,72 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="validation">
-    <title>validation</title>
-    <para>Parent container for a list of rules and constraints to apply to the target text of the enclosing element.</para>
-    <para><emphasis>Contains:</emphasis></para>
+    <title>val_validation</title>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Array containing
+    a<?oxy_custom_end?> list of rules and constraints to apply to the target text of the enclosing
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
+    <para><emphasis>Contains:</emphasis>
+    <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>non-empty array of <olink
+      targetdoc="../../elements/validation/rule.xml" targetptr="rule"
+    ><code>val_rule</code></olink>objects.<?oxy_custom_end?></para>
     <simplelist>
-        <member>- One or more <olink targetdoc="../../elements/validation/rule.xml" targetptr="rule"><code>&lt;rule></code></olink> elements.</member>
+        <member><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>- One or more
+        <olink targetdoc="../../elements/validation/rule.xml" targetptr="rule"
+          ><code>&lt;rule></code></olink> elements.<?oxy_custom_end?></member>
     </simplelist>
   
-    <para><emphasis>Attributes:</emphasis></para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><emphasis>Properties:</emphasis><?oxy_custom_end?></para>
     <simplelist>
-        <member>- attributes from other namespaces, <glossterm>optional</glossterm></member>
-    </simplelist>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>
+    <member>- attributes from other namespaces,
+      <glossterm>optional</glossterm><?oxy_custom_end?></member>
+  </simplelist>
     
   <itemizedlist>
     <title>Processing Requirements</title>
 
      <listitem>
-      <para>When the <olink targetdoc="../../elements/validation/validation.xml" targetptr="validation"><code>&lt;validation></code></olink> element occurs at the 
-        <olink targetdoc="../../elements/structural/file.xml" targetptr="file"><code>&lt;file></code></olink> level, rules <glossterm>must</glossterm> be applied to all 
-      <olink targetdoc="../../elements/structural/target.xml" targetptr="target"><code>&lt;target></code></olink> elements within the scope of that  
-      <olink targetdoc="../../elements/structural/file.xml" targetptr="file"><code>&lt;file></code></olink> element, except where overrides are specified at the 
-      <olink targetdoc="../../elements/structural/group.xml" targetptr="group"><code>&lt;group></code></olink> or 
-      <olink targetdoc="../../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink> level.</para>
+      <para>When the <olink targetdoc="../../elements/validation/validation.xml"
+          targetptr="validation"><code>"val_validation"</code></olink> array property occurs at the
+          <olink targetdoc="../../elements/structural/file.xml" targetptr="file"
+          ><code>file</code></olink> level, rules <glossterm>must</glossterm> be applied to all
+          <olink targetdoc="../../elements/structural/target.xml" targetptr="target"
+            ><code>target</code></olink> objects within the scope of that <olink
+          targetdoc="../../elements/structural/file.xml" targetptr="file"><code>file</code></olink>
+        object, except where overrides are specified at the <olink
+          targetdoc="../../elements/structural/group.xml" targetptr="group"
+          ><code>group</code></olink> or <olink targetdoc="../../elements/structural/unit.xml"
+          targetptr="unit"><code>unit</code></olink> level.</para>
     </listitem>
     
     <listitem>
-      <para>When <olink targetdoc="../../elements/validation/validation.xml" targetptr="validation"><code>&lt;validation></code></olink> occurs at the 
-        <olink targetdoc="../../elements/structural/group.xml" targetptr="group"><code>&lt;group></code></olink> level, rules <glossterm>must</glossterm> be applied to all 
-      <olink targetdoc="../../elements/structural/target.xml" targetptr="target"><code>&lt;target></code></olink> elements within the scope of that 
-      <olink targetdoc="../../elements/structural/group.xml" targetptr="group"><code>&lt;group></code></olink>, except where overrides are specified in a nested 
-      <olink targetdoc="../../elements/structural/group.xml" targetptr="group"><code>&lt;group></code></olink> element, or at the 
-      <olink targetdoc="../../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink> level.</para>
+      <para>When <olink targetdoc="../../elements/validation/validation.xml" targetptr="validation"
+            ><code>"val_validation"</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>array
+        property<?oxy_custom_end?>occurs at the <olink
+          targetdoc="../../elements/structural/group.xml" targetptr="group"
+          ><code>group</code></olink> level, rules <glossterm>must</glossterm> be applied to all
+          <olink targetdoc="../../elements/structural/target.xml" targetptr="target"
+            ><code>target</code></olink> objects within the scope of that <olink
+          targetdoc="../../elements/structural/group.xml" targetptr="group"
+          ><code>group</code></olink>, except where overrides are specified in a nested <olink
+          targetdoc="../../elements/structural/group.xml" targetptr="group"
+          ><code>group</code></olink> object, or at the <olink
+          targetdoc="../../elements/structural/unit.xml" targetptr="unit"><code>unit</code></olink>
+        level.</para>
     </listitem>
     
     <listitem>
-      <para>When <olink targetdoc="../../elements/validation/validation.xml" targetptr="validation"><code>&lt;validation></code></olink> occurs at the 
-        <olink targetdoc="../../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink> level, rules <glossterm>must</glossterm> be applied to all 
-      <olink targetdoc="../../elements/structural/target.xml" targetptr="target"><code>&lt;target></code></olink> elements within the scope of that 
-      <olink targetdoc="../../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink>.</para>
+      <para>When <olink targetdoc="../../elements/validation/validation.xml" targetptr="validation"
+            ><code>"val_validation"</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>array
+        property<?oxy_custom_end?>occurs at the <olink
+          targetdoc="../../elements/structural/unit.xml" targetptr="unit"><code>unit</code></olink>
+        level, rules <glossterm>must</glossterm> be applied to all <olink
+          targetdoc="../../elements/structural/target.xml" targetptr="target"
+          ><code>target</code></olink> objects within the scope of that <olink
+          targetdoc="../../elements/structural/unit.xml" targetptr="unit"
+        ><code>unit</code></olink>.</para>
     </listitem>
    
   </itemizedlist>

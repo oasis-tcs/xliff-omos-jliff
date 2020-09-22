@@ -283,9 +283,9 @@
               ><code>its_taIdentRef</code></olink> string with IRI value.
           <?oxy_custom_end?></member>
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_domains"</code>, a <olink
+        <member>- <code>"itsm_domains"</code>, a <olink
             targetdoc="../../attributes/itsm/itsm_domains.xml" targetptr="itsm_domains"
-              ><code>its_domains</code></olink> a non-empty array of non-empty strings not
+              ><code>itsm_domains</code></olink> a non-empty array of non-empty strings not
           containing the <code>,</code> chatacter (U+002C). </member><?oxy_custom_end?>
         <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
         <member>- attributes from the namespace <code>urn:oasis:names:tc:xliff:fs:2.0</code>,

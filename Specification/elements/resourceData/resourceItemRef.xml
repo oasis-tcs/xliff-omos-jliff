@@ -6,27 +6,53 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="res_resourceItemRef">
-    <title>resourceItemRef</title>
-    <para>Specifies a reference to an associated <olink targetdoc="../../elements/resourcedata/resourceItem.xml" targetptr="res_resourceItem"><code>&lt;resourceItem></code></olink> element located at the <olink targetdoc="../../elements/structural/file.xml" targetptr="file"><code>&lt;file></code></olink> level.</para>
-    <para><emphasis>Contains:</emphasis></para>
+    <title>res_resourceItemRef</title>
+    <para>Specifies a reference to an associated <olink
+      targetdoc="../../elements/resourcedata/resourceItem.xml" targetptr="res_resourceItem"
+        ><code>res_resourceItem</code></olink>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+    located at the <olink targetdoc="../../elements/structural/file.xml" targetptr="file"
+        ><code>file</code></olink> level.</para>
+    <para><emphasis>Contains:</emphasis> object.</para>
     <simplelist>
-        <member>This element is always empty.</member>
-    </simplelist>
-    <para><emphasis>Attributes:</emphasis></para>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
+    <member>This element is always empty.</member><?oxy_custom_end?>
+  </simplelist>
+    <para><emphasis>Properties:</emphasis></para>
     <simplelist>
-      <member>- <olink targetdoc="../../attributes/resourceData/res_id.xml" targetptr="res_id"><code>id</code></olink>, <glossterm>optional</glossterm></member>
-      <member>- <olink targetdoc="../../attributes/resourceData/res_ref.xml" targetptr="res_ref"><code>ref</code></olink>, <glossterm>required</glossterm></member>
-      <member>- attributes from other namespaces, <glossterm>optional</glossterm></member>
+      <member>-
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"res_id"</code>, a<?oxy_custom_end?>
+      <olink targetdoc="../../attributes/resourceData/res_id.xml" targetptr="res_id"
+          ><code>res_id</code></olink>
+      <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>string with NMTOKEN
+      value<?oxy_custom_end?>, <glossterm>optional</glossterm></member>
+      <member>-
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"res_ref"</code>, a<?oxy_custom_end?>
+      <olink targetdoc="../../attributes/resourceData/res_ref.xml" targetptr="res_ref"
+          ><code>res_ref</code></olink>
+      <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>string with NMTOKEN
+      value<?oxy_custom_end?>, <glossterm>required</glossterm></member>
+      <member>- <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>additional
+      properties are allowed.<?oxy_custom_end?></member>
     </simplelist>
 
   <itemizedlist>
     <title>Constraints</title>
 
     <listitem>
-      <para>The value of the <glossterm>optional</glossterm> <olink targetdoc="../../attributes/resourceData/res_id.xml" targetptr="res_id">id</olink> attribute
-        <glossterm>must</glossterm> be unique among all <olink targetdoc="../../elements/resourceData/resourceItem.xml" targetptr="res_resourceItem"><code>&lt;resourceItem></code></olink>
-        and <olink targetdoc="../../elements/resourceData/resourceItemRef.xml" targetptr="res_resourceItemRef"><code>&lt;resourceItemRef></code></olink>
-        elements of the enclosing <olink targetdoc="../../elements/resourceData/resourceData.xml" targetptr="res_resourceData"><code>&lt;resourceData></code></olink> element.</para>
+      <para>The value of the <glossterm>optional</glossterm>
+        <olink targetdoc="../../attributes/resourceData/res_id.xml" targetptr="res_id"
+            ><code>res_id</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        <glossterm>must</glossterm> be unique among all <olink
+          targetdoc="../../elements/resourceData/resourceItem.xml" targetptr="res_resourceItem"
+            ><code>res_resourceItem</code></olink> and <olink
+          targetdoc="../../elements/resourceData/resourceItemRef.xml"
+          targetptr="res_resourceItemRef"><code>res_resourceItemRef</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end?>
+        of the enclosing <olink targetdoc="../../elements/resourceData/resourceData.xml"
+          targetptr="res_resourceData"><code>res_resourceData</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
     </listitem>
     
   </itemizedlist>
@@ -37,9 +63,9 @@
       <para><firstterm>Modifiers</firstterm>
         <glossterm>must</glossterm> remove <olink
           targetdoc="../../elements/resourceData/resourceItemRef.xml"
-          targetptr="res_resourceItemRef"><code>&lt;resourceItemRef></code></olink> when removing
-        the referenced <olink targetdoc="../../elements/resourceData/resourcItem.xml"
-          targetptr="res_resourceItem"><code>&lt;resourceItem></code></olink>.</para>
+          targetptr="res_resourceItemRef"><code>res_resourceItemRef</code></olink> when removing the
+        referenced <olink targetdoc="../../elements/resourceData/resourcItem.xml"
+          targetptr="res_resourceItem"><code>res_resourceItem</code></olink>.</para>
     </listitem>
     
   </itemizedlist>

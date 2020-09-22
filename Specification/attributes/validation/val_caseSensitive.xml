@@ -6,15 +6,24 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="val_caseSensitive">
-  <title>caseSensitive</title>
+  <title>val_caseSensitive</title>
 
-  <para>This rule attribute specifies whether the test defined within that rule is case sensitive or not.</para>
+  <para>This rule
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+    specifies whether the test defined within that rule is case sensitive or not.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains</emphasis>:
+    string.<?oxy_custom_end?></para>
 
-  <para><emphasis>Value description:</emphasis> <code>yes</code> if the test is case sensitive, <code>no</code> if the test is case insensitive.</para>
+  <para><emphasis>Value description:</emphasis>
+    <code>"yes"</code> if the test is case sensitive, <code>"no"</code> if the test is case
+    insensitive.</para>
 
-  <para><emphasis>Default value:</emphasis> <code>yes</code>.</para>
+  <para><emphasis>Default value:</emphasis>
+    <code>"yes"</code>.</para>
 
-  <para><emphasis>Used in:</emphasis> <olink targetdoc="../../elements/validation/rule.xml" targetptr="rule"><code>&lt;rule></code></olink></para>
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../../elements/validation/rule.xml" targetptr="rule"
+      ><code>val_rule</code></olink></para>
 
 
 </section>

@@ -25,7 +25,7 @@
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>inclusive<?oxy_custom_end?>.</para>
         
     <para><emphasis>Default value:</emphasis>
-        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>none.<?oxy_custom_end?></para>
+        undefined<?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>.<?oxy_custom_end?></para>
     
     <warning><para>The <link linkend="itsm_locQualityIssueSeverity">its_locQualityIssueSeverity</link>
             <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>

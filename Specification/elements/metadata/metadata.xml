@@ -6,17 +6,26 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="metadata">
-    <title>metadata</title>
-    <para>Container for metadata associated with the enclosing element.</para>
-   <para><emphasis>Contains:</emphasis></para>
+    <title>mda_metadata</title>
+    <para>Container for metadata associated with the enclosing object.</para>
+   <para><emphasis>Contains:</emphasis> object.</para>
    <simplelist>
-      <member>- One or more <olink targetdoc="metagroup.xml" targetptr="metagroup"
-               ><code>&lt;metaGroup></code></olink> elements</member>
-   </simplelist>
- <para><emphasis>Attributes:</emphasis></para>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
+    <member>- One or more <olink targetdoc="metagroup.xml" targetptr="metagroup"
+          ><code>&lt;metaGroup></code></olink> elements</member><?oxy_custom_end?>
+  </simplelist>
+ <para><emphasis>Properties:</emphasis></para>
     <simplelist>
-	     <member>- <olink targetdoc="../../attributes/meta_id.xml" targetptr="meta_id"><code>id</code></olink>,
-                <glossterm>optional</glossterm></member>
+	     <member>-
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"mda_id"</code>, a<?oxy_custom_end?>
+      <olink targetdoc="../../attributes/meta_id.xml" targetptr="meta_id"
+        ><code>mda_id</code></olink> string with NMTOKEN value,
+      <glossterm>optional</glossterm></member>
+    <member>-
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"mda_metaGroups"</code>,
+      a non-empty array of<?oxy_custom_end?>
+      <olink targetdoc="metagroup.xml" targetptr="metagroup"><code>mda_metaGroup</code></olink>
+      objects.</member>
 
   </simplelist>
     <para><emphasis>Example:</emphasis> Metadata can be used to store XML attribute names and values

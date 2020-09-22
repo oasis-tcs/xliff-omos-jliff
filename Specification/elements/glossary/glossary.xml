@@ -6,11 +6,10 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="glossary">
-    <title>glossary</title>
+    <title>gls_glossary</title>
     <para>Container for a list of glossary terms.</para>
-    <para><emphasis>Contains:</emphasis></para>
-    <simplelist>
-        <member>- One or more <olink targetdoc="glossentry.xml" targetptr="glossentry"
-                    ><code>&lt;glossEntry></code></olink> elements.</member>
-    </simplelist>
+    <para><emphasis>Contains:</emphasis>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>non-empty array of <?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>anonymous<?oxy_custom_end?>
+        <olink targetdoc="glossentry.xml" targetptr="glossentry"><code>gls_glossEntry</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end?>.</para>
 </section>

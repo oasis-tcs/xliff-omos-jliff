@@ -23,7 +23,7 @@
             url="https://www.w3.org/TR/its20/#allowedchars-local">its_allowedCharacters</ulink>
         definition in the <olink targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink>
         specification.</para>
-    <para><emphasis>Default value:</emphasis> none.</para>
+    <para><emphasis>Default value:</emphasis> undefined.</para>
     <para><emphasis>Used in:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
             targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"><code>&lt;mrk></code></olink> and<?oxy_custom_end?>
