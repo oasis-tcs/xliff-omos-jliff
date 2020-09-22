@@ -318,7 +318,8 @@
           "minItems": 1
         }
       },
-      "additionalProperties": false
+      "additionalProperties": false,
+      "required": [ "items" ]
     },
 
     "mtc_match": {
