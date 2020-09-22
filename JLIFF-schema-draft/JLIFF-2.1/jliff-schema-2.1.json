@@ -89,7 +89,6 @@
         "fs_subFs": { "$ref": "#/definitions/fs_subFormatStyle" },
         "mda_metadata": { "$ref": "#/definitions/mda_metadata" },
         "res_resourceData": { "$ref": "#/definitions/res_resourceData" },
-        "ctr_changeTrack": { "$ref": "#/definitions/ctr_changeTrack" },
         "slr_profiles": { "$ref": "#/definitions/slr_profiles" },
         "slr_data": { "$ref": "#/definitions/slr_data" },
         "slr_storageRestriction": { "$ref": "#/definitions/slr_storageRestriction" },
@@ -168,7 +167,6 @@
             "fs_subFs": { "$ref": "#/definitions/fs_subFormatStyle" },
             "mda_metadata": { "$ref": "#/definitions/mda_metadata" },
             "res_resourceData": { "$ref": "#/definitions/res_resourceData" },
-            "ctr_changeTrack": { "$ref": "#/definitions/ctr_changeTrack" },
             "slr_profiles": { "$ref": "#/definitions/slr_profiles" },
             "slr_data": { "$ref": "#/definitions/slr_data" },
             "slr_storageRestriction": { "$ref": "#/definitions/slr_storageRestriction" },
@@ -222,7 +220,6 @@
             "subgroups": { "$ref": "#/definitions/subitems" },
             "mda_metadata": { "$ref": "#/definitions/mda_metadata" },
             "res_resourceData": { "$ref": "#/definitions/res_resourceData" },
-            "ctr_changeTrack": { "$ref": "#/definitions/ctr_changeTrack" },
             "slr_profiles": { "$ref": "#/definitions/slr_profiles" },
             "slr_data": { "$ref": "#/definitions/slr_data" },
             "slr_storageRestriction": { "$ref": "#/definitions/slr_storageRestriction" },
@@ -516,60 +513,6 @@
             "additionalProperties": true,
             "required": [ "res_href" ]
           }
-        }
-      },
-      "additionalProperties": true
-    },
-
-    "ctr_changeTrack": {
-      "description": "The changeTrack module is used to store revision information",
-      "type": "object",
-      "properties": {
-        "ctr_revisions": {
-          "type": "array",
-          "items": { "$ref": "#/definitions/ctr_revisions" },
-          "minItems": 1
-        }
-      },
-      "additionalProperties": false,
-      "required": [ "ctr_revisions" ]
-    },
-
-    "ctr_revisions": {
-      "type": "object",
-      "properties": {
-        "ctr_appliesTo": { "$ref": "#/definitions/NMTOKEN" },
-        "ctr_ref": { "$ref": "#/definitions/NMTOKEN" },
-        "ctr_currentVersion": { "$ref": "#/definitions/NMTOKEN" },
-        "items": {
-          "type": "array",
-          "items": { "$ref": "#/definitions/ctr_revision" },
-          "minItems": 1
-        },
-        "its_annotatorsRef": { "type": "string" }
-      },
-      "additionalProperties": true,
-      "required": [ "ctr_appliesTo" ]
-    },
-
-    "ctr_revision": {
-      "type": "object",
-      "properties": {
-        "ctr_author": { "type": "string" },
-        "ctr_dateTime": { "type": "string" },
-        "ctr_version": { "$ref": "#/definitions/NMTOKEN" },
-        "items": { 
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "ctr_property": { "type": "string" },
-              "ctr_text": { "type": "string" }
-            },
-            "additionalProperties": true,
-            "required": [ "property", "ctr_text" ]
-          },
-          "minitems": 1
         }
       },
       "additionalProperties": true
