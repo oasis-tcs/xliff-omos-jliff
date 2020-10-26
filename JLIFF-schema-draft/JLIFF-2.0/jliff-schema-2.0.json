@@ -230,20 +230,9 @@
 
     "mtc_matches": {
       "description": "The translationCandidates module provides a capability to store lists of possible translations along with information about the similarity of the match, the quality of the translation, its provenance, etc.",
-      "type": "object",
-      "properties": {
-        "mtc_id": { "$ref": "#/definitions/NMTOKEN" },
-        "mtc_type": { "$ref": "#/definitions/type", "enum": [ "mtc:match" ] },
-        "mtc_ref": { "$ref": "#/definitions/NMTOKEN" },
-        "mtc_translate": { "type": "string", "enum": [ "yes", "no" ] },
-        "items": {
-          "type": "array",
-          "items": { "$ref": "#/definitions/mtc_match" },
-          "minItems": 1
-        }
-      },
-      "additionalProperties": false,
-      "required": [ "items" ]
+      "type": "array",
+      "items": { "$ref": "#/definitions/mtc_match" },
+      "minItems": 1
     },
 
     "mtc_match": {
@@ -261,9 +250,10 @@
         "source": { "$ref": "#/definitions/elements" },
         "target": { "$ref": "#/definitions/elements" },
         "originalData": { "$ref": "#/definitions/originalData" },
-        "mda_metadata": { "$ref": "#/definitions/mda_metadata" }
+        "mda_metadata": { "$ref": "#/definitions/mda_metadata" },
+        "userdata": { "$ref": "#/definitions/extensionsData" }
       },
-      "additionalProperties": true,
+      "additionalProperties": false,
       "required": [ "mtc_ref", "source", "target" ]
     },
 
@@ -282,9 +272,10 @@
           "type": "object",
           "properties": {
             "gls_text": { "type": "string" },
-            "gls_source": { "type": "string" }
+            "gls_source": { "type": "string" },
+            "userdata": { "$ref": "#/definitions/extensionsData" }
           },
-          "additionalProperties": true,
+          "additionalProperties": false,
           "required": [ "gls_text" ]
         },
         "gls_translations": {
@@ -295,9 +286,10 @@
               "gls_id": { "$ref": "#/definitions/NMTOKEN" },
               "gls_ref": { "$ref": "#/definitions/IRI" },
               "gls_text": { "type": "string" },
-              "gls_source": { "type": "string" }
+              "gls_source": { "type": "string" },
+              "userdata": { "$ref": "#/definitions/extensionsData" }
             },
-            "additionalProperties": true,
+            "additionalProperties": false,
             "required": [ "gls_text" ]
           },
           "minItems": 1
@@ -306,13 +298,15 @@
           "type": "object",
           "properties": {
             "gls_text": { "type": "string" },
-            "gls_source": { "type": "string" }
+            "gls_source": { "type": "string" },
+            "userdata": { "$ref": "#/definitions/extensionsData" }
           },
-          "additionalProperties": true,
+          "additionalProperties": false,
           "required": [ "gls_text" ]
-        }
+        },
+        "userdata": { "$ref": "#/definitions/extensionsData" }
       },
-      "additionalProperties": true,
+      "additionalProperties": false,
       "required": [ "gls_term" ]
     },
 
@@ -392,9 +386,10 @@
       "type": "object",
       "properties": {
         "res_id": { "$ref": "#/definitions/NMTOKEN" },
-        "res_ref": { "$ref": "#/definitions/NMTOKEN" }
+        "res_ref": { "$ref": "#/definitions/NMTOKEN" },
+        "userdata": { "$ref": "#/definitions/extensionsData" }
       },
-      "additionalProperties": true,
+      "additionalProperties": false,
       "required": [ "res_ref" ]
     },
 
@@ -408,17 +403,19 @@
           "type": "object",
           "properties": {
             "res_href": { "type": "string" },
-            "res_lang": { "$ref": "#/definitions/language" }
+            "res_lang": { "$ref": "#/definitions/language" },
+            "userdata": { "$ref": "#/definitions/extensionsData" }
           },
-          "additionalProperties": true
+          "additionalProperties": false
         },
         "res_target": {
           "type": "object",
           "properties": {
             "res_href": { "type": "string" },
-            "res_lang": { "$ref": "#/definitions/language" }
+            "res_lang": { "$ref": "#/definitions/language" },
+            "userdata": { "$ref": "#/definitions/extensionsData" }
           },
-          "additionalProperties": true
+          "additionalProperties": false
         },
         "references": {
           "type": "array",
@@ -426,14 +423,16 @@
             "type": "object",
             "properties": {
               "res_href": { "type": "string" },
-              "res_lang": { "$ref": "#/definitions/language" }
+              "res_lang": { "$ref": "#/definitions/language" },
+              "userdata": { "$ref": "#/definitions/extensionsData" }
             },
-            "additionalProperties": true,
+            "additionalProperties": false,
             "required": [ "res_href" ]
           }
-        }
+        },
+        "userdata": { "$ref": "#/definitions/extensionsData" }
       },
-      "additionalProperties": true
+      "additionalProperties": false
     },
 
     "ctr_changeTrack": {
@@ -462,7 +461,7 @@
           "minItems": 1
         }
       },
-      "additionalProperties": true,
+      "additionalProperties": false,
       "required": [ "ctr_appliesTo" ]
     },
 
@@ -480,13 +479,13 @@
               "ctr_property": { "type": "string" },
               "ctr_text": { "type": "string" }
             },
-            "additionalProperties": true,
+            "additionalProperties": false,
             "required": [ "property", "ctr_text" ]
           },
           "minitems": 1
         }
       },
-      "additionalProperties": true
+      "additionalProperties": false
     },
 
     "slr_profiles": {
@@ -500,18 +499,21 @@
           "properties": {
             "slr_general": { "type": "string", "enum": [ "none", "nfc", "nfd" ] },
             "slr_storage": { "type": "string", "enum": [ "none", "nfc", "nfd" ] }
-          }
-        }
+          },
+          "additionalProperties": false
+        },
+        "userdata": { "$ref": "#/definitions/extensionsData" }
       },
-      "additionalProperties": true
+      "additionalProperties": false
     },
 
     "slr_data": {
       "type": "object",
       "properties": {
-         "slr_profile": { "type": "string" }
+         "slr_profile": { "type": "string" },
+         "userdata": { "$ref": "#/definitions/extensionsData" }
       },
-      "additionalProperties": true,
+      "additionalProperties": false,
       "required": [ "slr_profile" ]
     },
 
@@ -586,7 +588,7 @@
           }
         }
       ],
-      "additionalProperties": true
+      "additionalProperties": false
     },
 
     "extensionsData": {
@@ -673,7 +675,7 @@
         "kind": { "type": "string", "enum": [ "em" ] },
         "startRef": { "type": "string" }
       },
-      "additionalProperties": true,
+      "additionalProperties": false,
       "required": [ "kind", "startRef" ]
     },
 
@@ -747,7 +749,7 @@
         "slr_storageRestriction": { "$ref": "#/definitions/slr_storageRestriction" },
         "slr_sizeRestriction": { "$ref": "#/definitions/slr_sizeRestriction" }
       },
-      "additionalProperties": true,
+      "additionalProperties": false,
       "required": [ "id", "kind" ]
     },
 

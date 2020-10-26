@@ -5,7 +5,7 @@
   "files": [
     {
       "id": "fl",
-      "skeleton": { "ref": "Graphic Example.psd.skl" },
+      "skeleton": { "href": "Graphic Example.psd.skl" },
       "subfiles": [
         {
           "id": "1",

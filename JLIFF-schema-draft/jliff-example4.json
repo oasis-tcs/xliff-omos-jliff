@@ -27,26 +27,26 @@
             ],
             "gls_glossary": [
                 {
-                    "ref": "#m1",
-                    "term": {
-                        "text": "TAB key",
-                        "source": "publicTermbase"
+                    "gls_ref": "#m1",
+                    "gls_term": {
+                        "gls_text": "TAB key",
+                        "gls_source": "publicTermbase"
                     },
-                    "translations": [
+                    "gls_translations": [
                         {
-                            "id": "1",
-                            "source": "myTermbase",
-                            "text": "Tabstopptaste"
+                            "gls_id": "1",
+                            "gls_source": "myTermbase",
+                            "gls_text": "Tabstopptaste"
                         },
                         {
-                            "ref": "#m2",
-                            "source": "myTermbase",
-                            "text": "TAB-TASTE"
+                            "gls_ref": "#m2",
+                            "gls_source": "myTermbase",
+                            "gls_text": "TAB-TASTE"
                         }
                     ],
-                    "definition": {
-                        "text": "A keyboard key that is traditionally used to insert tab characters into a document.",
-                        "source": "publicTermbase"
+                    "gls_definition": {
+                        "gls_text": "A keyboard key that is traditionally used to insert tab characters into a document.",
+                        "gls_source": "publicTermbase"
                     }
                 }
             ]
