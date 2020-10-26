@@ -6,26 +6,53 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="slr_data">
-    <title>data</title>
-    <para>This elements act as a container for data needed by the specified profile to check the part of the XLIFF document that is a sibling or descendant of a sibling of this element. It is not used by the default profiles.</para>
-    <para><emphasis>Contains:</emphasis></para>
+    <title>slr_data</title>
+    <para>This object act as a container for data needed by the specified profile to check the part
+    of the JLIFF document that is a sibling or descendant of a sibling of this object. It is not
+    used by the default profiles.</para>
+    <para><emphasis>Contains:</emphasis>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
     <simplelist>
-        <member>- elements from other namespaces, <glossterm>optional</glossterm></member>
-    </simplelist>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
+    <member>- elements from other namespaces,
+      <glossterm>optional</glossterm><?oxy_custom_end?></member>
+  </simplelist>
 
-    <para><emphasis>Attributes:</emphasis></para>
+    <para><emphasis>Properties:</emphasis></para>
     <simplelist>
-        <member>- <olink targetdoc="../../attributes/size_restriction/profile.xml" targetptr="slr_profile"><code>profile</code></olink>, <glossterm>required</glossterm></member>
-        <member>- attributes from other namespaces, <glossterm>optional</glossterm></member>
-    </simplelist>
+    <member>- <code>"slr_profile"</code>, a <olink
+        targetdoc="../../attributes/size_restriction/profile.xml" targetptr="slr_profile"
+          ><code>profile</code></olink> object, <glossterm>required</glossterm></member>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
+    <member>- attributes from other namespaces,
+      <glossterm>optional</glossterm><?oxy_custom_end?></member>
+  </simplelist>
 
     <itemizedlist>
+    <title>Constraints</title>
+  </itemizedlist>
+  <itemizedlist>
+    <listitem>
+      <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>The following
+        optional <emphasis>JLIFF Extension</emphasis> property is allowed:<simplelist>
+          <member>- <code>"userdata"</code>, a <olink targetdoc="../../extensions/extensions.xml"
+              targetptr="extensions"><code>userdata</code></olink>
+            object<?oxy_custom_end?>.</member>
+        </simplelist></para>
+      <para>No other properties are permitted.</para>
+    </listitem>
+  </itemizedlist>
+  <itemizedlist>
     <title>Processing Requirements</title>
     <listitem>
-      <para>Third party profiles <glossterm>must</glossterm> place all  data in this element instead of using other extension points if the data serves no other purpose in the processing of the document.</para>
+      <para>Third party profiles <glossterm>must</glossterm> place all data in this
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+        instead of using other extension points if the data serves no other purpose in the
+        processing of the document.</para>
     </listitem>
     <listitem>
-      <para>Data not used by the specified profile <glossterm>must not</glossterm> be placed in this element.</para>
+      <para>Data not used by the specified profile <glossterm>must not</glossterm> be placed in this
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
     </listitem>
   </itemizedlist>
 

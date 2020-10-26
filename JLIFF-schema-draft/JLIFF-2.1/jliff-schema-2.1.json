@@ -387,6 +387,7 @@
           "additionalProperties": false,
           "required": [ "gls_text" ]
         },
+        "mda_metadata": { "$ref": "#/definitions/mda_metadata" },
         "userdata": { "$ref": "#/definitions/extensionsData" }
       },
       "additionalProperties": false,

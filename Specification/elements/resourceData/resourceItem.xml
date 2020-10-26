@@ -55,8 +55,6 @@
         targetdoc="../../elements/resourceData/reference.xml" targetptr="res_reference"
           ><code>res_reference</code></olink> objects,
       <emphasis>optional</emphasis><?oxy_custom_end?></member>
-    <member>- <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>additional
-      aproperties are allowed.<?oxy_custom_end?></member>
   </simplelist>
   <itemizedlist>
     <title>Constraints</title>
@@ -101,6 +99,13 @@
         of the enclosing <olink targetdoc="../../elements/resourceData/resourceData.xml"
           targetptr="res_resourceData"><code>res_resourceData</code></olink>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
+      <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>The following
+        optional <emphasis>JLIFF Extension</emphasis> property is allowed:<simplelist>
+          <member>- <code>"userdata"</code>, a <olink targetdoc="../../extensions/extensions.xml"
+              targetptr="extensions"><code>userdata</code></olink>
+            object<?oxy_custom_end?>.</member>
+        </simplelist></para>
+      <para>No other properties are permitted.</para>
     </listitem>
   </itemizedlist>
   <itemizedlist>

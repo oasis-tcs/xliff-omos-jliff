@@ -359,7 +359,8 @@
                 </simplelist></para>
         </listitem>
         <listitem>
-            <para>No other properties are permitted.</para>
+            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>
+            <para>No other properties are permitted.<?oxy_custom_end?></para>
         </listitem>
         <!-- implied JSON behavior    <listitem>
             <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>[NEED TO DECIDE

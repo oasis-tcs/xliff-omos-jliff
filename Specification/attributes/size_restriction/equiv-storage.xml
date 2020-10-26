@@ -6,20 +6,34 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="slr_equiv_storage">
-  <title>equivStorage</title>
+  <title>slr_equivStorage</title>
 
-  <para>This attribute provides a means to specify how much storage space an inline element will use in the native format. This size contribution is then added to the size contributed by the textual parts.
-    This attribute is only allowed on the <olink targetdoc="../../elements/inline/ec.xml" targetptr="ec"><code>&lt;ec></code></olink> element if that element has the <olink targetdoc="../isolated.xml" targetptr="isolated"><code>isolated</code></olink> attribute set to <code>yes</code>. Otherwise the attribute on the paired <olink targetdoc="../../elements/inline/sc.xml" targetptr="sc"><code>&lt;sc></code></olink>
-    element also cover its partner <olink targetdoc="../../elements/inline/ec.xml" targetptr="ec"><code>&lt;ec></code></olink> element.</para>
+  <para>This <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string property
+    <?oxy_custom_end?>provides a means to specify how much storage space an inline element will use
+    in the native format. This size contribution is then added to the size contributed by the
+    textual parts. This <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string
+    property <?oxy_custom_end?>is only allowed on the <olink
+      targetdoc="../../elements/inline/ec.xml" targetptr="ec"><code>ec</code></olink> element if
+    that element has the <olink targetdoc="../isolated.xml" targetptr="isolated"
+        ><code>isolated</code></olink>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+    set to <code>"yes"</code>. Otherwise the property on the paired <olink
+      targetdoc="../../elements/inline/sc.xml" targetptr="sc"><code>sc</code></olink> element also
+    cover its partner <olink targetdoc="../../elements/inline/ec.xml" targetptr="ec"
+      ><code>ec</code></olink> element.</para>
 
-  <para><emphasis>Value description:</emphasis> Interpretation of the value is dependent on selected <olink targetdoc="storage-profile.xml" targetptr="slr_storage_profile"><code>storageProfile</code></olink>. It <glossterm>must</glossterm> represent the equivalent storage size represented by the inline element.</para>
+  <para><emphasis>Value description:</emphasis> Interpretation of the value is dependent on selected
+      <olink targetdoc="storage-profile.xml" targetptr="slr_storage_profile"
+        ><code>slr_storageProfile</code></olink>. It <glossterm>must</glossterm> represent the
+    equivalent storage size represented by the inline element.</para>
 
   <para><emphasis>Default value:</emphasis> undefined</para>
 
-  <para><emphasis>Used in:</emphasis>
+  <para><emphasis>Used
+      in:<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?></emphasis>
     <olink targetdoc="../../elements/inline/pc.xml" targetptr="pc"><code>&lt;pc></code></olink>,
-    <olink targetdoc="../../elements/inline/sc.xml" targetptr="sc"><code>&lt;sc></code></olink>,
-    <olink targetdoc="../../elements/inline/ec.xml" targetptr="ec"><code>&lt;ec></code></olink>,
-    <olink targetdoc="../../elements/inline/ph.xml" targetptr="ph"><code>&lt;ph></code></olink> and
-  </para>
+      <?oxy_custom_end?><olink targetdoc="../../elements/inline/sc.xml" targetptr="sc"
+        ><code>sc</code></olink>, <olink targetdoc="../../elements/inline/ec.xml" targetptr="ec"
+        ><code>ec</code></olink>, <olink targetdoc="../../elements/inline/ph.xml" targetptr="ph"
+        ><code>ph</code></olink>.</para>
 </section>

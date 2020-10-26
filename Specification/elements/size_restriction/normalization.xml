@@ -6,27 +6,46 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="slr_normalization">
-    <title>normalization</title>
-    <para>This element is used to hold the attributes specifying the normalization form to apply to
-    storage and size restrictions defined in the standard profiles.</para>
-    <para><emphasis>Contains:</emphasis></para>
+    <title>slr_normalization</title>
+    <para>This
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?> is
+    used to hold the
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>properties<?oxy_custom_end?>
+    specifying the normalization form to apply to storage and size restrictions defined in the
+    standard profiles.</para>
+    <para><emphasis>Contains:</emphasis>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object.<?oxy_custom_end?></para>
     <simplelist>
-        <member>This element is always empty.</member>
-    </simplelist>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
+    <member>This element is always empty.<?oxy_custom_end?></member>
+  </simplelist>
 
-    <para><emphasis>Attributes:</emphasis></para>
+    <para><emphasis>Properties:</emphasis></para>
     <simplelist>
-        <member>- <olink targetdoc="../../attributes/size_restriction/general.xml" targetptr="slr_general"><code>general</code></olink>, <glossterm>optional</glossterm></member>
-        <member>- <olink targetdoc="../../attributes/size_restriction/storage.xml" targetptr="slr_storage"><code>storage</code></olink>, <glossterm>optional</glossterm></member>
-    </simplelist>
+    <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+    <member>- <code>"slr_general"</code>, a <olink
+        targetdoc="../../attributes/size_restriction/general.xml" targetptr="slr_general"
+          ><code>slr_general</code></olink> string with value <code>"none"</code>,
+        <code>"nfc"</code>, or <code>"nfd"</code>, <glossterm>optional</glossterm></member>
+    <member>- <code>"slr_storage"</code>, a <olink
+        targetdoc="../../attributes/size_restriction/storage.xml" targetptr="slr_storage"
+          ><code>slr_storage</code></olink> string with value <code>"none"</code>,
+        <code>"nfc"</code>, or <code>"nfd"</code>,
+      <glossterm>optional</glossterm><?oxy_custom_end?></member>
+  </simplelist>
 
     <itemizedlist>
     <title>Processing Requirements</title>
     <listitem>
-      <para>If this element is not present no normalization <glossterm>should</glossterm> be performed for the standard profiles.</para>
+      <para>If this
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+        is not present no normalization <glossterm>should</glossterm> be performed for the standard
+        profiles.</para>
     </listitem>
     <listitem>
-      <para>Other profiles <glossterm>may</glossterm> use this element in its specified form but <glossterm>must not</glossterm> add new extensions to it.</para>
+      <para>Other profiles <glossterm>may</glossterm> use this
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+        in its specified form but <glossterm>must not</glossterm> add new extensions to it.</para>
     </listitem>
   </itemizedlist>
 

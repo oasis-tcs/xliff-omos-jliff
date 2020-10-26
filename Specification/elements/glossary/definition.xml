@@ -31,7 +31,20 @@
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>string<?oxy_custom_end?>
       </olink>, <glossterm>optional</glossterm>
     </member>
-    <member>- attributes from other namespaces, <glossterm>optional</glossterm></member>
   </simplelist>
+  <itemizedlist>
+    <title>Constraints</title>
+  </itemizedlist>
+  <para>
+    <itemizedlist>
+      <listitem>
+        <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>The following
+          optional <emphasis>JLIFF Extension</emphasis> property is allowed:</para>
+        <para><code>"userdata"</code>, a <olink targetdoc="../../extensions/extensions.xml"
+            targetptr="extensions"><code>userdata</code></olink> object.</para>
+        <para>No other properties are permitted.<?oxy_custom_end?></para>
+      </listitem>
+    </itemizedlist>
+  </para>
 
 </section>

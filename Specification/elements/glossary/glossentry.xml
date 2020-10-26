@@ -23,10 +23,9 @@
         <member>- elements from other namespaces,
         <glossterm>optional</glossterm></member><?oxy_custom_end?>
     </simplelist>
-
     <para><emphasis>Properties:</emphasis></para>
     <simplelist>
-      <member>-
+        <member>-
                 <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"gls_id"</code>, a<?oxy_custom_end?>
             <olink targetdoc="../../attributes/glossary/gls_id.xml" targetptr="gls_id">
                 <code>gls_id</code>
@@ -59,10 +58,9 @@
                 ><code>gls_definition</code></olink>
             <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object<?oxy_custom_end?>,
                 <emphasis>optional</emphasis></member>
-      <member>- <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>additional
-            properties allowed.<?oxy_custom_end?></member>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
+        <member>- additional properties allowed.<?oxy_custom_end?></member>
     </simplelist>
-
     <itemizedlist>
         <title>Constraints</title>
         <listitem>
@@ -79,15 +77,19 @@
                 allowed<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?> by the
                 wildcard <code>other</code><?oxy_custom_end?>:</para>
             <simplelist>
-                
                 <member>- <code>"mda_metaData"</code>, a <olink targetdoc="../metadata/metadata.xml"
                         targetptr="metadata"><code>mda_metadata</code></olink> object.
                     <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[PROBLEM:
                     one or more objects? If more than one then this should be an array, not a single
-                    object]<?oxy_custom_end?></member>
-                
-                
+                    object]<?oxy_custom_end?>.</member>
             </simplelist>
+            <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>The following
+                optional <emphasis>JLIFF Extension</emphasis> property is allowed:<simplelist>
+                    <member>- <code>"userdata"</code>, a <olink
+                            targetdoc="../../extensions/extensions.xml" targetptr="extensions"
+                                ><code>userdata</code></olink> object<?oxy_custom_end?>.</member>
+                </simplelist></para>
+            <para>No other properties are permitted.</para>
         </listitem>
     </itemizedlist>
 </section>

@@ -6,39 +6,57 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="slr_size_info_ref">
-  <title>sizeInfoRef</title>
+  <title>slr_sizeInfoRef</title>
 
-  <para>This attribute is used to point to data that provide the same function as the <olink targetdoc="size-info.xml" targetptr="slr_size_info"><code>sizeInfo</code></olink>
-    attribute does, but with the data stored outside the inline content of the XLIFF segment.
-    This attribute is only allowed on the <olink targetdoc="../../elements/inline/ec.xml" targetptr="ec"><code>&lt;ec></code></olink> element if that element has the
-    <olink targetdoc="../attributes/isolated.xml" targetptr="isolated"><code>isolated</code></olink> attribute set to <code>yes</code>.
-    Otherwise the attribute on the paired <olink targetdoc="../../elements/inline/sc.xml" targetptr="sc"><code>&lt;sc></code></olink>
-    element also cover its partner <olink targetdoc="../../elements/inline/ec.xml" targetptr="ec"><code>&lt;ec></code></olink> element.</para>
+  <para>This <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string
+    property<?oxy_custom_end?> is used to point to data that provide the same function as the <olink
+      targetdoc="size-info.xml" targetptr="slr_size_info"><code>skr_sizeInfo</code></olink>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string
+    property<?oxy_custom_end?> does, but with the data stored outside the inline content of the
+    JLIFF segment. This attribute is only allowed on the <olink
+      targetdoc="../../elements/inline/ec.xml" targetptr="ec"><code>ec</code></olink> element if
+    that element has the <olink targetdoc="../attributes/isolated.xml" targetptr="isolated"
+        ><code>isolated</code></olink> attribute set to <code>"yes"</code>. Otherwise the
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string
+    property<?oxy_custom_end?> on the paired <olink targetdoc="../../elements/inline/sc.xml"
+      targetptr="sc"><code>sc</code></olink> element also cover its partner <olink
+      targetdoc="../../elements/inline/ec.xml" targetptr="ec"><code>ec</code></olink>
+    element.</para>
 
-  <para><emphasis>Value description:</emphasis> a reference to data that provide the same information that could be otherwise put in a
-    <olink targetdoc="size-info.xml" targetptr="slr_size_info"><code>sizeInfo</code></olink> attribute. 
-  The reference <glossterm>must</glossterm> point to an element in a
-    <olink targetdoc="../../elements/size_restriction/data.xml" targetptr="slr_data"><code>&lt;data></code></olink> element
-    that is a sibling to the element this attribute is attached to or a sibling to one of its ancestors. </para>
+  <para><emphasis>Value description:</emphasis> a reference to data that provide the same
+    information that could be otherwise put in a <olink targetdoc="size-info.xml"
+      targetptr="slr_size_info"><code>slr_sizeInfo</code></olink>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string
+    property<?oxy_custom_end?>. The reference <glossterm>must</glossterm> point to an
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?> in a
+      <olink targetdoc="../../elements/size_restriction/data.xml" targetptr="slr_data"
+        ><code>slr_data</code></olink> object that is a sibling to the
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?> this
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string
+    property<?oxy_custom_end?> is attached to or a sibling to one of its ancestors. </para>
 
-  <para><emphasis>Default value:</emphasis> undefined</para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
 
  
   <para><emphasis>Used in:</emphasis>
-    <olink targetdoc="../../elements/structural/file.xml" targetptr="file"><code>&lt;file></code></olink>,
-    <olink targetdoc="../../elements/structural/group.xml" targetptr="group"><code>&lt;group></code></olink>,
-    <olink targetdoc="../../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink>,
-    <olink targetdoc="../../elements/inline/pc.xml" targetptr="pc"><code>&lt;pc></code></olink>,
-    <olink targetdoc="../../elements/inline/sc.xml" targetptr="sc"><code>&lt;sc></code></olink>,
-    <olink targetdoc="../../elements/inline/ec.xml" targetptr="ec"><code>&lt;ec></code></olink>, and
-    <olink targetdoc="../../elements/inline/ph.xml" targetptr="ph"><code>&lt;ph></code></olink>,
-  </para>
+    <olink targetdoc="../../elements/structural/file.xml" targetptr="file"
+    ><code>file</code></olink>, <olink targetdoc="../../elements/structural/group.xml"
+      targetptr="group"><code>group</code></olink>, <olink
+      targetdoc="../../elements/structural/unit.xml" targetptr="unit"><code>unit</code></olink>,
+      <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
+      targetdoc="../../elements/inline/pc.xml" targetptr="pc"><code>pc</code></olink>,
+      <?oxy_custom_end?><olink targetdoc="../../elements/inline/sc.xml" targetptr="sc"
+        ><code>sc</code></olink>, <olink targetdoc="../../elements/inline/ec.xml" targetptr="ec"
+        ><code>ec</code></olink>, and <olink targetdoc="../../elements/inline/ph.xml" targetptr="ph"
+        ><code>ph</code></olink>, </para>
  
   <itemizedlist>
     <title>Constraints</title>
     <listitem>
-      <para>This attribute <glossterm>must not</glossterm> be specified
-        if and only if <olink targetdoc="size-info.xml" targetptr="slr_size_info"><code>sizeInfo</code></olink> is used. They <glossterm>must not</glossterm> be specified at the same time.</para>
+      <para>This <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string property<?oxy_custom_end?>
+        <glossterm>must not</glossterm> be specified if and only if <olink targetdoc="size-info.xml"
+          targetptr="slr_size_info"><code>slr_sizeInfo</code></olink> is used. They <glossterm>must
+          not</glossterm> be specified at the same time.</para>
     </listitem></itemizedlist> 
   
   

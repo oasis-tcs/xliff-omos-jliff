@@ -7,41 +7,53 @@
                          ]>
 <section id="skeleton">
     <title>skeleton</title>
-    <para>Container for non-translatable material pertaining to the parent <olink
-            targetdoc="file.xml" targetptr="file"><code>&lt;file></code></olink> element.</para>
-    <para><emphasis>Contains:</emphasis></para>
-    <para>Either</para>
+    <para>Container for non-translatable material pertaining to the <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>parent<?oxy_custom_end?>
+        <olink targetdoc="file.xml" targetptr="file"><code>file</code></olink> object.</para>
+    <para><emphasis>Contains:</emphasis>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>Either</para>
     <simplelist>
         <member>- Non-translatable text</member>
         <member>- elements from other namespaces</member>
     </simplelist>
     <para>or</para>
     <simplelist>
-        <member>- is empty.</member>
+        <member>- is empty.</member><?oxy_custom_end?>
     </simplelist>
-
-    <para><emphasis>Attributes:</emphasis></para>
+    <para><emphasis>Properties:</emphasis></para>
     <simplelist>
-        <member>- <olink targetdoc="../../attributes/href.xml" targetptr="href"><code>href</code></olink>, <glossterm>optional</glossterm></member>
+        <member>- <code>"href"</code>, an <olink targetdoc="../../attributes/href.xml"
+                targetptr="href"><code>href</code></olink>
+            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>,
+                <glossterm>required</glossterm></member>
     </simplelist>
-
     <itemizedlist>
-        <title>Constraints</title>
-    <listitem><para> The attribute <olink targetdoc="../../attributes/href.xml" targetptr="href"
-                    ><code>href</code></olink> is <glossterm>required</glossterm> if and only if the
-                    <link linkend="skeleton"><code>&lt;skeleton></code></link> element is empty. </para></listitem>
+        <title><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>Constraints</title>
+        <listitem>
+            <para> The property <olink targetdoc="../../attributes/href.xml" targetptr="href"
+                        ><code>"href"</code></olink> is <glossterm>required</glossterm> if and only
+                if the <link linkend="skeleton"><code>skeleton</code></link> element is empty.
+            </para><?oxy_custom_end?>
+        </listitem>
     </itemizedlist>
     <itemizedlist>
         <title>Processing Requirements</title>
-        <listitem><para><firstterm>Modifiers</firstterm> and <firstterm>Enrichers</firstterm> processing an
-                    <firstterm>XLIFF Document</firstterm> that contains a <link linkend="skeleton"
-                        ><code>&lt;skeleton></code></link> element <glossterm>must not</glossterm>
-                change that element, its attributes, or its content. </para></listitem>
-        <listitem><para><firstterm>Extractors</firstterm> creating an <firstterm>XLIFF Document</firstterm> with a <link
-                    linkend="skeleton"><code>&lt;skeleton></code></link> element
-                    <glossterm>must</glossterm> leave the <link linkend="skeleton"
-                        ><code>&lt;skeleton></code></link> element empty if and only if they specify
-                the attribute <olink targetdoc="../../attributes/href.xml" targetptr="href"
-                        ><code>href</code></olink>.</para></listitem>
+        <listitem>
+            <para><firstterm>Modifiers</firstterm> and <firstterm>Enrichers</firstterm> processing
+                an <firstterm>JLIFF Document</firstterm> that contains a <link linkend="skeleton"
+                        ><code>skeleton</code></link>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+                <glossterm>must not</glossterm> change that object or its
+                property<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>, or its
+                content<?oxy_custom_end?>. </para>
+        </listitem>
+        <listitem>
+            <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><firstterm>Extractors</firstterm>
+                creating an <firstterm>JLIFF Document</firstterm> with a <link linkend="skeleton"
+                        ><code>skeleton</code></link> object <glossterm>must</glossterm> leave the
+                    <link linkend="skeleton"><code>skeleton</code></link> object empty if and only
+                if they specify the attribute <olink targetdoc="../../attributes/href.xml"
+                    targetptr="href"><code>href</code></olink>.<?oxy_custom_end?></para>
+        </listitem>
     </itemizedlist>
 </section>
