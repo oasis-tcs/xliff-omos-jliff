@@ -5,7 +5,7 @@
   "files": [
     {
       "id": "fl",
-      "skeleton": { "ref": "Graphic Example.psd.skl" },
+      "skeleton": { "href": "Graphic Example.psd.skl" },
       "subfiles": [
         {
           "id": "1",
@@ -18,18 +18,18 @@
             }
           ],
           "mda_metadata": {
-            "id": "md14",
-            "metaGroups": [
+            "mda_id": "md14",
+            "mda_metaGroups": [
               {
-                "category": "document",
-                "appliesTo": "source",
-                "meta": [
-                  { "type": "version", "value": "3" },
-                  { "type": "phase", "value": "draft" },
+                "mda_category": "document",
+                "mda_appliesTo": "source",
+                "items": [
+                  { "mda_type": "version", "mda_text": "3" },
+                  { "mda_type": "phase", "mda_text": "draft" },
                   {
-                    "category": "subgroup",
-                    "meta": [
-                      { "type": "breakfast", "value": "eggs" }
+                    "mda_category": "subgroup",
+                    "items": [
+                      { "mda_type": "breakfast", "mda_text": "eggs" }
                     ]
                   }
                 ]

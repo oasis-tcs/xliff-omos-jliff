@@ -41,7 +41,7 @@
                         {
                             "kind": "ignorable",
                             "source": [
-                               { "text": ".  " }
+                                { "text": ".  " }
                             ]
                         }
                     ]
@@ -52,7 +52,15 @@
                     "subgroups": [
                         {
                             "kind": "unit",
-                            "id": "u2"
+                            "id": "u2",
+                            "subunits": [
+                                {
+                                    "kind": "ignorable",
+                                    "source": [
+                                        { "text": ".  " }
+                                    ]
+                                }
+                            ]
                         },
                         {
                             "kind": "group",

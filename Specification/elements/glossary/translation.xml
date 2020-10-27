@@ -16,11 +16,10 @@
     <para><emphasis>Contains:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>non-empty array of
         objects.<?oxy_custom_end?></para>
-
     <para><emphasis><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Properties of
             array objects:<?oxy_custom_end?></emphasis></para>
     <simplelist>
-      <member>-
+        <member>-
                 <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"gls_id"</code>, a<?oxy_custom_end?>
             <olink targetdoc="../../elements/glossary/gls_id.xml" targetptr="gls_id"
                     ><code>gls_id</code></olink>
@@ -46,8 +45,28 @@
                     ><code>gls_source</code></olink>
             <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>string<?oxy_custom_end?>,
                 <glossterm>optional</glossterm></member>
-      <member>- <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>additional
-            properties allowed.<?oxy_custom_end?></member>
     </simplelist>
-
+    <itemizedlist>
+        <title>Constraints</title>
+    </itemizedlist>
+    <para>
+        <itemizedlist>
+            <listitem>
+                <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>The
+                    following optional <emphasis>JLIFF Extension</emphasis> property is
+                    allowed:</para>
+            </listitem>
+        </itemizedlist>
+        <simplelist>
+            <member>- <code>"userdata"</code>, a <olink targetdoc="../../extensions/extensions.xml"
+                    targetptr="extensions"><code>userdata</code></olink> object.</member>
+        </simplelist>
+    </para>
+    <para>
+        <itemizedlist>
+            <listitem>
+                <para>No other properties are permitted.</para>
+            </listitem>
+        </itemizedlist>
+    </para><?oxy_custom_end?>
 </section>

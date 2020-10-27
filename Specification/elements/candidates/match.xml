@@ -68,9 +68,6 @@
         <code>"icm"</code>, <code>"idm"</code>, <code>"tb"</code>, <code>"tm"</code>,
         <code>"other"</code> with default value <code>"tm"</code>,
       <glossterm>optional</glossterm></member>
-    <member>- <code>"mda_matadata"</code>, a <olink targetdoc="../../elements/metadata/metadata.xml"
-        targetptr="metadata"><code>mda_metadata</code></olink> object,
-      <emphasis>optional</emphasis></member>
     <member>- <code>"originalData"</code>, a <olink
         targetdoc="../../elements/structural/originaldata.xml" targetptr="originaldata"
           ><code>originalData</code></olink> object, <emphasis>optional</emphasis></member>
@@ -80,8 +77,6 @@
     <member>- <code>"target"</code>, a <olink targetdoc="../../elements/structural/target.xml"
         targetptr="target"><code>target</code></olink> object,
       <emphasis>required</emphasis><?oxy_custom_end?></member>
-    <member>- <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>additional
-      aproperties are allowed.<?oxy_custom_end?></member>
   </simplelist>
   <itemizedlist>
     <title>Constraints</title>
@@ -89,9 +84,19 @@
       <para> The following <glossterm>optional</glossterm>
         <firstterm>JLIFF
         Module</firstterm><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        properties are explicitly allowed by the wildcard <code>other</code> provided that they
-        don't violate its own module's Constraints or Processing
+        properties are explicitly allowed
+        <?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>by the
+        wildcard
+        <code>other</code><?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>provided
+        that they don't violate its own module's Constraints or Processing
         Requirements:<?oxy_custom_end?></para>
+      <para>
+        <simplelist>
+          <member>- <code>"mda_matadata"</code>, a <olink
+              targetdoc="../../elements/metadata/metadata.xml" targetptr="metadata"
+                ><code>mda_metadata</code></olink> object, <emphasis>optional</emphasis></member>
+        </simplelist>
+      </para>
       <simplelist>
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
         <member>- <code>"its_locQualityRatingProfileRef"</code>, a <olink
@@ -125,14 +130,20 @@
         <member>- <code>"its_annotatorsRef"</code>, a <olink
             targetdoc="../../attributes/itsm/itsm_annotatorsRef.xml" targetptr="itsm_annotatorsRef"
               ><code>its_annotatorsRef</code></olink> object.<?oxy_custom_end?></member>
-        <member><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>ANY OTHER ITS
-          MEMBERS?<?oxy_custom_end?></member>
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
         <member>- <code>"itsm_domains"</code>, a <olink
             targetdoc="../../attributes/itsm/itsm_domains.xml" targetptr="itsm_domains"
-              ><code>its_domains</code></olink> a non-empty array of non-empty strings not
+              ><code>itsm_domains</code></olink> a non-empty array of non-empty strings not
           containing the <code>,</code> chatacter (U+002C). </member><?oxy_custom_end?>
       </simplelist>
+      <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>The following
+        optional <emphasis>JLIFF Extension</emphasis> property is allowed:<simplelist>
+          <member>- <code>"userdata"</code>, a <olink targetdoc="../../extensions/extensions.xml"
+              targetptr="extensions"><code>userdata</code></olink>
+            object<?oxy_custom_end?>.</member>
+        </simplelist></para>
+      <para><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>No other properties
+        are permitted.<?oxy_custom_end?></para>
     </listitem>
     <listitem>
       <para>When <olink targetdoc="../../elements/structural/target.xml" targetptr="target"

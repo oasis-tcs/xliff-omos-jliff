@@ -6,33 +6,12 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="matches">
-    <title>mtc_matches</title>
+    <title><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>anonymous<?oxy_custom_end?>
+        mtc_matches
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>array<?oxy_custom_end?></title>
     <para>Collection of matches retrieved from any leveraging system (MT, TM, etc.)</para>
-    <para><emphasis>Contains:</emphasis> object.</para>
-    <para><emphasis>Properties:</emphasis></para>
-    <simplelist>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"mtc_id"</code>, a <olink
-                targetdoc="../../attributes/candidates/candidates_id.xml" targetptr="candidates_id"
-                    ><code>mtc_id</code></olink> string with NMTOKEN value,
-                <emphasis>optional</emphasis></member>
-        <member>- <code>"mtc_type"</code>, a <olink
-                targetdoc="../../attributes/candidates/candidates_type.xml"
-                targetptr="candidates_type"><code>mtc_type</code></olink> string with value
-                <code>"mtc:match"</code>, <emphasis>optional</emphasis></member>
-        <member>- <code>"mtc_ref"</code>, a <olink
-                targetdoc="../../attributes/candidates/candidates_ref.xml"
-                targetptr="candidates_ref"><code>mtc_ref</code></olink> string with IRI value,
-                <emphasis>optional</emphasis></member>
-        <member>- <code>"mtc_translate"</code>, a <olink
-                targetdoc="../../attributes/candidates/candidates_translate.xml"
-                targetptr="candidates_translate"><code>mtc_translate</code></olink>, string with
-            value <code>"yes"</code> or <code>"no"</code>,
-            <glossterm>optional</glossterm><?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>mtc_translate
-            is not defined in the spec but it is defined in the schema, is this a
-            mistake?<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?></member>
-        <member>- <code>"items"</code>, a non-empty array of <olink targetdoc="match.xml"
-                targetptr="match"><code>mtc_match</code></olink> objects,
-                <emphasis>required</emphasis><?oxy_custom_end?></member>
-    </simplelist>
+    <para><emphasis>Contains:</emphasis>
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>a non-empty array of
+            <olink targetdoc="match.xml" targetptr="match"><code>mtc_match</code></olink>
+        objects.<?oxy_custom_end?></para>
 </section>
