@@ -117,7 +117,7 @@
 
       <itemizedlist spacing="compact">
         
-        <listitem>
+        <listitem id="LIOM">
           <para><emphasis>XLIFF 2 Object Model Version 1.0.</emphasis>. Edited by David Filip.
             &pubdate;. OASIS &standard;. <ulink url="&this-loc;/&name;-&stage;.html"
               >&this-loc;/&name;-&stage;.html</ulink>. Latest version: <ulink
@@ -126,7 +126,7 @@
         
         <listitem>
           <para><emphasis>XLIFF Version 2.1.</emphasis> Edited by David Filip, Tom Comerford,
-            Soroush Saadatfar, Felix Sasaki, and Yves Savourel. 13 February 2018. OASIS Standard.
+            Soroush Saadatfar, Felix Sasaki, and Yves Savourel. 13 February 2018. OASIS Standard.<link linkend="XLIFF21">[XLIFF 2.1]</link>
               <ulink
               url="http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html"
               >http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html</ulink></para>
@@ -134,7 +134,7 @@
         
         <listitem>
           <para><emphasis>XLIFF Version 2.0.</emphasis> Edited by Tom Comerford, David Filip, Rodolfo M. Raya, and Yves Savourel. 
-            05 August 2014. OASIS Standard. <ulink url="http://docs.oasis-open.org/xliff/xliff-core/v2.0/os/xliff-core-v2.0-os.html">http://docs.oasis-open.org/xliff/xliff-core/v2.0/os/xliff-core-v2.0-os.html</ulink></para>
+            05 August 2014. OASIS Standard. <link linkend="XLIFF20">[XLIFF 2.0]</link> <ulink url="http://docs.oasis-open.org/xliff/xliff-core/v2.0/os/xliff-core-v2.0-os.html">http://docs.oasis-open.org/xliff/xliff-core/v2.0/os/xliff-core-v2.0-os.html</ulink></para>
         </listitem>
 
   <!--      <listitem>
@@ -147,7 +147,7 @@
     <legalnotice id="namespaces" role="namespaces">
       <title>Normatively Used Namespaces</title>
 
-<para> This specification doesn't declare any namespaces. However, it provides JSON specific methods
+      <para> This specification doesn't declare any namespaces. However, it provides <link linkend="JSON">[JSON]</link> specific methods
         to represent objects and properties from the following namespaces: </para>
 
       <itemizedlist spacing="compact">
@@ -208,10 +208,11 @@
         Family of Standards. The purpose of JLIFF is to provide standard JSON serialization methods
         for all XLIFF OM objects, their relationships, and data models, so that Localization tools
         can exchange translation and localization task data in an interoperable way.</para>
-      <para>Same as JSON (its parent etiquette), JLIFF concentrates on real time exchange scenarios. Thanks to the fact
-        that JLIFF and XLIFF (the original XML serialization) share the same Object Model (XLIFF 2
-        OM), implementers of both formats can rely on and benefit from the semantic and behavioral
-        match between those two interchange serialization formats.</para>
+      <para>Same as <link linkend="JSON">[JSON]</link> (its parent etiquette), JLIFF concentrates on
+        real time exchange scenarios. Thanks to the fact that JLIFF and XLIFF (the original XML
+        serialization) share the same Object Model <link linkend="LIOM">[LIOM]</link>, implementers
+        of both formats can rely on and benefit from the semantic and behavioral match between those
+        two interchange formats.</para>
       <para>Since JLIFF primarily targets real time API exchanges, it is capable of expressing
         different levels of fragments corresponding to various structural parts of the XLIFF OM and
         possibly related <firstterm>XLIFF Documents</firstterm>.</para>
@@ -590,12 +591,12 @@
           <varlistentry>
             <term>JLIFF Core</term>
             <listitem>
-              <para>The core of JLIFF &version; consists of the minimum set of JSON values required
-                to (a) prepare a JLIFF Instance that contains text <firstterm>Extracted</firstterm>
-                from one or more files for localization, (b) allow it to be completed with the
-                  <firstterm>Translation</firstterm> of the <firstterm>Extracted</firstterm> text,
-                and (c) allow the generation of <firstterm>Translated</firstterm> versions of the
-                original document.</para>
+              <para>The core of JLIFF Version &version; consists of the minimum set of JSON objects,
+                properties, and values required to (a) prepare a JLIFF Instance that contains text
+                  <firstterm>Extracted</firstterm> from one or more files for localization, (b)
+                allow it to be completed with the <firstterm>Translation</firstterm> of the
+                  <firstterm>Extracted</firstterm> text, and (c) allow the generation of
+                  <firstterm>Translated</firstterm> versions of the original document.</para>
               <para>The namespace that corresponds to the core subset of JLIFF Version &version; is
                   <code>"urn:oasis:names:tc:xliff:document:&bschversion;"</code>.</para>
               <para>
@@ -603,15 +604,37 @@
                   <para>Vanilla JSON is not capable of expressing namespaces. Nevertheless, JLIFF
                     adopts two prefix conventions that allow for representing LIOM and XLIFF
                     namespaces to be able to make use of LIOM modularity.</para>
-                  <para>JLIFF Core object names are not prefixed either in JLIFF Instances or in the
-                    JLIFF JSON Schema.</para>
-                  
+                  <para>JLIFF Core object or property names are not prefixed either in JLIFF
+                    Instances or in the JLIFF JSON Schema.</para>
+                </note>
+                <note>
+                  <para>JLIFF Version &version; contains prose and JSON schema specifications of
+                    JLIFF &bschversion; and JLIFF &cschversion;. These two specifications share
+                    JLIFF Core &bschversion; that maps one-to-one to XLIFF Core &bschversion; that
+                    is shared between XLIFF Version &cschversion; and XLIFF Version &bschversion; </para>
+                  <para>Two different schema instances are provided, JLIFF &cschversion; and JLIFF
+                    &bschversion;. The prose specifications contains conditional provisions for
+                    JLIFF &cschversion; and JLIFF &bschversion; in this document.</para>
                 </note>
               </para>
             </listitem>
           </varlistentry>
           <varlistentry>
-            <term>XLIFF-defined (elements and attributes)</term>
+            <term><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>JLIFF
+              Module</term>
+            <listitem>
+              <para>TBD</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>JLIFF-defined (objects and properties)</term>
+            <listitem>
+              <para>TBD<?oxy_custom_end?></para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>XLIFF-defined
+              (elements and attributes)</term>
             <listitem>
               <para>The following is the list of allowed schema URI prefixes for
                   <firstterm>XLIFF-defined</firstterm> elements and attributes:</para>
@@ -629,7 +652,7 @@
                 <member><code>urn:oasis:names:tc:xliff:changetracking:&bschversion;</code></member>
               </simplelist>
               <para>Elements and attributes from other namespaces are not
-                  <firstterm>XLIFF-defined</firstterm>.</para>
+                  <firstterm>XLIFF-defined</firstterm>.<?oxy_custom_end?></para>
             </listitem>
           </varlistentry>
           <varlistentry>
@@ -641,23 +664,19 @@
               <para>Currently known conformant specifications include [XLIFF Vesrion 2.0], [XLIFF
                 Version 2.1], and JLIFF Version 1.0.</para>
             </listitem>
-            
           </varlistentry>
-        
           <varlistentry>
             <term>LIOM Instance</term>
             <listitem>
               <para>A document or message payload that is a valid instance of any LIOM Conformant
-                Specification. 
-                <note>
+                Specification. <note>
                   <para>Documents or messages cannot conform directly to LIOM, as LIOM doesn't
                     define a serialization and an ad hoc format cannot be reliably checked against
                     the complex requirements of the LIOM. Currently known LIOM instances include
                     XLIFF 2 files or JLIFF messages. XLIFF 1.2 Documents are NOT LIOM
                     Instances.</para>
                 </note>
-                 </para>
-              
+              </para>
             </listitem>
           </varlistentry>
           <varlistentry>
@@ -671,21 +690,44 @@
                 independent XML Schema with a separate namespace.</para>
             </listitem>
           </varlistentry>
+          <varlistentry>
+            <term><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>JLIFF
+              Instance</term>
+            <listitem>
+              <para>TBD</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>XLIFF Document</term>
+            <listitem>
+              <para>To import from XLIFF 2.1 or to reference..<?oxy_custom_end?></para>
+            </listitem>
+          </varlistentry>
         </variablelist>
       </section>
     </section>
 
     <section>
-      <title>Normative References</title>
+      <title id="normRef">Normative References</title>
 
       <!--note that at least one paragraph (and it can be empty) is needed to satisfy the DocBook document model-->
 
-      <para/>
+      <para>The list of normative references starts with JSON references and then continues
+        alphabetically.</para>
 
       <bibliography>
-        <title/>
-        <para>ECMA TC 39, 2017. , 2nd ed, ECMA Standard. ECMA International, Geneva,
-          Switzerland.</para>
+        <bibliomixed id="JSON"><abbrev>JSON</abbrev> references either <citetitle><link linkend="EJSON">ECMA-JSON</link> or <link linkend="IJSON">IETF-JSON</link></citetitle> that are declared to be technically identical according to their respective owners.</bibliomixed>
+        <bibliomixed id="EJSON"><abbrev>ECMA-JSON</abbrev> ECMA TC 39, <title>The JSON Data
+            Interchange Syntax</title>, <citetitle><ulink
+              url="https://www.ecma-international.org/publications/standards/Ecma-404.htm"
+              >https://www.ecma-international.org/publications/standards/Ecma-404.htm</ulink></citetitle>,
+          Standard ECMA-404 2nd edition. ECMA International, Geneva, Switzerland, December
+          2017.</bibliomixed>
+        <bibliomixed id="IJSON"><abbrev>IETF-JSON</abbrev> Tim Bray, ed. <title>The JavaScript
+            Object Notation (JSON) Data Interchange Format</title>, <citetitle>
+            <ulink url="https://tools.ietf.org/html/rfc8259"
+              >https://tools.ietf.org/html/rfc8259</ulink>
+          </citetitle> IETF RFC 8259 December 2017. </bibliomixed>
         
         <bibliomixed id="bcp47"><abbrev>BCP 47</abbrev>
         M. Davis, <title>Tags for Identifying Languages</title>, <citetitle> <ulink url="http://tools.ietf.org/html/bcp47">http://tools.ietf.org/html/bcp47</ulink>
@@ -701,18 +743,7 @@
             Set (ITS) Version 2.0</title>, <citetitle>
             <ulink url="http://www.w3.org/TR/its20/">http://www.w3.org/TR/its20/</ulink>
           </citetitle> W3C Recommendation 29 October 2013.</bibliomixed>
-        
-        <bibliomixed id="JSON"><abbrev>JSON</abbrev> Tim Bray, ed. <title>The JavaScript Object
-            Notation (JSON) Data Interchange Format</title>, <citetitle>
-            <ulink url="https://tools.ietf.org/html/rfc8259"
-              >https://tools.ietf.org/html/rfc8259</ulink>
-          </citetitle> IETF RFC 8259 December 2017. </bibliomixed>
-
-        <bibliomixed><abbrev>ECMAJSON</abbrev>
-          <title>The JSON Data Interchange Syntax</title>, 2nd Edition. <citetitle><ulink url="http://www.ecma-international.org/publications/standards/Ecma-404.htm">http://www.ecma-international.org/publications/standards/Ecma-404.htm</ulink></citetitle> Standard ECMA-404 December
-          2017.</bibliomixed>
-       
-        
+               
         <bibliomixed id="bib_datetime"><abbrev>NOTE-datetime</abbrev>
           M. Wolf, C. Wicksteed, <title>Date and Time Formats</title>, <citetitle> <ulink url="http://www.w3.org/TR/NOTE-datetime">http://www.w3.org/TR/NOTE-datetime</ulink>
           </citetitle> W3C Note, 15th Setember 1997.</bibliomixed>
@@ -723,10 +754,14 @@
           </citetitle> ISO, June 1, 2006.</bibliomixed>
 
 
-        <bibliomixed id="rfc2119"><abbrev>RFC 2119</abbrev>
-          S. Bradner, <title>Key words for use in RFCs to Indicate Requirement Levels</title>, <citetitle> <ulink url="https://www.ietf.org/rfc/rfc2119.txt">https://www.ietf.org/rfc/rfc2119.txt</ulink>
-        </citetitle> IETF (Internet Engineering Task Force) RFC 2119, March
-        1997.</bibliomixed>
+        <bibliomixed id="rfc2119"
+            ><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?><abbrev>RFC
+            2119</abbrev> S. Bradner, <title>Key words for use in RFCs to Indicate Requirement
+            Levels</title>, <citetitle>
+            <ulink url="https://www.ietf.org/rfc/rfc2119.txt"
+              >https://www.ietf.org/rfc/rfc2119.txt</ulink>
+          </citetitle> IETF (Internet Engineering Task Force) RFC 2119, March
+          1997.<?oxy_custom_end?></bibliomixed>
         
         <bibliomixed id="rfc3987"><abbrev>RFC 3987</abbrev>
           M. Duerst and M. Suignard, <title>Internationalized Resource Identifiers (IRIs)</title>, <citetitle> <ulink url="https://www.ietf.org/rfc/rfc3987.txt">https://www.ietf.org/rfc/rfc3987.txt</ulink>
@@ -821,7 +856,6 @@
       <para/>
 
       <bibliography>
-        <title/>
 
         
         <bibliomixed id="biblio_ldml"><abbrev>LDML</abbrev> <title>Unicode
@@ -835,10 +869,12 @@
           M. Davis, <title>UNICODE TEXT SEGMENTATION</title>, <citetitle> <ulink url="http://www.unicode.org/reports/tr29/">http://www.unicode.org/reports/tr29/</ulink>
           </citetitle> Unicode text Segmentation.</bibliomixed>
 
-        <bibliomixed id="biblio_xmli18nbp"><abbrev>XML I18N BP</abbrev>
-          <title>Best Practices for XML Internationalization</title>, 13
-          February 2008, <citetitle> <ulink url="http://www.w3.org/TR/xml-i18n-bp/">http://www.w3.org/TR/xml-i18n-bp/</ulink>
-          </citetitle> W3C Working Group.</bibliomixed>
+        <bibliomixed id="biblio_xmli18nbp"
+            ><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?><abbrev>XML I18N
+            BP</abbrev>
+          <title>Best Practices for XML Internationalization</title>, 13 February 2008, <citetitle>
+            <ulink url="http://www.w3.org/TR/xml-i18n-bp/">http://www.w3.org/TR/xml-i18n-bp/</ulink>
+          </citetitle> W3C Working Group.<?oxy_custom_end?></bibliomixed>
 
       </bibliography>
     </section>
@@ -850,16 +886,16 @@
   <section id="core">
     <title>The Core Specification</title>
 
-    <para>LIFF OM is a bilingual object model designed for containing text
-      that needs <firstterm>Translation</firstterm>, its corresponding translations and auxiliary data
-      that makes the <firstterm>Translation</firstterm> process possible.</para>
+    <para>JLIFF is a bilingual <link linkend="JSON">JSON</link> interchange format designed to
+      contain text that needs <firstterm>Translation</firstterm>, its corresponding translations,
+      and auxiliary data that makes the <firstterm>Translation</firstterm> process possible.</para>
 
-    <para>At creation time, a <firstterm>LIFF Object</firstterm> <glossterm>may</glossterm> contain only text in the source
-    language. Translations expressed in the target language <glossterm>may</glossterm> be added at a
-    later time.</para>
+    <para>At creation time, a <firstterm>JLIFF Instance</firstterm>
+      <glossterm>may</glossterm> contain only text in the source language. Translations expressed in
+      the target language <glossterm>may</glossterm> be added at a later time.</para>
 
-<para>The LIFF OM postulates several possible root objects. The highest level object is <code>LIF</code>.
-</para>
+<para>JLIFF postulates several possible root objects. The highest level object corresponds to
+        <code>LIF</code>. </para>
 
     <para>The <code>LIFF</code> object corresponds to the root element of an <firstterm>XLIFF
         Document</firstterm>, which is <olink targetdoc="elements/structural/xliff.xml"
