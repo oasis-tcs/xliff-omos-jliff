@@ -6,13 +6,16 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="candidates_subtype">
-  <title>subType</title>
+  <title>mtc_subType</title>
 
   <para>Sub-type - indicates the sub-type, i.e. a secondary level type, of a <olink
-      targetdoc="../elements/candidates/match.xml" targetptr="match"
-      ><code>&lt;match&gt;</code></olink> element.</para>
+      targetdoc="../elements/candidates/match.xml" targetptr="match"><code>mtc_match</code></olink>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
 
-  <para><emphasis>Value description:</emphasis> </para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    string.<?oxy_custom_end?></para>
+  <para><emphasis>Value description:</emphasis>
+  </para>
   <para>The value is composed of a prefix and a sub-value separated by a character : (U+003A). The
     prefix is a string uniquely identifying a collection of values for a specific authority. The
     sub-value is any string value defined by an authority. </para>
@@ -20,28 +23,32 @@
     this time. Other prefixes and sub-values <glossterm>may</glossterm> be defined by the users.</para>
   <itemizedlist>
     <listitem>
-      <para><emphasis>Default value:</emphasis> undefined</para>
+      <para><emphasis>Default value:</emphasis> undefined.</para>
     </listitem>
   </itemizedlist>
-  <para><emphasis>Used in:</emphasis> <olink targetdoc="../elements/candidates/match.xml"
-    targetptr="match"><code>&lt;match&gt;</code></olink>
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../elements/candidates/match.xml" targetptr="match"
+      ><code>mtc_match</code></olink>
   </para>
   <itemizedlist>
     <title>Constraints</title>
     <listitem>
-      <para>If the attribute <olink targetdoc="candidates_subtype.xml"
-          targetptr="candidates_subtype"><code>subType</code></olink> is used, the attribute <olink
-          targetdoc="candidates_type.xml" targetptr="candidates_type"><code>type</code></olink>
+      <para>If the <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        <olink targetdoc="candidates_subtype.xml" targetptr="candidates_subtype"
+            ><code>mtc_subType</code></olink> is used, the <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        <olink targetdoc="candidates_type.xml" targetptr="candidates_type"
+          ><code>mtc_type</code></olink>
         <glossterm>must</glossterm> be explicitly set.</para>
     </listitem>
   </itemizedlist>
     <itemizedlist>
             <title>Processing Requirements</title>
     <listitem>
-      <para><firstterm>Writers</firstterm> updating the attribute <olink targetdoc="candidates_type.xml"
-        targetptr="candidates_type"><code>type</code></olink> <glossterm>must</glossterm> also update or delete <olink
-          targetdoc="candidates_subtype.xml" targetptr="candidates_subtype"
-          ><code>subType</code></olink> .</para>
+      <para><firstterm>Writers</firstterm> updating the <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        <olink targetdoc="candidates_type.xml" targetptr="candidates_type"
+          ><code>mtc_type</code></olink>
+        <glossterm>must</glossterm> also update or delete <olink targetdoc="candidates_subtype.xml"
+          targetptr="candidates_subtype"><code>mtc_subType</code></olink> .</para>
     </listitem>
   </itemizedlist>
 </section>

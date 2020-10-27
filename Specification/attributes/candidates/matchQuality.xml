@@ -6,13 +6,16 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="matchQuality">
-    <title>matchQuality</title>
+    <title>mtc_matchQuality</title>
     
     <para>Match quality - indicates the quality of the <olink
             targetdoc="../elements/structural/target.xml" targetptr="target"
-                ><code>&lt;target></code></olink> child of a <olink
-            targetdoc="../elements/structural/match.xml" targetptr="match"
-            ><code>&lt;match></code></olink> element based on an external benchmark or metric.</para>
+            ><code>target</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        of a <olink targetdoc="../elements/structural/match.xml" targetptr="match"
+                ><code>mtc_match</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+        based on an external benchmark or metric.</para>
     <para><emphasis>Contains:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>number<?oxy_custom_end?>.</para>
     
@@ -20,11 +23,15 @@
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>number between 0.0 and
         100.0, inclusive.<?oxy_custom_end?></para>
         
-    <para><emphasis>Default value:</emphasis> undefined</para>
+    <para><emphasis>Default value:</emphasis> undefined.</para>
     
-    <para><emphasis>Used in:</emphasis> <olink targetdoc="../elements/structural/match.xml" targetptr="match"><code>&lt;match></code></olink>.</para>
+    <para><emphasis>Used in:</emphasis>
+        <olink targetdoc="../elements/structural/match.xml" targetptr="match"
+            ><code>mtc_match</code></olink>.</para>
     
-<note><para>This attribute can carry a human review based metrics score, a Machine Translation
-            self-reported confidence score etc.</para></note>
+<note><para>This
+            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+            can carry a human review based metrics score, a Machine Translation self-reported
+            confidence score etc.</para></note>
 </section>
 

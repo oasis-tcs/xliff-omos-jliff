@@ -8,13 +8,9 @@
 <section id="candidates_id">
   <title>mtc_id</title>
 
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>ChangeTrack
-    <?oxy_custom_end?>Identifier - a character string used to identify a
-      <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?><olink
-      targetdoc="../elements/structural/match.xml" targetptr="match"
-      ><code>&lt;match&gt;</code></olink> element.<?oxy_custom_end?>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[CURRENTLY
-    mtc_translationCandidatesMatch]<?oxy_custom_end?></para>
+  <para>Identifier - a character string used to identify a <olink
+      targetdoc="../elements/structural/match.xml" targetptr="match"><code>mtc_match</code></olink>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
 
   <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
     string.<?oxy_custom_end?></para>
@@ -22,23 +18,19 @@
     NMTOKEN<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>: a string matching
     the pattern <code>[-._:A-Za-z0-9]+</code><?oxy_custom_end?>.</para>
 
-  <para><emphasis>Default value:</emphasis> undefined</para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
 
   
   
   <para><emphasis>Used in:</emphasis>
     <olink targetdoc="../elements/structural/match.xml" targetptr="match"
-      ><code>&lt;match></code></olink>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[SEE
-    COMMENTS]<?oxy_custom_end?>.</para>
+      ><code>mtc_match</code></olink>.</para>
 <itemizedlist>
   <title>Constraints</title>
-  <listitem><para>The <link linkend="candidates_id"><code>id</code></link> value <glossterm>must</glossterm> be
-        unique within the enclosing <olink targetdoc="../elements/structural/matches.xml"
-          targetptr="matches"><code>&lt;matches&gt;</code></olink> element.
-        <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[CURRENTLY HAS NO
-        DEFINITION BECAUSE mtc_translationCandidates HAS AN UNNAMED ARRAY OF
-        translationCandidatesMatch]<?oxy_custom_end?></para></listitem>
+  <listitem><para>The <link linkend="candidates_id"><code>mtc_id</code></link> value <glossterm>must</glossterm>
+        be unique within the enclosing <olink targetdoc="../elements/structural/matches.xml"
+          targetptr="matches"><code>mtc_matches</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>array<?oxy_custom_end?>.</para></listitem>
 </itemizedlist>
 
 </section>

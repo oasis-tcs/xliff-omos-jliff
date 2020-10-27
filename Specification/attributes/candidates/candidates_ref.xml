@@ -6,29 +6,33 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="candidates_ref">
-  <title>ref</title>
+  <title>mtc_ref</title>
 
   <para>Reference - points to a span of text within the same unit, to which the translation
     candidate is relevant. </para>
 
-  <para><emphasis>Value description:</emphasis> IRI</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    string.<?oxy_custom_end?></para>
+  <para><emphasis>Value description:</emphasis> IRI.</para>
 
-  <para><emphasis>Default value:</emphasis> undefined</para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
 
   <para><emphasis>Used in:</emphasis>
-    <olink targetdoc="../elements/candidates/match.xml"
-  targetptr="match"><code>&lt;match></code></olink>.</para>
+    <olink targetdoc="../elements/candidates/match.xml" targetptr="match"
+      ><code>mtc_match</code></olink>.</para>
 
   <itemizedlist>
     <title>Constraints</title>
 
     <listitem>
       <para>The value of the <olink targetdoc="candidates_ref.xml" targetptr="candidates_ref"
-            ><code>ref</code></olink> attribute <glossterm>must</glossterm> point to a span of text
-        within the same <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"
-            ><code>&lt;unit></code></olink> element where the <olink
-          targetdoc="../elements/candidates/match.xml" targetptr="match"
-          ><code>&lt;match></code></olink> is located.</para>
+            ><code>mtc_ref</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>propety<?oxy_custom_end?>
+        <glossterm>must</glossterm> point to a span of text within the same <olink
+          targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>unit</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+        where the <olink targetdoc="../elements/candidates/match.xml" targetptr="match"
+            ><code>mtc_match</code></olink> is located.</para>
       
     </listitem>
   </itemizedlist>

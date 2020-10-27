@@ -49,7 +49,7 @@
         <member>-
                 <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"gls_translation"</code>,
             a non-empty array of <?oxy_custom_end?><olink targetdoc="translation.xml"
-                targetptr="translation"><code>gls_translation></code></olink>
+                targetptr="translation"><code>gls_translation</code></olink>
             <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>objects<?oxy_custom_end?>,
                 <emphasis>optional</emphasis></member>
         <member>-
@@ -78,10 +78,7 @@
                 wildcard <code>other</code><?oxy_custom_end?>:</para>
             <simplelist>
                 <member>- <code>"mda_metaData"</code>, a <olink targetdoc="../metadata/metadata.xml"
-                        targetptr="metadata"><code>mda_metadata</code></olink> object.
-                    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[PROBLEM:
-                    one or more objects? If more than one then this should be an array, not a single
-                    object]<?oxy_custom_end?>.</member>
+                        targetptr="metadata"><code>mda_metadata</code></olink> object.</member>
             </simplelist>
             <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>The following
                 optional <emphasis>JLIFF Extension</emphasis> property is allowed:<simplelist>
