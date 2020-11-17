@@ -9,7 +9,8 @@
                          ]>
 <section>
     <title>Elements</title>
-    <para>This section contains a description of all elements used in <firstterm>XLIFF Core</firstterm>.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>This section contains
+        a description of all elements used in <firstterm>XLIFF Core</firstterm>.</para><?oxy_custom_end?>
     <xi:include href="tree.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="structural.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="inline.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>

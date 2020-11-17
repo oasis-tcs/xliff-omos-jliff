@@ -5,8 +5,9 @@
                          %xinclude;
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
-<section><!-- gen. 20140318 -->
-  <title>Tree Structure</title>
+<section>
+  <!-- gen. 20140318 -->
+  <title><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>Tree Structure</title>
   <para>Legend:</para>
   <simplelist type="vert">
     <member>1 = one</member>
@@ -15,7 +16,7 @@
     <member>* = zero or more</member>
   </simplelist>
   <programlisting format="linespecific">
-<olink targetdoc="structural/xliff.xml" targetptr="xliff"><code>&lt;xliff></code></olink>
+<olink targetdoc="structural/jliff.xml" targetptr="jliff"><code>jliff</code></olink>
 |
 +---<olink targetdoc="structural/file.xml" targetptr="file"><code>&lt;file></code></olink> +
   |
@@ -65,7 +66,7 @@
           | |
           | +---<olink targetdoc="structural/note.xml" targetptr="note"><code>&lt;note></code></olink> +
           |
-          +---At least one of (<olink targetdoc="structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink> OR <olink targetdoc="structural/group.xml" targetptr="group"><code>&lt;group></code></olink>)
+          +---At least one of (<olink targetdoc="structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink> OR <olink targetdoc="structural/group.xml" targetptr="group"><code>&lt;group></code></olink>)<?oxy_custom_end?>
 
 
   </programlisting>

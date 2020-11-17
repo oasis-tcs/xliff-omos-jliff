@@ -132,7 +132,7 @@ CTR is not allowed in XLIFF 2.1 and hence in JLIFF 2.1, but remains allowed in 2
                                 Module</olink> are met.</member>
                         <member>-
                                 <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"fs_subFs"</code>,
-                            a <olink targetdoc="../attributes/subfs.xml" targetptr="subfs"
+                            a <olink targetdoc="../attributes/subfs.xml" targetptr="subFs"
                                     ><code>fs_subFs</code></olink> string,<?oxy_custom_end?>
                             provided that the Constraints specified in the <olink
                                 targetdoc="modules/fs/fs.xml" targetptr="fs-mod">Format Style
@@ -186,7 +186,7 @@ CTR is not allowed in XLIFF 2.1 and hence in JLIFF 2.1, but remains allowed in 2
                                 targetptr="size_restriction_module">Size and Length Restriction
                                 Module</olink> are met.</member>
                         <member>- <code>"val_validation"</code>, a <olink
-                                targetdoc="../validation/validation.xml" targetptr="validation"
+                                targetdoc="../validation/validation.xml" targetptr="val_validation"
                                     ><code>val_validation</code></olink> object.</member>
                         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
                     </simplelist>

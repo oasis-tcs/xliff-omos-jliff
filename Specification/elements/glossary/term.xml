@@ -35,21 +35,25 @@
   </simplelist>
   <itemizedlist>
     <title>Constraints</title>
-  </itemizedlist>
-  <para>
-    <itemizedlist>
-      <listitem>
+  
+        <listitem>
         <para>The following optional <emphasis>JLIFF Extension</emphasis> property is
           allowed:</para>
-      </listitem>
-    </itemizedlist>
+      
     <itemizedlist>
       <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-      <para>The following optional <emphasis>JLIFF Extension</emphasis> property is allowed:</para>
+      <listitem>
+        
+      
       <para><code>"userdata"</code>, a <olink targetdoc="../../extensions/extensions.xml"
           targetptr="extensions"><code>userdata</code></olink> object.</para>
-      <para>No other properties are permitted.</para><?oxy_custom_end?>
+      
+      </listitem>
     </itemizedlist>
-  </para>
+      </listitem>
+      <listitem>
+        <para>No other properties are permitted.</para><?oxy_custom_end?>
+      </listitem>
+    </itemizedlist>
 
 </section>

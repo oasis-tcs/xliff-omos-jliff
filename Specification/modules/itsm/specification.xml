@@ -145,7 +145,7 @@
       
       <listitem>
         <para>Conformant <firstterm>Agents</firstterm>
-          <glossterm>must</glossterm> be XLIFF Conformant in the sense of XLIFF <olink
+          <glossterm>must</glossterm> be XLIFF Conformant in the sense of JLIFF <olink
             targetptr="ApplicationConformance" targetdoc="../conformance/conformance.xml"
             >Application Conformance</olink> and also implement at least one <olink
             targetdoc="../xliff21.xml" targetptr="ITS20">[ITS]</olink> data category defined in the

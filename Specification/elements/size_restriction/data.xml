@@ -28,22 +28,9 @@
       <glossterm>optional</glossterm><?oxy_custom_end?></member>
   </simplelist>
 
-    <itemizedlist>
-    <title>Constraints</title>
-  </itemizedlist>
-  <itemizedlist>
-    <listitem>
-      <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>The following
-        optional <emphasis>JLIFF Extension</emphasis> property is allowed:<simplelist>
-          <member>- <code>"userdata"</code>, a <olink targetdoc="../../extensions/extensions.xml"
-              targetptr="extensions"><code>userdata</code></olink>
-            object<?oxy_custom_end?>.</member>
-        </simplelist></para>
-      <para>No other properties are permitted.</para>
-    </listitem>
-  </itemizedlist>
-  <itemizedlist>
-    <title>Processing Requirements</title>
+<itemizedlist>
+  
+  <title>Processing Requirements</title>
     <listitem>
       <para>Third party profiles <glossterm>must</glossterm> place all data in this
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
