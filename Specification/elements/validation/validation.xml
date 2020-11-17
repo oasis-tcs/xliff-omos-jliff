@@ -5,7 +5,7 @@
                          %xinclude;
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
-<section id="validation">
+<section id="val_validation">
     <title>val_validation</title>
     <para><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Array containing
     a<?oxy_custom_end?> list of rules and constraints to apply to the target text of the enclosing

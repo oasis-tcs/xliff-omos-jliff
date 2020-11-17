@@ -15,11 +15,10 @@
     <simplelist>
         <member>-
                 <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"res_id"</code>,
-            a <olink targetdoc="../../attributes/resourceData/res_resourceDataId.xml"
-                targetptr="res_resourceDataId"><code>res_resourceDataId</code></olink> string with
+            a <olink targetdoc="../../attributes/resourceData/res_id.xml"
+                targetptr="res_id"><code>res_id</code></olink> string with
             NMTOKEN value, <glossterm>optional</glossterm><?oxy_custom_end?>
-            <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[SEE NOTE IN
-            res_resourceDataId]<?oxy_custom_end?></member>
+            </member>
         <member>-
                 <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"res_resourceItemRefs"</code>,
             an non-empty array of<?oxy_custom_end?>

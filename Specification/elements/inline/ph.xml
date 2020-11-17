@@ -145,14 +145,14 @@
           met.</member>
         <member>-
             <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"fs_subFs"</code>,
-          a <olink targetdoc="../attributes/subfs.xml" targetptr="subfs"
+          a <olink targetdoc="../attributes/subfs.xml" targetptr="subFs"
             ><code>fs_subFs</code></olink> string,<?oxy_custom_end?> provided that the Constraints
           specified in the <olink targetdoc="modules/fs/fs.xml" targetptr="fs-mod">Format Style
             Module</olink> are met.</member>
         <member>-
             <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"slr_equivStorage"</code>,
           a <olink targetdoc="../attributes/size_restriction/equiv-storage.xml"
-            targetptr="equiv-storage"><code>slr_equivStorage</code></olink><?oxy_custom_end?>
+            targetptr="slr_equivStorage"><code>slr_equivStorage</code></olink><?oxy_custom_end?>
           object, provided that the Constraints specified in the <olink
             targetdoc="modules/size_restriction/specification.xml"
             targetptr="size_restriction_module">Size and Length Restriction Module</olink> are

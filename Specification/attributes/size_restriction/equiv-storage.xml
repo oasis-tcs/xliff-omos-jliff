@@ -5,7 +5,7 @@
 %xinclude;
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
-<section id="slr_equiv_storage">
+<section id="slr_equivStorage">
   <title>slr_equivStorage</title>
 
   <para>This <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string property

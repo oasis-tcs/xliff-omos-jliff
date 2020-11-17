@@ -364,7 +364,7 @@
       to give any multilingual content owner a reliable and interoperable JSON serialization of the said object and data model.
       XLIFF 2 has been providing a reliable XML based interchange file format understood by any
       localization provider, using any conformant localization tool. The primary focus of this JSON serialization specification of the shared Object Model is to ensure lossless Interchange between JSON and XML pipelines, or indeed other pipelines serialized in other ways, as long as they are based on the same underlying Object Model. While the primary focus is on lossless Interchange,
-      toolmakers, service providers, and content owners are encouraged to stick to the shared Object Model <olink targetptr="">[LIOM]</olink>
+      toolmakers, service providers, and content owners are encouraged to stick to the shared Object Model <olink targetptr="LIOM">[LIOM]</olink>
       also while designing their internal processing and messaging formats, as this will make the
       mapping to the standardized Interchange format serializations of this Object Model, such as
       JLIFF or XLIFF, so much easier. </para>
@@ -879,10 +879,10 @@
       </bibliography>
     </section>
   </section>
-  <!--
+  
   <xi:include href="conformance/conformance.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
   <xi:include href="fragments/fragments.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-  -->
+  
   <section id="core">
     <title>The Core Specification</title>
 
@@ -898,8 +898,7 @@
         <code>LIF</code>. </para>
 
     <para>The <code>LIFF</code> object corresponds to the root element of an <firstterm>XLIFF
-        Document</firstterm>, which is <olink targetdoc="elements/structural/xliff.xml"
-        targetptr="xliff"><code>&lt;xliff&gt;</code></olink>. </para>
+      Document</firstterm>, which is <ulink url="http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html#xliff"><code>&lt;xliff&gt;</code></ulink>. </para>
     <para> WORK IN PROGRESS!!! THE FOLLOWING PARTS OF THE SPECIFICATION NEED RESTATED IN AN XML
       INDEPENDENT WAY It contains a collection of <olink targetdoc="elements/structural/file.xml"
         targetptr="file"><code>&lt;file&gt;</code></olink> elements. Typically, each <olink
@@ -934,7 +933,8 @@
         </itemizedlist>
     </section>
 
-<!-- Commenting out includes until material reworked for JLIFF 
+<!-- Reincluding to see gaps
+      Commenting out includes until material reworked for JLIFF --> 
 
     <xi:include href="elements/elements.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 
@@ -962,7 +962,7 @@
         </listitem>
       </itemizedlist>
     </section>
--->
+
 <!-- Section on XML Comments will be probably irrelevant
     <section>
       <title>XML Comments</title>
@@ -1038,26 +1038,28 @@ Text content that is important</programlisting>
 
     </section>
     -->
-<!-- The following sections need stated in an XML independent way 
-    Commenting out intil reworked
+<!-- Reincluding to see gaps
+      The following sections need stated in an XML independent way 
+    -->
    
     <xi:include href="inline/inline.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="segmentation/segmentation.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="extensions/extensions.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 
--->
+
 
   </section>
   <section id="modules">
     <title>The Modules Specifications</title>
     <para>This section specifies the <glossterm>optional</glossterm> <firstterm>Modules</firstterm> that <glossterm>may</glossterm> be used along with <firstterm>Core</firstterm> for advanced functionality.</para>
     
-    <para>ALL MODULE INCLUDES COMMENTED OUT AT THE MOMENT .. WORKING ON CORE ONLY SO FAR</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>MODULE INCLUDES
+      REINCLUDED .. TO SEE GAPS<?oxy_custom_end?></para>
 
     <!--Module includes-->
     <!-- 2.0 modules come first. Even if a module is deprecated, the spec should keep a placeholder, so that modules are numbered presistently in all 2.x versions-->  
     
-    <!--
+    
       <xi:include href="modules/candidates/specification.xml"
       xmlns:xi="http://www.w3.org/2001/XInclude"/>
       <xi:include href="modules/glossary/specification.xml"
@@ -1067,18 +1069,19 @@ Text content that is important</programlisting>
       xmlns:xi="http://www.w3.org/2001/XInclude"/>
       <xi:include href="modules/resourcedata/specification.xml"
       xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      -->
-    <!-- CTR deprecated in XLIFF 2.1 but still listed as an Extension until it can be replaced with CTR 2.2--> 
-<!--    <xi:include href="modules/change-tracking/specification.xml"
+     
+    <!-- CTR need handled both as module and extension in JLIFF, as it is a module in JLIFF 2.0 and an extension in JLIFF 2.1 
+      CTR deprecated in XLIFF 2.1 but still listed as an Extension until it can be replaced with CTR 2.2--> 
+   <xi:include href="modules/change-tracking/specification.xml"
       xmlns:xi="http://www.w3.org/2001/XInclude"/>
       <xi:include href="modules/size_restriction/specification.xml"
       xmlns:xi="http://www.w3.org/2001/XInclude"/>
       <xi:include href="modules/validation/specification.xml"
       xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      -->
+      
     <!-- 2.1 modules -->
-<!--      <xi:include href="modules/itsm/specification.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      -->
+    <xi:include href="modules/itsm/specification.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+     
     <!-- 2.2 and 2.n+1 modules -->
   </section>
   

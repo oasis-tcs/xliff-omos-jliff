@@ -75,10 +75,10 @@
             <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>.
             However setting of the
             <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
-            is advantageous if a workflow needs to make use of Advanced Validation methods. For
+            is advantageous if a workflow needs to make use of Advanced Validation methods. <!-- For
             instance missing non-removable codes will only be reported as an Error by the <olink
                 targetdoc="../xliff21.xml" targetptr="CoreSchematron">XLIFF Core Schematron
                 Schema</olink> when the <link linkend="state"><code>state</code></link> is
-                <code>"final"</code>.</para>
+                <code>"final"</code>.--></para>
     </note>
 </section>

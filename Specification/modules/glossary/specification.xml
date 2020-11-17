@@ -87,6 +87,7 @@
             <xi:include href="../../attributes/glossary/gls_ref.xml"
       xmlns:xi="http://www.w3.org/2001/XInclude"/>
             <xi:include href="../../attributes/glossary/gls_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+          <xi:include href="../../attributes/glossary/gls_text.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
         </section>
 
 

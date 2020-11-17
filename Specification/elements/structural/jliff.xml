@@ -5,7 +5,7 @@
                          %xinclude;
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >                         
                          ]>
-<section id="xliff">
+<section id="jliff">
     <title>anonymous <code>jliff</code> object with property
             <code>"files|subfiles|subgroups|subunits"</code></title>
     <para>Root

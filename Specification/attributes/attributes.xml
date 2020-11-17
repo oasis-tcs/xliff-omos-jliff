@@ -60,6 +60,9 @@
         ><code>id</code></olink>,
       <olink targetdoc="isolated.xml" targetptr="isolated"
           ><code>isolated</code></olink>,
+      <olink targetdoc="kind.xml" targetptr="kind"
+        ><code>kind</code></olink>,
+      
       <olink targetdoc="name.xml" targetptr="name"
           ><code>name</code></olink>,
       <olink targetdoc="order.xml" targetptr="order"
@@ -165,6 +168,8 @@
     <xi:include href="id.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
 
     <xi:include href="isolated.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    
+    <xi:include href="kind.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
 
     <xi:include href="name.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
 
