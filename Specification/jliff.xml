@@ -147,11 +147,11 @@
     <legalnotice id="namespaces" role="namespaces">
       <title>Normatively Used Namespaces</title>
 
-      <para> This specification doesn't declare any namespaces. However, it provides <link linkend="JSON">[JSON]</link> specific methods
+      <para> This specification doesn't declare its own namespaces. However, it provides <link linkend="JSON">[JSON]</link> specific methods
         to represent objects and properties from the following namespaces: </para>
 
       <itemizedlist spacing="compact">
-        <title>Namespaces used normatively in both <olink targetptr="XLIFF21">[XLIFF 2.1]</olink> and <olink targetptr="XLIFF20">[XLIFF 2.0]</olink>:</title>
+        <title>Namespaces used normatively in both JLIFF Version &version; serializations (shared between <olink targetptr="XLIFF21">[XLIFF 2.1]</olink> and <olink targetptr="XLIFF20">[XLIFF 2.0]</olink>:</title>
         <listitem>
           <para>urn:oasis:names:tc:xliff:document:&bschversion;</para>
         </listitem>
@@ -182,7 +182,7 @@
       </itemizedlist>
         
         <itemizedlist>
-          <title>Namespaces used normatively only in <olink targetptr="XLIFF21">[XLIFF 2.1]</olink>:</title>
+          <title>Namespaces used normatively only in the JLIFF serialization &cschversion; (from <olink targetptr="XLIFF21">[XLIFF 2.1]</olink>):</title>)
       <listitem>
           <para>https://www.w3.org/2005/11/its/</para>
         </listitem>
@@ -193,7 +193,7 @@
         </itemizedlist>
 
 <itemizedlist>
-  <title>Namespaces used normatively only in <olink targetptr="XLIFF20">[XLIFF 2.0]</olink>:</title>
+  <title>Namespaces used normatively only in the JLIFF serialization &bschversion; (from <olink targetptr="XLIFF20">[XLIFF 2.0]</olink>):</title>
       <listitem>
           <para>urn:oasis:names:tc:xliff:changetracking:&bschversion;</para>
         </listitem>
@@ -394,8 +394,9 @@
             <glossterm>required</glossterm>, <glossterm>shall</glossterm>, <glossterm>shall
             not</glossterm>, <glossterm>should</glossterm>, <glossterm>should not</glossterm>,
             <glossterm>recommended</glossterm>, <glossterm>may</glossterm>, and
-            <glossterm>optional</glossterm> are to be interpreted as described in <xref
-            linkend="rfc2119"/>.</para>
+            <glossterm>optional</glossterm> are to be interpreted as described in
+            <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><xref
+            linkend="rfc2119"/>.<?oxy_custom_end?></para>
       </section>
 
       <section id="definitions">
@@ -535,12 +536,7 @@
 
               </para>
 
-              <note><para> Since XLIFF is intended as an exchange format rather than a processing format, many
-              applications will need to generate <firstterm>XLIFF Documents</firstterm> from
-              their internal processing formats, even in cases when they are processing
-              <firstterm>XLIFF Documents</firstterm> created by another
-              <firstterm>Extractor</firstterm>. </para></note>
-
+              
              </listitem>
 
           </varlistentry>
@@ -614,93 +610,45 @@
                     is shared between XLIFF Version &cschversion; and XLIFF Version &bschversion; </para>
                   <para>Two different schema instances are provided, JLIFF &cschversion; and JLIFF
                     &bschversion;. The prose specifications contains conditional provisions for
-                    JLIFF &cschversion; and JLIFF &bschversion; in this document.</para>
+                    JLIFF serialization &cschversion; and JLIFF serialization &bschversion; in this
+                    document.</para>
                 </note>
               </para>
             </listitem>
           </varlistentry>
           <varlistentry>
-            <term><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>JLIFF
-              Module</term>
+            <term>JLIFF Module</term>
             <listitem>
-              <para>TBD</para>
+              <para>A module is an <glossterm>optional</glossterm> set of JSON objects and
+                properties that stores information about a process applied to a <firstterm>JLIFF
+                  Instance</firstterm> and the data incorporated into the instance as result of that
+                process.</para>
+              <note>
+                <para>Each official module defined for JLIFF Vesrion &version; has its grammar
+                  defined in a JSON Schema integrated with the core JSON schema. Two different
+                  schema instances are provided, JLIFF serialization &cschversion; and JLIFF
+                  serialization &bschversion;.</para>
+              </note>
             </listitem>
           </varlistentry>
           <varlistentry>
             <term>JLIFF-defined (objects and properties)</term>
             <listitem>
-              <para>TBD<?oxy_custom_end?></para>
-            </listitem>
-          </varlistentry>
-          <varlistentry>
-            <term><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>XLIFF-defined
-              (elements and attributes)</term>
-            <listitem>
-              <para>The following is the list of allowed schema URI prefixes for
-                  <firstterm>XLIFF-defined</firstterm> elements and attributes:</para>
-              <simplelist>
-                <member><code>urn:oasis:names:tc:xliff:</code></member>
-                <member><code>https://www.w3.org/2005/11/its/</code></member>
-              </simplelist>
-              <para>However, the following namespaces are NOT considered
-                  <firstterm>XLIFF-defined</firstterm> for the purposes of the JLIFF Version
-                &version; specification:</para>
-              <simplelist>
-                <member><code>urn:oasis:names:tc:xliff:document:1.0</code></member>
-                <member><code>urn:oasis:names:tc:xliff:document:1.1</code></member>
-                <member><code>urn:oasis:names:tc:xliff:document:1.2</code></member>
-                <member><code>urn:oasis:names:tc:xliff:changetracking:&bschversion;</code></member>
-              </simplelist>
-              <para>Elements and attributes from other namespaces are not
-                  <firstterm>XLIFF-defined</firstterm>.<?oxy_custom_end?></para>
-            </listitem>
-          </varlistentry>
-          <varlistentry>
-            <term>LIOM Conformant Specification</term>
-            <listitem>
-              <para>A publicly available specification that normatively defines a serialization
-                (document or message payload format) that conforms to the LIOM defined in this
+              <para>All JLIFF-defined objects and properties are specified in this document. The
+                extent of JLIFF-defined is different for the JLIFF serialization &cschversion; and
+                JLIFF serialization &bschversion;. This corresponds to the <link linkend="namespaces">lists of
+                  namespaces used normatively in either of the serializations</link> stated in this
                 specification.</para>
-              <para>Currently known conformant specifications include [XLIFF Vesrion 2.0], [XLIFF
-                Version 2.1], and JLIFF Version 1.0.</para>
             </listitem>
           </varlistentry>
+          
           <varlistentry>
-            <term>LIOM Instance</term>
+            <term>JLIFF Instance</term>
             <listitem>
-              <para>A document or message payload that is a valid instance of any LIOM Conformant
-                Specification. <note>
-                  <para>Documents or messages cannot conform directly to LIOM, as LIOM doesn't
-                    define a serialization and an ad hoc format cannot be reliably checked against
-                    the complex requirements of the LIOM. Currently known LIOM instances include
-                    XLIFF 2 files or JLIFF messages. XLIFF 1.2 Documents are NOT LIOM
-                    Instances.</para>
-                </note>
-              </para>
-            </listitem>
-          </varlistentry>
-          <varlistentry>
-            <term>LIOM Module</term>
-            <listitem>
-              <para>A module is an <glossterm>optional</glossterm> set of XML elements and
-                attributes that stores information about a process applied to an <firstterm>XLIFF
-                  Document</firstterm> and the data incorporated into the document as result of that
-                process.</para>
-              <para>Each official module defined for XLIFF &version; has its grammar defined in an
-                independent XML Schema with a separate namespace.</para>
-            </listitem>
-          </varlistentry>
-          <varlistentry>
-            <term><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>JLIFF
-              Instance</term>
-            <listitem>
-              <para>TBD</para>
-            </listitem>
-          </varlistentry>
-          <varlistentry>
-            <term>XLIFF Document</term>
-            <listitem>
-              <para>To import from XLIFF 2.1 or to reference..<?oxy_custom_end?></para>
+              <para>JLIFF Instance is a conforming JSON text according to <link linkend="EJSON"
+                  >ECMA-JSON</link> Clause 2 that validates against the schema for JLIFF
+                serialization &cschversion; or JLIFF
+                serialization &bschversion;.</para>
             </listitem>
           </varlistentry>
         </variablelist>
