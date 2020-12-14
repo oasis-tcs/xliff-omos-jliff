@@ -120,7 +120,7 @@
     <para><emphasis>Used in:</emphasis>
         <olink targetdoc="../../elements/structural/file.xml" targetptr="file"
             ><code>file</code></olink>, <olink targetdoc="../../elements/structural/group.xml"
-            targetptr="group"><code>goup</code></olink>, <olink
+            targetptr="group"><code>group</code></olink>, <olink
             targetdoc="../../elements/structural/unit.xml" targetptr="unit"
             ><code>unit</code></olink>,
             <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink

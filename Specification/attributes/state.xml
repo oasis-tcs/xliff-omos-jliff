@@ -26,7 +26,7 @@
         of the <firstterm>Translation</firstterm> using the <olink targetdoc="substate.xml"
             targetptr="substate"><code>subState</code></olink> attribute.</para>
     <para><emphasis>Default value:</emphasis>
-        <code>initial</code></para>
+        <code>"initial"</code>.</para>
     <para><emphasis>Used in:</emphasis>
         <olink targetdoc="../elements/structural/segment.xml" targetptr="segment"
                 ><code>segment</code></olink></para>
@@ -51,7 +51,7 @@
             <para><firstterm>Writers</firstterm>
                 <glossterm>must not</glossterm> set the <link linkend="state"
                     ><code>state</code></link> attribute values to other than the default
-                    <code>initial</code> if and only if the <olink
+                    <code>"initial"</code> if and only if the <olink
                     targetdoc="../elements/structural/segment.xml" targetptr="segment"
                         ><code>segment</code></olink>
                 <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
@@ -70,7 +70,7 @@
     <note>
         <para><link linkend="state"><code>state</code></link> is an <glossterm>optional</glossterm>
             <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
-            of segments with a default value and segmentation can change as the XLIFF roundtrip
+            of segments with a default value and segmentation can change as the JLIFF roundtrip
             progresses, hence implementers don't have to make explicit use of the
             <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>.
             However setting of the

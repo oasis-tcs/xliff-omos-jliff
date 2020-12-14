@@ -6,41 +6,56 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="matchSuitability">
-    <title>matchSuitability</title>
+    <title>mtc_matchSuitability</title>
     
     <para>Match suitability - indicates the general suitability and relevance of its <olink
             targetdoc="../elements/structural/match.xml" targetptr="match"
-            ><code>&lt;match></code></olink> element based on various external benchmarks or metrics
-        pertaining to both the <olink targetdoc="../elements/structural/source.xml"
-            targetptr="source"><code>&lt;source></code></olink>  and the <olink
+            ><code>mtc_match</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+        based on various external benchmarks or metrics pertaining to both the <olink
+            targetdoc="../elements/structural/source.xml" targetptr="source"
+            ><code>source</code></olink> and the <olink
             targetdoc="../elements/structural/target.xml" targetptr="target"
-                ><code>&lt;target></code></olink> children of the <olink
+            ><code>target</code></olink> properties of the <olink
             targetdoc="../elements/structural/match.xml" targetptr="match"
-            ><code>&lt;match></code></olink>. </para>
-    <para> This attribute is intended to carry a value that can be combined from values provided in
-        <olink targetdoc="../../attributes/candidates_similarity.xml" targetptr="candidates_similarity"
-                ><code>similarity</code></olink> and <olink
+            ><code>mtc_match</code></olink>. </para>
+    <para> This
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        is intended to carry a value that can be combined from values provided in <olink
+            targetdoc="../../attributes/candidates_similarity.xml" targetptr="candidates_similarity"
+                ><code>mtc_similarity</code></olink> and <olink
             targetdoc="../../attributes/candidates/matchQuality.xml" targetptr="matchQuality"
-                ><code>matchQuality</code></olink> attributes based on an externally provided
-        algorithm.</para>
+                ><code>mtc_matchQuality</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>properties<?oxy_custom_end?>
+        based on an externally provided algorithm.</para>
     
-    <para><emphasis>Value description:</emphasis> a decimal number between 0.0 and 100.0.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+        string.<?oxy_custom_end?></para>
+    <para><emphasis>Value description:</emphasis> a decimal number between 0.0 and
+        100.0<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>,
+        inclusive<?oxy_custom_end?>.</para>
         
-    <para><emphasis>Default value:</emphasis> undefined</para>
+    <para><emphasis>Default value:</emphasis> undefined.</para>
     
-    <para><emphasis>Used in:</emphasis> <olink targetdoc="../elements/structural/match.xml" targetptr="match"><code>&lt;match></code></olink>.</para>
+    <para><emphasis>Used in:</emphasis>
+        <olink targetdoc="../elements/structural/match.xml" targetptr="match"
+            ><code>mtc_match</code></olink>.</para>
     
     <note>
-        <para> This attribute is also useful for mapping match-quality as specified in XLIFF 1.2
-            because 1.2 is not capable of discerning between the source similarity and the target
-            quality.</para>
+        <para>This
+            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+            is also useful for mapping match-quality as specified in XLIFF 1.2 because 1.2 is not
+            capable of discerning between the source similarity and the target quality.</para>
     </note>
     <itemizedlist>
         <title>Processing Requirements</title>
         <listitem>
-            <para><firstterm>Agents</firstterm> processing this module <glossterm>must</glossterm> make use of <olink targetdoc="../../attributes/candidates/matchSuitability.xml" 
-            targetptr="matchSuitability"><code>matchSuitability</code></olink> for match ordering purposes if the attribute is specified.
-            </para>
+            <para><firstterm>Agents</firstterm> processing this module <glossterm>must</glossterm>
+                make use of <olink targetdoc="../../attributes/candidates/matchSuitability.xml"
+                    targetptr="matchSuitability"><code>mtc_matchSuitability</code></olink> for match
+                ordering purposes if the
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+                is specified. </para>
         </listitem>
     </itemizedlist>
 </section>

@@ -6,19 +6,28 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="candidates_similarity">
-    <title>similarity</title>
+    <title>mtc_similarity</title>
     
-    <para>Similarity - indicates the similarity level between the content of the  
-        <olink targetdoc="../elements/structural/source.xml" targetptr="source"><code>&lt;source></code></olink>
-        child of a
-        <olink targetdoc="../elements/structural/match.xml" targetptr="match"><code>&lt;match></code></olink>
-        element and the translatable text being matched.</para>
+    <para>Similarity - indicates the similarity level between the content of the <olink
+            targetdoc="../elements/structural/source.xml" targetptr="source"
+            ><code>source</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        of a <olink targetdoc="../elements/structural/match.xml" targetptr="match"
+                ><code>mtc_match</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+        and the translatable text being matched.</para>
     
-    <para><emphasis>Value description:</emphasis> a decimal number between 0.0 and 100.0.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+        number.<?oxy_custom_end?></para>
+    <para><emphasis>Value description:</emphasis> a decimal number between 0.0 and
+        100.0<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>,
+        inclusive<?oxy_custom_end?>.</para>
         
-    <para><emphasis>Default value:</emphasis> undefined</para>
+    <para><emphasis>Default value:</emphasis> undefined.</para>
     
-    <para><emphasis>Used in:</emphasis> <olink targetdoc="../elements/structural/match.xml" targetptr="match"><code>&lt;match></code></olink>.</para>
+    <para><emphasis>Used in:</emphasis>
+        <olink targetdoc="../elements/structural/match.xml" targetptr="match"
+            ><code>mtc_match</code></olink>.</para>
     
 </section>
 

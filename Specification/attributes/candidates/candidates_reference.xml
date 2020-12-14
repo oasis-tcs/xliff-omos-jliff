@@ -6,19 +6,28 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="candidates_reference">
-  <title>reference</title>
+  <title>mtc_reference</title>
 
   <para>Reference - indicates that the <olink targetdoc="../elements/structural/target.xml"
-      targetptr="target"><code>&lt;target&gt;</code></olink> child of the <olink
-      targetdoc="../elements/candidates/match.xml" targetptr="match"
-      ><code>&lt;match&gt;</code></olink> element contains a <firstterm>Translation</firstterm> into
-    a reference language rather than into the target language. For example, a German translation can
-    be used as reference by a Luxembourgish translator.</para>
+      targetptr="target"><code>target</code></olink>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?> of
+    the <olink targetdoc="../elements/candidates/match.xml" targetptr="match"
+      ><code>mtc_match</code></olink>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
+    contains a <firstterm>Translation</firstterm> into a reference language rather than into the
+    target language. For example, a German translation can be used as reference by a Luxembourgish
+    translator.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    string.<?oxy_custom_end?></para>
 
-  <para><emphasis>Value description:</emphasis> <code>yes</code> or <code>no</code>.</para>
+  <para><emphasis>Value description:</emphasis>
+    <code>"yes"</code> or <code>"no"</code>.</para>
 
-  <para><emphasis>Default value:</emphasis> <code>no</code>.</para>
+  <para><emphasis>Default value:</emphasis>
+    <code>"no"</code>.</para>
  
-  <para><emphasis>Used in:</emphasis> <olink targetdoc="../elements/candidates/match.xml" targetptr="match"><code>&lt;match&gt;</code></olink></para>
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../elements/candidates/match.xml" targetptr="match"
+      ><code>mtc_match</code></olink>.</para>
   
 </section>
