@@ -5080,14 +5080,19 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <section id="startref">
   <title>startRef</title>
 
-  <para>Start code or marker reference - The <code>"id"</code> property <link linkend="id"><code>id</code></link> string of the <link linkend="sc"><code>sc</code></link> element or the
+  <para>Start code or marker reference - The <code>"id"</code>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>
+    <link linkend="id"><code>id</code></link> string of the <link linkend="sc"><code>sc</code></link> element or the
       <link linkend="sm"><code>sm</code></link> element a
     given <link linkend="ec"><code>ec</code></link>
     element or <link linkend="em"><code>em</code></link>
     element corresponds.</para>
-  <para><emphasis>Contains:</emphasis> string.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis><?oxy_custom_end ?>
+    string.</para>
 
-  <para><emphasis>Value description:</emphasis> NMTOKEN.</para>
+  <para><emphasis>Value description:</emphasis>
+    NMTOKEN<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>: a string matching
+    the pattern <code>[-._:A-Za-z0-9]+</code><?oxy_custom_end ?>.</para>
 
   <para><emphasis>Default value:</emphasis> undefined.</para>
 
@@ -5147,7 +5152,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
             <firstterm>Translation</firstterm> within the segment. One can further specify the state
         of the <firstterm>Translation</firstterm> using the <link linkend="substate"><code>subState</code></link> attribute.</para>
     <para><emphasis>Default value:</emphasis>
-        <code>initial</code></para>
+        <code>"initial"</code>.</para>
     <para><emphasis>Used in:</emphasis>
         <link linkend="segment"><code>segment</code></link></para>
     <!--  This falg got killed in the August 20 2013 meeting <itemizedlist>
@@ -5170,7 +5175,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
         <listitem>
             <para><firstterm>Writers</firstterm>
                 <glossterm>must not</glossterm> set the <link linkend="state"><code>state</code></link> attribute values to other than the default
-                    <code>initial</code> if and only if the <link linkend="segment"><code>segment</code></link>
+                    <code>"initial"</code> if and only if the <link linkend="segment"><code>segment</code></link>
                 <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>
                 where the
                 <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>
@@ -5185,7 +5190,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <note>
         <para><link linkend="state"><code>state</code></link> is an <glossterm>optional</glossterm>
             <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>
-            of segments with a default value and segmentation can change as the XLIFF roundtrip
+            of segments with a default value and segmentation can change as the JLIFF roundtrip
             progresses, hence implementers don't have to make explicit use of the
             <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>.
             However setting of the
@@ -8551,11 +8556,8 @@ Palouse horses&lt;fn&gt;A Palouse horse is the same as
         <section id="candidates_id">
   <title>mtc_id</title>
 
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>ChangeTrack
-    <?oxy_custom_end ?>Identifier - a character string used to identify a
-      <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?><link linkend="match"><code>&lt;match&gt;</code></link> element.<?oxy_custom_end ?>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[CURRENTLY
-    mtc_translationCandidatesMatch]<?oxy_custom_end ?></para>
+  <para>Identifier - a character string used to identify a <link linkend="match"><code>mtc_match</code></link>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
 
   <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
     string.<?oxy_custom_end ?></para>
@@ -8563,30 +8565,30 @@ Palouse horses&lt;fn&gt;A Palouse horse is the same as
     NMTOKEN<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>: a string matching
     the pattern <code>[-._:A-Za-z0-9]+</code><?oxy_custom_end ?>.</para>
 
-  <para><emphasis>Default value:</emphasis> undefined</para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
 
   
   
   <para><emphasis>Used in:</emphasis>
-    <link linkend="match"><code>&lt;match&gt;</code></link>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[SEE
-    COMMENTS]<?oxy_custom_end ?>.</para>
+    <link linkend="match"><code>mtc_match</code></link>.</para>
 <itemizedlist>
   <title>Constraints</title>
-  <listitem><para>The <link linkend="candidates_id"><code>id</code></link> value <glossterm>must</glossterm> be
-        unique within the enclosing <link linkend="matches"><code>&lt;matches&gt;</code></link> element.
-        <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[CURRENTLY HAS NO
-        DEFINITION BECAUSE mtc_translationCandidates HAS AN UNNAMED ARRAY OF
-        translationCandidatesMatch]<?oxy_custom_end ?></para></listitem>
+  <listitem><para>The <link linkend="candidates_id"><code>mtc_id</code></link> value <glossterm>must</glossterm>
+        be unique within the enclosing <link linkend="matches"><code>mtc_matches</code></link>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>array<?oxy_custom_end ?>.</para></listitem>
 </itemizedlist>
 
 </section>
 
 
         <section id="matchQuality">
-    <title>matchQuality</title>
+    <title>mtc_matchQuality</title>
     
-    <para>Match quality - indicates the quality of the <link linkend="target"><code>&lt;target&gt;</code></link> child of a <link linkend="match"><code>&lt;match&gt;</code></link> element based on an external benchmark or metric.</para>
+    <para>Match quality - indicates the quality of the <link linkend="target"><code>target</code></link>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>
+        of a <link linkend="match"><code>mtc_match</code></link>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>
+        based on an external benchmark or metric.</para>
     <para><emphasis>Contains:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>number<?oxy_custom_end ?>.</para>
     
@@ -8594,121 +8596,159 @@ Palouse horses&lt;fn&gt;A Palouse horse is the same as
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>number between 0.0 and
         100.0, inclusive.<?oxy_custom_end ?></para>
         
-    <para><emphasis>Default value:</emphasis> undefined</para>
+    <para><emphasis>Default value:</emphasis> undefined.</para>
     
-    <para><emphasis>Used in:</emphasis> <link linkend="match"><code>&lt;match&gt;</code></link>.</para>
+    <para><emphasis>Used in:</emphasis>
+        <link linkend="match"><code>mtc_match</code></link>.</para>
     
-<note><para>This attribute can carry a human review based metrics score, a Machine Translation
-            self-reported confidence score etc.</para></note>
+<note><para>This
+            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>
+            can carry a human review based metrics score, a Machine Translation self-reported
+            confidence score etc.</para></note>
 </section>
         <section id="matchSuitability">
-    <title>matchSuitability</title>
+    <title>mtc_matchSuitability</title>
     
-    <para>Match suitability - indicates the general suitability and relevance of its <link linkend="match"><code>&lt;match&gt;</code></link> element based on various external benchmarks or metrics
-        pertaining to both the <link linkend="source"><code>&lt;source&gt;</code></link>  and the <link linkend="target"><code>&lt;target&gt;</code></link> children of the <link linkend="match"><code>&lt;match&gt;</code></link>. </para>
-    <para> This attribute is intended to carry a value that can be combined from values provided in
-        <link linkend="candidates_similarity"><code>similarity</code></link> and <link linkend="matchQuality"><code>matchQuality</code></link> attributes based on an externally provided
-        algorithm.</para>
+    <para>Match suitability - indicates the general suitability and relevance of its <link linkend="match"><code>mtc_match</code></link>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>
+        based on various external benchmarks or metrics pertaining to both the <link linkend="source"><code>source</code></link> and the <link linkend="target"><code>target</code></link> properties of the <link linkend="match"><code>mtc_match</code></link>. </para>
+    <para> This
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>
+        is intended to carry a value that can be combined from values provided in <link linkend="candidates_similarity"><code>mtc_similarity</code></link> and <link linkend="matchQuality"><code>mtc_matchQuality</code></link>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>properties<?oxy_custom_end ?>
+        based on an externally provided algorithm.</para>
     
-    <para><emphasis>Value description:</emphasis> a decimal number between 0.0 and 100.0.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+        string.<?oxy_custom_end ?></para>
+    <para><emphasis>Value description:</emphasis> a decimal number between 0.0 and
+        100.0<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>,
+        inclusive<?oxy_custom_end ?>.</para>
         
-    <para><emphasis>Default value:</emphasis> undefined</para>
+    <para><emphasis>Default value:</emphasis> undefined.</para>
     
-    <para><emphasis>Used in:</emphasis> <link linkend="match"><code>&lt;match&gt;</code></link>.</para>
+    <para><emphasis>Used in:</emphasis>
+        <link linkend="match"><code>mtc_match</code></link>.</para>
     
     <note>
-        <para> This attribute is also useful for mapping match-quality as specified in XLIFF 1.2
-            because 1.2 is not capable of discerning between the source similarity and the target
-            quality.</para>
+        <para>This
+            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>
+            is also useful for mapping match-quality as specified in XLIFF 1.2 because 1.2 is not
+            capable of discerning between the source similarity and the target quality.</para>
     </note>
     <itemizedlist>
         <title>Processing Requirements</title>
         <listitem>
-            <para><firstterm>Agents</firstterm> processing this module <glossterm>must</glossterm> make use of <link linkend="matchSuitability"><code>matchSuitability</code></link> for match ordering purposes if the attribute is specified.
-            </para>
+            <para><firstterm>Agents</firstterm> processing this module <glossterm>must</glossterm>
+                make use of <link linkend="matchSuitability"><code>mtc_matchSuitability</code></link> for match
+                ordering purposes if the
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>
+                is specified. </para>
         </listitem>
     </itemizedlist>
 </section>
         <section id="candidates_origin">
-    <title>origin</title>
+    <title>mtc_origin</title>
     
-    <para>
-		Match origin - indicates the tool, system or repository that generated a <link linkend="match"><code>&lt;match&gt;</code></link>
-        element. This is a free text short informative
-description. For example, 'Microsoft Translator Hub' or 'tm-client123-v456', or 'MSTH
-(52217d25-d9e7-54a2-af44-3d4e4341d112_healthc).'
-		
-		</para>
+    <para>Match origin - indicates the tool, system or repository that generated a <link linkend="match"><code>mtc_match</code></link>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.
+        This is a free text short informative description. For example, 'Microsoft Translator Hub'
+        or 'tm-client123-v456', or 'MSTH (52217d25-d9e7-54a2-af44-3d4e4341d112_healthc).' </para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+        string.<?oxy_custom_end ?></para>
     
     <para><emphasis>Value description:</emphasis> Text.</para>
         
-    <para><emphasis>Default value:</emphasis> undefined</para>
+    <para><emphasis>Default value:</emphasis> undefined.</para>
     
-    <para><emphasis>Used in:</emphasis> <link linkend="match"><code>&lt;match&gt;</code></link>.</para>
+    <para><emphasis>Used in:</emphasis>
+        <link linkend="match"><code>mtc_match</code></link>.</para>
     
 </section>
 
         <section id="candidates_ref">
-  <title>ref</title>
+  <title>mtc_ref</title>
 
   <para>Reference - points to a span of text within the same unit, to which the translation
     candidate is relevant. </para>
 
-  <para><emphasis>Value description:</emphasis> IRI</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    string.<?oxy_custom_end ?></para>
+  <para><emphasis>Value description:</emphasis> IRI.</para>
 
-  <para><emphasis>Default value:</emphasis> undefined</para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
 
   <para><emphasis>Used in:</emphasis>
-    <link linkend="match"><code>&lt;match&gt;</code></link>.</para>
+    <link linkend="match"><code>mtc_match</code></link>.</para>
 
   <itemizedlist>
     <title>Constraints</title>
 
     <listitem>
-      <para>The value of the <link linkend="candidates_ref"><code>ref</code></link> attribute <glossterm>must</glossterm> point to a span of text
-        within the same <link linkend="unit"><code>&lt;unit&gt;</code></link> element where the <link linkend="match"><code>&lt;match&gt;</code></link> is located.</para>
+      <para>The value of the <link linkend="candidates_ref"><code>mtc_ref</code></link>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>propety<?oxy_custom_end ?>
+        <glossterm>must</glossterm> point to a span of text within the same <link linkend="unit"><code>unit</code></link>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>
+        where the <link linkend="match"><code>mtc_match</code></link> is located.</para>
       
     </listitem>
   </itemizedlist>
 </section>
 
         <section id="candidates_reference">
-  <title>reference</title>
+  <title>mtc_reference</title>
 
-  <para>Reference - indicates that the <link linkend="target"><code>&lt;target&gt;</code></link> child of the <link linkend="match"><code>&lt;match&gt;</code></link> element contains a <firstterm>Translation</firstterm> into
-    a reference language rather than into the target language. For example, a German translation can
-    be used as reference by a Luxembourgish translator.</para>
+  <para>Reference - indicates that the <link linkend="target"><code>target</code></link>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?> of
+    the <link linkend="match"><code>mtc_match</code></link>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>
+    contains a <firstterm>Translation</firstterm> into a reference language rather than into the
+    target language. For example, a German translation can be used as reference by a Luxembourgish
+    translator.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    string.<?oxy_custom_end ?></para>
 
-  <para><emphasis>Value description:</emphasis> <code>yes</code> or <code>no</code>.</para>
+  <para><emphasis>Value description:</emphasis>
+    <code>"yes"</code> or <code>"no"</code>.</para>
 
-  <para><emphasis>Default value:</emphasis> <code>no</code>.</para>
+  <para><emphasis>Default value:</emphasis>
+    <code>"no"</code>.</para>
  
-  <para><emphasis>Used in:</emphasis> <link linkend="match"><code>&lt;match&gt;</code></link></para>
+  <para><emphasis>Used in:</emphasis>
+    <link linkend="match"><code>mtc_match</code></link>.</para>
   
 </section>
 
         <section id="candidates_similarity">
-    <title>similarity</title>
+    <title>mtc_similarity</title>
     
-    <para>Similarity - indicates the similarity level between the content of the  
-        <link linkend="source"><code>&lt;source&gt;</code></link>
-        child of a
-        <link linkend="match"><code>&lt;match&gt;</code></link>
-        element and the translatable text being matched.</para>
+    <para>Similarity - indicates the similarity level between the content of the <link linkend="source"><code>source</code></link>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>
+        of a <link linkend="match"><code>mtc_match</code></link>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>
+        and the translatable text being matched.</para>
     
-    <para><emphasis>Value description:</emphasis> a decimal number between 0.0 and 100.0.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+        number.<?oxy_custom_end ?></para>
+    <para><emphasis>Value description:</emphasis> a decimal number between 0.0 and
+        100.0<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>,
+        inclusive<?oxy_custom_end ?>.</para>
         
-    <para><emphasis>Default value:</emphasis> undefined</para>
+    <para><emphasis>Default value:</emphasis> undefined.</para>
     
-    <para><emphasis>Used in:</emphasis> <link linkend="match"><code>&lt;match&gt;</code></link>.</para>
+    <para><emphasis>Used in:</emphasis>
+        <link linkend="match"><code>mtc_match</code></link>.</para>
     
 </section>
         <section id="candidates_subtype">
-  <title>subType</title>
+  <title>mtc_subType</title>
 
-  <para>Sub-type - indicates the sub-type, i.e. a secondary level type, of a <link linkend="match"><code>&lt;match&gt;</code></link> element.</para>
+  <para>Sub-type - indicates the sub-type, i.e. a secondary level type, of a <link linkend="match"><code>mtc_match</code></link>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
 
-  <para><emphasis>Value description:</emphasis> </para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    string.<?oxy_custom_end ?></para>
+  <para><emphasis>Value description:</emphasis>
+  </para>
   <para>The value is composed of a prefix and a sub-value separated by a character : (U+003A). The
     prefix is a string uniquely identifying a collection of values for a specific authority. The
     sub-value is any string value defined by an authority. </para>
@@ -8716,35 +8756,45 @@ description. For example, 'Microsoft Translator Hub' or 'tm-client123-v456', or 
     this time. Other prefixes and sub-values <glossterm>may</glossterm> be defined by the users.</para>
   <itemizedlist>
     <listitem>
-      <para><emphasis>Default value:</emphasis> undefined</para>
+      <para><emphasis>Default value:</emphasis> undefined.</para>
     </listitem>
   </itemizedlist>
-  <para><emphasis>Used in:</emphasis> <link linkend="match"><code>&lt;match&gt;</code></link>
+  <para><emphasis>Used in:</emphasis>
+    <link linkend="match"><code>mtc_match</code></link>
   </para>
   <itemizedlist>
     <title>Constraints</title>
     <listitem>
-      <para>If the attribute <link linkend="candidates_subtype"><code>subType</code></link> is used, the attribute <link linkend="candidates_type"><code>type</code></link>
+      <para>If the <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>
+        <link linkend="candidates_subtype"><code>mtc_subType</code></link> is used, the <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>
+        <link linkend="candidates_type"><code>mtc_type</code></link>
         <glossterm>must</glossterm> be explicitly set.</para>
     </listitem>
   </itemizedlist>
     <itemizedlist>
             <title>Processing Requirements</title>
     <listitem>
-      <para><firstterm>Writers</firstterm> updating the attribute <link linkend="candidates_type"><code>type</code></link> <glossterm>must</glossterm> also update or delete <link linkend="candidates_subtype"><code>subType</code></link> .</para>
+      <para><firstterm>Writers</firstterm> updating the <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>
+        <link linkend="candidates_type"><code>mtc_type</code></link>
+        <glossterm>must</glossterm> also update or delete <link linkend="candidates_subtype"><code>mtc_subType</code></link> .</para>
     </listitem>
   </itemizedlist>
 </section>
 
         <section id="candidates_type">
-  <title>type</title>
+  <title>mtc_type</title>
 
-  <para>Type - indicates the type of a <link linkend="match"><code>&lt;match&gt;</code></link> element, it gives the value providing
-    additional information on how the match was generated or qualifying further the relevance of the
-    match. The list of pre-defined values is general and user-specific information can be added
-    using the <link linkend="candidates_subtype"><code>subType</code></link> attribute.</para>
+  <para>Type - indicates the type of a <link linkend="match"><code>mtc_match</code></link>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>, it
+    gives the value providing additional information on how the match was generated or qualifying
+    further the relevance of the match. The list of pre-defined values is general and user-specific
+    information can be added using the <link linkend="candidates_subtype"><code>mtc_subType</code></link>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>.</para>
 
-  <para><emphasis>Value description:</emphasis> </para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    string.<?oxy_custom_end ?></para>
+  <para><emphasis>Value description:</emphasis>
+  </para>
 
   <table>
     <title>Values</title>
@@ -8757,37 +8807,37 @@ description. For example, 'Microsoft Translator Hub' or 'tm-client123-v456', or 
       </thead>
       <tbody>
         <row>
-          <entry>am</entry>
+          <entry><code>"am"</code></entry>
           <entry>Assembled Match: candidate generated by assembling parts of different translations. For example: constructing a candidate by using the known
             translations of various spans of content of the source.
           </entry>
         </row>
         <row>
-          <entry>mt</entry>
+          <entry><code>"mt"</code></entry>
           <entry>Machine Translation: candidate generated by a machine translation system.</entry>
         </row>
         <row>
-          <entry>icm</entry>
+          <entry><code>"icm"</code></entry>
           <entry>In Context Match: candidate for which the content context of the translation was the same as the one of the current source. For example:
             the source text for both contents is also preceded and/or followed by an identical source segment, or both appear as e.g. level 2 headings.</entry>
         </row>
         <row>
-          <entry>idm</entry>
+          <entry><code>"idm"</code></entry>
           <entry>Identifier-based Match: candidate that has an identifier identical to the one of the source content. For example: the previous
             translation of a given UI component with the same ID. match that has an identifier identical to the source
             content.</entry>
         </row>
         <row>
-          <entry>tb</entry>
+          <entry><code>"tb"</code></entry>
           <entry>Term Base: candidate obtained from a terminological database, i.e. the whole source segment
             matches with a source term base entry.</entry>
         </row>
         <row>
-          <entry>tm</entry>
+          <entry><code>"tm"</code></entry>
           <entry>Translation Memory: candidate based on a simple match of the source content.</entry>
         </row>
         <row>
-          <entry>other</entry>
+          <entry><code>"other"</code></entry>
           <entry>Candidate of a top level type not covered by any of the above definitions.</entry>
         </row>
       </tbody>
@@ -8795,15 +8845,19 @@ description. For example, 'Microsoft Translator Hub' or 'tm-client123-v456', or 
   </table>
   <itemizedlist>
     <listitem>
-      <para><emphasis>Default value:</emphasis> tm</para>
+      <para><emphasis>Default value:</emphasis>
+        <code>"tm"</code>.</para>
     </listitem>
   </itemizedlist>
-  <para><emphasis>Used in:</emphasis> <link linkend="match"><code>&lt;match&gt;</code></link>
+  <para><emphasis>Used in:</emphasis>
+    <link linkend="match"><code>mtc_match</code></link>
   </para>
   <itemizedlist>
     <title>Processing Requirements</title>
     <listitem>
-      <para><firstterm>Writers</firstterm> updating the attribute <link linkend="candidates_type"><code>type</code></link> <glossterm>must</glossterm> also update or delete <link linkend="candidates_subtype"><code>subType</code></link> .</para>
+      <para><firstterm>Writers</firstterm> updating the <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>
+        <link linkend="candidates_type"><code>mtc_type</code></link>
+        <glossterm>must</glossterm> also update or delete <link linkend="candidates_subtype"><code>mtc_subType</code></link> .</para>
     </listitem>
   </itemizedlist>
 
@@ -8946,7 +9000,7 @@ description. For example, 'Microsoft Translator Hub' or 'tm-client123-v456', or 
         </member>
         <member>-
                 <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"gls_translation"</code>,
-            a non-empty array of <?oxy_custom_end ?><link linkend="translation"><code>gls_translation&gt;</code></link>
+            a non-empty array of <?oxy_custom_end ?><link linkend="translation"><code>gls_translation</code></link>
             <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>objects<?oxy_custom_end ?>,
                 <emphasis>optional</emphasis></member>
         <member>-
@@ -8970,10 +9024,7 @@ description. For example, 'Microsoft Translator Hub' or 'tm-client123-v456', or 
                 allowed<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?> by the
                 wildcard <code>other</code><?oxy_custom_end ?>:</para>
             <simplelist type="vert">
-                <member>- <code>"mda_metaData"</code>, a <link linkend="metadata"><code>mda_metadata</code></link> object.
-                    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[PROBLEM:
-                    one or more objects? If more than one then this should be an array, not a single
-                    object]<?oxy_custom_end ?>.</member>
+                <member>- <code>"mda_metaData"</code>, a <link linkend="metadata"><code>mda_metadata</code></link> object.</member>
             </simplelist>
             <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>The following
                 optional <emphasis>JLIFF Extension</emphasis> property is allowed:<simplelist type="vert">
@@ -17863,7 +17914,7 @@ annotatorsRef had been addressed already for csprd01
     
     
     <para><emphasis>Used in:</emphasis>
-        <link linkend="file"><code>file</code></link>, <link linkend="group"><code>goup</code></link>, <link linkend="unit"><code>unit</code></link>,
+        <link linkend="file"><code>file</code></link>, <link linkend="group"><code>group</code></link>, <link linkend="unit"><code>unit</code></link>,
             <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><link linkend="mrk"><code>&lt;mrk&gt;</code></link>,
             <?oxy_custom_end ?><link linkend="sm"><code>sm</code></link>, <link linkend="itsm_provenanceRecord"><code>its_provenanceRecords</code></link>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>array
