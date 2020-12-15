@@ -7,12 +7,18 @@
                          ]>
 <section id="fragid">
   <title>Fragment Identification</title>
-  <para>Because <firstterm>XLIFF Documents</firstterm> do not follow the usual behavior of XML documents when it comes to element identifiers, this specification
-    defines how <firstterm>Agents</firstterm> <glossterm>must</glossterm> interpret the fragment identifiers in IRIs pointing to <firstterm>XLIFF Documents</firstterm>.</para>
+  <para>This specification defines how <firstterm>Agents</firstterm>
+    <glossterm>must</glossterm> interpret the fragment identifiers in IRIs pointing to
+      <firstterm>JLIFF Instances</firstterm>.</para>
   <note>
-    <para>Note that some identifiers may change during the localization process. For example <olink targetdoc="../elements/structural/data.xml"
-      targetptr="data"><code>&lt;data></code></olink> elements may be re-grouped or not depending on how tools treat
-     identical original data.</para>
+    <para>Since JLIFF uses the same fragid mechanism as XLIFF. XLIFF and JLIFF identifiers will work
+      interchangeably across the JLIFF and XLIFF media types.</para>
+  </note>
+  <note>
+    <para>Note that some identifiers can change during the localization process. For example on
+      resegmentation or  when regrouping or not <olink targetdoc="../elements/structural/data.xml"
+        targetptr="data"><code>data</code></olink> objects depending on how tools treat identical
+      original data.</para>
   </note>
   <itemizedlist>
     <title>Constraints</title>
@@ -52,94 +58,95 @@
       restrict the complexity of the fragment identification mechanism, as it would otherwise have
       potentially unlimited depth.</para></warning>
   <section>
-    <title><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>Selectors for Core
-      Elements</title>
+    <title>Selectors for Core Objects</title>
     <itemizedlist>
       <listitem>
-        <para>The prefix <code>f</code> indicates a <olink
-            targetdoc="../elements/structural/file.xml" targetptr="file"
-            ><code>&lt;file></code></olink> id and the value of that id is unique among all <olink
-            targetdoc="../elements/structural/file.xml" targetptr="file"
-            ><code>&lt;file></code></olink>
-          <code>id</code> attribute values within the enclosing <olink
-            targetdoc="../elements/structural/jliff.xml" targetptr="jliff"
-            ><code>jliff</code></olink> element.</para>
+        <para>The prefix <code>f</code> indicates an <olink
+            targetdoc="../elements/structural/file.xml" targetptr="file">anonymous file
+            object</olink> id and the value of that id is unique among all <olink
+            targetdoc="../elements/structural/file.xml" targetptr="file">anonymous file
+            object</olink>
+          <glossterm>required</glossterm>
+          <code>id</code> property values within the enclosing <olink
+            targetdoc="../elements/structural/jliff.xml" targetptr="jliff">anonymous jliff
+            object</olink>.</para>
       </listitem>
       <listitem>
-        <para>The prefix <code>g</code> indicates a <olink
-            targetdoc="../elements/structural/group.xml" targetptr="group"
-              ><code>&lt;group&gt;</code></olink> id and the value of that id is unique among all
-            <olink targetdoc="../elements/structural/group.xml" targetptr="group"
-              ><code>&lt;group></code></olink>
+        <para>The prefix <code>g</code> indicates an <olink
+            targetdoc="../elements/structural/group.xml" targetptr="group">anonymous subitem object
+              <code>"kind" : "group"</code></olink> id and the value of that id is unique among all
+            <olink targetdoc="../elements/structural/group.xml" targetptr="group">anonymous subitem
+            object <code>"kind" : "group"</code></olink>
           <code>id</code> attribute values within the enclosing <olink
-            targetdoc="../elements/structural/file.xml" targetptr="file"
-            ><code>&lt;file></code></olink> element.</para>
+            targetdoc="../elements/structural/file.xml" targetptr="file"><code>anonymous file
+              object</code></olink> or <olink targetdoc="../elements/structural/jliff.xml"
+            targetptr="jliff"><code>anonymous jliff object</code></olink>.</para>
       </listitem>
       <listitem>
-        <para>The prefix <code>u</code> indicates a <olink
-            targetdoc="../elements/structural/unit.xml" targetptr="unit"
-            ><code>&lt;unit&gt;</code></olink> id and the value of that id is unique among all
-            <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"
-              ><code>&lt;unit></code></olink>
-          <code>id</code> attribute values within the enclosing <olink
-            targetdoc="../elements/structural/file.xml" targetptr="file"
-            ><code>&lt;file></code></olink> element.</para>
+        <para>The prefix <code>u</code> indicates an <olink
+            targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>anonymous subitem
+              object <code>"kind" : "unit"</code></code></olink> id and the value of that id is
+          unique among all <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"
+            >anonymous subitem object <code>"kind" : "unit"</code></olink>
+          <code>id</code> property values within the enclosing <olink
+            targetdoc="../elements/structural/file.xml" targetptr="file"><code>anonymous file
+              object</code></olink> or <olink targetdoc="../elements/structural/jliff.xml"
+            targetptr="jliff"><code>anonymous jliff object</code></olink>.</para>
       </listitem>
       <listitem>
         <para>The prefix <code>n</code> indicates a <olink
-            targetdoc="../elements/structural/note.xml" targetptr="note"
-            ><code>&lt;note&gt;</code></olink> id and the value of that id is unique among all
-            <olink targetdoc="../elements/structural/note.xml" targetptr="note"
-              ><code>&lt;note></code></olink>
-          <code>id</code> attribute values within the immediate enclosing <olink
-            targetdoc="../elements/structural/file.xml" targetptr="file"
-            ><code>&lt;file></code></olink>, <olink targetdoc="../elements/structural/group.xml"
-            targetptr="group"><code>&lt;group></code></olink>, or <olink
-            targetdoc="../elements/structural/unit.xml" targetptr="unit"
-            ><code>&lt;unit></code></olink> element.</para>
+            targetdoc="../elements/structural/note.xml" targetptr="note">anonymous note
+            object</olink> id and the value of that id is unique among all <olink
+            targetdoc="../elements/structural/note.xml" targetptr="note">anonymous note
+            object</olink>
+          <code>id</code> property values within the same <olink
+            targetdoc="../elements/structural/notes.xml" targetptr="notes">anonymous notes
+            array</olink>.</para>
       </listitem>
       <listitem>
-        <para>The prefix <code>d</code> indicates a <olink
-            targetdoc="../elements/structural/data.xml" targetptr="data"
-            ><code>&lt;data></code></olink> id and the value of that id is unique among all <olink
-            targetdoc="../elements/structural/data.xml" targetptr="data"
-            ><code>&lt;data></code></olink>
+        <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>The prefix
+            <code>d</code> indicates a <olink targetdoc="../elements/structural/data.xml"
+            targetptr="data"><code>&lt;data></code></olink> id and the value of that id is unique
+          among all <olink targetdoc="../elements/structural/data.xml" targetptr="data"
+              ><code>&lt;data></code></olink>
           <code>id</code> attribute values within the enclosing <olink
             targetdoc="../elements/structural/unit.xml" targetptr="unit"
-            ><code>&lt;unit></code></olink> element.</para>
+            ><code>&lt;unit></code></olink> element.<?oxy_custom_end?>
+          <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>[pending modification of
+          descriptions for data and original data objects/arrays]<?oxy_custom_end?></para>
       </listitem>
       <listitem>
-        <para>The prefix <code>t</code> indicates an id for an inline element in the <olink
-            targetdoc="../elements/structural/target.xml" targetptr="target"
-              ><code>&lt;target&gt;</code></olink> element and the value of that id is unique within
-          the enclosing <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"
-              ><code>&lt;unit&gt;</code></olink> element (with the exception of the matching inline
-          elements in the <olink targetdoc="../elements/structural/source.xml" targetptr="source"
-              ><code>&lt;source&gt;</code></olink>).</para>
+        <para>The prefix <code>t</code> indicates an id for an inline object contained in an
+          anonymous <olink targetdoc="../elements/structural/target.xml" targetptr="target">target
+            property</olink> array and the value of that id is unique within the enclosing <olink
+            targetdoc="../elements/structural/unit.xml" targetptr="unit">anonymous subitem object
+              <code>"kind" : "unit"</code></olink> with the exception of the matching inline objects
+          contained in its sibling anonymous <olink targetdoc="../elements/structural/source.xml"
+            targetptr="source">source property</olink> array.</para>
       </listitem>
       <listitem>
-        <para>No prefix indicates an id for a <olink targetdoc="../elements/structural/segment.xml"
-            targetptr="segment"><code>&lt;segment&gt;</code></olink> or an <olink
-            targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"
-              ><code>&lt;ignorable&gt;</code></olink> or an inline element in the <olink
-            targetdoc="../elements/structural/source.xml" targetptr="source"
-              ><code>&lt;source&gt;</code></olink> element and the value of that id is unique within
-          the enclosing <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"
-              ><code>&lt;unit&gt;</code></olink> element (with the exception of the matching inline
-          elements in the <olink targetdoc="../elements/structural/target.xml" targetptr="target"
-              ><code>&lt;target&gt;</code></olink>).<?oxy_custom_end?></para>
+        <para>No prefix indicates an id for an <olink targetdoc="../elements/structural/segment.xml"
+            targetptr="segment">anonymous subunit item <code>"kind" : "segment"</code></olink> or an
+            <olink targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable">anonymous
+            subunit object "kind" : "ignorable"</olink> or an inline element in the anonymous <olink
+            targetdoc="../elements/structural/source.xml" targetptr="source">source property</olink>
+          array and the value of that id is unique within the enclosing <olink
+            targetdoc="../elements/structural/unit.xml" targetptr="unit">anonymous subitem object
+              <code>"kind" : "unit"</code></olink> with the exception of the matching inline objects
+          contained its sibling anonymous <olink targetdoc="../elements/structural/target.xml"
+            targetptr="target">target property</olink> array.</para>
       </listitem>
     </itemizedlist>
   </section>
   <section id="fragid-modandext">
-    <title><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>Selectors for
-      Modules and Extensions</title>
+    <title>Selectors for Modules and Extensions</title>
     <para>A selector for a module or an extension uses a registered prefix and the value of that id
       is unique within the immediate enclosing <olink targetdoc="../elements/structural/file.xml"
-        targetptr="file"><code>&lt;file></code></olink>, <olink
-        targetdoc="../elements/structural/group.xml" targetptr="group"
-        ><code>&lt;group&gt;</code></olink> or <olink targetdoc="../elements/structural/unit.xml"
-        targetptr="unit"><code>&lt;unit&gt;</code></olink> element.</para>
+        targetptr="file">anonymous file object</olink>, <olink
+        targetdoc="../elements/structural/group.xml" targetptr="group">anonymous subitem object
+          <code>"kind" : "group"</code></olink>, or <olink
+        targetdoc="../elements/structural/unit.xml" targetptr="unit">anonymous subitem object
+          <code>"kind" : "unit"</code></olink>.</para>
     <itemizedlist>
       <title>Constraints</title>
       <listitem>
@@ -161,19 +168,22 @@
           prefix).</para>
       </listitem>
     </itemizedlist>
-    <para>See also the <olink targetdoc="../extensions/extensions.xml" targetptr="ext-constraints"
-        >constraints related to how IDs need to be specified in extensions</olink> (which applies
-      for modules as well).<?oxy_custom_end?></para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>See also the <olink
+        targetdoc="../extensions/extensions.xml" targetptr="ext-constraints">constraints related to
+        how IDs need to be specified in extensions</olink> (which applies for modules as
+      well).<?oxy_custom_end?></para>
   </section>
   <section>
     <title>Relative References</title>
     <para>Fragment identifiers that do not start with a character <code>/</code> (U+002F) are relative to their location in the document,
       or to the document being processed.</para>
-    <para>Any unit, group or file selector missing to resolve the relative reference is obtained from the immediate enclosing unit, group or file elements.</para>
+    <para>Any unit, group or file selector missing to resolve the relative reference is obtained
+      from the immediate enclosing unit, group or file object.</para>
   </section>
   <section id="fragid-example">
     <title>Examples</title>
-    <para>Given the following XLIFF document:</para>
+    <para>Given the following JLIFF document:</para>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
     <programlisting>
 &lt;xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0"
     srcLang="en" trgLang="fr">
@@ -198,14 +208,33 @@
 </programlisting>
     <para>You can have the following fragment identifiers:</para>
     <itemizedlist>
-      <listitem><para><code>#f=f1/u=u1/1</code> refers to the element <code>&lt;pc id="1"></code> of the source content of the element <code>&lt;unit id="u1"></code>.</para></listitem>
-      <listitem><para><code>#f=f1/u=u1/t=1</code> refers to the element <code>&lt;pc id="1"></code> of the target content of the element <code>&lt;unit id="u1"></code>.</para></listitem>
-      <listitem><para><code>#f=f1/n=n1</code> refers to the element <code>&lt;note id="n1"></code> of the element <code>&lt;file id="f1"></code>.</para></listitem>
-      <listitem><para><code>#f=f1/u=u1/n=n1</code> refers to the element <code>&lt;note id="n1"></code> of the element <code>&lt;unit id="u1"></code>.</para></listitem>
-      <listitem><para><code>#f=f1/u=u1/s1</code> refers to the element <code>&lt;segment id="s1"></code> of the element <code>&lt;unit id="u1"></code>.</para></listitem>
-      <listitem><para>Assuming the extension defined by the namespace URI <code>myNamespaceURI</code> has registered the prefix <code>myprefix</code>, the expression
-        <code>#f=f1/u=u1/myprefix=x1</code> refers to the element <code>&lt;my:element id="x1"></code> of the element <code>&lt;unit id="u1"></code>.</para></listitem>
-    </itemizedlist>
+      <listitem>
+        <para><code>#f=f1/u=u1/1</code> refers to the element <code>&lt;pc id="1"></code> of the
+          source content of the element <code>&lt;unit id="u1"></code>.</para>
+      </listitem>
+      <listitem>
+        <para><code>#f=f1/u=u1/t=1</code> refers to the element <code>&lt;pc id="1"></code> of the
+          target content of the element <code>&lt;unit id="u1"></code>.</para>
+      </listitem>
+      <listitem>
+        <para><code>#f=f1/n=n1</code> refers to the element <code>&lt;note id="n1"></code> of the
+          element <code>&lt;file id="f1"></code>.</para>
+      </listitem>
+      <listitem>
+        <para><code>#f=f1/u=u1/n=n1</code> refers to the element <code>&lt;note id="n1"></code> of
+          the element <code>&lt;unit id="u1"></code>.</para>
+      </listitem>
+      <listitem>
+        <para><code>#f=f1/u=u1/s1</code> refers to the element <code>&lt;segment id="s1"></code> of
+          the element <code>&lt;unit id="u1"></code>.</para>
+      </listitem>
+      <listitem>
+        <para>Assuming the extension defined by the namespace URI <code>myNamespaceURI</code> has
+          registered the prefix <code>myprefix</code>, the expression
+            <code>#f=f1/u=u1/myprefix=x1</code> refers to the element <code>&lt;my:element
+            id="x1"></code> of the element <code>&lt;unit id="u1"></code>.</para>
+      </listitem>
+    </itemizedlist><?oxy_custom_end?>
   </section>
 
 </section>

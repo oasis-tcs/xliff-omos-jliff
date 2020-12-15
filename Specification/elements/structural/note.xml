@@ -6,21 +6,23 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="note">
-    <title>note</title>
-    <para>This is a JLIFF specific <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object<?oxy_custom_end?>
-        <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>way how
-        <?oxy_custom_end?>to present end-user readable comments and annotations. A note can contain
-        information about <olink targetdoc="source.xml" targetptr="source"
-            ><code>source</code></olink>, <olink targetdoc="target.xml" targetptr="target"
-                ><code>target</code></olink>, <olink targetdoc="unit.xml" targetptr="unit"
-                ><code>unit</code></olink>, <olink targetdoc="group.xml" targetptr="group"
-                ><code>group</code></olink>, or <olink targetdoc="file.xml" targetptr="file"
-                ><code>file</code></olink>
+    <title>anonymous object with the <code>"note"</code> property</title>
+    <para>This is a JLIFF specific
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object<?oxy_custom_end?>
+        to present end-user readable comments and annotations. A note can contain information about
+            <olink targetdoc="source.xml" targetptr="source"><code>source</code></olink>, <olink
+            targetdoc="target.xml" targetptr="target"><code>target</code></olink>, <olink
+            targetdoc="unit.xml" targetptr="unit"><code>unit</code></olink>, <olink
+            targetdoc="group.xml" targetptr="group"><code>group</code></olink>, or <olink
+            targetdoc="file.xml" targetptr="file"><code>file</code></olink>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end?>.</para>
-    <para><emphasis>Contains:</emphasis>
-        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
+    <para><emphasis>Contains:</emphasis> object.</para>
     <para><emphasis>Properties:</emphasis></para>
     <simplelist>
+        <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><code>note</code>,
+                <glossterm>required</glossterm><?oxy_custom_end?>
+        </member>
         <member>-
                 <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"id"</code>,
             a <?oxy_custom_end?><olink targetdoc="../../attributes/id.xml" targetptr="id"
@@ -46,16 +48,15 @@
             <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>string<?oxy_custom_end?>,
                 <glossterm>optional</glossterm></member>
         <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
-        <member>- attributes from other namespaces, <glossterm>optional</glossterm></member><?oxy_custom_end?>
+        <member>- attributes from other namespaces, <glossterm>optional</glossterm>[This should be
+            replaced with the userdata object]</member><?oxy_custom_end?>
         <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>
     </simplelist>
     <itemizedlist>
         <title><?oxy_custom_end?>Constraints</title>
         <listitem>
             <para>The following <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>optional<?oxy_custom_end?>
-                <firstterm>JLIFF Module</firstterm>
-                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>properties<?oxy_custom_end?>
-                are
+                <firstterm>JLIFF Module</firstterm> properties are
                 <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>explicitly<?oxy_custom_end?>
                 allowed <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>by the
                 wildcard
@@ -77,7 +78,11 @@
                     provided that the Constraints specified in the <olink
                         targetdoc="modules/fs/fs.xml" targetptr="fs-mod">Format Style Module</olink>
                     are met.<?oxy_custom_end?></member>
+                
             </simplelist>
+        </listitem>
+        <listitem>
+            <para>No other properties are permitted.</para>
         </listitem>
     </itemizedlist>
 </section>

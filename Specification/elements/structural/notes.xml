@@ -6,13 +6,14 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="notes">
-    <title>notes <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>TO BE DELETED:
-        anonymous array of note<?oxy_custom_end?></title>
-    <para>Collection of comments.</para>
+    <title>anonymous array of note objects</title>
+    <para>Collection of comments pertaining to the given node including all of its
+        descendants</para>
     <para><emphasis>Contains:</emphasis></para>
     <simplelist>
-        <member>- One or more <olink targetdoc="note.xml" targetptr="note"><code>&lt;note></code></olink>
-            elements</member>
+        <member>- One or more <olink targetdoc="note.xml" targetptr="note"><code>note</code></olink>
+            objects</member>
     </simplelist>
+
 
 </section>
