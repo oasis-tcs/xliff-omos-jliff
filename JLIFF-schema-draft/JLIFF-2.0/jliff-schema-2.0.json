@@ -85,6 +85,7 @@
         "translate": { "type": "string", "enum": [ "yes", "no" ] },
         "srcDir": { "$ref": "#/definitions/dir" },
         "trgDir": { "$ref": "#/definitions/dir" },
+        "notes": { "$ref": "#/definitions/notes" },
         "fs_fs": { "$ref": "#/definitions/fs_formatStyle" },
         "fs_subFs": { "$ref": "#/definitions/fs_subFormatStyle" },
         "mda_metadata": { "$ref": "#/definitions/mda_metadata" },
@@ -203,6 +204,8 @@
             "canResegment": { "type": "string", "enum": [ "yes", "no" ] },
             "state": { "type": "string", "enum": [ "initial", "translated", "reviewed", "final" ], "default": "initial" },
             "subState": { "type": "string", "pattern": "^.*:.*$" },
+            "targetOrder": { "type": "number", "minimum": 0 },
+            "xmlLang": { "$ref": "#/definitions/language" },
             "source": { "$ref": "#/definitions/elements" },
             "target": { "$ref": "#/definitions/elements" }
           },
@@ -612,10 +615,13 @@
         "appliesTo": { "type": "string", "enum": [ "source", "target" ] },
         "category": { "type": "string" },
         "priority": { "type": "integer", "minimum": 1, "maximum": 10 },
+        "text": { "type": "string" },
         "fs_fs": { "$ref": "#/definitions/fs_formatStyle" },
-        "fs_subFs": { "$ref": "#/definitions/fs_subFormatStyle" }
+        "fs_subFs": { "$ref": "#/definitions/fs_subFormatStyle" },
+        "userdata": { "$ref": "#/definitions/extensionsData" }
       },
-      "additionalProperties": false
+      "additionalProperties": false,
+      "required": [ "text" ]
     },
 
     "elements": {
