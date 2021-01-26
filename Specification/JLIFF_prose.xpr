@@ -14,7 +14,7 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>jliff-v1.0-wd01.xml</String>
+                                    <String>jliff.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -34,7 +34,7 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>jliff.xml</String>
+                                    <String>jliff-v1.0-wd01.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
