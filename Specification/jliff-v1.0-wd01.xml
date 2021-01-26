@@ -67,10 +67,10 @@
     </authorgroup>
 
 
-    <pubdate>15 December 2020</pubdate>
+    <pubdate>26 January 2021</pubdate>
 
     <copyright>
-      <year>2020</year>
+      <year>2021</year>
 
       <holder>OASIS Open, Inc. All Rights Reserved.</holder>
     </copyright>
@@ -112,7 +112,7 @@
         
         <listitem id="LIOM">
           <para><emphasis>XLIFF 2 Object Model Version 1.0.</emphasis>. Edited by David Filip.
-            15 December 2020. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest version: <ulink url="http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html">http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html</ulink>. </para>
+            26 January 2021. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest version: <ulink url="http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html">http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html</ulink>. </para>
         </listitem>
         
         <listitem>
@@ -171,7 +171,7 @@
       </itemizedlist>
         
         <itemizedlist>
-          <title>Namespaces used normatively only in the JLIFF serialization 2.1 (from <link linkend="XLIFF21">[XLIFF 2.1]</link>):</title>)
+          <title>Namespaces used normatively only in the JLIFF serialization 2.1 (from <link linkend="XLIFF21">[XLIFF 2.1]</link>):</title>
       <listitem>
           <para>https://www.w3.org/2005/11/its/</para>
         </listitem>
@@ -249,7 +249,7 @@
       <para><citation>JLIFF-1.0</citation></para>
 
       <para><emphasis>JLIFF Version 1.0</emphasis>. Edited by Robert van
-        Engelen and David Filip. 15 December 2020. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest
+        Engelen and David Filip. 26 January 2021. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest
         version: <ulink url="http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html">http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html</ulink>. </para>
 
       <!-- 
@@ -264,7 +264,7 @@
     <legalnotice role="notices">
       <title>Notices</title>
 
-      <para>Copyright © OASIS<!-- ® --> Open 2020. All Rights Reserved.</para>
+      <para>Copyright © OASIS<!-- ® --> Open 2021. All Rights Reserved.</para>
 
       <para>All capitalized terms in the following text have the meanings
       assigned to them in the OASIS Intellectual Property Rights Policy (the
@@ -2436,7 +2436,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
 </section>
     
     <section id="note">
-    <title>anonymous object with the <code>"note"</code> property</title>
+    <title>anonymous note object with a required <code>"text"</code> property</title>
     <para>This is a JLIFF specific
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object<?oxy_custom_end ?>
         to present end-user readable comments and annotations. A note can contain information about
@@ -2446,9 +2446,9 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <para><emphasis>Properties:</emphasis></para>
     <simplelist type="vert">
         <member>-
-                <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><code>note</code>,
-                <glossterm>required</glossterm><?oxy_custom_end ?>
-        </member>
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"text"</code>,
+            a <code><link linkend="text">text</link></code>
+            string, <glossterm>required</glossterm><?oxy_custom_end ?></member>
         <member>-
                 <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"id"</code>,
             a <?oxy_custom_end ?><link linkend="id"><code>id</code></link>
@@ -2469,20 +2469,16 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
             a <?oxy_custom_end ?><link linkend="priority"><code>priority</code></link>
             <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>string<?oxy_custom_end ?>,
                 <glossterm>optional</glossterm></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
-        <member>- attributes from other namespaces, <glossterm>optional</glossterm>[This should be
-            replaced with the userdata object]</member><?oxy_custom_end ?>
+        
         <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>
     </simplelist>
     <itemizedlist>
         <title><?oxy_custom_end ?>Constraints</title>
         <listitem>
             <para>The following <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>optional<?oxy_custom_end ?>
-                <firstterm>JLIFF Module</firstterm> properties are
-                <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>explicitly<?oxy_custom_end ?>
-                allowed <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>by the
-                wildcard
-                <code>other</code><?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>:<?oxy_custom_end ?></para>
+                <firstterm>JLIFF Module</firstterm> properties
+                a<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>re explicitly
+                allowed by the wildcard <code>other</code>:<?oxy_custom_end ?></para>
             <simplelist type="vert">
                 <member>-
                         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"fs_fs"</code>,
@@ -2498,6 +2494,12 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
                     are met.<?oxy_custom_end ?></member>
                 
             </simplelist>
+        </listitem>
+        <listitem>
+            <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>The following
+                optional <emphasis>JLIFF Extension</emphasis> property is allowed:<simplelist type="vert">
+                    <member>- <code>"userdata"</code>, a <link linkend="extensions"><code>userdata</code></link> object<?oxy_custom_end ?>.</member>
+                </simplelist></para>
         </listitem>
         <listitem>
             <para>No other properties are permitted.</para>

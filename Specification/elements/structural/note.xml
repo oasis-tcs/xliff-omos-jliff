@@ -20,9 +20,9 @@
     <para><emphasis>Properties:</emphasis></para>
     <simplelist>
         <member>-
-                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>text</code>,
-            a <code><olink targetdoc="../inline/text.xml" targetptr="text">text</olink></code> string,
-                <glossterm>required</glossterm><?oxy_custom_end?></member>
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"text"</code>,
+            a <code><olink targetdoc="../inline/text.xml" targetptr="text">text</olink></code>
+            string, <glossterm>required</glossterm><?oxy_custom_end?></member>
         <member>-
                 <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"id"</code>,
             a <?oxy_custom_end?><olink targetdoc="../../attributes/id.xml" targetptr="id"
