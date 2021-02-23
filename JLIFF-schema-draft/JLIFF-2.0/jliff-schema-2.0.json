@@ -204,10 +204,11 @@
             "canResegment": { "type": "string", "enum": [ "yes", "no" ] },
             "state": { "type": "string", "enum": [ "initial", "translated", "reviewed", "final" ], "default": "initial" },
             "subState": { "type": "string", "pattern": "^.*:.*$" },
-            "targetOrder": { "type": "number", "minimum": 0 },
-            "xmlLang": { "$ref": "#/definitions/language" },
             "source": { "$ref": "#/definitions/elements" },
-            "target": { "$ref": "#/definitions/elements" }
+            "target": { "$ref": "#/definitions/elements" },
+            "sourceXmlLang": { "$ref": "#/definitions/language" },
+            "targetXmlLang": { "$ref": "#/definitions/language" },
+            "targetOrder": { "type": "number", "minimum": 0 }
           },
           "additionalProperties": false,
           "required": [ "kind", "source" ]
@@ -217,7 +218,10 @@
             "id": { "$ref": "#/definitions/NMTOKEN" },
             "kind": { "type": "string", "enum": ["ignorable"] },
             "source": { "$ref": "#/definitions/elements" },
-            "target": { "$ref": "#/definitions/elements" }
+            "target": { "$ref": "#/definitions/elements" },
+            "sourceXmlLang": { "$ref": "#/definitions/language" },
+            "targetXmlLang": { "$ref": "#/definitions/language" },
+            "targetOrder": { "type": "number", "minimum": 0 }
           },
           "additionalProperties": false,
           "required": [ "kind", "source" ]
