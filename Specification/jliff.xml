@@ -182,7 +182,7 @@
       </itemizedlist>
         
         <itemizedlist>
-          <title>Namespaces used normatively only in the JLIFF serialization &cschversion; (from <olink targetptr="XLIFF21">[XLIFF 2.1]</olink>):</title>)
+          <title>Namespaces used normatively only in the JLIFF serialization &cschversion; (from <olink targetptr="XLIFF21">[XLIFF 2.1]</olink>):</title>
       <listitem>
           <para>https://www.w3.org/2005/11/its/</para>
         </listitem>
