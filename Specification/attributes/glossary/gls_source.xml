@@ -13,7 +13,7 @@
     <?oxy_custom_end?>where the
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?> is
     defined.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end?></para>
 
   <para><emphasis>Value description:</emphasis> text.</para>

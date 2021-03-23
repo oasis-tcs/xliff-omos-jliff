@@ -11,7 +11,7 @@
 
   <para>Represents a Unicode character that is invalid in XML.</para>
 
-  <para><emphasis>Contains:</emphasis>
+  <para><emphasis>Type:</emphasis>
     <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object with property <olink
       targetdoc="text.xml" targetptr="text"><code>"text"</code></olink> or <olink targetdoc="ec.xml"
       targetptr="ec"><code>"kind" : "ec"</code></olink>, <olink targetdoc="em.xml" targetptr="em"

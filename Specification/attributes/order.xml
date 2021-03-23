@@ -10,7 +10,7 @@
         JLIFF?<?oxy_custom_end?></title>
     
     <para>target order - indicates the order, in which to compose the target content parts.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis><?oxy_custom_end?>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis><?oxy_custom_end?>
         number.</para>
     
     <para><emphasis>Value description:</emphasis> positive integer.</para>

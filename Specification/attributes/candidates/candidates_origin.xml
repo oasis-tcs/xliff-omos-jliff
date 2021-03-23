@@ -14,7 +14,7 @@
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.
         This is a free text short informative description. For example, 'Microsoft Translator Hub'
         or 'tm-client123-v456', or 'MSTH (52217d25-d9e7-54a2-af44-3d4e4341d112_healthc).' </para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end?></para>
     
     <para><emphasis>Value description:</emphasis> Text.</para>

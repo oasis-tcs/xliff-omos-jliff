@@ -13,7 +13,7 @@
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
     located at the <olink targetdoc="../../elements/structural/file.xml" targetptr="file"
         ><code>file</code></olink> level.</para>
-    <para><emphasis>Contains:</emphasis> object.</para>
+    <para><emphasis>Type:</emphasis> object.</para>
     <simplelist>
     <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
     <member>This element is always empty.</member><?oxy_custom_end?>

@@ -9,7 +9,7 @@
     <title>mda_appliesTo</title>
 
     <para>Property indicating the element to which the content of the metagroup applies.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end?></para>
 
     <para><emphasis>Value description:</emphasis>

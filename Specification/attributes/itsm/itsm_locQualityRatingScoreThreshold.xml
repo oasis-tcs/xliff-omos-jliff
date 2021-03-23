@@ -21,7 +21,7 @@
                 ><code>its_locQualityRatingScore</code></olink>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
         in scope. Scores under the given threshold indicte a quality check fail.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         number.<?oxy_custom_end?></para>
     
     <para><emphasis>Value description:</emphasis> a floating point number between 0.0 and 100.0,

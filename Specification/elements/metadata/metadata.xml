@@ -8,7 +8,7 @@
 <section id="metadata">
     <title>mda_metadata</title>
     <para>Container for metadata associated with the enclosing object.</para>
-   <para><emphasis>Contains:</emphasis> object.</para>
+   <para><emphasis>Type:</emphasis> object.</para>
    <simplelist>
     <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
     <member>- One or more <olink targetdoc="metagroup.xml" targetptr="metagroup"

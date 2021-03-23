@@ -10,7 +10,7 @@
 
   <para>Represents a Unicode character that is invalid in XML.</para>
 
-  <para><emphasis>Contains:</emphasis></para>
+  <para><emphasis>Type:</emphasis></para>
 
   <simplelist>
     <member>This element is always empty.</member>

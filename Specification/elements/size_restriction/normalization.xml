@@ -13,7 +13,7 @@
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>properties<?oxy_custom_end?>
     specifying the normalization form to apply to storage and size restrictions defined in the
     standard profiles.</para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object.<?oxy_custom_end?></para>
     <simplelist>
     <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>

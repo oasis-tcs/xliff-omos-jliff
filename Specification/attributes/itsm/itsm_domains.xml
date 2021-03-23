@@ -14,7 +14,7 @@
         <ulink url="http://www.w3.org/TR/its20/#domain">Domain</ulink> data category.</para>
     
     
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end?></para>
     <para><emphasis>Value description:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>a non-empty string value

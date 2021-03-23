@@ -10,7 +10,7 @@
   <para>Container for a specific revision associated with an element referenced from the enclosing
       <olink targetdoc="revisions" targetptr="revisions"><code>&lt;revisions></code></olink>
     element.</para>
-    <para><emphasis>Contains:</emphasis></para>
+    <para><emphasis>Type:</emphasis></para>
   <simplelist>
     <member>-
       One or more <olink targetdoc="../strcutural/segment.xml" targetptr="segment"

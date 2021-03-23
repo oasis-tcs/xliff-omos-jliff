@@ -17,7 +17,7 @@
     contains a <firstterm>Translation</firstterm> into a reference language rather than into the
     target language. For example, a German translation can be used as reference by a Luxembourgish
     translator.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end?></para>
 
   <para><emphasis>Value description:</emphasis>

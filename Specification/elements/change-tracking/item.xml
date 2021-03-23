@@ -9,7 +9,7 @@
     <title>item</title>
     <para>Container for a specific revision associated with a sibling element, or a child of a
     sibling element, to the change track extension within the scope of the enclosing element.</para>
-    <para><emphasis>Contains:</emphasis></para>
+    <para><emphasis>Type:</emphasis></para>
     <simplelist>
         <member>- Text</member>
     </simplelist>

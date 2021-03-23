@@ -10,7 +10,7 @@
     <para>Parent container for change tracking information associated with a sibling element, or a
         child of a sibling element, to the change track extension within the scope of the enclosing
         element.</para>
-    <para><emphasis>Contains:</emphasis></para>
+    <para><emphasis>Type:</emphasis></para>
     <simplelist>
         <member>- One or more <olink targetdoc="../../elements/change-tracking/revisions.xml" targetptr="revisions"><code>&lt;revisions></code></olink> elements.</member>
     </simplelist>

@@ -15,7 +15,7 @@
         extracted translatable source text, aligned with the <firstterm>Translated</firstterm> text.
         Group objects provide a way to organize units into a structured
         hierarchy.<?oxy_custom_end?></para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object with property
             <olink targetdoc="unit.xml" targetptr="unit"><code>"kind" : "unit"</code></olink> or
             <olink targetdoc="group.xml" targetptr="group"><code>"kind" :

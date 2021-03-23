@@ -14,7 +14,7 @@
         ><code>res_target</code></olink>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end?>,
     such as a German screenshot for a Luxembourgish translator.</para>
-    <para><emphasis>Contains:</emphasis> object.</para>
+    <para><emphasis>Type:</emphasis> object.</para>
     <simplelist>
     <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
     <member>- This element is always empty.<?oxy_custom_end?></member>

@@ -28,7 +28,7 @@
                 targetdoc="group.xml" targetptr="group"><code>group</code></olink>
             <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end?>.</para>
     </note>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
     <!-- XML elements transposed into JSON properties of the anonymous file object
     <simplelist>

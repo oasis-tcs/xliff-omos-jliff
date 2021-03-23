@@ -8,7 +8,7 @@
 <section id="glossary">
     <title>gls_glossary</title>
     <para>Container for a list of glossary terms.</para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>non-empty array of <?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>anonymous<?oxy_custom_end?>
         <olink targetdoc="glossentry.xml" targetptr="glossentry"><code>gls_glossEntry</code></olink>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end?>.</para>
