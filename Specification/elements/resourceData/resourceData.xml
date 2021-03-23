@@ -9,7 +9,7 @@
     <title>res_resourceData</title>
     <para>Parent container for resource data associated with the enclosing
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis><?oxy_custom_end?>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis><?oxy_custom_end?>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object.<?oxy_custom_end?></para>
     <para><emphasis>Properties:</emphasis></para>
     <simplelist>

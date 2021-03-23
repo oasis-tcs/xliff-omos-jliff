@@ -9,7 +9,7 @@
     <title>skeleton</title>
     <para>Container for non-translatable material pertaining to the <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>parent<?oxy_custom_end?>
         <olink targetdoc="file.xml" targetptr="file"><code>file</code></olink> object.</para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
     <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>Either</para>
     <simplelist>

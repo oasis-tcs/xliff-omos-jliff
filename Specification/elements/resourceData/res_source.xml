@@ -10,7 +10,7 @@
   <para>References the actual resource data that is either intended for
       <firstterm>Modification</firstterm>, or to be used as contextual reference during
       <firstterm>Translation</firstterm>.</para>
-  <para><emphasis>Contains:</emphasis>
+  <para><emphasis>Type:</emphasis>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
   <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>Either</para>
   <simplelist>

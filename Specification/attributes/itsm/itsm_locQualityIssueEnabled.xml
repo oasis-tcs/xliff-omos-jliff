@@ -14,7 +14,7 @@
             <code>its_locQualityIssueEnabled</code>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>. </para>
     <para> This is a flag to enable or disable a particular issue.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end?></para>
     
     <para><emphasis>Value description:</emphasis>

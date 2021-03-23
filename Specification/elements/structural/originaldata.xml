@@ -10,7 +10,7 @@
 
   <para>Unit-level collection of original data for the inline codes.</para>
 
-  <para><emphasis>Contains:</emphasis></para>
+  <para><emphasis>Type:</emphasis></para>
 
   <simplelist>
     <member>- One or more <olink targetdoc="data.xml"

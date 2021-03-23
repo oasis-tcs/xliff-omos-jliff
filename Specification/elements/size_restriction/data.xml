@@ -10,7 +10,7 @@
     <para>This object act as a container for data needed by the specified profile to check the part
     of the JLIFF document that is a sibling or descendant of a sibling of this object. It is not
     used by the default profiles.</para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
     <simplelist>
     <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>

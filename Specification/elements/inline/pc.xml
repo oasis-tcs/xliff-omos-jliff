@@ -10,7 +10,7 @@
 
   <para>Represents a well-formed spanning original code.</para>
 
-  <para><emphasis>Contains:</emphasis></para>
+  <para><emphasis>Type:</emphasis></para>
 
   <simplelist>
     <member>- Text</member>

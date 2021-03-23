@@ -10,7 +10,7 @@
 
   <para>Storage for the original data of an inline code.</para>
 
-  <para><emphasis>Contains:</emphasis></para>
+  <para><emphasis>Type:</emphasis></para>
 
   <simplelist>
     <member>- Non-translatable text</member>

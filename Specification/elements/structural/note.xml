@@ -16,7 +16,7 @@
             targetdoc="group.xml" targetptr="group"><code>group</code></olink>, or <olink
             targetdoc="file.xml" targetptr="file"><code>file</code></olink>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end?>.</para>
-    <para><emphasis>Contains:</emphasis> object.</para>
+    <para><emphasis>Type:</emphasis> object.</para>
     <para><emphasis>Properties:</emphasis></para>
     <simplelist>
         <member>-

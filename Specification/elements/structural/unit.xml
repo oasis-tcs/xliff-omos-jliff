@@ -11,7 +11,7 @@
         anonymous container for a dynamic structure of subunit objects. Subunit objects hold the
         extracted translatable source text, aligned with the <firstterm>Translated</firstterm>
         text.<?oxy_custom_end?></para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
     <simplelist>
         <!-- covered by the userdata property allowed below

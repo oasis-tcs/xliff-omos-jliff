@@ -8,7 +8,7 @@
 <section id="priority">
     <title>priority</title>
     <para>Priority - provides a way to prioritize notes.</para>
-    <para><emphasis>Contains:</emphasis> number.</para>
+    <para><emphasis>Type:</emphasis> number.</para>
     <para><emphasis>Value description:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>integer between 1 and
         10, inclusive.<?oxy_custom_end?></para>

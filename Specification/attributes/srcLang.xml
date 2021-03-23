@@ -10,7 +10,7 @@
     
     <para>Source language - the code of the language, in which the text to be <firstterm>Translated</firstterm> is
         expressed.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis><?oxy_custom_end?>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis><?oxy_custom_end?>
         string.</para>
     
     <para><emphasis>Value description:</emphasis> a language code as described in <olink

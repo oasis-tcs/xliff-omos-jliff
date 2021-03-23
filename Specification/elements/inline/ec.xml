@@ -8,7 +8,7 @@
 <section id="ec">
   <title>ec</title>
   <para>End of a spanning original code.</para>
-  <para><emphasis>Contains:</emphasis>
+  <para><emphasis>Type:</emphasis>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
   <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
   <simplelist>

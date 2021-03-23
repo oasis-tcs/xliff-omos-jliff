@@ -8,7 +8,7 @@
 <section id="revision">
     <title>revision</title>
     <para>Container for specific revisions associated with a sibling element, or a child of a sibling element, to the change track extension within the scope of the enclosing element.</para>
-    <para><emphasis>Contains:</emphasis></para>
+    <para><emphasis>Type:</emphasis></para>
     <simplelist>
         <member>- One or more <olink targetdoc="../../elements/change-tracking/item.xml" targetptr="item"><code>&lt;item></code></olink> elements.</member>
     </simplelist>

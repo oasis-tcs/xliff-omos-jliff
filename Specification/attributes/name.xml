@@ -16,7 +16,7 @@
     <para>For example: the key in the key/value
         pair in a Java properties file, the ID of a string in a Windows string table, the index
         value of an entry in a database table, etc.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end?></para>
 
     <para><emphasis>Value description:</emphasis> text.</para>

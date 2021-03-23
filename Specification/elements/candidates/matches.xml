@@ -10,7 +10,7 @@
         mtc_matches
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>array<?oxy_custom_end?></title>
     <para>Collection of matches retrieved from any leveraging system (MT, TM, etc.)</para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>a non-empty array of
             <olink targetdoc="match.xml" targetptr="match"><code>mtc_match</code></olink>
         objects.<?oxy_custom_end?></para>

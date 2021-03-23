@@ -8,7 +8,7 @@
 <section id="state">
     <title>state</title>
     <para>State - indicates the state of the translation of a segment.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis><?oxy_custom_end?>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis><?oxy_custom_end?>
         string.</para>
     <para><emphasis>Value description:</emphasis> the value <glossterm>must</glossterm> be set to
         one of the following values:</para>

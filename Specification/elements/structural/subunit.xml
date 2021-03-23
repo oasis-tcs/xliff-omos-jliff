@@ -16,7 +16,7 @@
       targetdoc="../../segmentation/segmentation.xml" targetptr="segmentation"
     >Segmentation</olink>.<?oxy_custom_end?></para>
 
-  <para><emphasis>Contains:</emphasis>
+  <para><emphasis>Type:</emphasis>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object with property <olink
       targetdoc="segment.xml" targetptr="segment"><code>"kind" : "segment"</code></olink> or <olink
       targetdoc="ignorable.xml" targetptr="ignorable"><code>"kind" :

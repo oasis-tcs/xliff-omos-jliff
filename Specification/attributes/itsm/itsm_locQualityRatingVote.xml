@@ -19,7 +19,7 @@
         inline portion of target text, the higher the number the more positive votes or the better
         margin of positive votes over negative votes. Tools are expected to interpret this value
         within their own quality rating system.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         integer.<?oxy_custom_end?></para>
     
     <para><emphasis>Value description:</emphasis> an integer value.</para>

@@ -17,7 +17,7 @@
       targetdoc="../elements/inline/ec.xml" targetptr="ec"><code>ec</code></olink><?oxy_custom_end?>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?> that
     contains the original data for a given inline code.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end?></para>
 
   <para><emphasis>Value description:</emphasis> An <olink targetdoc="../xliff21.xml"

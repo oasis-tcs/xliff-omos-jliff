@@ -11,7 +11,7 @@
   <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>ChangeTrack<?oxy_custom_end?>
     ctr_appliesTo – Indicates a specific XLIFF element which is a sibling, or a child of a sibling
     element, to the change track extension within the scope of the enclosing element.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end?></para>
 
   <para><emphasis>Value description:</emphasis>

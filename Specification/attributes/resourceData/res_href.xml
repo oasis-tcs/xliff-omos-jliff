@@ -9,7 +9,7 @@
   <title>res_href</title>
 
   <para>Hypertext Reference, href - IRI referencing an external resource.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis><?oxy_custom_end?>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis><?oxy_custom_end?>
     string.</para>
 
   <para><emphasis>Value description:</emphasis> IRI.</para>

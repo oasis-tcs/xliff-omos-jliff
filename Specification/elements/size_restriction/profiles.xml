@@ -13,7 +13,7 @@
         specified the default values (empty) of those
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end?>
         will disable restriction checking in the file.</para>
-    <para><emphasis>Contains:</emphasis> object</para>
+    <para><emphasis>Type:</emphasis> object</para>
     <simplelist>
         <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
         <member>- Zero or one <olink targetdoc="../../elements/size_restriction/normalization.xml"

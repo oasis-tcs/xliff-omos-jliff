@@ -22,7 +22,7 @@
             attribute on structural elements even outside of XLIFF where the Language Information is
             typically given by the <code>xml:lang</code> attribute.</para>
         </note>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end?></para>
     
     <para><emphasis>Value description:</emphasis> A language code as described in <olink targetdoc="../xliff21.xml"

@@ -10,7 +10,7 @@
     DEFINITION]<?oxy_custom_end?></title>
 
   <para>Text - the text content of a glossary object.</para>
-  <para><emphasis>Contains:</emphasis> string.</para>
+  <para><emphasis>Type:</emphasis> string.</para>
 
   <para><emphasis>Value description:</emphasis> text.</para>
 

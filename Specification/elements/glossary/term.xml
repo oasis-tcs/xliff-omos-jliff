@@ -10,7 +10,7 @@
     <para>Term: a term in the glossary, expressed in the source language of the enclosing <olink
       targetdoc="../structural/xliff.xml" targetptr="xliff"><code>jliff</code></olink>
     object.</para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
 
   <para>

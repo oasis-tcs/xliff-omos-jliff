@@ -18,7 +18,7 @@
         provides the severity score for a particular issue, the higher the number the higher the
         severity. Tools are expected to interpret this score within their own severity rating
         system.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         number.<?oxy_custom_end?></para>
     
     <para><emphasis>Value description:</emphasis> a floating point number between 0.0 and 100.0,

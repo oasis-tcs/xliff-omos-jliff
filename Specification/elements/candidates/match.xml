@@ -13,7 +13,7 @@
     <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>The <code>"items"</code>
     property of a <olink targetdoc="matches.xml" targetptr="match"><code>mtc_matches</code></olink>
     object contains one or more <code>mtc_objects</code>.<?oxy_custom_end?></para>
-  <para><emphasis>Contains:</emphasis> object.</para>
+  <para><emphasis>Type:</emphasis> object.</para>
   <simplelist>
     <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
     <member>- Zero or one <olink targetdoc="../../elements/metadata/metadata.xml"

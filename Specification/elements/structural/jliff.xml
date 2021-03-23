@@ -11,7 +11,7 @@
     <para>Root
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
         for JLIFF documents.</para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
     <simplelist>
         <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>

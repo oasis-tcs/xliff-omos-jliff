@@ -10,7 +10,7 @@
     <para><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Array containing
     a<?oxy_custom_end?> list of rules and constraints to apply to the target text of the enclosing
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
     <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>non-empty array of <olink
       targetdoc="../../elements/validation/rule.xml" targetptr="rule"
     ><code>val_rule</code></olink>objects.<?oxy_custom_end?></para>

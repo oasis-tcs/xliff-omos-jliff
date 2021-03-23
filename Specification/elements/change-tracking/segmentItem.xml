@@ -12,7 +12,7 @@
       ><code>&lt;revisions></code></olink> element. <link linkend="segmentItem"
         >&lt;segmentItem></link> has a simplified data model compared to <olink targetdoc="unitItem.xml" targetptr="unitItem"><code>&lt;unitItem</code></olink>) to
     cater primarily for target changes without changing segmentation while at the same time tracking segment states and/or substates.</para>
-    <para><emphasis>Contains:</emphasis></para>
+    <para><emphasis>Type:</emphasis></para>
   <simplelist>
     <member>- Zero or one <olink targetdoc="../strcutural/source.xml" targetptr="source"
         ><code>&lt;xlf:source></code></olink> elements followed by:</member> 

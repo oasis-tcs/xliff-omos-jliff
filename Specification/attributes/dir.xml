@@ -8,7 +8,7 @@
 <section id="dir">
   <title>dir</title>
   <para>Directionality - indicates the directionality of content.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end?></para>
   <para><emphasis>Value description:</emphasis>
     <code>"ltr"</code> (Left-To-Right), <code>"rtl"</code> (Right-To-Left), or <code>"auto"</code>

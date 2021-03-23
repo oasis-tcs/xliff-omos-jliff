@@ -10,7 +10,7 @@
     <para>Container for logical groups of revisions associated with a sibling element, or a child of
     a sibling element, to the change track extension within the scope of the enclosing
     element.</para>
-    <para><emphasis>Contains:</emphasis></para>
+    <para><emphasis>Type:</emphasis></para>
     <simplelist>
         <member>- One or more <olink targetdoc="../../elements/change-tracking/revision.xml" targetptr="revision"><code>&lt;revision></code></olink> elements.</member>
     </simplelist>

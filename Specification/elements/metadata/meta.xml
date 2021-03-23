@@ -10,7 +10,7 @@
         mda_meta
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object<?oxy_custom_end?></title>
     <para>Container for a single metadata component.</para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object<?oxy_custom_end?>.</para>
     <simplelist>
         <member><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>- Non-translatable

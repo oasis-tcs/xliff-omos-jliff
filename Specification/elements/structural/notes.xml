@@ -9,7 +9,7 @@
     <title>anonymous array of note objects</title>
     <para>Collection of comments pertaining to the given node including all of its
         descendants</para>
-    <para><emphasis>Contains:</emphasis></para>
+    <para><emphasis>Type:</emphasis></para>
     <simplelist>
         <member>- One or more <olink targetdoc="note.xml" targetptr="note"><code>note</code></olink>
             objects</member>

@@ -10,7 +10,7 @@
     <para>Part of the extracted content that is not included in a segment (and therefore not
         translatable). For example tools can use <code>&lt;ignorable&gt;</code> to store the white
         space and/or codes that are between two segments.</para>
-    <para><emphasis>Contains:</emphasis> object.</para>
+    <para><emphasis>Type:</emphasis> object.</para>
     <simplelist>
         <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
         <member>- One <olink targetdoc="source.xml" targetptr="source"

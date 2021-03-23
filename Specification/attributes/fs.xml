@@ -17,7 +17,7 @@
     information is needed, the <glossterm>optional</glossterm>
     <olink targetdoc="subFs.xml" targetptr="subFs"><code>fs_subFs</code></olink> string is
     provided.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end?></para>
   <para><emphasis>Value description:</emphasis><table>
       <title>Values</title>

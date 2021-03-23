@@ -12,7 +12,7 @@
       ><code>&lt;revisions></code></olink> element. <link linkend="contentItem"
         >&lt;contentItem></link> has a simplified data model compared to <olink targetdoc="unitItem.xml" targetptr="unitItem"><code>&lt;unitItem</code></olink>) to
     cater for either source, or target only change tracking without changing segmentation.</para>
-    <para><emphasis>Contains:</emphasis></para>
+    <para><emphasis>Type:</emphasis></para>
   <simplelist>
     <member>-<firstterm>XLIFF Core</firstterm>
       <olink targetdoc="../inline.xml" targetptr="inlineelements">Inline Elements</olink> and text

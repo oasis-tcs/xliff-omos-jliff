@@ -10,7 +10,7 @@
   <para>References the localized counterpart of the sibling <olink
       targetdoc="../../elements/resourceData/res_source.xml" targetptr="res_source"
         ><code>res_source</code></olink> object.</para>
-  <para><emphasis>Contains:</emphasis> object.</para>
+  <para><emphasis>Type:</emphasis> object.</para>
   <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>Either</para>
   <simplelist>
     <member>- elements from other namespaces</member>
