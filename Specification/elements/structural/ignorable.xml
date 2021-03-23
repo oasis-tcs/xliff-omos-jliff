@@ -11,13 +11,6 @@
         translatable). For example tools can use <code>&lt;ignorable&gt;</code> to store the white
         space and/or codes that are between two segments.</para>
     <para><emphasis>Type:</emphasis> object.</para>
-    <simplelist>
-        <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
-        <member>- One <olink targetdoc="source.xml" targetptr="source"
-                ><code>&lt;source></code></olink> element followed by</member>
-        <member>- Zero or one <olink targetdoc="target.xml" targetptr="target"
-                    ><code>&lt;target></code></olink> element<?oxy_custom_end?></member>
-    </simplelist>
     
     <para><emphasis>Properties:</emphasis></para>
     <simplelist>
@@ -32,6 +25,13 @@
             <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>string<?oxy_custom_end?>,
                 <glossterm>required</glossterm><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
             with fixed value <code>"ignorable"</code><?oxy_custom_end?></member>
+        <member>- <code>"sourceXmlLang"</code>, a <olink targetdoc="../../attributes/xml_lang.xml" targetptr="xml_lang"><code>"sourceXmlLang"</code></olink> string, <glossterm>optional</glossterm> with a
+            [BCP 47] tag value</member>
+        <member>- <code>"targetXmlLang"</code>, a <olink targetdoc="../../attributes/xml_lang.xml" targetptr="xml_lang"><code>"targetXmlLang"</code></olink> string, <glossterm>optional</glossterm> with a
+            [BCP 47] tag value</member>
+        <member>- <code>"targetOrder"</code>, a <olink targetdoc="../../attributes/order.xml"
+                targetptr="order"><code>"targetOrder"</code></olink> number,
+                <glossterm>optional</glossterm> with a positive integer value</member>
         <member>-
                 <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"source"</code>,
             a non-empty array of
