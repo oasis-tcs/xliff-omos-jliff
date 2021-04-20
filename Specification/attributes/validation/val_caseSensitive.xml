@@ -11,7 +11,7 @@
   <para>This rule
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
     specifies whether the test defined within that rule is case sensitive or not.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains</emphasis>:
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end?></para>
 
   <para><emphasis>Value description:</emphasis>

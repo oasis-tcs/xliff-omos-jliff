@@ -13,7 +13,7 @@
     specifies the normalization type to apply when validating a rule. Only the normalization forms C
     and D as specified in <olink targetdoc="../../xliff21.xml" targetptr="uax15">[UAX
     #15]</olink>.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains</emphasis>:
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end?></para>
 
   <para><emphasis>Value description:</emphasis> the allowed values are listed in the table below

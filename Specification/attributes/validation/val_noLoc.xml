@@ -12,7 +12,7 @@
 
   <para>Not to localize, noLoc - is a test for the presence of a string (substring) in the source
     text and verification that it exists also in the target text.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains</emphasis>:
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end?></para>
 
   <para><emphasis>Value description:</emphasis> text.</para>

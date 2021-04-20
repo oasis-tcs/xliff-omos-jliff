@@ -12,7 +12,7 @@
   <para>Must localize, mustLoc - is a test for the presence of a string (substring) in the source
     text and a verification that it does not exist in the target text. Alternatively it can be used
     to verify presence of a prescribed replacement string in the target text.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains</emphasis>:
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end?></para>
 
   <para><emphasis>Value description:</emphasis> text.</para>
