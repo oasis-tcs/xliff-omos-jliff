@@ -46,6 +46,14 @@
       a <olink targetdoc="../../attributes/subState.xml" targetptr="substate"
         ><code>subState</code></olink> string,
       <glossterm>optional</glossterm><?oxy_custom_end?></member>
+    <member>- <code>"sourceXmlLang"</code>, a <olink targetdoc="../../attributes/xml_lang.xml" targetptr="xml_lang"><code>"sourceXmlLang"</code></olink> string, <glossterm>optional</glossterm> with a
+      [BCP 47] tag value</member>
+    <member>- <code>"targetXmlLang"</code>, a <olink targetdoc="../../attributes/xml_lang.xml" targetptr="xml_lang"><code>"targetXmlLang"</code></olink> string, <glossterm>optional</glossterm> with a
+      [BCP 47] tag value</member>
+    <member>- <code>"targetOrder"</code>, a <olink targetdoc="../../attributes/order.xml"
+      targetptr="order"><code>"targetOrder"</code></olink> number,
+      <glossterm>optional</glossterm> with a positive integer value</member>
+    
     <member>-
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"source"</code>,
       a non-empty array of
@@ -58,58 +66,7 @@
         <?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?><code>"element"</code>
       objects<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>,
         <glossterm>optional</glossterm><?oxy_custom_end?></member>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
-    <member>- <olink targetdoc="../../attributes/id.xml" targetptr="id"><code>id</code></olink>,
-        <glossterm>optional</glossterm></member>
-    <member>- One <olink targetdoc="source.xml" targetptr="source"><code>source</code></olink>
-      object</member>
-    <member>- Zero or one <olink targetdoc="target.xml" targetptr="target"
-          ><code>&lt;target&gt;</code></olink> element<?oxy_custom_end?></member>
-    <!--  <para><emphasis>Attributes:</emphasis></para>
-
-  <simplelist>
-     This flag got killed in the August 20 2013 meeting <member>- <olink targetdoc="../../attributes/approved.xml"
-      targetptr="approved"><code>approved</code></olink>, <glossterm>required</glossterm></member>-->
-    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
-    <member>- <olink targetdoc="../../attributes/canResegment.xml" targetptr="canResegment"
-          ><code>canResegment</code></olink>,
-      <glossterm>optional</glossterm><?oxy_custom_end?></member>
-    <!-- translate was killed on segment to simplify translatability state algorithm and to simplify re-segmentation PRs,
-      the expressivity is the same due to inline markers
-    <member>- <olink targetdoc="../../attributes/translate.xml"
-    targetptr="translate"><code>translate</code></olink>, <glossterm>optional</glossterm></member>-->
-    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
-    <member>- <olink targetdoc="../../attributes/state.xml" targetptr="state"
-        ><code>state</code></olink>, <glossterm>optional</glossterm></member>
-    <member>- <olink targetdoc="../../attributes/subState.xml" targetptr="substate"
-          ><code>subState</code></olink>, <glossterm>optional</glossterm><?oxy_custom_end?></member>
   </simplelist>
-
-  <!--  The uniqueness scope is described on the id attribute 
-  <itemizedlist>
-    <title>Constraints</title>
-
-    <listitem>
-      <para>The value of the <glossterm>optional</glossterm> <olink
-      targetdoc="../../attributes/id.xml"
-      targetptr="id"><code>id</code></olink> attribute <glossterm>must</glossterm> be unique among
-      all <link linkend="segment"><code>&lt;segment&gt;</code></link> and
-      <olink targetdoc="ignorable.xml"
-      targetptr="ignorable"><code>&lt;ignorable&gt;</code></olink> children of
-      the enclosing <olink targetdoc="unit.xml"
-      targetptr="unit"><code>&lt;unit&gt;</code></olink> element.</para>
-    </listitem>
     
-  </itemizedlist>-->
-  
-  <!-- This flag got killed in the August 20 2013 meeting 
-  <itemizedlist>
-    <title>Processing Requirements</title>
     
-    <listitem>
-      <para><firstterm>Mergers</firstterm> <glossterm>must not</glossterm> <firstterm>Merge</firstterm> back into the original format
-        <link linkend="segment"><code>&lt;segment></code></link> elements with the <olink targetdoc="../../attributes/approved.xml" targetptr="approved"><code>approved</code></olink> flag set to <code>no</code>.</para>
-    </listitem>
-    
-  </itemizedlist>-->
 </section>
