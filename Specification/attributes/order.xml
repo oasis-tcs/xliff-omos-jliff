@@ -6,41 +6,49 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="order">
-    <title>order <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>not used in
-        JLIFF?<?oxy_custom_end?></title>
-    
+    <title>targetOrder</title>
     <para>target order - indicates the order, in which to compose the target content parts.</para>
     <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis><?oxy_custom_end?>
         number.</para>
-    
     <para><emphasis>Value description:</emphasis> positive integer.</para>
-        
     <para><emphasis>Default value:</emphasis> implicit, see below</para>
-    <para>When order is not explicitly set, the <olink targetdoc="../elements/structural/target.xml"
-            targetptr="target"><code>&lt;target></code></olink>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>When order is not
+        explicitly set, the <olink targetdoc="../elements/structural/target.xml" targetptr="target"
+                ><code>&lt;target></code></olink>
         <link linkend="order"><code>order</code></link> corresponds to its sibling <olink
             targetdoc="../elements/structural/source.xml" targetptr="source"
                 ><code>&lt;source></code></olink>, i.e. it is not being moved anywhere when
         composing target content of the enclosing <olink targetdoc="../elements/structural/unit.xml"
-            targetptr="unit"><code>&lt;unit></code></olink> and the implicit <link linkend="order"><code>order</code></link> value is of that position within the <olink
+            targetptr="unit"><code>&lt;unit></code></olink> and the implicit <link linkend="order"
+                ><code>order</code></link> value is of that position within the <olink
             targetdoc="../elements/structural/unit.xml" targetptr="unit"
             ><code>&lt;unit></code></olink>. </para>
-    
-    <para><emphasis>Used in:</emphasis> <olink targetdoc="../elements/structural/target.xml" targetptr="target"><code>&lt;target></code></olink>.</para>
-<itemizedlist>
-    <title>Constraints</title>
-    <listitem><para>The value of the <link linkend="order"><code>order</code></link> attribute <glossterm>must</glossterm> be unique
-        within the enclosing <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink> element.</para></listitem>
+    <para><emphasis>Used in:</emphasis>
+        <olink targetdoc="../elements/structural/target.xml" targetptr="target"
+                ><code>&lt;target></code></olink>.</para>
+    <itemizedlist>
+        <title>Constraints</title>
         <listitem>
-            <para>The value of each of the <link linkend="order"><code>order</code></link> attributes used within a 
-                <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink> element <glossterm>must not</glossterm> be higher than N,
-                where N is the number of all current <olink targetdoc="../elements/structural/segment.xml" targetptr="segment"><code>&lt;segment></code></olink>
-                and <olink targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"><code>&lt;ignorable></code></olink> children of the said
-                <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink> element.</para>
+            <para>The value of the <link linkend="order"><code>order</code></link> attribute
+                    <glossterm>must</glossterm> be unique within the enclosing <olink
+                    targetdoc="../elements/structural/unit.xml" targetptr="unit"
+                        ><code>&lt;unit></code></olink> element.</para>
         </listitem>
-</itemizedlist>    
-<para>See the <olink targetdoc="../segmentation/segmentation.xml" targetptr="segorder">Segments
-            Order</olink> section for the normative usage description.</para>
+        <listitem>
+            <para>The value of each of the <link linkend="order"><code>order</code></link>
+                attributes used within a <olink targetdoc="../elements/structural/unit.xml"
+                    targetptr="unit"><code>&lt;unit></code></olink> element <glossterm>must
+                    not</glossterm> be higher than N, where N is the number of all current <olink
+                    targetdoc="../elements/structural/segment.xml" targetptr="segment"
+                        ><code>&lt;segment></code></olink> and <olink
+                    targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"
+                        ><code>&lt;ignorable></code></olink> children of the said <olink
+                    targetdoc="../elements/structural/unit.xml" targetptr="unit"
+                        ><code>&lt;unit></code></olink> element.</para>
+        </listitem>
+    </itemizedlist>
+    <para>See the <olink targetdoc="../segmentation/segmentation.xml" targetptr="segorder">Segments
+            Order</olink> section for the normative usage description.</para><?oxy_custom_end?>
 </section>
 
 

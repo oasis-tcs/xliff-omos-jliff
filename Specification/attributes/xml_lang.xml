@@ -6,65 +6,54 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="xml_lang">
-    <title>xml:lang</title>
+    <title>sourceXmlLang and targetXmlLang</title>
     
-    <para>Language - the xml:lang attribute specifies the language variant of the text of a given
-        element. For example: <code>xml:lang="fr-FR"</code> indicates the French language as spoken
-        in France.</para>
+    <para>Language - the sourceXmlLang and targetXmlLang properties specify the source and target
+        language variants of the text within a given object. For example: <code>"sourceXmlLang" :
+            "fr-FR"</code> indicates the French language as spoken in France in the text nodes of
+        the child source object.</para>
     
     <para><emphasis>Value description:</emphasis> A language code as described in <olink targetdoc="../xliff21.xml"
         targetptr="bcp47">[BCP 47]</olink>.</para>
     
-    <para><emphasis>Default value:</emphasis> default values for this attribute
-        depend on the element in which it is used:</para>
+    <para><emphasis>Default values:</emphasis></para>
     
     <itemizedlist>
         <listitem>
-            <para>When used in a <olink targetdoc="../elements/structural/source.xml"
-                targetptr="source"><code>&lt;source></code></olink> element:</para>
+            <para>For a <code>"sourceXmlLang"</code> property on an <olink
+                    targetdoc="../elements/structural/segment.xml" targetptr="segment"
+                        ><code>anonymous subunit object "kind" : "segment"</code></olink> object or
+                an <olink targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"
+                        ><code>anonymous subunit object "kind" : "ignorable"</code></olink>
+                object:</para>
             
-            <para>The value set in the <olink targetdoc="srcLang" targetptr="srcLang"><code>srcLang</code></olink> attribute of the enclosing
-                <olink targetdoc="../elements/structural/xliff.xml"
-                targetptr="xliff"><code>&lt;xliff></code></olink> element.</para>
+            <para>The value set on the <olink targetdoc="srcLang" targetptr="srcLang"
+                        ><code>"srcLang"</code></olink> property of the enclosing <olink
+                    targetdoc="../elements/structural/jliff.xml" targetptr="jlif"><code>anonymous
+                        jliff object with property
+                    "files|subfiles|subgroups|subunits"</code></olink> object.</para>
         </listitem>
         <listitem>
-            <para>When used in a <olink targetdoc="../elements/structural/target.xml"
-                targetptr="target"><code>&lt;target></code></olink> element:</para>
+            <para>For a <code>"targetXmlLang"</code> property on an <olink
+                    targetdoc="../elements/structural/segment.xml" targetptr="segment"
+                        ><code>anonymous subunit object "kind" : "segment"</code></olink> object or
+                an <olink targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"
+                        ><code>anonymous subunit object "kind" : "ignorable"</code></olink>
+                object:</para>
             
-            <para>The value set in the <olink targetdoc="trgLang" targetptr="trgLang"><code>trgLang</code></olink> attribute of the enclosing
-                <olink targetdoc="../elements/structural/xliff.xml"
-                    targetptr="xliff"><code>&lt;xliff></code></olink> element.</para>
+            <para>The value set on the <olink targetdoc="trgLang" targetptr="trgLang"
+                        ><code>"trgLang"</code></olink> property of the enclosing <olink
+                    targetdoc="../elements/structural/jliff.xml" targetptr="jlif"><code>anonymous
+                        jliff object with property
+                    "files|subfiles|subgroups|subunits"</code></olink> object.</para>
         </listitem>        
-        <listitem>
-          <para>When used in any other element:</para>
-          <para>The value of the <code>xml:lang</code> attribute of its parent element.
-          </para>   
-        </listitem>
-      
+        
     </itemizedlist>
     
     <para><emphasis>Used in:</emphasis>
-        <olink targetdoc="../elements/structural/source.xml" targetptr="source"
-                ><code>&lt;source></code></olink>, <olink
-            targetdoc="../elements/structural/target.xml" targetptr="target"
-                ><code>&lt;target></code></olink> and where extension attributes are allowed.</para>
+        <olink targetdoc="../elements/structural/segment.xml"
+            targetptr="segment"><code>anonymous subunit object "kind" : "segment"</code></olink> or <olink targetdoc="../elements/structural/ignorable.xml"
+                targetptr="ignorable"><code>anonymous subunit object "kind" : "ignorable"</code></olink> objects.</para>
     
-  <!-- Removed per https://lists.oasis-open.org/archives/xliff/201403/msg00018.html 
-      <itemizedlist>
-        <title>Constraints</title>
-        <listitem>
-            <para><code>xml:lang</code> <glossterm>must not</glossterm> be set on either the <olink targetdoc="../elements/structural/file.xml"
-                targetptr="file"><code>&lt;file></code></olink>, <olink targetdoc="../elements/structural/group.xml"
-                    targetptr="group"><code>&lt;group></code></olink> , or <olink targetdoc="../elements/structural/unit.xml"
-                        targetptr="unit"><code>&lt;unit></code></olink> element.</para>
-        </listitem>
-    </itemizedlist>
-    <warning><para>Although the XML namespace is allowed by extensibility on the above constrained extension
-            points, setting <code>xml:lang</code> on these would conflict with the semantic of
-                <olink targetdoc="srcLang" targetptr="srcLang"><code>srcLang</code></olink>, <olink
-                targetdoc="trgLang" targetptr="trgLang"><code>trgLang</code></olink>, and
-                <code>xml:lang</code> as defined in this specification, because of XLIFF being
-            primarily a bilingual format.</para></warning>
-     -->
+ 
 </section>
-

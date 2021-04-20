@@ -67,7 +67,7 @@
     </authorgroup>
 
 
-    <pubdate>26 January 2021</pubdate>
+    <pubdate>23 March 2021</pubdate>
 
     <copyright>
       <year>2021</year>
@@ -112,7 +112,7 @@
         
         <listitem id="LIOM">
           <para><emphasis>XLIFF 2 Object Model Version 1.0.</emphasis>. Edited by David Filip.
-            26 January 2021. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest version: <ulink url="http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html">http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html</ulink>. </para>
+            23 March 2021. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest version: <ulink url="http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html">http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html</ulink>. </para>
         </listitem>
         
         <listitem>
@@ -249,7 +249,7 @@
       <para><citation>JLIFF-1.0</citation></para>
 
       <para><emphasis>JLIFF Version 1.0</emphasis>. Edited by Robert van
-        Engelen and David Filip. 26 January 2021. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest
+        Engelen and David Filip. 23 March 2021. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest
         version: <ulink url="http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html">http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html</ulink>. </para>
 
       <!-- 
@@ -1249,7 +1249,7 @@
     <para>Root
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>
         for JLIFF documents.</para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
     <simplelist type="vert">
         <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
@@ -1299,7 +1299,7 @@
             property <code>"subfiles"</code> with an array of <?oxy_custom_end ?><link linkend="group"><code>group</code></link>
             <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end ?>.</para>
     </note>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
     <!--  XML elements transposed into JSON properties of the anonymous file object
     <simplelist>
@@ -1514,7 +1514,7 @@
         extracted translatable source text, aligned with the <firstterm>Translated</firstterm> text.
         Group objects provide a way to organize units into a structured
         hierarchy.<?oxy_custom_end ?></para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object with property
             <link linkend="unit"><code>"kind" : "unit"</code></link> or
             <link linkend="group"><code>"kind" :
@@ -1548,7 +1548,7 @@
     <title>skeleton</title>
     <para>Container for non-translatable material pertaining to the <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>parent<?oxy_custom_end ?>
         <link linkend="file"><code>file</code></link> object.</para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
     <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>Either</para>
     <simplelist type="vert">
@@ -1597,7 +1597,7 @@
     <para>Provides a way to organize units into a structured hierarchy.</para>
     <para>Note that this is especially useful for mirroring a source format's hierarchical
         structure.</para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>object.<?oxy_custom_end ?></para>
     <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
     <!--  Exhausetd by the bellow list of properties
@@ -1886,7 +1886,7 @@ CTR is not allowed in XLIFF 2.1 and hence in JLIFF 2.1, but remains allowed in 2
         anonymous container for a dynamic structure of subunit objects. Subunit objects hold the
         extracted translatable source text, aligned with the <firstterm>Translated</firstterm>
         text.<?oxy_custom_end ?></para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
     <simplelist type="vert">
         <!--  covered by the userdata property allowed below
@@ -2207,7 +2207,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     anonymous container to hold in its aligned pair of children objects the minimum portion of
     translatable source text and its <firstterm>Translation</firstterm> in the given <link linkend="segmentation">Segmentation</link>.<?oxy_custom_end ?></para>
 
-  <para><emphasis>Contains:</emphasis>
+  <para><emphasis>Type:</emphasis>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object with property <link linkend="segment"><code>"kind" : "segment"</code></link> or <link linkend="ignorable"><code>"kind" :
     "ignorable"</code></link><?oxy_custom_end ?></para>
 
@@ -2305,6 +2305,13 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"subState"</code>,
       a <link linkend="substate"><code>subState</code></link> string,
       <glossterm>optional</glossterm><?oxy_custom_end ?></member>
+    <member>- <code>"sourceXmlLang"</code>, a <link linkend="xml_lang"><code>"sourceXmlLang"</code></link> string, <glossterm>optional</glossterm> with a
+      [BCP 47] tag value</member>
+    <member>- <code>"targetXmlLang"</code>, a <link linkend="xml_lang"><code>"targetXmlLang"</code></link> string, <glossterm>optional</glossterm> with a
+      [BCP 47] tag value</member>
+    <member>- <code>"targetOrder"</code>, a <link linkend="order"><code>"targetOrder"</code></link> number,
+      <glossterm>optional</glossterm> with a positive integer value</member>
+    
     <member>-
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"source"</code>,
       a non-empty array of
@@ -2317,56 +2324,9 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
         <?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?><code>"element"</code>
       objects<?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>,
         <glossterm>optional</glossterm><?oxy_custom_end ?></member>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
-    <member>- <link linkend="id"><code>id</code></link>,
-        <glossterm>optional</glossterm></member>
-    <member>- One <link linkend="source"><code>source</code></link>
-      object</member>
-    <member>- Zero or one <link linkend="target"><code>&lt;target&gt;</code></link> element<?oxy_custom_end ?></member>
-    <!--   <para><emphasis>Attributes:</emphasis></para>
-
-  <simplelist>
-     This flag got killed in the August 20 2013 meeting <member>- <olink targetdoc="../../attributes/approved.xml"
-      targetptr="approved"><code>approved</code></olink>, <glossterm>required</glossterm></member> -->
-    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
-    <member>- <link linkend="canResegment"><code>canResegment</code></link>,
-      <glossterm>optional</glossterm><?oxy_custom_end ?></member>
-    <!--  translate was killed on segment to simplify translatability state algorithm and to simplify re-segmentation PRs,
-      the expressivity is the same due to inline markers
-    <member>- <olink targetdoc="../../attributes/translate.xml"
-    targetptr="translate"><code>translate</code></olink>, <glossterm>optional</glossterm></member> -->
-    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
-    <member>- <link linkend="state"><code>state</code></link>, <glossterm>optional</glossterm></member>
-    <member>- <link linkend="substate"><code>subState</code></link>, <glossterm>optional</glossterm><?oxy_custom_end ?></member>
   </simplelist>
-
-  <!--   The uniqueness scope is described on the id attribute 
-  <itemizedlist>
-    <title>Constraints</title>
-
-    <listitem>
-      <para>The value of the <glossterm>optional</glossterm> <olink
-      targetdoc="../../attributes/id.xml"
-      targetptr="id"><code>id</code></olink> attribute <glossterm>must</glossterm> be unique among
-      all <link linkend="segment"><code>&lt;segment&gt;</code></link> and
-      <olink targetdoc="ignorable.xml"
-      targetptr="ignorable"><code>&lt;ignorable&gt;</code></olink> children of
-      the enclosing <olink targetdoc="unit.xml"
-      targetptr="unit"><code>&lt;unit&gt;</code></olink> element.</para>
-    </listitem>
     
-  </itemizedlist> -->
-  
-  <!--  This flag got killed in the August 20 2013 meeting 
-  <itemizedlist>
-    <title>Processing Requirements</title>
     
-    <listitem>
-      <para><firstterm>Mergers</firstterm> <glossterm>must not</glossterm> <firstterm>Merge</firstterm> back into the original format
-        <link linkend="segment"><code>&lt;segment></code></link> elements with the <olink targetdoc="../../attributes/approved.xml" targetptr="approved"><code>approved</code></olink> flag set to <code>no</code>.</para>
-    </listitem>
-    
-  </itemizedlist> -->
 </section>
     
     <section id="ignorable">
@@ -2374,12 +2334,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <para>Part of the extracted content that is not included in a segment (and therefore not
         translatable). For example tools can use <code>&lt;ignorable&gt;</code> to store the white
         space and/or codes that are between two segments.</para>
-    <para><emphasis>Contains:</emphasis> object.</para>
-    <simplelist type="vert">
-        <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
-        <member>- One <link linkend="source"><code>&lt;source&gt;</code></link> element followed by</member>
-        <member>- Zero or one <link linkend="target"><code>&lt;target&gt;</code></link> element<?oxy_custom_end ?></member>
-    </simplelist>
+    <para><emphasis>Type:</emphasis> object.</para>
     
     <para><emphasis>Properties:</emphasis></para>
     <simplelist type="vert">
@@ -2394,6 +2349,12 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
             <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>string<?oxy_custom_end ?>,
                 <glossterm>required</glossterm><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
             with fixed value <code>"ignorable"</code><?oxy_custom_end ?></member>
+        <member>- <code>"sourceXmlLang"</code>, a <link linkend="xml_lang"><code>"sourceXmlLang"</code></link> string, <glossterm>optional</glossterm> with a
+            [BCP 47] tag value</member>
+        <member>- <code>"targetXmlLang"</code>, a <link linkend="xml_lang"><code>"targetXmlLang"</code></link> string, <glossterm>optional</glossterm> with a
+            [BCP 47] tag value</member>
+        <member>- <code>"targetOrder"</code>, a <link linkend="order"><code>"targetOrder"</code></link> number,
+                <glossterm>optional</glossterm> with a positive integer value</member>
         <member>-
                 <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"source"</code>,
             a non-empty array of
@@ -2426,7 +2387,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <title>anonymous array of note objects</title>
     <para>Collection of comments pertaining to the given node including all of its
         descendants</para>
-    <para><emphasis>Contains:</emphasis></para>
+    <para><emphasis>Type:</emphasis></para>
     <simplelist type="vert">
         <member>- One or more <link linkend="note"><code>note</code></link>
             objects</member>
@@ -2442,7 +2403,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
         to present end-user readable comments and annotations. A note can contain information about
             <link linkend="source"><code>source</code></link>, <link linkend="target"><code>target</code></link>, <link linkend="unit"><code>unit</code></link>, <link linkend="group"><code>group</code></link>, or <link linkend="file"><code>file</code></link>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end ?>.</para>
-    <para><emphasis>Contains:</emphasis> object.</para>
+    <para><emphasis>Type:</emphasis> object.</para>
     <para><emphasis>Properties:</emphasis></para>
     <simplelist type="vert">
         <member>-
@@ -2512,7 +2473,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
 
   <para>Unit-level collection of original data for the inline codes.</para>
 
-  <para><emphasis>Contains:</emphasis></para>
+  <para><emphasis>Type:</emphasis></para>
 
   <simplelist type="vert">
     <member>- One or more <link linkend="data"><code>&lt;data&gt;</code></link> elements</member>
@@ -2526,7 +2487,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
 
   <para>Storage for the original data of an inline code.</para>
 
-  <para><emphasis>Contains:</emphasis></para>
+  <para><emphasis>Type:</emphasis></para>
 
   <simplelist type="vert">
     <member>- Non-translatable text</member>
@@ -2645,7 +2606,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
 
   <para>Represents a Unicode character that is invalid in XML.</para>
 
-  <para><emphasis>Contains:</emphasis></para>
+  <para><emphasis>Type:</emphasis></para>
 
   <simplelist type="vert">
     <member>This element is always empty.</member>
@@ -2699,7 +2660,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
 
   <para>Represents a standalone code of the original format.</para>
 
-  <para><emphasis>Contains:</emphasis>
+  <para><emphasis>Type:</emphasis>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
 
   <simplelist type="vert">
@@ -2881,7 +2842,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
 
   <para>Represents a well-formed spanning original code.</para>
 
-  <para><emphasis>Contains:</emphasis></para>
+  <para><emphasis>Type:</emphasis></para>
 
   <simplelist type="vert">
     <member>- Text</member>
@@ -3009,7 +2970,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
 
   <para>Start of a spanning original code.</para>
 
-  <para><emphasis>Contains:</emphasis>
+  <para><emphasis>Type:</emphasis>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?></para>
 
   <simplelist type="vert">
@@ -3228,7 +3189,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <section id="ec">
   <title>ec</title>
   <para>End of a spanning original code.</para>
-  <para><emphasis>Contains:</emphasis>
+  <para><emphasis>Type:</emphasis>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
   <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
   <simplelist type="vert">
@@ -3431,7 +3392,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
 
   <para>Represents an annotation pertaining to the marked span.</para>
 
-  <para><emphasis>Contains:</emphasis></para>
+  <para><emphasis>Type:</emphasis></para>
 
   <simplelist type="vert">
     <member>- Text</member>
@@ -3521,7 +3482,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
   <para>Start marker of an annotation where the spanning marker cannot be used for wellformedness
     reasons.</para>
 
-  <para><emphasis>Contains:</emphasis>
+  <para><emphasis>Type:</emphasis>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
 
   <simplelist type="vert">
@@ -3737,7 +3698,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
   <para>End marker of an annotation where the spanning marker cannot be used for wellformedness
     reasons.</para>
 
-  <para><emphasis>Contains:</emphasis>
+  <para><emphasis>Type:</emphasis>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
 
   <simplelist type="vert">
@@ -3867,7 +3828,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     
     <para>Comment target - indicates the property to what the content of the note applies.</para>
     
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     <para><emphasis>Value description:</emphasis>
         <code>"source"</code> or <code>"target"</code>.</para>
@@ -3883,7 +3844,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <title>canCopy</title>
     
     <para>Replication editing hint - indicates whether or not the inline code can be copied.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     
     <para><emphasis>Value description:</emphasis>
@@ -3902,7 +3863,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <title>canDelete</title>
     
     <para>Deletion editing hint - indicates whether or not the inline code can be deleted.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     
     <para><emphasis>Value description:</emphasis>
@@ -3924,7 +3885,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end ?> is
     used can enclose partial spanning codes (i.e. a start code without its corresponding end code,
     or an end code without its corresponding start code).</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
 
   <para><emphasis>Value description:</emphasis>
@@ -3987,7 +3948,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
   <para>Re-ordering editing hint - indicates whether or not the inline code can be re-ordered. See
       <link linkend="editinghints">Editing Hints section</link>
     for more details.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
 
   <para><emphasis>Value description:</emphasis>
@@ -4015,7 +3976,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
             <code>canResegment</code> flag can be reorganized into a different structure of <link linkend="segment"><code>segment</code></link>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end ?>
         within the same parent <link linkend="unit"><code>unit</code></link>.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis><?oxy_custom_end ?>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis><?oxy_custom_end ?>
         string.</para>
     
     <para><emphasis>Value description:</emphasis>
@@ -4063,7 +4024,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <title>category</title>
     
     <para>Category - provides a way to categorize notes.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis><?oxy_custom_end ?>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis><?oxy_custom_end ?>
         string.</para>
     
     <para><emphasis>Value description:</emphasis> text.</para>
@@ -4079,7 +4040,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
   <title>copyOf</title>
 
   <para>Reference to base code - holds the <link linkend="id"><code>id</code></link> of the base code of a copied code.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis><?oxy_custom_end ?>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis><?oxy_custom_end ?>
     string.</para>
 
   <para><emphasis>Value description:</emphasis> NMTOKEN. The <link linkend="id"><code>id</code></link> value of the base
@@ -4141,7 +4102,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><link linkend="ph"><code>ph</code></link>, <link linkend="sc"><code>sc</code></link>, or <link linkend="ec"><code>ec</code></link><?oxy_custom_end ?>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?> that
     contains the original data for a given inline code.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
 
   <para><emphasis>Value description:</emphasis> An <link linkend="XMLSchema2">[XML Schema Datatypes]</link> NMTOKEN that <glossterm>must</glossterm>
@@ -4205,7 +4166,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
       <link linkend="ec"><code>&lt;ec&gt;</code></link>
     object<?oxy_custom_end ?> that contains the original data for the end marker of a given inline
     code.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
   <para><emphasis>Value description:</emphasis> An <link linkend="XMLSchema2">[XML Schema Datatypes]</link> NMTOKEN that <glossterm>must</glossterm>
     be the value of the <link linkend="id"><code>id</code></link>
@@ -4274,7 +4235,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <section id="dir">
   <title>dir</title>
   <para>Directionality - indicates the directionality of content.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
   <para><emphasis>Value description:</emphasis>
     <code>"ltr"</code> (Left-To-Right), <code>"rtl"</code> (Right-To-Left), or <code>"auto"</code>
@@ -4342,7 +4303,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
 
   <para>Display text - holds an alternative user-friendly display representation of the original
     data of the inline code.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
 
   <para><emphasis>Value description:</emphasis> text.</para>
@@ -4461,7 +4422,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
 
   <para>Equivalent text - holds a plain text representation of the original data of the inline code
     that can be used when generating a plain text representation of the content.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
 
   <para><emphasis>Value description:</emphasis> text.</para>
@@ -4600,7 +4561,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <para>ref - a pointer to the location of an external skeleton file pertaining to the enclosing
             <link linkend="file"><code>file</code></link>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     <para><emphasis>Value description:</emphasis> IRI.</para>
     <para><emphasis>Default value:</emphasis> undefined.</para>
@@ -4612,7 +4573,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
   <title>id</title>
 
   <para>Identifier - a character string used to identify an element.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
 
   <para><emphasis>Value description:</emphasis>
@@ -4730,7 +4691,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
 
   <para>Orphan code flag - indicates if the start or end marker of a spanning inline code is not in
     the same <link linkend="unit"><code>unit</code></link> as its corresponding end or start code.</para>
-  <para><emphasis>Contains:</emphasis> string.</para>
+  <para><emphasis>Type:</emphasis> string.</para>
 
   <para><emphasis>Value description:</emphasis>
     <code>"yes"</code> if this start or end code is not in the same <link linkend="unit"><code>unit</code></link> as its
@@ -4828,7 +4789,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     DO<?oxy_custom_end ?></title>
 
   <para>Indicates the type of an object.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
 
   <para><emphasis>Value description:</emphasis>
@@ -4849,7 +4810,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <para>For example: the key in the key/value
         pair in a Java properties file, the ID of a string in a Windows string table, the index
         value of an entry in a database table, etc.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
 
     <para><emphasis>Value description:</emphasis> text.</para>
@@ -4863,35 +4824,32 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
 
 
     <section id="order">
-    <title>order <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>not used in
-        JLIFF?<?oxy_custom_end ?></title>
-    
+    <title>targetOrder</title>
     <para>target order - indicates the order, in which to compose the target content parts.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis><?oxy_custom_end ?>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis><?oxy_custom_end ?>
         number.</para>
-    
     <para><emphasis>Value description:</emphasis> positive integer.</para>
-        
     <para><emphasis>Default value:</emphasis> implicit, see below</para>
-    <para>When order is not explicitly set, the <link linkend="target"><code>&lt;target&gt;</code></link>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>When order is not
+        explicitly set, the <link linkend="target"><code>&lt;target&gt;</code></link>
         <link linkend="order"><code>order</code></link> corresponds to its sibling <link linkend="source"><code>&lt;source&gt;</code></link>, i.e. it is not being moved anywhere when
         composing target content of the enclosing <link linkend="unit"><code>&lt;unit&gt;</code></link> and the implicit <link linkend="order"><code>order</code></link> value is of that position within the <link linkend="unit"><code>&lt;unit&gt;</code></link>. </para>
-    
-    <para><emphasis>Used in:</emphasis> <link linkend="target"><code>&lt;target&gt;</code></link>.</para>
-<itemizedlist>
-    <title>Constraints</title>
-    <listitem><para>The value of the <link linkend="order"><code>order</code></link> attribute <glossterm>must</glossterm> be unique
-        within the enclosing <link linkend="unit"><code>&lt;unit&gt;</code></link> element.</para></listitem>
+    <para><emphasis>Used in:</emphasis>
+        <link linkend="target"><code>&lt;target&gt;</code></link>.</para>
+    <itemizedlist>
+        <title>Constraints</title>
         <listitem>
-            <para>The value of each of the <link linkend="order"><code>order</code></link> attributes used within a 
-                <link linkend="unit"><code>&lt;unit&gt;</code></link> element <glossterm>must not</glossterm> be higher than N,
-                where N is the number of all current <link linkend="segment"><code>&lt;segment&gt;</code></link>
-                and <link linkend="ignorable"><code>&lt;ignorable&gt;</code></link> children of the said
-                <link linkend="unit"><code>&lt;unit&gt;</code></link> element.</para>
+            <para>The value of the <link linkend="order"><code>order</code></link> attribute
+                    <glossterm>must</glossterm> be unique within the enclosing <link linkend="unit"><code>&lt;unit&gt;</code></link> element.</para>
         </listitem>
-</itemizedlist>    
-<para>See the <link linkend="segorder">Segments
-            Order</link> section for the normative usage description.</para>
+        <listitem>
+            <para>The value of each of the <link linkend="order"><code>order</code></link>
+                attributes used within a <link linkend="unit"><code>&lt;unit&gt;</code></link> element <glossterm>must
+                    not</glossterm> be higher than N, where N is the number of all current <link linkend="segment"><code>&lt;segment&gt;</code></link> and <link linkend="ignorable"><code>&lt;ignorable&gt;</code></link> children of the said <link linkend="unit"><code>&lt;unit&gt;</code></link> element.</para>
+        </listitem>
+    </itemizedlist>
+    <para>See the <link linkend="segorder">Segments
+            Order</link> section for the normative usage description.</para><?oxy_custom_end ?>
 </section>
 
     <section id="original">
@@ -4899,7 +4857,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     
     <para>Original file - a pointer to the location of the original document from which the content
         of the enclosing <link linkend="file"><code>file</code></link> object is extracted.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     
     <para><emphasis>Value description:</emphasis> IRI.</para>
@@ -4914,7 +4872,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <section id="priority">
     <title>priority</title>
     <para>Priority - provides a way to prioritize notes.</para>
-    <para><emphasis>Contains:</emphasis> number.</para>
+    <para><emphasis>Type:</emphasis> number.</para>
     <para><emphasis>Value description:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>integer between 1 and
         10, inclusive.<?oxy_custom_end ?></para>
@@ -4936,7 +4894,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <section id="ref">
   <title>ref</title>
   <para>Reference - holds a reference for the associated annotation.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
   <para><emphasis>Value description:</emphasis> A value of the <link linkend="XMLSchema2">[XML Schema Datatypes]</link> type anyURI. The semantics of the value
     depends on the type of annotation:</para>
@@ -5027,7 +4985,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
   <title>srcDir</title>
 
   <para>Source directionality - indicates the directionality of the source content.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
 
   <para><emphasis>Value description:</emphasis>
@@ -5068,7 +5026,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     
     <para>Source language - the code of the language, in which the text to be <firstterm>Translated</firstterm> is
         expressed.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis><?oxy_custom_end ?>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis><?oxy_custom_end ?>
         string.</para>
     
     <para><emphasis>Value description:</emphasis> a language code as described in <link linkend="bcp47">[BCP 47]</link>.</para>
@@ -5089,7 +5047,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     given <link linkend="ec"><code>ec</code></link>
     element or <link linkend="em"><code>em</code></link>
     element corresponds.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis><?oxy_custom_end ?>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis><?oxy_custom_end ?>
     string.</para>
 
   <para><emphasis>Value description:</emphasis>
@@ -5137,7 +5095,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <section id="state">
     <title>state</title>
     <para>State - indicates the state of the translation of a segment.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis><?oxy_custom_end ?>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis><?oxy_custom_end ?>
         string.</para>
     <para><emphasis>Value description:</emphasis> the value <glossterm>must</glossterm> be set to
         one of the following values:</para>
@@ -5698,58 +5656,43 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <para>The attributes from XML namespace used in XLIFF 2.0 are: <link linkend="xml_lang">xml:lang</link> and <link linkend="xml_space">xml:space</link>.</para>
 
     <section id="xml_lang">
-    <title>xml:lang</title>
+    <title>sourceXmlLang and targetXmlLang</title>
     
-    <para>Language - the xml:lang attribute specifies the language variant of the text of a given
-        element. For example: <code>xml:lang="fr-FR"</code> indicates the French language as spoken
-        in France.</para>
+    <para>Language - the sourceXmlLang and targetXmlLang properties specify the source and target
+        language variants of the text within a given object. For example: <code>"sourceXmlLang" :
+            "fr-FR"</code> indicates the French language as spoken in France in the text nodes of
+        the child source object.</para>
     
     <para><emphasis>Value description:</emphasis> A language code as described in <link linkend="bcp47">[BCP 47]</link>.</para>
     
-    <para><emphasis>Default value:</emphasis> default values for this attribute
-        depend on the element in which it is used:</para>
+    <para><emphasis>Default values:</emphasis></para>
     
     <itemizedlist>
         <listitem>
-            <para>When used in a <link linkend="source"><code>&lt;source&gt;</code></link> element:</para>
+            <para>For a <code>"sourceXmlLang"</code> property on an <link linkend="segment"><code>anonymous subunit object "kind" : "segment"</code></link> object or
+                an <link linkend="ignorable"><code>anonymous subunit object "kind" : "ignorable"</code></link>
+                object:</para>
             
-            <para>The value set in the <link linkend="srcLang"><code>srcLang</code></link> attribute of the enclosing
-                <link linkend="xliff"><code>&lt;xliff&gt;</code></link> element.</para>
+            <para>The value set on the <link linkend="srcLang"><code>"srcLang"</code></link> property of the enclosing <link linkend="jlif"><code>anonymous
+                        jliff object with property
+                    "files|subfiles|subgroups|subunits"</code></link> object.</para>
         </listitem>
         <listitem>
-            <para>When used in a <link linkend="target"><code>&lt;target&gt;</code></link> element:</para>
+            <para>For a <code>"targetXmlLang"</code> property on an <link linkend="segment"><code>anonymous subunit object "kind" : "segment"</code></link> object or
+                an <link linkend="ignorable"><code>anonymous subunit object "kind" : "ignorable"</code></link>
+                object:</para>
             
-            <para>The value set in the <link linkend="trgLang"><code>trgLang</code></link> attribute of the enclosing
-                <link linkend="xliff"><code>&lt;xliff&gt;</code></link> element.</para>
+            <para>The value set on the <link linkend="trgLang"><code>"trgLang"</code></link> property of the enclosing <link linkend="jlif"><code>anonymous
+                        jliff object with property
+                    "files|subfiles|subgroups|subunits"</code></link> object.</para>
         </listitem>        
-        <listitem>
-          <para>When used in any other element:</para>
-          <para>The value of the <code>xml:lang</code> attribute of its parent element.
-          </para>   
-        </listitem>
-      
+        
     </itemizedlist>
     
     <para><emphasis>Used in:</emphasis>
-        <link linkend="source"><code>&lt;source&gt;</code></link>, <link linkend="target"><code>&lt;target&gt;</code></link> and where extension attributes are allowed.</para>
+        <link linkend="segment"><code>anonymous subunit object "kind" : "segment"</code></link> or <link linkend="ignorable"><code>anonymous subunit object "kind" : "ignorable"</code></link> objects.</para>
     
-  <!--  Removed per https://lists.oasis-open.org/archives/xliff/201403/msg00018.html 
-      <itemizedlist>
-        <title>Constraints</title>
-        <listitem>
-            <para><code>xml:lang</code> <glossterm>must not</glossterm> be set on either the <olink targetdoc="../elements/structural/file.xml"
-                targetptr="file"><code>&lt;file></code></olink>, <olink targetdoc="../elements/structural/group.xml"
-                    targetptr="group"><code>&lt;group></code></olink> , or <olink targetdoc="../elements/structural/unit.xml"
-                        targetptr="unit"><code>&lt;unit></code></olink> element.</para>
-        </listitem>
-    </itemizedlist>
-    <warning><para>Although the XML namespace is allowed by extensibility on the above constrained extension
-            points, setting <code>xml:lang</code> on these would conflict with the semantic of
-                <olink targetdoc="srcLang" targetptr="srcLang"><code>srcLang</code></olink>, <olink
-                targetdoc="trgLang" targetptr="trgLang"><code>trgLang</code></olink>, and
-                <code>xml:lang</code> as defined in this specification, because of XLIFF being
-            primarily a bilingual format.</para></warning>
-      -->
+ 
 </section>
 
     <section id="xml_space">
@@ -8399,7 +8342,7 @@ Palouse horses&lt;fn&gt;A Palouse horse is the same as
         mtc_matches
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>array<?oxy_custom_end ?></title>
     <para>Collection of matches retrieved from any leveraging system (MT, TM, etc.)</para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>a non-empty array of
             <link linkend="match"><code>mtc_match</code></link>
         objects.<?oxy_custom_end ?></para>
@@ -8411,7 +8354,7 @@ Palouse horses&lt;fn&gt;A Palouse horse is the same as
     <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>The <code>"items"</code>
     property of a <link linkend="match"><code>mtc_matches</code></link>
     object contains one or more <code>mtc_objects</code>.<?oxy_custom_end ?></para>
-  <para><emphasis>Contains:</emphasis> object.</para>
+  <para><emphasis>Type:</emphasis> object.</para>
   <simplelist type="vert">
     <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
     <member>- Zero or one <link linkend="metadata"><code>&lt;mda:metadata&gt;</code></link> element followed by.</member>
@@ -8561,7 +8504,7 @@ Palouse horses&lt;fn&gt;A Palouse horse is the same as
   <para>Identifier - a character string used to identify a <link linkend="match"><code>mtc_match</code></link>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
 
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
   <para><emphasis>Value description:</emphasis>
     NMTOKEN<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>: a string matching
@@ -8591,7 +8534,7 @@ Palouse horses&lt;fn&gt;A Palouse horse is the same as
         of a <link linkend="match"><code>mtc_match</code></link>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>
         based on an external benchmark or metric.</para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>number<?oxy_custom_end ?>.</para>
     
     <para><emphasis>Value description:</emphasis>
@@ -8620,7 +8563,7 @@ Palouse horses&lt;fn&gt;A Palouse horse is the same as
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>properties<?oxy_custom_end ?>
         based on an externally provided algorithm.</para>
     
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     <para><emphasis>Value description:</emphasis> a decimal number between 0.0 and
         100.0<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>,
@@ -8655,7 +8598,7 @@ Palouse horses&lt;fn&gt;A Palouse horse is the same as
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.
         This is a free text short informative description. For example, 'Microsoft Translator Hub'
         or 'tm-client123-v456', or 'MSTH (52217d25-d9e7-54a2-af44-3d4e4341d112_healthc).' </para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     
     <para><emphasis>Value description:</emphasis> Text.</para>
@@ -8673,7 +8616,7 @@ Palouse horses&lt;fn&gt;A Palouse horse is the same as
   <para>Reference - points to a span of text within the same unit, to which the translation
     candidate is relevant. </para>
 
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
   <para><emphasis>Value description:</emphasis> IRI.</para>
 
@@ -8706,7 +8649,7 @@ Palouse horses&lt;fn&gt;A Palouse horse is the same as
     contains a <firstterm>Translation</firstterm> into a reference language rather than into the
     target language. For example, a German translation can be used as reference by a Luxembourgish
     translator.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
 
   <para><emphasis>Value description:</emphasis>
@@ -8729,7 +8672,7 @@ Palouse horses&lt;fn&gt;A Palouse horse is the same as
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>
         and the translatable text being matched.</para>
     
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         number.<?oxy_custom_end ?></para>
     <para><emphasis>Value description:</emphasis> a decimal number between 0.0 and
         100.0<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>,
@@ -8747,7 +8690,7 @@ Palouse horses&lt;fn&gt;A Palouse horse is the same as
   <para>Sub-type - indicates the sub-type, i.e. a secondary level type, of a <link linkend="match"><code>mtc_match</code></link>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
 
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
   <para><emphasis>Value description:</emphasis>
   </para>
@@ -8793,7 +8736,7 @@ Palouse horses&lt;fn&gt;A Palouse horse is the same as
     information can be added using the <link linkend="candidates_subtype"><code>mtc_subType</code></link>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>.</para>
 
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
   <para><emphasis>Value description:</emphasis>
   </para>
@@ -8956,7 +8899,7 @@ Palouse horses&lt;fn&gt;A Palouse horse is the same as
             <section id="glossary">
     <title>gls_glossary</title>
     <para>Container for a list of glossary terms.</para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>non-empty array of <?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>anonymous<?oxy_custom_end ?>
         <link linkend="glossentry"><code>gls_glossEntry</code></link>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end ?>.</para>
@@ -8966,7 +8909,7 @@ Palouse horses&lt;fn&gt;A Palouse horse is the same as
         gls_glossEntry
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object<?oxy_custom_end ?></title>
     <para>A glossary entry in the glossary array.</para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
     <simplelist type="vert">
         <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
@@ -9040,7 +8983,7 @@ Palouse horses&lt;fn&gt;A Palouse horse is the same as
     <title>gls_term</title>
     <para>Term: a term in the glossary, expressed in the source language of the enclosing <link linkend="xliff"><code>jliff</code></link>
     object.</para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
 
   <para>
@@ -9092,7 +9035,7 @@ Palouse horses&lt;fn&gt;A Palouse horse is the same as
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>
         expressed in the target language of the enclosing <link linkend="xliff"><code>jliff</code></link> object. Multiple translations can be
         specified as synonyms.</para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>non-empty array of
         objects.<?oxy_custom_end ?></para>
     <para><emphasis><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Properties of
@@ -9150,7 +9093,7 @@ Palouse horses&lt;fn&gt;A Palouse horse is the same as
     <title>gls_definition</title>
     <para>Optional definition in plain text for the term stored in the sibling <link linkend="term"><code>gls_term</code></link>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
 
   <para>
@@ -9211,7 +9154,7 @@ Palouse horses&lt;fn&gt;A Palouse horse is the same as
 
   <para>Identifier - a character string used to identify a <link linkend="glossentry"><code>gls_glossEntry</code></link> or <link linkend="translation"><code>gls_translation</code></link>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
 
   <para><emphasis>Value description:</emphasis>
@@ -9240,7 +9183,7 @@ Palouse horses&lt;fn&gt;A Palouse horse is the same as
 
   <para>Reference - points to a span of source or target text within the same unit, to which the
     glossary entry is relevant.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
 
   <para><emphasis>Value description:</emphasis> IRI.</para>
@@ -9272,7 +9215,7 @@ Palouse horses&lt;fn&gt;A Palouse horse is the same as
     <?oxy_custom_end ?>where the
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?> is
     defined.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
 
   <para><emphasis>Value description:</emphasis> text.</para>
@@ -9287,7 +9230,7 @@ Palouse horses&lt;fn&gt;A Palouse horse is the same as
     DEFINITION]<?oxy_custom_end ?></title>
 
   <para>Text - the text content of a glossary object.</para>
-  <para><emphasis>Contains:</emphasis> string.</para>
+  <para><emphasis>Type:</emphasis> string.</para>
 
   <para><emphasis>Value description:</emphasis> text.</para>
 
@@ -9420,7 +9363,7 @@ standard HTML browsers.</para>
     information is needed, the <glossterm>optional</glossterm>
     <link linkend="subFs"><code>fs_subFs</code></link> string is
     provided.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
   <para><emphasis>Value description:</emphasis><table>
       <title>Values</title>
@@ -9995,7 +9938,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
         <section id="metadata">
     <title>mda_metadata</title>
     <para>Container for metadata associated with the enclosing object.</para>
-   <para><emphasis>Contains:</emphasis> object.</para>
+   <para><emphasis>Type:</emphasis> object.</para>
    <simplelist type="vert">
     <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
     <member>- One or more <link linkend="metagroup"><code>&lt;metaGroup&gt;</code></link> elements</member><?oxy_custom_end ?>
@@ -10105,7 +10048,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
         mda_metaGroup
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object<?oxy_custom_end ?></title>
     <para>Provides a way to organize metadata into a structured hierarchy.</para>
-    <para><emphasis>Contains:</emphasis> object.</para>
+    <para><emphasis>Type:</emphasis> object.</para>
     <simplelist type="vert">
         <member><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>- One or more
                 <link linkend="metagroup"><code>&lt;metaGroup&gt;</code></link> or <link linkend="meta"><code>&lt;meta&gt;</code></link> elements in any
@@ -10139,7 +10082,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
         mda_meta
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object<?oxy_custom_end ?></title>
     <para>Container for a single metadata component.</para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object<?oxy_custom_end ?>.</para>
     <simplelist type="vert">
         <member><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>- Non-translatable
@@ -10169,7 +10112,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
     <title>mda_appliesTo</title>
 
     <para>Property indicating the element to which the content of the metagroup applies.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
 
     <para><emphasis>Value description:</emphasis>
@@ -10186,7 +10129,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
 
   <para>Property indicating a category for metadata contained in the enclosing <link linkend="metagroup"><code>mda_metaGroup</code></link>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
   <para><emphasis>Value description:</emphasis> text.</para>
 
@@ -10200,7 +10143,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
   <title>mda_id</title>
 
   <para>Property string used to identify a <link linkend="metadata"><code>mda_metadata</code></link> or a <link linkend="metagroup"><code>mda_metaGroup</code></link> object.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis><?oxy_custom_end ?>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis><?oxy_custom_end ?>
     string.</para>
 
   <para><emphasis>Value description:</emphasis>
@@ -10228,7 +10171,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
 
   <para>Property containing the the type of metadata contained by the enclosing
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
 
   <para><emphasis>Value description:</emphasis> text.</para>
@@ -10297,7 +10240,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
     <title>res_resourceData</title>
     <para>Parent container for resource data associated with the enclosing
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis><?oxy_custom_end ?>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis><?oxy_custom_end ?>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object.<?oxy_custom_end ?></para>
     <para><emphasis>Properties:</emphasis></para>
     <simplelist type="vert">
@@ -10332,7 +10275,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
     <para>Specifies a reference to an associated <link linkend="res_resourceItem"><code>res_resourceItem</code></link>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>
     located at the <link linkend="file"><code>file</code></link> level.</para>
-    <para><emphasis>Contains:</emphasis> object.</para>
+    <para><emphasis>Type:</emphasis> object.</para>
     <simplelist type="vert">
     <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
     <member>This element is always empty.</member><?oxy_custom_end ?>
@@ -10387,7 +10330,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
   <para>Container for specific resource data that is either intended for
       <firstterm>Modification</firstterm>, or to be used as contextual reference during
       <firstterm>Translation</firstterm>.</para>
-  <para><emphasis>Contains:</emphasis>
+  <para><emphasis>Type:</emphasis>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
   <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>At least one of the
     following</para>
@@ -10500,7 +10443,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
   <para>References the actual resource data that is either intended for
       <firstterm>Modification</firstterm>, or to be used as contextual reference during
       <firstterm>Translation</firstterm>.</para>
-  <para><emphasis>Contains:</emphasis>
+  <para><emphasis>Type:</emphasis>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
   <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>Either</para>
   <simplelist type="vert">
@@ -10592,7 +10535,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
     <section id="res_target">
   <title>res_target</title>
   <para>References the localized counterpart of the sibling <link linkend="res_source"><code>res_source</code></link> object.</para>
-  <para><emphasis>Contains:</emphasis> object.</para>
+  <para><emphasis>Type:</emphasis> object.</para>
   <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>Either</para>
   <simplelist type="vert">
     <member>- elements from other namespaces</member>
@@ -10687,7 +10630,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
     <para>References contextual data relating to the <link linkend="res_source"><code>res_source</code></link> and <link linkend="res_target"><code>res_target</code></link>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end ?>,
     such as a German screenshot for a Luxembourgish translator.</para>
-    <para><emphasis>Contains:</emphasis> object.</para>
+    <para><emphasis>Type:</emphasis> object.</para>
     <simplelist type="vert">
     <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
     <member>- This element is always empty.<?oxy_custom_end ?></member>
@@ -10753,7 +10696,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
 
   <para>Identifier - a character string used to identify a <link linkend="res_resourceData"><code>res_resourceData</code></link>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
 
   <para><emphasis>Value description:</emphasis>
@@ -10772,7 +10715,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
             <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?><code>"res_lang":
             "fr-FR"</code><?oxy_custom_end ?> indicates the French language as spoken in
         France.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis><?oxy_custom_end ?>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis><?oxy_custom_end ?>
         string.</para>
     
     <para><emphasis>Value description:</emphasis> a language code as described in <link linkend="bcp47">[BCP 47]</link>.</para>
@@ -10789,7 +10732,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
     the content type of <ulink url="http://tools.ietf.org/rfc/rfc2045.txt">[RFC 2045]</ulink>, the
     MIME specification; e.g. mimeType="text/xml" indicates the resource data is a text file of XML
     format.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis><?oxy_custom_end ?>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis><?oxy_custom_end ?>
     string.</para>
 
   <para><emphasis>Value description:</emphasis> a MIME type. An existing MIME type
@@ -10807,7 +10750,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
 
   <para>Contextual Information - indicates whether an external resource is to be used for context
     only and not modified.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
 
   <para><emphasis>Value description:</emphasis>
@@ -10823,7 +10766,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
   <title>res_href</title>
 
   <para>Hypertext Reference, href - IRI referencing an external resource.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis><?oxy_custom_end ?>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis><?oxy_custom_end ?>
     string.</para>
 
   <para><emphasis>Value description:</emphasis> IRI.</para>
@@ -10839,7 +10782,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
   <para>Resource Item Reference - holds a reference to an associated <link linkend="res_resourceItem"><code>res_resourceItem</code></link>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>
     located at the <link linkend="file"><code>file</code></link> level.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     object.<?oxy_custom_end ?></para>
 
   <para><emphasis>Value description:</emphasis>
@@ -11023,7 +10966,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
     <para>Parent container for change tracking information associated with a sibling element, or a
         child of a sibling element, to the change track extension within the scope of the enclosing
         element.</para>
-    <para><emphasis>Contains:</emphasis></para>
+    <para><emphasis>Type:</emphasis></para>
     <simplelist type="vert">
         <member>- One or more <link linkend="revisions"><code>&lt;revisions&gt;</code></link> elements.</member>
     </simplelist>
@@ -11042,7 +10985,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
     <para>Container for logical groups of revisions associated with a sibling element, or a child of
     a sibling element, to the change track extension within the scope of the enclosing
     element.</para>
-    <para><emphasis>Contains:</emphasis></para>
+    <para><emphasis>Type:</emphasis></para>
     <simplelist type="vert">
         <member>- One or more <link linkend="revision"><code>&lt;revision&gt;</code></link> elements.</member>
     </simplelist>
@@ -11113,7 +11056,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
     <section id="revision">
     <title>revision</title>
     <para>Container for specific revisions associated with a sibling element, or a child of a sibling element, to the change track extension within the scope of the enclosing element.</para>
-    <para><emphasis>Contains:</emphasis></para>
+    <para><emphasis>Type:</emphasis></para>
     <simplelist type="vert">
         <member>- One or more <link linkend="item"><code>&lt;item&gt;</code></link> elements.</member>
     </simplelist>
@@ -11164,7 +11107,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
     <title>item</title>
     <para>Container for a specific revision associated with a sibling element, or a child of a
     sibling element, to the change track extension within the scope of the enclosing element.</para>
-    <para><emphasis>Contains:</emphasis></para>
+    <para><emphasis>Type:</emphasis></para>
     <simplelist type="vert">
         <member>- Text</member>
     </simplelist>
@@ -11205,7 +11148,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
   <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>ChangeTrack<?oxy_custom_end ?>
     ctr_appliesTo – Indicates a specific XLIFF element which is a sibling, or a child of a sibling
     element, to the change track extension within the scope of the enclosing element.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
 
   <para><emphasis>Value description:</emphasis>
@@ -11229,7 +11172,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
   <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>ChangeTrack<?oxy_custom_end ?>
     ctr_author - Indicates the user or agent that created or modified the referenced element or its
     attributes.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
 
   <para><emphasis>Value description:</emphasis> text.</para>
@@ -11246,7 +11189,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
 
   <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>ChangeTrack<?oxy_custom_end ?>
     ctr_currentVersion - holds a reference to the most current version of a revision.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
 
   <para><emphasis>Value description:</emphasis> an <link linkend="XMLSchema2">[XML Schema Datatypes]</link> NMTOKEN:
@@ -11523,7 +11466,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
         specified the default values (empty) of those
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end ?>
         will disable restriction checking in the file.</para>
-    <para><emphasis>Contains:</emphasis> object</para>
+    <para><emphasis>Type:</emphasis> object</para>
     <simplelist type="vert">
         <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
         <member>- Zero or one <link linkend="slr_normalization"><code>&lt;normalization&gt;</code></link> element
@@ -11587,7 +11530,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>properties<?oxy_custom_end ?>
     specifying the normalization form to apply to storage and size restrictions defined in the
     standard profiles.</para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object.<?oxy_custom_end ?></para>
     <simplelist type="vert">
     <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
@@ -11625,7 +11568,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
     <para>This object act as a container for data needed by the specified profile to check the part
     of the JLIFF document that is a sibling or descendant of a sibling of this object. It is not
     used by the default profiles.</para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
     <simplelist type="vert">
     <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
@@ -12168,7 +12111,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
     <para><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Array containing
     a<?oxy_custom_end ?> list of rules and constraints to apply to the target text of the enclosing
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
     <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>non-empty array of <link linkend="rule"><code>val_rule</code></link>objects.<?oxy_custom_end ?></para>
     <simplelist type="vert">
         <member><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>- One or more
@@ -12213,7 +12156,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
     <title>anonymous val_rule object</title>
     <para>A specific rule and constraint to apply to the target text of the enclosing
         element.</para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
     <simplelist type="vert">
         <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
@@ -16078,7 +16021,7 @@ annotatorsRef had been addressed already for csprd01
     <title>anonymous its_locQualityIssue object</title>
     <para>Localization Quality Issue - a standoff object to hold information about a single <link linkend="ITS20">[ITS]</link> defined Localization Quality
         Issue.</para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
     <simplelist type="vert">
         <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
@@ -16165,7 +16108,7 @@ annotatorsRef had been addressed already for csprd01
   <title>its_locQualityIssues</title>
   <para>Localization Quality Issues - an array of standoff wrapper objects to group any number of
     single issue elements related to the same span of source or target content.</para>
-  <para><emphasis>Contains:</emphasis>
+  <para><emphasis>Type:</emphasis>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>non-empty array of
     objects<?oxy_custom_end ?>.</para>
   <simplelist type="vert">
@@ -16226,7 +16169,7 @@ annotatorsRef had been addressed already for csprd01
     <title>anonymous its_provenanceRecord object</title>
     <para>Provenance Record - a standoff object to hold information of a single <link linkend="ITS20">[ITS]</link> defined Provenance
         Record.</para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
     <simplelist type="vert">
         <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
@@ -16343,7 +16286,7 @@ annotatorsRef had been addressed already for csprd01
     <title>its_provenanceRecords</title>
     <para>Provenance Records - an array of standoff wrapper objects to group any number of single
     Provenance Record elements related to the same span of source or target content.</para>
-    <para><emphasis>Contains:</emphasis>
+    <para><emphasis>Type:</emphasis>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>non-empty array of
     objects<?oxy_custom_end ?>.</para>
     <simplelist type="vert">
@@ -16453,7 +16396,7 @@ annotatorsRef had been addressed already for csprd01
         See the <ulink url="https://www.w3.org/TR/its20/#allowedchars-local">its_allowedCharacters</ulink> definition in the <link linkend="ITS20">[ITS]</link> specification for details on the purpose of the
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>
         and permitted values.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.</para><?oxy_custom_end ?>
     <para><emphasis>Value description:</emphasis> see the <ulink url="https://www.w3.org/TR/its20/#allowedchars-local">its_allowedCharacters</ulink>
         definition in the <link linkend="ITS20">[ITS]</link>
@@ -16476,7 +16419,7 @@ annotatorsRef had been addressed already for csprd01
         <ulink url="http://www.w3.org/TR/2013/REC-its20-20131029/#its-tool-annotation                 ">Tools Annotation</ulink> mechanism.</para>
     
     
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     <para><emphasis>Value description:</emphasis> text.</para>
     
@@ -16729,7 +16672,7 @@ annotatorsRef had been addressed already for csprd01
         <ulink url="http://www.w3.org/TR/its20/#domain">Domain</ulink> data category.</para>
     
     
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     <para><emphasis>Value description:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>a non-empty string value
@@ -16809,7 +16752,7 @@ annotatorsRef had been addressed already for csprd01
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>array
     element<?oxy_custom_end ?>.</para>
 
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
   <para><emphasis>Value description:</emphasis>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>NCNAME: a string matching the
@@ -16881,7 +16824,7 @@ annotatorsRef had been addressed already for csprd01
             attribute on structural elements even outside of XLIFF where the Language Information is
             typically given by the <code>xml:lang</code> attribute.</para>
         </note>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     
     <para><emphasis>Value description:</emphasis> A language code as described in <link linkend="bcp47">[BCP 47]</link>.</para>
@@ -16928,7 +16871,7 @@ annotatorsRef had been addressed already for csprd01
         See the <ulink url="https://www.w3.org/TR/its20/#localefilter-local">its_localeFilterList</ulink> definition in the <link linkend="ITS20">[ITS]</link> specification for details on the purpose of the
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>
         and permitted values.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     <para><emphasis>Value description:</emphasis> see the <ulink url="https://www.w3.org/TR/its20/#localefilter-local">its_localeFilterList</ulink>
         definition in the <link linkend="ITS20">[ITS]</link>
@@ -16958,7 +16901,7 @@ annotatorsRef had been addressed already for csprd01
         See the <ulink url="https://www.w3.org/TR/its20/#localefilter-local">localeFilterType</ulink> definition in the <link linkend="ITS20">[ITS]</link> specification for details on the purpose of the
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>
         and permitted values.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     <para><emphasis>Value description:</emphasis> see the <ulink url="https://www.w3.org/TR/its20/#localefilter-local">its_localeFilterType</ulink>
         definition in the <link linkend="ITS20">[ITS]</link>
@@ -16988,7 +16931,7 @@ annotatorsRef had been addressed already for csprd01
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>
         is intended for human readable comments pertaining to or guidance how to address a specific
         Localization Quality Issue.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     
     
@@ -17022,7 +16965,7 @@ annotatorsRef had been addressed already for csprd01
             <code>its_locQualityIssueEnabled</code>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>. </para>
     <para> This is a flag to enable or disable a particular issue.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     
     <para><emphasis>Value description:</emphasis>
@@ -17065,7 +17008,7 @@ annotatorsRef had been addressed already for csprd01
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>
         references a quality model that has been used to identify and evaluate a particular
         issue.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     
     <para><emphasis>Value description:</emphasis> IRI.</para>
@@ -17104,7 +17047,7 @@ annotatorsRef had been addressed already for csprd01
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>
         references the collection of Localization Issues that pertain to the content span from where
         the reference is declared.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     
     <para><emphasis>Value description:</emphasis> IRI</para>
@@ -17159,7 +17102,7 @@ annotatorsRef had been addressed already for csprd01
         provides the severity score for a particular issue, the higher the number the higher the
         severity. Tools are expected to interpret this score within their own severity rating
         system.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         number.<?oxy_custom_end ?></para>
     
     <para><emphasis>Value description:</emphasis> a floating point number between 0.0 and 100.0,
@@ -17199,7 +17142,7 @@ annotatorsRef had been addressed already for csprd01
         is the <link linkend="ITS20">[ITS]</link> defined
             <code>its_locQualityIssueType</code>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     
     
@@ -17274,7 +17217,7 @@ annotatorsRef had been addressed already for csprd01
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>
         references a quality assessment model that has been used for the rating (either scoring or
         voting).</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     
     <para><emphasis>Value description:</emphasis> IRI.</para>
@@ -17359,7 +17302,7 @@ annotatorsRef had been addressed already for csprd01
         provides the quality rating score pertaining to a structural or inline portion of target
         text, the higher the number the better the quality rating. Tools are expected to interpret
         this score within their own quality rating system.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         number.<?oxy_custom_end ?></para>
     
     <para><emphasis>Value description:</emphasis> a floating point number between 0.0 and 100.0,
@@ -17456,7 +17399,7 @@ annotatorsRef had been addressed already for csprd01
         provides the quality rating score threshold pertaining to any <link linkend="itsm_locQualityRatingScore"><code>its_locQualityRatingScore</code></link>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>
         in scope. Scores under the given threshold indicte a quality check fail.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         number.<?oxy_custom_end ?></para>
     
     <para><emphasis>Value description:</emphasis> a floating point number between 0.0 and 100.0,
@@ -17549,7 +17492,7 @@ annotatorsRef had been addressed already for csprd01
         inline portion of target text, the higher the number the more positive votes or the better
         margin of positive votes over negative votes. Tools are expected to interpret this value
         within their own quality rating system.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         integer.<?oxy_custom_end ?></para>
     
     <para><emphasis>Value description:</emphasis> an integer value.</para>
@@ -17644,7 +17587,7 @@ annotatorsRef had been addressed already for csprd01
         provides the minimum passing vote threshold for any Localization Quality Rating Votes that
         are in scope of the <link linkend="itsm_locQualityRatingVoteThreshold"><code>its_locQualityRatingVoteThreshold</code></link>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         integer.<?oxy_custom_end ?></para>
     
     <para><emphasis>Value description:</emphasis> an integer value.</para>
@@ -17738,7 +17681,7 @@ annotatorsRef had been addressed already for csprd01
         is the <link linkend="ITS20">[ITS]</link> defined
             <code>its_mtConfidence</code>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         number.<?oxy_custom_end ?></para>
     
     
@@ -17835,7 +17778,7 @@ annotatorsRef had been addressed already for csprd01
     
     <para>Organization - the <code>its_org</code> attribute is the <link linkend="ITS20">[ITS]</link> defined <code>its_org</code>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     
     
@@ -17941,7 +17884,7 @@ annotatorsRef had been addressed already for csprd01
         is the <link linkend="ITS20">[ITS]</link> defined
             <code>its_orgRef</code>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     
     
@@ -18051,7 +17994,7 @@ annotatorsRef had been addressed already for csprd01
         is the <link linkend="ITS20">[ITS]</link> defined
             <code>its_person</code>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     
     
@@ -18159,7 +18102,7 @@ annotatorsRef had been addressed already for csprd01
         is the <link linkend="ITS20">[ITS]</link> defined
             <code>its_personRef</code>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     
     
@@ -18266,7 +18209,7 @@ annotatorsRef had been addressed already for csprd01
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>
         references the collection of Provenance Records that pertain to the content span or
         structural element content from where the reference is declared.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     
     <para><emphasis>Value description:</emphasis> IRI.</para>
@@ -18352,7 +18295,7 @@ annotatorsRef had been addressed already for csprd01
         is the <link linkend="ITS20">[ITS]</link> defined
             <code>its_revOrg</code>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     
     
@@ -18467,7 +18410,7 @@ annotatorsRef had been addressed already for csprd01
         is the <link linkend="ITS20">[ITS]</link> defined
             <code>its_revOrgRef</code>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     
     
@@ -18582,7 +18525,7 @@ annotatorsRef had been addressed already for csprd01
         is the <link linkend="ITS20">[ITS]</link> defined
             <code>its_revPerson</code>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     
     
@@ -18699,7 +18642,7 @@ annotatorsRef had been addressed already for csprd01
     <para>Revision Person Reference - the <code>its_revPersonRef</code> attribute is the <link linkend="ITS20">[ITS]</link> defined
             <code>its_revPersonRef</code>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     
     
@@ -18817,7 +18760,7 @@ annotatorsRef had been addressed already for csprd01
         is the <link linkend="ITS20">[ITS]</link> defined
             <code>its_revTool</code>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     
     
@@ -18939,7 +18882,7 @@ annotatorsRef had been addressed already for csprd01
         is the <link linkend="ITS20">[ITS]</link> defined
             <code>its_revToolRef</code>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     
     
@@ -19059,7 +19002,7 @@ annotatorsRef had been addressed already for csprd01
         is the <link linkend="ITS20">[ITS]</link> defined
             <code>its_taClassRef</code>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     
     
@@ -19088,7 +19031,7 @@ annotatorsRef had been addressed already for csprd01
         is the <link linkend="ITS20">[ITS]</link> defined
             <code>its_taConfidence</code>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         number.<?oxy_custom_end ?></para>
     
     
@@ -19128,7 +19071,7 @@ annotatorsRef had been addressed already for csprd01
         is the <link linkend="ITS20">[ITS]</link> defined
             <code>its_taIdent</code>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
 
 
@@ -19164,7 +19107,7 @@ annotatorsRef had been addressed already for csprd01
         is the <link linkend="ITS20">[ITS]</link> defined
             <code>its_taIdentRef</code>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     
     
@@ -19194,7 +19137,7 @@ annotatorsRef had been addressed already for csprd01
         is the <link linkend="ITS20">[ITS]</link> defined
             <code>its_taSource</code>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     
     
@@ -19231,7 +19174,7 @@ annotatorsRef had been addressed already for csprd01
         is the <link linkend="ITS20">[ITS]</link> defined
             <code>its_termConfidence</code>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         number.<?oxy_custom_end ?></para>
     
     
@@ -19273,7 +19216,7 @@ annotatorsRef had been addressed already for csprd01
         is the <link linkend="ITS20">[ITS]</link> defined
             <code>its_tool</code>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     
     
@@ -19388,7 +19331,7 @@ annotatorsRef had been addressed already for csprd01
         is the <link linkend="ITS20">[ITS]</link> defined
             <code>its_toolRef</code>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains:</emphasis>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
         string.<?oxy_custom_end ?></para>
     
     

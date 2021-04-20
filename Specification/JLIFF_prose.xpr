@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project version="22.1">
+<project>
     <meta>
         <filters directoryPatterns="" filePatterns="JLIFF_prose.xpr" positiveFilePatterns="" showHiddenFiles="false"/>
         <options>
-            <serialized version="22.1" xml:space="preserve">
+            <serialized xml:space="preserve">
                 <serializableOrderedMap>
                     <entry>
                         <String>enable.project.master.files.support</String>
@@ -14,7 +14,7 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>jliff.xml</String>
+                                    <String>jliff-v1.0-wd01.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -34,7 +34,7 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>jliff-v1.0-wd01.xml</String>
+                                    <String>jliff.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
