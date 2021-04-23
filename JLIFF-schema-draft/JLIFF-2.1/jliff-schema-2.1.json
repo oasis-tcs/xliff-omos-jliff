@@ -284,7 +284,7 @@
             "target": { "$ref": "#/definitions/elements" },
             "sourceXmlLang": { "$ref": "#/definitions/language" },
             "targetXmlLang": { "$ref": "#/definitions/language" },
-            "targetOrder": { "type": "number", "minimum": 0 }
+            "targetOrder": { "type": "integer", "minimum": 1 }
           },
           "additionalProperties": false,
           "required": [ "kind", "source" ]
@@ -297,7 +297,7 @@
             "target": { "$ref": "#/definitions/elements" },
             "sourceXmlLang": { "$ref": "#/definitions/language" },
             "targetXmlLang": { "$ref": "#/definitions/language" },
-            "targetOrder": { "type": "number", "minimum": 0 }
+            "targetOrder": { "type": "integer", "minimum": 1 }
           },
           "additionalProperties": false,
           "required": [ "kind", "source" ]
