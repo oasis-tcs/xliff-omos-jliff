@@ -67,7 +67,7 @@
     </authorgroup>
 
 
-    <pubdate>23 March 2021</pubdate>
+    <pubdate>27 April 2021</pubdate>
 
     <copyright>
       <year>2021</year>
@@ -112,7 +112,7 @@
         
         <listitem id="LIOM">
           <para><emphasis>XLIFF 2 Object Model Version 1.0.</emphasis>. Edited by David Filip.
-            23 March 2021. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest version: <ulink url="http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html">http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html</ulink>. </para>
+            27 April 2021. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest version: <ulink url="http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html">http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html</ulink>. </para>
         </listitem>
         
         <listitem>
@@ -249,7 +249,7 @@
       <para><citation>JLIFF-1.0</citation></para>
 
       <para><emphasis>JLIFF Version 1.0</emphasis>. Edited by Robert van
-        Engelen and David Filip. 23 March 2021. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest
+        Engelen and David Filip. 27 April 2021. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest
         version: <ulink url="http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html">http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html</ulink>. </para>
 
       <!-- 
@@ -1597,8 +1597,8 @@
     <para>Provides a way to organize units into a structured hierarchy.</para>
     <para>Note that this is especially useful for mirroring a source format's hierarchical
         structure.</para>
-    <para><emphasis>Type:</emphasis>
-        <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>object.<?oxy_custom_end ?></para>
+    <para><emphasis>Type:</emphasis><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+        object.<?oxy_custom_end ?></para>
     <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
     <!--  Exhausetd by the bellow list of properties
     <simplelist>
@@ -1882,12 +1882,11 @@ CTR is not allowed in XLIFF 2.1 and hence in JLIFF 2.1, but remains allowed in 2
 
     <section id="unit">
     <title>anonymous subitem object <code>"kind" : "unit"</code></title>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>This object is an
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>This object is an
         anonymous container for a dynamic structure of subunit objects. Subunit objects hold the
         extracted translatable source text, aligned with the <firstterm>Translated</firstterm>
-        text.<?oxy_custom_end ?></para>
-    <para><emphasis>Type:</emphasis>
-        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
+        text.</para>
+    <para><emphasis>Type:</emphasis> object.<?oxy_custom_end ?></para>
     <simplelist type="vert">
         <!--  covered by the userdata property allowed below
                 <member>- elements from other namespaces, <glossterm>optional</glossterm></member> -->
@@ -1895,11 +1894,10 @@ CTR is not allowed in XLIFF 2.1 and hence in JLIFF 2.1, but remains allowed in 2
         <member>- Zero or one <olink targetdoc="notes.xml" targetptr="notes"
                 ><code>&lt;notes></code></olink> elements followed by</member> -->
         <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
-        <member>- Zero or one <link linkend="originaldata"><code>&lt;originalData&gt;</code></link> element followed by</member>
-        <member>- One or more <link linkend="segment"><code>&lt;segment&gt;</code></link> or <link linkend="ignorable"><code>&lt;ignorable&gt;</code></link> elements in any
-            order.<?oxy_custom_end ?></member>
+        <member>- Zero or one <link linkend="originaldata"><code>&lt;originalData&gt;</code></link> element followed
+        by</member><?oxy_custom_end ?>
     </simplelist>
-    <para><emphasis>Properties:</emphasis></para>
+    <para><emphasis>Core properties:</emphasis></para>
     <simplelist type="vert">
         <member>-
                 <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"id"</code>, a<?oxy_custom_end ?>
@@ -1960,7 +1958,8 @@ CTR is not allowed in XLIFF 2.1 and hence in JLIFF 2.1, but remains allowed in 2
             <para>A <link linkend="unit"><code>unit</code></link> object <glossterm>must</glossterm>
                 contain exactly one
                     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?><code>"subunits"</code>
-                array with at least one anonymous subunit object  <link linkend="segment"><code>"kind" : "segment"</code></link><?oxy_custom_end ?>. </para>
+                array with at least one anonymous subunit object <link linkend="segment"><code>"kind" : "segment"</code></link><?oxy_custom_end ?>.
+            </para>
         </listitem>
         <listitem>
             <para>The following <glossterm>optional</glossterm>
@@ -2041,7 +2040,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
                 </listitem>
                 <listitem>
                     <para>Properties allowed only in JLIFF 2.1</para>
-                <simplelist type="vert">
+                    <simplelist type="vert">
                         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
                         <member>- <code>"its_locQualityRatingProfileRef"</code>, a <link linkend="itsm_locQualityRatingProfileRef"><code>its_locQualityRatingProfileRef</code></link> string with
                             IRI value. <?oxy_custom_end ?></member>
@@ -2148,53 +2147,6 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
             <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><firstterm>Module</firstterm>
                 and Extension elements <glossterm>may</glossterm> be used in any
                 order.<?oxy_custom_end?></para>
-        </listitem> -->
-        <!--  covered by allowed property listings above
-        <listitem>
-            <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>The following
-                    <firstterm>XLIFF Module</firstterm> attributes are explicitly allowed by the
-                wildcard <code>other</code>:</para>
-            <simplelist>
-                <member>- attributes from the namespace
-                    <code>urn:oasis:names:tc:xliff:fs:2.0</code>, <glossterm>optional</glossterm>,
-                    provided that the Constraints specified in the <olink
-                        targetdoc="modules/fs/fs.xml" targetptr="fs-mod">Format Style Module</olink>
-                    are met.</member>
-                <member>- attributes from the namespace
-                        <code>urn:oasis:names:tc:xliff:sizerestriction:2.0</code>,
-                        <glossterm>optional</glossterm>, provided that the Constraints specified in
-                    the <olink targetdoc="modules/size_restriction/specification.xml"
-                        targetptr="size_restriction_module">Size and Length Restriction
-                        Module</olink> are met.</member>
-                <member>- attributes from the namespace <code>http://www.w3.org/2005/11/its</code>,
-                        <glossterm>optional</glossterm>, provided that the Constraints specified in
-                    the <olink targetdoc="modules/itsm/specification.xml" targetptr="ITS-module">ITS
-                        Module</olink> are met.</member>
-                <member>- attributes from the namespace
-                        <code>urn:oasis:names:tc:xliff:itsm:2.1</code>,
-                        <glossterm>optional</glossterm>, provided that the Constraints specified in
-                    the <olink targetdoc="../../modules/itsm/specification.xml"
-                        targetptr="ITS-module">ITS Module</olink> are
-                    met.<?oxy_custom_end?></member>
-            </simplelist>
-        </listitem> -->
-        <!--  The id scopes are defined on the id attribute
-            <listitem><para>The value of the
-            <olink targetdoc="../../attributes/id.xml" targetptr="id"><code>id</code></olink>
-            attribute <glossterm>must</glossterm> be unique among all
-            <link linkend="unit"><code>&lt;unit></code></link>
-            children of the enclosing
-            <olink targetdoc="file.xml" targetptr="file"><code>&lt;file></code></olink>
-            element.</para>
-        </listitem> -->
-        <!--  This falg got killed in the August 20 2013 meeting <listitem>
-            <para>For a <link linkend="unit"><code>&lt;unit></code></link> element to be ready for
-                    <emphasis>Merging</emphasis> it is <glossterm>required</glossterm> that all its <olink
-                    targetdoc="segment.xml" targetptr="segment"><code>&lt;segment></code></olink>
-                children with <olink targetdoc="../../attributes/translate.xml"
-                    targetptr="translate"><code>translate</code></olink> set to <code>yes</code>
-                have the <olink targetdoc="../../attributes/approved.xml" targetptr="approved"
-                        ><code>approved</code></olink> attribute set to <code>yes</code>. </para>
         </listitem> -->
     </itemizedlist>
 </section>
@@ -2315,14 +2267,13 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <member>-
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"source"</code>,
       a non-empty array of
-        <?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?><code>"element"</code>
+      <?oxy_custom_end ?>inline<?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>
       objects<?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>,
         <glossterm>required</glossterm><?oxy_custom_end ?></member>
     <member>-
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"target"</code>,
-      a non-empty array of
-        <?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?><code>"element"</code>
-      objects<?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>,
+      a non-empty array of <?oxy_custom_end ?>inline
+      <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>,
         <glossterm>optional</glossterm><?oxy_custom_end ?></member>
   </simplelist>
     
@@ -2349,37 +2300,25 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
             <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>string<?oxy_custom_end ?>,
                 <glossterm>required</glossterm><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
             with fixed value <code>"ignorable"</code><?oxy_custom_end ?></member>
-        <member>- <code>"sourceXmlLang"</code>, a <link linkend="xml_lang"><code>"sourceXmlLang"</code></link> string, <glossterm>optional</glossterm> with a
-            [BCP 47] tag value</member>
-        <member>- <code>"targetXmlLang"</code>, a <link linkend="xml_lang"><code>"targetXmlLang"</code></link> string, <glossterm>optional</glossterm> with a
-            [BCP 47] tag value</member>
+        <member>- <code>"sourceXmlLang"</code>, a <link linkend="xml_lang"><code>"sourceXmlLang"</code></link> string,
+                <glossterm>optional</glossterm> with a [BCP 47] tag value</member>
+        <member>- <code>"targetXmlLang"</code>, a <link linkend="xml_lang"><code>"targetXmlLang"</code></link> string,
+                <glossterm>optional</glossterm> with a [BCP 47] tag value</member>
         <member>- <code>"targetOrder"</code>, a <link linkend="order"><code>"targetOrder"</code></link> number,
                 <glossterm>optional</glossterm> with a positive integer value</member>
         <member>-
                 <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"source"</code>,
             a non-empty array of
-                <?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?><code>"element"</code>
+            <?oxy_custom_end ?>inline<?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>
             objects<?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>,
                 <glossterm>required</glossterm><?oxy_custom_end ?></member>
         <member>-
                 <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"target"</code>,
             a non-empty array of
-                <?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?><code>"element"</code>
+            <?oxy_custom_end ?>inline<?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>
             objects<?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>,
                 <glossterm>optional</glossterm></member><?oxy_custom_end ?>
     </simplelist>
-    
-    <!--  The uniqueness scope is described on the id attribute <itemizedlist>
-        <title>Constraints</title>
-        <listitem><para>The value of the <glossterm>optional</glossterm>
-            <olink targetdoc="../../attributes/id.xml" targetptr="id"><code>id</code></olink> 
-            attribute <glossterm>must</glossterm> be unique among all 
-            <olink targetdoc="segment.xml" targetptr="segment"><code>&lt;segment></code></olink> and
-            <link linkend="ignorable"><code>&lt;ignorable></code></link>
-            children of the enclosing 
-            <olink targetdoc="unit.xml" targetptr="unit"><code>&lt;unit></code></olink> 
-            element.</para></listitem>
-    </itemizedlist>  -->
     
 </section>
     
@@ -2531,64 +2470,64 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <section id="source">
     <title>source property</title>
     <para>Portion of text to be translated.</para>
-    <para><emphasis>Contains an anonymous array of inline objects:</emphasis></para>
+    <para><emphasis><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>Contains a
+            non-empty anonymous array of inline objects:</emphasis></para>
     <simplelist type="vert">
-        <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
-        <member>- Text object</member>
-        <member>- Zero, one or more <link linkend="cp"><code>&lt;cp&gt;</code></link> elements</member>
-        <member>- Zero, one or more <link linkend="ph"><code>&lt;ph&gt;</code></link> elements</member>
-        <member>- Zero, one or more <link linkend="pc"><code>&lt;pc&gt;</code></link> elements</member>
-        <member>- Zero, one or more <link linkend="sc"><code>&lt;sc&gt;</code></link> elements</member>
-        <member>- Zero, one or more <link linkend="ec"><code>&lt;ec&gt;</code></link> elements</member>
-        <member>- Zero, one or more <link linkend="mrk"><code>&lt;mrk&gt;</code></link> elements</member>
-        <member>- Zero, one or more <link linkend="sm"><code>&lt;sm&gt;</code></link> elements</member>
-        <member>- Zero, one or more <link linkend="em"><code>&lt;em&gt;</code></link> elements<?oxy_custom_end ?></member>
+        <member>- Zero, one or more <link linkend="text"><code>text</code></link> objects</member>
+        <!--  XML illegal will appear as literal in JSON <member>- Zero, one or more <olink targetdoc="../inline/cp.xml" targetptr="cp"
+                    ><code>&lt;cp&gt;</code></olink> elements</member>  -->
+        <member>- Zero, one or more <link linkend="ph"><code>ph</code></link> objects</member>
+        <!--  well formed variants are not used in JLIFF <member>- Zero, one or more <olink targetdoc="../inline/pc.xml" targetptr="pc"
+                    ><code>&lt;pc&gt;</code></olink> elements</member>  -->
+        <member>- Zero, one or more <link linkend="sc"><code>sc</code></link> objects</member>
+        <member>- Zero, one or more <link linkend="ec"><code>ec</code></link> objects</member>
+        <!--  well formed variants are not used in JLIFF <member>- Zero, one or more <olink targetdoc="../inline/mrk.xml" targetptr="mrk"
+                    ><code>&lt;mrk&gt;</code></olink> elements</member> -->
+        <member>- Zero, one or more <link linkend="sm"><code>sm</code></link> objects</member>
+        <member>- Zero, one or more <link linkend="em"><code>em</code></link> objects<?oxy_custom_end ?></member>
     </simplelist>
-    <para>[May need to express the xml:lang property?]</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><emphasis>Attributes:</emphasis></para>
-    <simplelist type="vert">
-        <member>- <link linkend="xml_lang"><code>xml:lang</code></link>, <glossterm>optional</glossterm></member>
-        <member>- <link linkend="xml_space"><code>xml:space</code></link>,
-            <glossterm>optional</glossterm><?oxy_custom_end ?></member>
-    </simplelist>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>The text, code, and
+        marker objects appear in a significant order.<?oxy_custom_end ?></para>
+    
+    <!--   JLIFF equivalents of these attrbutes were bumped to the parent segemnt or ignorable <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><emphasis>Attributes:</emphasis></para>
+    <simplelist>
+        <member>- <olink targetdoc="../../attributes/xml_lang.xml" targetptr="xml_lang"
+                    ><code>xml:lang</code></olink>, <glossterm>optional</glossterm></member>
+        <member>- <olink targetdoc="../../attributes/xml_space.xml" targetptr="xml_space"
+                    ><code>xml:space</code></olink>,
+            <glossterm>optional</glossterm><?oxy_custom_end?></member>
+    </simplelist> -->
 </section>
     
     <section id="target">
   <title>target property<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?></title><?oxy_custom_end ?>
   <para>Property to keep the translation of the sibling <link linkend="source">source property</link>.</para>
-  <para><emphasis>Contains an anonymous array of inline objects:</emphasis></para>
+  <para><emphasis><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>Contains a
+      non-empty anonymous array of inline objects:</emphasis></para>
   <simplelist type="vert">
-    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
-    <member>- Zero, one or more <link linkend="cp"><code>cp</code></link> elements</member>
-    <member>- Zero, one or more <link linkend="ph"><code>&lt;ph&gt;</code></link> elements</member>
-    <member>- Zero, one or more <link linkend="pc"><code>&lt;pc&gt;</code></link> elements</member>
-    <member>- Zero, one or more <link linkend="sc"><code>&lt;sc&gt;</code></link> elements</member>
-    <member>- Zero, one or more <link linkend="ec"><code>&lt;ec&gt;</code></link> elements</member>
-    <member>- Zero, one or more <link linkend="mrk"><code>&lt;mrk&gt;</code></link> elements</member>
-    <member>- Zero, one or more <link linkend="sm"><code>&lt;sm&gt;</code></link> elements</member>
-    <member>- Zero, one or more <link linkend="em"><code>&lt;em&gt;</code></link> elements</member>
-    <member>- text object<?oxy_custom_end ?></member>
+    <member>- Zero, one or more <link linkend="text"><code>text</code></link> objects</member>
+    <!--  XML illegal will appear as literal in JSON <member>- Zero, one or more <olink targetdoc="../inline/cp.xml" targetptr="cp"
+                    ><code>&lt;cp&gt;</code></olink> elements</member>  -->
+    <member>- Zero, one or more <link linkend="ph"><code>ph</code></link> objects</member>
+    <!--  well formed variants are not used in JLIFF <member>- Zero, one or more <olink targetdoc="../inline/pc.xml" targetptr="pc"
+                    ><code>&lt;pc&gt;</code></olink> elements</member>  -->
+    <member>- Zero, one or more <link linkend="sc"><code>sc</code></link> objects</member>
+    <member>- Zero, one or more <link linkend="ec"><code>ec</code></link> objects</member>
+    <!--  well formed variants are not used in JLIFF <member>- Zero, one or more <olink targetdoc="../inline/mrk.xml" targetptr="mrk"
+                    ><code>&lt;mrk&gt;</code></olink> elements</member> -->
+    <member>- Zero, one or more <link linkend="sm"><code>sm</code></link> objects</member>
+    <member>- Zero, one or more <link linkend="em"><code>em</code></link> objects<?oxy_custom_end ?></member>
   </simplelist>
-  <para>[We can probably get rid of xml:lang and xml:space, but we have to keep order. So target
-    will have to be an object I am afraid]</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><emphasis>Attributes:</emphasis></para>
-  <simplelist type="vert">
-    <member>- <link linkend="xml_lang"><code>xml:lang</code></link>, <glossterm>optional</glossterm></member>
-    <member>- <link linkend="xml_space"><code>xml:space</code></link>, <glossterm>optional</glossterm></member>
-    <member>- <link linkend="order"><code>order</code></link>, <glossterm>optional</glossterm><?oxy_custom_end ?></member>
-  </simplelist>
-  <itemizedlist>
-    <title>Constraints</title>
-    <listitem>
-      <para>When a <link linkend="target"><code>&lt;target&gt;</code></link> element is a child of
-          <link linkend="segment"><code>&lt;segment&gt;</code></link> or
-          <link linkend="ignorable"><code>&lt;ignorable&gt;</code></link>, the explicit or inherited value of the
-          <glossterm>optional</glossterm>
-        <link linkend="xml_lang"><code>xml:lang</code></link>
-        <glossterm>must</glossterm> be equal to the value of the <link linkend="trgLang"><code>trgLang</code></link>
-        attribute of the enclosing <link linkend="xliff"><code>&lt;xliff&gt;</code></link> element.</para>
-    </listitem>
-  </itemizedlist>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>The text, code, and
+    marker objects appear in a significant order.<?oxy_custom_end ?></para>
+  <!-- JLIFF equivalents of these attrbutes were bumped to the parent segemnt or ignorable <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><emphasis>Attributes:</emphasis></para>
+    <simplelist>
+        <member>- <olink targetdoc="../../attributes/xml_lang.xml" targetptr="xml_lang"
+                    ><code>xml:lang</code></olink>, <glossterm>optional</glossterm></member>
+        <member>- <olink targetdoc="../../attributes/xml_space.xml" targetptr="xml_space"
+                    ><code>xml:space</code></olink>,
+            <glossterm>optional</glossterm><?oxy_custom_end?></member>
+    </simplelist> -->
 </section>
     
 </section>
@@ -2604,7 +2543,11 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <section id="cp">
   <title>cp</title>
 
-  <para>Represents a Unicode character that is invalid in XML.</para>
+  <para>Represents a Unicode character that is invalid in XML.
+    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[cp doesn't have an
+    equivalent in JLIFF, illegal XML needs to be replaced with &lt;cp&gt; when moving from JLIFF to
+    XLIFF, in the opposite direction the &lt;cp&gt; is just replaced with the
+    literal..<?oxy_custom_end ?>]</para>
 
   <para><emphasis>Type:</emphasis></para>
 
@@ -2967,36 +2910,28 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
 
     <section id="sc">
   <title>anonymous object <code>"kind" : "sc"</code></title>
-
   <para>Start of a spanning original code.</para>
-
-  <para><emphasis>Type:</emphasis>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?></para>
-
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    object<?oxy_custom_end ?></para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Used
+      in:</emphasis><?oxy_custom_end ?><!--  "Used in" needs to be applied consistently -->
+  </para>
   <simplelist type="vert">
-    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
-    <member>This element is always empty.<?oxy_custom_end ?></member>
+    <member>- an anonymous <link linkend="source"><code>source</code></link> array or an anonynmous <link linkend="target"><code>target</code></link> array
+      <!--  mrk and pc do not exist in JLIFF so cannot become "parents" -->
+    </member>
   </simplelist>
-
-  <para><emphasis>Parents:</emphasis>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[Note: should be called
-      <emphasis>Used in</emphasis> perhaps? There is no parent object, but an
-    array]<?oxy_custom_end ?></para>
-
-  <simplelist type="vert">
-    <member><link linkend="source"><code>source</code></link>
-      array, <link linkend="target"><code>target</code></link>
-      array<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>, <link linkend="pc"><code>&lt;pc&gt;</code></link> and <link linkend="mrk"><code>&lt;mrk&gt;</code></link><?oxy_custom_end ?></member>
-  </simplelist>
-
-  <para><emphasis>Properties:</emphasis></para>
-
+  <para><emphasis>Core properties:</emphasis></para>
   <simplelist type="vert">
     <member>-
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"kind"</code>, a
         <link linkend="kind"><code>kind</code></link>
       string with fixed value <code>"sc"</code>,
       <glossterm>required</glossterm><?oxy_custom_end ?></member>
+    <member>-
+      <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"id"</code>, a
+        <link linkend="id"><code>id</code></link> string
+      with an NMTOKEN value, <glossterm>required</glossterm><?oxy_custom_end ?></member>
     <member>-
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"canCopy"</code>.
       a <link linkend="cancopy"><code>canCopy</code></link> string with value <code>"yes"</code> or <code>"no"</code>,
@@ -3020,9 +2955,9 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
       <glossterm>optional</glossterm><?oxy_custom_end ?></member>
     <member>-
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"dataRef"</code>,
-      a <link linkend="dataref"><code>dataRef</code></link> string with NMTOKEN value,
+      a <link linkend="dataref"><code>dataRef</code></link> string with an NMTOKEN value,
       <glossterm>optional</glossterm><?oxy_custom_end ?></member>
-    <member><!--  pending discussion with Fredrik  -->-
+    <member>-
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"dir"</code>, a
         <link linkend="dir"><code>dir</code></link> string
       with value <code>"ltr"</code>, <code>"rtl"</code>, or <code>"auto"</code>,
@@ -3036,18 +2971,9 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
         <link linkend="equiv"><code>equiv</code></link>
       string, <glossterm>optional</glossterm><?oxy_custom_end ?></member>
     <member>-
-      <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"id"</code>, a
-        <link linkend="id"><code>id</code></link> string
-      with NMTOKEN value,
-        <glossterm><?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>required<?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?></glossterm><?oxy_custom_end ?></member>
-    <member>-
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"isolated"</code>,
       a <link linkend="isolated"><code>isolated</code></link> string with value <code>"yes"</code> or <code>"no"</code>,
         <glossterm>optional</glossterm><?oxy_custom_end ?></member>
-    <member>-
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"startRef"</code>,
-      a <link linkend="startref"><code>startRef</code></link> string with NMTOKEN value,<?oxy_custom_end ?>
-      <glossterm><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>required<?oxy_custom_end ?></glossterm></member>
     <member>-
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"subFlows"</code>,
       a <link linkend="subflows"><code>subFlows</code></link> string,
@@ -3062,31 +2988,9 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
       string with value <code>"fmt"</code>, <code>"ui"</code>, <code>"quote"</code>,
         <code>"link"</code>, <code>"image"</code>, <code>"its:generic"</code>, or
         <code>"other"</code>, <glossterm>optional</glossterm></member><?oxy_custom_end ?>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
-    <member>- <link linkend="cancopy"><code>canCopy</code></link>, <glossterm>optional</glossterm></member>
-    <member>- <link linkend="cancopy"><code>canDelete</code></link>, <glossterm>optional</glossterm></member>
-    <member>- <link linkend="canoverlap"><code>canOverlap</code></link>, <glossterm>optional</glossterm></member>
-    <member>- <link linkend="canreorder"><code>canReorder</code></link>, <glossterm>optional</glossterm></member>
-    <member>- <link linkend="copyof"><code>copyOf</code></link>, <glossterm>optional</glossterm></member>
-    <member>- <link linkend="dataref"><code>dataRef</code></link>, <glossterm>optional</glossterm></member>
-    <member>- <link linkend="dir"><code>dir</code></link>,
-        <glossterm>optional</glossterm></member>
-    <member>- <link linkend="disp"><code>disp</code></link>, <glossterm>optional</glossterm></member>
-    <member>- <link linkend="equiv"><code>equiv</code></link>, <glossterm>optional</glossterm></member>
-    <member>- <link linkend="id"><code>id</code></link>,
-        <glossterm>required</glossterm></member>
-    <member>- <link linkend="isolated"><code>isolated</code></link>, <glossterm>optional</glossterm></member>
-    <member>- <link linkend="subflows"><code>subFlows</code></link>, <glossterm>optional</glossterm></member>
-    <member>- <link linkend="subtype"><code>subType</code></link>, <glossterm>optional</glossterm></member>
-    <member>- <link linkend="type"><code>type</code></link>, <glossterm>optional</glossterm><?oxy_custom_end ?></member>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
-    <member>- attributes from other namespaces,
-      <glossterm>optional</glossterm><?oxy_custom_end ?></member>
   </simplelist>
-
-  <para><emphasis>Example:</emphasis></para>
-
-  <programlisting format="linespecific"><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>
+  <para><emphasis><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>Example:</emphasis></para>
+  <programlisting format="linespecific">
 &lt;unit id="1"&gt;
   &lt;segment&gt;
     &lt;source&gt;&lt;sc id="1" type="fmt" subType="xlf:b"/&gt;
@@ -3096,21 +3000,16 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     &lt;source&gt;Second sentence.&lt;ec startRef="1" type="fmt"
         subType="xlf:b"/&gt;&lt;/source&gt;
   &lt;/segment&gt;
-&lt;/unit&gt;<?oxy_custom_end ?>
-</programlisting>
-
+&lt;/unit&gt;
+<?oxy_custom_end ?></programlisting>
   <itemizedlist>
     <title>Constraints</title>
-
     <listitem>
       <para>The following <firstterm>JLIFF Module</firstterm>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>properties<?oxy_custom_end ?>
-        are
-        <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>explicitly<?oxy_custom_end ?>
-        allowed <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>by the wildcard
-          <code>other</code><?oxy_custom_end ?>:</para>
-
-        <simplelist type="vert">
+        are <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>explicitly allowed
+        by the wildcard <code>other</code>:<?oxy_custom_end ?></para>
+      <simplelist type="vert">
         <member>-
             <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"fs_fs"</code>,
           a <link linkend="fs"><code>fs_fs</code></link>
@@ -3123,13 +3022,13 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
             Module</link> are met.</member>
         <member>-
             <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"slr_storageRestriction"</code>,
-          a <link linkend="slr_storageRestriction"><code>slr_storageRestriction</code></link><?oxy_custom_end ?>
-          object, provided that the Constraints specified in the <link linkend="size_restriction_module">Size and Length Restriction Module</link> are
+          a <link linkend="slr_storageRestriction"><code>slr_storageRestriction</code></link><?oxy_custom_end ?> object, provided that the
+          Constraints specified in the <link linkend="size_restriction_module">Size and Length Restriction Module</link> are
           met.</member>
         <member>-
             <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"slr_sizeRestriction"</code>,
-          a <link linkend="slr_sizeRestriction"><code>slr_sizeRestriction</code></link><?oxy_custom_end ?>
-          object, provided that the Constraints specified in the <link linkend="size_restriction_module">Size and Length Restriction Module</link> are
+          a <link linkend="slr_sizeRestriction"><code>slr_sizeRestriction</code></link><?oxy_custom_end ?> object, provided that the
+          Constraints specified in the <link linkend="size_restriction_module">Size and Length Restriction Module</link> are
           met.</member>
         <member>-
             <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"slr_equivStorage"</code>,
@@ -3146,42 +3045,39 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
           a <link linkend="slr_sizeInfoRef"><code>slr_sizeInfoRef</code></link> string, provided that
           the Constraints specified in the <link linkend="size_restriction_module">Size and Length Restriction Module</link> are
           met.<?oxy_custom_end ?></member>
-        <member>- <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>attributes from
-          the namespace <code>urn:oasis:names:tc:xliff:fs:2.0</code>,
-            <glossterm>optional</glossterm>, provided that the Constraints specified in the <link linkend="fs-mod">Format Style Module</link> are
-          met.</member>
-        <member>- attributes from the namespace
-            <code>urn:oasis:names:tc:xliff:sizerestriction:2.0</code>,
-            <glossterm>optional</glossterm>, provided that the Constraints specified in the <link linkend="size_restriction_module">Size and Length Restriction Module</link> are
-          met.<?oxy_custom_end ?></member>
-        <!--  may need to allow ITSM at a later stage, but not needed by now 7th Aug, 2015.  -->
+        
       </simplelist>
-
     </listitem>
-    <listitem><para>No other <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>properties<?oxy_custom_end ?>
-        <glossterm>must</glossterm> be used.</para></listitem>
-
+    <listitem>
+      <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>The following
+        optional <emphasis>JLIFF Extension</emphasis> property is allowed:<simplelist type="vert">
+          <member>- <code>"userdata"</code>, a <link linkend="extensions"><code>userdata</code></link>
+            object<?oxy_custom_end ?>.</member>
+        </simplelist></para>
+    </listitem>
+    <listitem>
+      <para>No other <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>properties<?oxy_custom_end ?>
+        <glossterm>must</glossterm> be used.</para>
+    </listitem>
     <listitem>
       <para>The values of the properties <link linkend="cancopy"><code>canCopy</code></link>, <link linkend="candelete"><code>canDelete</code></link>, <link linkend="canreorder"><code>canReorder</code></link> and <link linkend="canoverlap"><code>canOverlap</code></link>
         <glossterm>must</glossterm> be the same as the values the ones in the <link linkend="ec"><code>ec</code></link> element corresponding
         to this start code.</para>
     </listitem>
-
     <listitem>
       <para>The property <link linkend="isolated"><code>isolated</code></link>
         <glossterm>must</glossterm> be set to <code>"yes"</code> if and only if the <link linkend="ec"><code>ec</code></link> element corresponding
         to this start marker is not in the same <link linkend="unit"><code>unit</code></link>,
         and set to <code>"no"</code> otherwise.</para>
     </listitem>
-    </itemizedlist>
-    <itemizedlist>
-      <title>Processing Requirements</title>
-
+  </itemizedlist>
+  <itemizedlist>
+    <title>Processing Requirements</title>
     <listitem>
       <para><firstterm>Extractors</firstterm>
-        <glossterm>must not</glossterm> use the <link linkend="sc"><code>sc</code></link> / <link linkend="ec"><code>ec</code></link> pair to represent standalone codes.</para>
-        <para>Rationale: Using a spanning code for a standalone code can easily result in having
-        text inside a span where the original format does not allow it.</para>
+        <glossterm>must not</glossterm> use an <link linkend="sc"><code>sc</code></link> / <link linkend="ec"><code>ec</code></link> pair to represent standalone codes.</para>
+      <para>Rationale: Using a spanning code for a standalone code can easily result in having text
+        inside a span where the original format does not allow it.</para>
     </listitem>
   </itemizedlist>
 </section>
@@ -3482,26 +3378,18 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
   <para>Start marker of an annotation where the spanning marker cannot be used for wellformedness
     reasons.</para>
 
-  <para><emphasis>Type:</emphasis>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
-
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    object<?oxy_custom_end ?></para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Used
+    in:</emphasis><?oxy_custom_end ?><!--  "Used in" needs to be applied consistently -->
+  </para>
   <simplelist type="vert">
-    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
-    <member>This element is always empty.<?oxy_custom_end ?></member>
+    <member>- an anonymous <link linkend="source"><code>source</code></link> array or an anonynmous <link linkend="target"><code>target</code></link> array
+      <!--  mrk and pc do not exist in JLIFF so cannot become "parents" -->
+    </member>
   </simplelist>
 
-  <para><emphasis>Parents:</emphasis>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[Note: should be called
-      <emphasis>Used in</emphasis> perhaps? There is no parent object, but an
-    array]<?oxy_custom_end ?></para>
-
-  <simplelist type="vert">
-    <member><link linkend="source"><code>source</code></link>
-      array, <link linkend="target"><code>target</code></link>
-      array<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>, <link linkend="pc"><code>&lt;pc&gt;</code></link> and <link linkend="mrk"><code>&lt;mrk&gt;</code></link><?oxy_custom_end ?></member>
-  </simplelist>
-
-  <para><emphasis>Properties:</emphasis></para>
+  <para><emphasis>Core properties:</emphasis></para>
 
   <simplelist type="vert">
     <member>-
@@ -3512,8 +3400,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <member>-
       <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"id"</code>, a
         <link linkend="id"><code>id</code></link> string
-      with NMTOKEN value,
-        <glossterm><?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>required<?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?></glossterm><?oxy_custom_end ?></member>
+      with NMTOKEN value, <glossterm>required</glossterm><?oxy_custom_end ?></member>
     <member>-
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"type"</code>, a
         <link linkend="type"><code>type</code></link>
@@ -3531,17 +3418,17 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <member>-
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"value"</code>, a
         <link linkend="value"><code>value</code></link>
-      string, <glossterm>optional</glossterm></member><?oxy_custom_end ?>
-    <member>-<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?> attributes from
-      other namespaces, <glossterm>optional</glossterm><?oxy_custom_end ?></member>
+      string, <glossterm>optional</glossterm></member>
   </simplelist>
   
   <itemizedlist>
     <title>Constraints</title>
+ <!--  properties that are equvalent to xml: attributes would have to be explicitly allowed in JSON   
     <listitem>
-      <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>The <link linkend="xml_namespace">[XML namespace]</link>
-        <glossterm>must not</glossterm> be used at this extension point.<?oxy_custom_end ?></para>
-    </listitem>
+      <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>The <olink
+          targetdoc="../../xliff21.xml" targetptr="xml_namespace">[XML namespace]</olink>
+        <glossterm>must not</glossterm> be used at this extension point.<?oxy_custom_end?></para>
+    </listitem> -->
     <listitem>
       <para>The following <firstterm>JLIFF Module</firstterm>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>properties<?oxy_custom_end ?>
@@ -3549,143 +3436,187 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
         <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>explicitly<?oxy_custom_end ?>
         allowed <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>by the wildcard
           <code>other</code><?oxy_custom_end ?>:</para>
-      <simplelist type="vert">
-        <member>-
-            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"fs_fs"</code>,
-          a <link linkend="fs"><code>fs_fs</code></link>
-          string<?oxy_custom_end ?>, provided that the Constraints specified in the <link linkend="fs-mod">Format Style Module</link> are
-          met.</member>
-        <member>-
-            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"fs_subFs"</code>,
-          a <link linkend="subFs"><code>fs_subFs</code></link> string,<?oxy_custom_end ?> provided that the Constraints
-          specified in the <link linkend="fs-mod">Format Style
-            Module</link> are met.</member>
-        <member>-
-            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"slr_storageRestriction"</code>,
-          a <link linkend="slr_storageRestriction"><code>slr_storageRestriction</code></link><?oxy_custom_end ?> object, provided that the
-          Constraints specified in the <link linkend="size_restriction_module">Size and Length Restriction Module</link> are
-          met.</member>
-        <member>-
-            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"slr_sizeRestriction"</code>,
-          a <link linkend="slr_sizeRestriction"><code>slr_sizeRestriction</code></link><?oxy_custom_end ?>
-          object, provided that the Constraints specified in the <link linkend="size_restriction_module">Size and Length Restriction Module</link> are
-          met.</member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_allowedCharacters"</code>, a <link linkend="itsm_allowedCharacters"><code>itsm_allowedCharacters</code></link>
-          string.</member>
-        <member>- <code>"its_localeFilterList"</code>, a <link linkend="itsm_localeFilterList"><code>itsm_localeFilterList</code></link> string with
-          default value <code>"*"</code> (U+002A).</member>
-        <member>- <code>"its_localeFilterType"</code>, a <link linkend="itsm_localeFilterType"><code>itsm_localeFilterType</code></link> string with
-          default value <code>"include"</code>.</member>
-        <member>- <code>"its_locQualityIssueComment"</code>, a <link linkend="itsm_locQualityIssueComment"><code>itsm_locQualityIssueComment</code></link>
-          string.</member>
-        <member>- <code>"its_locQualityIssueEnabled"</code>, a <link linkend="itsm_locQualityIssueEnabled"><code>itsm_locQualityIssueEnabled</code></link>
-          string with value <code>"yes"</code> or <code>"no"</code>.</member>
-        <member>- <code>"its_locQualityIssueProfileRef"</code>, a <link linkend="itsm_locQualityIssueProfileRef"><code>itsm_locQualityIssueProfileRef</code></link> string with IRI value.</member>
-        <member>- <code>"its_locQualityIssuesRef"</code>, a <link linkend="itsm_locQualityIssuesRef"><code>itsm_locQualityIssuesRef</code></link>
-          string with IRI value.</member>
-        <member>- <code>"its_locQualityIssueSeverity"</code>, a <link linkend="itsm_locQualityIssueSeverity"><code>itsm_locQualityIssueSeverity</code></link> number between 0 and 100,
-          inclusive.</member>
-        <member>- <code>"its_locQualityIssueType"</code>, a <link linkend="itsm_locQualityIssueType"><code>itsm_locQualityIssueType</code></link>
-          string with value <code>"terminology"</code>, <code>"mistranslation"</code>,
-            <code>"omission"</code>, <code>"untranslated"</code>, <code>"addition"</code>,
-            <code>"duplication"</code>, <code>"inconsistency"</code>, <code>"grammar"</code>,
-            <code>"legal"</code>, <code>"register"</code>, <code>"locale-specific-content"</code>,
-            <code>"locale-violation"</code>, <code>"style"</code>, <code>"characters"</code>,
-            <code>"misspelling"</code>, <code>"typographical"</code>, <code>"formatting"</code>,
-            <code>"inconsistent-entities"</code>, <code>"numbers"</code>, <code>"markup"</code>,
-            <code>"pattern-problem"</code>, <code>"whitespace"</code>,
-            <code>"internationalization"</code>, <code>"length"</code>,
-            <code>"non-conformance"</code>, <code>"uncategorized"</code>, or
-          <code>"other"</code>.<?oxy_custom_end ?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_locQualityRatingProfileRef"</code>, a <link linkend="itsm_locQualityRatingProfileRef"><code>its_locQualityRatingProfileRef</code></link> string with IRI value. </member>
-        <member>- <code>"its_locQualityRatingScore"</code>, a <link linkend="itsm_locQualityRatingScore"><code>its_locQualityRatingScore</code></link>
-          number between 0 and 100 inclusive. <?oxy_custom_end ?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_locQualityRatingScoreThreshold"</code>, a <link linkend="itsm_locQualityRatingScoreThreshold"><code>its_locQualityRatingScoreThreshold</code></link> number between 0 and 100
-          inclusive. <?oxy_custom_end ?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_locQualityRatingVote"</code>, a <link linkend="itsm_locQualityRatingVote"><code>its_locQualityRatingVote</code></link>
-          integer. <?oxy_custom_end ?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_locQualityRatingVoteThreshold"</code>, a <link linkend="itsm_locQualityRatingVoteThreshold"><code>its_locQualityRatingVoteThreshold</code></link> integer.
-          <?oxy_custom_end ?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_termConfidence"</code>, a <link linkend="itsm_termConfidence"><code>its_termConfidence</code></link> number between 0
-          and 1, inclusive.</member>
-        <member>- <code>"its_mtConfidence"</code>, a <link linkend="itsm_mtConfidence"><code>its_mtConfidence</code></link>number between 0 and 1,
-        inclusive.</member><?oxy_custom_end ?>
-      </simplelist>
-      <simplelist type="vert">
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_annotatorsRef"</code>, a <link linkend="itsm_annotatorsRef"><code>its_annotatorsRef</code></link> object. <?oxy_custom_end ?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_org"</code>, a <link linkend="itsm_org"><code>its_org</code></link> string. <?oxy_custom_end ?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_orgRef"</code>, a <link linkend="itsm_orgRef"><code>its_orgRef</code></link> string with IRI value. <?oxy_custom_end ?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_person"</code>, a <link linkend="itsm_person"><code>its_person</code></link> string. <?oxy_custom_end ?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_personRef"</code>, a <link linkend="itsm_personRef"><code>its_personRef</code></link> string with IRI value. <?oxy_custom_end ?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_provenanceRecordsRef"</code>, a <link linkend="itsm_provenanceRecordsRef"><code>its_provenanceRecordsRef</code></link>
-          string with IRI value. <?oxy_custom_end ?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_revOrg"</code>, a <link linkend="itsm_revOrg"><code>its_revOrg</code></link> string. <?oxy_custom_end ?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_revOrgRef"</code>, a <link linkend="itsm_revOrgRef"><code>its_revOrgRef</code></link> string with IRI value. <?oxy_custom_end ?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_revPerson"</code>, a <link linkend="itsm_revPerson"><code>its_revPerson</code></link> string. <?oxy_custom_end ?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_revPersonRef"</code>, a <link linkend="itsm_revPersonRef"><code>its_revPersonRef</code></link> string with IRI value.
-          <?oxy_custom_end ?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_revTool"</code>, a <link linkend="itsm_revTool"><code>its_revTool</code></link> string. <?oxy_custom_end ?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_revToolRef"</code>, a <link linkend="itsm_revToolRef"><code>its_revToolRef</code></link> string with IRI value.
-          <?oxy_custom_end ?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_tool"</code>, a <link linkend="itsm_tool"><code>its_tool</code></link> string. <?oxy_custom_end ?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_toolRef"</code>, a <link linkend="itsm_toolRef"><code>its_toolRef</code></link> string with IRI value. <?oxy_custom_end ?></member>
-        <member>-
-            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"its_provenanceRecords"</code>,
-          a non-empty array of<?oxy_custom_end ?>
-          <link linkend="itsm_provenanceRecords"><code>its_provenanceRecords</code></link> objects.</member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_taClassRef"</code>, a <link linkend="itsm_taClassRef"><code>its_taClassRef</code></link> string with IRI value.
-          <?oxy_custom_end ?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_taConfidence"</code>, a <link linkend="itsm_taConfidence"><code>its_taConfidence</code></link> number between 0 and 1 inclusive.
-          <?oxy_custom_end ?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_taSource"</code>, a <link linkend="itsm_taSource"><code>its_taSource</code></link> string. <?oxy_custom_end ?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_taIdent"</code>, a <link linkend="itsm_taIdent"><code>its_taIdent</code></link> string. <?oxy_custom_end ?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_taIdentRef"</code>, a <link linkend="itsm_taIdentRef"><code>its_taIdentRef</code></link> string with IRI value.
-          <?oxy_custom_end ?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"itsm_domains"</code>, a <link linkend="itsm_domains"><code>itsm_domains</code></link> a non-empty array of non-empty strings not
-          containing the <code>,</code> chatacter (U+002C). </member><?oxy_custom_end ?>
-        <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
-        <member>- attributes from the namespace <code>urn:oasis:names:tc:xliff:fs:2.0</code>,
-            <glossterm>optional</glossterm>, provided that the Constraints specified in the <link linkend="fs-mod">Format Style Module</link> are
-          met.</member>
-        <member>- attributes from the namespace
-            <code>urn:oasis:names:tc:xliff:sizerestriction:2.0</code>,
-            <glossterm>optional</glossterm>, provided that the Constraints specified in the <link linkend="size_restriction_module">Size and Length Restriction Module</link> are
-          met.</member>
-        <member>- attributes from the namespace <code>http://www.w3.org/2005/11/its</code>,
-            <glossterm>optional</glossterm>, provided that the Constraints specified in the <link linkend="ITS-module">ITS Module</link> are
-          met.</member>
-        <member>- attributes from the namespace <code>urn:oasis:names:tc:xliff:itsm:2.1</code>,
-            <glossterm>optional</glossterm>, provided that the Constraints specified in the <link linkend="ITS-module">ITS
-            Module</link> are met.<?oxy_custom_end ?></member>
-      </simplelist>
+      <itemizedlist>
+        <listitem>
+          <para>Properties allowed in both JLIFF 2.1 and JLIFF 2.0:</para>
+          <simplelist type="vert">
+            <member>-
+              <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"fs_fs"</code>,
+              a <link linkend="fs"><code>fs_fs</code></link>
+              string<?oxy_custom_end ?>, provided that the Constraints specified in the <link linkend="fs-mod">Format Style Module</link> are
+              met.</member>
+            <member>-
+              <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"fs_subFs"</code>,
+              a <link linkend="subFs"><code>fs_subFs</code></link> string,<?oxy_custom_end ?> provided that the
+              Constraints specified in the <link linkend="fs-mod">Format Style Module</link> are met.</member>
+            <member>-
+              <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"slr_storageRestriction"</code>,
+              a <link linkend="slr_storageRestriction"><code>slr_storageRestriction</code></link><?oxy_custom_end ?> object, provided that
+              the Constraints specified in the <link linkend="size_restriction_module">Size and Length Restriction Module</link> are
+              met.</member>
+            <member>-
+              <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"slr_sizeRestriction"</code>,
+              a <link linkend="slr_sizeRestriction"><code>slr_sizeRestriction</code></link><?oxy_custom_end ?> object, provided that the
+              Constraints specified in the <link linkend="size_restriction_module">Size and Length Restriction Module</link> are
+              met.</member>
+          </simplelist>
+        </listitem>
+        <listitem>
+          <para>Properties allowed only in JLIFF 2.1:</para>
+          <simplelist type="vert">
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_allowedCharacters"</code>, a <link linkend="itsm_allowedCharacters"><code>itsm_allowedCharacters</code></link>
+              string.</member>
+            <member>- <code>"its_localeFilterList"</code>, a <link linkend="itsm_localeFilterList"><code>itsm_localeFilterList</code></link> string
+              with default value <code>"*"</code> (U+002A).</member>
+            <member>- <code>"its_localeFilterType"</code>, a <link linkend="itsm_localeFilterType"><code>itsm_localeFilterType</code></link> string
+              with default value <code>"include"</code>.</member>
+            <member>- <code>"its_locQualityIssueComment"</code>, a <link linkend="itsm_locQualityIssueComment"><code>itsm_locQualityIssueComment</code></link> string.</member>
+            <member>- <code>"its_locQualityIssueEnabled"</code>, a <link linkend="itsm_locQualityIssueEnabled"><code>itsm_locQualityIssueEnabled</code></link> string with value
+                <code>"yes"</code> or <code>"no"</code>.</member>
+            <member>- <code>"its_locQualityIssueProfileRef"</code>, a <link linkend="itsm_locQualityIssueProfileRef"><code>itsm_locQualityIssueProfileRef</code></link> string with IRI
+              value.</member>
+            <member>- <code>"its_locQualityIssuesRef"</code>, a <link linkend="itsm_locQualityIssuesRef"><code>itsm_locQualityIssuesRef</code></link>
+              string with IRI value.</member>
+            <member>- <code>"its_locQualityIssueSeverity"</code>, a <link linkend="itsm_locQualityIssueSeverity"><code>itsm_locQualityIssueSeverity</code></link> number between 0 and 100,
+              inclusive.</member>
+            <member>- <code>"its_locQualityIssueType"</code>, a <link linkend="itsm_locQualityIssueType"><code>itsm_locQualityIssueType</code></link>
+              string with value <code>"terminology"</code>, <code>"mistranslation"</code>,
+                <code>"omission"</code>, <code>"untranslated"</code>, <code>"addition"</code>,
+                <code>"duplication"</code>, <code>"inconsistency"</code>, <code>"grammar"</code>,
+                <code>"legal"</code>, <code>"register"</code>,
+                <code>"locale-specific-content"</code>, <code>"locale-violation"</code>,
+                <code>"style"</code>, <code>"characters"</code>, <code>"misspelling"</code>,
+                <code>"typographical"</code>, <code>"formatting"</code>,
+                <code>"inconsistent-entities"</code>, <code>"numbers"</code>, <code>"markup"</code>,
+                <code>"pattern-problem"</code>, <code>"whitespace"</code>,
+                <code>"internationalization"</code>, <code>"length"</code>,
+                <code>"non-conformance"</code>, <code>"uncategorized"</code>, or
+                <code>"other"</code>.<?oxy_custom_end ?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_locQualityRatingProfileRef"</code>, a <link linkend="itsm_locQualityRatingProfileRef"><code>its_locQualityRatingProfileRef</code></link> string with IRI value. </member>
+            <member>- <code>"its_locQualityRatingScore"</code>, a <link linkend="itsm_locQualityRatingScore"><code>its_locQualityRatingScore</code></link> number between 0 and 100 inclusive.
+              <?oxy_custom_end ?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_locQualityRatingScoreThreshold"</code>, a <link linkend="itsm_locQualityRatingScoreThreshold"><code>its_locQualityRatingScoreThreshold</code></link> number between 0 and 100
+              inclusive. <?oxy_custom_end ?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_locQualityRatingVote"</code>, a <link linkend="itsm_locQualityRatingVote"><code>its_locQualityRatingVote</code></link>
+              integer. <?oxy_custom_end ?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_locQualityRatingVoteThreshold"</code>, a <link linkend="itsm_locQualityRatingVoteThreshold"><code>its_locQualityRatingVoteThreshold</code></link> integer.
+              <?oxy_custom_end ?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_termConfidence"</code>, a <link linkend="itsm_termConfidence"><code>its_termConfidence</code></link> number
+              between 0 and 1, inclusive.</member>
+            <member>- <code>"its_mtConfidence"</code>, a <link linkend="itsm_mtConfidence"><code>its_mtConfidence</code></link>number between 0
+              and 1, inclusive.</member><?oxy_custom_end ?>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_annotatorsRef"</code>, a <link linkend="itsm_annotatorsRef"><code>its_annotatorsRef</code></link> object.
+              <?oxy_custom_end ?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_org"</code>, a <link linkend="itsm_org"><code>its_org</code></link> string. <?oxy_custom_end ?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_orgRef"</code>, a <link linkend="itsm_orgRef"><code>its_orgRef</code></link> string with IRI value.
+              <?oxy_custom_end ?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_person"</code>, a <link linkend="itsm_person"><code>its_person</code></link> string. <?oxy_custom_end ?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_personRef"</code>, a <link linkend="itsm_personRef"><code>its_personRef</code></link> string with IRI value.
+              <?oxy_custom_end ?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_provenanceRecordsRef"</code>, a <link linkend="itsm_provenanceRecordsRef"><code>its_provenanceRecordsRef</code></link>
+              string with IRI value. <?oxy_custom_end ?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_revOrg"</code>, a <link linkend="itsm_revOrg"><code>its_revOrg</code></link> string. <?oxy_custom_end ?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_revOrgRef"</code>, a <link linkend="itsm_revOrgRef"><code>its_revOrgRef</code></link> string with IRI value.
+              <?oxy_custom_end ?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_revPerson"</code>, a <link linkend="itsm_revPerson"><code>its_revPerson</code></link> string. <?oxy_custom_end ?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_revPersonRef"</code>, a <link linkend="itsm_revPersonRef"><code>its_revPersonRef</code></link> string with IRI
+              value. <?oxy_custom_end ?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_revTool"</code>, a <link linkend="itsm_revTool"><code>its_revTool</code></link> string. <?oxy_custom_end ?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_revToolRef"</code>, a <link linkend="itsm_revToolRef"><code>its_revToolRef</code></link> string with IRI value.
+              <?oxy_custom_end ?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_tool"</code>, a <link linkend="itsm_tool"><code>its_tool</code></link> string. <?oxy_custom_end ?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_toolRef"</code>, a <link linkend="itsm_toolRef"><code>its_toolRef</code></link> string with IRI value.
+              <?oxy_custom_end ?></member>
+            <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"its_provenanceRecords"</code>,
+              a non-empty array of<?oxy_custom_end ?>
+              <link linkend="itsm_provenanceRecords"><code>its_provenanceRecords</code></link>
+              objects.</member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_taClassRef"</code>, a <link linkend="itsm_taClassRef"><code>its_taClassRef</code></link> string with IRI value.
+              <?oxy_custom_end ?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_taConfidence"</code>, a <link linkend="itsm_taConfidence"><code>its_taConfidence</code></link> number between 0
+              and 1 inclusive. <?oxy_custom_end ?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_taSource"</code>, a <link linkend="itsm_taSource"><code>its_taSource</code></link> string. <?oxy_custom_end ?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_taIdent"</code>, a <link linkend="itsm_taIdent"><code>its_taIdent</code></link> string. <?oxy_custom_end ?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_taIdentRef"</code>, a <link linkend="itsm_taIdentRef"><code>its_taIdentRef</code></link> string with IRI value.
+              <?oxy_custom_end ?></member>
+            <member>- <code>"itsm_domains"</code>, a <link linkend="itsm_domains"><code>itsm_domains</code></link> a non-empty array of non-empty strings not
+              containing the <code>,</code> chatacter (U+002C). </member>
+          </simplelist>
+        </listitem>
+        <listitem>
+          <para>Properties allowed only in JLIFF 2.0:</para>
+          <simplelist type="vert">
+            <member> None.</member>
+          </simplelist>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>The following
+        optional <emphasis>JLIFF Extension</emphasis> property is allowed:<simplelist type="vert">
+          <member>- <code>"userdata"</code>, a <link linkend="extensions"><code>userdata</code></link>
+            object<?oxy_custom_end ?>.</member>
+        </simplelist></para>
     </listitem>
     
+        <listitem>
+          <para>No other properties are permitted.</para>
+        </listitem>
+      
+      
+        <!--  all properties from below modules are allowed above, it remains to be seen how to fomrulate modules langauge and how to reference their internal constraints
+          <simplelist>
+            <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
+            <member>- attributes from the namespace <code>urn:oasis:names:tc:xliff:fs:2.0</code>,
+                <glossterm>optional</glossterm>, provided that the Constraints specified in the
+                <olink targetdoc="modules/fs/fs.xml" targetptr="fs-mod">Format Style Module</olink>
+              are met.</member>
+            <member>- attributes from the namespace
+                <code>urn:oasis:names:tc:xliff:sizerestriction:2.0</code>,
+                <glossterm>optional</glossterm>, provided that the Constraints specified in the
+                <olink targetdoc="modules/size_restriction/specification.xml"
+                targetptr="size_restriction_module">Size and Length Restriction Module</olink> are
+              met.</member>
+            <member>- attributes from the namespace <code>http://www.w3.org/2005/11/its</code>,
+                <glossterm>optional</glossterm>, provided that the Constraints specified in the
+                <olink targetdoc="modules/itsm/specification.xml" targetptr="ITS-module">ITS
+                Module</olink> are met.</member>
+            <member>- attributes from the namespace <code>urn:oasis:names:tc:xliff:itsm:2.1</code>,
+                <glossterm>optional</glossterm>, provided that the Constraints specified in the
+                <olink targetdoc="../../modules/itsm/specification.xml" targetptr="ITS-module">ITS
+                Module</olink> are met.<?oxy_custom_end?></member>
+          </simplelist> -->
+       
+  
+    
+    
+  
     
   </itemizedlist>
 
@@ -4830,22 +4761,29 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
         number.</para>
     <para><emphasis>Value description:</emphasis> positive integer.</para>
     <para><emphasis>Default value:</emphasis> implicit, see below</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>When order is not
-        explicitly set, the <link linkend="target"><code>&lt;target&gt;</code></link>
-        <link linkend="order"><code>order</code></link> corresponds to its sibling <link linkend="source"><code>&lt;source&gt;</code></link>, i.e. it is not being moved anywhere when
-        composing target content of the enclosing <link linkend="unit"><code>&lt;unit&gt;</code></link> and the implicit <link linkend="order"><code>order</code></link> value is of that position within the <link linkend="unit"><code>&lt;unit&gt;</code></link>. </para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>When <link linkend="order">targetOrder</link> is not explicitly set, the order of the <link linkend="target"><code>target</code></link> content is the natural one, i.e. it corresponds to its
+        sibling <link linkend="source"><code>source</code></link> property conetnt, i.e. it is not being moved anywhere
+        when composing the target content of the enclosing <link linkend="unit">anonymous subitem object
+                <code>"kind" : "unit"</code></link> and the implicit <link linkend="order"><code>targetOrder</code></link> value the ordinal number (expressed as a positive
+        integer) of that position within the <link linkend="unit">anonymous subitem object <code>"kind" : "unit"</code></link>. </para>
     <para><emphasis>Used in:</emphasis>
-        <link linkend="target"><code>&lt;target&gt;</code></link>.</para>
+        <link linkend="segment">anonymous subunit
+            object <code>"kind" : "segment"</code></link> and <link linkend="ignorable">anonymous subunit
+            object <code>"kind" : "ignorable"</code></link>.</para>
     <itemizedlist>
         <title>Constraints</title>
         <listitem>
-            <para>The value of the <link linkend="order"><code>order</code></link> attribute
-                    <glossterm>must</glossterm> be unique within the enclosing <link linkend="unit"><code>&lt;unit&gt;</code></link> element.</para>
+            <para>The value of the <link linkend="order"><code>targetOrder</code></link> property
+                    <glossterm>must</glossterm> be unique within the enclosing <link linkend="unit">anonymous subitem
+                    object <code>"kind" : "unit"</code></link>.</para>
         </listitem>
         <listitem>
-            <para>The value of each of the <link linkend="order"><code>order</code></link>
-                attributes used within a <link linkend="unit"><code>&lt;unit&gt;</code></link> element <glossterm>must
-                    not</glossterm> be higher than N, where N is the number of all current <link linkend="segment"><code>&lt;segment&gt;</code></link> and <link linkend="ignorable"><code>&lt;ignorable&gt;</code></link> children of the said <link linkend="unit"><code>&lt;unit&gt;</code></link> element.</para>
+            <para>The value of each of the <link linkend="order"><code>targetOrder</code></link>
+                attributes used within a <link linkend="unit">anonymous subitem object <code>"kind" : "unit"</code></link>
+                <glossterm>must not</glossterm> be higher than N, where N is the number of all
+                current <link linkend="segment">anonymous subunit objects <code>"kind" : "segment"</code></link> and <link linkend="ignorable">anonymous
+                    subunit objects <code>"kind" :
+                "ignorable"</code></link>.<?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?></para>
         </listitem>
     </itemizedlist>
     <para>See the <link linkend="segorder">Segments
