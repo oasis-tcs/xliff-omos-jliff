@@ -10,8 +10,8 @@
     <para>Provides a way to organize units into a structured hierarchy.</para>
     <para>Note that this is especially useful for mirroring a source format's hierarchical
         structure.</para>
-    <para><emphasis>Type:</emphasis>
-        <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>object.<?oxy_custom_end?></para>
+    <para><emphasis>Type:</emphasis><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+        object.<?oxy_custom_end?></para>
     <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
     <!-- Exhausetd by the bellow list of properties
     <simplelist>
