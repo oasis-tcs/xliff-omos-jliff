@@ -7,12 +7,11 @@
                          ]>
 <section id="unit">
     <title>anonymous subitem object <code>"kind" : "unit"</code></title>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>This object is an
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>This object is an
         anonymous container for a dynamic structure of subunit objects. Subunit objects hold the
         extracted translatable source text, aligned with the <firstterm>Translated</firstterm>
-        text.<?oxy_custom_end?></para>
-    <para><emphasis>Type:</emphasis>
-        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
+        text.</para>
+    <para><emphasis>Type:</emphasis> object.<?oxy_custom_end?></para>
     <simplelist>
         <!-- covered by the userdata property allowed below
                 <member>- elements from other namespaces, <glossterm>optional</glossterm></member>-->
@@ -21,13 +20,10 @@
                 ><code>&lt;notes></code></olink> elements followed by</member>-->
         <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
         <member>- Zero or one <olink targetdoc="originaldata.xml" targetptr="originaldata"
-                    ><code>&lt;originalData></code></olink> element followed by</member>
-        <member>- One or more <olink targetdoc="segment.xml" targetptr="segment"
-                    ><code>&lt;segment></code></olink> or <olink targetdoc="ignorable"
-                targetptr="ignorable"><code>&lt;ignorable></code></olink> elements in any
-            order.<?oxy_custom_end?></member>
+                    ><code>&lt;originalData></code></olink> element followed
+        by</member><?oxy_custom_end?>
     </simplelist>
-    <para><emphasis>Properties:</emphasis></para>
+    <para><emphasis>Core properties:</emphasis></para>
     <simplelist>
         <member>-
                 <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"id"</code>, a<?oxy_custom_end?>
@@ -93,8 +89,9 @@
             <para>A <link linkend="unit"><code>unit</code></link> object <glossterm>must</glossterm>
                 contain exactly one
                     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?><code>"subunits"</code>
-                array with at least one anonymous subunit object  <olink targetdoc="segment.xml"
-                    targetptr="segment"><code>"kind" : "segment"</code></olink><?oxy_custom_end?>. </para>
+                array with at least one anonymous subunit object <olink targetdoc="segment.xml"
+                    targetptr="segment"><code>"kind" : "segment"</code></olink><?oxy_custom_end?>.
+            </para>
         </listitem>
         <listitem>
             <para>The following <glossterm>optional</glossterm>
@@ -209,7 +206,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
                 </listitem>
                 <listitem>
                     <para>Properties allowed only in JLIFF 2.1</para>
-                <simplelist>
+                    <simplelist>
                         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
                         <member>- <code>"its_locQualityRatingProfileRef"</code>, a <olink
                                 targetdoc="../../attributes/itsm/itsm_locaQualityRatingProfileRef.xml"
@@ -379,53 +376,6 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
             <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><firstterm>Module</firstterm>
                 and Extension elements <glossterm>may</glossterm> be used in any
                 order.<?oxy_custom_end?></para>
-        </listitem>-->
-        <!-- covered by allowed property listings above
-        <listitem>
-            <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>The following
-                    <firstterm>XLIFF Module</firstterm> attributes are explicitly allowed by the
-                wildcard <code>other</code>:</para>
-            <simplelist>
-                <member>- attributes from the namespace
-                    <code>urn:oasis:names:tc:xliff:fs:2.0</code>, <glossterm>optional</glossterm>,
-                    provided that the Constraints specified in the <olink
-                        targetdoc="modules/fs/fs.xml" targetptr="fs-mod">Format Style Module</olink>
-                    are met.</member>
-                <member>- attributes from the namespace
-                        <code>urn:oasis:names:tc:xliff:sizerestriction:2.0</code>,
-                        <glossterm>optional</glossterm>, provided that the Constraints specified in
-                    the <olink targetdoc="modules/size_restriction/specification.xml"
-                        targetptr="size_restriction_module">Size and Length Restriction
-                        Module</olink> are met.</member>
-                <member>- attributes from the namespace <code>http://www.w3.org/2005/11/its</code>,
-                        <glossterm>optional</glossterm>, provided that the Constraints specified in
-                    the <olink targetdoc="modules/itsm/specification.xml" targetptr="ITS-module">ITS
-                        Module</olink> are met.</member>
-                <member>- attributes from the namespace
-                        <code>urn:oasis:names:tc:xliff:itsm:2.1</code>,
-                        <glossterm>optional</glossterm>, provided that the Constraints specified in
-                    the <olink targetdoc="../../modules/itsm/specification.xml"
-                        targetptr="ITS-module">ITS Module</olink> are
-                    met.<?oxy_custom_end?></member>
-            </simplelist>
-        </listitem>-->
-        <!-- The id scopes are defined on the id attribute
-            <listitem><para>The value of the
-            <olink targetdoc="../../attributes/id.xml" targetptr="id"><code>id</code></olink>
-            attribute <glossterm>must</glossterm> be unique among all
-            <link linkend="unit"><code>&lt;unit></code></link>
-            children of the enclosing
-            <olink targetdoc="file.xml" targetptr="file"><code>&lt;file></code></olink>
-            element.</para>
-        </listitem>-->
-        <!-- This falg got killed in the August 20 2013 meeting <listitem>
-            <para>For a <link linkend="unit"><code>&lt;unit></code></link> element to be ready for
-                    <emphasis>Merging</emphasis> it is <glossterm>required</glossterm> that all its <olink
-                    targetdoc="segment.xml" targetptr="segment"><code>&lt;segment></code></olink>
-                children with <olink targetdoc="../../attributes/translate.xml"
-                    targetptr="translate"><code>translate</code></olink> set to <code>yes</code>
-                have the <olink targetdoc="../../attributes/approved.xml" targetptr="approved"
-                        ><code>approved</code></olink> attribute set to <code>yes</code>. </para>
         </listitem>-->
     </itemizedlist>
 </section>

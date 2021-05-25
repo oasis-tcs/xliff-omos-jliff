@@ -8,34 +8,37 @@
 <section id="source">
     <title>source property</title>
     <para>Portion of text to be translated.</para>
-    <para><emphasis>Contains an anonymous array of inline objects:</emphasis></para>
+    <para><emphasis><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>Contains a
+            non-empty anonymous array of inline objects:</emphasis></para>
     <simplelist>
-        <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
-        <member>- Text object</member>
-        <member>- Zero, one or more <olink targetdoc="../inline/cp.xml" targetptr="cp"
-                    ><code>&lt;cp&gt;</code></olink> elements</member>
+        <member>- Zero, one or more <olink targetdoc="../inline/text.xml" targetptr="text"
+                    ><code>text</code></olink> objects</member>
+        <!-- XML illegal will appear as literal in JSON <member>- Zero, one or more <olink targetdoc="../inline/cp.xml" targetptr="cp"
+                    ><code>&lt;cp&gt;</code></olink> elements</member> -->
         <member>- Zero, one or more <olink targetdoc="../inline/ph.xml" targetptr="ph"
-                    ><code>&lt;ph&gt;</code></olink> elements</member>
-        <member>- Zero, one or more <olink targetdoc="../inline/pc.xml" targetptr="pc"
-                    ><code>&lt;pc&gt;</code></olink> elements</member>
+                    ><code>ph</code></olink> objects</member>
+        <!-- well formed variants are not used in JLIFF <member>- Zero, one or more <olink targetdoc="../inline/pc.xml" targetptr="pc"
+                    ><code>&lt;pc&gt;</code></olink> elements</member> -->
         <member>- Zero, one or more <olink targetdoc="../inline/sc.xml" targetptr="sc"
-                    ><code>&lt;sc&gt;</code></olink> elements</member>
+                    ><code>sc</code></olink> objects</member>
         <member>- Zero, one or more <olink targetdoc="../inline/ec.xml" targetptr="ec"
-                    ><code>&lt;ec&gt;</code></olink> elements</member>
-        <member>- Zero, one or more <olink targetdoc="../inline/mrk.xml" targetptr="mrk"
-                    ><code>&lt;mrk&gt;</code></olink> elements</member>
+                    ><code>ec</code></olink> objects</member>
+        <!-- well formed variants are not used in JLIFF <member>- Zero, one or more <olink targetdoc="../inline/mrk.xml" targetptr="mrk"
+                    ><code>&lt;mrk&gt;</code></olink> elements</member>-->
         <member>- Zero, one or more <olink targetdoc="../inline/sm.xml" targetptr="sm"
-                    ><code>&lt;sm&gt;</code></olink> elements</member>
+                    ><code>sm</code></olink> objects</member>
         <member>- Zero, one or more <olink targetdoc="../inline/em.xml" targetptr="em"
-                    ><code>&lt;em&gt;</code></olink> elements<?oxy_custom_end?></member>
+                    ><code>em</code></olink> objects<?oxy_custom_end?></member>
     </simplelist>
-    <para>[May need to express the xml:lang property?]</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><emphasis>Attributes:</emphasis></para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>The text, code, and
+        marker objects appear in a significant order.<?oxy_custom_end?></para>
+    
+    <!--  JLIFF equivalents of these attrbutes were bumped to the parent segemnt or ignorable <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><emphasis>Attributes:</emphasis></para>
     <simplelist>
         <member>- <olink targetdoc="../../attributes/xml_lang.xml" targetptr="xml_lang"
                     ><code>xml:lang</code></olink>, <glossterm>optional</glossterm></member>
         <member>- <olink targetdoc="../../attributes/xml_space.xml" targetptr="xml_space"
                     ><code>xml:space</code></olink>,
             <glossterm>optional</glossterm><?oxy_custom_end?></member>
-    </simplelist>
+    </simplelist>-->
 </section>

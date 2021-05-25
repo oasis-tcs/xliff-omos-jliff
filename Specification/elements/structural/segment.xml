@@ -57,14 +57,13 @@
     <member>-
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"source"</code>,
       a non-empty array of
-        <?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?><code>"element"</code>
+      <?oxy_custom_end?>inline<?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>
       objects<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>,
         <glossterm>required</glossterm><?oxy_custom_end?></member>
     <member>-
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"target"</code>,
-      a non-empty array of
-        <?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?><code>"element"</code>
-      objects<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>,
+      a non-empty array of <?oxy_custom_end?>inline
+      <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>,
         <glossterm>optional</glossterm><?oxy_custom_end?></member>
   </simplelist>
     

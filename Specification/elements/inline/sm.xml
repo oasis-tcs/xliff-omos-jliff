@@ -11,29 +11,20 @@
   <para>Start marker of an annotation where the spanning marker cannot be used for wellformedness
     reasons.</para>
 
-  <para><emphasis>Type:</emphasis>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
-
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    object<?oxy_custom_end?></para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Used
+    in:</emphasis><?oxy_custom_end?><!-- "Used in" needs to be applied consistently-->
+  </para>
   <simplelist>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
-    <member>This element is always empty.<?oxy_custom_end?></member>
+    <member>- an anonymous <olink targetdoc="structural/source.xml" targetptr="source"
+      ><code>source</code></olink> array or an anonynmous <olink
+        targetdoc="structural/target.xml" targetptr="target"><code>target</code></olink> array
+      <!-- mrk and pc do not exist in JLIFF so cannot become "parents"-->
+    </member>
   </simplelist>
 
-  <para><emphasis>Parents:</emphasis>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[Note: should be called
-      <emphasis>Used in</emphasis> perhaps? There is no parent object, but an
-    array]<?oxy_custom_end?></para>
-
-  <simplelist>
-    <member><olink targetdoc="structural/source.xml" targetptr="source"><code>source</code></olink>
-      array, <olink targetdoc="structural/target.xml" targetptr="target"><code>target</code></olink>
-      array<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>, <olink
-        targetdoc="pc.xml" targetptr="pc"><code>&lt;pc&gt;</code></olink> and <olink
-        targetdoc="mrk.xml" targetptr="mrk"
-      ><code>&lt;mrk&gt;</code></olink><?oxy_custom_end?></member>
-  </simplelist>
-
-  <para><emphasis>Properties:</emphasis></para>
+  <para><emphasis>Core properties:</emphasis></para>
 
   <simplelist>
     <member>-
@@ -44,8 +35,7 @@
     <member>-
       <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"id"</code>, a
         <olink targetdoc="../../attributes/id.xml" targetptr="id"><code>id</code></olink> string
-      with NMTOKEN value,
-        <glossterm><?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>required<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?></glossterm><?oxy_custom_end?></member>
+      with NMTOKEN value, <glossterm>required</glossterm><?oxy_custom_end?></member>
     <member>-
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"type"</code>, a
         <olink targetdoc="../../attributes/type.xml" targetptr="type"><code>type</code></olink>
@@ -64,18 +54,17 @@
     <member>-
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"value"</code>, a
         <olink targetdoc="../../attributes/value.xml" targetptr="value"><code>value</code></olink>
-      string, <glossterm>optional</glossterm></member><?oxy_custom_end?>
-    <member>-<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?> attributes from
-      other namespaces, <glossterm>optional</glossterm><?oxy_custom_end?></member>
+      string, <glossterm>optional</glossterm></member>
   </simplelist>
   
   <itemizedlist>
     <title>Constraints</title>
+ <!-- properties that are equvalent to xml: attributes would have to be explicitly allowed in JSON   
     <listitem>
       <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>The <olink
           targetdoc="../../xliff21.xml" targetptr="xml_namespace">[XML namespace]</olink>
         <glossterm>must not</glossterm> be used at this extension point.<?oxy_custom_end?></para>
-    </listitem>
+    </listitem>-->
     <listitem>
       <para>The following <firstterm>JLIFF Module</firstterm>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>properties<?oxy_custom_end?>
@@ -83,232 +72,280 @@
         <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>explicitly<?oxy_custom_end?>
         allowed <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>by the wildcard
           <code>other</code><?oxy_custom_end?>:</para>
-      <simplelist>
-        <member>-
-            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"fs_fs"</code>,
-          a <olink targetdoc="../attributes/fs.xml" targetptr="fs"><code>fs_fs</code></olink>
-          string<?oxy_custom_end?>, provided that the Constraints specified in the <olink
-            targetdoc="modules/fs/fs.xml" targetptr="fs-mod">Format Style Module</olink> are
-          met.</member>
-        <member>-
-            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"fs_subFs"</code>,
-          a <olink targetdoc="../attributes/subfs.xml" targetptr="subFs"
-            ><code>fs_subFs</code></olink> string,<?oxy_custom_end?> provided that the Constraints
-          specified in the <olink targetdoc="modules/fs/fs.xml" targetptr="fs-mod">Format Style
-            Module</olink> are met.</member>
-        <member>-
-            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"slr_storageRestriction"</code>,
-          a <olink targetdoc="../attributes/size_restriction/storage-restriction.xml"
-            targetptr="slr_storageRestriction"
-          ><code>slr_storageRestriction</code></olink><?oxy_custom_end?> object, provided that the
-          Constraints specified in the <olink targetdoc="modules/size_restriction/specification.xml"
-            targetptr="size_restriction_module">Size and Length Restriction Module</olink> are
-          met.</member>
-        <member>-
-            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"slr_sizeRestriction"</code>,
-          a <olink targetdoc="../attributes/size_restriction/size-restriction.xml"
-            targetptr="slr_sizeRestriction"><code>slr_sizeRestriction</code></olink><?oxy_custom_end?>
-          object, provided that the Constraints specified in the <olink
-            targetdoc="modules/size_restriction/specification.xml"
-            targetptr="size_restriction_module">Size and Length Restriction Module</olink> are
-          met.</member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_allowedCharacters"</code>, a <olink
-            targetdoc="../attributes/itsm/itsm_allowedCharacters.xml"
-            targetptr="itsm_allowedCharacters"><code>itsm_allowedCharacters</code></olink>
-          string.</member>
-        <member>- <code>"its_localeFilterList"</code>, a <olink
-            targetdoc="../attributes/itsm/itsm_localeFilterList.xml"
-            targetptr="itsm_localeFilterList"><code>itsm_localeFilterList</code></olink> string with
-          default value <code>"*"</code> (U+002A).</member>
-        <member>- <code>"its_localeFilterType"</code>, a <olink
-            targetdoc="../attributes/itsm/itsm_localeFilterType.xml"
-            targetptr="itsm_localeFilterType"><code>itsm_localeFilterType</code></olink> string with
-          default value <code>"include"</code>.</member>
-        <member>- <code>"its_locQualityIssueComment"</code>, a <olink
-            targetdoc="../attributes/itsm/itsm_locQualityIssueComment.xml"
-            targetptr="itsm_locQualityIssueComment"><code>itsm_locQualityIssueComment</code></olink>
-          string.</member>
-        <member>- <code>"its_locQualityIssueEnabled"</code>, a <olink
-            targetdoc="../attributes/itsm/itsm_locQualityIssueEnabled.xml"
-            targetptr="itsm_locQualityIssueEnabled"><code>itsm_locQualityIssueEnabled</code></olink>
-          string with value <code>"yes"</code> or <code>"no"</code>.</member>
-        <member>- <code>"its_locQualityIssueProfileRef"</code>, a <olink
-            targetdoc="../attributes/itsm/itsm_locQualityIssueProfileRef.xml"
-            targetptr="itsm_locQualityIssueProfileRef"
-            ><code>itsm_locQualityIssueProfileRef</code></olink> string with IRI value.</member>
-        <member>- <code>"its_locQualityIssuesRef"</code>, a <olink
-            targetdoc="../attributes/itsm/itsm_locQualityIssuesRef.xml"
-            targetptr="itsm_locQualityIssuesRef"><code>itsm_locQualityIssuesRef</code></olink>
-          string with IRI value.</member>
-        <member>- <code>"its_locQualityIssueSeverity"</code>, a <olink
-            targetdoc="../attributes/itsm/itsm_locQualityIssueSeverity.xml"
-            targetptr="itsm_locQualityIssueSeverity"
-            ><code>itsm_locQualityIssueSeverity</code></olink> number between 0 and 100,
-          inclusive.</member>
-        <member>- <code>"its_locQualityIssueType"</code>, a <olink
-            targetdoc="../attributes/itsm/itsm_locQualityIssueType.xml"
-            targetptr="itsm_locQualityIssueType"><code>itsm_locQualityIssueType</code></olink>
-          string with value <code>"terminology"</code>, <code>"mistranslation"</code>,
-            <code>"omission"</code>, <code>"untranslated"</code>, <code>"addition"</code>,
-            <code>"duplication"</code>, <code>"inconsistency"</code>, <code>"grammar"</code>,
-            <code>"legal"</code>, <code>"register"</code>, <code>"locale-specific-content"</code>,
-            <code>"locale-violation"</code>, <code>"style"</code>, <code>"characters"</code>,
-            <code>"misspelling"</code>, <code>"typographical"</code>, <code>"formatting"</code>,
-            <code>"inconsistent-entities"</code>, <code>"numbers"</code>, <code>"markup"</code>,
-            <code>"pattern-problem"</code>, <code>"whitespace"</code>,
-            <code>"internationalization"</code>, <code>"length"</code>,
-            <code>"non-conformance"</code>, <code>"uncategorized"</code>, or
-          <code>"other"</code>.<?oxy_custom_end?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_locQualityRatingProfileRef"</code>, a <olink
-            targetdoc="../../attributes/itsm/itsm_locaQualityRatingProfileRef.xml"
-            targetptr="itsm_locQualityRatingProfileRef"
-            ><code>its_locQualityRatingProfileRef</code></olink> string with IRI value. </member>
-        <member>- <code>"its_locQualityRatingScore"</code>, a <olink
-            targetdoc="../../attributes/itsm/itsm_locQualityRatingScore.xml"
-            targetptr="itsm_locQualityRatingScore"><code>its_locQualityRatingScore</code></olink>
-          number between 0 and 100 inclusive. <?oxy_custom_end?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_locQualityRatingScoreThreshold"</code>, a <olink
-            targetdoc="../../attributes/itsm/itsm_locQualityRatingScoreThreshold.xml"
-            targetptr="itsm_locQualityRatingScoreThreshold"
-              ><code>its_locQualityRatingScoreThreshold</code></olink> number between 0 and 100
-          inclusive. <?oxy_custom_end?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_locQualityRatingVote"</code>, a <olink
-            targetdoc="../../attributes/itsm/itsm_locQualityRatingVote.xml"
-            targetptr="itsm_locQualityRatingVote"><code>its_locQualityRatingVote</code></olink>
-          integer. <?oxy_custom_end?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_locQualityRatingVoteThreshold"</code>, a <olink
-            targetdoc="../../attributes/itsm/itsm_locQualityRatingVoteThreshold.xml"
-            targetptr="itsm_locQualityRatingVoteThreshold"
-              ><code>its_locQualityRatingVoteThreshold</code></olink> integer.
-          <?oxy_custom_end?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_termConfidence"</code>, a <olink
-            targetdoc="../../attributes/itsm/itsm_termConfidence.xml"
-            targetptr="itsm_termConfidence"><code>its_termConfidence</code></olink> number between 0
-          and 1, inclusive.</member>
-        <member>- <code>"its_mtConfidence"</code>, a <olink
-            targetdoc="../../attributes/itsm/itsm_mtConfidence.xml" targetptr="itsm_mtConfidence"
-              ><code>its_mtConfidence</code></olink>number between 0 and 1,
-        inclusive.</member><?oxy_custom_end?>
-      </simplelist>
-      <simplelist>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_annotatorsRef"</code>, a <olink
-            targetdoc="../../attributes/itsm/itsm_annotatorsRef.xml" targetptr="itsm_annotatorsRef"
-              ><code>its_annotatorsRef</code></olink> object. <?oxy_custom_end?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_org"</code>, a <olink targetdoc="../../attributes/itsm/itsm_org.xml"
-            targetptr="itsm_org"><code>its_org</code></olink> string. <?oxy_custom_end?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_orgRef"</code>, a <olink
-            targetdoc="../../attributes/itsm/itsm_orgRef.xml" targetptr="itsm_orgRef"
-              ><code>its_orgRef</code></olink> string with IRI value. <?oxy_custom_end?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_person"</code>, a <olink
-            targetdoc="../../attributes/itsm/itsm_person.xml" targetptr="itsm_person"
-              ><code>its_person</code></olink> string. <?oxy_custom_end?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_personRef"</code>, a <olink
-            targetdoc="../../attributes/itsm/itsm_personRef.xml" targetptr="itsm_personRef"
-              ><code>its_personRef</code></olink> string with IRI value. <?oxy_custom_end?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_provenanceRecordsRef"</code>, a <olink
-            targetdoc="../../attributes/itsm/itsm_provenanceRecordsRef.xml"
-            targetptr="itsm_provenanceRecordsRef"><code>its_provenanceRecordsRef</code></olink>
-          string with IRI value. <?oxy_custom_end?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_revOrg"</code>, a <olink
-            targetdoc="../../attributes/itsm/itsm_revOrg.xml" targetptr="itsm_revOrg"
-              ><code>its_revOrg</code></olink> string. <?oxy_custom_end?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_revOrgRef"</code>, a <olink
-            targetdoc="../../attributes/itsm/itsm_revOrgRef.xml" targetptr="itsm_revOrgRef"
-              ><code>its_revOrgRef</code></olink> string with IRI value. <?oxy_custom_end?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_revPerson"</code>, a <olink
-            targetdoc="../../attributes/itsm/itsm_revPerson.xml" targetptr="itsm_revPerson"
-              ><code>its_revPerson</code></olink> string. <?oxy_custom_end?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_revPersonRef"</code>, a <olink
-            targetdoc="../../attributes/itsm/itsm_revPersonRef.xml" targetptr="itsm_revPersonRef"
-              ><code>its_revPersonRef</code></olink> string with IRI value.
-          <?oxy_custom_end?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_revTool"</code>, a <olink
-            targetdoc="../../attributes/itsm/itsm_revTool.xml" targetptr="itsm_revTool"
-              ><code>its_revTool</code></olink> string. <?oxy_custom_end?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_revToolRef"</code>, a <olink
-            targetdoc="../../attributes/itsm/itsm_revToolRef.xml" targetptr="itsm_revToolRef"
-              ><code>its_revToolRef</code></olink> string with IRI value.
-          <?oxy_custom_end?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_tool"</code>, a <olink targetdoc="../../attributes/itsm/itsm_tool.xml"
-            targetptr="itsm_tool"><code>its_tool</code></olink> string. <?oxy_custom_end?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_toolRef"</code>, a <olink
-            targetdoc="../../attributes/itsm/itsm_toolRef.xml" targetptr="itsm_toolRef"
-              ><code>its_toolRef</code></olink> string with IRI value. <?oxy_custom_end?></member>
-        <member>-
-            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"its_provenanceRecords"</code>,
-          a non-empty array of<?oxy_custom_end?>
-          <olink targetdoc="../itsm/itsm_provenanceRecords.xml" targetptr="itsm_provenanceRecords"
-              ><code>its_provenanceRecords</code></olink> objects.</member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_taClassRef"</code>, a <olink
-            targetdoc="../../attributes/itsm/itsm_taClassRef.xml" targetptr="itsm_taClassRef"
-              ><code>its_taClassRef</code></olink> string with IRI value.
-          <?oxy_custom_end?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_taConfidence"</code>, a <olink
-            targetdoc="../../attributes/itsm/itsm_taConfidence.xml" targetptr="itsm_taConfidence"
-              ><code>its_taConfidence</code></olink> number between 0 and 1 inclusive.
-          <?oxy_custom_end?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_taSource"</code>, a <olink
-            targetdoc="../../attributes/itsm/itsm_taSource.xml" targetptr="itsm_taSource"
-              ><code>its_taSource</code></olink> string. <?oxy_custom_end?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_taIdent"</code>, a <olink
-            targetdoc="../../attributes/itsm/itsm_taIdent.xml" targetptr="itsm_taIdent"
-              ><code>its_taIdent</code></olink> string. <?oxy_custom_end?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"its_taIdentRef"</code>, a <olink
-            targetdoc="../../attributes/itsm/itsm_taIdentRef.xml" targetptr="itsm_taIdentRef"
-              ><code>its_taIdentRef</code></olink> string with IRI value.
-          <?oxy_custom_end?></member>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-        <member>- <code>"itsm_domains"</code>, a <olink
-            targetdoc="../../attributes/itsm/itsm_domains.xml" targetptr="itsm_domains"
-              ><code>itsm_domains</code></olink> a non-empty array of non-empty strings not
-          containing the <code>,</code> chatacter (U+002C). </member><?oxy_custom_end?>
-        <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
-        <member>- attributes from the namespace <code>urn:oasis:names:tc:xliff:fs:2.0</code>,
-            <glossterm>optional</glossterm>, provided that the Constraints specified in the <olink
-            targetdoc="modules/fs/fs.xml" targetptr="fs-mod">Format Style Module</olink> are
-          met.</member>
-        <member>- attributes from the namespace
-            <code>urn:oasis:names:tc:xliff:sizerestriction:2.0</code>,
-            <glossterm>optional</glossterm>, provided that the Constraints specified in the <olink
-            targetdoc="modules/size_restriction/specification.xml"
-            targetptr="size_restriction_module">Size and Length Restriction Module</olink> are
-          met.</member>
-        <member>- attributes from the namespace <code>http://www.w3.org/2005/11/its</code>,
-            <glossterm>optional</glossterm>, provided that the Constraints specified in the <olink
-            targetdoc="modules/itsm/specification.xml" targetptr="ITS-module">ITS Module</olink> are
-          met.</member>
-        <member>- attributes from the namespace <code>urn:oasis:names:tc:xliff:itsm:2.1</code>,
-            <glossterm>optional</glossterm>, provided that the Constraints specified in the <olink
-            targetdoc="../../modules/itsm/specification.xml" targetptr="ITS-module">ITS
-            Module</olink> are met.<?oxy_custom_end?></member>
-      </simplelist>
+      <itemizedlist>
+        <listitem>
+          <para>Properties allowed in both JLIFF 2.1 and JLIFF 2.0:</para>
+          <simplelist>
+            <member>-
+              <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"fs_fs"</code>,
+              a <olink targetdoc="../attributes/fs.xml" targetptr="fs"><code>fs_fs</code></olink>
+              string<?oxy_custom_end?>, provided that the Constraints specified in the <olink
+                targetdoc="modules/fs/fs.xml" targetptr="fs-mod">Format Style Module</olink> are
+              met.</member>
+            <member>-
+              <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"fs_subFs"</code>,
+              a <olink targetdoc="../attributes/subfs.xml" targetptr="subFs"
+                ><code>fs_subFs</code></olink> string,<?oxy_custom_end?> provided that the
+              Constraints specified in the <olink targetdoc="modules/fs/fs.xml" targetptr="fs-mod"
+                >Format Style Module</olink> are met.</member>
+            <member>-
+              <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"slr_storageRestriction"</code>,
+              a <olink targetdoc="../attributes/size_restriction/storage-restriction.xml"
+                targetptr="slr_storageRestriction"
+                ><code>slr_storageRestriction</code></olink><?oxy_custom_end?> object, provided that
+              the Constraints specified in the <olink
+                targetdoc="modules/size_restriction/specification.xml"
+                targetptr="size_restriction_module">Size and Length Restriction Module</olink> are
+              met.</member>
+            <member>-
+              <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"slr_sizeRestriction"</code>,
+              a <olink targetdoc="../attributes/size_restriction/size-restriction.xml"
+                targetptr="slr_sizeRestriction"
+                ><code>slr_sizeRestriction</code></olink><?oxy_custom_end?> object, provided that the
+              Constraints specified in the <olink
+                targetdoc="modules/size_restriction/specification.xml"
+                targetptr="size_restriction_module">Size and Length Restriction Module</olink> are
+              met.</member>
+          </simplelist>
+        </listitem>
+        <listitem>
+          <para>Properties allowed only in JLIFF 2.1:</para>
+          <simplelist>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_allowedCharacters"</code>, a <olink
+                targetdoc="../attributes/itsm/itsm_allowedCharacters.xml"
+                targetptr="itsm_allowedCharacters"><code>itsm_allowedCharacters</code></olink>
+              string.</member>
+            <member>- <code>"its_localeFilterList"</code>, a <olink
+                targetdoc="../attributes/itsm/itsm_localeFilterList.xml"
+                targetptr="itsm_localeFilterList"><code>itsm_localeFilterList</code></olink> string
+              with default value <code>"*"</code> (U+002A).</member>
+            <member>- <code>"its_localeFilterType"</code>, a <olink
+                targetdoc="../attributes/itsm/itsm_localeFilterType.xml"
+                targetptr="itsm_localeFilterType"><code>itsm_localeFilterType</code></olink> string
+              with default value <code>"include"</code>.</member>
+            <member>- <code>"its_locQualityIssueComment"</code>, a <olink
+                targetdoc="../attributes/itsm/itsm_locQualityIssueComment.xml"
+                targetptr="itsm_locQualityIssueComment"
+                ><code>itsm_locQualityIssueComment</code></olink> string.</member>
+            <member>- <code>"its_locQualityIssueEnabled"</code>, a <olink
+                targetdoc="../attributes/itsm/itsm_locQualityIssueEnabled.xml"
+                targetptr="itsm_locQualityIssueEnabled"
+                ><code>itsm_locQualityIssueEnabled</code></olink> string with value
+                <code>"yes"</code> or <code>"no"</code>.</member>
+            <member>- <code>"its_locQualityIssueProfileRef"</code>, a <olink
+                targetdoc="../attributes/itsm/itsm_locQualityIssueProfileRef.xml"
+                targetptr="itsm_locQualityIssueProfileRef"
+                  ><code>itsm_locQualityIssueProfileRef</code></olink> string with IRI
+              value.</member>
+            <member>- <code>"its_locQualityIssuesRef"</code>, a <olink
+                targetdoc="../attributes/itsm/itsm_locQualityIssuesRef.xml"
+                targetptr="itsm_locQualityIssuesRef"><code>itsm_locQualityIssuesRef</code></olink>
+              string with IRI value.</member>
+            <member>- <code>"its_locQualityIssueSeverity"</code>, a <olink
+                targetdoc="../attributes/itsm/itsm_locQualityIssueSeverity.xml"
+                targetptr="itsm_locQualityIssueSeverity"
+                ><code>itsm_locQualityIssueSeverity</code></olink> number between 0 and 100,
+              inclusive.</member>
+            <member>- <code>"its_locQualityIssueType"</code>, a <olink
+                targetdoc="../attributes/itsm/itsm_locQualityIssueType.xml"
+                targetptr="itsm_locQualityIssueType"><code>itsm_locQualityIssueType</code></olink>
+              string with value <code>"terminology"</code>, <code>"mistranslation"</code>,
+                <code>"omission"</code>, <code>"untranslated"</code>, <code>"addition"</code>,
+                <code>"duplication"</code>, <code>"inconsistency"</code>, <code>"grammar"</code>,
+                <code>"legal"</code>, <code>"register"</code>,
+                <code>"locale-specific-content"</code>, <code>"locale-violation"</code>,
+                <code>"style"</code>, <code>"characters"</code>, <code>"misspelling"</code>,
+                <code>"typographical"</code>, <code>"formatting"</code>,
+                <code>"inconsistent-entities"</code>, <code>"numbers"</code>, <code>"markup"</code>,
+                <code>"pattern-problem"</code>, <code>"whitespace"</code>,
+                <code>"internationalization"</code>, <code>"length"</code>,
+                <code>"non-conformance"</code>, <code>"uncategorized"</code>, or
+                <code>"other"</code>.<?oxy_custom_end?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_locQualityRatingProfileRef"</code>, a <olink
+                targetdoc="../../attributes/itsm/itsm_locaQualityRatingProfileRef.xml"
+                targetptr="itsm_locQualityRatingProfileRef"
+                  ><code>its_locQualityRatingProfileRef</code></olink> string with IRI value. </member>
+            <member>- <code>"its_locQualityRatingScore"</code>, a <olink
+                targetdoc="../../attributes/itsm/itsm_locQualityRatingScore.xml"
+                targetptr="itsm_locQualityRatingScore"
+                ><code>its_locQualityRatingScore</code></olink> number between 0 and 100 inclusive.
+              <?oxy_custom_end?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_locQualityRatingScoreThreshold"</code>, a <olink
+                targetdoc="../../attributes/itsm/itsm_locQualityRatingScoreThreshold.xml"
+                targetptr="itsm_locQualityRatingScoreThreshold"
+                  ><code>its_locQualityRatingScoreThreshold</code></olink> number between 0 and 100
+              inclusive. <?oxy_custom_end?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_locQualityRatingVote"</code>, a <olink
+                targetdoc="../../attributes/itsm/itsm_locQualityRatingVote.xml"
+                targetptr="itsm_locQualityRatingVote"><code>its_locQualityRatingVote</code></olink>
+              integer. <?oxy_custom_end?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_locQualityRatingVoteThreshold"</code>, a <olink
+                targetdoc="../../attributes/itsm/itsm_locQualityRatingVoteThreshold.xml"
+                targetptr="itsm_locQualityRatingVoteThreshold"
+                  ><code>its_locQualityRatingVoteThreshold</code></olink> integer.
+              <?oxy_custom_end?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_termConfidence"</code>, a <olink
+                targetdoc="../../attributes/itsm/itsm_termConfidence.xml"
+                targetptr="itsm_termConfidence"><code>its_termConfidence</code></olink> number
+              between 0 and 1, inclusive.</member>
+            <member>- <code>"its_mtConfidence"</code>, a <olink
+                targetdoc="../../attributes/itsm/itsm_mtConfidence.xml"
+                targetptr="itsm_mtConfidence"><code>its_mtConfidence</code></olink>number between 0
+              and 1, inclusive.</member><?oxy_custom_end?>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_annotatorsRef"</code>, a <olink
+                targetdoc="../../attributes/itsm/itsm_annotatorsRef.xml"
+                targetptr="itsm_annotatorsRef"><code>its_annotatorsRef</code></olink> object.
+              <?oxy_custom_end?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_org"</code>, a <olink
+                targetdoc="../../attributes/itsm/itsm_org.xml" targetptr="itsm_org"
+                  ><code>its_org</code></olink> string. <?oxy_custom_end?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_orgRef"</code>, a <olink
+                targetdoc="../../attributes/itsm/itsm_orgRef.xml" targetptr="itsm_orgRef"
+                  ><code>its_orgRef</code></olink> string with IRI value.
+              <?oxy_custom_end?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_person"</code>, a <olink
+                targetdoc="../../attributes/itsm/itsm_person.xml" targetptr="itsm_person"
+                  ><code>its_person</code></olink> string. <?oxy_custom_end?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_personRef"</code>, a <olink
+                targetdoc="../../attributes/itsm/itsm_personRef.xml" targetptr="itsm_personRef"
+                  ><code>its_personRef</code></olink> string with IRI value.
+              <?oxy_custom_end?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_provenanceRecordsRef"</code>, a <olink
+                targetdoc="../../attributes/itsm/itsm_provenanceRecordsRef.xml"
+                targetptr="itsm_provenanceRecordsRef"><code>its_provenanceRecordsRef</code></olink>
+              string with IRI value. <?oxy_custom_end?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_revOrg"</code>, a <olink
+                targetdoc="../../attributes/itsm/itsm_revOrg.xml" targetptr="itsm_revOrg"
+                  ><code>its_revOrg</code></olink> string. <?oxy_custom_end?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_revOrgRef"</code>, a <olink
+                targetdoc="../../attributes/itsm/itsm_revOrgRef.xml" targetptr="itsm_revOrgRef"
+                  ><code>its_revOrgRef</code></olink> string with IRI value.
+              <?oxy_custom_end?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_revPerson"</code>, a <olink
+                targetdoc="../../attributes/itsm/itsm_revPerson.xml" targetptr="itsm_revPerson"
+                  ><code>its_revPerson</code></olink> string. <?oxy_custom_end?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_revPersonRef"</code>, a <olink
+                targetdoc="../../attributes/itsm/itsm_revPersonRef.xml"
+                targetptr="itsm_revPersonRef"><code>its_revPersonRef</code></olink> string with IRI
+              value. <?oxy_custom_end?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_revTool"</code>, a <olink
+                targetdoc="../../attributes/itsm/itsm_revTool.xml" targetptr="itsm_revTool"
+                  ><code>its_revTool</code></olink> string. <?oxy_custom_end?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_revToolRef"</code>, a <olink
+                targetdoc="../../attributes/itsm/itsm_revToolRef.xml" targetptr="itsm_revToolRef"
+                  ><code>its_revToolRef</code></olink> string with IRI value.
+              <?oxy_custom_end?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_tool"</code>, a <olink
+                targetdoc="../../attributes/itsm/itsm_tool.xml" targetptr="itsm_tool"
+                  ><code>its_tool</code></olink> string. <?oxy_custom_end?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_toolRef"</code>, a <olink
+                targetdoc="../../attributes/itsm/itsm_toolRef.xml" targetptr="itsm_toolRef"
+                  ><code>its_toolRef</code></olink> string with IRI value.
+              <?oxy_custom_end?></member>
+            <member>-
+                <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"its_provenanceRecords"</code>,
+              a non-empty array of<?oxy_custom_end?>
+              <olink targetdoc="../itsm/itsm_provenanceRecords.xml"
+                targetptr="itsm_provenanceRecords"><code>its_provenanceRecords</code></olink>
+              objects.</member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_taClassRef"</code>, a <olink
+                targetdoc="../../attributes/itsm/itsm_taClassRef.xml" targetptr="itsm_taClassRef"
+                  ><code>its_taClassRef</code></olink> string with IRI value.
+              <?oxy_custom_end?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_taConfidence"</code>, a <olink
+                targetdoc="../../attributes/itsm/itsm_taConfidence.xml"
+                targetptr="itsm_taConfidence"><code>its_taConfidence</code></olink> number between 0
+              and 1 inclusive. <?oxy_custom_end?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_taSource"</code>, a <olink
+                targetdoc="../../attributes/itsm/itsm_taSource.xml" targetptr="itsm_taSource"
+                  ><code>its_taSource</code></olink> string. <?oxy_custom_end?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_taIdent"</code>, a <olink
+                targetdoc="../../attributes/itsm/itsm_taIdent.xml" targetptr="itsm_taIdent"
+                  ><code>its_taIdent</code></olink> string. <?oxy_custom_end?></member>
+            <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+            <member>- <code>"its_taIdentRef"</code>, a <olink
+                targetdoc="../../attributes/itsm/itsm_taIdentRef.xml" targetptr="itsm_taIdentRef"
+                  ><code>its_taIdentRef</code></olink> string with IRI value.
+              <?oxy_custom_end?></member>
+            <member>- <code>"itsm_domains"</code>, a <olink
+                targetdoc="../../attributes/itsm/itsm_domains.xml" targetptr="itsm_domains"
+                  ><code>itsm_domains</code></olink> a non-empty array of non-empty strings not
+              containing the <code>,</code> chatacter (U+002C). </member>
+          </simplelist>
+        </listitem>
+        <listitem>
+          <para>Properties allowed only in JLIFF 2.0:</para>
+          <simplelist>
+            <member> None.</member>
+          </simplelist>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>The following
+        optional <emphasis>JLIFF Extension</emphasis> property is allowed:<simplelist>
+          <member>- <code>"userdata"</code>, a <olink targetdoc="../../extensions/extensions.xml"
+              targetptr="extensions"><code>userdata</code></olink>
+            object<?oxy_custom_end?>.</member>
+        </simplelist></para>
     </listitem>
     
+        <listitem>
+          <para>No other properties are permitted.</para>
+        </listitem>
+      
+      
+        <!-- all properties from below modules are allowed above, it remains to be seen how to fomrulate modules langauge and how to reference their internal constraints
+          <simplelist>
+            <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
+            <member>- attributes from the namespace <code>urn:oasis:names:tc:xliff:fs:2.0</code>,
+                <glossterm>optional</glossterm>, provided that the Constraints specified in the
+                <olink targetdoc="modules/fs/fs.xml" targetptr="fs-mod">Format Style Module</olink>
+              are met.</member>
+            <member>- attributes from the namespace
+                <code>urn:oasis:names:tc:xliff:sizerestriction:2.0</code>,
+                <glossterm>optional</glossterm>, provided that the Constraints specified in the
+                <olink targetdoc="modules/size_restriction/specification.xml"
+                targetptr="size_restriction_module">Size and Length Restriction Module</olink> are
+              met.</member>
+            <member>- attributes from the namespace <code>http://www.w3.org/2005/11/its</code>,
+                <glossterm>optional</glossterm>, provided that the Constraints specified in the
+                <olink targetdoc="modules/itsm/specification.xml" targetptr="ITS-module">ITS
+                Module</olink> are met.</member>
+            <member>- attributes from the namespace <code>urn:oasis:names:tc:xliff:itsm:2.1</code>,
+                <glossterm>optional</glossterm>, provided that the Constraints specified in the
+                <olink targetdoc="../../modules/itsm/specification.xml" targetptr="ITS-module">ITS
+                Module</olink> are met.<?oxy_custom_end?></member>
+          </simplelist>-->
+       
+  
+    
+    
+  
     
   </itemizedlist>
 
