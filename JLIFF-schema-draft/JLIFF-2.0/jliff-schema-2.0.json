@@ -230,8 +230,9 @@
     },
 
     "originalData": {
+      "description": "A collection of key-value pairs with NMTOKEN id addressible from inline and string values",
       "type": "object",
-      "patternProperties": { "^.*$": { "type": "string" } },
+      "patternProperties": { "^[-._:A-Za-z0-9]+$": { "type": "string" } },
       "additionalProperties": false
     },
 
