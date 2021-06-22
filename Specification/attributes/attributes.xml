@@ -140,10 +140,7 @@
 
     <xi:include href="dataref.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
 
-    <xi:include href="datarefend.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
-
-    <xi:include href="datarefstart.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
-
+    
 
     <xi:include href="dir.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
 

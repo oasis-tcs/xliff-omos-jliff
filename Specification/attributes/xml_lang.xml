@@ -6,7 +6,7 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="xml_lang">
-    <title>sourceXmlLang and targetXmlLang</title>
+    <title>sourceXmlLang and targetXmlLang, notesXmlLang and textXmlLang</title>
     
     <para>Language - the sourceXmlLang and targetXmlLang properties specify the source and target
         language variants of the text within a given object. For example: <code>"sourceXmlLang" :
@@ -54,6 +54,8 @@
         <olink targetdoc="../elements/structural/segment.xml"
             targetptr="segment"><code>anonymous subunit object "kind" : "segment"</code></olink> or <olink targetdoc="../elements/structural/ignorable.xml"
                 targetptr="ignorable"><code>anonymous subunit object "kind" : "ignorable"</code></olink> objects.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>ADD notes and note
+        references<?oxy_custom_end?></para>
     
  
 </section>
