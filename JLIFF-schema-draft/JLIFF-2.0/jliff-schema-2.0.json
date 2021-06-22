@@ -139,6 +139,7 @@
             "notesXmlLang": { "$ref": "#/definitions/language" },
             "subunits": { "$ref": "#/definitions/subunits" },
             "originalData": { "$ref": "#/definitions/originalData" },
+            "originalDataDir": { "$ref": "#/definitions/originalDataDir" },
             "mtc_matches": { "$ref": "#/definitions/mtc_matches" },
             "gls_glossary": { "$ref": "#/definitions/gls_glossary" },
             "fs_fs": { "$ref": "#/definitions/fs_formatStyle" },
@@ -233,9 +234,16 @@
     },
 
     "originalData": {
-      "description": "A collection of key-value pairs with NMTOKEN id addressible from inline and string values",
+      "description": "A collection of key-text pairs with NMTOKEN id addressible from inline and string values",
       "type": "object",
       "patternProperties": { "^[-._:A-Za-z0-9]+$": { "type": "string" } },
+      "additionalProperties": false
+    },
+
+    "originalDataDir": {
+      "description": "A collection of key-dir pairs with NMTOKEN id in the corresponding originalData in the same unit",
+      "type": "object",
+      "patternProperties": { "^[-._:A-Za-z0-9]+$": { "$ref": "#/definitions/dir" } },
       "additionalProperties": false
     },
 
@@ -261,6 +269,7 @@
         "source": { "$ref": "#/definitions/elements" },
         "target": { "$ref": "#/definitions/elements" },
         "originalData": { "$ref": "#/definitions/originalData" },
+        "originalDataDir": { "$ref": "#/definitions/originalDataDir" },
         "mda_metadata": { "$ref": "#/definitions/mda_metadata" },
         "userdata": { "$ref": "#/definitions/extensionsData" }
       },
