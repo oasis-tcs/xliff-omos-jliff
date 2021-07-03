@@ -8,7 +8,7 @@
 <section id="originaldatadir">
   <title><code>originalDataDir</code> object</title>
 
-  <para>Unit-level collection of original data for the inline codes.</para>
+  <para>Unit-level collection of original data directionality for the inline codes.</para>
 
   <para><emphasis>Type:</emphasis> object.</para>
   <para><emphasis>Properties:</emphasis></para>
@@ -25,7 +25,9 @@
   <title>Contraints</title>
   <listitem>
     <para>The NMTOKEN key <glossterm>must</glossterm> be unique within the collection to make the
-      original data strings addressable from <olink targetdoc="../attributes/dataref.xml" targetptr="dataref"><code>"dataref"</code> properties</olink> within inline objects of the same unit.</para>
+        original data strings addressable from <olink targetdoc="../attributes/dataref.xml"
+          targetptr="dataref"><code>"dataRef"</code> properties</olink> within inline objects of the
+        same unit.</para>
   </listitem>
     <listitem>
       <para>Each NMTOKEN key in the collection <glossterm>must</glossterm> correspond to an NMTOKEN

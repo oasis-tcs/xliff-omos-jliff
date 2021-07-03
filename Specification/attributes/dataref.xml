@@ -8,42 +8,52 @@
 <section id="dataref">
   <title>dataRef property</title>
   <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>Original data reference
-    - holds the NMTOKEN key to the original data string contained in the value array of the <olink
+    - holds the NMTOKEN key to the original data string contained in the unit level <olink
       targetdoc="../elements/structural/originaldata.xml" targetptr="originaldata"
-        ><code>"originalData" object</code></olink> that contains the original data for a given
-    inline code.</para>
+        ><code>"originalData" vocabulary object</code></olink> that contains the original data for a
+    given inline code.</para>
   <para><emphasis>Type:</emphasis> NMTOKEN string.</para>
   <para><emphasis>Value description:</emphasis> An <olink targetdoc="../xliff21.xml"
-      targetptr="XMLSchema2">[XML Schema Datatypes]</olink> NMTOKEN that <glossterm>must</glossterm>
-    be the value of the NMTOKEN key of one of the array items within the <olink
-      targetdoc="../elements/structural/originaldata.xml" targetptr="originaldata"
-        ><code>"originalData" object</code></olink> in the same in the same <olink
-      targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>unit</code></olink>
-    object.<?oxy_custom_end?></para>
+      targetptr="XMLSchema2">[XML Schema Datatypes]</olink> NMTOKEN string.
+    <?oxy_custom_end?></para>
   <para><emphasis>Default value:</emphasis> undefined.</para>
   <para><emphasis>Used in:</emphasis>
     <olink targetdoc="../elements/inline/ph.xml" targetptr="ph"><code>ph</code></olink>, <olink
       targetdoc="../elements/inline/sc.xml" targetptr="sc"><code>sc</code></olink>, <olink
       targetdoc="../elements/inline/ec.xml" targetptr="ec"><code>ec</code></olink>.</para>
   <itemizedlist>
+    <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
     <title>Constraints</title>
     <listitem>
-      <para>it points to an NMTOKEN property of the originalData object in the same unit.</para>
-    </listitem>
-    <listitem>
-      <para>optionally it can also reference a corresponding NMTOKEN property of the originalDataDir
-        object.</para>
+      <para>The <link linkend="dataref"><code>dataRef</code> property </link> value
+          <glossterm>must</glossterm> be one of the NMTOKEN key properties of the <olink
+          targetdoc="../elements/originaldata.xml" targetptr="originaldata"
+            ><code>"originalData"</code> object </olink> in the same <olink
+          targetdoc="../elements/structural/unit.xml" targetptr="unit">anonymous <code>unit</code>
+          object</olink>, to which it points to.</para>
     </listitem>
   </itemizedlist>
-  <para><emphasis>Example:</emphasis></para>
+  <itemizedlist>
+    <title>Processing Requirements</title>
+    <listitem>
+      <para><firstterm>Agents</firstterm> processing the <link linkend="dataref"
+            ><code>"dataref"</code> property</link> pointers <glossterm>must</glossterm> also lookup
+        the NMTOKEN keys in the corresponding <olink><code>originalDataDir</code> vocabulary
+          object</olink>, if and only if such an object exists within the same same <olink
+          targetdoc="../elements/structural/unit.xml" targetptr="unit">anonymous <code>unit</code>
+          object</olink>.</para>
+    </listitem>
+  </itemizedlist>
+  <para><emphasis>Example:</emphasis><?oxy_custom_end?></para>
   <programlisting>
 <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>&lt;unit id="1"&gt;
   &lt;originalData&gt;
     &lt;data id="d1"&gt;{0}&lt;/data&gt;
+    &lt;data id="d2"&gt;{1}&lt;/data&gt;
   &lt;/originalData&gt;
   &lt;segment&gt;
-    &lt;source&gt;Error in '&lt;ph id="1" dataRef="d1"/&gt;'.&lt;/source&gt;
-    &lt;target&gt;Erreur dans '&lt;ph id="1" dataRef="d1"/&gt;'.&lt;/target&gt;
+    &lt;source&gt;Error in '&lt;ph id="1" dataRef="d1"/&gt;' and '&lt;ph id="2" dataRef="d2"/&gt;'.&lt;/source&gt;
+    &lt;target&gt;Erreur dans '&lt;ph id="1" dataRef="d1"/&gt;' et '&lt;ph id="1" dataRef="d1"/&gt;'.&lt;/target&gt;
   &lt;/segment&gt;
 &lt;/unit&gt;
 
@@ -57,7 +67,7 @@
         "source": [
           { "text": "Error in '" },
           { "id": "1", "kind": "ph", "dataRef": "d1"},
-          {"text" : " and "},
+          { "text" : "' and '"},
           { "id": "2", "kind": "ph", "dataRef": "d2"},
           { "text": "'." }
         ]
@@ -66,11 +76,9 @@
   }
 ]<?oxy_custom_end?>
 </programlisting>
-  <para>The example above shows a <olink targetdoc="../elements/inline/ph.xml" targetptr="ph"
-        ><code>ph</code></olink>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?> that
-    has its original data stored outside
-    th<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>e content, in a <olink
-      targetdoc="../elements/structural/originaldata.xml" targetptr="originaldata">anonymous
-        <code>"originaldata"</code> object</olink>.<?oxy_custom_end?></para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>The example above shows
+    two <olink targetdoc="../elements/inline/ph.xml" targetptr="ph"><code>ph</code></olink> objects
+    that have their original data stored outside the content, in an <olink
+      targetdoc="../elements/structural/originaldata.xml" targetptr="originaldata"
+        ><code>"originaldata"</code> vocabulary object</olink>.<?oxy_custom_end?></para>
 </section>

@@ -6,7 +6,7 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="source">
-    <title>source property</title>
+    <title><code>"source"</code> property</title>
     <para>Portion of text to be translated.</para>
     <para><emphasis><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>Contains a
             non-empty anonymous array of inline objects:</emphasis></para>

@@ -6,7 +6,7 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="order">
-    <title>targetOrder</title>
+    <title><code>"targetOrder"</code> property</title>
     <para>target order - indicates the order, in which to compose the target content parts.</para>
     <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis><?oxy_custom_end?>
         number.</para>

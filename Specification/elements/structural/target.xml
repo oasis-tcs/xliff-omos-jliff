@@ -5,7 +5,7 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="target">
-  <title>target property<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?></title><?oxy_custom_end?>
+    <title><code>"target"</code> property<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?></title><?oxy_custom_end?>
   <para>Property to keep the translation of the sibling <olink targetdoc="source.xml"
       targetptr="source">source property</olink>.</para>
   <para><emphasis><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>Contains a
