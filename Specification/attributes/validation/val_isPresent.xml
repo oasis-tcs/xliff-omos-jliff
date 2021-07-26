@@ -85,7 +85,7 @@
         ”loja”, "existsInSource": ”yes”, "occurs": 1<?oxy_custom_end?></code> - loja is found in
       both source and target text and occurs in target text exactly once.</member>
 </simplelist>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains</emphasis>:
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end?></para>
 
     <para><emphasis>Value description:</emphasis> text.</para>

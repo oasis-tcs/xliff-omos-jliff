@@ -86,6 +86,7 @@
         "srcDir": { "$ref": "#/definitions/dir" },
         "trgDir": { "$ref": "#/definitions/dir" },
         "notes": { "$ref": "#/definitions/notes" },
+        "notesXmlLang": { "$ref": "#/definitions/language" },
         "fs_fs": { "$ref": "#/definitions/fs_formatStyle" },
         "fs_subFs": { "$ref": "#/definitions/fs_subFormatStyle" },
         "mda_metadata": { "$ref": "#/definitions/mda_metadata" },
@@ -135,8 +136,10 @@
             "trgDir": { "$ref": "#/definitions/dir" },
             "type": { "$ref": "#/definitions/type" },
             "notes": { "$ref": "#/definitions/notes" },
+            "notesXmlLang": { "$ref": "#/definitions/language" },
             "subunits": { "$ref": "#/definitions/subunits" },
             "originalData": { "$ref": "#/definitions/originalData" },
+            "originalDataDir": { "$ref": "#/definitions/originalDataDir" },
             "mtc_matches": { "$ref": "#/definitions/mtc_matches" },
             "gls_glossary": { "$ref": "#/definitions/gls_glossary" },
             "fs_fs": { "$ref": "#/definitions/fs_formatStyle" },
@@ -167,6 +170,7 @@
             "trgDir": { "$ref": "#/definitions/dir" },
             "type": { "$ref": "#/definitions/type" },
             "notes": { "$ref": "#/definitions/notes" },
+            "notesXmlLang": { "$ref": "#/definitions/language" },
             "subgroups": { "$ref": "#/definitions/subitems" },
             "mda_metadata": { "$ref": "#/definitions/mda_metadata" },
             "res_resourceData": { "$ref": "#/definitions/res_resourceData" },
@@ -230,8 +234,16 @@
     },
 
     "originalData": {
+      "description": "A collection of key-text pairs with NMTOKEN id addressible from inline and string values",
       "type": "object",
-      "patternProperties": { "^.*$": { "type": "string" } },
+      "patternProperties": { "^[-._:A-Za-z0-9]+$": { "type": "string" } },
+      "additionalProperties": false
+    },
+
+    "originalDataDir": {
+      "description": "A collection of key-dir pairs with NMTOKEN id in the corresponding originalData in the same unit",
+      "type": "object",
+      "patternProperties": { "^[-._:A-Za-z0-9]+$": { "$ref": "#/definitions/dir" } },
       "additionalProperties": false
     },
 
@@ -257,6 +269,7 @@
         "source": { "$ref": "#/definitions/elements" },
         "target": { "$ref": "#/definitions/elements" },
         "originalData": { "$ref": "#/definitions/originalData" },
+        "originalDataDir": { "$ref": "#/definitions/originalDataDir" },
         "mda_metadata": { "$ref": "#/definitions/mda_metadata" },
         "userdata": { "$ref": "#/definitions/extensionsData" }
       },
@@ -620,6 +633,7 @@
         "category": { "type": "string" },
         "priority": { "type": "integer", "minimum": 1, "maximum": 10 },
         "text": { "type": "string" },
+        "textXmlLang": { "$ref": "#/definitions/language" },
         "fs_fs": { "$ref": "#/definitions/fs_formatStyle" },
         "fs_subFs": { "$ref": "#/definitions/fs_subFormatStyle" },
         "userdata": { "$ref": "#/definitions/extensionsData" }
