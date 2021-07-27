@@ -19,7 +19,8 @@
         <olink targetdoc="structural/ignorable.xml" targetptr="ignorable"><code>ignorable</code></olink>, 
         <olink targetdoc="structural/notes.xml" targetptr="notes"><code>notes</code></olink>, 
         <olink targetdoc="structural/note.xml" targetptr="note"><code>note</code></olink>, 
-        <olink targetdoc="structural/originaldata.xml" targetptr="originaldata"><code>originalData</code></olink>, 
+        <olink targetdoc="structural/originaldata.xml" targetptr="originaldata"><code>originalData</code></olink>,
+        <olink targetdoc="structural/originaldatadir.xml" targetptr="originaldatadir"><code>originalDataDir</code></olink>,
         <olink targetdoc="structural/data.xml" targetptr="data"><code>data</code></olink>, 
         <olink targetdoc="structural/source.xml" targetptr="source"><code>source</code></olink> 
         and <olink targetdoc="structural/target.xml" targetptr="target"><code>target</code></olink>.
@@ -46,6 +47,8 @@
     <xi:include href="structural/note.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     
     <xi:include href="structural/originaldata.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    
+    <xi:include href="structural/originaldatadir.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     
     <xi:include href="structural/data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     

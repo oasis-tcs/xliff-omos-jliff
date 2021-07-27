@@ -67,7 +67,7 @@
     </authorgroup>
 
 
-    <pubdate>27 April 2021</pubdate>
+    <pubdate>27 July 2021</pubdate>
 
     <copyright>
       <year>2021</year>
@@ -112,7 +112,7 @@
         
         <listitem id="LIOM">
           <para><emphasis>XLIFF 2 Object Model Version 1.0.</emphasis>. Edited by David Filip.
-            27 April 2021. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest version: <ulink url="http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html">http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html</ulink>. </para>
+            27 July 2021. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest version: <ulink url="http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html">http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html</ulink>. </para>
         </listitem>
         
         <listitem>
@@ -249,7 +249,7 @@
       <para><citation>JLIFF-1.0</citation></para>
 
       <para><emphasis>JLIFF Version 1.0</emphasis>. Edited by Robert van
-        Engelen and David Filip. 27 April 2021. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest
+        Engelen and David Filip. 27 July 2021. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest
         version: <ulink url="http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html">http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html</ulink>. </para>
 
       <!-- 
@@ -1237,7 +1237,8 @@
         <link linkend="ignorable"><code>ignorable</code></link>, 
         <link linkend="notes"><code>notes</code></link>, 
         <link linkend="note"><code>note</code></link>, 
-        <link linkend="originaldata"><code>originalData</code></link>, 
+        <link linkend="originaldata"><code>originalData</code></link>,
+        <link linkend="originaldatadir"><code>originalDataDir</code></link>,
         <link linkend="data"><code>data</code></link>, 
         <link linkend="source"><code>source</code></link> 
         and <link linkend="target"><code>target</code></link>.
@@ -2408,21 +2409,61 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
 </section>
     
     <section id="originaldata">
-  <title>originalData</title>
+  <title><code>originalData</code> object</title>
 
   <para>Unit-level collection of original data for the inline codes.</para>
 
-  <para><emphasis>Type:</emphasis></para>
-
+  <para><emphasis>Type:</emphasis> object.</para>
+  <para><emphasis>Properties:</emphasis></para>
   <simplelist type="vert">
-    <member>- One or more <link linkend="data"><code>&lt;data&gt;</code></link> elements</member>
+    <member>- properties represent a dictionary of NMTOKEN and string value pairs <!-- 
+      <olink targetdoc="data.xml"
+    targetptr="data"><code>&lt;data&gt;</code></olink> elements -->,
+        <glossterm>required</glossterm></member>
   </simplelist>
 
+<itemizedlist>
+  <title>Contraints</title>
+  <listitem>
+    <para>The NMTOKEN key <glossterm>must</glossterm> be unique within the collection to make the
+      original data strings addressable from <link linkend="dataref"><code>"dataref"</code> properties</link> within inline objects of the same unit.</para>
+  </listitem>
+  
+</itemizedlist>
+</section>
+    
+    <section id="originaldatadir">
+  <title><code>originalDataDir</code> object</title>
 
+  <para>Unit-level collection of original data directionality for the inline codes.</para>
+
+  <para><emphasis>Type:</emphasis> object.</para>
+  <para><emphasis>Properties:</emphasis></para>
+  <simplelist type="vert">
+    <member>- properties represent a dictionary of NMTOKEN and <link linkend="dir"><code>"dir"</code></link> value pairs
+      <!-- 
+      <olink targetdoc="data.xml"
+    targetptr="data"><code>&lt;data&gt;</code></olink> elements -->,
+        <glossterm>required</glossterm></member>
+  </simplelist>
+
+<itemizedlist>
+  <title>Contraints</title>
+  <listitem>
+    <para>The NMTOKEN key <glossterm>must</glossterm> be unique within the collection to make the
+        original data strings addressable from <link linkend="dataref"><code>"dataRef"</code> properties</link> within inline objects of the
+        same unit.</para>
+  </listitem>
+    <listitem>
+      <para>Each NMTOKEN key in the collection <glossterm>must</glossterm> correspond to an NMTOKEN
+        key in the <link linkend="originaldata"><code>"originalData"</code></link> dictionary object in the same unit. </para>
+    </listitem>
+  
+</itemizedlist>
 </section>
     
     <section id="data">
-  <title>data</title>
+  <title>data &lt;not used in JLIFF described in originalData&gt;</title>
 
   <para>Storage for the original data of an inline code.</para>
 
@@ -2468,7 +2509,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
 </section>
     
     <section id="source">
-    <title>source property</title>
+    <title><code>"source"</code> property</title>
     <para>Portion of text to be translated.</para>
     <para><emphasis><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>Contains a
             non-empty anonymous array of inline objects:</emphasis></para>
@@ -2500,7 +2541,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
 </section>
     
     <section id="target">
-  <title>target property<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?></title><?oxy_custom_end ?>
+    <title><code>"target"</code> property<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?></title><?oxy_custom_end ?>
   <para>Property to keep the translation of the sibling <link linkend="source">source property</link>.</para>
   <para><emphasis><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>Contains a
       non-empty anonymous array of inline objects:</emphasis></para>
@@ -3696,8 +3737,6 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <title>XLIFF Attributes</title>
 
     <para>The attributes defined in XLIFF 2.0 are: <link linkend="appliesto"><code>appliesTo</code></link>,
-      <!--  This falg got killed in the August 20 2013 meeting <olink targetdoc="approved.xml"
-        targetptr="approved"><code>approved</code></olink>, -->
       <link linkend="cancopy"><code>canCopy</code></link>,
       <link linkend="candelete"><code>canDelete</code></link>,
       <link linkend="canoverlap"><code>canOverlap</code></link>,
@@ -3707,15 +3746,24 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
       <link linkend="copyof"><code>copyOf</code></link>,
 
       <link linkend="dataref"><code>dataRef</code></link>,
-      <link linkend="datarefend"><code>dataRefEnd</code></link>,
-      <link linkend="datarefstart"><code>dataRefStart</code></link>,
+      <!--  files removed as well formed tags don't exist in JLIFF
+      <olink targetdoc="datarefend.xml" targetptr="datarefend"
+          ><code>dataRefEnd</code></olink>,
+      <olink targetdoc="datarefstart.xml" targetptr="datarefstart"
+          ><code>dataRefStart</code></olink>, -->
       <link linkend="dir"><code>dir</code></link>,
       <link linkend="disp"><code>disp</code></link>,
-      <link linkend="dispend"><code>dispEnd</code></link>,
-      <link linkend="dispstart"><code>dispStart</code></link>,
+      <!--  files removed as well formed tags don't exist in JLIFF
+      <olink targetdoc="dispend.xml" targetptr="dispend"
+          ><code>dispEnd</code></olink>,
+      <olink targetdoc="dispstart.xml" targetptr="dispstart"
+          ><code>dispStart</code></olink>, -->
       <link linkend="equiv"><code>equiv</code></link>,
-      <link linkend="equivend"><code>equivEnd</code></link>,
-      <link linkend="equivstart"><code>equivStart</code></link>,
+      <!--  files removed as well formed tags don't exist in JLIFF
+      <olink targetdoc="equivend.xml" targetptr="equivend"
+          ><code>equivEnd</code></olink>,
+      <olink targetdoc="equivstart.xml" targetptr="equivstart"
+          ><code>equivStart</code></olink>, -->
       <link linkend="hex"><code>hex</code></link>,
       <link linkend="href"><code>href</code></link>,
       <link linkend="id"><code>id</code></link>,
@@ -4026,52 +4074,59 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
 
 
     <section id="dataref">
-  <title>dataRef</title>
-
-  <para>Original data reference - holds the identifier of the
-      <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><link linkend="data"><code>&lt;data&gt;</code></link><?oxy_custom_end ?>
-    <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><link linkend="ph"><code>ph</code></link>, <link linkend="sc"><code>sc</code></link>, or <link linkend="ec"><code>ec</code></link><?oxy_custom_end ?>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?> that
-    contains the original data for a given inline code.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
-    string.<?oxy_custom_end ?></para>
-
-  <para><emphasis>Value description:</emphasis> An <link linkend="XMLSchema2">[XML Schema Datatypes]</link> NMTOKEN that <glossterm>must</glossterm>
-    be the value of the <link linkend="id"><code>id</code></link>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end ?> of
-    one of the <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><link linkend="data"><code>&lt;data&gt;</code></link><?oxy_custom_end ?>
-    <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><link linkend="ph"><code>ph</code></link>, <link linkend="sc"><code>sc</code></link>, or <link linkend="ec"><code>ec</code></link><?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>
-    listed in the same <link linkend="unit"><code>unit</code></link>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
-
+  <title>dataRef property</title>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>Original data reference
+    - holds the NMTOKEN key to the original data string contained in the unit level <link linkend="originaldata"><code>"originalData" vocabulary object</code></link> that contains the original data for a
+    given inline code.</para>
+  <para><emphasis>Type:</emphasis> NMTOKEN string.</para>
+  <para><emphasis>Value description:</emphasis> An <link linkend="XMLSchema2">[XML Schema Datatypes]</link> NMTOKEN string.
+    <?oxy_custom_end ?></para>
   <para><emphasis>Default value:</emphasis> undefined.</para>
-
   <para><emphasis>Used in:</emphasis>
     <link linkend="ph"><code>ph</code></link>, <link linkend="sc"><code>sc</code></link>, <link linkend="ec"><code>ec</code></link>.</para>
-
-  <para><emphasis>Example:</emphasis></para>
-
+  <itemizedlist>
+    <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+    <title>Constraints</title>
+    <listitem>
+      <para>The <link linkend="dataref"><code>dataRef</code> property </link> value
+          <glossterm>must</glossterm> be one of the NMTOKEN key properties of the <link linkend="originaldata"><code>"originalData"</code> object </link> in the same <link linkend="unit">anonymous <code>unit</code>
+          object</link>, to which it points to.</para>
+    </listitem>
+  </itemizedlist>
+  <itemizedlist>
+    <title>Processing Requirements</title>
+    <listitem>
+      <para><firstterm>Agents</firstterm> processing the <link linkend="dataref"><code>"dataref"</code> property</link> pointers <glossterm>must</glossterm> also lookup
+        the NMTOKEN keys in the corresponding <link linkend=""><code>originalDataDir</code> vocabulary
+          object</link>, if and only if such an object exists within the same same <link linkend="unit">anonymous <code>unit</code>
+          object</link>.</para>
+    </listitem>
+  </itemizedlist>
+  <para><emphasis>Example:</emphasis><?oxy_custom_end ?></para>
   <programlisting format="linespecific">
-<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>&lt;unit id="1"&gt;
+<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>&lt;unit id="1"&gt;
   &lt;originalData&gt;
     &lt;data id="d1"&gt;{0}&lt;/data&gt;
+    &lt;data id="d2"&gt;{1}&lt;/data&gt;
   &lt;/originalData&gt;
   &lt;segment&gt;
-    &lt;source&gt;Error in '&lt;ph id="1" dataRef="d1"/&gt;'.&lt;/source&gt;
-    &lt;target&gt;Erreur dans '&lt;ph id="1" dataRef="d1"/&gt;'.&lt;/target&gt;
+    &lt;source&gt;Error in '&lt;ph id="1" dataRef="d1"/&gt;' and '&lt;ph id="2" dataRef="d2"/&gt;'.&lt;/source&gt;
+    &lt;target&gt;Erreur dans '&lt;ph id="1" dataRef="d1"/&gt;' et '&lt;ph id="1" dataRef="d1"/&gt;'.&lt;/target&gt;
   &lt;/segment&gt;
-&lt;/unit&gt;<?oxy_custom_end ?>
+&lt;/unit&gt;
 
-<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>"subfiles": [
+"subfiles": [
   {
     "id": "1",
-    "originalData": { "d1": "{0}" },
+    "originalData": { "d1": "{0}", "d2" : "{1}" },
     "subunits": [
       {
         "kind": "segment",
         "source": [
           { "text": "Error in '" },
-          { "id": "1", "kind": "ph", "dataRef": "d1" },
+          { "id": "1", "kind": "ph", "dataRef": "d1"},
+          { "text" : "' and '"},
+          { "id": "2", "kind": "ph", "dataRef": "d2"},
           { "text": "'." }
         ]
       }
@@ -4079,89 +4134,12 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
   }
 ]<?oxy_custom_end ?>
 </programlisting>
-
-  <para>The example above shows a <link linkend="ph"><code>ph</code></link>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?> that
-    has its original data stored outside the
-    content<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>, in a <link linkend="data"><code>&lt;data&gt;</code></link>
-    element.<?oxy_custom_end ?></para>
-
- </section>
-
-    <section id="datarefend">
-  <title>dataRefEnd <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>TO BE DELETED,
-    not used in JLIFF<?oxy_custom_end ?></title>
-  <para>Original data reference - holds the identifier of the
-      <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><link linkend="data"><code>&lt;data&gt;</code></link> element<?oxy_custom_end ?>
-    <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><link linkend="ph"><code>&lt;ph&gt;</code></link>, <link linkend="sc"><code>&lt;sc&gt;</code></link>, or
-      <link linkend="ec"><code>&lt;ec&gt;</code></link>
-    object<?oxy_custom_end ?> that contains the original data for the end marker of a given inline
-    code.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
-    string.<?oxy_custom_end ?></para>
-  <para><emphasis>Value description:</emphasis> An <link linkend="XMLSchema2">[XML Schema Datatypes]</link> NMTOKEN that <glossterm>must</glossterm>
-    be the value of the <link linkend="id"><code>id</code></link>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end ?> of
-    one of the <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><link linkend="data"><code>&lt;data&gt;</code></link> element<?oxy_custom_end ?>
-    <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><link linkend="ph"><code>&lt;ph&gt;</code></link>, <link linkend="sc"><code>&lt;sc&gt;</code></link>, or
-      <link linkend="ec"><code>&lt;ec&gt;</code></link>
-    object<?oxy_custom_end ?> listed in the same <link linkend="unit"><code>unit</code></link>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
-  <para><emphasis>Default value:</emphasis> undefined.</para>
-  <para><emphasis>Used in:</emphasis>
-    <link linkend="pc"><code>&lt;pc&gt;</code></link>.</para>
-  <para><emphasis>Example:</emphasis></para>
-  <programlisting format="linespecific">
-<?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>&lt;unit id="1"&gt;
-  &lt;originalData&gt;
-    &lt;data id="d1"&gt;&amp;lt;EM&gt;&lt;/data&gt;
-    &lt;data id="d2"&gt;&amp;lt;/EM&gt;&lt;/data&gt;
-  &lt;/originalData&gt;
-  &lt;segment&gt;
-    &lt;source&gt;&lt;pc id="1" dataRefStart="d1" dataRefEnd="d2"&gt;
-        Efficiency&lt;/pc&gt; is the operative word here.&lt;/source&gt;
-    &lt;target&gt;&lt;pc id="1" dataRefStart="d1" dataRefEnd="d2"&gt;
-        Efficacité&lt;/pc&gt; est le mot clé ici.&lt;/target&gt;
-  &lt;/segment&gt;
-&lt;/unit&gt;<?oxy_custom_end ?>
-</programlisting>
-  <para>The example above shows
-    t<?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>wo <link linkend="pc"><code>&lt;pc&gt;</code></link>
-    elements<?oxy_custom_end ?> with their original data stored outside the content, in two <link linkend="data"><code>&lt;data&gt;</code></link>
-    elements.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>The example above shows
+    two <link linkend="ph"><code>ph</code></link> objects
+    that have their original data stored outside the content, in an <link linkend="originaldata"><code>"originaldata"</code> vocabulary object</link>.<?oxy_custom_end ?></para>
 </section>
 
-    <section id="datarefstart">
-  <title>dataRefStart <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>TO BE
-    DELETED, not used in JLIFF<?oxy_custom_end ?></title>
-  <para>Original data reference - holds the identifier of the <link linkend="data"><code>&lt;data&gt;</code></link>
-    element that contains the original data for the start marker of a given inline code.</para>
-  <para><emphasis>Value description:</emphasis> An <link linkend="XMLSchema2">[XML Schema Datatypes]</link> NMTOKEN that <glossterm>must</glossterm>
-    be the value of the <link linkend="id"><code>id</code></link> attribute
-    of one of the <link linkend="data"><code>&lt;data&gt;</code></link> element listed in the same <link linkend="unit"><code>&lt;unit&gt;</code></link>
-    element.</para>
-  <para><emphasis>Default value:</emphasis> undefined.</para>
-  <para><emphasis>Used in:</emphasis>
-    <link linkend="pc"><code>&lt;pc&gt;</code></link>.</para>
-  <para><emphasis>Example:</emphasis></para>
-  <programlisting format="linespecific">
-&lt;unit id="1"&gt;
-  &lt;originalData&gt;
-    &lt;data id="d1"&gt;&amp;lt;EM&gt;&lt;/data&gt;
-    &lt;data id="d2"&gt;&amp;lt;/EM&gt;&lt;/data&gt;
-  &lt;/originalData&gt;
-  &lt;segment&gt;
-    &lt;source&gt;&lt;pc id="1" dataRefStart="d1" dataRefEnd="d2"&gt;
-        Efficiency&lt;/pc&gt; is the operative word here.&lt;/source&gt;
-    &lt;target&gt;&lt;pc id="1" dataRefStart="d1" dataRefEnd="d2"&gt;
-        Efficacité&lt;/pc&gt; est le mot clé ici.&lt;/target&gt;
-  &lt;/segment&gt;
-&lt;/unit&gt;
-</programlisting>
-  <para>The example above shows two <link linkend="pc"><code>&lt;pc&gt;</code></link> elements with their original data stored outside the
-    content, in two <link linkend="data"><code>&lt;data&gt;</code></link> elements.</para>
-</section>
-
+    
 
     <section id="dir">
   <title>dir</title>
@@ -4280,73 +4258,12 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
       <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>.</para>
   </note>
 </section>
+    <!--  files removed as well formed tags don't exist in JLIFF
 
-    <section id="dispend">
-  <title>dispEnd</title>
+    <xi:include href="dispend.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
 
-  <para>Display text - holds an alternative user-friendly display representation of the original
-    data of the end marker of an inline code.</para>
-
-  <para><emphasis>Value description:</emphasis> Text.</para>
-
-  <para><emphasis>Default value:</emphasis> undefined</para>
-
-  <para><emphasis>Used in:</emphasis> <link linkend="pc"><code>&lt;pc&gt;</code></link>.</para>
-
-  <para><emphasis>Example:</emphasis></para>
-
-  <programlisting format="linespecific">
-&lt;unit id="1"&gt;
-  &lt;originalData&gt;
-    &lt;data id="d1"&gt;\cf1\ul\b\f1\fs24 &lt;/data&gt;
-    &lt;data id="d2"&gt;\cf0\ulnone\b0\f0\fs22 &lt;/data&gt;
-  &lt;/originalData&gt;
-  &lt;segment&gt;
-    &lt;source&gt;Example of &lt;pc id="1" dataRefStart="d1" dataRefEnd="d2"
-        dispStart="&amp;lt;span&gt;" dispEnd="&amp;lt;/span&gt;"&gt;
-        formatted text&lt;/pc&gt;.&lt;/source&gt;
-  &lt;/segment&gt;
-&lt;/unit&gt;
-</programlisting>
-
-  <para>In the example above, the <link linkend="dispstart"><code>dispStart</code></link> and <link linkend="dispend"><code>dispEnd</code></link>
-  attributes provide a more user-friendly representation of the original
-  formatting codes.</para>
-
-  <note>
-    <para>To provide a plain text equivalent of the code, use the <link linkend="equivend"><code>equivEnd</code></link> attribute.</para>
-  </note>
-</section>
-
-    <section id="dispstart">
-  <title>dispStart <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>TO BE DELETED,
-    not used in JLIFF<?oxy_custom_end ?></title>
-  <para>Display text - holds an alternative user-friendly display representation of the original
-    data of the start marker of an inline code.</para>
-  <para><emphasis>Value description:</emphasis> Text.</para>
-  <para><emphasis>Default value:</emphasis> undefined</para>
-  <para><emphasis>Used in:</emphasis>
-    <link linkend="pc"><code>&lt;pc&gt;</code></link>.</para>
-  <para><emphasis>Example:</emphasis></para>
-  <programlisting format="linespecific">
-&lt;unit id="1"&gt;
-  &lt;originalData&gt;
-    &lt;data id="d1"&gt;\cf1\ul\b\f1\fs24 &lt;/data&gt;
-    &lt;data id="d2"&gt;\cf0\ulnone\b0\f0\fs22 &lt;/data&gt;
-  &lt;/originalData&gt;
-  &lt;segment&gt;
-    &lt;source&gt;Example of &lt;pc id="1" dataRefStart="d1" dataRefEnd="d2"
-        dispStart="&amp;lt;span&gt;" dispEnd="&amp;lt;/span&gt;"&gt;
-        formatted text&lt;/pc&gt;.&lt;/source&gt;
-  &lt;/segment&gt;
-&lt;/unit&gt;
-</programlisting>
-  <para>In the example above, the <link linkend="dispstart"><code>dispStart</code></link> and <link linkend="dispend"><code>dispEnd</code></link> attributes provide a more user-friendly representation of the
-    original formatting codes.</para>
-  <note>
-    <para>To provide a plain text equivalent of the code, use the <link linkend="equivstart"><code>equivStart</code></link> attribute.</para>
-  </note>
-</section>
+    <xi:include href="dispstart.xml"
+                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include> -->
 
     <section id="equiv">
   <title>equiv</title>
@@ -4408,65 +4325,11 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
   </note>
 </section>
 
-    <section id="equivend">
-  <title>equivEnd <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>TO BE DELETED,
-    not used in JLIFF<?oxy_custom_end ?></title>
-  <para>Equivalent text - holds a plain text representation of the original data of the end marker
-    of an inline code that can be used when generating a plain text representation of the
-    content.</para>
-  <para><emphasis>Value description:</emphasis> Text.</para>
-  <para><emphasis>Default value:</emphasis> an empty string</para>
-  <para><emphasis>Used in:</emphasis>
-    <link linkend="pc"><code>&lt;pc&gt;</code></link>.</para>
-  <para><emphasis>Example:</emphasis></para>
-  <programlisting format="linespecific">
-&lt;unit id="1"&gt;
-  &lt;originalData&gt;
-    &lt;data id="d1"&gt;&amp;lt;span class="link" onclick="linkTo('dbId5345')"&gt;
-        &lt;/data&gt;
-    &lt;data id="d2"&gt;&amp;lt;/span&gt;&lt;/data&gt;
-  &lt;/originalData&gt;
-  &lt;segment&gt;
-    &lt;source&gt;The jam made of &lt;pc id="1" dataRefStart="d1" equivStart=""
-        dataRefEnd="d2" equivEnd=""&gt;lingonberries&lt;/pc&gt; is quite
-        tasty.&lt;/source&gt;
-  &lt;/segment&gt;
-&lt;/unit&gt;
-</programlisting>
-  <note>
-    <para>To provide a user-friendly representation, use the <link linkend="dispend"><code>dispEnd</code></link> attribute.</para>
-  </note>
-</section>
+    <!--  files removed as well formed tags don't exist in JLIFF
+    <xi:include href="equivend.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
 
-    <section id="equivstart">
-  <title>equivStart <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>TO BE DELETED,
-    not used in JLIFF<?oxy_custom_end ?></title>
-  <para>Equivalent text - holds a plain text representation of the original data of the start marker
-    of an inline code that can be used when generating a plain text representation of the
-    content.</para>
-  <para><emphasis>Value description:</emphasis> Text.</para>
-  <para><emphasis>Default value:</emphasis> an empty string</para>
-  <para><emphasis>Used in:</emphasis>
-    <link linkend="pc"><code>&lt;pc&gt;</code></link>.</para>
-  <para><emphasis>Example:</emphasis></para>
-  <programlisting format="linespecific">
-&lt;unit id="1"&gt;
-  &lt;originalData&gt;
-    &lt;data id="d1"&gt;&amp;lt;span class="link" onclick="linkTo('dbId5345')"&gt;
-        &lt;/data&gt;
-    &lt;data id="d2"&gt;&amp;lt;/span&gt;&lt;/data&gt;
-  &lt;/originalData&gt;
-  &lt;segment&gt;
-    &lt;source&gt;The jam made of &lt;pc id="1" dataRefStart="d1" equivStart=""
-        dataRefEnd="d2" equivEnd=""&gt;lingonberries&lt;/pc&gt; is quite
-        tasty.&lt;/source&gt;
-  &lt;/segment&gt;
-&lt;/unit&gt;
-</programlisting>
-  <note>
-    <para>To provide a user-friendly representation, use the <link linkend="dispstart"><code>dispStart</code></link> attribute.</para>
-  </note>
-</section>
+    <xi:include href="equivstart.xml"
+                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include> -->
 
     <section id="hex">
   <title>hex <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>TO BE DELETED, not
@@ -4562,12 +4425,18 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
         values within the immediate enclosing <link linkend="file"><code>file</code></link>, <link linkend="group"><code>group</code></link>,
         or <link linkend="unit"><code>unit</code></link> object.</para>
     </listitem>
-    
+    <!--  This is handled on "originaldata" in JLIFF
     <listitem>
-      <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>When used in <link linkend="data"><code>&lt;data&gt;</code></link> elements:</para>
-      <para>The value <glossterm>must</glossterm> be unique among all <link linkend="data"><code>&lt;data&gt;</code></link>
-        <code>id</code> attribute values within the enclosing <link linkend="unit"><code>&lt;unit&gt;</code></link> element.<?oxy_custom_end ?></para>
-    </listitem>
+      <para>When used in <olink
+          targetdoc="../elements/structural/data.xml" targetptr="data"
+          ><code>&lt;data></code></olink> elements:</para>
+      <para>The value <glossterm>must</glossterm> be unique among all <olink
+          targetdoc="../elements/structural/data.xml" targetptr="data"
+          ><code>&lt;data></code></olink>
+        <code>id</code> attribute values within the enclosing <olink
+          targetdoc="../elements/structural/unit.xml" targetptr="unit"
+          ><code>&lt;unit></code></olink> element.</para>
+    </listitem> -->
     
     <listitem>
       <para>When used in <link linkend="segment"><code>segment</code></link>, <link linkend="ignorable"><code>ignorable</code></link>,
@@ -4615,6 +4484,8 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
       <link linkend="group"><code>group</code></link>, <link linkend="unit"><code>unit</code></link>, <link linkend="note"><code>note</code></link>, <link linkend="segment"><code>segment</code></link>, <link linkend="ignorable"><code>ignorable</code></link>,
       <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><link linkend="data"><code>&lt;data&gt;</code></link>, <?oxy_custom_end ?><link linkend="sc"><code>sc</code></link>, <link linkend="ec"><code>ec</code></link>, <link linkend="ph"><code>ph</code></link>,
       <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><link linkend="pc"><code>&lt;pc&gt;</code></link>, <link linkend="mrk"><code>&lt;mrk&gt;</code></link><?oxy_custom_end ?> and <link linkend="sm"><code>sm</code></link>.</para>
+  
+  
 </section>
 
     <section id="isolated">
@@ -4755,7 +4626,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
 
 
     <section id="order">
-    <title>targetOrder</title>
+    <title><code>"targetOrder"</code> property</title>
     <para>target order - indicates the order, in which to compose the target content parts.</para>
     <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis><?oxy_custom_end ?>
         number.</para>
@@ -4915,9 +4786,6 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
   </itemizedlist> -->
 </section>
 
-
-
-    <!--  removed skeleton attribute in response to comments 007 and 008  -->
 
     <section id="srcdir">
   <title>srcDir</title>
@@ -5594,7 +5462,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <para>The attributes from XML namespace used in XLIFF 2.0 are: <link linkend="xml_lang">xml:lang</link> and <link linkend="xml_space">xml:space</link>.</para>
 
     <section id="xml_lang">
-    <title>sourceXmlLang and targetXmlLang</title>
+    <title><code>"sourceXmlLang"</code> and <code>"targetXmlLang"</code>, <code>"notesXmlLang"</code> and <code>"textXmlLang"</code> properties</title>
     
     <para>Language - the sourceXmlLang and targetXmlLang properties specify the source and target
         language variants of the text within a given object. For example: <code>"sourceXmlLang" :
@@ -5629,6 +5497,8 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     
     <para><emphasis>Used in:</emphasis>
         <link linkend="segment"><code>anonymous subunit object "kind" : "segment"</code></link> or <link linkend="ignorable"><code>anonymous subunit object "kind" : "ignorable"</code></link> objects.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>ADD notes and note
+        references<?oxy_custom_end ?></para>
     
  
 </section>
@@ -12301,7 +12171,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
         ”loja”, "existsInSource": ”yes”, "occurs": 1<?oxy_custom_end ?></code> - loja is found in
       both source and target text and occurs in target text exactly once.</member>
 </simplelist>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains</emphasis>:
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
 
     <para><emphasis>Value description:</emphasis> text.</para>
@@ -12382,7 +12252,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
   ]
 }<?oxy_custom_end ?>
 </programlisting>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains</emphasis>:
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
 
   <para><emphasis>Value description:</emphasis>
@@ -12453,7 +12323,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
   ]
 }<?oxy_custom_end ?>
  </programlisting>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains</emphasis>:
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
   <para><emphasis>Value description:</emphasis> text.</para>
   <para><emphasis>Default value:</emphasis> undefined.</para>
@@ -12524,7 +12394,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
 }<?oxy_custom_end ?>
  </programlisting>
   <para>
-    <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains</emphasis>:
+    <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
   <para><emphasis>Value description:</emphasis> text. </para>
 
@@ -12599,7 +12469,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
   ]
 }<?oxy_custom_end ?>
 </programlisting>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains</emphasis>:
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
   <para><emphasis>Value description:</emphasis> text.</para>
 
@@ -12710,7 +12580,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
      }
   ]
 }<?oxy_custom_end ?></programlisting>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains</emphasis>:
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
   <para><emphasis>Value description:</emphasis>
     <code>"yes"</code> or <code>"no"</code>.</para>
@@ -12760,7 +12630,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
   <para>This rule
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>
     specifies whether the test defined within that rule is case sensitive or not.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains</emphasis>:
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
 
   <para><emphasis>Value description:</emphasis>
@@ -12783,7 +12653,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
     specifies the normalization type to apply when validating a rule. Only the normalization forms C
     and D as specified in <link linkend="uax15">[UAX
     #15]</link>.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains</emphasis>:
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
 
   <para><emphasis>Value description:</emphasis> the allowed values are listed in the table below
@@ -12899,7 +12769,7 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
   ]
 }<?oxy_custom_end ?>
  </programlisting>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Contains</emphasis>:
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
 
   <para><emphasis>Value description:</emphasis>
