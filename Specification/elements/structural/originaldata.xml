@@ -6,16 +6,25 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="originaldata">
-  <title>originalData</title>
+  <title><code>originalData</code> object</title>
 
   <para>Unit-level collection of original data for the inline codes.</para>
 
-  <para><emphasis>Type:</emphasis></para>
-
+  <para><emphasis>Type:</emphasis> object.</para>
+  <para><emphasis>Properties:</emphasis></para>
   <simplelist>
-    <member>- One or more <olink targetdoc="data.xml"
-    targetptr="data"><code>&lt;data&gt;</code></olink> elements</member>
+    <member>- properties represent a dictionary of NMTOKEN and string value pairs <!--
+      <olink targetdoc="data.xml"
+    targetptr="data"><code>&lt;data&gt;</code></olink> elements-->,
+        <glossterm>required</glossterm></member>
   </simplelist>
 
-
+<itemizedlist>
+  <title>Contraints</title>
+  <listitem>
+    <para>The NMTOKEN key <glossterm>must</glossterm> be unique within the collection to make the
+      original data strings addressable from <olink targetdoc="../attributes/dataref.xml" targetptr="dataref"><code>"dataref"</code> properties</olink> within inline objects of the same unit.</para>
+  </listitem>
+  
+</itemizedlist>
 </section>

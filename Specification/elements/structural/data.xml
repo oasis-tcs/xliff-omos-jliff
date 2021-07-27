@@ -6,7 +6,7 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="data">
-  <title>data</title>
+  <title>data &lt;not used in JLIFF described in originalData></title>
 
   <para>Storage for the original data of an inline code.</para>
 

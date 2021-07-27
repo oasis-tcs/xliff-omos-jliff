@@ -15,8 +15,6 @@
 
     <para>The attributes defined in XLIFF 2.0 are: <olink targetdoc="appliesto.xml"
       targetptr="appliesto"><code>appliesTo</code></olink>,
-      <!-- This falg got killed in the August 20 2013 meeting <olink targetdoc="approved.xml"
-        targetptr="approved"><code>approved</code></olink>,-->
       <olink targetdoc="cancopy.xml"
         targetptr="cancopy"><code>canCopy</code></olink>,
       <olink targetdoc="candelete.xml"
@@ -34,24 +32,27 @@
 
       <olink targetdoc="dataref.xml" targetptr="dataref"
         ><code>dataRef</code></olink>,
+      <!-- files removed as well formed tags don't exist in JLIFF
       <olink targetdoc="datarefend.xml" targetptr="datarefend"
           ><code>dataRefEnd</code></olink>,
       <olink targetdoc="datarefstart.xml" targetptr="datarefstart"
-          ><code>dataRefStart</code></olink>,
+          ><code>dataRefStart</code></olink>,-->
       <olink targetdoc="dir.xml" targetptr="dir"
           ><code>dir</code></olink>,
       <olink targetdoc="disp.xml" targetptr="disp"
         ><code>disp</code></olink>,
+      <!-- files removed as well formed tags don't exist in JLIFF
       <olink targetdoc="dispend.xml" targetptr="dispend"
           ><code>dispEnd</code></olink>,
       <olink targetdoc="dispstart.xml" targetptr="dispstart"
-          ><code>dispStart</code></olink>,
+          ><code>dispStart</code></olink>,-->
       <olink targetdoc="equiv.xml" targetptr="equiv"
           ><code>equiv</code></olink>,
+      <!-- files removed as well formed tags don't exist in JLIFF
       <olink targetdoc="equivend.xml" targetptr="equivend"
           ><code>equivEnd</code></olink>,
       <olink targetdoc="equivstart.xml" targetptr="equivstart"
-          ><code>equivStart</code></olink>,
+          ><code>equivStart</code></olink>,-->
       <olink targetdoc="hex.xml" targetptr="hex"
             ><code>hex</code></olink>,
       <olink targetdoc="href.xml" targetptr="href"
@@ -140,26 +141,25 @@
 
     <xi:include href="dataref.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
 
-    <xi:include href="datarefend.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
-
-    <xi:include href="datarefstart.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
-
+    
 
     <xi:include href="dir.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
 
     <xi:include href="disp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <!-- files removed as well formed tags don't exist in JLIFF
 
     <xi:include href="dispend.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
 
     <xi:include href="dispstart.xml"
-                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>-->
 
     <xi:include href="equiv.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
 
+    <!-- files removed as well formed tags don't exist in JLIFF
     <xi:include href="equivend.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
 
     <xi:include href="equivstart.xml"
-                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>-->
 
     <xi:include href="hex.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
 
@@ -182,9 +182,6 @@
 
     <xi:include href="ref.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
 
-
-
-    <!-- removed skeleton attribute in response to comments 007 and 008 -->
 
     <xi:include href="srcdir.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
 
