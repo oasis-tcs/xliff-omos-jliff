@@ -6,10 +6,11 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="element">
-  <title><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>anonymous element
+  <title><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>anonymous inline
     object <code>"text"</code> or <code>"kind" : "ec|em|ph|sc|sm"</code><?oxy_custom_end?></title>
 
-  <para>Represents a Unicode character that is invalid in XML.</para>
+  <para>JLIFF inline content is linearly composed from valid sequences of the following object
+    types:</para>
 
   <para><emphasis>Type:</emphasis>
     <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object with property <olink

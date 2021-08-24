@@ -33,8 +33,9 @@
     <xi:include href="inline/ph.xml"
                 xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
 
+<!-- for now only commenting out well formed tag descriptions, depend on how the roundtrip is described
     <xi:include href="inline/pc.xml"
-                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include> -->
 
     <xi:include href="inline/sc.xml"
                 xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
@@ -42,8 +43,9 @@
     <xi:include href="inline/ec.xml"
                 xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
 
+  <!-- for now only commenting out well formed tag descriptions, depend on how the roundtrip is described
     <xi:include href="inline/mrk.xml"
-                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>-->
     <xi:include href="inline/sm.xml"
                 xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
     <xi:include href="inline/em.xml"

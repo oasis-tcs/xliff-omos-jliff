@@ -6,43 +6,19 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="cp">
-  <title>cp</title>
+  <title> Roundtripping XLIFF &lt;cp/></title>
 
-  <para>Represents a Unicode character that is invalid in XML.
-    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[cp doesn't have an
-    equivalent in JLIFF, illegal XML needs to be replaced with &lt;cp> when moving from JLIFF to
-    XLIFF, in the opposite direction the &lt;cp> is just replaced with the
-    literal..<?oxy_custom_end?>]</para>
+  <para>XLIFF <ulink
+      url="http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html#cp"
+        ><code>&lt;cp></code></ulink> represents a Unicode character that is invalid in XML.</para>
 
   <para><emphasis>Type:</emphasis></para>
 
   <simplelist>
-    <member>This element is always empty.</member>
+    <member>JLIFF doesn't have an equivalent to XLIFF <code>&lt;cp></code></member>
   </simplelist>
 
-  <para><emphasis>Parents:</emphasis></para>
-
-  <simplelist>
-    <member><olink targetdoc="structural/data.xml"
-    targetptr="data"><code>&lt;data&gt;</code></olink>, <olink
-    targetdoc="mrk.xml" targetptr="mrk"><code>&lt;mrk&gt;</code></olink>,
-    <olink targetdoc="structural/source.xml"
-    targetptr="source"><code>&lt;source&gt;</code></olink>, <olink
-    targetdoc="structural/target.xml"
-    targetptr="target"><code>&lt;target&gt;</code></olink> and <olink
-    targetdoc="pc.xml" targetptr="pc"><code>&lt;pc&gt;</code></olink></member>
-  </simplelist>
-
-  <para><emphasis>Attributes:</emphasis></para>
-
-  <simplelist>
-    <member>- <olink targetdoc="../../attributes/hex.xml"
-    targetptr="hex"><code>hex</code></olink>, <glossterm>required</glossterm></member>
-
-
-  </simplelist>
-
-  <para><emphasis>Example:</emphasis></para>
+  <para><emphasis>Example in XLIFF:</emphasis></para>
 
   <programlisting>
 &lt;unit id="1"&gt;
@@ -51,21 +27,49 @@
   &lt;/segment&gt;
 &lt;/unit&gt;
 </programlisting>
+  <para>Equivalent of the above example in JLIFF:</para>
+  <programlisting>
+WIP 
 
-  <para>The example above shows a character U+0003 (Control C) as it has to be represented in
-    XLIFF.</para>
+^C [Oxyegn doesn't accept the literal even in CDATA]
+\u
+"Ctrl+C=\u0003"
+
+
+
+    
+</programlisting>
+
+  <para>The example above shows a character U+0003 (Control C) as it has to be represented in XLIFF.
+    As the character ETX is legal in JSON, the <code>&lt;cp hex="0003"></code> becomes the literal
+    of "^C" or "ETX" in the JLIFF serialization. in case of mixed XLIFF and JLIFF pipelines the
+    conversion mechanism needs to be able to "cp-encode" XML illegal characters in LIFF on the fly
+    or vice versa to replace the "cp-encoded" XLIFF representations with their literal equivalents
+    in JLIFF.</para>
 
   <itemizedlist>
     <title>Processing Requirements</title>
 
     <listitem>
-      <para><firstterm>Writers</firstterm> <glossterm>must</glossterm> encode all invalid XML characters of the content
-      using <link linkend="cp"><code>&lt;cp&gt;</code></link>.</para>
+      <para><firstterm>JLIFF Writers</firstterm> receiving XLIFF <ulink  url="http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html#cp"
+            ><code>&lt;cp></code></ulink>
+        <glossterm>must</glossterm> replace the code with the corresponding literal character given
+        by the XLIFF <ulink url="https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html#hex"></ulink><code>hex</code> attribute.</para>
+    </listitem>
+    <listitem>
+      <para><firstterm>XLIFF Writers</firstterm> receiving illegal XML characters (Unicode
+        characters with hexadecimal codes from 0000 to 10FFFF) <glossterm>must</glossterm> replace
+        each XML illegal character with the XLIFF <ulink
+          url="http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html#cp"
+            ><code>&lt;cp></code></ulink> element using the corresponding <ulink
+          url="https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html#hex"
+          /><code>hex</code> attribute. </para>
     </listitem>
 
     <listitem>
-      <para><firstterm>Writers</firstterm> <glossterm>must not</glossterm> encode valid XML characters of the content using
-      <link linkend="cp"><code>&lt;cp&gt;</code></link>.</para>
+      <para><firstterm>XLIFF Writers</firstterm>
+        <glossterm>must not</glossterm> encode valid XML characters of the content using <link
+          linkend="cp"><code>&lt;cp&gt;</code></link>.</para>
     </listitem>
   </itemizedlist>
 </section>

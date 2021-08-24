@@ -78,6 +78,8 @@
             TO DESCRIBE xml:space ROUNDTRIPPING]<olink targetdoc="../../attributes/xml_space.xml"
                 targetptr="xml_space"><code>xml:space</code></olink>,
                 <glossterm>optional</glossterm><?oxy_custom_end?></member>
+        <member><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>- other
+            none-core properties, <glossterm>optional,</glossterm><?oxy_custom_end?></member>
         <!-- covered by the userdata property allowed below
         <member>- <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>[NEED A
             REFORMULATION WITH THE userdata PROPERTY] attributes from other namespaces,
