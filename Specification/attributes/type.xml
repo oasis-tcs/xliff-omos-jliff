@@ -37,7 +37,7 @@
           types.</member>
       </simplelist>
       <para><emphasis>Example:</emphasis>
-        <programlisting><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>
+        <programlisting><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
 &lt;segment&gt;
   &lt;source xml:lang="cs">&lt;pc type="quote"><foreignphrase lang="cs">Blázen,
       chce dobýt točnu v takovém počasí&lt;/pc>, dodal slovy svého
@@ -45,7 +45,29 @@
   &lt;target xml:lang="en">&lt;pc type="quote">Madman, he wants to conquer the
       pole in this weather&lt;/pc&gt;, offered he the words of his
       favourite imaginary playwright.&lt;/target&gt;
-&lt;/segment&gt;<?oxy_custom_end?>
+&lt;/segment&gt;<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+"subunits": [
+    {
+        "kind": "segment",
+        "state": "translated",
+        "source": [
+            { "id": "c1", "kind": "ph", "codeType": "quote", "dataRef": "d1" },
+            { "text": "Blázen, chce dobýt točnu v takovém počasí," }.
+            { "id": "c2", "kind": "sc", "dataRef": "d2" },       
+            { "text": "dodal slovy svého oblíbeného imaginárního autora." },
+            { "startRef": "c2", "kind": "ec", "dataRef": "d3" }
+        ],
+        "target": [
+            { "id": "c1", "kind": "ph", "codeType": "quote", "dataRef": "d1" },
+            { "text": "Madman, he wants to conquer the pole in this weather," },
+            { "id": "c2", "kind": "sc", "dataRef": "d2" },       
+            { "text": "offered he the words of his favourite imaginary playwright." },
+            { "startRef": "c2", "kind": "ec", "dataRef": "d3" }
+        ],
+        "sourceXmlLang": "cs",
+        "targetXmlLang": "en"
+    }
+]<?oxy_custom_end?>
 </programlisting>
       </para>
       <para>One can further specify the type of a code using the <olink targetdoc="subtype.xml" targetptr="subtype">
