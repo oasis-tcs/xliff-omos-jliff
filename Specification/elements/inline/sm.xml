@@ -55,6 +55,8 @@
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"value"</code>, a
         <olink targetdoc="../../attributes/value.xml" targetptr="value"><code>value</code></olink>
       string, <glossterm>optional</glossterm></member>
+    <member><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>- other none-core
+      properties, <glossterm>optional,</glossterm><?oxy_custom_end?></member>
   </simplelist>
   
   <itemizedlist>

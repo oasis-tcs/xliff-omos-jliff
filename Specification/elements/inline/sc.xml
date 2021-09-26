@@ -95,7 +95,9 @@
         <olink targetdoc="../../attributes/type.xml" targetptr="type"><code>type</code></olink>
       string with value <code>"fmt"</code>, <code>"ui"</code>, <code>"quote"</code>,
         <code>"link"</code>, <code>"image"</code>, <code>"its:generic"</code>, or
-        <code>"other"</code>, <glossterm>optional</glossterm></member><?oxy_custom_end?>
+        <code>"other"</code>, <glossterm>optional</glossterm></member>
+    <member><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>- other none-core
+      properties, <glossterm>optional,</glossterm><?oxy_custom_end?></member><?oxy_custom_end?>
   </simplelist>
   <para><emphasis><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>Example:</emphasis></para>
   <programlisting>
