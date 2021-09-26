@@ -6,7 +6,8 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="xml_space">
-    <title>xml:space</title>
+    <title>xml:space <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[NOT
+        USED]<?oxy_custom_end?></title>
     
     <para>White spaces - the xml:space attribute specifies how white spaces (ASCII spaces, tabs and
         line-breaks) are to be treated.</para>

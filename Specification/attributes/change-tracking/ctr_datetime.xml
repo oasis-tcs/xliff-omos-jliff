@@ -6,16 +6,19 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="ctr_datetime">
-  <title>datetime</title>
+  <title>ctr_datetime</title>
 
   <para>Date and Time, datetime - Indicates the date and time the referenced element or its
     attributes were created or modified.</para>
 
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.<?oxy_custom_end?></para>
   <para><emphasis>Value description:</emphasis> Date in one of the formats defined in <olink
-    targetdoc="../../xliff21.xml" targetptr="bib_datetime">[NOTE-datetime]</olink>.</para>
+      targetdoc="../../xliff21.xml" targetptr="bib_datetime">[NOTE-datetime]</olink>.</para>
 
-  <para><emphasis>Default value:</emphasis> undefined</para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
 
-  <para><emphasis>Used in:</emphasis><olink targetdoc="../../elements/change-tracking/revision.xml" targetptr="revision"><code>&lt;revision></code></olink>.</para>
+  <para><emphasis>Used in:</emphasis><olink targetdoc="../../elements/change-tracking/revision.xml"
+      targetptr="revision"><code>ctr_revision</code></olink>.</para>
   
 </section>

@@ -8,12 +8,13 @@
 <section id="priority">
     <title>priority</title>
     <para>Priority - provides a way to prioritize notes.</para>
-    <para><emphasis>Type:</emphasis> number.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+        number.<?oxy_custom_end?></para>
     <para><emphasis>Value description:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>integer between 1 and
         10, inclusive.<?oxy_custom_end?></para>
     <para><emphasis>Default value:</emphasis>
-        <code>1</code></para>
+        <code>1</code>.</para>
     <para><emphasis>Used in:</emphasis>
         <olink targetdoc="../elements/structural/note.xml" targetptr="note"
             ><code>note</code></olink>.</para>

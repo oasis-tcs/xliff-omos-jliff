@@ -22,12 +22,14 @@
     cover its partner <olink targetdoc="../../elements/inline/ec.xml" targetptr="ec"
       ><code>ec</code></olink> element.</para>
 
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.<?oxy_custom_end?></para>
   <para><emphasis>Value description:</emphasis> Interpretation of the value is dependent on selected
       <olink targetdoc="storage-profile.xml" targetptr="slr_storage_profile"
         ><code>slr_storageProfile</code></olink>. It <glossterm>must</glossterm> represent the
     equivalent storage size represented by the inline element.</para>
 
-  <para><emphasis>Default value:</emphasis> undefined</para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
 
   <para><emphasis>Used
       in:<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?></emphasis>

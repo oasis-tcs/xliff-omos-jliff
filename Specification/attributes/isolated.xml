@@ -11,7 +11,8 @@
   <para>Orphan code flag - indicates if the start or end marker of a spanning inline code is not in
     the same <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"
       ><code>unit</code></olink> as its corresponding end or start code.</para>
-  <para><emphasis>Type:</emphasis> string.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.<?oxy_custom_end?></para>
 
   <para><emphasis>Value description:</emphasis>
     <code>"yes"</code> if this start or end code is not in the same <olink

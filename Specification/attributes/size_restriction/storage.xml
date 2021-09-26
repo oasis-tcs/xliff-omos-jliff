@@ -7,13 +7,13 @@
 ]>
 <section id="slr_storage">
   <title>slr_storage</title>
-
   <para>This <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string
     property<?oxy_custom_end?> specifies the normalization form to apply for storage size
     restrictions. Only the normalization forms C and D as specified by the Unicode Consortium are
     supported, see <ulink url="http://unicode.org/reports/tr15/">Unicode Standard Annex
     #15</ulink>.</para>
-
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.</para><?oxy_custom_end?>
   <para><emphasis>Value description:</emphasis> normalization to apply.</para>
   <table>
     <title>Values</title>
@@ -45,11 +45,8 @@
       </tbody>
     </tgroup>
   </table>
-
-
   <para><emphasis>Default value:</emphasis>
     <code>"none"</code></para>
-
   <para><emphasis>Used in:</emphasis>
     <olink targetdoc="../../elements/size_restriction/normalization.xml"
       targetptr="slr_normalization"><code>slr_normalization</code></olink>.</para>

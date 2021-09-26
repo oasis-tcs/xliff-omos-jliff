@@ -6,60 +6,54 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="ctr_id">
-  <title>id</title>
-
+  <title>id <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[NOT
+    USED]<?oxy_custom_end?></title>
   <para>Identifier - a character string used to identify a <olink
-    targetdoc="../../elements/change-tracking/revisions.xml" targetptr="revisions"
-    ><code>&lt;revisions></code></olink>, <olink
+      targetdoc="../../elements/change-tracking/revisions.xml" targetptr="revisions"
+        ><code>&lt;revisions></code></olink>, <olink
       targetdoc="../../elements/change-tracking/revision.xml" targetptr="revision"
-      ><code>&lt;revision></code></olink>, 
-    <olink
+        ><code>&lt;revision></code></olink>, <olink
       targetdoc="../../elements/change-tracking/unitItem.xml" targetptr="unitItem"
-      ><code>&lt;unitItem></code></olink>, 
-    <olink
+        ><code>&lt;unitItem></code></olink>, <olink
       targetdoc="../../elements/change-tracking/contentItem.xml" targetptr="contentItem"
-      ><code>&lt;contentItem></code></olink>, or
-    
-    <olink
-        targetdoc="../../elements/change-tracking/item.xml" targetptr="item"
-        ><code>&lt;item></code></olink>  element within their enclosing <olink
-            targetdoc="../../elements/change-tracking/changeTrack.xml" targetptr="changeTrack"
-            ><code>&lt;changeTrack></code></olink> element.</para>
-
-  <para><emphasis>Value description:</emphasis> NMTOKEN</para>
-
-  <para><emphasis>Default value:</emphasis> undefined</para>
-
-  <para><emphasis>Used in:</emphasis> <olink
-    targetdoc="../../elements/change-tracking/revisions.xml" targetptr="revisions"
-    ><code>&lt;revisions></code></olink>, <olink
+        ><code>&lt;contentItem></code></olink>, or <olink
+      targetdoc="../../elements/change-tracking/item.xml" targetptr="item"
+      ><code>&lt;item></code></olink> element within their enclosing <olink
+      targetdoc="../../elements/change-tracking/changeTrack.xml" targetptr="changeTrack"
+        ><code>&lt;changeTrack></code></olink> element.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.</para><?oxy_custom_end?>
+  <para><emphasis>Value description:</emphasis>
+    NMTOKEN<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>: a string matching
+    the pattern <code>[-._:A-Za-z0-9]+</code>.<?oxy_custom_end?></para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../../elements/change-tracking/revisions.xml" targetptr="revisions"
+        ><code>&lt;revisions></code></olink>, <olink
       targetdoc="../../elements/change-tracking/revision.xml" targetptr="revision"
-      ><code>&lt;revision></code></olink>,
-    <olink
+        ><code>&lt;revision></code></olink>, <olink
       targetdoc="../../elements/change-tracking/unitItem.xml" targetptr="unitItem"
-      ><code>&lt;unitItem></code></olink>, 
-    <olink
+        ><code>&lt;unitItem></code></olink>, <olink
       targetdoc="../../elements/change-tracking/contentItem.xml" targetptr="contentItem"
-      ><code>&lt;contentItem></code></olink>,
-    
-    <olink
-        targetdoc="../../elements/change-tracking/item.xml" targetptr="item"
-        ><code>&lt;item></code></olink>.</para>
-<itemizedlist>
-  <title>Constraints</title>
-  <listitem>
-    <para>This <link linkend="ctr_id"><code>id</code></link> attribute <glossterm>must</glossterm>
+        ><code>&lt;contentItem></code></olink>, <olink
+      targetdoc="../../elements/change-tracking/item.xml" targetptr="item"
+      ><code>&lt;item></code></olink>.</para>
+  <itemizedlist>
+    <title>Constraints</title>
+    <listitem>
+      <para>This <link linkend="ctr_id"><code>id</code></link> attribute <glossterm>must</glossterm>
         be unique within each <olink targetdoc="../../elements/change-tracking/changeTrack.xml"
           targetptr="changeTrack"><code>&lt;changeTrack></code></olink> element.</para>
-  </listitem>
-</itemizedlist>  
-<note><para> This <link linkend="ctr_id"><code>id</code></link> attribute is not being used from the
+    </listitem>
+  </itemizedlist>
+  <note>
+    <para> This <link linkend="ctr_id"><code>id</code></link> attribute is not being used from the
       Change Tracking Module itself. It's merely a convenience to be able to reference Change
       Tracking Module elements externally or from custom Extensions using the <olink
         targetdoc="../../fragments/fragments.xml" targetptr="fragid">XLIFF Fragment Identification
         Mechanism</olink>. Change Tracking Module references the tracked Core data using its own
         <olink targetptr="ctr_appliesTo" targetdoc="ctr_appliesTo.xml"
         ><code>appliesTo</code></olink> and <olink targetdoc="ctr_ref.xml" targetptr="ctr_ref"
-          ><code>ref</code></olink> attributes and does not use self reference.</para></note>
-
+          ><code>ref</code></olink> attributes and does not use self reference.</para>
+  </note>
 </section>

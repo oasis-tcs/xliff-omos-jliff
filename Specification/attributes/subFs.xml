@@ -5,12 +5,13 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="subFs">
-<title>subFs</title>
-<para>Sub-format style, subFs - allows extra metadata, like URL for example, to be added in concert
-        with the <olink targetdoc="../attributes/fs.xml" targetptr="fs"><code>fs_fs</code></olink>
+<title>fs_subFs</title>
+<para>Sub-format style, <code>fs_subFs</code> - allows extra metadata, like URL for example, to be
+        added in concert with the <olink targetdoc="../attributes/fs.xml" targetptr="fs"
+                ><code>fs_fs</code></olink>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end?>. </para>
 
-<para><emphasis>Value description:</emphasis> The subFs
+<para><emphasis>Value description:</emphasis> The <code>fs_subFs</code>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end?>
         is used to specify the HTML attributes to use along with the HTML element declared in the
             <olink targetdoc="../attributes/fs.xml" targetptr="fs"><code>fs_fs</code></olink>
@@ -29,7 +30,9 @@ accompanied <olink targetdoc="../attributes/fs.xml" targetptr="fs"><code>fs</cod
     </para>
 <!-- this is now redundant
 <para>Example:<code> fs:fs="img" fs:subFs="src,smileface.png"</code>. </para>-->
-<para><emphasis>Default value:</emphasis> undefined.</para>
+<para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+        string.<?oxy_custom_end?></para>
+    <para><emphasis>Default value:</emphasis> undefined.</para>
 <para><emphasis>Used in:</emphasis>
         <olink targetdoc="../elements/structural/file.xml" targetptr="file"
             ><code>file</code></olink>, <!--<olink targetdoc="../elements/structural/skeleton.xml"

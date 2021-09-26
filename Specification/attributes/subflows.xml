@@ -10,24 +10,25 @@
 
   <para>Sub-flows list - holds a list of <olink targetdoc="id.xml" targetptr="id"
       ><code>id</code></olink> attributes corresponding to the <olink
-      targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit&gt;</code></olink>
-    elements that contain the sub-flows for a given inline code.</para>
+      targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>unit</code></olink>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end?>
+    that contain the sub-flows for a given inline code.</para>
 
-  <para><emphasis>Value description:</emphasis> A list of NMTOKEN values
-  separated by spaces. Each value corresponds to the <olink targetdoc="id.xml"
-  targetptr="id"><code>id</code></olink> attribute of a <olink
-  targetdoc="../elements/structural/unit.xml"
-  targetptr="unit"><code>&lt;unit&gt;</code></olink> element.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.<?oxy_custom_end?></para>
+  <para><emphasis>Value description:</emphasis> A list of NMTOKEN values separated by
+    spaces,<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?> where NMTOKEN is a
+    string matching the pattern <code>[-._:A-Za-z0-9]+</code><?oxy_custom_end?>.Each value
+    corresponds to the <olink targetdoc="id.xml" targetptr="id"><code>id</code></olink> attribute of
+    a <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>unit</code></olink>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
 
-  <para><emphasis>Default value:</emphasis> undefined</para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
 
-  <para><emphasis>Used in:</emphasis> <olink
-  targetdoc="../elements/inline/ph.xml"
-  targetptr="ph"><code>&lt;ph&gt;</code></olink>, <olink
-  targetdoc="../elements/inline/sc.xml"
-  targetptr="sc"><code>&lt;sc&gt;</code></olink>, <olink
-  targetdoc="../elements/inline/ec.xml"
-  targetptr="ec"><code>&lt;ec&gt;</code></olink>.</para>
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../elements/inline/ph.xml" targetptr="ph"><code>ph</code></olink>, <olink
+      targetdoc="../elements/inline/sc.xml" targetptr="sc"><code>sc</code></olink>, <olink
+      targetdoc="../elements/inline/ec.xml" targetptr="ec"><code>ec</code></olink>.</para>
 
   <para><emphasis>Example:</emphasis></para>
 

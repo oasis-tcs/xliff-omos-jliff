@@ -6,14 +6,16 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="ctr_property">
-  <title>property</title>
-
+  <title>ctr_property</title>
   <para>property – Indicates the type of revision data.</para>
-
-  <para><emphasis>Value description:</emphasis> The value <glossterm>must</glossterm> be either <code>content</code> to signify the content of an element, or the name of the attribute relating to the revision data.</para>
-
-  <para><emphasis>Default value:</emphasis> none</para>
-
-  <para><emphasis>Used in:</emphasis><olink targetdoc="../../elements/change-tracking/item.xml" targetptr="item"><code>&lt;item></code></olink>.</para>
-  
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.</para><?oxy_custom_end?>
+  <para><emphasis>Value description:</emphasis> The value <glossterm>must</glossterm> be either
+      <code>content</code> to signify the content of an element, or the name of the attribute
+    relating to the revision data.</para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
+  <para><emphasis>Used in:</emphasis><olink targetdoc="../../elements/change-tracking/item.xml"
+      targetptr="item"><code>items</code></olink>
+    <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>array of
+    objects<?oxy_custom_end?>.</para>
 </section>

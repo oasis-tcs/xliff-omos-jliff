@@ -11,40 +11,49 @@
     <para>Translate - indicates whether or not the source text in the scope of the given <code>translate</code> flag is intended
         for <firstterm>Translation</firstterm>.</para>
 
-    <para><emphasis>Value description:</emphasis> <code>yes</code> or <code>no</code>.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+        string.<?oxy_custom_end?></para>
+    <para><emphasis>Value description:</emphasis>
+        <code>"yes"</code> or <code>"no"</code>.</para>
 
     <para><emphasis>Default value:</emphasis> default values for this attribute
         depend on the element in which it is used:</para>
 
     <itemizedlist>
         <listitem>
-            <para>When used in <olink targetdoc="../elements/structural/file.xml"
-                targetptr="file"><code>&lt;file></code></olink>:</para>
-
-            <para>The value <code>yes</code>.</para>
+            <para>When used in <olink targetdoc="../elements/structural/file.xml" targetptr="file"
+                        ><code>file</code></olink>:</para>
+            <para>The value <code>"yes"</code>.</para>
         </listitem>
         <listitem>
-            <para>When used in any other admissible structural element (<olink targetdoc="../elements/structural/group.xml"
-                targetptr="group"><code>&lt;group></code></olink> or <olink targetdoc="../elements/structural/unit.xml"
-                    targetptr="unit"><code>&lt;unit></code></olink>):</para>
-            <para>The value of the <olink targetdoc="translate.xml"
-                targetptr="translate"><code>translate</code></olink> attribute of its parent element.
+            <para>When used in any other admissible structural element (<olink
+                    targetdoc="../elements/structural/group.xml" targetptr="group"
+                        ><code>group</code></olink> or <olink
+                    targetdoc="../elements/structural/unit.xml" targetptr="unit"
+                    ><code>unit</code></olink>):</para>
+            <para>The value of the <olink targetdoc="translate.xml" targetptr="translate"
+                        ><code>translate</code></olink>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+                of its parent
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.
             </para>
-
         </listitem>
         <listitem>
             <para>When used in annotations markers
-                <olink targetdoc="../elements/inline/mrk.xml" targetptr="mrk"><code>&lt;mrk></code></olink> or
-                <olink targetdoc="../elements/inline/sm.xml" targetptr="sm"><code>&lt;sm></code></olink>:</para>
-
-
-            <para>The value of the <olink targetdoc="translate.xml"
-                targetptr="translate"><code>translate</code></olink> attribute of the innermost <olink targetdoc="../elements/inline/mrk.xml" targetptr="mrk"><code>&lt;mrk></code></olink> or <olink targetdoc="../elements/structural/unit.xml"
-                    targetptr="unit"><code>&lt;unit&gt;</code></olink> element, in which the marker in question is located.
+                    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
+                    targetdoc="../elements/inline/mrk.xml" targetptr="mrk"
+                    ><code>&lt;mrk></code></olink> or <?oxy_custom_end?><olink
+                    targetdoc="../elements/inline/sm.xml" targetptr="sm"
+                ><code>sm</code></olink>:</para>
+            <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>The value of the
+                    <olink targetdoc="translate.xml" targetptr="translate"
+                    ><code>translate</code></olink> attribute of the innermost <olink
+                    targetdoc="../elements/inline/mrk.xml" targetptr="mrk"
+                    ><code>&lt;mrk></code></olink> or <olink
+                    targetdoc="../elements/structural/unit.xml" targetptr="unit"
+                    ><code>unit</code></olink> object, in which the marker in question is located.
             </para>
-
-        </listitem>
-
+        </listitem><?oxy_custom_end?>
         <!--Caveat! @translte has been removed from <segment> to simplify translation state algorithm..
             The following is the verbose version of the above defaults descriptions:
 
@@ -112,11 +121,14 @@
 
 
     <para><emphasis>Used in:</emphasis>
-        <olink targetdoc="../elements/structural/file.xml" targetptr="file"><code>&lt;file></code></olink>
-        <olink targetdoc="../elements/structural/group.xml" targetptr="group"><code>&lt;group></code></olink>
-        <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink>,
-        <olink targetdoc="../elements/inline/mrk.xml" targetptr="mrk"><code>&lt;mrk></code></olink> and
-        <olink targetdoc="../elements/inline/sm.xml" targetptr="sm"><code>&lt;sm></code></olink>.
-    </para>
+        <olink targetdoc="../elements/structural/file.xml" targetptr="file"
+            ><code>file</code></olink>
+        <olink targetdoc="../elements/structural/group.xml" targetptr="group"
+            ><code>group</code></olink>
+        <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"
+            ><code>unit</code></olink><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>,
+            <olink targetdoc="../elements/inline/mrk.xml" targetptr="mrk"
+            ><code>&lt;mrk></code></olink><?oxy_custom_end?> and <olink
+            targetdoc="../elements/inline/sm.xml" targetptr="sm"><code>sm</code></olink>. </para>
 
 </section>

@@ -7,15 +7,14 @@
 ]>
 <section id="slr_general_profile">
   <title>slr_generalProfile</title>
-
   <para>This <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string
     property<?oxy_custom_end?> specifies, which profile to use while checking the general size
     restrictions. Empty string means that no restrictions apply.</para>
-
-  <para><emphasis>Value description:</emphasis> Name of restriction profile to use for general size restrictions.</para>
-
-  <para><emphasis>Default value:</emphasis> empty string</para>
-
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.</para><?oxy_custom_end?>
+  <para><emphasis>Value description:</emphasis> Name of restriction profile to use for general size
+    restrictions.</para>
+  <para><emphasis>Default value:</emphasis> empty string.</para>
   <para><emphasis>Used in:</emphasis><olink targetdoc="../../elements/size_restriction/profiles.xml"
       targetptr="slr_profiles"><code>slr_profiles</code></olink>.</para>
 </section>

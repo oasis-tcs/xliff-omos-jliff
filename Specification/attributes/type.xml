@@ -1,37 +1,43 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
-<!-- This document was created with Syntext Serna Free. -->
+<!-- -->
 <!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.docbook.org/xml/4.5/docbookx.dtd" [
 <!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod">
 %xinclude;
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="type">
-  <title>type</title>
-  <para>Type - indicates the type of an element.</para>
+  <title><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>codeType<?oxy_custom_end?>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[NOTE: should split into
+    two files: codeType and mrkType]<?oxy_custom_end?></title>
+  <para>codeType - indicates the type of an element.</para>
+  <para><emphasis>Type:</emphasis><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+    string.<?oxy_custom_end?></para>
   <para><emphasis>Value description:</emphasis> allowed values for this attribute depend on the
     element in which it is used.</para>
   <itemizedlist>
     <listitem>
-      <para>When used in <olink targetdoc="../elements/inline/pc.xml" targetptr="pc">
+      <para>When used in <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
+          targetdoc="../elements/inline/pc.xml" targetptr="pc">
           <code>&lt;pc&gt;</code>
-        </olink>, <olink targetdoc="../elements/inline/sc.xml" targetptr="sc">
-          <code>&lt;sc&gt;</code>
+        </olink>, <?oxy_custom_end?><olink targetdoc="../elements/inline/sc.xml" targetptr="sc">
+          <code>sc</code>
         </olink>, <olink targetdoc="../elements/inline/ec.xml" targetptr="ec">
-          <code>&lt;ec&gt;</code>
+          <code>ec</code>
         </olink> or <olink targetdoc="../elements/inline/ph.xml" targetptr="ph">
-          <code>&lt;ph&gt;</code>
+          <code>ph</code>
         </olink>:</para>
       <para>The value  <glossterm>must</glossterm> be set to one of the following values:</para>
       <simplelist>
-        <member><code>fmt</code> - Formatting (e.g. a &lt;b&gt; element in HTML)</member>
-        <member><code>ui</code> - User interface element</member>
-        <member><code>quote</code> - Inline quotation (as opposed to a block citation)</member>
-        <member><code>link</code> - Link (e.g. an &lt;a&gt; element in HTML)</member>
-        <member><code>image</code> - Image or graphic</member>
-        <member><code>other</code> - Type of element not covered by any of the other top-level types.</member>
+        <member><code>"fmt"</code> - Formatting (e.g. a &lt;b&gt; element in HTML)</member>
+        <member><code>"ui"</code> - User interface element</member>
+        <member><code>"quote"</code> - Inline quotation (as opposed to a block citation)</member>
+        <member><code>"link"</code> - Link (e.g. an &lt;a&gt; element in HTML)</member>
+        <member><code>"image"</code> - Image or graphic</member>
+        <member><code>"other"</code> - Type of element not covered by any of the other top-level
+          types.</member>
       </simplelist>
       <para><emphasis>Example:</emphasis>
-        <programlisting>
+        <programlisting><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>
 &lt;segment&gt;
   &lt;source xml:lang="cs">&lt;pc type="quote"><foreignphrase lang="cs">Blázen,
       chce dobýt točnu v takovém počasí&lt;/pc>, dodal slovy svého
@@ -39,33 +45,35 @@
   &lt;target xml:lang="en">&lt;pc type="quote">Madman, he wants to conquer the
       pole in this weather&lt;/pc&gt;, offered he the words of his
       favourite imaginary playwright.&lt;/target&gt;
-&lt;/segment&gt;
+&lt;/segment&gt;<?oxy_custom_end?>
 </programlisting>
       </para>
       <para>One can further specify the type of a code using the <olink targetdoc="subtype.xml" targetptr="subtype">
           <code>subType</code>
         </olink>
       attribute.</para>
-      <para><emphasis>Default value:</emphasis> Undefined</para>
+      <para><emphasis>Default value:</emphasis> Undefined.</para>
     </listitem>
     <listitem>
-      <para>When used in <olink targetdoc="../elements/inline/mrk.xml" targetptr="mrk">
+      <para>When used in <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
+          targetdoc="../elements/inline/mrk.xml" targetptr="mrk">
           <code>&lt;mrk&gt;</code>
-        </olink> or <olink targetdoc="../elements/inline/sm.xml" targetptr="sm">
-          <code>&lt;sm&gt;</code>
+        </olink> or <?oxy_custom_end?><olink targetdoc="../elements/inline/sm.xml" targetptr="sm">
+          <code>sm</code>
         </olink>:</para>
-      <para>One of the following values: <code>generic</code>, <code>comment</code>,
-          <code>term</code>, or a user-defined value that is composed of a prefix and a sub-value
+      <para>One of the following values: <code>"generic"</code>, <code>"comment"</code>,
+          <code>"term"</code>, or a user-defined value that is composed of a prefix and a sub-value
         separated by a character <code>:</code> (U+003A).</para>
       <para>The prefix is a string uniquely identifying a collection of sub-values for a specific authority.
         The sub-value is any string value defined by the authority.</para>
-      <para><emphasis>Default value:</emphasis> <code>generic</code></para>
+      <para><emphasis>Default value:</emphasis>
+        <code>"generic"</code>.</para>
     </listitem>
     <listitem>
       <para>When used in <olink targetdoc="../elements/structural/group.xml" targetptr="group">
-          <code>&lt;group&gt;</code>
+          <code>group</code>
         </olink> or <olink targetdoc="../elements/structural/unit.xml" targetptr="unit">
-          <code>&lt;unit&gt;</code>
+          <code>unit</code>
         </olink>:</para>
       <para>A value that is composed of a prefix and a sub-value
         separated by a character <code>:</code> (U+003A).</para>
@@ -74,39 +82,47 @@
       <para><emphasis>Default value:</emphasis> Undefined</para>
     </listitem>
   </itemizedlist>
-  <para><emphasis>Used in:</emphasis> <olink targetdoc="../elements/structural/group.xml" targetptr="group">
-      <code>&lt;group&gt;</code>
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../elements/structural/group.xml" targetptr="group">
+      <code>group</code>
     </olink>, <olink targetdoc="../elements/structural/unit.xml" targetptr="unit">
-      <code>&lt;unit&gt;</code>
-    </olink>, <olink targetdoc="../elements/inline/pc.xml" targetptr="pc">
-      <code>&lt;pc&gt;</code>
-    </olink>, <olink targetdoc="../elements/inline/sc.xml" targetptr="sc">
-      <code>&lt;sc&gt;</code>
+      <code>unit</code>
+    </olink>, <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
+      targetdoc="../elements/inline/pc.xml" targetptr="pc">
+      <code>pc</code>
+    </olink>,<?oxy_custom_end?>
+    <olink targetdoc="../elements/inline/sc.xml" targetptr="sc">
+      <code>sc</code>
     </olink>, <olink targetdoc="../elements/inline/ec.xml" targetptr="ec">
-      <code>&lt;ec&gt;</code>
-    </olink>, <olink targetdoc="../elements/inline/mrk.xml" targetptr="mrk">
+      <code>ec</code>
+    </olink>, <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
+      targetdoc="../elements/inline/mrk.xml" targetptr="mrk">
       <code>&lt;mrk&gt;</code>
-    </olink>,  <olink targetdoc="../elements/inline/ph.xml" targetptr="ph">
-      <code>&lt;ph&gt;</code>
+    </olink>,<?oxy_custom_end?>
+    <olink targetdoc="../elements/inline/ph.xml" targetptr="ph">
+      <code>ph</code>
     </olink> and <olink targetdoc="../elements/inline/sm.xml" targetptr="sm">
-      <code>&lt;sm&gt;</code>
+      <code>sm</code>
     </olink>.</para>
   <itemizedlist>
     <title>Processing Requirements</title>
     <listitem>
-      <para><firstterm>Modifiers</firstterm> updating the attribute <link linkend="type">
-          <code>type</code>
-        </link> on <olink targetdoc="../elements/inline/pc.xml" targetptr="pc">
+      <para><firstterm>Modifiers</firstterm> updating the <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
+        <link linkend="type">
+          <code><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>codeType<?oxy_custom_end?></code>
+        </link> on <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
+          targetdoc="../elements/inline/pc.xml" targetptr="pc">
           <code>&lt;pc&gt;</code>
-        </olink>, <olink targetdoc="../elements/inline/sc.xml" targetptr="sc">
-          <code>&lt;sc&gt;</code>
+        </olink>,<?oxy_custom_end?>
+        <olink targetdoc="../elements/inline/sc.xml" targetptr="sc">
+          <code>sc</code>
         </olink>, <olink targetdoc="../elements/inline/ec.xml" targetptr="ec">
-          <code>&lt;ec&gt;</code>
-        </olink>, or
-          <olink targetdoc="../elements/inline/ph.xml" targetptr="ph">
-          <code>&lt;ph&gt;</code>
+          <code>ec</code>
+        </olink>, or <olink targetdoc="../elements/inline/ph.xml" targetptr="ph">
+          <code>ph</code>
         </olink>
-        <glossterm>must</glossterm> also update or delete <olink targetdoc="subType.xml" targetptr="subtype">
+        <glossterm>must</glossterm> also update or delete <olink targetdoc="subType.xml"
+          targetptr="subtype">
           <code>subType</code>
         </olink>.</para>
     </listitem>

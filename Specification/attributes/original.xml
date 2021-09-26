@@ -16,7 +16,7 @@
     
     <para><emphasis>Value description:</emphasis> IRI.</para>
         
-    <para><emphasis>Default value:</emphasis> undefined</para>
+    <para><emphasis>Default value:</emphasis> undefined.</para>
     
     <para><emphasis>Used in:</emphasis>
         <olink targetdoc="../elements/structural/file.xml" targetptr="file"

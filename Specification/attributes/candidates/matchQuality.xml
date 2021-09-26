@@ -16,8 +16,8 @@
                 ><code>mtc_match</code></olink>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
         based on an external benchmark or metric.</para>
-    <para><emphasis>Type:</emphasis>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>number<?oxy_custom_end?>.</para>
+    <para><emphasis><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>Type:</emphasis>
+        number.<?oxy_custom_end?></para>
     
     <para><emphasis>Value description:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>number between 0.0 and

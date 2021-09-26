@@ -7,7 +7,6 @@
 ]>
 <section id="slr_sizeInfoRef">
   <title>slr_sizeInfoRef</title>
-
   <para>This <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string
     property<?oxy_custom_end?> is used to point to data that provide the same function as the <olink
       targetdoc="size-info.xml" targetptr="slr_size_info"><code>skr_sizeInfo</code></olink>
@@ -22,9 +21,12 @@
       targetptr="sc"><code>sc</code></olink> element also cover its partner <olink
       targetdoc="../../elements/inline/ec.xml" targetptr="ec"><code>ec</code></olink>
     element.</para>
-
-  <para><emphasis>Value description:</emphasis> a reference to data that provide the same
-    information that could be otherwise put in a <olink targetdoc="size-info.xml"
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.</para><?oxy_custom_end?>
+  <para><emphasis>Value description:</emphasis>
+    <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>NMTOKEN: a string matching
+    the pattern <code>[-._:A-Za-z0-9]+</code><?oxy_custom_end?>, a reference to data that provide
+    the same information that could be otherwise put in a <olink targetdoc="size-info.xml"
       targetptr="slr_size_info"><code>slr_sizeInfo</code></olink>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string
     property<?oxy_custom_end?>. The reference <glossterm>must</glossterm> point to an
@@ -34,10 +36,7 @@
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?> this
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string
     property<?oxy_custom_end?> is attached to or a sibling to one of its ancestors. </para>
-
   <para><emphasis>Default value:</emphasis> undefined.</para>
-
- 
   <para><emphasis>Used in:</emphasis>
     <olink targetdoc="../../elements/structural/file.xml" targetptr="file"
     ><code>file</code></olink>, <olink targetdoc="../../elements/structural/group.xml"
@@ -49,7 +48,6 @@
         ><code>sc</code></olink>, <olink targetdoc="../../elements/inline/ec.xml" targetptr="ec"
         ><code>ec</code></olink>, and <olink targetdoc="../../elements/inline/ph.xml" targetptr="ph"
         ><code>ph</code></olink>, </para>
- 
   <itemizedlist>
     <title>Constraints</title>
     <listitem>
@@ -57,7 +55,6 @@
         <glossterm>must not</glossterm> be specified if and only if <olink targetdoc="size-info.xml"
           targetptr="slr_size_info"><code>slr_sizeInfo</code></olink> is used. They <glossterm>must
           not</glossterm> be specified at the same time.</para>
-    </listitem></itemizedlist> 
-  
-  
+    </listitem>
+  </itemizedlist>
 </section>

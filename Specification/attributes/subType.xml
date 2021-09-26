@@ -10,6 +10,8 @@
 
   <para>subType - indicates the secondary level type of an inline code.</para>
 
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.<?oxy_custom_end?></para>
   <para><emphasis>Value description:</emphasis></para>
 
   <para>The value is composed of a prefix and a sub-value separated by a
@@ -37,7 +39,7 @@
 
   <para>Other prefixes and sub-values <glossterm>may</glossterm> be defined by the users.</para>
 
-  <para><emphasis>Default value:</emphasis> undefined</para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
 
   <para><emphasis>Used in:</emphasis>
     <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink

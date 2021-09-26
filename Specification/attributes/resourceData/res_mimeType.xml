@@ -12,8 +12,8 @@
     the content type of <ulink url="http://tools.ietf.org/rfc/rfc2045.txt">[RFC 2045]</ulink>, the
     MIME specification; e.g. mimeType="text/xml" indicates the resource data is a text file of XML
     format.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis><?oxy_custom_end?>
-    string.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.<?oxy_custom_end?></para>
 
   <para><emphasis>Value description:</emphasis> a MIME type. An existing MIME type
       <glossterm>must</glossterm> be used from a <ulink

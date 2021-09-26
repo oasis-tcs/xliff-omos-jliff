@@ -6,15 +6,15 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="ctr_version">
-  <title>version</title>
-
+  <title>ctr_version</title>
   <para>version - Indicates the version of the referenced element or its attributes that were
     created or modified.</para>
-
-  <para><emphasis>Value description:</emphasis> NMTOKEN.</para>
-
-  <para><emphasis>Default value:</emphasis> undefined</para>
-
-  <para><emphasis>Used in:</emphasis><olink targetdoc="../../elements/change-tracking/revision.xml" targetptr="revision"><code>&lt;revision></code></olink>.</para>
-  
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.</para><?oxy_custom_end?>
+  <para><emphasis>Value description:</emphasis>
+    NMTOKEN<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>: a string matching
+    the pattern <code>[-._:A-Za-z0-9]+</code>.<?oxy_custom_end?></para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
+  <para><emphasis>Used in:</emphasis><olink targetdoc="../../elements/change-tracking/revision.xml"
+      targetptr="revision"><code>ctr_revision</code></olink>.</para>
 </section>

@@ -13,12 +13,11 @@
   <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end?></para>
 
-  <para><emphasis>Value description:</emphasis> an <olink targetdoc="../../xliff21.xml"
-      targetptr="XMLSchema2">[XML Schema Datatypes]</olink> NMTOKEN:
+  <para><emphasis>Value description:</emphasis> NMTOKEN:
     <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>a string matching the
     pattern <code>[-._:A-Za-z0-9]+</code><?oxy_custom_end?>.</para> 
 
-  <para><emphasis>Default value:</emphasis> none</para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
 
   <para><emphasis>Used in:</emphasis><olink targetdoc="../../elements/change-tracking/revisions.xml"
       targetptr="revisions"><code>ctr_revisions</code></olink>

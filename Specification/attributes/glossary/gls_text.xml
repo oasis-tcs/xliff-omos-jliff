@@ -14,7 +14,7 @@
 
   <para><emphasis>Value description:</emphasis> text.</para>
 
-  <para><emphasis>Default value:</emphasis> undefined.</para>
+  <para><emphasis>Default value:</emphasis> undefned.</para>
 
   <para><emphasis>Used in:</emphasis><olink targetdoc="../../elements/glossary/term.xml"
       targetptr="term"><code>gls_term</code></olink>, <olink

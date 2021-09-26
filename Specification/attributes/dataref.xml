@@ -12,10 +12,10 @@
       targetdoc="../elements/structural/originaldata.xml" targetptr="originaldata"
         ><code>"originalData" vocabulary object</code></olink> that contains the original data for a
     given inline code.</para>
-  <para><emphasis>Type:</emphasis> NMTOKEN string.</para>
-  <para><emphasis>Value description:</emphasis> An <olink targetdoc="../xliff21.xml"
-      targetptr="XMLSchema2">[XML Schema Datatypes]</olink> NMTOKEN string.
-    <?oxy_custom_end?></para>
+  <para><emphasis>Type:</emphasis> string.</para>
+  <para><emphasis>Value description:</emphasis>
+    NMTOKEN<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>: a string matching
+    the pattern <code>[-._:A-Za-z0-9]+</code><?oxy_custom_end?>.<?oxy_custom_end?></para>
   <para><emphasis>Default value:</emphasis> undefined.</para>
   <para><emphasis>Used in:</emphasis>
     <olink targetdoc="../elements/inline/ph.xml" targetptr="ph"><code>ph</code></olink>, <olink

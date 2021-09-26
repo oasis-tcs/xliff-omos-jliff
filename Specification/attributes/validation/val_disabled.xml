@@ -90,10 +90,10 @@
     string.<?oxy_custom_end?></para>
 
   <para><emphasis>Value description:</emphasis>
-    <code>"yes"</code> or <code>"no"</code></para>
+    <code>"yes"</code> or <code>"no"</code>.</para>
 
   <para><emphasis>Default value:</emphasis>
-    <code>"no"</code></para>
+    <code>"no"</code>.</para>
 
   <para><emphasis>Used in:</emphasis>
     <olink targetdoc="../../elements/validation/rule.xml" targetptr="rule"

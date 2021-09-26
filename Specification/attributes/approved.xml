@@ -7,7 +7,8 @@
                          ]>
 <section id="approved">
     <!-- This flag is no longer used, it got killed in the August 20 meeting-->
-    <title>approved</title>
+    <title>approved <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[NOT
+        USED]<?oxy_custom_end?></title>
     
     <para>Approved - indicates whether the holding <olink
             targetdoc="../elements/structural/segment.xml" targetptr="segment"

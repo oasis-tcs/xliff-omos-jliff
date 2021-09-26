@@ -9,6 +9,8 @@
   <title>value</title>
 
   <para>Value - holds a value for the associated annotation.</para>
+  <para><emphasis>Type:</emphasis><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+    string.<?oxy_custom_end?></para>
 
   <para><emphasis>Value description:</emphasis> Text.</para>
 
@@ -32,11 +34,11 @@
     </listitem>
   </itemizedlist>
 
-  <para><emphasis>Default value:</emphasis> undefined</para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
 
-  <para><emphasis>Used in:</emphasis> <olink
-  targetdoc="../elements/inline/mrk.xml"
-  targetptr="mrk"><code>&lt;mrk&gt;</code></olink> and <olink
-    targetdoc="../elements/inline/sm.xml"
-    targetptr="sm"><code>&lt;sm&gt;</code></olink>.</para>
+  <para><emphasis>Used in:</emphasis>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><olink
+      targetdoc="../elements/inline/mrk.xml" targetptr="mrk"><code>&lt;mrk&gt;</code></olink> and
+      <?oxy_custom_end?><olink targetdoc="../elements/inline/sm.xml" targetptr="sm"
+      ><code>sm</code></olink>.</para>
 </section>

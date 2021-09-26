@@ -7,18 +7,16 @@
 ]>
 <section id="slr_profile">
   <title>slr_profile</title>
-
   <para>This <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string
     property<?oxy_custom_end?> is used on the <code>slr_data</code>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?> to
     indicate what profile the contents of that
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>
     apply to.</para>
-
-  <para><emphasis>Value description:</emphasis> Name of a restriction profile</para>
-
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.</para><?oxy_custom_end?>
+  <para><emphasis>Value description:</emphasis> Name of a restriction profile.</para>
   <para><emphasis>Default value:</emphasis> undefined.</para>
-
   <para><emphasis>Used in:</emphasis><olink targetdoc="../../elements/size_restriction/data.xml"
       targetptr="slr_data"><code>slr_data</code></olink>.</para>
 </section>

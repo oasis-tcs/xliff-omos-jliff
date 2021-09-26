@@ -7,18 +7,16 @@
 ]>
 <section id="slr_sizeRestriction">
   <title>slr_sizeRestriction</title>
-
   <para>This <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string
     property<?oxy_custom_end?> specifies the size restriction to apply to the collection descendants
     of the element it is defined on.</para>
-
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.</para><?oxy_custom_end?>
   <para><emphasis>Value description:</emphasis> Interpretation of the value is dependent on selected
       <olink targetdoc="general-profile.xml" targetptr="slr_general_profile"
         ><code>slr_generalProfile</code></olink>. It <glossterm>must</glossterm> represent the
     restriction to apply to the indicated sub part of the document.</para>
-
   <para><emphasis>Default value:</emphasis> undefined.</para>
-
   <para><emphasis>Used in:</emphasis>
     <olink targetdoc="../../elements/structural/file.xml" targetptr="file"
     ><code>file</code></olink>, <olink targetdoc="../../elements/structural/group.xml"

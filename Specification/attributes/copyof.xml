@@ -10,8 +10,8 @@
 
   <para>Reference to base code - holds the <olink targetdoc="id.xml" targetptr="id"
       ><code>id</code></olink> of the base code of a copied code.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis><?oxy_custom_end?>
-    string.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.<?oxy_custom_end?></para>
 
   <para><emphasis>Value description:</emphasis> NMTOKEN. The <olink
   targetdoc="id.xml" targetptr="id"><code>id</code></olink> value of the base

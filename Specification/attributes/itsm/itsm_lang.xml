@@ -28,15 +28,12 @@
     <para><emphasis>Value description:</emphasis> A language code as described in <olink targetdoc="../xliff21.xml"
         targetptr="bcp47">[BCP 47]</olink>.</para>
     
-    <para><emphasis>Default value:</emphasis></para>
-    
-            
-            <para>The value of the <olink targetdoc="../xml_lang" targetptr="xml_lang"
-                ><code>xml:lang</code></olink> or <code>itsm:lang</code> attribute set or inherited
-        on the parent element of the <olink targetdoc="../../elements/inline/mrk.xml"
-            targetptr="mrk"><code>&lt;mrk></code></olink> or <olink
-            targetdoc="../../elements/inline/sm.xml" targetptr="sm"><code>&lt;sm></code></olink>
-        element in question.</para>                
+    <para><emphasis>Default value:</emphasis> The value of the <olink targetdoc="../xml_lang"
+            targetptr="xml_lang"><code>xml:lang</code></olink> or <code>itsm:lang</code> attribute
+        set or inherited on the parent element of the <olink
+            targetdoc="../../elements/inline/mrk.xml" targetptr="mrk"><code>&lt;mrk></code></olink>
+        or <olink targetdoc="../../elements/inline/sm.xml" targetptr="sm"
+            ><code>&lt;sm></code></olink> element in question.</para>                
         
     
     <para><emphasis>Used in:</emphasis>
