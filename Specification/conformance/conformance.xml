@@ -8,118 +8,125 @@
                          ]>
 <section id="Conformance">
     <title>Conformance</title>
-   
-   <orderedlist>
-       <listitem id="DocumentConformance">
-           <orderedlist>
-               <title>
-           Document Conformance</title>
-               <listitem>
-    <para>XLIFF is an XML vocabulary, therefore conformant <firstterm>XLIFF Documents</firstterm>
-        <glossterm>must</glossterm> be well formed and valid <olink targetdoc="../xliff21.xml"
-            targetptr="bib_XML">[XML]</olink> documents.</para>
-               </listitem>
-               <listitem>
-    
-                   <para>Conformant <firstterm>XLIFF Documents</firstterm>
-                        <glossterm>must</glossterm> be valid instances of the official Core XML
-                        Schema (<ulink url="&this-loc;/schemas/xliff_core_&bschversion;.xsd"
-                            >&this-loc;/schemas/xliff_core_&bschversion;.xsd</ulink>) that is a part of
-                        this multipart Work Product.</para>
-               </listitem>
-               <listitem>
-    
-    <para> As not all aspects of the XLIFF specification can be expressed in terms of XML Schemas,
-                        conformant <firstterm>XLIFF Documents</firstterm>
-                        <glossterm>must</glossterm> also comply with all relevant elements and
-                        attributes definitions, normative usage descriptions, and Constraints
-                        specified in this specification document.</para>
-               </listitem>
-               <listitem>
-                <para><firstterm>XLIFF Documents</firstterm> <glossterm>may</glossterm> contain custom extensions, as defined in the
-                   <olink targetdoc="../extensions/extensions.xml" targetptr="extensions">Extension
-                       Mechanisms</olink> section.
-               </para>
-               </listitem> 
-           </orderedlist>
-       </listitem>
-       <listitem id="ApplicationConformance">
-               <orderedlist>
-                   <title>
-                       Application Conformance</title>
-                <listitem>                
-    <para>XLIFF <firstterm>Writers</firstterm>
-                        <glossterm>must</glossterm> create conformant <firstterm>XLIFF
-                            Documents</firstterm> to be considered XLIFF compliant.</para>
+    <orderedlist>
+        <listitem id="DocumentConformance">
+            <orderedlist>
+                <title>
+                    <?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>Document
+                    Conformance</title>
+                <listitem>
+                    <para>JLIFF is a JSON application, therefore conformant <firstterm>JLIFF
+                            Instances</firstterm>
+                        <glossterm>must</glossterm> be well formed and valid JSON files according to
+                            <olink targetdoc="../xliff21.xml" targetptr="EJSON">[ECMA-JSON]</olink>
+                        Clause 2.</para>
                 </listitem>
                 <listitem>
-                           <para>
-        <firstterm>Agents</firstterm> processing conformant <firstterm>XLIFF Documents</firstterm> that
-        contain custom extensions are not <glossterm>required</glossterm> to understand and process
-        non-XLIFF elements or attributes. However, conformant applications
-            <glossterm>should</glossterm> preserve existing custom extensions when processing
-                               conformant <firstterm>XLIFF Documents</firstterm>, provided that the elements
-                               that contain custom extensions are not
-        removed according to XLIFF Processing Requirements or the extension's own processing
-        requirements.</para>
+                    <para>Conformant <firstterm>JLIFF Instances</firstterm>
+                        <glossterm>must</glossterm> be valid instances of one of the official Core
+                        JLIFF Schemas that are parts of this multipart Work Product,</para>
+                    <para><ulink url="&this-loc;/schemas/jliff-schema-&cschversion;.json"
+                            >&this-loc;/schemas/jliff-schema-&cschversion;.json</ulink>, for the
+                        JLIFF serialization &cschversion;.</para>
+                    <para><ulink url="&this-loc;/schemas/jliff-schema-&bschversion;.json"
+                            >&this-loc;/schemas/jliff-schema-&bschversion;.json</ulink>, for the
+                        JLIFF serialization &bschversion;.</para>
                 </listitem>
-                    <listitem>
-                        <para>All <firstterm>Agents</firstterm>
+                <listitem>
+                    <para> As not all aspects of the JLIFF specification can be expressed in terms
+                        of JSON Schemas, conformant <firstterm>JLIFF Instances</firstterm>
+                        <glossterm>must</glossterm> also comply with all relevant objects and
+                        properties definitions, normative usage descriptions, and Constraints
+                        specified in this specification document.</para>
+                </listitem>
+                <listitem>
+                    <para><firstterm>JLIFF Instances</firstterm>
+                        <glossterm>may</glossterm> contain custom extensions, as defined in the
+                            <olink targetdoc="../extensions/extensions.xml" targetptr="extensions"
+                            >Extension Mechanisms</olink> section. <?oxy_custom_end?></para>
+                </listitem>
+            </orderedlist>
+        </listitem>
+        <listitem id="ApplicationConformance">
+            <orderedlist>
+                <title>
+                    <?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>Application
+                    Conformance</title>
+                <listitem>
+                    <para>JLIFF <firstterm>Writers</firstterm>
+                        <glossterm>must</glossterm> create conformant <firstterm>JLIFF
+                            Instances</firstterm> to be considered JLIFF compliant.</para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <firstterm>Agents</firstterm> processing conformant <firstterm>JLIFF
+                            Instances</firstterm> that contain custom extensions are not
+                            <glossterm>required</glossterm> to understand and process non-JLIFF
+                        objects or properties. However, conformant applications
+                            <glossterm>should</glossterm> preserve existing custom extensions when
+                        processing conformant <firstterm>JLIFF Instances</firstterm>, provided that
+                        the objects or properties that contain custom extensions are not removed
+                        according to JLIIFF Processing Requirements or the extension's own
+                        processing requirements.</para>
+                </listitem>
+                <listitem>
+                    <para>All <firstterm>Agents</firstterm>
                         <glossterm>must</glossterm> comply with Processing Requirements for
                         otherwise unspecified <firstterm>Agents</firstterm> or without a
-                        specifically set target <firstterm>Agent</firstterm>.</para> 
-                    </listitem>
-                                      
-                   <listitem>
-                       <para> Specialized <firstterm>Agents</firstterm> defined in this
-                        specification - this is <firstterm>Extractor</firstterm>,
-                            <firstterm>Merger</firstterm>, <firstterm>Writer</firstterm>,
-                            <firstterm>Modifier</firstterm>, and <firstterm>Enricher</firstterm>
+                        specifically set target <firstterm>Agent</firstterm>.</para>
+                </listitem>
+                <listitem>
+                    <para> Specialized <firstterm>Agents</firstterm> defined in this specification -
+                        this is <firstterm>Extractor</firstterm>, <firstterm>Merger</firstterm>,
+                            <firstterm>Writer</firstterm>, <firstterm>Modifier</firstterm>, and
+                            <firstterm>Enricher</firstterm>
                         <firstterm>Agents</firstterm> - <glossterm>must</glossterm> comply with the
                         Processing Requirements targeting their specifically defined type of
                             <firstterm>Agent</firstterm> on top of Processing Requirements targeting
                         all <firstterm>Agents</firstterm> as per point c. above.</para>
-                   </listitem>
-                   <listitem>
-                    <para>XLIFF is a format explicitly designed for exchanging data among various
-                            <firstterm>Agents</firstterm>. Thus, a conformant XLIFF application
-                            <glossterm>must</glossterm> be able to accept <firstterm>XLIFF
-                            Documents</firstterm> it had written after those <firstterm>XLIFF
-                            Documents</firstterm> were <firstterm>Modified</firstterm> or
-                            <firstterm>Enriched</firstterm> by a different application, provided
-                        that:</para>
-                        <orderedlist>
-                        <listitem>
-                            <para>The processed files are conformant <firstterm>XLIFF Documents</firstterm>,</para>
-                        </listitem>
-                            <listitem>
-                                <para>in a state compliant with all relevant Processing Requirements.</para>
-                            </listitem>  
-                        </orderedlist>
-                            
-                </listitem>
-            
-                   
-   </orderedlist>
-       </listitem>
-       <listitem>
-                       <orderedlist>
-                           <title>
-                               Backwards Compatibility</title>
-                           <listitem>
-                    <para>Conformant applications are <glossterm>required</glossterm> to support
-                        XLIFF &pversion;.</para>
                 </listitem>
                 <listitem>
-                    <para>Conformant applications are NOT <glossterm>required</glossterm> to support
-                        XLIFF 1.2 or previous Versions. </para>
+                    <para>JLIFF is a format explicitly designed for exchanging data among various
+                            <firstterm>Agents</firstterm>. Thus, a conformant JLIFF application
+                            <glossterm>must</glossterm> be able to accept <firstterm>JLIFF
+                            Instances</firstterm> it had written after those <firstterm>JLIFF
+                            Instances</firstterm> were <firstterm>Modified</firstterm> or
+                            <firstterm>Enriched</firstterm> by a different application, provided
+                        that:</para>
+                    <orderedlist>
+                        <listitem>
+                            <para>The processed files are conformant <firstterm>JLIFF
+                                    Instances</firstterm>,</para>
+                        </listitem>
+                        <listitem>
+                            <para>in a state compliant with all relevant Processing
+                                Requirements.</para>
+                        </listitem>
+                    </orderedlist>
                 </listitem>
-                       </orderedlist>
-                   </listitem>
-   </orderedlist>
-    
-    <note><para><firstterm>XLIFF Documents</firstterm> conformant to this specification are not and cannot be
-            conformant to XLIFF 1.2 or earlier versions. If an application needs to support for
-            whatever business reason both XLIFF 2 and XLIFF 1.2 or earlier, these will need to be
-            supported as separate functionalities. </para></note>
+            </orderedlist>
+        </listitem>
+        <listitem>
+            <orderedlist>
+                <title> Backwards Compatibility</title>
+                <listitem>
+                    <para>Conformant applications are <glossterm>required</glossterm> to support
+                        both serializations defined in this specifcation.</para>
+                </listitem>
+                <listitem>
+                    <para>No previous versions of JLIFF exist. </para>
+                </listitem>
+            </orderedlist>
+        </listitem>
+    </orderedlist>
+    <note>
+        <para><firstterm>JLIFF Instances</firstterm> conformant to this specification are suitable
+            for exchange of data with XLIFF 2 Documents based processes.
+            <?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>Normative
+            Appendix C [insert coss reference once
+            created]<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>
+            provides requirements for and guidance on roundtripping XLIFF 2 data using JLIFF, i.e.
+            how to import XLIFF 2 data to JLIFF and how to export JLIFF data to XLIFF 2.0 or XLIFF
+            2.1.<?oxy_custom_end?></para>
+    </note>
 </section>
