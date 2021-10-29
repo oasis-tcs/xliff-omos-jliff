@@ -67,7 +67,7 @@
     </authorgroup>
 
 
-    <pubdate>27 July 2021</pubdate>
+    <pubdate>02 November 2021</pubdate>
 
     <copyright>
       <year>2021</year>
@@ -83,7 +83,7 @@
 
       <itemizedlist spacing="compact">
         <listitem>
-          <para> Declarative validation artifacts (JSON Schema) accessible from <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/schemas/">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/schemas/</ulink>
+          <para> Declarative validation artifacts (JSON Schemas) accessible from <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/schemas/">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/schemas/</ulink>
           </para>
           
           
@@ -112,7 +112,7 @@
         
         <listitem id="LIOM">
           <para><emphasis>XLIFF 2 Object Model Version 1.0.</emphasis>. Edited by David Filip.
-            27 July 2021. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest version: <ulink url="http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html">http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html</ulink>. </para>
+            02 November 2021. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest version: <ulink url="http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html">http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html</ulink>. </para>
         </listitem>
         
         <listitem>
@@ -249,7 +249,7 @@
       <para><citation>JLIFF-1.0</citation></para>
 
       <para><emphasis>JLIFF Version 1.0</emphasis>. Edited by Robert van
-        Engelen and David Filip. 27 July 2021. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest
+        Engelen and David Filip. 02 November 2021. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest
         version: <ulink url="http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html">http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html</ulink>. </para>
 
       <!-- 
@@ -584,7 +584,7 @@
                 </note>
                 <note>
                   <para>JLIFF Version 1.0 contains prose and JSON schema specifications of
-                    JLIFF 2.0 and JLIFF 2.1. These two specifications share
+                    JLIFF 2.0 and JLIFF 2.1. These two serializations share
                     JLIFF Core 2.0 that maps one-to-one to XLIFF Core 2.0 that
                     is shared between XLIFF Version 2.1 and XLIFF Version 2.0 </para>
                   <para>Two different schema instances are provided, JLIFF 2.1 and JLIFF
@@ -624,7 +624,7 @@
           <varlistentry>
             <term>JLIFF Instance</term>
             <listitem>
-              <para>JLIFF Instance is a conforming JSON text according to <link linkend="EJSON">ECMA-JSON</link> Clause 2 that validates against the schema for JLIFF
+              <para>JLIFF Instance is a conforming JSON text according to <link linkend="EJSON">[ECMA-JSON]</link> Clause 2 that validates against the schema for JLIFF
                 serialization 2.1 or JLIFF
                 serialization 2.0.</para>
             </listitem>
@@ -795,121 +795,128 @@
   
   <section id="Conformance">
     <title>Conformance</title>
-   
-   <orderedlist inheritnum="ignore" continuation="restarts">
-       <listitem id="DocumentConformance">
-           <orderedlist inheritnum="ignore" continuation="restarts">
-               <title>
-           Document Conformance</title>
-               <listitem>
-    <para>XLIFF is an XML vocabulary, therefore conformant <firstterm>XLIFF Documents</firstterm>
-        <glossterm>must</glossterm> be well formed and valid <link linkend="bib_XML">[XML]</link> documents.</para>
-               </listitem>
-               <listitem>
-    
-                   <para>Conformant <firstterm>XLIFF Documents</firstterm>
-                        <glossterm>must</glossterm> be valid instances of the official Core XML
-                        Schema (<ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/schemas/xliff_core_2.0.xsd">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/schemas/xliff_core_2.0.xsd</ulink>) that is a part of
-                        this multipart Work Product.</para>
-               </listitem>
-               <listitem>
-    
-    <para> As not all aspects of the XLIFF specification can be expressed in terms of XML Schemas,
-                        conformant <firstterm>XLIFF Documents</firstterm>
-                        <glossterm>must</glossterm> also comply with all relevant elements and
-                        attributes definitions, normative usage descriptions, and Constraints
-                        specified in this specification document.</para>
-               </listitem>
-               <listitem>
-                <para><firstterm>XLIFF Documents</firstterm> <glossterm>may</glossterm> contain custom extensions, as defined in the
-                   <link linkend="extensions">Extension
-                       Mechanisms</link> section.
-               </para>
-               </listitem> 
-           </orderedlist>
-       </listitem>
-       <listitem id="ApplicationConformance">
-               <orderedlist inheritnum="ignore" continuation="restarts">
-                   <title>
-                       Application Conformance</title>
-                <listitem>                
-    <para>XLIFF <firstterm>Writers</firstterm>
-                        <glossterm>must</glossterm> create conformant <firstterm>XLIFF
-                            Documents</firstterm> to be considered XLIFF compliant.</para>
+    <orderedlist inheritnum="ignore" continuation="restarts">
+        <listitem id="DocumentConformance">
+            <orderedlist inheritnum="ignore" continuation="restarts">
+                <title>
+                    <?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>Document
+                    Conformance</title>
+                <listitem>
+                    <para>JLIFF is a JSON application, therefore conformant <firstterm>JLIFF
+                            Instances</firstterm>
+                        <glossterm>must</glossterm> be well formed and valid JSON files according to
+                            <link linkend="EJSON">[ECMA-JSON]</link>
+                        Clause 2.</para>
                 </listitem>
                 <listitem>
-                           <para>
-        <firstterm>Agents</firstterm> processing conformant <firstterm>XLIFF Documents</firstterm> that
-        contain custom extensions are not <glossterm>required</glossterm> to understand and process
-        non-XLIFF elements or attributes. However, conformant applications
-            <glossterm>should</glossterm> preserve existing custom extensions when processing
-                               conformant <firstterm>XLIFF Documents</firstterm>, provided that the elements
-                               that contain custom extensions are not
-        removed according to XLIFF Processing Requirements or the extension's own processing
-        requirements.</para>
+                    <para>Conformant <firstterm>JLIFF Instances</firstterm>
+                        <glossterm>must</glossterm> be valid instances of one of the official Core
+                        JLIFF Schemas that are parts of this multipart Work Product,</para>
+                    <para><ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/schemas/jliff-schema-2.1.json">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/schemas/jliff-schema-2.1.json</ulink>, for the
+                        JLIFF serialization 2.1.</para>
+                    <para><ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/schemas/jliff-schema-2.0.json">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/schemas/jliff-schema-2.0.json</ulink>, for the
+                        JLIFF serialization 2.0.</para>
                 </listitem>
-                    <listitem>
-                        <para>All <firstterm>Agents</firstterm>
+                <listitem>
+                    <para> As not all aspects of the JLIFF specification can be expressed in terms
+                        of JSON Schemas, conformant <firstterm>JLIFF Instances</firstterm>
+                        <glossterm>must</glossterm> also comply with all relevant objects and
+                        properties definitions, normative usage descriptions, and Constraints
+                        specified in this specification document.</para>
+                </listitem>
+                <listitem>
+                    <para><firstterm>JLIFF Instances</firstterm>
+                        <glossterm>may</glossterm> contain custom extensions, as defined in the
+                            <link linkend="extensions">Extension Mechanisms</link> section. <?oxy_custom_end ?></para>
+                </listitem>
+            </orderedlist>
+        </listitem>
+        <listitem id="ApplicationConformance">
+            <orderedlist inheritnum="ignore" continuation="restarts">
+                <title>
+                    <?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>Application
+                    Conformance</title>
+                <listitem>
+                    <para>JLIFF <firstterm>Writers</firstterm>
+                        <glossterm>must</glossterm> create conformant <firstterm>JLIFF
+                            Instances</firstterm> to be considered JLIFF compliant.</para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <firstterm>Agents</firstterm> processing conformant <firstterm>JLIFF
+                            Instances</firstterm> that contain custom extensions are not
+                            <glossterm>required</glossterm> to understand and process non-JLIFF
+                        objects or properties. However, conformant applications
+                            <glossterm>should</glossterm> preserve existing custom extensions when
+                        processing conformant <firstterm>JLIFF Instances</firstterm>, provided that
+                        the objects or properties that contain custom extensions are not removed
+                        according to JLIIFF Processing Requirements or the extension's own
+                        processing requirements.</para>
+                </listitem>
+                <listitem>
+                    <para>All <firstterm>Agents</firstterm>
                         <glossterm>must</glossterm> comply with Processing Requirements for
                         otherwise unspecified <firstterm>Agents</firstterm> or without a
-                        specifically set target <firstterm>Agent</firstterm>.</para> 
-                    </listitem>
-                                      
-                   <listitem>
-                       <para> Specialized <firstterm>Agents</firstterm> defined in this
-                        specification - this is <firstterm>Extractor</firstterm>,
-                            <firstterm>Merger</firstterm>, <firstterm>Writer</firstterm>,
-                            <firstterm>Modifier</firstterm>, and <firstterm>Enricher</firstterm>
+                        specifically set target <firstterm>Agent</firstterm>.</para>
+                </listitem>
+                <listitem>
+                    <para> Specialized <firstterm>Agents</firstterm> defined in this specification -
+                        this is <firstterm>Extractor</firstterm>, <firstterm>Merger</firstterm>,
+                            <firstterm>Writer</firstterm>, <firstterm>Modifier</firstterm>, and
+                            <firstterm>Enricher</firstterm>
                         <firstterm>Agents</firstterm> - <glossterm>must</glossterm> comply with the
                         Processing Requirements targeting their specifically defined type of
                             <firstterm>Agent</firstterm> on top of Processing Requirements targeting
                         all <firstterm>Agents</firstterm> as per point c. above.</para>
-                   </listitem>
-                   <listitem>
-                    <para>XLIFF is a format explicitly designed for exchanging data among various
-                            <firstterm>Agents</firstterm>. Thus, a conformant XLIFF application
-                            <glossterm>must</glossterm> be able to accept <firstterm>XLIFF
-                            Documents</firstterm> it had written after those <firstterm>XLIFF
-                            Documents</firstterm> were <firstterm>Modified</firstterm> or
-                            <firstterm>Enriched</firstterm> by a different application, provided
-                        that:</para>
-                        <orderedlist inheritnum="ignore" continuation="restarts">
-                        <listitem>
-                            <para>The processed files are conformant <firstterm>XLIFF Documents</firstterm>,</para>
-                        </listitem>
-                            <listitem>
-                                <para>in a state compliant with all relevant Processing Requirements.</para>
-                            </listitem>  
-                        </orderedlist>
-                            
-                </listitem>
-            
-                   
-   </orderedlist>
-       </listitem>
-       <listitem>
-                       <orderedlist inheritnum="ignore" continuation="restarts">
-                           <title>
-                               Backwards Compatibility</title>
-                           <listitem>
-                    <para>Conformant applications are <glossterm>required</glossterm> to support
-                        XLIFF N/A.</para>
                 </listitem>
                 <listitem>
-                    <para>Conformant applications are NOT <glossterm>required</glossterm> to support
-                        XLIFF 1.2 or previous Versions. </para>
+                    <para>JLIFF is a format explicitly designed for exchanging data among various
+                            <firstterm>Agents</firstterm>. Thus, a conformant JLIFF application
+                            <glossterm>must</glossterm> be able to accept <firstterm>JLIFF
+                            Instances</firstterm> it had written after those <firstterm>JLIFF
+                            Instances</firstterm> were <firstterm>Modified</firstterm> or
+                            <firstterm>Enriched</firstterm> by a different application, provided
+                        that:</para>
+                    <orderedlist inheritnum="ignore" continuation="restarts">
+                        <listitem>
+                            <para>The processed files are conformant <firstterm>JLIFF
+                                    Instances</firstterm>,</para>
+                        </listitem>
+                        <listitem>
+                            <para>in a state compliant with all relevant Processing
+                                Requirements.</para>
+                        </listitem>
+                    </orderedlist>
                 </listitem>
-                       </orderedlist>
-                   </listitem>
-   </orderedlist>
-    
-    <note><para><firstterm>XLIFF Documents</firstterm> conformant to this specification are not and cannot be
-            conformant to XLIFF 1.2 or earlier versions. If an application needs to support for
-            whatever business reason both XLIFF 2 and XLIFF 1.2 or earlier, these will need to be
-            supported as separate functionalities. </para></note>
+            </orderedlist>
+        </listitem>
+        <listitem>
+            <orderedlist inheritnum="ignore" continuation="restarts">
+                <title> Backwards Compatibility</title>
+                <listitem>
+                    <para>Conformant applications are <glossterm>required</glossterm> to support
+                        both serializations defined in this specifcation.</para>
+                </listitem>
+                <listitem>
+                    <para>No previous versions of JLIFF exist. </para>
+                </listitem>
+            </orderedlist>
+        </listitem>
+    </orderedlist>
+    <note>
+        <para><firstterm>JLIFF Instances</firstterm> conformant to this specification are suitable
+            for exchange of data with XLIFF 2 Documents based processes.
+            <?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>Normative
+            Appendix C [insert coss reference once
+            created]<?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>
+            provides requirements for and guidance on roundtripping XLIFF 2 data using JLIFF, i.e.
+            how to import XLIFF 2 data to JLIFF and how to export JLIFF data to XLIFF 2.0 or XLIFF
+            2.1.<?oxy_custom_end ?></para>
+    </note>
 </section>
   <section id="fragid">
-  <title>Fragment Identification</title>
+  <title><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>Fragment
+    Identification</title>
   <para>This specification defines how <firstterm>Agents</firstterm>
     <glossterm>must</glossterm> interpret the fragment identifiers in IRIs pointing to
       <firstterm>JLIFF Instances</firstterm>.</para>
@@ -919,7 +926,7 @@
   </note>
   <note>
     <para>Note that some identifiers can change during the localization process. For example on
-      resegmentation or  when regrouping or not <link linkend="data"><code>data</code></link> objects depending on how tools treat identical
+      resegmentation or when regrouping or not <link linkend="data"><code>data</code></link> objects depending on how tools treat identical
       original data.</para>
   </note>
   <itemizedlist>
@@ -936,25 +943,34 @@
 &lt;selectorSeparator&gt;  ::= "/"</programlisting>
     </listitem>
     <listitem>
-      <para>There <glossterm>must not</glossterm> be two identical prefixes in the expression.</para>
+      <para>There <glossterm>must not</glossterm> be two identical prefixes in the
+        expression.</para>
     </listitem>
     <listitem>
-      <para>When used, the following selectors <glossterm>must</glossterm> be declared in this order: file selector, group selector and unit selector.</para>
+      <para>When used, the following selectors <glossterm>must</glossterm> be declared in this
+        order: file selector, group selector and unit selector.<?oxy_custom_end ?></para>
     </listitem>
     <listitem>
-      <para>The selectors for modules or extensions, <link linkend="note"><code>&lt;note&gt;</code></link>, <link linkend="segment"><code>&lt;segment&gt;</code></link> or <link linkend="ignorable"><code>&lt;ignorable&gt;</code></link> or source inline elements, target inline elements and
-        <link linkend="data"><code>&lt;data&gt;</code></link> have the following constraints:</para>
+      <para>The selectors for modules or extensions, <link linkend="note"><code>&lt;note&gt;</code></link>, <link linkend="segment"><code>&lt;segment&gt;</code></link> or <link linkend="ignorable"><code>&lt;ignorable&gt;</code></link> or source inline elements, target inline
+        elements and <link linkend="data"><code>&lt;data&gt;</code></link> have the following constraints:</para>
       <itemizedlist>
-        <listitem><para>Only one of them <glossterm>may</glossterm> be used in the expression.</para></listitem>
-        <listitem><para>The one used <glossterm>must</glossterm> be the last selector of the expression.</para></listitem>
+        <listitem>
+          <para>Only one of them <glossterm>may</glossterm> be used in the expression.</para>
+        </listitem>
+        <listitem>
+          <para>The one used <glossterm>must</glossterm> be the last selector of the
+            expression.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
   </itemizedlist>
-  <warning><para>Please note that due to the above Constraints, referencing fragments using third party
+  <warning>
+    <para>Please note that due to the above Constraints, referencing fragments using third party
       namespaces within <firstterm>Modules</firstterm> or extensions (including but not limited to
         <firstterm>XLIFF Core</firstterm> or the Metadata Module) is not possible. This is to
       restrict the complexity of the fragment identification mechanism, as it would otherwise have
-      potentially unlimited depth.</para></warning>
+      potentially unlimited depth.</para>
+  </warning>
   <section>
     <title>Selectors for Core Objects</title>
     <itemizedlist>
@@ -1046,37 +1062,70 @@
   </section>
   <section>
     <title>Relative References</title>
-    <para>Fragment identifiers that do not start with a character <code>/</code> (U+002F) are relative to their location in the document,
-      or to the document being processed.</para>
+    <para>Fragment identifiers that do not start with a character <code>/</code> (U+002F) are
+      relative to their location in the document, or to the document being processed.</para>
     <para>Any unit, group or file selector missing to resolve the relative reference is obtained
       from the immediate enclosing unit, group or file object.</para>
   </section>
   <section id="fragid-example">
     <title>Examples</title>
-    <para>Given the following JLIFF document:</para>
+    <para>Given the following JLIFF Instance:</para>
     <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
     <programlisting format="linespecific">
-&lt;xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0"
-    srcLang="en" trgLang="fr"&gt;
-  &lt;file id="f1"&gt;
-    &lt;notes&gt;
-      &lt;note id="n1"&gt;note for file.&lt;/note&gt;
-    &lt;/notes&gt;
-    &lt;unit id="u1"&gt;
-      &lt;my:elem xmlns:my="myNamespaceURI" id="x1"&gt;data&lt;/my:elem&gt;
-      &lt;notes&gt;
-        &lt;note id="n1"&gt;note for unit&lt;/note&gt;
-      &lt;/notes&gt;
-      &lt;segment id="s1"&gt;
-        &lt;source&gt;&lt;pc id="1"&gt;Hello &lt;mrk id="m1" type="term"&gt;World&lt;/mrk&gt;!&lt;/pc&gt;
-            &lt;/source&gt;
-        &lt;target&gt;&lt;pc id="1"&gt;Bonjour le &lt;mrk id="m1" type="term"&gt;Monde&lt;/mrk&gt;
-            ! &lt;/pc&gt;&lt;/target&gt;
-      &lt;/segment&gt;
-    &lt;/unit&gt;
-  &lt;/file&gt;
-&lt;/xliff&gt;
-</programlisting>
+<?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>{ "jliff": "2.1",
+  "srcLang": "en-US",
+  "trgLang": "fr-FR",
+  "files": [
+    { "id": "f1",
+      "kind": "file",
+      "notes": [
+        { "id": "n1",
+          "text": "note for file." }
+      ],
+      "subfiles": [
+        { "canResegment": "no",
+          "id": "u1",
+          "kind": "unit",
+          "notes": [
+            { "id": "n1",
+              "text": "note for unit" }
+          ],
+          "subunits": [
+            { "id": "s1",
+              "kind": "segment",
+              "source": [
+                { "id": "1",
+                  "kind": "sc" },
+                { "text": "Hello " },
+                { "id": "m1",
+                  "kind": "sm",
+                  "type": "term" },
+                { "text": "World" },
+                { "kind": "em",
+                   "startRef": "m1" },
+                { "text": "!" },
+                { "kind": "ec",
+                  "startRef": "1" }
+              ],
+              "target": [
+                { "id": "1",
+                  "kind": "sc" },
+                { "text": "Bonjour le " },
+                { "id": "m1",
+                  "kind": "sm",
+                  "type": "term" },
+                { "text": "Monde" },
+                { "kind": "em",
+                  "startRef": "m1" },
+                { "text": "!" },
+                { "kind": "ec",
+                  "startRef": "1" }
+              ] }
+          ] }
+      ] }
+  ]
+}
+<?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?></programlisting>
     <para>You can have the following fragment identifiers:</para>
     <itemizedlist>
       <listitem>
@@ -1107,7 +1156,6 @@
       </listitem>
     </itemizedlist><?oxy_custom_end ?>
   </section>
-
 </section>
   
   <section id="core">
@@ -1338,6 +1386,8 @@
         <member>- <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>[NEED A SECTION
             TO DESCRIBE xml:space ROUNDTRIPPING]<link linkend="xml_space"><code>xml:space</code></link>,
                 <glossterm>optional</glossterm><?oxy_custom_end ?></member>
+        <member><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>- other
+            none-core properties, <glossterm>optional,</glossterm><?oxy_custom_end ?></member>
         <!--  covered by the userdata property allowed below
         <member>- <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>[NEED A
             REFORMULATION WITH THE userdata PROPERTY] attributes from other namespaces,
@@ -2582,36 +2632,17 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <link linkend="data"><code>&lt;data&gt;</code></link>.</para>
 
     <section id="cp">
-  <title>cp</title>
+  <title> Roundtripping XLIFF &lt;cp/&gt;</title>
 
-  <para>Represents a Unicode character that is invalid in XML.
-    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[cp doesn't have an
-    equivalent in JLIFF, illegal XML needs to be replaced with &lt;cp&gt; when moving from JLIFF to
-    XLIFF, in the opposite direction the &lt;cp&gt; is just replaced with the
-    literal..<?oxy_custom_end ?>]</para>
+  <para>XLIFF <ulink url="http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html#cp"><code>&lt;cp&gt;</code></ulink> represents a Unicode character that is invalid in XML.</para>
 
   <para><emphasis>Type:</emphasis></para>
 
   <simplelist type="vert">
-    <member>This element is always empty.</member>
+    <member>JLIFF doesn't have an equivalent to XLIFF <code>&lt;cp&gt;</code></member>
   </simplelist>
 
-  <para><emphasis>Parents:</emphasis></para>
-
-  <simplelist type="vert">
-    <member><link linkend="data"><code>&lt;data&gt;</code></link>, <link linkend="mrk"><code>&lt;mrk&gt;</code></link>,
-    <link linkend="source"><code>&lt;source&gt;</code></link>, <link linkend="target"><code>&lt;target&gt;</code></link> and <link linkend="pc"><code>&lt;pc&gt;</code></link></member>
-  </simplelist>
-
-  <para><emphasis>Attributes:</emphasis></para>
-
-  <simplelist type="vert">
-    <member>- <link linkend="hex"><code>hex</code></link>, <glossterm>required</glossterm></member>
-
-
-  </simplelist>
-
-  <para><emphasis>Example:</emphasis></para>
+  <para><emphasis>Example in XLIFF:</emphasis></para>
 
   <programlisting format="linespecific">
 &lt;unit id="1"&gt;
@@ -2620,21 +2651,43 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
   &lt;/segment&gt;
 &lt;/unit&gt;
 </programlisting>
+  <para>Equivalent of the above example in JLIFF:</para>
+  <programlisting format="linespecific">
+WIP 
 
-  <para>The example above shows a character U+0003 (Control C) as it has to be represented in
-    XLIFF.</para>
+^C [Oxyegn doesn't accept the literal even in CDATA]
+\u
+"Ctrl+C=\u0003"
+
+
+
+    
+</programlisting>
+
+  <para>The example above shows a character U+0003 (Control C) as it has to be represented in XLIFF.
+    As the character ETX is legal in JSON, the <code>&lt;cp hex="0003"&gt;</code> becomes the literal
+    of "^C" or "ETX" in the JLIFF serialization. in case of mixed XLIFF and JLIFF pipelines the
+    conversion mechanism needs to be able to "cp-encode" XML illegal characters in LIFF on the fly
+    or vice versa to replace the "cp-encoded" XLIFF representations with their literal equivalents
+    in JLIFF.</para>
 
   <itemizedlist>
     <title>Processing Requirements</title>
 
     <listitem>
-      <para><firstterm>Writers</firstterm> <glossterm>must</glossterm> encode all invalid XML characters of the content
-      using <link linkend="cp"><code>&lt;cp&gt;</code></link>.</para>
+      <para><firstterm>JLIFF Writers</firstterm> receiving XLIFF <ulink url="http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html#cp"><code>&lt;cp&gt;</code></ulink>
+        <glossterm>must</glossterm> replace the code with the corresponding literal character given
+        by the XLIFF <ulink url="https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html#hex"/><code>hex</code> attribute.</para>
+    </listitem>
+    <listitem>
+      <para><firstterm>XLIFF Writers</firstterm> receiving illegal XML characters (Unicode
+        characters with hexadecimal codes from 0000 to 10FFFF) <glossterm>must</glossterm> replace
+        each XML illegal character with the XLIFF <ulink url="http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html#cp"><code>&lt;cp&gt;</code></ulink> element using the corresponding <ulink url="https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html#hex"/><code>hex</code> attribute. </para>
     </listitem>
 
     <listitem>
-      <para><firstterm>Writers</firstterm> <glossterm>must not</glossterm> encode valid XML characters of the content using
-      <link linkend="cp"><code>&lt;cp&gt;</code></link>.</para>
+      <para><firstterm>XLIFF Writers</firstterm>
+        <glossterm>must not</glossterm> encode valid XML characters of the content using <link linkend="cp"><code>&lt;cp&gt;</code></link>.</para>
     </listitem>
   </itemizedlist>
 </section>
@@ -2652,15 +2705,11 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <member>This element is always empty.<?oxy_custom_end ?></member>
   </simplelist>
 
-  <para><emphasis>Parents:</emphasis>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[Note: should be called
-      <emphasis>Used in</emphasis> perhaps? There is no parent object, but an
-    array]<?oxy_custom_end ?></para>
+  <para><emphasis>Used in:</emphasis></para>
 
   <simplelist type="vert">
     <member><link linkend="source"><code>source</code></link>
-      array, <link linkend="target"><code>target</code></link>
-      array<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>, <link linkend="pc"><code>&lt;pc&gt;</code></link> and <link linkend="mrk"><code>&lt;mrk&gt;</code></link><?oxy_custom_end ?></member>
+      array or <link linkend="target"><code>target</code></link> array</member>
   </simplelist>
 
   <para><emphasis>Properties:</emphasis></para>
@@ -2709,10 +2758,13 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
         <link linkend="id"><code>id</code></link> string
       with NMTOKEN value,
         <glossterm><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>required<?oxy_custom_end ?></glossterm><?oxy_custom_end ?></member>
+    
+    <!--  ph cannot have a startRef as it is atomic
     <member>-
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"startRef"</code>,
-      a <link linkend="startref"><code>startRef</code></link> string with NMTOKEN value,<?oxy_custom_end ?>
-      <glossterm><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>required<?oxy_custom_end ?></glossterm></member>
+      a <olink targetdoc="../../attributes/startref.xml" targetptr="startref"
+        ><code>startRef</code></olink> string with NMTOKEN value,<?oxy_custom_end?>
+      <glossterm><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>required<?oxy_custom_end?></glossterm></member> -->
     <member>-
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"subFlows"</code>,
       a <link linkend="subflows"><code>subFlows</code></link> string,
@@ -2727,8 +2779,8 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
       string with value <code>"fmt"</code>, <code>"ui"</code>, <code>"quote"</code>,
         <code>"link"</code>, <code>"image"</code>, <code>"its:generic"</code>, or
         <code>"other"</code>, <glossterm>optional</glossterm></member>
-    <member><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>- attributes from
-      other namespaces, <glossterm>optional</glossterm><?oxy_custom_end ?></member>
+    <member><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>- other none-core
+      properties, <glossterm>optional,</glossterm><?oxy_custom_end ?></member>
 
 
   </simplelist>
@@ -2784,14 +2836,18 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
           a <link linkend="slr_sizeInfoRef"><code>slr_sizeInfoRef</code></link> string, provided that
           the Constraints specified in the <link linkend="size_restriction_module">Size and Length Restriction Module</link> are
           met.<?oxy_custom_end ?></member>
+        <!--  the below two allowed modules are hopefully exhausted by the properties allowed above
         <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
         <member>- attributes from the namespace <code>urn:oasis:names:tc:xliff:fs:2.0</code>,
-            <glossterm>optional</glossterm>, provided that the Constraints specified in the <link linkend="fs-mod">Format Style Module</link> are
+            <glossterm>optional</glossterm>, provided that the Constraints specified in the <olink
+            targetdoc="modules/fs/fs.xml" targetptr="fs-mod">Format Style Module</olink> are
           met.</member>
         <member>- attributes from the namespace
             <code>urn:oasis:names:tc:xliff:sizerestriction:2.0</code>,
-            <glossterm>optional</glossterm>, provided that the Constraints specified in the <link linkend="size_restriction_module">Size and Length Restriction Module</link> are
-          met.<?oxy_custom_end ?></member>
+            <glossterm>optional</glossterm>, provided that the Constraints specified in the <olink
+            targetdoc="modules/size_restriction/specification.xml"
+            targetptr="size_restriction_module">Size and Length Restriction Module</olink> are
+          met.<?oxy_custom_end?></member> -->
         <!--  may need to allow ITSM at a later stage, but not needed by now 7th Aug, 2015.   ITS storage size would use the slr provsions 18th Jan 2017 -->
       </simplelist>
     </listitem>
@@ -2802,9 +2858,9 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
   <itemizedlist>
     <title>Processing Requirements</title>
     <listitem>
-      <para><firstterm>Extractors</firstterm>
+      <para><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?><firstterm>Extractors</firstterm>
         <glossterm>must not</glossterm> use the <link linkend="ph"><code>ph</code></link> element to
-        represent spanning codes.</para>
+        represent spanning codes.<?oxy_custom_end ?></para>
       <para><emphasis>Rationale:</emphasis> Using a standalone placeholder code for a spanning code
         does not allow for controlling the span (for instance tag order and data integrity) when
           <firstterm>Modifying</firstterm> inline content and is in <emphasis>direct
@@ -2821,133 +2877,9 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
         inline.</link>. </para></note>
 </section>
 
-    <section id="pc">
-  <title>pc</title>
-
-  <para>Represents a well-formed spanning original code.</para>
-
-  <para><emphasis>Type:</emphasis></para>
-
-  <simplelist type="vert">
-    <member>- Text</member>
-
-    <member>- Zero, one or more <link linkend="cp"><code>&lt;cp&gt;</code></link> elements</member>
-
-    <member>- Zero, one or more <link linkend="ph"><code>&lt;ph&gt;</code></link> elements</member>
-
-    <member>- Zero, one or more <link linkend="pc"><code>&lt;pc&gt;</code></link> elements</member>
-
-    <member>- Zero, one or more <link linkend="sc"><code>&lt;sc&gt;</code></link> elements</member>
-
-    <member>- Zero, one or more <link linkend="ec"><code>&lt;ec&gt;</code></link> elements</member>
-
-    <member>- Zero, one or more <link linkend="mrk"><code>&lt;mrk&gt;</code></link> elements</member>
-
-    <member>- Zero, one or more <link linkend="sm"><code>&lt;sm&gt;</code></link> elements</member>
-
-    <member>- Zero, one or more <link linkend="em"><code>&lt;em&gt;</code></link> elements</member>
-  </simplelist>
-
-  <para>Text and inline elements may appear in any order.</para>
-
-  <para><emphasis>Parents:</emphasis></para>
-
-  <simplelist type="vert">
-    <member>- <link linkend="source"><code>&lt;source&gt;</code></link></member>
-    <member>- <link linkend="target"><code>&lt;target&gt;</code></link></member>
-    <member>- <link linkend="pc"><code>&lt;pc&gt;</code></link></member>
-    <member>-<link linkend="mrk"><code>&lt;mrk&gt;</code></link></member>
-  </simplelist>
-
-  <para><emphasis>Attributes:</emphasis></para>
-
-  <simplelist type="vert">
-    <member>- <link linkend="cancopy"><code>canCopy</code></link>, <glossterm>optional</glossterm></member>
-
-    <member>- <link linkend="cancopy"><code>canDelete</code></link>, <glossterm>optional</glossterm></member>
-
-    <member>- <link linkend="canoverlap"><code>canOverlap</code></link>, <glossterm>optional</glossterm></member>
-
-    <member>- <link linkend="canreorder"><code>canReorder</code></link>, <glossterm>optional</glossterm></member>
-
-    <member>- <link linkend="copyof"><code>copyOf</code></link>, <glossterm>optional</glossterm></member>
-
-    <member>- <link linkend="dispend"><code>dispEnd</code></link>, <glossterm>optional</glossterm></member>
-
-    <member>- <link linkend="dispstart"><code>dispStart</code></link>, <glossterm>optional</glossterm></member>
-
-    <member>- <link linkend="equivend"><code>equivEnd</code></link>, <glossterm>optional</glossterm></member>
-
-    <member>- <link linkend="equivstart"><code>equivStart</code></link>, <glossterm>optional</glossterm></member>
-
-    <member>- <link linkend="id"><code>id</code></link>, <glossterm>required</glossterm></member>
-
-    <member>- <link linkend="datarefend"><code>dataRefEnd</code></link>, <glossterm>optional</glossterm></member>
-
-    <member>- <link linkend="datarefstart"><code>dataRefStart</code></link>, <glossterm>optional</glossterm></member>
-
-    <member>- <link linkend="subflowsend"><code>subFlowsEnd</code></link>,
-    <glossterm>optional</glossterm></member>
-
-    <member>- <link linkend="subflowsstart"><code>subFlowsStart</code></link>,
-    <glossterm>optional</glossterm></member>
-
-    <member>- <link linkend="subtype"><code>subType</code></link>, <glossterm>optional</glossterm></member>
-
-    <member>- <link linkend="type"><code>type</code></link>, <glossterm>optional</glossterm></member>
-
-    <member>- <link linkend="dir"><code>dir</code></link>, <glossterm>optional</glossterm></member>
-    <member>- attributes from other namespaces, <glossterm>optional</glossterm></member>
-
-
-
-
-  </simplelist>
-
-  <para><emphasis>Example:</emphasis></para>
-
-  <programlisting format="linespecific">
-&lt;unit id="1"&gt;
-  &lt;originalData&gt;
-    &lt;data id="1"&gt;&amp;lt;B&amp;gt;&lt;/data&gt;
-    &lt;data id="2"&gt;&amp;lt;/B&amp;gt;&lt;/data&gt;
-  &lt;/originalData&gt;
-  &lt;segment&gt;&lt;pc id="1" dataRefStart="1" dataRefEnd="2"&gt;
-      Important&lt;/pc&gt; text&lt;/source&gt;&lt;/segment&gt;
-&lt;/unit&gt;
-</programlisting>
-
-  <itemizedlist>
-    <title>Constraints</title>
-    <listitem>
-      <para>The following <firstterm>XLIFF Module</firstterm> attributes are explicitly
-        allowed by the wildcard <code>other</code>:</para>
-      <simplelist type="vert">
-        <member>- attributes from the namespace <code>urn:oasis:names:tc:xliff:fs:2.0</code>,
-            <glossterm>optional</glossterm>, provided that the Constraints specified in the <link linkend="fs-mod">Format Style Module</link> are
-          met.</member>
-        <member>- attributes from the namespace
-            <code>urn:oasis:names:tc:xliff:sizerestriction:2.0</code>,
-            <glossterm>optional</glossterm>, provided that the Constraints specified in the <link linkend="size_restriction_module">Size and Length Restriction Module</link> are
-          met.</member>
-        <!--  may need to allow ITSM at a later stage, but not needed by now 7th Aug, 2015.  -->
-      </simplelist>
-    </listitem>
-    <listitem><para>No other attributes <glossterm>must</glossterm> be used.</para></listitem>
-
-  </itemizedlist>
-
-  <itemizedlist>
-    <title>Processing Requirements</title>
-
-    <listitem>
-      <para><firstterm>Extractors</firstterm>
-        <glossterm>must not</glossterm> use the <link linkend="pc"><code>&lt;pc&gt;</code></link> element to represent standalone codes.</para>
-      <para>Rationale: Using a spanning code for a standalone code can easily result in having
-        text inside a span where the original format does not allow it.</para>
-          </listitem>
-  </itemizedlist>
-</section>
+<!--  for now only commenting out well formed tag descriptions, depend on how the roundtrip is described
+    <xi:include href="inline/pc.xml"
+                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>  -->
 
     <section id="sc">
   <title>anonymous object <code>"kind" : "sc"</code></title>
@@ -3028,7 +2960,9 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
         <link linkend="type"><code>type</code></link>
       string with value <code>"fmt"</code>, <code>"ui"</code>, <code>"quote"</code>,
         <code>"link"</code>, <code>"image"</code>, <code>"its:generic"</code>, or
-        <code>"other"</code>, <glossterm>optional</glossterm></member><?oxy_custom_end ?>
+        <code>"other"</code>, <glossterm>optional</glossterm></member>
+    <member><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>- other none-core
+      properties, <glossterm>optional,</glossterm><?oxy_custom_end ?></member><?oxy_custom_end ?>
   </simplelist>
   <para><emphasis><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>Example:</emphasis></para>
   <programlisting format="linespecific">
@@ -3324,95 +3258,9 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
   </itemizedlist>
 </section>
 
-    <section id="mrk">
-  <title>mrk</title>
-
-  <para>Represents an annotation pertaining to the marked span.</para>
-
-  <para><emphasis>Type:</emphasis></para>
-
-  <simplelist type="vert">
-    <member>- Text</member>
-
-    <member>- Zero, one or more <link linkend="cp"><code>&lt;cp&gt;</code></link> elements</member>
-
-    <member>- Zero, one or more <link linkend="ph"><code>&lt;ph&gt;</code></link> elements</member>
-
-    <member>- Zero, one or more <link linkend="pc"><code>&lt;pc&gt;</code></link> elements</member>
-
-    <member>- Zero, one or more <link linkend="sc"><code>&lt;sc&gt;</code></link> elements</member>
-
-    <member>- Zero, one or more <link linkend="ec"><code>&lt;ec&gt;</code></link> elements</member>
-
-    <member>- Zero, one or more <link linkend="mrk"><code>&lt;mrk&gt;</code></link> elements</member>
-    <member>- Zero, one or more <link linkend="sm"><code>&lt;sm&gt;</code></link> elements</member>
-    <member>- Zero, one or more <link linkend="em"><code>&lt;em&gt;</code></link> elements</member>
-  </simplelist>
-
-  <para>Text and inline elements may appear in any order.</para>
-
-  <para><emphasis>Parents:</emphasis></para>
-
-  <simplelist type="vert">
-    <member><link linkend="source"><code>&lt;source&gt;</code></link>, <link linkend="target"><code>&lt;target&gt;</code></link>, <link linkend="pc"><code>&lt;pc&gt;</code></link> and
-    <link linkend="mrk"><code>&lt;mrk&gt;</code></link></member>
-  </simplelist>
-
-  <para><emphasis>Attributes:</emphasis></para>
-
-  <simplelist type="vert">
-    <member>- <link linkend="id"><code>id</code></link>, <glossterm>required</glossterm></member>
-
-    <member>- <link linkend="translate"><code>translate</code></link>, <glossterm>optional</glossterm></member>
-
-    <member>- <link linkend="type"><code>type</code></link>, <glossterm>optional</glossterm></member>
-
-    <member>- <link linkend="ref"><code>ref</code></link>, <glossterm>optional</glossterm></member>
-
-    <member>- <link linkend="value"><code>value</code></link>, <glossterm>optional</glossterm></member>
-    
-    
-    <member>- attributes from other namespaces, <glossterm>optional</glossterm></member>
-
-  </simplelist>
-  
-  <itemizedlist>
-    <title>Constraints</title>
-    <listitem>
-      <para>The <link linkend="xml_namespace">[XML
-          namespace]</link>
-        <glossterm>must not</glossterm> be used at this extension point.</para>
-    </listitem>
-    <listitem>
-      <para>The following <firstterm>XLIFF Module</firstterm> attributes are explicitly
-        allowed by the wildcard <code>other</code>:</para>
-      <simplelist type="vert">
-        <member>- attributes from the namespace
-          <code>urn:oasis:names:tc:xliff:fs:2.0</code>, <glossterm>optional</glossterm>,
-          provided that the Constraints specified in the <link linkend="fs-mod">Format Style Module</link>
-          are met.</member>
-        <member>- attributes from the namespace
-          <code>urn:oasis:names:tc:xliff:sizerestriction:2.0</code>,
-          <glossterm>optional</glossterm>, provided that the Constraints specified in
-          the <link linkend="size_restriction_module">Size and Length Restriction
-            Module</link> are met.</member>
-        <member>- attributes from the namespace
-          <code>http://www.w3.org/2005/11/its</code>,
-          <glossterm>optional</glossterm>, provided that the Constraints specified in
-          the <link linkend="ITS-module">ITS
-            Module</link> are met.</member>
-        <member>- attributes from the namespace <code>urn:oasis:names:tc:xliff:itsm:2.1</code>,
-            <glossterm>optional</glossterm>, provided that the Constraints specified in the <link linkend="ITS-module">ITS
-            Module</link> are met.</member>
-      </simplelist>
-    </listitem>
-    
-    
-  </itemizedlist>
-
-  <para>See the <link linkend="annotations">Annotations section</link> for more details and
-  examples on how to use the <link linkend="mrk"><code>&lt;mrk&gt;</code></link> element.</para>
-</section>
+  <!--  for now only commenting out well formed tag descriptions, depend on how the roundtrip is described
+    <xi:include href="inline/mrk.xml"
+                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include> -->
     <section id="sm">
   <title>sm</title>
 
@@ -3460,6 +3308,8 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"value"</code>, a
         <link linkend="value"><code>value</code></link>
       string, <glossterm>optional</glossterm></member>
+    <member><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>- other none-core
+      properties, <glossterm>optional,</glossterm><?oxy_custom_end ?></member>
   </simplelist>
   
   <itemizedlist>
@@ -3955,8 +3805,8 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
             <code>canResegment</code> flag can be reorganized into a different structure of <link linkend="segment"><code>segment</code></link>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end ?>
         within the same parent <link linkend="unit"><code>unit</code></link>.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis><?oxy_custom_end ?>
-        string.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+        string.<?oxy_custom_end ?></para>
     
     <para><emphasis>Value description:</emphasis>
         <code>"yes"</code> or <code>"no"</code>.</para>
@@ -4003,8 +3853,8 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <title>category</title>
     
     <para>Category - provides a way to categorize notes.</para>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis><?oxy_custom_end ?>
-        string.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+        string.<?oxy_custom_end ?></para>
     
     <para><emphasis>Value description:</emphasis> text.</para>
     
@@ -4019,8 +3869,8 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
   <title>copyOf</title>
 
   <para>Reference to base code - holds the <link linkend="id"><code>id</code></link> of the base code of a copied code.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis><?oxy_custom_end ?>
-    string.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.<?oxy_custom_end ?></para>
 
   <para><emphasis>Value description:</emphasis> NMTOKEN. The <link linkend="id"><code>id</code></link> value of the base
   code of which this code is a copy.</para>
@@ -4078,9 +3928,10 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
   <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>Original data reference
     - holds the NMTOKEN key to the original data string contained in the unit level <link linkend="originaldata"><code>"originalData" vocabulary object</code></link> that contains the original data for a
     given inline code.</para>
-  <para><emphasis>Type:</emphasis> NMTOKEN string.</para>
-  <para><emphasis>Value description:</emphasis> An <link linkend="XMLSchema2">[XML Schema Datatypes]</link> NMTOKEN string.
-    <?oxy_custom_end ?></para>
+  <para><emphasis>Type:</emphasis> string.</para>
+  <para><emphasis>Value description:</emphasis>
+    NMTOKEN<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>: a string matching
+    the pattern <code>[-._:A-Za-z0-9]+</code><?oxy_custom_end ?>.<?oxy_custom_end ?></para>
   <para><emphasis>Default value:</emphasis> undefined.</para>
   <para><emphasis>Used in:</emphasis>
     <link linkend="ph"><code>ph</code></link>, <link linkend="sc"><code>sc</code></link>, <link linkend="ec"><code>ec</code></link>.</para>
@@ -4493,7 +4344,8 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
 
   <para>Orphan code flag - indicates if the start or end marker of a spanning inline code is not in
     the same <link linkend="unit"><code>unit</code></link> as its corresponding end or start code.</para>
-  <para><emphasis>Type:</emphasis> string.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.<?oxy_custom_end ?></para>
 
   <para><emphasis>Value description:</emphasis>
     <code>"yes"</code> if this start or end code is not in the same <link linkend="unit"><code>unit</code></link> as its
@@ -4671,7 +4523,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     
     <para><emphasis>Value description:</emphasis> IRI.</para>
         
-    <para><emphasis>Default value:</emphasis> undefined</para>
+    <para><emphasis>Default value:</emphasis> undefined.</para>
     
     <para><emphasis>Used in:</emphasis>
         <link linkend="file"><code>file</code></link>.</para>
@@ -4681,12 +4533,13 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <section id="priority">
     <title>priority</title>
     <para>Priority - provides a way to prioritize notes.</para>
-    <para><emphasis>Type:</emphasis> number.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+        number.<?oxy_custom_end ?></para>
     <para><emphasis>Value description:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>integer between 1 and
         10, inclusive.<?oxy_custom_end ?></para>
     <para><emphasis>Default value:</emphasis>
-        <code>1</code></para>
+        <code>1</code>.</para>
     <para><emphasis>Used in:</emphasis>
         <link linkend="note"><code>note</code></link>.</para>
     <note>
@@ -4973,15 +4826,23 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <section id="subflows">
   <title>subFlows</title>
 
-  <para>Sub-flows list - holds a list of <link linkend="id"><code>id</code></link> attributes corresponding to the <link linkend="unit"><code>&lt;unit&gt;</code></link>
-    elements that contain the sub-flows for a given inline code.</para>
+  <para>Sub-flows list - holds a list of <link linkend="id"><code>id</code></link> attributes corresponding to the <link linkend="unit"><code>unit</code></link>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>objects<?oxy_custom_end ?>
+    that contain the sub-flows for a given inline code.</para>
 
-  <para><emphasis>Value description:</emphasis> A list of NMTOKEN values
-  separated by spaces. Each value corresponds to the <link linkend="id"><code>id</code></link> attribute of a <link linkend="unit"><code>&lt;unit&gt;</code></link> element.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.<?oxy_custom_end ?></para>
+  <para><emphasis>Value description:</emphasis> A list of NMTOKEN values separated by
+    spaces,<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?> where NMTOKEN is a
+    string matching the pattern <code>[-._:A-Za-z0-9]+</code><?oxy_custom_end ?>.Each value
+    corresponds to the <link linkend="id"><code>id</code></link> attribute of
+    a <link linkend="unit"><code>unit</code></link>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
 
-  <para><emphasis>Default value:</emphasis> undefined</para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
 
-  <para><emphasis>Used in:</emphasis> <link linkend="ph"><code>&lt;ph&gt;</code></link>, <link linkend="sc"><code>&lt;sc&gt;</code></link>, <link linkend="ec"><code>&lt;ec&gt;</code></link>.</para>
+  <para><emphasis>Used in:</emphasis>
+    <link linkend="ph"><code>ph</code></link>, <link linkend="sc"><code>sc</code></link>, <link linkend="ec"><code>ec</code></link>.</para>
 
   <para><emphasis>Example:</emphasis></para>
 
@@ -4989,7 +4850,8 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
 </section>
 
     <section id="subflowsend">
-  <title>subFlowsEnd</title>
+  <title>subFlowsEnd <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[NOT
+    USED]<?oxy_custom_end ?></title>
 
   <para>Sub-flows list - holds a list of <link linkend="id"><code>id</code></link> attributes corresponding to the <link linkend="unit"><code>&lt;unit&gt;</code></link>
     elements that contain the sub-flows for the end marker of a given inline code.</para>
@@ -5007,7 +4869,8 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
 </section>
 
     <section id="subflowsstart">
-  <title>subFlowsStart</title>
+  <title>subFlowsStart <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[NOT
+    USED]<?oxy_custom_end ?></title>
 
   <para>Sub-flows list - holds a list of <link linkend="id"><code>id</code></link> attributes corresponding to the <link linkend="unit"><code>&lt;unit&gt;</code></link>
     elements that contain the sub-flows for the start marker of a given inline code.</para>
@@ -5030,6 +4893,8 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
   <para>subState - indicates a user-defined status for the <link linkend="segment"><code>segment</code></link>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
 
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.<?oxy_custom_end ?></para>
   <para><emphasis>Value description:</emphasis></para>
 
   <para><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>A string
@@ -5044,7 +4909,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
 
   <para>Other prefixes and sub-values <glossterm>may</glossterm> be defined by the users.</para>
 
-  <para><emphasis>Default value:</emphasis> undefined</para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
 
   <para><emphasis>Used in:</emphasis>
     <link linkend="segment"><code>segment</code></link></para>
@@ -5076,6 +4941,8 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
 
   <para>subType - indicates the secondary level type of an inline code.</para>
 
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.<?oxy_custom_end ?></para>
   <para><emphasis>Value description:</emphasis></para>
 
   <para>The value is composed of a prefix and a sub-value separated by a
@@ -5103,7 +4970,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
 
   <para>Other prefixes and sub-values <glossterm>may</glossterm> be defined by the users.</para>
 
-  <para><emphasis>Default value:</emphasis> undefined</para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
 
   <para><emphasis>Used in:</emphasis>
     <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><link linkend="pc"><code>&lt;pc&gt;</code></link>,
@@ -5151,12 +5018,15 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     
     <para>Target language - the code of the language, in which the <firstterm>Translated</firstterm> text is
         expressed.</para>
+    <para><emphasis>Type:</emphasis><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+        string.<?oxy_custom_end ?></para>
     
     <para><emphasis>Value description:</emphasis> A language code as described in <link linkend="bcp47">[BCP 47]</link>.</para>
     
-    <para><emphasis>Default value:</emphasis> undefined</para>
+    <para><emphasis>Default value:</emphasis> undefined.</para>
     
-    <para><emphasis>Used in:</emphasis> <link linkend="xliff"><code>&lt;xliff&gt;</code></link>.</para>
+    <para><emphasis>Used in:</emphasis>
+        <link linkend="xliff"><code>jliff</code></link>.</para>
 </section>
 
     <section id="translate">
@@ -5165,34 +5035,34 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <para>Translate - indicates whether or not the source text in the scope of the given <code>translate</code> flag is intended
         for <firstterm>Translation</firstterm>.</para>
 
-    <para><emphasis>Value description:</emphasis> <code>yes</code> or <code>no</code>.</para>
+    <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+        string.<?oxy_custom_end ?></para>
+    <para><emphasis>Value description:</emphasis>
+        <code>"yes"</code> or <code>"no"</code>.</para>
 
     <para><emphasis>Default value:</emphasis> default values for this attribute
         depend on the element in which it is used:</para>
 
     <itemizedlist>
         <listitem>
-            <para>When used in <link linkend="file"><code>&lt;file&gt;</code></link>:</para>
-
-            <para>The value <code>yes</code>.</para>
+            <para>When used in <link linkend="file"><code>file</code></link>:</para>
+            <para>The value <code>"yes"</code>.</para>
         </listitem>
         <listitem>
-            <para>When used in any other admissible structural element (<link linkend="group"><code>&lt;group&gt;</code></link> or <link linkend="unit"><code>&lt;unit&gt;</code></link>):</para>
-            <para>The value of the <link linkend="translate"><code>translate</code></link> attribute of its parent element.
+            <para>When used in any other admissible structural element (<link linkend="group"><code>group</code></link> or <link linkend="unit"><code>unit</code></link>):</para>
+            <para>The value of the <link linkend="translate"><code>translate</code></link>
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>
+                of its parent
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.
             </para>
-
         </listitem>
         <listitem>
             <para>When used in annotations markers
-                <link linkend="mrk"><code>&lt;mrk&gt;</code></link> or
-                <link linkend="sm"><code>&lt;sm&gt;</code></link>:</para>
-
-
-            <para>The value of the <link linkend="translate"><code>translate</code></link> attribute of the innermost <link linkend="mrk"><code>&lt;mrk&gt;</code></link> or <link linkend="unit"><code>&lt;unit&gt;</code></link> element, in which the marker in question is located.
+                    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><link linkend="mrk"><code>&lt;mrk&gt;</code></link> or <?oxy_custom_end ?><link linkend="sm"><code>sm</code></link>:</para>
+            <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>The value of the
+                    <link linkend="translate"><code>translate</code></link> attribute of the innermost <link linkend="mrk"><code>&lt;mrk&gt;</code></link> or <link linkend="unit"><code>unit</code></link> object, in which the marker in question is located.
             </para>
-
-        </listitem>
-
+        </listitem><?oxy_custom_end ?>
         <!-- Caveat! @translte has been removed from <segment> to simplify translation state algorithm..
             The following is the verbose version of the above defaults descriptions:
 
@@ -5260,12 +5130,10 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
 
 
     <para><emphasis>Used in:</emphasis>
-        <link linkend="file"><code>&lt;file&gt;</code></link>
-        <link linkend="group"><code>&lt;group&gt;</code></link>
-        <link linkend="unit"><code>&lt;unit&gt;</code></link>,
-        <link linkend="mrk"><code>&lt;mrk&gt;</code></link> and
-        <link linkend="sm"><code>&lt;sm&gt;</code></link>.
-    </para>
+        <link linkend="file"><code>file</code></link>
+        <link linkend="group"><code>group</code></link>
+        <link linkend="unit"><code>unit</code></link><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>,
+            <link linkend="mrk"><code>&lt;mrk&gt;</code></link><?oxy_custom_end ?> and <link linkend="sm"><code>sm</code></link>. </para>
 
 </section>
 
@@ -5274,8 +5142,10 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
 
   <para>Target directionality - indicates the directionality of the target content.</para>
 
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string<?oxy_custom_end ?>.</para>
   <para><emphasis>Value description:</emphasis>
-    <code>ltr</code> (Left-To-Right), <code>rtl</code> (Right-To-Left), or <code>auto</code>
+    <code>"ltr"</code> (Left-To-Right), <code>"rtl"</code> (Right-To-Left), or <code>"auto"</code>
     (determined heuristically, based on the first strong directional character in scope, see <link linkend="uax9">[UAX #9]</link>).</para>
 
   <para><emphasis>Default value:</emphasis> default values for this attribute
@@ -5283,9 +5153,9 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
 
   <itemizedlist>
     <listitem>
-      <para>When used in <link linkend="file"><code>&lt;file&gt;</code></link>:</para>
+      <para>When used in <link linkend="file"><code>file</code></link>:</para>
 
-      <para>The value <code>auto</code>.</para>
+      <para>The value <code>"auto"</code>.</para>
     </listitem>
 
     <listitem>
@@ -5296,36 +5166,42 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
   </itemizedlist>
 
   <para><emphasis>Used in:</emphasis>
-    <link linkend="file"><code>&lt;file&gt;</code></link>, <link linkend="group"><code>&lt;group&gt;</code></link>, and <link linkend="unit"><code>&lt;unit&gt;</code></link>. </para>
+    <link linkend="file"><code>file</code></link>,
+      <link linkend="group"><code>group</code></link>, and <link linkend="unit"><code>unit</code></link>. </para>
 </section>
 
     <section id="type">
-  <title>type</title>
-  <para>Type - indicates the type of an element.</para>
+  <title><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>codeType<?oxy_custom_end ?>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[NOTE: should split into
+    two files: codeType and mrkType]<?oxy_custom_end ?></title>
+  <para>codeType - indicates the type of an element.</para>
+  <para><emphasis>Type:</emphasis><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+    string.<?oxy_custom_end ?></para>
   <para><emphasis>Value description:</emphasis> allowed values for this attribute depend on the
     element in which it is used.</para>
   <itemizedlist>
     <listitem>
-      <para>When used in <link linkend="pc">
+      <para>When used in <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><link linkend="pc">
           <code>&lt;pc&gt;</code>
-        </link>, <link linkend="sc">
-          <code>&lt;sc&gt;</code>
+        </link>, <?oxy_custom_end ?><link linkend="sc">
+          <code>sc</code>
         </link>, <link linkend="ec">
-          <code>&lt;ec&gt;</code>
+          <code>ec</code>
         </link> or <link linkend="ph">
-          <code>&lt;ph&gt;</code>
+          <code>ph</code>
         </link>:</para>
       <para>The value  <glossterm>must</glossterm> be set to one of the following values:</para>
       <simplelist type="vert">
-        <member><code>fmt</code> - Formatting (e.g. a &lt;b&gt; element in HTML)</member>
-        <member><code>ui</code> - User interface element</member>
-        <member><code>quote</code> - Inline quotation (as opposed to a block citation)</member>
-        <member><code>link</code> - Link (e.g. an &lt;a&gt; element in HTML)</member>
-        <member><code>image</code> - Image or graphic</member>
-        <member><code>other</code> - Type of element not covered by any of the other top-level types.</member>
+        <member><code>"fmt"</code> - Formatting (e.g. a &lt;b&gt; element in HTML)</member>
+        <member><code>"ui"</code> - User interface element</member>
+        <member><code>"quote"</code> - Inline quotation (as opposed to a block citation)</member>
+        <member><code>"link"</code> - Link (e.g. an &lt;a&gt; element in HTML)</member>
+        <member><code>"image"</code> - Image or graphic</member>
+        <member><code>"other"</code> - Type of element not covered by any of the other top-level
+          types.</member>
       </simplelist>
       <para><emphasis>Example:</emphasis>
-        <programlisting format="linespecific">
+        <programlisting format="linespecific"><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
 &lt;segment&gt;
   &lt;source xml:lang="cs"&gt;&lt;pc type="quote"&gt;<foreignphrase lang="cs">Blázen,
       chce dobýt točnu v takovém počasí&lt;/pc&gt;, dodal slovy svého
@@ -5333,33 +5209,56 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
   &lt;target xml:lang="en"&gt;&lt;pc type="quote"&gt;Madman, he wants to conquer the
       pole in this weather&lt;/pc&gt;, offered he the words of his
       favourite imaginary playwright.&lt;/target&gt;
-&lt;/segment&gt;
+&lt;/segment&gt;<?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+"subunits": [
+    {
+        "kind": "segment",
+        "state": "translated",
+        "source": [
+            { "id": "c1", "kind": "ph", "codeType": "quote", "dataRef": "d1" },
+            { "text": "Blázen, chce dobýt točnu v takovém počasí," }.
+            { "id": "c2", "kind": "sc", "dataRef": "d2" },       
+            { "text": "dodal slovy svého oblíbeného imaginárního autora." },
+            { "startRef": "c2", "kind": "ec", "dataRef": "d3" }
+        ],
+        "target": [
+            { "id": "c1", "kind": "ph", "codeType": "quote", "dataRef": "d1" },
+            { "text": "Madman, he wants to conquer the pole in this weather," },
+            { "id": "c2", "kind": "sc", "dataRef": "d2" },       
+            { "text": "offered he the words of his favourite imaginary playwright." },
+            { "startRef": "c2", "kind": "ec", "dataRef": "d3" }
+        ],
+        "sourceXmlLang": "cs",
+        "targetXmlLang": "en"
+    }
+]<?oxy_custom_end ?>
 </programlisting>
       </para>
       <para>One can further specify the type of a code using the <link linkend="subtype">
           <code>subType</code>
         </link>
       attribute.</para>
-      <para><emphasis>Default value:</emphasis> Undefined</para>
+      <para><emphasis>Default value:</emphasis> Undefined.</para>
     </listitem>
     <listitem>
-      <para>When used in <link linkend="mrk">
+      <para>When used in <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><link linkend="mrk">
           <code>&lt;mrk&gt;</code>
-        </link> or <link linkend="sm">
-          <code>&lt;sm&gt;</code>
+        </link> or <?oxy_custom_end ?><link linkend="sm">
+          <code>sm</code>
         </link>:</para>
-      <para>One of the following values: <code>generic</code>, <code>comment</code>,
-          <code>term</code>, or a user-defined value that is composed of a prefix and a sub-value
+      <para>One of the following values: <code>"generic"</code>, <code>"comment"</code>,
+          <code>"term"</code>, or a user-defined value that is composed of a prefix and a sub-value
         separated by a character <code>:</code> (U+003A).</para>
       <para>The prefix is a string uniquely identifying a collection of sub-values for a specific authority.
         The sub-value is any string value defined by the authority.</para>
-      <para><emphasis>Default value:</emphasis> <code>generic</code></para>
+      <para><emphasis>Default value:</emphasis>
+        <code>"generic"</code>.</para>
     </listitem>
     <listitem>
       <para>When used in <link linkend="group">
-          <code>&lt;group&gt;</code>
+          <code>group</code>
         </link> or <link linkend="unit">
-          <code>&lt;unit&gt;</code>
+          <code>unit</code>
         </link>:</para>
       <para>A value that is composed of a prefix and a sub-value
         separated by a character <code>:</code> (U+003A).</para>
@@ -5368,37 +5267,41 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
       <para><emphasis>Default value:</emphasis> Undefined</para>
     </listitem>
   </itemizedlist>
-  <para><emphasis>Used in:</emphasis> <link linkend="group">
-      <code>&lt;group&gt;</code>
+  <para><emphasis>Used in:</emphasis>
+    <link linkend="group">
+      <code>group</code>
     </link>, <link linkend="unit">
-      <code>&lt;unit&gt;</code>
-    </link>, <link linkend="pc">
-      <code>&lt;pc&gt;</code>
-    </link>, <link linkend="sc">
-      <code>&lt;sc&gt;</code>
+      <code>unit</code>
+    </link>, <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><link linkend="pc">
+      <code>pc</code>
+    </link>,<?oxy_custom_end ?>
+    <link linkend="sc">
+      <code>sc</code>
     </link>, <link linkend="ec">
-      <code>&lt;ec&gt;</code>
-    </link>, <link linkend="mrk">
+      <code>ec</code>
+    </link>, <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><link linkend="mrk">
       <code>&lt;mrk&gt;</code>
-    </link>,  <link linkend="ph">
-      <code>&lt;ph&gt;</code>
+    </link>,<?oxy_custom_end ?>
+    <link linkend="ph">
+      <code>ph</code>
     </link> and <link linkend="sm">
-      <code>&lt;sm&gt;</code>
+      <code>sm</code>
     </link>.</para>
   <itemizedlist>
     <title>Processing Requirements</title>
     <listitem>
-      <para><firstterm>Modifiers</firstterm> updating the attribute <link linkend="type">
-          <code>type</code>
-        </link> on <link linkend="pc">
+      <para><firstterm>Modifiers</firstterm> updating the <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>
+        <link linkend="type">
+          <code><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>codeType<?oxy_custom_end ?></code>
+        </link> on <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><link linkend="pc">
           <code>&lt;pc&gt;</code>
-        </link>, <link linkend="sc">
-          <code>&lt;sc&gt;</code>
+        </link>,<?oxy_custom_end ?>
+        <link linkend="sc">
+          <code>sc</code>
         </link>, <link linkend="ec">
-          <code>&lt;ec&gt;</code>
-        </link>, or
-          <link linkend="ph">
-          <code>&lt;ph&gt;</code>
+          <code>ec</code>
+        </link>, or <link linkend="ph">
+          <code>ph</code>
         </link>
         <glossterm>must</glossterm> also update or delete <link linkend="subtype">
           <code>subType</code>
@@ -5411,6 +5314,8 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
   <title>value</title>
 
   <para>Value - holds a value for the associated annotation.</para>
+  <para><emphasis>Type:</emphasis><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+    string.<?oxy_custom_end ?></para>
 
   <para><emphasis>Value description:</emphasis> Text.</para>
 
@@ -5431,9 +5336,11 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     </listitem>
   </itemizedlist>
 
-  <para><emphasis>Default value:</emphasis> undefined</para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
 
-  <para><emphasis>Used in:</emphasis> <link linkend="mrk"><code>&lt;mrk&gt;</code></link> and <link linkend="sm"><code>&lt;sm&gt;</code></link>.</para>
+  <para><emphasis>Used in:</emphasis>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><link linkend="mrk"><code>&lt;mrk&gt;</code></link> and
+      <?oxy_custom_end ?><link linkend="sm"><code>sm</code></link>.</para>
 </section>
 
     <section id="version">
@@ -5504,7 +5411,8 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
 </section>
 
     <section id="xml_space">
-    <title>xml:space</title>
+    <title>xml:space <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[NOT
+        USED]<?oxy_custom_end ?></title>
     
     <para>White spaces - the xml:space attribute specifies how white spaces (ASCII spaces, tabs and
         line-breaks) are to be treated.</para>
@@ -7886,23 +7794,24 @@ Palouse horses&lt;fn&gt;A Palouse horse is the same as
   
 </section>
     <section id="extensions">
-    <title>Extension Mechanisms</title>
+    <title><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>Extension
+        Mechanisms</title>
     <para>XLIFF 2.0 offers two mechanisms for storing custom data in an XLIFF document:</para>
     <orderedlist inheritnum="ignore" continuation="restarts">
         <listitem>
-            <para>Using the <link linkend="metadata_module">Metadata 
-                module</link> for storing custom data in elements defined by the official XLIFF 
-                specification.</para>
+            <para>Using the <link linkend="metadata_module">Metadata module</link> for storing custom data in
+                elements defined by the official XLIFF specification.</para>
         </listitem>
         <listitem>
-            <para>Using the standard XML namespace mechanism for storing data in elements or attributes defined in a custom 
-            XML Schema.</para>
+            <para>Using the standard XML namespace mechanism for storing data in elements or
+                attributes defined in a custom XML Schema.</para>
         </listitem>
     </orderedlist>
     <para>Both mechanisms can be used simultaneously.</para>
     <section>
         <title>Extension Points</title>
-        <para>The following <firstterm>XLIFF Core</firstterm> elements allow storing custom data in <link linkend="metadata"><code>&lt;mda:metadata&gt;</code></link> elements or in elements from a custom
+        <para>The following <firstterm>XLIFF Core</firstterm> elements allow storing custom data in
+                <link linkend="metadata"><code>&lt;mda:metadata&gt;</code></link> elements or in elements from a custom
             XML namespace:</para>
         <simplelist type="vert">
             <member>- <link linkend="file"><code>&lt;file&gt;</code></link></member>
@@ -7918,7 +7827,7 @@ Palouse horses&lt;fn&gt;A Palouse horse is the same as
             <member>- <olink targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"><code>&lt;ignorable></code></olink></member>            
             <member>- <olink targetdoc="../elements/candidates/match.xml" targetptr="match"><code>&lt;mtc:match></code></olink></member>
         </simplelist>
-         -->    
+         -->
         <para>The following <firstterm>XLIFF Core</firstterm> elements accept custom
             attributes:</para>
         <simplelist type="vert">
@@ -7938,25 +7847,30 @@ Palouse horses&lt;fn&gt;A Palouse horse is the same as
         </simplelist>
         <section>
             <title>Extensibility of <firstterm>XLIFF Modules</firstterm></title>
-        <para>For extensibility of <firstterm>XLIFF Modules</firstterm> please refer to the relevant
-            Module Sections.</para></section>
-        
+            <para>For extensibility of <firstterm>XLIFF Modules</firstterm> please refer to the
+                relevant Module Sections.</para>
+        </section>
     </section>
-  
-  <section id="ext-constraints">
-    <title>Constraints</title>
-    <itemizedlist>
-      <listitem><para>When using identifiers, an extension <glossterm>must</glossterm> use either an attribute named <code>id</code> or the attribute
-        <code>xml:id</code> to specify them.</para></listitem>
-      <listitem><para>Extensions identifiers <glossterm>must</glossterm> be unique within their immediate <link linkend="file"><code>&lt;file&gt;</code></link>, <link linkend="group"><code>&lt;group&gt;</code></link> 
-        or <link linkend="unit"><code>&lt;unit&gt;</code></link> 
-        enclosing element.</para></listitem>
-      <listitem><para>Identifier values used in extensions <glossterm>must</glossterm> be of type <code>xs:NMTOKEN</code> or compatible with <code>xs:NMTOKEN</code>
-        (e.g. <code>xs:NAME</code> and <code>xs:ID</code> are compatible).</para></listitem>
-    </itemizedlist>
-    <para>These constraints are needed for the <link linkend="fragid">fragment identification mechanism</link>.</para>
-  </section>
-  
+    <section id="ext-constraints">
+        <title>Constraints</title>
+        <itemizedlist>
+            <listitem>
+                <para>When using identifiers, an extension <glossterm>must</glossterm> use either an
+                    attribute named <code>id</code> or the attribute <code>xml:id</code> to specify
+                    them.</para>
+            </listitem>
+            <listitem>
+                <para>Extensions identifiers <glossterm>must</glossterm> be unique within their
+                    immediate <link linkend="file"><code>&lt;file&gt;</code></link>, <link linkend="group"><code>&lt;group&gt;</code></link> or <link linkend="unit"><code>&lt;unit&gt;</code></link> enclosing element.</para>
+            </listitem>
+            <listitem>
+                <para>Identifier values used in extensions <glossterm>must</glossterm> be of type
+                        <code>xs:NMTOKEN</code> or compatible with <code>xs:NMTOKEN</code> (e.g.
+                        <code>xs:NAME</code> and <code>xs:ID</code> are compatible).</para>
+            </listitem>
+        </itemizedlist>
+        <para>These constraints are needed for the <link linkend="fragid">fragment identification mechanism</link>.</para>
+    </section>
     <section>
         <title>Processing Requirements</title>
         <itemizedlist>
@@ -7967,16 +7881,16 @@ Palouse horses&lt;fn&gt;A Palouse horse is the same as
                     complement an extensible XLIFF core feature or module feature or provide a new
                     functionality at the provided extension points.</para>
             </listitem>
-            
             <listitem>
-                <para><firstterm>Mergers</firstterm> <glossterm>must not</glossterm> rely on custom namespace extensions, other than the ones possibly defined in <link linkend="skeleton"><code>&lt;skeleton&gt;</code></link>, to create the <firstterm>Translated</firstterm> version of
-                    the original document. </para>
+                <para><firstterm>Mergers</firstterm>
+                    <glossterm>must not</glossterm> rely on custom namespace extensions, other than
+                    the ones possibly defined in <link linkend="skeleton"><code>&lt;skeleton&gt;</code></link>, to create the
+                        <firstterm>Translated</firstterm> version of the original document. </para>
             </listitem>
-            
             <listitem>
-                <para><firstterm>Writers</firstterm> that do not support a given custom namespace based user extension
-                        <glossterm>should</glossterm> preserve that extension without
-                    <firstterm>Modification</firstterm>.</para>
+                <para><firstterm>Writers</firstterm> that do not support a given custom namespace
+                    based user extension <glossterm>should</glossterm> preserve that extension
+                    without <firstterm>Modification</firstterm>.<?oxy_custom_end ?></para>
             </listitem>
         </itemizedlist>
     </section>
@@ -8342,8 +8256,8 @@ Palouse horses&lt;fn&gt;A Palouse horse is the same as
         of a <link linkend="match"><code>mtc_match</code></link>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>
         based on an external benchmark or metric.</para>
-    <para><emphasis>Type:</emphasis>
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>number<?oxy_custom_end ?>.</para>
+    <para><emphasis><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>Type:</emphasis>
+        number.<?oxy_custom_end ?></para>
     
     <para><emphasis>Value description:</emphasis>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>number between 0.0 and
@@ -9042,7 +8956,7 @@ Palouse horses&lt;fn&gt;A Palouse horse is the same as
 
   <para><emphasis>Value description:</emphasis> text.</para>
 
-  <para><emphasis>Default value:</emphasis> undefined.</para>
+  <para><emphasis>Default value:</emphasis> undefned.</para>
 
   <para><emphasis>Used in:</emphasis><link linkend="term"><code>gls_term</code></link>, <link linkend="translation"><code>gls_translation</code></link>, and <link linkend="definition"><code>gls_definition</code></link>.</para>
   
@@ -9609,12 +9523,12 @@ targetptr="target"><code>&lt;target&gt;</code></olink>,
  -->
 </section>
 <section id="subFs">
-<title>subFs</title>
-<para>Sub-format style, subFs - allows extra metadata, like URL for example, to be added in concert
-        with the <link linkend="fs"><code>fs_fs</code></link>
+<title>fs_subFs</title>
+<para>Sub-format style, <code>fs_subFs</code> - allows extra metadata, like URL for example, to be
+        added in concert with the <link linkend="fs"><code>fs_fs</code></link>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end ?>. </para>
 
-<para><emphasis>Value description:</emphasis> The subFs
+<para><emphasis>Value description:</emphasis> The <code>fs_subFs</code>
         <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string<?oxy_custom_end ?>
         is used to specify the HTML attributes to use along with the HTML element declared in the
             <link linkend="fs"><code>fs_fs</code></link>
@@ -9633,7 +9547,9 @@ accompanied <olink targetdoc="../attributes/fs.xml" targetptr="fs"><code>fs</cod
     </para>
 <!--  this is now redundant
 <para>Example:<code> fs:fs="img" fs:subFs="src,smileface.png"</code>. </para> -->
-<para><emphasis>Default value:</emphasis> undefined.</para>
+<para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+        string.<?oxy_custom_end ?></para>
+    <para><emphasis>Default value:</emphasis> undefined.</para>
 <para><emphasis>Used in:</emphasis>
         <link linkend="file"><code>file</code></link>, <!-- <olink targetdoc="../elements/structural/skeleton.xml"
 targetptr="skeleton"><code>&lt;skeleton&gt;</code></olink>, [does not make sense for skeleton IMHO] -->
@@ -10540,8 +10456,8 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
     the content type of <ulink url="http://tools.ietf.org/rfc/rfc2045.txt">[RFC 2045]</ulink>, the
     MIME specification; e.g. mimeType="text/xml" indicates the resource data is a text file of XML
     format.</para>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis><?oxy_custom_end ?>
-    string.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.<?oxy_custom_end ?></para>
 
   <para><emphasis>Value description:</emphasis> a MIME type. An existing MIME type
       <glossterm>must</glossterm> be used from a <ulink url="http://www.iana.org/assignments/media-types">list of standard values</ulink>.</para>
@@ -11000,11 +10916,11 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
   <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end ?></para>
 
-  <para><emphasis>Value description:</emphasis> an <link linkend="XMLSchema2">[XML Schema Datatypes]</link> NMTOKEN:
+  <para><emphasis>Value description:</emphasis> NMTOKEN:
     <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>a string matching the
     pattern <code>[-._:A-Za-z0-9]+</code><?oxy_custom_end ?>.</para> 
 
-  <para><emphasis>Default value:</emphasis> none</para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
 
   <para><emphasis>Used in:</emphasis><link linkend="revisions"><code>ctr_revisions</code></link>
     <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[CURRENTLY
@@ -11025,60 +10941,64 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
   
 </section>
     <section id="ctr_datetime">
-  <title>datetime</title>
+  <title>ctr_datetime</title>
 
   <para>Date and Time, datetime - Indicates the date and time the referenced element or its
     attributes were created or modified.</para>
 
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.<?oxy_custom_end ?></para>
   <para><emphasis>Value description:</emphasis> Date in one of the formats defined in <link linkend="bib_datetime">[NOTE-datetime]</link>.</para>
 
-  <para><emphasis>Default value:</emphasis> undefined</para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
 
-  <para><emphasis>Used in:</emphasis><link linkend="revision"><code>&lt;revision&gt;</code></link>.</para>
+  <para><emphasis>Used in:</emphasis><link linkend="revision"><code>ctr_revision</code></link>.</para>
   
 </section>
     <section id="ctr_ref">
-  <title>ref</title>
-
-  <para>Reference - Holds a reference to a single instance of an element that has
-    multiple instances within the enclosing element.</para>
-
-  <para><emphasis>Value description:</emphasis> An <link linkend="XMLSchema2">[XML Schema Datatypes]</link> NMTOKEN</para>
-
-  <para><emphasis>Default value:</emphasis> undefined</para>
-
-  <para><emphasis>Used in:</emphasis><link linkend="revisions"><code>&lt;revisions&gt;</code></link></para>
-  
-<itemizedlist>
-  <title>Constraints</title>
-  <listitem><para> The value of the <link linkend="ctr_ref"><code>ref</code></link> attribute <glossterm>must</glossterm> be the value of the <link linkend="id"><code>id</code></link> attribute of a single instance of an element that is a multiple instance within the enclosing element.</para></listitem>
-</itemizedlist>
-  
+  <title>ctr_ref</title>
+  <para>Reference - Holds a reference to a single instance of an element that has multiple instances
+    within the enclosing element.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.</para><?oxy_custom_end ?>
+  <para><emphasis>Value description:</emphasis>
+    NMTOKEN<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>: a string matching
+    the pattern <code>[-._:A-Za-z0-9]+</code>.<?oxy_custom_end ?></para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
+  <para><emphasis>Used in:</emphasis><link linkend="revisions"><code>ctr_revisions</code></link></para>
+  <itemizedlist>
+    <title>Constraints</title>
+    <listitem>
+      <para> The value of the <link linkend="ctr_ref"><code>ref</code></link> attribute
+          <glossterm>must</glossterm> be the value of the <link linkend="id"><code>id</code></link> attribute of a single instance of an element that
+        is a multiple instance within the enclosing element.</para>
+    </listitem>
+  </itemizedlist>
 </section>
     <section id="ctr_property">
-  <title>property</title>
-
+  <title>ctr_property</title>
   <para>property – Indicates the type of revision data.</para>
-
-  <para><emphasis>Value description:</emphasis> The value <glossterm>must</glossterm> be either <code>content</code> to signify the content of an element, or the name of the attribute relating to the revision data.</para>
-
-  <para><emphasis>Default value:</emphasis> none</para>
-
-  <para><emphasis>Used in:</emphasis><link linkend="item"><code>&lt;item&gt;</code></link>.</para>
-  
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.</para><?oxy_custom_end ?>
+  <para><emphasis>Value description:</emphasis> The value <glossterm>must</glossterm> be either
+      <code>content</code> to signify the content of an element, or the name of the attribute
+    relating to the revision data.</para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
+  <para><emphasis>Used in:</emphasis><link linkend="item"><code>items</code></link>
+    <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>array of
+    objects<?oxy_custom_end ?>.</para>
 </section>
     <section id="ctr_version">
-  <title>version</title>
-
+  <title>ctr_version</title>
   <para>version - Indicates the version of the referenced element or its attributes that were
     created or modified.</para>
-
-  <para><emphasis>Value description:</emphasis> NMTOKEN.</para>
-
-  <para><emphasis>Default value:</emphasis> undefined</para>
-
-  <para><emphasis>Used in:</emphasis><link linkend="revision"><code>&lt;revision&gt;</code></link>.</para>
-  
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.</para><?oxy_custom_end ?>
+  <para><emphasis>Value description:</emphasis>
+    NMTOKEN<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>: a string matching
+    the pattern <code>[-._:A-Za-z0-9]+</code>.<?oxy_custom_end ?></para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
+  <para><emphasis>Used in:</emphasis><link linkend="revision"><code>ctr_revision</code></link>.</para>
 </section>
   </section>
 
@@ -11414,39 +11334,37 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
         <para>The attributes defined in the Size and Length restriction module are: <link linkend="slr_storage_profile"><code>storageProfile</code></link>, <link linkend="slr_general_profile"><code>generalProfile</code></link>, <link linkend="slr_storage"><code>storage</code></link>, <link linkend="slr_general"><code>general</code></link>, <link linkend="slr_profile"><code>profile</code></link>, <link linkend="slr_storage_restriction"><code>storageRestriction</code></link>, <link linkend="slr_size_restriction"><code>sizeRestriction</code></link>, <link linkend="slr_equiv_storage"><code>equivStorage</code></link> , <link linkend="slr_size_info"><code>sizeInfo</code></link> and <link linkend="slr_size_info_ref"><code>sizeInfoRef</code></link>. </para>
         <section id="slr_storage_profile">
   <title>slr_storageProfile</title>
-
   <para>This <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string
     property<?oxy_custom_end ?> specifies, which profile to use while checking storage size
     restrictions. Empty string means that no restrictions are applied.</para>
-
-  <para><emphasis>Value description:</emphasis> Name of restriction profile to use for storage size restrictions.</para>
-
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.</para><?oxy_custom_end ?>
+  <para><emphasis>Value description:</emphasis> Name of restriction profile to use for storage size
+    restrictions.</para>
   <para><emphasis>Default value:</emphasis> empty string</para>
-
   <para><emphasis>Used in:</emphasis><link linkend="slr_profiles"><code>slr_profiles</code></link>.</para>
 </section>
         <section id="slr_general_profile">
   <title>slr_generalProfile</title>
-
   <para>This <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string
     property<?oxy_custom_end ?> specifies, which profile to use while checking the general size
     restrictions. Empty string means that no restrictions apply.</para>
-
-  <para><emphasis>Value description:</emphasis> Name of restriction profile to use for general size restrictions.</para>
-
-  <para><emphasis>Default value:</emphasis> empty string</para>
-
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.</para><?oxy_custom_end ?>
+  <para><emphasis>Value description:</emphasis> Name of restriction profile to use for general size
+    restrictions.</para>
+  <para><emphasis>Default value:</emphasis> empty string.</para>
   <para><emphasis>Used in:</emphasis><link linkend="slr_profiles"><code>slr_profiles</code></link>.</para>
 </section>
         <section id="slr_storage">
   <title>slr_storage</title>
-
   <para>This <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string
     property<?oxy_custom_end ?> specifies the normalization form to apply for storage size
     restrictions. Only the normalization forms C and D as specified by the Unicode Consortium are
     supported, see <ulink url="http://unicode.org/reports/tr15/">Unicode Standard Annex
     #15</ulink>.</para>
-
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.</para><?oxy_custom_end ?>
   <para><emphasis>Value description:</emphasis> normalization to apply.</para>
   <table>
     <title>Values</title>
@@ -11478,22 +11396,19 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
       </tbody>
     </tgroup>
   </table>
-
-
   <para><emphasis>Default value:</emphasis>
     <code>"none"</code></para>
-
   <para><emphasis>Used in:</emphasis>
     <link linkend="slr_normalization"><code>slr_normalization</code></link>.</para>
 </section>
         <section id="slr_general">
   <title>slr_general</title>
-
   <para>This <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string
     property<?oxy_custom_end ?> specifies the normalization to apply for general size restrictions.
     Only the normalization forms C and D as specified by the Unicode Consortium are supported, see
       <ulink url="http://unicode.org/reports/tr15/">Unicode Standard Annex #15</ulink>.</para>
-
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.</para><?oxy_custom_end ?>
   <para><emphasis>Value description:</emphasis> normalization to apply.</para>
   <table>
     <title>Values</title>
@@ -11522,46 +11437,40 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
           <entry><code>"nfd"</code></entry>
           <entry>Normalization Form D <glossterm>must</glossterm> be used</entry>
         </row>
-     </tbody>
+      </tbody>
     </tgroup>
   </table>
-
   <para><emphasis>Default value:</emphasis>
     <code>"none"</code></para>
-
   <para><emphasis>Used in:</emphasis><link linkend="slr_normalization"><code>slr_normalization</code></link>.</para>
 </section>
         <section id="slr_profile">
   <title>slr_profile</title>
-
   <para>This <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string
     property<?oxy_custom_end ?> is used on the <code>slr_data</code>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?> to
     indicate what profile the contents of that
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>
     apply to.</para>
-
-  <para><emphasis>Value description:</emphasis> Name of a restriction profile</para>
-
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.</para><?oxy_custom_end ?>
+  <para><emphasis>Value description:</emphasis> Name of a restriction profile.</para>
   <para><emphasis>Default value:</emphasis> undefined.</para>
-
   <para><emphasis>Used in:</emphasis><link linkend="slr_data"><code>slr_data</code></link>.</para>
 </section>
         <section id="slr_storageRestriction">
   <title>slr_storageRestriction</title>
-
   <para>This <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string
     property<?oxy_custom_end ?> specifies the storage restriction to apply to the collection
     descendants of the
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?> it
     is defined on.</para>
-
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.</para><?oxy_custom_end ?>
   <para><emphasis>Value description:</emphasis> Interpretation of the value is dependent on selected
       <link linkend="slr_storage_profile"><code>slr_storageProfile</code></link>. It <glossterm>must</glossterm> represent the
     restriction to apply to the indicated sub part of the document.</para>
-
   <para><emphasis>Default value:</emphasis> undefined.</para>
-
   <para><emphasis>Used in:</emphasis>
     <link linkend="file"><code>file</code></link>, <link linkend="group"><code>group</code></link>, <link linkend="unit"><code>unit</code></link>,
       <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><link linkend="mrk"><code>&lt;mrk&gt;</code></link>,
@@ -11570,17 +11479,15 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
 </section>
         <section id="slr_sizeRestriction">
   <title>slr_sizeRestriction</title>
-
   <para>This <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string
     property<?oxy_custom_end ?> specifies the size restriction to apply to the collection descendants
     of the element it is defined on.</para>
-
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.</para><?oxy_custom_end ?>
   <para><emphasis>Value description:</emphasis> Interpretation of the value is dependent on selected
       <link linkend="slr_general_profile"><code>slr_generalProfile</code></link>. It <glossterm>must</glossterm> represent the
     restriction to apply to the indicated sub part of the document.</para>
-
   <para><emphasis>Default value:</emphasis> undefined.</para>
-
   <para><emphasis>Used in:</emphasis>
     <link linkend="file"><code>file</code></link>, <link linkend="group"><code>group</code></link>, <link linkend="unit"><code>unit</code></link>,
       <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><link linkend="mrk"><code>mrk</code></link>,
@@ -11600,11 +11507,13 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
     set to <code>"yes"</code>. Otherwise the property on the paired <link linkend="sc"><code>sc</code></link> element also
     cover its partner <link linkend="ec"><code>ec</code></link> element.</para>
 
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.<?oxy_custom_end ?></para>
   <para><emphasis>Value description:</emphasis> Interpretation of the value is dependent on selected
       <link linkend="slr_storage_profile"><code>slr_storageProfile</code></link>. It <glossterm>must</glossterm> represent the
     equivalent storage size represented by the inline element.</para>
 
-  <para><emphasis>Default value:</emphasis> undefined</para>
+  <para><emphasis>Default value:</emphasis> undefined.</para>
 
   <para><emphasis>Used
       in:<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?></emphasis>
@@ -11650,7 +11559,6 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
 </section>
         <section id="slr_sizeInfoRef">
   <title>slr_sizeInfoRef</title>
-
   <para>This <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string
     property<?oxy_custom_end ?> is used to point to data that provide the same function as the <link linkend="slr_size_info"><code>skr_sizeInfo</code></link>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string
@@ -11660,9 +11568,12 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string
     property<?oxy_custom_end ?> on the paired <link linkend="sc"><code>sc</code></link> element also cover its partner <link linkend="ec"><code>ec</code></link>
     element.</para>
-
-  <para><emphasis>Value description:</emphasis> a reference to data that provide the same
-    information that could be otherwise put in a <link linkend="slr_size_info"><code>slr_sizeInfo</code></link>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
+    string.</para><?oxy_custom_end ?>
+  <para><emphasis>Value description:</emphasis>
+    <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>NMTOKEN: a string matching
+    the pattern <code>[-._:A-Za-z0-9]+</code><?oxy_custom_end ?>, a reference to data that provide
+    the same information that could be otherwise put in a <link linkend="slr_size_info"><code>slr_sizeInfo</code></link>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string
     property<?oxy_custom_end ?>. The reference <glossterm>must</glossterm> point to an
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?> in a
@@ -11670,24 +11581,19 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?> this
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string
     property<?oxy_custom_end ?> is attached to or a sibling to one of its ancestors. </para>
-
   <para><emphasis>Default value:</emphasis> undefined.</para>
-
- 
   <para><emphasis>Used in:</emphasis>
     <link linkend="file"><code>file</code></link>, <link linkend="group"><code>group</code></link>, <link linkend="unit"><code>unit</code></link>,
       <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><link linkend="pc"><code>pc</code></link>,
       <?oxy_custom_end ?><link linkend="sc"><code>sc</code></link>, <link linkend="ec"><code>ec</code></link>, and <link linkend="ph"><code>ph</code></link>, </para>
- 
   <itemizedlist>
     <title>Constraints</title>
     <listitem>
       <para>This <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>string property<?oxy_custom_end ?>
         <glossterm>must not</glossterm> be specified if and only if <link linkend="slr_size_info"><code>slr_sizeInfo</code></link> is used. They <glossterm>must
           not</glossterm> be specified at the same time.</para>
-    </listitem></itemizedlist> 
-  
-  
+    </listitem>
+  </itemizedlist>
 </section>
     </section>
     <section>
@@ -12773,10 +12679,10 @@ targetptr="match"><code>&lt;match&gt;</code></olink>, [I'd consider having it on
     string.<?oxy_custom_end ?></para>
 
   <para><emphasis>Value description:</emphasis>
-    <code>"yes"</code> or <code>"no"</code></para>
+    <code>"yes"</code> or <code>"no"</code>.</para>
 
   <para><emphasis>Default value:</emphasis>
-    <code>"no"</code></para>
+    <code>"no"</code>.</para>
 
   <para><emphasis>Used in:</emphasis>
     <link linkend="rule"><code>val_rule</code></link></para>
@@ -16637,12 +16543,9 @@ annotatorsRef had been addressed already for csprd01
     
     <para><emphasis>Value description:</emphasis> A language code as described in <link linkend="bcp47">[BCP 47]</link>.</para>
     
-    <para><emphasis>Default value:</emphasis></para>
-    
-            
-            <para>The value of the <link linkend="xml_lang"><code>xml:lang</code></link> or <code>itsm:lang</code> attribute set or inherited
-        on the parent element of the <link linkend="mrk"><code>&lt;mrk&gt;</code></link> or <link linkend="sm"><code>&lt;sm&gt;</code></link>
-        element in question.</para>                
+    <para><emphasis>Default value:</emphasis> The value of the <link linkend="xml_lang"><code>xml:lang</code></link> or <code>itsm:lang</code> attribute
+        set or inherited on the parent element of the <link linkend="mrk"><code>&lt;mrk&gt;</code></link>
+        or <link linkend="sm"><code>&lt;sm&gt;</code></link> element in question.</para>                
         
     
     <para><emphasis>Used in:</emphasis>
