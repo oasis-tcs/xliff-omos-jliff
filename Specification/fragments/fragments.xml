@@ -6,7 +6,8 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="fragid">
-  <title>Fragment Identification</title>
+  <title><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>Fragment
+    Identification</title>
   <para>This specification defines how <firstterm>Agents</firstterm>
     <glossterm>must</glossterm> interpret the fragment identifiers in IRIs pointing to
       <firstterm>JLIFF Instances</firstterm>.</para>
@@ -16,7 +17,7 @@
   </note>
   <note>
     <para>Note that some identifiers can change during the localization process. For example on
-      resegmentation or  when regrouping or not <olink targetdoc="../elements/structural/data.xml"
+      resegmentation or when regrouping or not <olink targetdoc="../elements/structural/data.xml"
         targetptr="data"><code>data</code></olink> objects depending on how tools treat identical
       original data.</para>
   </note>
@@ -34,29 +35,40 @@
 &lt;selectorSeparator>  ::= "/"</programlisting>
     </listitem>
     <listitem>
-      <para>There <glossterm>must not</glossterm> be two identical prefixes in the expression.</para>
+      <para>There <glossterm>must not</glossterm> be two identical prefixes in the
+        expression.</para>
     </listitem>
     <listitem>
-      <para>When used, the following selectors <glossterm>must</glossterm> be declared in this order: file selector, group selector and unit selector.</para>
+      <para>When used, the following selectors <glossterm>must</glossterm> be declared in this
+        order: file selector, group selector and unit selector.<?oxy_custom_end?></para>
     </listitem>
     <listitem>
-      <para>The selectors for modules or extensions, <olink targetdoc="../elements/structural/note.xml"
-        targetptr="note"><code>&lt;note&gt;</code></olink>, <olink targetdoc="../elements/structural/segment.xml"
-          targetptr="segment"><code>&lt;segment&gt;</code></olink> or <olink targetdoc="../elements/structural/ignorable.xml"
-            targetptr="ignorable"><code>&lt;ignorable&gt;</code></olink> or source inline elements, target inline elements and
-        <olink targetdoc="../elements/structural/data.xml"
-          targetptr="data"><code>&lt;data></code></olink> have the following constraints:</para>
+      <para>The selectors for modules or extensions, <olink
+          targetdoc="../elements/structural/note.xml" targetptr="note"
+          ><code>&lt;note&gt;</code></olink>, <olink targetdoc="../elements/structural/segment.xml"
+          targetptr="segment"><code>&lt;segment&gt;</code></olink> or <olink
+          targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"
+            ><code>&lt;ignorable&gt;</code></olink> or source inline elements, target inline
+        elements and <olink targetdoc="../elements/structural/data.xml" targetptr="data"
+            ><code>&lt;data></code></olink> have the following constraints:</para>
       <itemizedlist>
-        <listitem><para>Only one of them <glossterm>may</glossterm> be used in the expression.</para></listitem>
-        <listitem><para>The one used <glossterm>must</glossterm> be the last selector of the expression.</para></listitem>
+        <listitem>
+          <para>Only one of them <glossterm>may</glossterm> be used in the expression.</para>
+        </listitem>
+        <listitem>
+          <para>The one used <glossterm>must</glossterm> be the last selector of the
+            expression.</para>
+        </listitem>
       </itemizedlist>
     </listitem>
   </itemizedlist>
-  <warning><para>Please note that due to the above Constraints, referencing fragments using third party
+  <warning>
+    <para>Please note that due to the above Constraints, referencing fragments using third party
       namespaces within <firstterm>Modules</firstterm> or extensions (including but not limited to
         <firstterm>XLIFF Core</firstterm> or the Metadata Module) is not possible. This is to
       restrict the complexity of the fragment identification mechanism, as it would otherwise have
-      potentially unlimited depth.</para></warning>
+      potentially unlimited depth.</para>
+  </warning>
   <section>
     <title>Selectors for Core Objects</title>
     <itemizedlist>
@@ -175,37 +187,70 @@
   </section>
   <section>
     <title>Relative References</title>
-    <para>Fragment identifiers that do not start with a character <code>/</code> (U+002F) are relative to their location in the document,
-      or to the document being processed.</para>
+    <para>Fragment identifiers that do not start with a character <code>/</code> (U+002F) are
+      relative to their location in the document, or to the document being processed.</para>
     <para>Any unit, group or file selector missing to resolve the relative reference is obtained
       from the immediate enclosing unit, group or file object.</para>
   </section>
   <section id="fragid-example">
     <title>Examples</title>
-    <para>Given the following JLIFF document:</para>
+    <para>Given the following JLIFF Instance:</para>
     <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
     <programlisting>
-&lt;xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0"
-    srcLang="en" trgLang="fr">
-  &lt;file id="f1">
-    &lt;notes>
-      &lt;note id="n1">note for file.&lt;/note>
-    &lt;/notes>
-    &lt;unit id="u1">
-      &lt;my:elem xmlns:my="myNamespaceURI" id="x1">data&lt;/my:elem>
-      &lt;notes>
-        &lt;note id="n1">note for unit&lt;/note>
-      &lt;/notes>
-      &lt;segment id="s1">
-        &lt;source>&lt;pc id="1">Hello &lt;mrk id="m1" type="term">World&lt;/mrk>!&lt;/pc>
-            &lt;/source>
-        &lt;target>&lt;pc id="1">Bonjour le &lt;mrk id="m1" type="term">Monde&lt;/mrk>
-            ! &lt;/pc>&lt;/target>
-      &lt;/segment>
-    &lt;/unit>
-  &lt;/file>
-&lt;/xliff>
-</programlisting>
+<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>{ "jliff": "2.1",
+  "srcLang": "en-US",
+  "trgLang": "fr-FR",
+  "files": [
+    { "id": "f1",
+      "kind": "file",
+      "notes": [
+        { "id": "n1",
+          "text": "note for file." }
+      ],
+      "subfiles": [
+        { "canResegment": "no",
+          "id": "u1",
+          "kind": "unit",
+          "notes": [
+            { "id": "n1",
+              "text": "note for unit" }
+          ],
+          "subunits": [
+            { "id": "s1",
+              "kind": "segment",
+              "source": [
+                { "id": "1",
+                  "kind": "sc" },
+                { "text": "Hello " },
+                { "id": "m1",
+                  "kind": "sm",
+                  "type": "term" },
+                { "text": "World" },
+                { "kind": "em",
+                   "startRef": "m1" },
+                { "text": "!" },
+                { "kind": "ec",
+                  "startRef": "1" }
+              ],
+              "target": [
+                { "id": "1",
+                  "kind": "sc" },
+                { "text": "Bonjour le " },
+                { "id": "m1",
+                  "kind": "sm",
+                  "type": "term" },
+                { "text": "Monde" },
+                { "kind": "em",
+                  "startRef": "m1" },
+                { "text": "!" },
+                { "kind": "ec",
+                  "startRef": "1" }
+              ] }
+          ] }
+      ] }
+  ]
+}
+<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?></programlisting>
     <para>You can have the following fragment identifiers:</para>
     <itemizedlist>
       <listitem>
@@ -236,5 +281,4 @@
       </listitem>
     </itemizedlist><?oxy_custom_end?>
   </section>
-
 </section>

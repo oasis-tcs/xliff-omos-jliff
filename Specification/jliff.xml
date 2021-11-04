@@ -89,8 +89,8 @@
 
       <itemizedlist spacing="compact">
         <listitem>
-          <para> Declarative validation artifacts (JSON Schema) accessible from <ulink url="&this-loc;/schemas/"
-              >&this-loc;/schemas/</ulink>
+          <para> Declarative validation artifacts (JSON Schemas) accessible from <ulink
+              url="&this-loc;/schemas/">&this-loc;/schemas/</ulink>
           </para>
           
           
@@ -605,7 +605,7 @@
                 </note>
                 <note>
                   <para>JLIFF Version &version; contains prose and JSON schema specifications of
-                    JLIFF &bschversion; and JLIFF &cschversion;. These two specifications share
+                    JLIFF &bschversion; and JLIFF &cschversion;. These two serializations share
                     JLIFF Core &bschversion; that maps one-to-one to XLIFF Core &bschversion; that
                     is shared between XLIFF Version &cschversion; and XLIFF Version &bschversion; </para>
                   <para>Two different schema instances are provided, JLIFF &cschversion; and JLIFF
@@ -646,7 +646,7 @@
             <term>JLIFF Instance</term>
             <listitem>
               <para>JLIFF Instance is a conforming JSON text according to <link linkend="EJSON"
-                  >ECMA-JSON</link> Clause 2 that validates against the schema for JLIFF
+                  >[ECMA-JSON]</link> Clause 2 that validates against the schema for JLIFF
                 serialization &cschversion; or JLIFF
                 serialization &bschversion;.</para>
             </listitem>
