@@ -1,0 +1,29 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<!-- -->
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="type">
+  <title><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>type<?oxy_custom_end?></title>
+  <para>type - indicates the type of an object.</para>
+  <para><emphasis>Type:</emphasis><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+    string.<?oxy_custom_end?></para>
+  <para><emphasis>Value description:</emphasis></para>
+  <itemizedlist>
+    <listitem>
+      <para>A value that is composed of a prefix and a sub-value
+        separated by a character <code>:</code> (U+003A).</para>
+      <para>The prefix is a string uniquely identifying a collection of sub-values for a specific authority.
+        The sub-value is any string value defined by the authority. The prefix <code>xlf</code> is reserved.</para>
+      <para><emphasis>Default value:</emphasis> Undefined</para>
+    </listitem>
+  </itemizedlist>
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../elements/structural/group.xml" targetptr="group">
+      <code>group</code>
+    </olink>, <olink targetdoc="../elements/structural/unit.xml" targetptr="unit">
+      <code>unit</code>
+    </olink>.</para>
+</section>

@@ -37,8 +37,8 @@
         <olink targetdoc="../../attributes/id.xml" targetptr="id"><code>id</code></olink> string
       with NMTOKEN value, <glossterm>required</glossterm><?oxy_custom_end?></member>
     <member>-
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"type"</code>, a
-        <olink targetdoc="../../attributes/type.xml" targetptr="type"><code>type</code></olink>
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"mrkType"</code>,
+      a <olink targetdoc="../../attributes/mrkType.xml" targetptr="mrkType"><code>mrkType</code></olink>
       string with value <code>"fmt"</code>, <code>"ui"</code>, <code>"quote"</code>,
         <code>"link"</code>, <code>"image"</code>, <code>"its:generic"</code>, or
         <code>"other"</code>, <glossterm>optional</glossterm><?oxy_custom_end?></member>

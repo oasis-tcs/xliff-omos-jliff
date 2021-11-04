@@ -209,7 +209,7 @@
 
     <xi:include href="trgdir.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
 
-    <xi:include href="type.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="codeType.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
 
     <xi:include href="value.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
 

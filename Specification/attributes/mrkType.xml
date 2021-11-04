@@ -1,0 +1,29 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<!-- -->
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.docbook.org/xml/4.5/docbookx.dtd" [
+<!ENTITY % xinclude SYSTEM "../docbook/xinclude.mod">
+%xinclude;
+<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
+]>
+<section id="type">
+  <title><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>mrkType<?oxy_custom_end?></title>
+  <para>mrkType - indicates the type of an object.</para>
+  <para><emphasis>Type:</emphasis><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+    string.<?oxy_custom_end?></para>
+  <para><emphasis>Value description:</emphasis></para>
+  <itemizedlist>
+    <listitem>
+      <para>One of the following values: <code>"generic"</code>, <code>"comment"</code>,
+          <code>"term"</code>, or a user-defined value that is composed of a prefix and a sub-value
+        separated by a character <code>:</code> (U+003A).</para>
+      <para>The prefix is a string uniquely identifying a collection of sub-values for a specific authority.
+        The sub-value is any string value defined by the authority.</para>
+      <para><emphasis>Default value:</emphasis>
+        <code>"generic"</code>.</para>
+    </listitem>
+  </itemizedlist>
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../elements/inline/sm.xml" targetptr="sm">
+      <code>sm</code>
+    </olink>.</para>
+</section>
