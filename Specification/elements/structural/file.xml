@@ -7,7 +7,7 @@
                          ]>
 <section id="file">
     <title><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>anonymous<?oxy_custom_end?>
-        file object</title>
+        object <code>"kind" : "file"</code></title>
     <para>Container for localization material extracted from an entire single document, or another
         high level self contained logical node in a content structure that cannot be described in
         the terms of documents.</para>

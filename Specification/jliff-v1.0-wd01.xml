@@ -67,7 +67,7 @@
     </authorgroup>
 
 
-    <pubdate>02 November 2021</pubdate>
+    <pubdate>23 November 2021</pubdate>
 
     <copyright>
       <year>2021</year>
@@ -112,7 +112,7 @@
         
         <listitem id="LIOM">
           <para><emphasis>XLIFF 2 Object Model Version 1.0.</emphasis>. Edited by David Filip.
-            02 November 2021. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest version: <ulink url="http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html">http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html</ulink>. </para>
+            23 November 2021. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest version: <ulink url="http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html">http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html</ulink>. </para>
         </listitem>
         
         <listitem>
@@ -249,7 +249,7 @@
       <para><citation>JLIFF-1.0</citation></para>
 
       <para><emphasis>JLIFF Version 1.0</emphasis>. Edited by Robert van
-        Engelen and David Filip. 02 November 2021. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest
+        Engelen and David Filip. 23 November 2021. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest
         version: <ulink url="http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html">http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html</ulink>. </para>
 
       <!-- 
@@ -1126,34 +1126,44 @@
   ]
 }
 <?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?></programlisting>
-    <para>You can have the following fragment identifiers:</para>
+    <para><?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>You can
+      have the following fragment identifiers:</para>
     <itemizedlist>
       <listitem>
-        <para><code>#f=f1/u=u1/1</code> refers to the element <code>&lt;pc id="1"&gt;</code> of the
-          source content of the element <code>&lt;unit id="u1"&gt;</code>.</para>
+        <para><code>#f=f1/u=u1/1</code> refers to the anonymous object <code>{ "id": "1", "kind":
+            "sc" }</code> of the source content of the anonymous object <code>{ "id": "u1", "kind":
+            "unit", … }</code>.</para>
       </listitem>
       <listitem>
-        <para><code>#f=f1/u=u1/t=1</code> refers to the element <code>&lt;pc id="1"&gt;</code> of the
-          target content of the element <code>&lt;unit id="u1"&gt;</code>.</para>
+        <para><code>#f=f1/u=u1/t=1</code> refers to the anonymous object <code>{ "id": "1", "kind":
+            "sc" }</code> of the target content of the anonymous object <code>{ "id": "u1", "kind":
+            "unit", … }</code>.</para>
       </listitem>
       <listitem>
-        <para><code>#f=f1/n=n1</code> refers to the element <code>&lt;note id="n1"&gt;</code> of the
-          element <code>&lt;file id="f1"&gt;</code>.</para>
+        <para><code>#f=f1/n=n1</code> refers to the anonymous note object with a required "text"
+          property <code>{ "id": "n1", "text": "note for file." }</code> of the anonymous object
+            <code>{ "id": "f1", "kind": "file", … }</code>.</para>
       </listitem>
       <listitem>
-        <para><code>#f=f1/u=u1/n=n1</code> refers to the element <code>&lt;note id="n1"&gt;</code> of
-          the element <code>&lt;unit id="u1"&gt;</code>.</para>
+        <para><code>#f=f1/u=u1/n=n1</code> refers to the  anonymous note object with a required
+          "text" property <code>{ "id": "n1", "text": "note for unit." }</code> of the anonymous
+          object <code>{ "id": "u1", "kind": "unit", … }</code>.</para>
       </listitem>
       <listitem>
-        <para><code>#f=f1/u=u1/s1</code> refers to the element <code>&lt;segment id="s1"&gt;</code> of
-          the element <code>&lt;unit id="u1"&gt;</code>.</para>
+        <para><code>#f=f1/u=u1/s1</code> refers to the anonymous subunit object <code>{ "id": "s1",
+            "kind": "segment",               "source": [ … ], "target": [ … ]}</code> of the
+          anonymous object <code>{ "id": "u1", "kind": "unit", … }</code>.<?oxy_custom_end ?></para>
       </listitem>
       <listitem>
-        <para>Assuming the extension defined by the namespace URI <code>myNamespaceURI</code> has
-          registered the prefix <code>myprefix</code>, the expression
-            <code>#f=f1/u=u1/myprefix=x1</code> refers to the element <code>&lt;my:element
-            id="x1"&gt;</code> of the element <code>&lt;unit id="u1"&gt;</code>.</para>
+        <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>Assuming the
+          extension defined by the namespace URI <code>myNamespaceURI</code> has registered the
+          prefix <code>myprefix</code>, the expression <code>#f=f1/u=u1/myprefix=x1</code> refers to
+          the element <code>&lt;my:element id="x1"&gt;</code> of the element <code>&lt;unit
+            id="u1"&gt;</code>.<?oxy_custom_end ?>
+          <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>[JLIFF example doesn't
+          convert the extension]<?oxy_custom_end ?></para>
       </listitem>
+      <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
     </itemizedlist><?oxy_custom_end ?>
   </section>
 </section>
@@ -1329,7 +1339,7 @@
 
     <section id="file">
     <title><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>anonymous<?oxy_custom_end ?>
-        file object</title>
+        object <code>"kind" : "file"</code></title>
     <para>Container for localization material extracted from an entire single document, or another
         high level self contained logical node in a content structure that cannot be described in
         the terms of documents.</para>
@@ -2379,8 +2389,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
         descendants</para>
     <para><emphasis>Type:</emphasis></para>
     <simplelist type="vert">
-        <member>- One or more <link linkend="note"><code>note</code></link>
-            objects</member>
+        <member>- A non empty array of <link linkend="note">anonymous note obejcts with a required <code>"text"</code> property</link></member>
     </simplelist>
 
 
@@ -2774,11 +2783,10 @@ WIP
       a <link linkend="subtype"><code>subType</code></link> string,
       <glossterm>optional</glossterm><?oxy_custom_end ?></member>
     <member>-
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"type"</code>, a
-        <link linkend="type"><code>type</code></link>
-      string with value <code>"fmt"</code>, <code>"ui"</code>, <code>"quote"</code>,
-        <code>"link"</code>, <code>"image"</code>, <code>"its:generic"</code>, or
-        <code>"other"</code>, <glossterm>optional</glossterm></member>
+        <code>"<?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>codeType<?oxy_custom_end ?>"</code>,
+      a <link linkend="codeType"><code>codeType</code></link> string with value <code>"fmt"</code>, <code>"ui"</code>,
+        <code>"quote"</code>, <code>"link"</code>, <code>"image"</code>, <code>"its:generic"</code>,
+      or <code>"other"</code>, <glossterm>optional</glossterm></member>
     <member><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>- other none-core
       properties, <glossterm>optional,</glossterm><?oxy_custom_end ?></member>
 
@@ -2956,11 +2964,10 @@ WIP
       a <link linkend="subtype"><code>subType</code></link> string,
       <glossterm>optional</glossterm><?oxy_custom_end ?></member>
     <member>-
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"type"</code>, a
-        <link linkend="type"><code>type</code></link>
-      string with value <code>"fmt"</code>, <code>"ui"</code>, <code>"quote"</code>,
-        <code>"link"</code>, <code>"image"</code>, <code>"its:generic"</code>, or
-        <code>"other"</code>, <glossterm>optional</glossterm></member>
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"codeType"</code>,
+      a <link linkend="codeType"><code>codeType</code></link> string with value <code>"fmt"</code>, <code>"ui"</code>,
+        <code>"quote"</code>, <code>"link"</code>, <code>"image"</code>, <code>"its:generic"</code>,
+      or <code>"other"</code>, <glossterm>optional</glossterm></member>
     <member><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>- other none-core
       properties, <glossterm>optional,</glossterm><?oxy_custom_end ?></member><?oxy_custom_end ?>
   </simplelist>
@@ -3141,11 +3148,10 @@ WIP
       a <link linkend="subtype"><code>subType</code></link> string,
       <glossterm>optional</glossterm><?oxy_custom_end ?></member>
     <member>-
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"type"</code>, a
-        <link linkend="type"><code>type</code></link>
-      string with value <code>"fmt"</code>, <code>"ui"</code>, <code>"quote"</code>,
-        <code>"link"</code>, <code>"image"</code>, <code>"its:generic"</code>, or
-        <code>"other"</code>, <glossterm>optional</glossterm><?oxy_custom_end ?></member>
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"codeType"</code>,
+      a <link linkend="codeType"><code>codeType</code></link> string with value <code>"fmt"</code>, <code>"ui"</code>,
+        <code>"quote"</code>, <code>"link"</code>, <code>"image"</code>, <code>"its:generic"</code>,
+      or <code>"other"</code>, <glossterm>optional</glossterm><?oxy_custom_end ?></member>
     <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
     <member>- attributes from other namespaces,
       <glossterm>optional</glossterm><?oxy_custom_end ?></member>
@@ -3291,8 +3297,8 @@ WIP
         <link linkend="id"><code>id</code></link> string
       with NMTOKEN value, <glossterm>required</glossterm><?oxy_custom_end ?></member>
     <member>-
-        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"type"</code>, a
-        <link linkend="type"><code>type</code></link>
+        <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"mrkType"</code>,
+      a <link linkend="mrkType"><code>mrkType</code></link>
       string with value <code>"fmt"</code>, <code>"ui"</code>, <code>"quote"</code>,
         <code>"link"</code>, <code>"image"</code>, <code>"its:generic"</code>, or
         <code>"other"</code>, <glossterm>optional</glossterm><?oxy_custom_end ?></member>
@@ -5171,25 +5177,13 @@ WIP
 </section>
 
     <section id="type">
-  <title><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>codeType<?oxy_custom_end ?>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[NOTE: should split into
-    two files: codeType and mrkType]<?oxy_custom_end ?></title>
-  <para>codeType - indicates the type of an element.</para>
+  <title><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>codeType<?oxy_custom_end ?></title>
+  <para>codeType - indicates the type of an object.</para>
   <para><emphasis>Type:</emphasis><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
     string.<?oxy_custom_end ?></para>
-  <para><emphasis>Value description:</emphasis> allowed values for this attribute depend on the
-    element in which it is used.</para>
+  <para><emphasis>Value description:</emphasis></para>
   <itemizedlist>
     <listitem>
-      <para>When used in <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><link linkend="pc">
-          <code>&lt;pc&gt;</code>
-        </link>, <?oxy_custom_end ?><link linkend="sc">
-          <code>sc</code>
-        </link>, <link linkend="ec">
-          <code>ec</code>
-        </link> or <link linkend="ph">
-          <code>ph</code>
-        </link>:</para>
       <para>The value  <glossterm>must</glossterm> be set to one of the following values:</para>
       <simplelist type="vert">
         <member><code>"fmt"</code> - Formatting (e.g. a &lt;b&gt; element in HTML)</member>
@@ -5236,56 +5230,17 @@ WIP
       </para>
       <para>One can further specify the type of a code using the <link linkend="subtype">
           <code>subType</code>
-        </link>
-      attribute.</para>
+        </link> property.</para>
       <para><emphasis>Default value:</emphasis> Undefined.</para>
-    </listitem>
-    <listitem>
-      <para>When used in <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><link linkend="mrk">
-          <code>&lt;mrk&gt;</code>
-        </link> or <?oxy_custom_end ?><link linkend="sm">
-          <code>sm</code>
-        </link>:</para>
-      <para>One of the following values: <code>"generic"</code>, <code>"comment"</code>,
-          <code>"term"</code>, or a user-defined value that is composed of a prefix and a sub-value
-        separated by a character <code>:</code> (U+003A).</para>
-      <para>The prefix is a string uniquely identifying a collection of sub-values for a specific authority.
-        The sub-value is any string value defined by the authority.</para>
-      <para><emphasis>Default value:</emphasis>
-        <code>"generic"</code>.</para>
-    </listitem>
-    <listitem>
-      <para>When used in <link linkend="group">
-          <code>group</code>
-        </link> or <link linkend="unit">
-          <code>unit</code>
-        </link>:</para>
-      <para>A value that is composed of a prefix and a sub-value
-        separated by a character <code>:</code> (U+003A).</para>
-      <para>The prefix is a string uniquely identifying a collection of sub-values for a specific authority.
-        The sub-value is any string value defined by the authority. The prefix <code>xlf</code> is reserved.</para>
-      <para><emphasis>Default value:</emphasis> Undefined</para>
     </listitem>
   </itemizedlist>
   <para><emphasis>Used in:</emphasis>
-    <link linkend="group">
-      <code>group</code>
-    </link>, <link linkend="unit">
-      <code>unit</code>
-    </link>, <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><link linkend="pc">
-      <code>pc</code>
-    </link>,<?oxy_custom_end ?>
     <link linkend="sc">
       <code>sc</code>
     </link>, <link linkend="ec">
       <code>ec</code>
-    </link>, <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><link linkend="mrk">
-      <code>&lt;mrk&gt;</code>
-    </link>,<?oxy_custom_end ?>
-    <link linkend="ph">
+    </link> and <link linkend="ph">
       <code>ph</code>
-    </link> and <link linkend="sm">
-      <code>sm</code>
     </link>.</para>
   <itemizedlist>
     <title>Processing Requirements</title>
@@ -5293,14 +5248,11 @@ WIP
       <para><firstterm>Modifiers</firstterm> updating the <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end ?>
         <link linkend="type">
           <code><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>codeType<?oxy_custom_end ?></code>
-        </link> on <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><link linkend="pc">
-          <code>&lt;pc&gt;</code>
-        </link>,<?oxy_custom_end ?>
-        <link linkend="sc">
+        </link> on <link linkend="sc">
           <code>sc</code>
         </link>, <link linkend="ec">
           <code>ec</code>
-        </link>, or <link linkend="ph">
+        </link> or <link linkend="ph">
           <code>ph</code>
         </link>
         <glossterm>must</glossterm> also update or delete <link linkend="subtype">

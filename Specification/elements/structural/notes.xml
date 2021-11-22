@@ -11,8 +11,8 @@
         descendants</para>
     <para><emphasis>Type:</emphasis></para>
     <simplelist>
-        <member>- One or more <olink targetdoc="note.xml" targetptr="note"><code>note</code></olink>
-            objects</member>
+        <member>- A non empty array of <olink targetdoc="note.xml" targetptr="note"
+            >anonymous note obejcts with a required <code>"text"</code> property</olink></member>
     </simplelist>
 
 

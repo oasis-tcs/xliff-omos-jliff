@@ -56,7 +56,7 @@
 <!ENTITY this-loc "http://docs.oasis-open.org/xliff-omos/jliff/v&version;/&stage;">
 <!ENTITY previous-loc "http://docs.oasis-open.org/jliff/xliff2om/v&version;/&pstage;">
 <!ENTITY latest-loc "http://docs.oasis-open.org/jliff/xliff2om/v&version;">
-<!ENTITY pubdate "02 November &pubyear;">
+<!ENTITY pubdate "23 November &pubyear;">
 <!ENTITY pubyear "2021">
 <!ENTITY releaseinfo "Standards Track Work Product">
 <!-- End of JLIFF V1.x publishing entities -->
