@@ -124,7 +124,7 @@
         "its_taIdent": { "type": "string" },
         "its_taIdentRef": { "$ref": "#/definitions/IRI" },
         "itsm_domains": { "$ref": "#/definitions/itsm_domains" },
-        "userdata": { "$ref": "#/definitions/extensionsData" }
+        "userdata": { "$ref": "#/definitions/userdata" }
       },
       "additionalProperties": false,
       "required": [ "id" ]
@@ -205,7 +205,7 @@
             "its_taIdent": { "type": "string" },
             "its_taIdentRef": { "$ref": "#/definitions/IRI" },
             "itsm_domains": { "$ref": "#/definitions/itsm_domains" },
-            "userdata": { "$ref": "#/definitions/extensionsData" }
+            "userdata": { "$ref": "#/definitions/userdata" }
           },
           "additionalProperties": false,
           "required": [ "id", "kind", "subunits" ]
@@ -258,7 +258,7 @@
             "its_taIdent": { "type": "string" },
             "its_taIdentRef": { "$ref": "#/definitions/IRI" },
             "itsm_domains": { "$ref": "#/definitions/itsm_domains" },
-            "userdata": { "$ref": "#/definitions/extensionsData" }
+            "userdata": { "$ref": "#/definitions/userdata" }
           },
           "additionalProperties": false,
           "required": [ "id", "kind" ]
@@ -354,7 +354,7 @@
         "its_locQualityRatingVoteThreshold": { "type": "integer" },
         "its_annotatorsRef": { "type": "string" },
         "itsm_domains": { "$ref": "#/definitions/itsm_domains" },
-        "userdata": { "$ref": "#/definitions/extensionsData" }
+        "userdata": { "$ref": "#/definitions/userdata" }
       },
       "additionalProperties": false,
       "required": [ "mtc_ref", "source", "target" ]
@@ -376,7 +376,7 @@
           "properties": {
             "gls_text": { "type": "string" },
             "gls_source": { "type": "string" },
-            "userdata": { "$ref": "#/definitions/extensionsData" }
+            "userdata": { "$ref": "#/definitions/userdata" }
           },
           "additionalProperties": false,
           "required": [ "gls_text" ]
@@ -390,7 +390,7 @@
               "gls_ref": { "$ref": "#/definitions/IRI" },
               "gls_text": { "type": "string" },
               "gls_source": { "type": "string" },
-              "userdata": { "$ref": "#/definitions/extensionsData" }
+              "userdata": { "$ref": "#/definitions/userdata" }
             },
             "additionalProperties": false,
             "required": [ "gls_text" ]
@@ -402,13 +402,13 @@
           "properties": {
             "gls_text": { "type": "string" },
             "gls_source": { "type": "string" },
-            "userdata": { "$ref": "#/definitions/extensionsData" }
+            "userdata": { "$ref": "#/definitions/userdata" }
           },
           "additionalProperties": false,
           "required": [ "gls_text" ]
         },
         "mda_metadata": { "$ref": "#/definitions/mda_metadata" },
-        "userdata": { "$ref": "#/definitions/extensionsData" }
+        "userdata": { "$ref": "#/definitions/userdata" }
       },
       "additionalProperties": false,
       "required": [ "gls_term" ]
@@ -491,7 +491,7 @@
       "properties": {
         "res_id": { "$ref": "#/definitions/NMTOKEN" },
         "res_ref": { "$ref": "#/definitions/NMTOKEN" },
-        "userdata": { "$ref": "#/definitions/extensionsData" }
+        "userdata": { "$ref": "#/definitions/userdata" }
       },
       "additionalProperties": false,
       "required": [ "res_ref" ]
@@ -508,7 +508,7 @@
           "properties": {
             "res_href": { "type": "string" },
             "res_lang": { "$ref": "#/definitions/language" },
-            "userdata": { "$ref": "#/definitions/extensionsData" }
+            "userdata": { "$ref": "#/definitions/userdata" }
           },
           "additionalProperties": false
         },
@@ -517,7 +517,7 @@
           "properties": {
             "res_href": { "type": "string" },
             "res_lang": { "$ref": "#/definitions/language" },
-            "userdata": { "$ref": "#/definitions/extensionsData" }
+            "userdata": { "$ref": "#/definitions/userdata" }
           },
           "additionalProperties": false
         },
@@ -528,13 +528,13 @@
             "properties": {
               "res_href": { "type": "string" },
               "res_lang": { "$ref": "#/definitions/language" },
-              "userdata": { "$ref": "#/definitions/extensionsData" }
+              "userdata": { "$ref": "#/definitions/userdata" }
             },
             "additionalProperties": false,
             "required": [ "res_href" ]
           }
         },
-        "userdata": { "$ref": "#/definitions/extensionsData" }
+        "userdata": { "$ref": "#/definitions/userdata" }
       },
       "additionalProperties": false
     },
@@ -553,7 +553,7 @@
           },
           "additionalProperties": false
         },
-        "userdata": { "$ref": "#/definitions/extensionsData" }
+        "userdata": { "$ref": "#/definitions/userdata" }
       },
       "additionalProperties": false
     },
@@ -562,7 +562,7 @@
       "type": "object",
       "properties": {
          "slr_profile": { "type": "string" },
-         "userdata": { "$ref": "#/definitions/extensionsData" }
+         "userdata": { "$ref": "#/definitions/userdata" }
       },
       "additionalProperties": false,
       "required": [ "slr_profile" ]
@@ -750,7 +750,7 @@
       "minitems": 1
     },
 
-    "extensionsData": {
+    "userdata": {
       "description": "An object that maps an extension's fully qualified name to the extension data comprising an unconstrained object",
       "type": "object",
       "patternProperties": { "^[-.:_A-Za-z0-9]+$": { "type": "object" } },
@@ -774,7 +774,7 @@
         "textXmlLang": { "$ref": "#/definitions/language" },
         "fs_fs": { "$ref": "#/definitions/fs_formatStyle" },
         "fs_subFs": { "$ref": "#/definitions/fs_subFormatStyle" },
-        "userdata": { "$ref": "#/definitions/extensionsData" }
+        "userdata": { "$ref": "#/definitions/userdata" }
       },
       "additionalProperties": false,
       "required": [ "text" ]
