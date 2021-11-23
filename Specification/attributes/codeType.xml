@@ -5,7 +5,7 @@
 %xinclude;
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
-<section id="type">
+<section id="codeType">
   <title><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>codeType<?oxy_custom_end?></title>
   <para>codeType - indicates the type of an object.</para>
   <para><emphasis>Type:</emphasis><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
