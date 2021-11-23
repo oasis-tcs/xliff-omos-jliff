@@ -6,7 +6,7 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="notes">
-    <title>anonymous array of note objects</title>
+    <title><code>notes</code> array of anonymous note objects</title>
     <para>Collection of comments pertaining to the given node including all of its
         descendants</para>
     <para><emphasis>Type:</emphasis></para>
