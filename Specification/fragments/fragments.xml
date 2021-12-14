@@ -251,34 +251,44 @@
   ]
 }
 <?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?></programlisting>
-    <para>You can have the following fragment identifiers:</para>
+    <para><?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>You can
+      have the following fragment identifiers:</para>
     <itemizedlist>
       <listitem>
-        <para><code>#f=f1/u=u1/1</code> refers to the element <code>&lt;pc id="1"></code> of the
-          source content of the element <code>&lt;unit id="u1"></code>.</para>
+        <para><code>#f=f1/u=u1/1</code> refers to the anonymous object <code>{ "id": "1", "kind":
+            "sc" }</code> of the source content of the anonymous object <code>{ "id": "u1", "kind":
+            "unit", … }</code>.</para>
       </listitem>
       <listitem>
-        <para><code>#f=f1/u=u1/t=1</code> refers to the element <code>&lt;pc id="1"></code> of the
-          target content of the element <code>&lt;unit id="u1"></code>.</para>
+        <para><code>#f=f1/u=u1/t=1</code> refers to the anonymous object <code>{ "id": "1", "kind":
+            "sc" }</code> of the target content of the anonymous object <code>{ "id": "u1", "kind":
+            "unit", … }</code>.</para>
       </listitem>
       <listitem>
-        <para><code>#f=f1/n=n1</code> refers to the element <code>&lt;note id="n1"></code> of the
-          element <code>&lt;file id="f1"></code>.</para>
+        <para><code>#f=f1/n=n1</code> refers to the anonymous note object with a required "text"
+          property <code>{ "id": "n1", "text": "note for file." }</code> of the anonymous object
+            <code>{ "id": "f1", "kind": "file", … }</code>.</para>
       </listitem>
       <listitem>
-        <para><code>#f=f1/u=u1/n=n1</code> refers to the element <code>&lt;note id="n1"></code> of
-          the element <code>&lt;unit id="u1"></code>.</para>
+        <para><code>#f=f1/u=u1/n=n1</code> refers to the  anonymous note object with a required
+          "text" property <code>{ "id": "n1", "text": "note for unit." }</code> of the anonymous
+          object <code>{ "id": "u1", "kind": "unit", … }</code>.</para>
       </listitem>
       <listitem>
-        <para><code>#f=f1/u=u1/s1</code> refers to the element <code>&lt;segment id="s1"></code> of
-          the element <code>&lt;unit id="u1"></code>.</para>
+        <para><code>#f=f1/u=u1/s1</code> refers to the anonymous subunit object <code>{ "id": "s1",
+            "kind": "segment",               "source": [ … ], "target": [ … ]}</code> of the
+          anonymous object <code>{ "id": "u1", "kind": "unit", … }</code>.<?oxy_custom_end?></para>
       </listitem>
       <listitem>
-        <para>Assuming the extension defined by the namespace URI <code>myNamespaceURI</code> has
-          registered the prefix <code>myprefix</code>, the expression
-            <code>#f=f1/u=u1/myprefix=x1</code> refers to the element <code>&lt;my:element
-            id="x1"></code> of the element <code>&lt;unit id="u1"></code>.</para>
+        <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>Assuming the
+          extension defined by the namespace URI <code>myNamespaceURI</code> has registered the
+          prefix <code>myprefix</code>, the expression <code>#f=f1/u=u1/myprefix=x1</code> refers to
+          the element <code>&lt;my:element id="x1"></code> of the element <code>&lt;unit
+            id="u1"></code>.<?oxy_custom_end?>
+          <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>[JLIFF example doesn't
+          convert the extension]<?oxy_custom_end?></para>
       </listitem>
+      <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
     </itemizedlist><?oxy_custom_end?>
   </section>
 </section>
