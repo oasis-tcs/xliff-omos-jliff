@@ -63,6 +63,7 @@
   "subfiles": [
     {
       "id": "1",
+      "kind": "unit",
       "subunits": [
         {
           "kind": "segment",

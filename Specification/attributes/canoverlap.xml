@@ -45,6 +45,7 @@
 <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>"subfiles": [
   {
     "id": "1",
+    "kind": "unit",
     "originalData": {
       "1": "\\i1 ",
       "2": "\\i0 ",
@@ -55,13 +56,13 @@
       {
         "kind": "segment",
         "source": [
-<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>          { "id": "1", "kind": "sc", "dataRef": "3", "canOverlap": "no" },
+          { "id": "1", "kind": "sc", "dataRef": "3", "canOverlap": "no" },
           { "text": "Bold, " },
           { "id": "2", "kind": "sc", "dataRef": "1", "canOverlap": "yes" },
           { "text": "both" },
-          { "id": "4", "kind": "ec", "startRef": "1", "dataRef": "4" },
+          { "kind": "ec", "startRef": "1", "dataRef": "4" },
           { "text": ", italics" },
-          { "id": "5", "kind": "ec", "startRef": "2", "dataRef": "2" }<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+          { "kind": "ec", "startRef": "2", "dataRef": "2" }
         ]
       }
     ]

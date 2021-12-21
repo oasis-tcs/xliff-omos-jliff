@@ -24,22 +24,23 @@
     &lt;target&gt;Escolha uma opção na loja online:&lt;/target&gt;
   &lt;/segment&gt;
 &lt;/unit&gt;<?oxy_custom_end?>
-<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>{
-  "id": "1",
-  "kind": "unit",
-  "val_validation": [
-    "endsWith": ":"
-  ],
-  "subunits": [
-    {
-      "id": "1",
-      "kind": "segment",
-      "source": [ { "text": "Choose an option in the online store:" } ],
-      "target": [ { "text": "Escolha uma opção na loja online:" } ],
-     }
-  ]
-}<?oxy_custom_end?>
- </programlisting>
+<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>"subfiles": [
+  {
+    "id": "1",
+    "kind": "unit",
+    "val_validation": [
+      "endsWith": ":"
+    ],
+    "subunits": [
+      {
+        "id": "1",
+        "kind": "segment",
+        "source": [ { "text": "Choose an option in the online store:" } ],
+        "target": [ { "text": "Escolha uma opção na loja online:" } ],
+       }
+    ]
+  }
+]<?oxy_custom_end?> </programlisting>
   <para>Whereas the following is invalid:</para>
   <programlisting>
 <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>&lt;unit id="1"&gt;
@@ -51,22 +52,23 @@
     &lt;target&gt;Escolha uma opção na online store.&lt;/target&gt;
   &lt;/segment&gt;
 &lt;/unit&gt;<?oxy_custom_end?>
-<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>{
-  "id": "1",
-  "kind": "unit",
-  "val_validation": [
-    "endsWith": ":"
-  ],
-  "subunits": [
-    {
-      "id": "1",
-      "kind": "segment",
-      "source": [ { "text": "Choose an option in the online store:" } ],
-      "target": [ { "text": "Escolha uma opção na online store." } ],
-     }
-  ]
-}<?oxy_custom_end?>
-</programlisting>
+<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>"subfiles": [
+  {
+    "id": "1",
+    "kind": "unit",
+    "val_validation": [
+      "endsWith": ":"
+    ],
+    "subunits": [
+      {
+        "id": "1",
+        "kind": "segment",
+        "source": [ { "text": "Choose an option in the online store:" } ],
+        "target": [ { "text": "Escolha uma opção na online store." } ],
+       }
+    ]
+  }
+]<?oxy_custom_end?></programlisting>
   <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     string.<?oxy_custom_end?></para>
   <para><emphasis>Value description:</emphasis> text.</para>

@@ -110,7 +110,7 @@
   <para><emphasis>Example:</emphasis></para>
 
   <programlisting format="linespecific">
-<?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>&lt;unit id="1"&gt;
+<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>&lt;unit id="1"&gt;
   &lt;originalData&gt;
     &lt;data id="d1"&gt;%d&lt;/data&gt;
     &lt;data id="d2"&gt;&amp;lt;br/&gt;&lt;/data&gt;
@@ -120,7 +120,29 @@
         dataRef="d2"/&gt;(These entries are only the ones matching the
         current filter settings)&lt;/source&gt;
   &lt;/segment&gt;
-&lt;/unit&gt;<?oxy_custom_end?>
+&lt;/unit&gt;<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>
+<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+"subfiles": [
+  {
+    "id": "1",
+    "kind": "unit",
+    "originalData": {
+      "d1": "%d",
+      "d2": "&lt;br/&gt;"
+    },
+    "subunits": [
+      {
+        "kind": "segment",
+        "source": [
+          { "text": "Number of entries: " },
+          { "dataRef": "d1", "id": "1", "kind": "ph" },
+          { "dataRef": "d2", "id": "2", "kind": "ph" },
+          { "text": "(These entries are only the ones matching the\ncurrent filter settings)" }
+        ]
+      }
+    ]
+  }
+]<?oxy_custom_end?>
 </programlisting>
 
   <itemizedlist>

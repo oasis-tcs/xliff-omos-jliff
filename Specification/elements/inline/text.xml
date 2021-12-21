@@ -15,11 +15,12 @@
   <para><emphasis>Example:</emphasis></para>
 
   <programlisting>
-{
-  "kind": "ignorable",
-  "source": [
-    { "text": ".  " }
-  ]
-}
-</programlisting>
+<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>"subunits": [
+  {
+    "kind": "ignorable",
+    "source": [
+      { "text": ".  " }
+    ]
+  }
+]<?oxy_custom_end?></programlisting>
 </section>

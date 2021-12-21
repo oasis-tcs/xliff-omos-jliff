@@ -28,48 +28,56 @@
 &lt;/unit&gt;
 </programlisting>
   <para>Equivalent of the above example in JLIFF:</para>
-  <programlisting>
-WIP 
-
-^C [Oxyegn doesn't accept the literal even in CDATA]
-\u
-"Ctrl+C=\u0003"
-
-
-
-    
+  <programlisting><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+"subunits": [
+  {
+    "id": "1",
+    "kind": "segment",
+    "source": [
+      { "text": "Ctrl+C=\u0003" }
+    ]
+  }
+]  <?oxy_custom_end?> 
 </programlisting>
 
-  <para>The example above shows a character U+0003 (Control C) as it has to be represented in XLIFF.
-    As the character ETX is legal in JSON, the <code>&lt;cp hex="0003"></code> becomes the literal
-    of "^C" or "ETX" in the JLIFF serialization. in case of mixed XLIFF and JLIFF pipelines the
-    conversion mechanism needs to be able to "cp-encode" XML illegal characters in LIFF on the fly
-    or vice versa to replace the "cp-encoded" XLIFF representations with their literal equivalents
-    in JLIFF.</para>
+  <para>The example above shows a character U+0003 (Control C) as it has to be represented in JLIFF.
+    <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>JSON imposes no
+    restrictions on character content. Special characters must be escaped in JSON. Special
+    characters are <code>"</code> and <code>\</code> and the control characters according to the
+    JSON standard.
+    <?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>As the
+    character ETX is legal in JSON, the <code>&lt;cp hex="0003"></code> becomes the literal of "^C"
+    or "ETX" in the JLIFF serialization. in case of mixed XLIFF and JLIFF pipelines the conversion
+    mechanism needs to be able to "cp-encode" XML illegal characters in LIFF on the fly or vice
+    versa to replace the "cp-encoded" XLIFF representations with their literal equivalents in
+    JLIFF.<?oxy_custom_end?></para>
 
   <itemizedlist>
+    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
     <title>Processing Requirements</title>
-
     <listitem>
-      <para><firstterm>JLIFF Writers</firstterm> receiving XLIFF <ulink  url="http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html#cp"
+      <para><firstterm>JLIFF Writers</firstterm> receiving JLIFF <ulink
+          url="http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html#cp"
             ><code>&lt;cp></code></ulink>
         <glossterm>must</glossterm> replace the code with the corresponding literal character given
-        by the XLIFF <ulink url="https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html#hex"></ulink><code>hex</code> attribute.</para>
+        by the XLIFF <ulink
+          url="https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html#hex"
+          /><code>hex</code> attribute.<?oxy_custom_end?></para>
     </listitem>
     <listitem>
-      <para><firstterm>XLIFF Writers</firstterm> receiving illegal XML characters (Unicode
-        characters with hexadecimal codes from 0000 to 10FFFF) <glossterm>must</glossterm> replace
-        each XML illegal character with the XLIFF <ulink
+      <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><firstterm>XLIFF
+          Writers</firstterm> receiving illegal XML characters (Unicode characters with hexadecimal
+        codes from 0000 to 10FFFF) <glossterm>must</glossterm> replace each XML illegal character
+        with the XLIFF <ulink
           url="http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html#cp"
             ><code>&lt;cp></code></ulink> element using the corresponding <ulink
           url="https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html#hex"
           /><code>hex</code> attribute. </para>
     </listitem>
-
     <listitem>
       <para><firstterm>XLIFF Writers</firstterm>
         <glossterm>must not</glossterm> encode valid XML characters of the content using <link
-          linkend="cp"><code>&lt;cp&gt;</code></link>.</para>
+          linkend="cp"><code>&lt;cp&gt;</code></link>.<?oxy_custom_end?></para>
     </listitem>
   </itemizedlist>
 </section>

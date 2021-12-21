@@ -111,7 +111,7 @@
       <glossterm>optional</glossterm><?oxy_custom_end?></member>
   </simplelist>
   <para><emphasis>Example:</emphasis></para>
-  <programlisting><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>
+  <programlisting><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
 &lt;unit id="1"&gt;
   &lt;originalData&gt;
     &lt;data id="d1"&gt;\b &lt;/data&gt;
@@ -124,7 +124,37 @@
         dataRef="d2"/&gt; and&lt;ec startRef="1" dataRef="d3"/&gt;
          italics&lt;ec startRef="2" dataRef="d4"/&gt;. &lt;/source&gt;
   &lt;/segment&gt;
-&lt;/unit&gt;<?oxy_custom_end?>
+&lt;/unit&gt;
+<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+"subfiles": [
+  {
+    "id": "1",
+    "kind": "unit",
+    "originalData": {
+      "d1": "\\b ",
+      "d2": "\\i ",
+      "d3": "\\b0 ",
+      "d4": "\\i0 "
+    },
+    "subunits": [
+      {
+        "kind": "segment",
+        "source": [
+          { "text": "Text in " },
+          { "id": "1", "kind": "sc" },
+          { "text": "bold" },
+          { "id": "2", "kind": "sc" },
+          { "text": "\nand" },
+          { "dataRef": "d3", "kind": "ec", "startRef": "1" },
+          { "text": " italics" },
+          { "dataRef": "d4", "kind": "ec", "startRef": "2" },
+          { "text": ". " }
+        ]
+      }
+    ]
+  }
+]
+<?oxy_custom_end?>
 </programlisting>
   <itemizedlist>
     <title>Constraints</title>

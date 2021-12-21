@@ -393,6 +393,7 @@ targetptr="target"><code>&lt;target&gt;</code></olink>,
       "subfiles": [
         {
           "id": "1",
+          "kind": "unit",
           "fs_fs": "p",
           "subunits": [
             {

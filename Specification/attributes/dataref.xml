@@ -45,8 +45,8 @@
     </listitem>
   </itemizedlist>
   <para><emphasis>Example:</emphasis><?oxy_custom_end?></para>
-  <programlisting>
-<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>&lt;unit id="1"&gt;
+  <programlisting><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
+&lt;unit id="1"&gt;
   &lt;originalData&gt;
     &lt;data id="d1"&gt;{0}&lt;/data&gt;
     &lt;data id="d2"&gt;{1}&lt;/data&gt;
@@ -56,10 +56,11 @@
     &lt;target&gt;Erreur dans '&lt;ph id="1" dataRef="d1"/&gt;' et '&lt;ph id="1" dataRef="d1"/&gt;'.&lt;/target&gt;
   &lt;/segment&gt;
 &lt;/unit&gt;
-
+<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
 "subfiles": [
   {
     "id": "1",
+    "kind": "unit",
     "originalData": { "d1": "{0}", "d2" : "{1}" },
     "subunits": [
       {

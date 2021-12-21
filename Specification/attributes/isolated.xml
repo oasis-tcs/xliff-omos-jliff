@@ -64,22 +64,21 @@
       "subfiles": [
         {
           "id": "1",
-          "mtc_matches": {
-            "matches": [
-              {
-                "id": "tc01",
-                "ref": "seg2",
-                "source": [
-                  { "id": "1", "kind": "sc", "isolated": "yes" },
-                  { "text": "Warning:" }
-                ],
-                "target": [
-                  { "id": "1", "kind": "sc", "isolated": "yes" },
-                  { "text": "Attention :" }
-                ]
-              }
-            ]
-          },
+          "kind": "unit",
+          "mtc_matches": [
+            {
+              "mtc_id": "tc01",
+              "mtc_ref": "seg2",
+              "source": [
+                { "id": "1", "kind": "sc", "isolated": "yes" },
+                { "text": "Warning:" }
+              ],
+              "target": [
+                { "id": "1", "kind": "sc", "isolated": "yes" },
+                { "text": "Attention :" }
+              ]
+            }
+          ],
           "subunits": [
             {
               "id": "seg2",

@@ -34,26 +34,26 @@
       favourite imaginary playwright.&lt;/target&gt;
 &lt;/segment&gt;<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
 "subunits": [
-    {
-        "kind": "segment",
-        "state": "translated",
-        "source": [
-            { "id": "c1", "kind": "ph", "codeType": "quote", "dataRef": "d1" },
-            { "text": "Blázen, chce dobýt točnu v takovém počasí," }.
-            { "id": "c2", "kind": "sc", "dataRef": "d2" },       
-            { "text": "dodal slovy svého oblíbeného imaginárního autora." },
-            { "startRef": "c2", "kind": "ec", "dataRef": "d3" }
-        ],
-        "target": [
-            { "id": "c1", "kind": "ph", "codeType": "quote", "dataRef": "d1" },
-            { "text": "Madman, he wants to conquer the pole in this weather," },
-            { "id": "c2", "kind": "sc", "dataRef": "d2" },       
-            { "text": "offered he the words of his favourite imaginary playwright." },
-            { "startRef": "c2", "kind": "ec", "dataRef": "d3" }
-        ],
-        "sourceXmlLang": "cs",
-        "targetXmlLang": "en"
-    }
+  {
+    "kind": "segment",
+    "state": "translated",
+    "source": [
+      { "id": "c1", "kind": "ph", "codeType": "quote", "dataRef": "d1" },
+      { "text": "Blázen, chce dobýt točnu v takovém počasí," }.
+      { "id": "c2", "kind": "sc", "dataRef": "d2" },       
+      { "text": "dodal slovy svého oblíbeného imaginárního autora." },
+      { "startRef": "c2", "kind": "ec", "dataRef": "d3" }
+    ],
+    "target": [
+      { "id": "c1", "kind": "ph", "codeType": "quote", "dataRef": "d1" },
+      { "text": "Madman, he wants to conquer the pole in this weather," },
+      { "id": "c2", "kind": "sc", "dataRef": "d2" },       
+      { "text": "offered he the words of his favourite imaginary playwright." },
+      { "startRef": "c2", "kind": "ec", "dataRef": "d3" }
+    ],
+    "sourceXmlLang": "cs",
+    "targetXmlLang": "en"
+  }
 ]<?oxy_custom_end?>
 </programlisting>
       </para>
