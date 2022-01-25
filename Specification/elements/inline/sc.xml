@@ -10,6 +10,9 @@
   <para>Start of a spanning original code.</para>
   <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     object<?oxy_custom_end?></para>
+  <simplelist>
+    <member>This object is atomic, yet it is used to start spans.</member>
+  </simplelist>
   <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Used
       in:</emphasis><?oxy_custom_end?><!-- "Used in" needs to be applied consistently--></para>
   <simplelist>
@@ -110,28 +113,28 @@
         subType="xlf:b"/&gt;&lt;/source&gt;
   &lt;/segment&gt;
 &lt;/unit&gt;
-<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>"subfiles": [
-  {
-    "id": "1",
-    "kind": "unit",
-    "subunits": [
-      {
-        "kind": "segment",
-        "source": [
-          { "id": "1", "kind": "sc", "subType": "xlf:b", "type": "fmt" },
-          { "text": "First sentence. " }
-        ]
-      },
-      {
-        "kind": "segment",
-        "source": [
-          { "text": "Second sentence." },
-          { "kind": "ec", "startRef": "1", "subType": "xlf:b", "type": "fmt" }
-        ]
-      }
-    ]
-  }
-]
+<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+{
+  "id": "1",
+  "kind": "unit",
+  "subunits": [
+    {
+      "kind": "segment",
+      "source": [
+        { "id": "1", "kind": "sc", "subType": "xlf:b", "type": "fmt" },
+        { "text": "First sentence. " }
+      ]
+    },
+    {
+      "kind": "segment",
+      "source": [
+        { "text": "Second sentence." },
+        { "kind": "ec", "startRef": "1", "subType": "xlf:b", "type": "fmt" }
+      ]
+    }
+  ]
+}
+
 <?oxy_custom_end?></programlisting>
   <itemizedlist>
     <title>Constraints</title>

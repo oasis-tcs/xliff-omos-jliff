@@ -35,7 +35,7 @@
   &lt;/segment&gt;
 &lt;/unit&gt;<?oxy_custom_end?>
 
-<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>"subfiles": [
+<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
   {
     "id": "1",
      "kind": "unit",
@@ -63,6 +63,6 @@
       }
     ]
   }
-]<?oxy_custom_end?>
+<?oxy_custom_end?>
  </programlisting>
 </section>

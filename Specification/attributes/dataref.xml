@@ -57,7 +57,7 @@
   &lt;/segment&gt;
 &lt;/unit&gt;
 <?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-"subfiles": [
+
   {
     "id": "1",
     "kind": "unit",
@@ -75,7 +75,7 @@
       }
     ]
   }
-]<?oxy_custom_end?>
+<?oxy_custom_end?>
 </programlisting>
   <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>The example above shows
     two <olink targetdoc="../elements/inline/ph.xml" targetptr="ph"><code>ph</code></olink> objects
