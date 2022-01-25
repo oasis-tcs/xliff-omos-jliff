@@ -6,27 +6,23 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="cp">
-  <title> Roundtripping XLIFF &lt;cp/></title>
-
+  <title><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?> Roundtripping XLIFF
+    &lt;cp/></title>
   <para>XLIFF <ulink
       url="http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html#cp"
         ><code>&lt;cp></code></ulink> represents a Unicode character that is invalid in XML.</para>
-
   <para><emphasis>Type:</emphasis></para>
-
   <simplelist>
     <member>JLIFF doesn't have an equivalent to XLIFF <code>&lt;cp></code></member>
   </simplelist>
-
   <para><emphasis>Example in XLIFF:</emphasis></para>
-
   <programlisting>
 &lt;unit id="1"&gt;
   &lt;segment&gt;
     &lt;source&gt;Ctrl+C=&lt;cp hex="0003"/&gt;&lt;/source&gt;
   &lt;/segment&gt;
 &lt;/unit&gt;
-</programlisting>
+<?oxy_custom_end?></programlisting>
   <para>Equivalent of the above example in JLIFF:</para>
   <programlisting><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
 "subunits": [
@@ -39,7 +35,6 @@
   }
 ]  <?oxy_custom_end?> 
 </programlisting>
-
   <para>The example above shows a character U+0003 (Control C) as it has to be represented in JLIFF.
     <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>JSON imposes no
     restrictions on character content. Special characters must be escaped in JSON. Special
@@ -51,7 +46,6 @@
     mechanism needs to be able to "cp-encode" XML illegal characters in LIFF on the fly or vice
     versa to replace the "cp-encoded" XLIFF representations with their literal equivalents in
     JLIFF.<?oxy_custom_end?></para>
-
   <itemizedlist>
     <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
     <title>Processing Requirements</title>

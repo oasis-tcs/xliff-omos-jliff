@@ -6,48 +6,43 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="inlineelements">
-  <title>Inline Elements</title>
-
-    <para>The <firstterm>XLIFF Core</firstterm> inline elements at the <olink targetdoc="structural/source.xml" targetptr="source"
-        ><code>&lt;source&gt;</code></olink> or <olink targetdoc="structural/target.xml"
-      targetptr="target"><code>&lt;target&gt;</code></olink> level are: <olink
-      targetdoc="inline/cp.xml" targetptr="cp"><code>&lt;cp&gt;</code></olink>, <olink
-      targetdoc="inline/ph.xml" targetptr="ph"><code>&lt;ph&gt;</code></olink>, <olink
-      targetdoc="inline/pc.xml" targetptr="pc"><code>&lt;pc&gt;</code></olink>, <olink
+  <title><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>Inline
+    Elements<?oxy_custom_end?></title>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>The <firstterm>XLIFF
+      Core</firstterm> inline elements at the <olink targetdoc="structural/source.xml"
+      targetptr="source"><code>&lt;source&gt;</code></olink> or <olink
+      targetdoc="structural/target.xml" targetptr="target"><code>&lt;target&gt;</code></olink> level
+    are: <olink targetdoc="inline/cp.xml" targetptr="cp"><code>&lt;cp&gt;</code></olink>, <olink
+      targetdoc="inline/ph.xml" targetptr="ph"><code>&lt;ph&gt;</code></olink>, 
+    <!--  
+    <olink
+      targetdoc="inline/pc.xml" targetptr="pc"><code>&lt;pc&gt;</code></olink>,
+    -->
+    <olink
       targetdoc="inline/sc.xml" targetptr="sc"><code>&lt;sc&gt;</code></olink>, <olink
-      targetdoc="inline/ec.xml" targetptr="ec"><code>&lt;ec&gt;</code></olink>, <olink
-      targetdoc="inline/mrk.xml" targetptr="mrk"><code>&lt;mrk&gt;</code></olink>, <olink
+      targetdoc="inline/ec.xml" targetptr="ec"><code>&lt;ec&gt;</code></olink>, 
+    <!-- 
+    <olink
+      targetdoc="inline/mrk.xml" targetptr="mrk"><code>&lt;mrk&gt;</code></olink>, 
+    -->
+    <olink
       targetdoc="inline/sm.xml" targetptr="sm"><code>&lt;sm&gt;</code></olink> and <olink
       targetdoc="inline/em.xml" targetptr="em"><code>&lt;em&gt;</code></olink>.</para>
-
-    <para>The elements at the <olink targetdoc="structural/unit.xml"
-    targetptr="unit"><code>&lt;unit&gt;</code></olink> level directly related
-    to inline elements are: <olink targetdoc="structural/originaldata.xml"
-    targetptr="originaldata"><code>&lt;originalData&gt;</code></olink> and
-    <olink targetdoc="structural/data.xml"
-    targetptr="data"><code>&lt;data&gt;</code></olink>.</para>
-
-    <xi:include href="inline/cp.xml"
-                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
-
-    <xi:include href="inline/ph.xml"
-                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
-
-<!-- for now only commenting out well formed tag descriptions, depend on how the roundtrip is described
+  <para>The elements at the <olink targetdoc="structural/unit.xml" targetptr="unit"
+        ><code>&lt;unit&gt;</code></olink> level directly related to inline elements are: <olink
+      targetdoc="structural/originaldata.xml" targetptr="originaldata"
+        ><code>&lt;originalData&gt;</code></olink> and <olink targetdoc="structural/data.xml"
+      targetptr="data"><code>&lt;data&gt;</code></olink>.<?oxy_custom_end?></para>
+  <xi:include href="inline/cp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  <xi:include href="inline/ph.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  <!-- for now only commenting out well formed tag descriptions, depend on how the roundtrip is described
     <xi:include href="inline/pc.xml"
                 xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include> -->
-
-    <xi:include href="inline/sc.xml"
-                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
-
-    <xi:include href="inline/ec.xml"
-                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
-
+  <xi:include href="inline/sc.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  <xi:include href="inline/ec.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
   <!-- for now only commenting out well formed tag descriptions, depend on how the roundtrip is described
     <xi:include href="inline/mrk.xml"
                 xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>-->
-    <xi:include href="inline/sm.xml"
-                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
-    <xi:include href="inline/em.xml"
-                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
- </section>
+  <xi:include href="inline/sm.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  <xi:include href="inline/em.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</section>
