@@ -11,19 +11,15 @@
   <para><emphasis>Type:</emphasis>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
   <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
-  <simplelist>
-    <member>This element is always empty.<?oxy_custom_end?></member>
+  <simplelist><?oxy_custom_end?>
+    <?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>
+    <member>This is object atomic, yet it is used to close spans.<?oxy_custom_end?></member>
   </simplelist>
-  <para><emphasis>Parents:</emphasis>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[Note: should be called
-      <emphasis>Used in</emphasis> perhaps? There is no parent object, but an
-    array]<?oxy_custom_end?></para>
+  <para><emphasis>Used in:</emphasis></para>
   <simplelist>
     <member><olink targetdoc="structural/source.xml" targetptr="source"><code>source</code></olink>
-      array, <olink targetdoc="structural/target.xml" targetptr="target"><code>target</code></olink> array,<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
-      <olink targetdoc="pc.xml" targetptr="pc"><code>&lt;pc&gt;</code></olink> and <olink
-        targetdoc="mrk.xml" targetptr="mrk"
-      ><code>&lt;mrk&gt;</code></olink><?oxy_custom_end?></member>
+      array and <olink targetdoc="structural/target.xml" targetptr="target"
+        ><code>target</code></olink> array.</member>
   </simplelist>
   <para><emphasis>Properties:</emphasis></para>
   <simplelist>
@@ -126,34 +122,34 @@
   &lt;/segment&gt;
 &lt;/unit&gt;
 <?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-"subfiles": [
-  {
-    "id": "1",
-    "kind": "unit",
-    "originalData": {
-      "d1": "\\b ",
-      "d2": "\\i ",
-      "d3": "\\b0 ",
-      "d4": "\\i0 "
-    },
-    "subunits": [
-      {
-        "kind": "segment",
-        "source": [
-          { "text": "Text in " },
-          { "id": "1", "kind": "sc" },
-          { "text": "bold" },
-          { "id": "2", "kind": "sc" },
-          { "text": "\nand" },
-          { "dataRef": "d3", "kind": "ec", "startRef": "1" },
-          { "text": " italics" },
-          { "dataRef": "d4", "kind": "ec", "startRef": "2" },
-          { "text": ". " }
-        ]
-      }
-    ]
-  }
-]
+
+{
+  "id": "1",
+  "kind": "unit",
+  "originalData": {
+    "d1": "\\b ",
+    "d2": "\\i ",
+    "d3": "\\b0 ",
+    "d4": "\\i0 "
+  },
+  "subunits": [
+    {
+      "kind": "segment",
+      "source": [
+        { "text": "Text in " },
+        { "id": "1", "kind": "sc" },
+        { "text": "bold" },
+        { "id": "2", "kind": "sc" },
+        { "text": "<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>\n<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>and" },
+        { "dataRef": "d3", "kind": "ec", "startRef": "1" },
+        { "text": " italics" },
+        { "dataRef": "d4", "kind": "ec", "startRef": "2" },
+        { "text": ". " }
+      ]
+    }
+  ]
+}
+
 <?oxy_custom_end?>
 </programlisting>
   <itemizedlist>

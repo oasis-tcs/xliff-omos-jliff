@@ -57,8 +57,7 @@
   &lt;/unit>
 &lt;/file><?oxy_custom_end?>
 
-<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>{
-  "files": [
+<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
     {
       "id": "f2",
       "subfiles": [
@@ -93,9 +92,8 @@
         }
       ]
     }
-  ]
-}<?oxy_custom_end?>
-</programlisting>
+<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="255,215,0"?>
+<?oxy_custom_end?></programlisting>
 
   <para>In the example above the <olink targetdoc="../elements/inline/sc.xml" targetptr="sc"
         ><code>sc</code></olink>

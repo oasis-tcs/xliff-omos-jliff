@@ -76,7 +76,7 @@
     <title>Processing Requirements</title>
     <listitem>
       <para><firstterm>Modifiers</firstterm> updating the <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>property<?oxy_custom_end?>
-        <link linkend="type">
+        <link linkend="codeType">
           <code><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>codeType<?oxy_custom_end?></code>
         </link> on <olink targetdoc="../elements/inline/sc.xml" targetptr="sc">
           <code>sc</code>

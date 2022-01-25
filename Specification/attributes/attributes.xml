@@ -6,113 +6,65 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section>
-  <title>Attributes</title>
+  <title>JLIFF Core Object Properties</title>
 
-  <para>This section lists all the various attributes used in XLIFF core elements.</para>
+  <para>This section lists all the various properties used in JLIFF core objects.</para>
 
-  <section>
-    <title>XLIFF Attributes</title>
+  
 
-    <para>The attributes defined in XLIFF 2.0 are: <olink targetdoc="appliesto.xml"
-      targetptr="appliesto"><code>appliesTo</code></olink>,
-      <olink targetdoc="cancopy.xml"
-        targetptr="cancopy"><code>canCopy</code></olink>,
-      <olink targetdoc="candelete.xml"
-        targetptr="candelete"><code>canDelete</code></olink>,
-      <olink targetdoc="canoverlap.xml"
-        targetptr="canoverlap"><code>canOverlap</code></olink>,
-      <olink targetdoc="canreorder.xml"
-        targetptr="canreorder"><code>canReorder</code></olink>,
-      <olink targetdoc="canResegment.xml"
-        targetptr="canResegment"><code>canResegment</code></olink>,
-      <olink targetdoc="category.xml"
-        targetptr="category"><code>category</code></olink>,
-      <olink targetdoc="copyof.xml"
-        targetptr="copyof"><code>copyOf</code></olink>,
-
-      <olink targetdoc="dataref.xml" targetptr="dataref"
-        ><code>dataRef</code></olink>,
-      <!-- files removed as well formed tags don't exist in JLIFF
+    <para>The properties defined in JLIFF Version 1.0 are: <olink targetdoc="appliesto.xml"
+        targetptr="appliesto"><code>appliesTo</code></olink>, <olink targetdoc="cancopy.xml"
+        targetptr="cancopy"><code>canCopy</code></olink>, <olink targetdoc="candelete.xml"
+        targetptr="candelete"><code>canDelete</code></olink>, <olink targetdoc="canoverlap.xml"
+        targetptr="canoverlap"><code>canOverlap</code></olink>, <olink targetdoc="canreorder.xml"
+        targetptr="canreorder"><code>canReorder</code></olink>, <olink targetdoc="canResegment.xml"
+        targetptr="canResegment"><code>canResegment</code></olink>, <olink targetdoc="category.xml"
+        targetptr="category"><code>category</code></olink>, <olink targetdoc="copyof.xml"
+        targetptr="copyof"><code>copyOf</code></olink>, <olink targetdoc="dataref.xml"
+        targetptr="dataref"><code>dataRef</code></olink>, <!-- files removed as well formed tags don't exist in JLIFF
       <olink targetdoc="datarefend.xml" targetptr="datarefend"
           ><code>dataRefEnd</code></olink>,
       <olink targetdoc="datarefstart.xml" targetptr="datarefstart"
           ><code>dataRefStart</code></olink>,-->
-      <olink targetdoc="dir.xml" targetptr="dir"
-          ><code>dir</code></olink>,
-      <olink targetdoc="disp.xml" targetptr="disp"
-        ><code>disp</code></olink>,
-      <!-- files removed as well formed tags don't exist in JLIFF
+      <olink targetdoc="dir.xml" targetptr="dir"><code>dir</code></olink>, <olink
+        targetdoc="disp.xml" targetptr="disp"><code>disp</code></olink>, <!-- files removed as well formed tags don't exist in JLIFF
       <olink targetdoc="dispend.xml" targetptr="dispend"
           ><code>dispEnd</code></olink>,
       <olink targetdoc="dispstart.xml" targetptr="dispstart"
           ><code>dispStart</code></olink>,-->
-      <olink targetdoc="equiv.xml" targetptr="equiv"
-          ><code>equiv</code></olink>,
-      <!-- files removed as well formed tags don't exist in JLIFF
+      <olink targetdoc="equiv.xml" targetptr="equiv"><code>equiv</code></olink>, <!-- files removed as well formed tags don't exist in JLIFF
       <olink targetdoc="equivend.xml" targetptr="equivend"
           ><code>equivEnd</code></olink>,
       <olink targetdoc="equivstart.xml" targetptr="equivstart"
           ><code>equivStart</code></olink>,-->
-      <olink targetdoc="hex.xml" targetptr="hex"
-            ><code>hex</code></olink>,
-      <olink targetdoc="href.xml" targetptr="href"
-              ><code>href</code></olink>,
-      <olink targetdoc="id.xml" targetptr="id"
-        ><code>id</code></olink>,
-      <olink targetdoc="isolated.xml" targetptr="isolated"
-          ><code>isolated</code></olink>,
-      <olink targetdoc="kind.xml" targetptr="kind"
-        ><code>kind</code></olink>,
-      
-      <olink targetdoc="name.xml" targetptr="name"
-          ><code>name</code></olink>,
-      <olink targetdoc="order.xml" targetptr="order"
-        ><code>order</code></olink>,
-      <olink targetdoc="original.xml" targetptr="original"
-        ><code>original</code></olink>,
-      <olink targetdoc="priority.xml" targetptr="priority"
-          ><code>priority</code></olink>,
-      <olink targetdoc="ref.xml" targetptr="ref"
-          ><code>ref</code></olink>,
-
-
-      <olink targetdoc="srcdir.xml" targetptr="srcdir"
-          ><code>srcDir</code></olink>,
-      <olink targetdoc="srcLang.xml" targetptr="srcLang"
-          ><code>srcLang</code></olink>,
-
-      <olink targetdoc="startref.xml" targetptr="startref"
-        ><code>startRef</code></olink>,
-
-      <olink targetdoc="state.xml"
-        targetptr="state"><code>state</code></olink>,
-
-      <olink targetdoc="subflows.xml" targetptr="subflows"
-          ><code>subFlows</code></olink>,
+      <olink targetdoc="hex.xml" targetptr="hex"><code>hex</code></olink>, <olink
+        targetdoc="href.xml" targetptr="href"><code>href</code></olink>, <olink targetdoc="id.xml"
+        targetptr="id"><code>id</code></olink>, <olink targetdoc="isolated.xml" targetptr="isolated"
+          ><code>isolated</code></olink>, <olink targetdoc="kind.xml" targetptr="kind"
+          ><code>kind</code></olink>, <olink targetdoc="name.xml" targetptr="name"
+        ><code>name</code></olink>, <olink targetdoc="order.xml" targetptr="order"
+          ><code>order</code></olink>, <olink targetdoc="original.xml" targetptr="original"
+          ><code>original</code></olink>, <olink targetdoc="priority.xml" targetptr="priority"
+          ><code>priority</code></olink>, <olink targetdoc="ref.xml" targetptr="ref"
+          ><code>ref</code></olink>, <olink targetdoc="srcdir.xml" targetptr="srcdir"
+          ><code>srcDir</code></olink>, <olink targetdoc="srcLang.xml" targetptr="srcLang"
+          ><code>srcLang</code></olink>, <olink targetdoc="startref.xml" targetptr="startref"
+          ><code>startRef</code></olink>, <olink targetdoc="state.xml" targetptr="state"
+          ><code>state</code></olink>, <olink targetdoc="subflows.xml" targetptr="subflows"
+          ><code>subFlows</code></olink>, 
+      <!--  
       <olink targetdoc="subflowsend.xml" targetptr="subflowsend"
-          ><code>subFlowsEnd</code></olink>,
-      <olink targetdoc="subflowsstart.xml"
-        targetptr="subflowsstart"><code>subFlowsStart</code></olink>,
-
-      <olink targetdoc="subState.xml"
-        targetptr="substate"><code>subState</code></olink>,
-
-      <olink targetdoc="subType.xml"
-        targetptr="subtype"><code>subType</code></olink>,
-
-
-      <olink targetdoc="trgLang.xml"
-        targetptr="trgLang"><code>trgLang</code></olink>,
-      <olink targetdoc="translate.xml"
-        targetptr="translate"><code>translate</code></olink>,
-      <olink targetdoc="trgdir.xml"
-        targetptr="trgdir"><code>trgDir</code></olink>,
-      <olink targetdoc="type.xml" targetptr="type"
-          ><code>type</code></olink>,
-      <olink targetdoc="value.xml" targetptr="value"
-          ><code>value</code></olink>
-      and <olink targetdoc="version.xml" targetptr="version"
-          ><code>version</code></olink>.</para>
+          ><code>subFlowsEnd</code></olink>, <olink targetdoc="subflowsstart.xml"
+        targetptr="subflowsstart"><code>subFlowsStart</code></olink>,-->
+      <olink
+        targetdoc="subState.xml" targetptr="substate"><code>subState</code></olink>, <olink
+        targetdoc="subType.xml" targetptr="subtype"><code>subType</code></olink>, <olink
+        targetdoc="trgLang.xml" targetptr="trgLang"><code>trgLang</code></olink>, <olink
+        targetdoc="translate.xml" targetptr="translate"><code>translate</code></olink>, <olink
+        targetdoc="trgdir.xml" targetptr="trgdir"><code>trgDir</code></olink>, <olink
+        targetdoc="type.xml" targetptr="type"><code>type</code></olink>, <olink
+        targetdoc="value.xml" targetptr="value"><code>value</code></olink> and <olink
+        targetdoc="version.xml" targetptr="version"><code>version</code></olink>.</para>
 
     <!-- This falg got killed in the August 20 2013 meeting <xi:include href="approved.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>-->
 
@@ -193,11 +145,12 @@
 
     <xi:include href="subflows.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
 
+<!--  
     <xi:include href="subflowsend.xml"
                 xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
 
     <xi:include href="subflowsstart.xml"
-                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+      xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>  -->
 
     <xi:include href="subState.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
     <xi:include href="subType.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
@@ -214,18 +167,15 @@
     <xi:include href="value.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
 
     <xi:include href="version.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
-  </section>
 
-  <section>
-    <title>XML namespace</title>
+ 
 
-    <para>The attributes from XML namespace used in XLIFF 2.0 are: <olink
+<!--    <para>The attributes from XML namespace used in XLIFF 2.0 are: <olink
     targetdoc="xml_lang.xml" targetptr="xml_lang">xml:lang</olink> and <olink
-    targetdoc="xml_space.xml" targetptr="xml_space">xml:space</olink>.</para>
+    targetdoc="xml_space.xml" targetptr="xml_space">xml:space</olink>.</para>-->
 
     <xi:include href="xml_lang.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
 
-    <xi:include href="xml_space.xml"
-                xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="xml_space.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
   </section>
-</section>
+

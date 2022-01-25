@@ -35,34 +35,34 @@
   &lt;/segment&gt;
 &lt;/unit&gt;<?oxy_custom_end?>
 
-<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>"subfiles": [
-  {
-    "id": "1",
-     "kind": "unit",
-    "subunits": [
-      {
-        "kind": "segment",
-        "source": [
-          { "text": "Äter" },
-          { "id": "1", "kind": "sc" },
-          { "text", "katter möss" },
-          { "id": "2", "kind": "ec", "startRef": "1" },
-          { "text": "?" }
-        ],
-        "target": [
-          { "text": "Do " },
-          { "id": "1", "kind": "sc" },
-          { "text": "cats" },
-          { "kind": "ec", "startRef": "1" },
-          { "text": " eat " },
-          { "id": "2", "kind": "sc", "copyOf": "1" },
-          { "text": "mice" },
-          { "kind": "ec", "startRef": "2" },
-          { "text": "?" }
-        ]
-      }
-    ]
-  }
-]<?oxy_custom_end?>
+<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
+{
+  "id": "1",
+   "kind": "unit",
+  "subunits": [
+    {
+      "kind": "segment",
+      "source": [
+        { "text": "Äter" },
+        { "id": "1", "kind": "sc" },
+        { "text", "katter möss" },
+        { "id": "2", "kind": "ec", "startRef": "1" },
+        { "text": "?" }
+      ],
+      "target": [
+        { "text": "Do " },
+        { "id": "1", "kind": "sc" },
+        { "text": "cats" },
+        { "kind": "ec", "startRef": "1" },
+        { "text": " eat " },
+        { "id": "2", "kind": "sc", "copyOf": "1" },
+        { "text": "mice" },
+        { "kind": "ec", "startRef": "2" },
+        { "text": "?" }
+      ]
+    }
+  ]
+}
+<?oxy_custom_end?>
  </programlisting>
 </section>

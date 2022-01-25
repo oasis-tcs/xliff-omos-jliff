@@ -14,8 +14,8 @@
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
 
   <simplelist>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
-    <member>This element is always empty.<?oxy_custom_end?></member>
+    <?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>
+    <member>This object is atomic and doesn't form spans.<?oxy_custom_end?></member>
   </simplelist>
 
   <para><emphasis>Used in:</emphasis></para>
@@ -122,27 +122,27 @@
   &lt;/segment&gt;
 &lt;/unit&gt;<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>
 <?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
-"subfiles": [
-  {
-    "id": "1",
-    "kind": "unit",
-    "originalData": {
-      "d1": "%d",
-      "d2": "&lt;br/&gt;"
+
+{
+  "id": "1",
+  "kind": "unit",
+  "originalData": {
+    "d1": "%d",
+    "d2": "&lt;br/&gt;"
     },
-    "subunits": [
-      {
-        "kind": "segment",
-        "source": [
-          { "text": "Number of entries: " },
-          { "dataRef": "d1", "id": "1", "kind": "ph" },
-          { "dataRef": "d2", "id": "2", "kind": "ph" },
-          { "text": "(These entries are only the ones matching the\ncurrent filter settings)" }
-        ]
-      }
-    ]
-  }
-]<?oxy_custom_end?>
+  "subunits": [
+    {
+     "kind": "segment",
+      "source": [
+       { "text": "Number of entries: " },
+       { "dataRef": "d1", "id": "1", "kind": "ph" },
+       { "dataRef": "d2", "id": "2", "kind": "ph" },
+       { "text": "(These entries are only the ones matching the\ncurrent filter settings)" }
+     ]
+    }
+  ]
+}
+<?oxy_custom_end?>
 </programlisting>
 
   <itemizedlist>
