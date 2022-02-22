@@ -28,9 +28,9 @@
         associated with a definition.</para>
     </listitem>
   </itemizedlist><?oxy_custom_end?>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>There are two
-    <?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>properties
-    with array
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>There are
+    two<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>
+    properties with array
     values<?oxy_custom_end?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
     that contain inline objects in JLIFF: the <olink targetdoc="../elements/structural/source.xml"
       targetptr="source"><code>"source"</code> property</olink> and <olink
@@ -43,10 +43,11 @@
         ><code>"originalData"</code> object</olink>.</para><?oxy_custom_end?>
   <section id="ltext">
     <title>Text</title>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>The JLIFF <olink
+    <para><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>The JLIFF <olink
         targetdoc="../elements/inline/text.xml" targetptr="text">anonymous inline
           <code>"text"</code> object</olink> does not prescribe how to represent normal text,
-      besides that they <glossterm>must</glossterm> be valid JSON strings.</para><?oxy_custom_end?>
+      besides that the <code>"text"</code> values of the objects <glossterm>must</glossterm> be
+      valid JSON strings.</para><?oxy_custom_end?>
     <section>
       <title><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>Characters invalid in
         XML</title>
