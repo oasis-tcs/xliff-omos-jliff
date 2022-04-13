@@ -67,7 +67,7 @@
     </authorgroup>
 
 
-    <pubdate>22 February 2022</pubdate>
+    <pubdate>13 April 2022</pubdate>
 
     <copyright>
       <year>2022</year>
@@ -112,7 +112,7 @@
         
         <listitem id="LIOM">
           <para><emphasis>XLIFF 2 Object Model Version 1.0.</emphasis>. Edited by David Filip.
-            22 February 2022. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest version: <ulink url="http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html">http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html</ulink>. </para>
+            13 April 2022. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest version: <ulink url="http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html">http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html</ulink>. </para>
         </listitem>
         
         <listitem>
@@ -249,7 +249,7 @@
       <para><citation>JLIFF-1.0</citation></para>
 
       <para><emphasis>JLIFF Version 1.0</emphasis>. Edited by Robert van
-        Engelen and David Filip. 22 February 2022. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest
+        Engelen and David Filip. 13 April 2022. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest
         version: <ulink url="http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html">http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html</ulink>. </para>
 
       <!-- 
@@ -1338,8 +1338,7 @@
 </section>
 
     <section id="file">
-    <title><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>anonymous<?oxy_custom_end ?>
-        object <code>"kind" : "file"</code></title>
+    <title>object <code>"kind" : "file"</code></title>
     <para>Container for localization material extracted from an entire single document, or another
         high level self contained logical node in a content structure that cannot be described in
         the terms of documents.</para>
@@ -1654,7 +1653,7 @@
 </section>
     
     <section id="group">
-    <title>anonymous subitem object <code>"kind" : "group"</code></title>
+    <title>subitem object <code>"kind" : "group"</code></title>
     <para>Provides a way to organize units into a structured hierarchy.</para>
     <para>Note that this is especially useful for mirroring a source format's hierarchical
         structure.</para>
@@ -1942,7 +1941,7 @@ CTR is not allowed in XLIFF 2.1 and hence in JLIFF 2.1, but remains allowed in 2
 </section>
 
     <section id="unit">
-    <title>anonymous subitem object <code>"kind" : "unit"</code></title>
+    <title>subitem object <code>"kind" : "unit"</code></title>
     <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>This object is an
         anonymous container for a dynamic structure of subunit objects. Subunit objects hold the
         extracted translatable source text, aligned with the <firstterm>Translated</firstterm>
@@ -2708,7 +2707,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
   </itemizedlist>
 </section>
   <section id="ph">
-  <title>ph</title>
+  <title>object <code>"kind" : "ph"</code></title>
 
   <para>Represents a standalone code of the original format.</para>
 
@@ -2916,7 +2915,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <xi:include href="inline/pc.xml"
                 xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>  -->
   <section id="sc">
-  <title>anonymous object <code>"kind" : "sc"</code></title>
+  <title>object <code>"kind" : "sc"</code></title>
   <para>Start of a spanning original code.</para>
   <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     object<?oxy_custom_end ?></para>
@@ -3113,7 +3112,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
   </itemizedlist>
 </section>
   <section id="ec">
-  <title>ec</title>
+  <title>object <code>"kind" : "ec"</code></title>
   <para>End of a spanning original code.</para>
   <para><emphasis>Type:</emphasis>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
@@ -3183,7 +3182,8 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <member>-
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"startRef"</code>,
       a <link linkend="startref"><code>startRef</code></link> string with NMTOKEN value,<?oxy_custom_end ?>
-      <glossterm><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>required<?oxy_custom_end ?></glossterm></member>
+      <glossterm>optional</glossterm></member>
+    <!--  This property is optional from the structural point of view, one of two must be used @startRef or @id depending on the value of @isolated, see Constraints  -->
     <member>-
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"subFlows"</code>,
       a <link linkend="subflows"><code>subFlows</code></link> string,
@@ -5524,9 +5524,9 @@ Text content that is important</programlisting>
         associated with a definition.</para>
     </listitem>
   </itemizedlist><?oxy_custom_end ?>
-  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>There are two
-    <?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>properties
-    with array
+  <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>There are
+    two<?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>
+    properties with array
     values<?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>
     that contain inline objects in JLIFF: the <link linkend="source"><code>"source"</code> property</link> and <link linkend="target"><code>"target"</code>
       property</link>.</para>
@@ -5535,9 +5535,10 @@ Text content that is important</programlisting>
     an <link linkend="originaldata"><code>"originalData"</code> object</link>.</para><?oxy_custom_end ?>
   <section id="ltext">
     <title>Text</title>
-    <para><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>The JLIFF <link linkend="text">anonymous inline
+    <para><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>The JLIFF <link linkend="text">anonymous inline
           <code>"text"</code> object</link> does not prescribe how to represent normal text,
-      besides that they <glossterm>must</glossterm> be valid JSON strings.</para><?oxy_custom_end ?>
+      besides that the <code>"text"</code> values of the objects <glossterm>must</glossterm> be
+      valid JSON strings.</para><?oxy_custom_end ?>
     <section>
       <title><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>Characters invalid in
         XML</title>
@@ -5605,9 +5606,10 @@ Text content that is important</programlisting>
       </varlistentry>
     </variablelist>
     <section id="representingcodes">
-      <title>Representation of the codes</title>
-      <para>Spanning codes present a set of challenges in XLIFF:</para>
-      <para>First, because the code format of the original data extracted to XLIFF does not need to
+      <title><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>Representation of
+        the codes</title>
+      <para>Spanning codes present a set of challenges in JLIFF:</para>
+      <para>First, because the code format of the original data extracted to JLIFF does not need to
         be XML, spanning codes can overlap.</para>
       <para>For example, in the following RTF content, the format markers are in a sequence: start
         bold, start italics, end bold, end italics. This does not translate into a well-formed
@@ -5618,23 +5620,34 @@ Text in \b bold \i and\b0  italics\i0</programlisting>
         one segment and end in another.</para>
       <para>For example, in the following HTML content, the segmentation splits the text
         independently of the codes so the starting and ending tags of the
-          <code>&lt;B&gt;...&lt;/B&gt;</code> element end up in different parts of the <link linkend="unit"><code>&lt;unit&gt;</code></link> element:</para>
+          <code>&lt;B&gt;...&lt;/B&gt;</code> element end up in different parts of the <link linkend="unit">anonymous subitem object
+            <code>"kind" : "unit"</code></link>:</para>
       <programlisting format="linespecific">
 [Sentence &lt;B&gt;one. ][Sentence two.][ ][Sentence&lt;/B&gt; three.]</programlisting>
       <para>Finally, a third potential cause of complication is that the start or the end markers of
-        a spanning code can become orphans if their segment is used outside of its original <link linkend="unit"><code>&lt;unit&gt;</code></link>.</para>
+        a spanning code can become orphans if their segment is used outside of its original <link linkend="unit">anonymous subitem object
+            <code>"kind" : "unit"</code></link>.</para>
       <para>For example, an entry with bold text can be broken down into two segments:</para>
       <programlisting format="linespecific">
 Segment 1 = "&lt;b&gt;Warning found: "
 Segment 2 = "The file is read-only&lt;/b&gt;"</programlisting>
-      <para>And later, one of the segments can be re-used outside its original <link linkend="unit"><code>&lt;unit&gt;</code></link>, for instance as a translation candidate:</para>
+      <para>And later, one of the segments can be re-used outside its original <link linkend="unit">anonymous subitem object
+            <code>"kind" : "unit"</code></link>, for instance as a translation candidate:</para>
       <programlisting format="linespecific">
 New segment = "&lt;b&gt;Warning found - see log&lt;/b&gt;"
 Fuzzy match = "&lt;b&gt;Warning found: "</programlisting>
       <para>Because of these use cases, the representation of a spanning code cannot always be
-        mapped to a similar spanning element in XLIFF.</para>
-      <para>When taking into account these issues, the possible use cases and their corresponding
-        XLIFF representations are as follow:</para>
+        mapped to a similar spanning element in XLIFF. Since XLIFF defines an equivalence between
+        well formed spanning markup and markup forming spans with start and and end codes, it is not
+        necessary for a non-XML translation roundgtrip format such as JLIFF to mimic the XLIFF
+        capability to represent well formed original markup as wellformed in the translation
+        format.</para>
+      <para>The only method to encode spanning codes in JLIFF is with start and end codes tied by an
+        id and id reference, disregarding whether the original markup was or wasn't wellformed or
+        whether a well formed representation would be theoretically possible in an XML vocabulary
+        such as XLIFF.</para>
+      <para>The following table shows examples how different types of code have to represented in
+        JLIFF:</para>
       <table>
         <title>Inline code use cases</title>
         <tgroup cols="2">
@@ -5647,50 +5660,53 @@ Fuzzy match = "&lt;b&gt;Warning found: "</programlisting>
           <tbody>
             <row>
               <entry>Standalone code</entry>
-              <entry><link linkend="ph"><code>&lt;ph
-                    id='1'/&gt;</code></link></entry>
+              <entry><link linkend="ph"><code>{ "id": "1",
+                    "kind": "ph" }</code></link></entry>
             </row>
             <row>
               <entry>Well-formed spanning code</entry>
-              <entry><link linkend="pc"><code>&lt;pc
-                    id='1'&gt;text&lt;/pc&gt;</code></link></entry>
+              <entry><code>{ "id": "1", "kind": "sc" }, { "text": "First sentence. " }, { "kind":
+                  "ec", "startRef": "1" }</code></entry>
             </row>
             <row>
               <entry>Start marker of spanning code</entry>
-              <entry><link linkend="sc"><code>&lt;sc
-                    id='1'/&gt;</code></link></entry>
+              <entry><link linkend="sc"><code>{ "id": "1",
+                    "kind": "sc" }</code></link></entry>
             </row>
             <row>
               <entry>End marker of spanning code</entry>
-              <entry><link linkend="ec"><code>&lt;ec
-                    startRef='1'/&gt;</code></link></entry>
+              <entry><link linkend="ec"><code>{ "kind":
+                    "ec", "startRef": "1" }</code></link></entry>
             </row>
             <row>
               <entry>Orphan start marker of spanning code</entry>
-              <entry><link linkend="sc"><code>&lt;sc id='1'
-                    isolated='yes'/&gt;</code></link></entry>
+              <entry><link linkend="sc"><code>{ "id": "1",
+                    "kind": "sc", "isolated" : "yes" }</code></link></entry>
             </row>
             <row>
               <entry>Orphan end marker of spanning code</entry>
-              <entry><link linkend="ec"><code>&lt;ec id='1'
-                    isolated='yes'/&gt;</code></link></entry>
+              <entry><link linkend="ec"><code>{ "id": "1",
+                    "kind": "ec", "isolated" : "yes" }</code></link></entry>
             </row>
           </tbody>
         </tgroup>
       </table>
     </section>
     <section id="spanningcodeusage">
-      <title>Usage of &lt;pc&gt; and &lt;sc&gt;/&lt;ec&gt;</title>
-      <para>A spanning code <glossterm>must</glossterm> be represented using a <link linkend="sc"><code>&lt;sc&gt;</code></link>
-        element and a <link linkend="ec"><code>&lt;ec&gt;</code></link> element if the code is not well-formed or
-        orphan.</para>
-      <para>For example, the following RTF content has two spans of formatting:</para>
+      <title>Usage of objects <code>"kind" : "sc"</code> and <code>"kind" : "ec"</code></title>
+      <para>A spanning original code <glossterm>must</glossterm> be represented using an <link linkend="sc"> object <code>"kind" :
+          "sc"</code></link> and <link linkend="ec">
+          object <code>"kind" : "ec"</code></link> pair disregarding wehether the represented
+        spanning code is well-formed or orphan.<?oxy_custom_end ?></para>
+      <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>For example, the
+        following RTF content has two spans of formatting:</para>
       <programlisting format="linespecific">
 Text in \b bold \i and\b0  italics\i0</programlisting>
-      <para>They can only be represented using two pairs of <link linkend="sc"><code>&lt;sc&gt;</code></link> and
-          <link linkend="ec"><code>&lt;ec&gt;</code></link> elements:</para>
+      <para>They can only be represented using two pairs of <link linkend="sc">obejct <code>"kind" :
+          "sc"</code></link> and <link linkend="ec">object
+            <code>"kind" : "ec"</code></link>:<?oxy_custom_end ?></para>
       <programlisting format="linespecific">
-&lt;unit id="1"&gt;
+<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>&lt;unit id="1"&gt;
   &lt;originalData&gt;
     &lt;data id="d1"&gt;\b &lt;/data&gt;
     &lt;data id="d2"&gt;\i &lt;/data&gt;
@@ -5703,19 +5719,19 @@ Text in \b bold \i and\b0  italics\i0</programlisting>
        italics&lt;ec startRef="2" dataRef="d4"/&gt;. &lt;/source&gt;
   &lt;/segment&gt;
 &lt;/unit&gt;
-</programlisting>
-      <para>If the spanning code is well-formed it <glossterm>may</glossterm> be represented using
-        either a single <link linkend="pc"><code>&lt;pc&gt;</code></link> element or using a pair of <link linkend="sc"><code>&lt;sc&gt;</code></link> and a
-          <link linkend="ec"><code>&lt;ec&gt;</code></link> elements.</para>
-      <para>For example, the following RTF content has a single span of formatting:</para>
+<?oxy_custom_end ?></programlisting>
+      <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>Unlike XLIFF, JLIFF
+        doesn't have a wellformed markup equivalent encoding construction.</para>
       <programlisting format="linespecific">
 Text in \b bold\b0 .</programlisting>
-      <para>It can be represented using either notations:</para>
-      <programlisting format="linespecific">
+      <para>The following two XLIFF representations of the above RTF code collapse into only one
+        possible reperesentation in JLIFF:</para>
+      <programlisting format="linespecific">      
 Text in &lt;pc id="1" canOverlap="yes" dataRefStart="c1" dataRefEnd="c2"&gt;
 bold&lt;/pc&gt;.</programlisting>
       <programlisting format="linespecific">
-Text in &lt;sc id="1" dataRef="c1"/&gt;bold&lt;ec startRef="1" dataRef="c2"/&gt;.</programlisting>
+Text in &lt;sc id="1" dataRef="c1"/&gt;bold&lt;ec startRef="1" dataRef="c2"/&gt;.</programlisting><?oxy_custom_end ?>
+      <programlisting format="linespecific"><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>@Phil, please insert here the only possible JLIFF representation of the above</programlisting><?oxy_custom_end ?>
       <itemizedlist>
         <title>Processing Requirements</title>
         <listitem>
