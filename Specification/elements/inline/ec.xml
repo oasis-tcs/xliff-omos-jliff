@@ -6,7 +6,7 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="ec">
-  <title>ec</title>
+  <title>object <code>"kind" : "ec"</code></title>
   <para>End of a spanning original code.</para>
   <para><emphasis>Type:</emphasis>
     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
@@ -85,7 +85,8 @@
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"startRef"</code>,
       a <olink targetdoc="../../attributes/startref.xml" targetptr="startref"
         ><code>startRef</code></olink> string with NMTOKEN value,<?oxy_custom_end?>
-      <glossterm><?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>required<?oxy_custom_end?></glossterm></member>
+      <glossterm>optional</glossterm></member>
+    <!-- This property is optional from the structural point of view, one of two must be used @startRef or @id depending on the value of @isolated, see Constraints -->
     <member>-
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"subFlows"</code>,
       a <olink targetdoc="../../attributes/subflows.xml" targetptr="subflows"
