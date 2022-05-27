@@ -501,12 +501,12 @@
               "ctr_text": { "type": "string" }
             },
             "additionalProperties": false,
-            "required": [ "property", "ctr_text" ]
+            "required": [ "ctr_property", "ctr_text" ]
           },
           "minitems": 1
         }
       },
-      "additionalProperties": false
+      "required": [ "items" ]
     },
 
     "slr_profiles": {
@@ -613,9 +613,9 @@
     },
 
     "userdata": {
-      "description": "An object that maps an extension's fully qualified name to the extension data comprising an unconstrained object",
+      "description": "An object that maps an extension's fully qualified name to the extension data comprising an unconstrained object, array or string",
       "type": "object",
-      "patternProperties": { "^[-.:_A-Za-z0-9]+$": { "type": "object" } },
+      "patternProperties": { "^[-.:_A-Za-z0-9]+$": { "type": [ "object", "array", "string" ] } },
       "additionalProperties": false
     },
 
