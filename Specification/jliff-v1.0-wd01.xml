@@ -31,13 +31,13 @@
 
     <authorgroup>
       <othercredit role="chair">
-        <firstname>David</firstname>
-        <surname>Filip</surname>
+        <firstname>Phil</firstname>
+        <surname>Ritchie</surname>
         <affiliation>
-          <orgname><ulink url="http://www.adaptcentre.ie/">Trinity College Dublin (ADAPT)</ulink></orgname>
-          <address format="linespecific"><email>david.filip@adaptcentre.ie</email></address>
+          <orgname><ulink url="https://vistatec.com/">Vistatec </ulink></orgname>
+          <address format="linespecific"><email>phil.ritchie@vistatec.com</email></address>
         </affiliation>
-        <email>david.filip@adaptcentre.ie</email>
+        <email>phil.ritchie@vistatec.com</email>
       </othercredit>
 
       
@@ -67,7 +67,7 @@
     </authorgroup>
 
 
-    <pubdate>13 April 2022</pubdate>
+    <pubdate>14 June 2022</pubdate>
 
     <copyright>
       <year>2022</year>
@@ -112,7 +112,7 @@
         
         <listitem id="LIOM">
           <para><emphasis>XLIFF 2 Object Model Version 1.0.</emphasis>. Edited by David Filip.
-            13 April 2022. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest version: <ulink url="http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html">http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html</ulink>. </para>
+            14 June 2022. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest version: <ulink url="http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html">http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html</ulink>. </para>
         </listitem>
         
         <listitem>
@@ -249,7 +249,7 @@
       <para><citation>JLIFF-1.0</citation></para>
 
       <para><emphasis>JLIFF Version 1.0</emphasis>. Edited by Robert van
-        Engelen and David Filip. 13 April 2022. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest
+        Engelen and David Filip. 14 June 2022. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/jliff/v1.0/wd01/jliff-v1.0-wd01.html</ulink>. Latest
         version: <ulink url="http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html">http://docs.oasis-open.org/jliff/xliff2om/v1.0/jliff-v1.0.html</ulink>. </para>
 
       <!-- 
@@ -1338,7 +1338,7 @@
 </section>
 
     <section id="file">
-    <title>object <code>"kind" : "file"</code></title>
+    <title>anonymous object <code>"kind" : "file"</code></title>
     <para>Container for localization material extracted from an entire single document, or another
         high level self contained logical node in a content structure that cannot be described in
         the terms of documents.</para>
@@ -1653,7 +1653,7 @@
 </section>
     
     <section id="group">
-    <title>subitem object <code>"kind" : "group"</code></title>
+    <title>anonymous subitem object <code>"kind" : "group"</code></title>
     <para>Provides a way to organize units into a structured hierarchy.</para>
     <para>Note that this is especially useful for mirroring a source format's hierarchical
         structure.</para>
@@ -1941,7 +1941,7 @@ CTR is not allowed in XLIFF 2.1 and hence in JLIFF 2.1, but remains allowed in 2
 </section>
 
     <section id="unit">
-    <title>subitem object <code>"kind" : "unit"</code></title>
+    <title>anonymous subitem object <code>"kind" : "unit"</code></title>
     <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>This object is an
         anonymous container for a dynamic structure of subunit objects. Subunit objects hold the
         extracted translatable source text, aligned with the <firstterm>Translated</firstterm>
@@ -2467,27 +2467,28 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
 </section>
     
     <section id="originaldata">
-  <title><code>originalData</code> object</title>
-
-  <para>Unit-level collection of original data for the inline codes.</para>
-
-  <para><emphasis>Type:</emphasis> object.</para>
+  <title><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?><code>originalData</code>
+    object<?oxy_custom_end ?></title>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>Unit-level collection of
+    original data for the inline codes.</para>
+  <para><emphasis>Type:</emphasis> object.</para><?oxy_custom_end ?>
   <para><emphasis>Properties:</emphasis></para>
   <simplelist type="vert">
-    <member>- properties represent a dictionary of NMTOKEN and string value pairs <!-- 
+    <member>-<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?> properties of that
+      object comprise a dictionary of NMTOKEN and string value pairs <!-- 
       <olink targetdoc="data.xml"
     targetptr="data"><code>&lt;data&gt;</code></olink> elements -->,
-        <glossterm>required</glossterm></member>
+        <glossterm>required</glossterm><?oxy_custom_end ?></member>
   </simplelist>
-
-<itemizedlist>
-  <title>Contraints</title>
-  <listitem>
-    <para>The NMTOKEN key <glossterm>must</glossterm> be unique within the collection to make the
-      original data strings addressable from <link linkend="dataref"><code>"dataref"</code> properties</link> within inline objects of the same unit.</para>
-  </listitem>
-  
-</itemizedlist>
+  <itemizedlist>
+    <title>Contraints</title>
+    <listitem>
+      <para><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>The NMTOKEN keys
+          <glossterm>must</glossterm> be unique within the collection to make the original data
+        strings addressable from <link linkend="dataref"><code>"dataRef"</code> properties</link> within inline objects of the same
+        unit.<?oxy_custom_end ?></para>
+    </listitem>
+  </itemizedlist>
 </section>
     
     <section id="originaldatadir">
@@ -2567,10 +2568,11 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
 </section>
     
     <section id="source">
-    <title><code>"source"</code> property</title>
+    <title><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><code>"source"</code>
+        property</title>
     <para>Portion of text to be translated.</para>
-    <para><emphasis><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>Contains a
-            non-empty anonymous array of inline objects:</emphasis></para>
+    <para><emphasis>Contains a non-empty anonymous array of inline
+        objects:</emphasis><?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?></para>
     <simplelist type="vert">
         <member>- Zero, one or more <link linkend="text"><code>text</code></link> objects</member>
         <!--  XML illegal will appear as literal in JSON <member>- Zero, one or more <olink targetdoc="../inline/cp.xml" targetptr="cp"
@@ -2587,7 +2589,6 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     </simplelist>
     <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>The text, code, and
         marker objects appear in a significant order.<?oxy_custom_end ?></para>
-    
     <!--   JLIFF equivalents of these attrbutes were bumped to the parent segemnt or ignorable <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?><emphasis>Attributes:</emphasis></para>
     <simplelist>
         <member>- <olink targetdoc="../../attributes/xml_lang.xml" targetptr="xml_lang"
@@ -2635,7 +2636,10 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     Elements<?oxy_custom_end ?></title>
   <para><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>The <firstterm>XLIFF
       Core</firstterm> inline elements at the <link linkend="source"><code>&lt;source&gt;</code></link> or <link linkend="target"><code>&lt;target&gt;</code></link> level
-    are: <link linkend="cp"><code>&lt;cp&gt;</code></link>, <link linkend="ph"><code>&lt;ph&gt;</code></link>, 
+    are: 
+    
+    <link linkend="text"><code>"text"</code></link>,
+    <link linkend="cp"><code>&lt;cp&gt;</code></link>, <link linkend="ph"><code>&lt;ph&gt;</code></link>, 
     <!--   
     <olink
       targetdoc="inline/pc.xml" targetptr="pc"><code>&lt;pc&gt;</code></olink>,
@@ -2646,7 +2650,26 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
       targetdoc="inline/mrk.xml" targetptr="mrk"><code>&lt;mrk&gt;</code></olink>, 
      -->
     <link linkend="sm"><code>&lt;sm&gt;</code></link> and <link linkend="em"><code>&lt;em&gt;</code></link>.</para>
-  <para>The elements at the <link linkend="unit"><code>&lt;unit&gt;</code></link> level directly related to inline elements are: <link linkend="originaldata"><code>&lt;originalData&gt;</code></link> and <link linkend="data"><code>&lt;data&gt;</code></link>.<?oxy_custom_end ?></para>
+  <para>The objects at the <link linkend="unit"><code>&lt;unit&gt;</code></link> level directly related to inline elements are: <link linkend="originaldata"><code>&lt;originalData&gt;</code></link> and <link linkend="data"><code>&lt;data&gt;</code></link>.<?oxy_custom_end ?></para>
+  <section id="text">
+  <title>anonymous <code>"text"</code> object</title>
+
+  <para>Represents a string of text.</para>
+
+  <para><emphasis>Type:</emphasis> string.</para>
+
+  <para><emphasis>Example:</emphasis></para>
+
+  <programlisting format="linespecific">
+<?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>"subunits": [
+  {
+    "kind": "ignorable",
+    "source": [
+      { "text": ".  " }
+    ]
+  }
+]<?oxy_custom_end ?></programlisting>
+</section>
   <section id="cp">
   <title><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?> Roundtripping XLIFF
     &lt;cp/&gt;</title>
@@ -2707,7 +2730,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
   </itemizedlist>
 </section>
   <section id="ph">
-  <title>object <code>"kind" : "ph"</code></title>
+  <title>anonymous inline object <code>"kind" : "ph"</code></title>
 
   <para>Represents a standalone code of the original format.</para>
 
@@ -2915,7 +2938,7 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <xi:include href="inline/pc.xml"
                 xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>  -->
   <section id="sc">
-  <title>object <code>"kind" : "sc"</code></title>
+  <title>anonymous inline object <code>"kind" : "sc"</code></title>
   <para>Start of a spanning original code.</para>
   <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     object<?oxy_custom_end ?></para>
@@ -3112,19 +3135,21 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
   </itemizedlist>
 </section>
   <section id="ec">
-  <title>object <code>"kind" : "ec"</code></title>
+  <title>anonymous inline object <code>"kind" : "ec"</code></title>
   <para>End of a spanning original code.</para>
-  <para><emphasis>Type:</emphasis>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?><emphasis>Type:</emphasis>
+    object.<?oxy_custom_end ?></para>
   <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
   <simplelist type="vert"><?oxy_custom_end ?>
     <?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>
-    <member>This is object atomic, yet it is used to close spans.<?oxy_custom_end ?></member>
+    <member><?oxy_custom_end ?>This object is atomic, yet it is used to close code spans.</member>
   </simplelist>
-  <para><emphasis>Used in:</emphasis></para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?><emphasis>Used
+      in:</emphasis><?oxy_custom_end ?></para>
   <simplelist type="vert">
-    <member><link linkend="source"><code>source</code></link>
-      array and <link linkend="target"><code>target</code></link> array.</member>
+    <member><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?><link linkend="source"><code>source</code></link> array or
+        <link linkend="target"><code>target</code></link>
+      array.<?oxy_custom_end ?></member>
   </simplelist>
   <para><emphasis>Properties:</emphasis></para>
   <simplelist type="vert">
@@ -3197,9 +3222,8 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
       a <link linkend="codeType"><code>codeType</code></link> string with value <code>"fmt"</code>, <code>"ui"</code>,
         <code>"quote"</code>, <code>"link"</code>, <code>"image"</code>, <code>"its:generic"</code>,
       or <code>"other"</code>, <glossterm>optional</glossterm><?oxy_custom_end ?></member>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
-    <member>- attributes from other namespaces,
-      <glossterm>optional</glossterm><?oxy_custom_end ?></member>
+    <?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>
+    <member>other none-core properties, <glossterm>optional,</glossterm><?oxy_custom_end ?></member>
   </simplelist>
   <para><emphasis>Example:</emphasis></para>
   <programlisting format="linespecific"><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
@@ -3342,10 +3366,10 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
     <xi:include href="inline/mrk.xml"
                 xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include> -->
   <section id="sm">
-  <title>sm</title>
+  <title>anonymous inline object <code>"kind : sm"</code></title>
 
-  <para>Start marker of an annotation where the spanning marker cannot be used for wellformedness
-    reasons.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>Start marker of an
+    annotation.<?oxy_custom_end ?></para>
 
   <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     object<?oxy_custom_end ?></para>
@@ -3595,32 +3619,23 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
       section</link> for more details and examples on how to use the <link linkend="sm"><code>sm</code></link> object.</para>
 </section>
   <section id="em">
-  <title>em</title>
-
-  <para>End marker of an annotation where the spanning marker cannot be used for wellformedness
-    reasons.</para>
-
-  <para><emphasis>Type:</emphasis>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end ?>.</para>
-
+  <title>anonymous inline object <code>"kind" : "em"</code></title>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>End marker of an
+    annotation<?oxy_custom_end ?>.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?><emphasis>Type:</emphasis>
+    object.<?oxy_custom_end ?></para>
   <simplelist type="vert">
-    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
-    <member>This element is always empty.<?oxy_custom_end ?></member>
+    <?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>
+    <member>This object is atomic, yet it is used to close annotation
+      spans.<?oxy_custom_end ?></member>
   </simplelist>
-
-  <para><emphasis>Parents:</emphasis>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[Note: should be called
-      <emphasis>Used in</emphasis> perhaps? There is no parent object, but an
-    array]<?oxy_custom_end ?></para>
-
+  <para><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?><emphasis>Used
+      in:</emphasis></para>
   <simplelist type="vert">
     <member><link linkend="source"><code>source</code></link>
-      array, <link linkend="target"><code>target</code></link>
-      array<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>, <link linkend="pc"><code>&lt;pc&gt;</code></link> and <link linkend="mrk"><code>&lt;mrk&gt;</code></link><?oxy_custom_end ?></member>
+      array or <link linkend="target"><code>target</code></link> array<?oxy_custom_end ?></member>
   </simplelist>
-
   <para><emphasis>Properties:</emphasis></para>
-
   <simplelist type="vert">
     <member>-
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"kind"</code>, a
@@ -3638,19 +3653,16 @@ Not allowed in XLIFF and JLIFF 2.1, still permitted in XLIFF and JLIFF 2.0
         ><code>fs:subFs</code></olink>, optional</member> 
      -->
   </simplelist>
-
   <para><itemizedlist>
       <title>Constraints</title>
       <listitem>
-        <para>The following <firstterm>JLIFF Module</firstterm>
-          <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>properties<?oxy_custom_end ?>
-          are
-          <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>explicitly<?oxy_custom_end ?>
-          allowed <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>by the wildcard
-            <code>other</code><?oxy_custom_end ?>:<simplelist type="vert">
+        <para><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>The following
+            <firstterm>JLIFF Module</firstterm> properties are explicitly allowed by the wildcard
+            <code>other</code>:<?oxy_custom_end ?><simplelist type="vert">
             <member>-
                 <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"its_allowedCharacters"</code>,
-              a <link linkend="itsm_allowedCharacters"><code>its_allowedCharacters</code></link> string<?oxy_custom_end ?>.</member>
+              a <link linkend="itsm_allowedCharacters"><code>its_allowedCharacters</code></link>
+              string<?oxy_custom_end ?>.</member>
           </simplelist></para>
       </listitem>
     </itemizedlist>See the <link linkend="annotations">Annotations section</link> for more details and examples on how to use the <link linkend="em"><code>&lt;em&gt;</code></link> element.</para>
@@ -5719,6 +5731,60 @@ Text in \b bold \i and\b0  italics\i0</programlisting>
        italics&lt;ec startRef="2" dataRef="d4"/&gt;. &lt;/source&gt;
   &lt;/segment&gt;
 &lt;/unit&gt;
+
+
+<?oxy_custom_end ?><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>{
+  "id": "1",
+  "kind": "unit",
+  "originalData": {
+	"d1": "\\b ",
+	"d2": "\\i ",
+	"d3": "\\b0 ",
+	"d4": "\\i0 "
+  },
+  "subunits": [
+	{
+	  "kind": "segment",
+	  "source": [
+		{
+		  "text": "Text in "
+		},
+		{
+		  "dataRef": "d1",
+		  "id": "1",
+		  "kind": "sc"
+		},
+		{
+		  "text": "bold "
+		},
+		{
+		  "dataRef": "d2",
+		  "id": "2",
+		  "kind": "sc"
+		},
+		{
+		  "text": " and"
+		},
+		{
+		  "dataRef": "d3",
+		  "kind": "ec",
+		  "startRef": "1"
+		},
+		{
+		  "text": " italics"
+		},
+		{
+		  "dataRef": "d4",
+		  "kind": "ec",
+		  "startRef": "2"
+		},
+		{
+		  "text": ". "
+		}
+	  ]
+	}
+  ]
+}
 <?oxy_custom_end ?></programlisting>
       <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>Unlike XLIFF, JLIFF
         doesn't have a wellformed markup equivalent encoding construction.</para>
@@ -5746,7 +5812,8 @@ Text in &lt;sc id="1" dataRef="c1"/&gt;bold&lt;ec startRef="1" dataRef="c2"/&gt;
             element or vice-versa, <firstterm>Modifiers</firstterm>
             <glossterm>must</glossterm> map their attributes as shown in the following table:</para>
           <table>
-            <title>Mapping between attributes</title>
+            <title>Mapping between attributes [move to XLIFF roundtrip
+              appendix<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>]</title>
             <tgroup cols="3">
               <tbody>
                 <row>
@@ -5846,7 +5913,7 @@ Text in &lt;sc id="1" dataRef="c1"/&gt;bold&lt;ec startRef="1" dataRef="c2"/&gt;
                 </row>
               </tbody>
             </tgroup>
-          </table>
+          </table><?oxy_custom_end ?>
         </listitem>
         <listitem>
           <para><firstterm>Agents</firstterm>
@@ -5859,13 +5926,13 @@ Text in &lt;sc id="1" dataRef="c1"/&gt;bold&lt;ec startRef="1" dataRef="c2"/&gt;
       <title>Storage of the original data</title>
       <para>Most of the time, inline codes correspond to an original construct in the format from
         which the content was extracted. This is the <emphasis>original data</emphasis>.</para>
-      <para>XLIFF tries to abstract and normalize as much as possible the extracted content because
+      <para>JLIFF tries to abstract and normalize as much as possible the extracted content because
         this allows a better re-use of the material across projects. Some tools require access to
         the original data in order to create the translated document back into its original format.
         Others do not.</para>
       <section>
         <title>No storage of the original data</title>
-        <para>In this option, the original data of the inline code is not preserved inside the XLIFF
+        <para>In this option, the original data of the inline code is not preserved inside the JLIFF
           document.</para>
         <para>The tool that created the initial XLIFF document is responsible for providing a way to
           re-create the original format properly when merging back the content.</para>

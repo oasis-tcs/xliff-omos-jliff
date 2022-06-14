@@ -6,7 +6,7 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="group">
-    <title>subitem object <code>"kind" : "group"</code></title>
+    <title>anonymous subitem object <code>"kind" : "group"</code></title>
     <para>Provides a way to organize units into a structured hierarchy.</para>
     <para>Note that this is especially useful for mirroring a source format's hierarchical
         structure.</para>

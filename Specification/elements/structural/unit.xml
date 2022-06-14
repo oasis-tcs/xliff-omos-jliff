@@ -6,7 +6,7 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="unit">
-    <title>subitem object <code>"kind" : "unit"</code></title>
+    <title>anonymous subitem object <code>"kind" : "unit"</code></title>
     <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>This object is an
         anonymous container for a dynamic structure of subunit objects. Subunit objects hold the
         extracted translatable source text, aligned with the <firstterm>Translated</firstterm>
