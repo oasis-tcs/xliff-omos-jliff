@@ -6,20 +6,22 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="ec">
-  <title>object <code>"kind" : "ec"</code></title>
+  <title>anonymous inline object <code>"kind" : "ec"</code></title>
   <para>End of a spanning original code.</para>
-  <para><emphasis>Type:</emphasis>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?><emphasis>Type:</emphasis>
+    object.<?oxy_custom_end?></para>
   <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
   <simplelist><?oxy_custom_end?>
     <?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>
-    <member>This is object atomic, yet it is used to close spans.<?oxy_custom_end?></member>
+    <member><?oxy_custom_end?>This object is atomic, yet it is used to close code spans.</member>
   </simplelist>
-  <para><emphasis>Used in:</emphasis></para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?><emphasis>Used
+      in:</emphasis><?oxy_custom_end?></para>
   <simplelist>
-    <member><olink targetdoc="structural/source.xml" targetptr="source"><code>source</code></olink>
-      array and <olink targetdoc="structural/target.xml" targetptr="target"
-        ><code>target</code></olink> array.</member>
+    <member><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?><olink
+        targetdoc="structural/source.xml" targetptr="source"><code>source</code></olink> array or
+        <olink targetdoc="structural/target.xml" targetptr="target"><code>target</code></olink>
+      array.<?oxy_custom_end?></member>
   </simplelist>
   <para><emphasis>Properties:</emphasis></para>
   <simplelist>
@@ -103,9 +105,8 @@
         ><code>codeType</code></olink> string with value <code>"fmt"</code>, <code>"ui"</code>,
         <code>"quote"</code>, <code>"link"</code>, <code>"image"</code>, <code>"its:generic"</code>,
       or <code>"other"</code>, <glossterm>optional</glossterm><?oxy_custom_end?></member>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
-    <member>- attributes from other namespaces,
-      <glossterm>optional</glossterm><?oxy_custom_end?></member>
+    <?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>
+    <member>other none-core properties, <glossterm>optional,</glossterm><?oxy_custom_end?></member>
   </simplelist>
   <para><emphasis>Example:</emphasis></para>
   <programlisting><?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>

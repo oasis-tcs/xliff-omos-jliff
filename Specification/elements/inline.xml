@@ -12,7 +12,10 @@
       Core</firstterm> inline elements at the <olink targetdoc="structural/source.xml"
       targetptr="source"><code>&lt;source&gt;</code></olink> or <olink
       targetdoc="structural/target.xml" targetptr="target"><code>&lt;target&gt;</code></olink> level
-    are: <olink targetdoc="inline/cp.xml" targetptr="cp"><code>&lt;cp&gt;</code></olink>, <olink
+    are: 
+    
+    <olink targetdoc="inline/text.xml" targetptr="text"><code>"text"</code></olink>,
+    <olink targetdoc="inline/cp.xml" targetptr="cp"><code>&lt;cp&gt;</code></olink>, <olink
       targetdoc="inline/ph.xml" targetptr="ph"><code>&lt;ph&gt;</code></olink>, 
     <!--  
     <olink
@@ -28,11 +31,12 @@
     <olink
       targetdoc="inline/sm.xml" targetptr="sm"><code>&lt;sm&gt;</code></olink> and <olink
       targetdoc="inline/em.xml" targetptr="em"><code>&lt;em&gt;</code></olink>.</para>
-  <para>The elements at the <olink targetdoc="structural/unit.xml" targetptr="unit"
+  <para>The objects at the <olink targetdoc="structural/unit.xml" targetptr="unit"
         ><code>&lt;unit&gt;</code></olink> level directly related to inline elements are: <olink
       targetdoc="structural/originaldata.xml" targetptr="originaldata"
         ><code>&lt;originalData&gt;</code></olink> and <olink targetdoc="structural/data.xml"
       targetptr="data"><code>&lt;data&gt;</code></olink>.<?oxy_custom_end?></para>
+  <xi:include href="inline/text.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
   <xi:include href="inline/cp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
   <xi:include href="inline/ph.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
   <!-- for now only commenting out well formed tag descriptions, depend on how the roundtrip is described

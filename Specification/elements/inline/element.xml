@@ -8,11 +8,9 @@
 <section id="element">
   <title><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>anonymous inline
     object <code>"text"</code> or <code>"kind" : "ec|em|ph|sc|sm"</code><?oxy_custom_end?></title>
-
-  <para>JLIFF inline content is linearly composed from valid sequences of the following object
-    types:</para>
-
-  <para><emphasis>Type:</emphasis>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>JLIFF inline content is
+    linearly composed from valid sequences of the following object types:</para><?oxy_custom_end?>
+  <para><emphasis>Type:</emphasis> anonymous
     <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?>object with property <olink
       targetdoc="text.xml" targetptr="text"><code>"text"</code></olink> or <olink targetdoc="ec.xml"
       targetptr="ec"><code>"kind" : "ec"</code></olink>, <olink targetdoc="em.xml" targetptr="em"

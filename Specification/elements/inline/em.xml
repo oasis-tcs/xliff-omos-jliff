@@ -6,35 +6,24 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="em">
-  <title>em</title>
-
-  <para>End marker of an annotation where the spanning marker cannot be used for wellformedness
-    reasons.</para>
-
-  <para><emphasis>Type:</emphasis>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>object<?oxy_custom_end?>.</para>
-
+  <title>anonymous inline object <code>"kind" : "em"</code></title>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>End marker of an
+    annotation<?oxy_custom_end?>.</para>
+  <para><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?><emphasis>Type:</emphasis>
+    object.<?oxy_custom_end?></para>
   <simplelist>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>
-    <member>This element is always empty.<?oxy_custom_end?></member>
+    <?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>
+    <member>This object is atomic, yet it is used to close annotation
+      spans.<?oxy_custom_end?></member>
   </simplelist>
-
-  <para><emphasis>Parents:</emphasis>
-    <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>[Note: should be called
-      <emphasis>Used in</emphasis> perhaps? There is no parent object, but an
-    array]<?oxy_custom_end?></para>
-
+  <para><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?><emphasis>Used
+      in:</emphasis></para>
   <simplelist>
     <member><olink targetdoc="structural/source.xml" targetptr="source"><code>source</code></olink>
-      array, <olink targetdoc="structural/target.xml" targetptr="target"><code>target</code></olink>
-      array<?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>, <olink
-        targetdoc="pc.xml" targetptr="pc"><code>&lt;pc&gt;</code></olink> and <olink
-        targetdoc="mrk.xml" targetptr="mrk"
-      ><code>&lt;mrk&gt;</code></olink><?oxy_custom_end?></member>
+      array or <olink targetdoc="structural/target.xml" targetptr="target"
+        ><code>target</code></olink> array<?oxy_custom_end?></member>
   </simplelist>
-
   <para><emphasis>Properties:</emphasis></para>
-
   <simplelist>
     <member>-
         <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"kind"</code>, a
@@ -53,20 +42,17 @@
         ><code>fs:subFs</code></olink>, optional</member> 
     -->
   </simplelist>
-
   <para><itemizedlist>
       <title>Constraints</title>
       <listitem>
-        <para>The following <firstterm>JLIFF Module</firstterm>
-          <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>properties<?oxy_custom_end?>
-          are
-          <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>explicitly<?oxy_custom_end?>
-          allowed <?oxy_custom_start type="oxy_content_highlight" color="255,64,0"?>by the wildcard
-            <code>other</code><?oxy_custom_end?>:<simplelist>
+        <para><?oxy_custom_start type="oxy_content_highlight" color="0,255,0"?>The following
+            <firstterm>JLIFF Module</firstterm> properties are explicitly allowed by the wildcard
+            <code>other</code>:<?oxy_custom_end?><simplelist>
             <member>-
                 <?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><code>"its_allowedCharacters"</code>,
-              a <olink targetdoc="../attributes/itsm/itsm_allowedCharacters.xml" targetptr="itsm_allowedCharacters"
-                  ><code>its_allowedCharacters</code></olink> string<?oxy_custom_end?>.</member>
+              a <olink targetdoc="../attributes/itsm/itsm_allowedCharacters.xml"
+                targetptr="itsm_allowedCharacters"><code>its_allowedCharacters</code></olink>
+              string<?oxy_custom_end?>.</member>
           </simplelist></para>
       </listitem>
     </itemizedlist>See the <olink targetdoc="../../inline/inline.xml" targetptr="annotations"

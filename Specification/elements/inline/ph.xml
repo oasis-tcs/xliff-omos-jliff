@@ -6,7 +6,7 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="ph">
-  <title>object <code>"kind" : "ph"</code></title>
+  <title>anonymous inline object <code>"kind" : "ph"</code></title>
 
   <para>Represents a standalone code of the original format.</para>
 

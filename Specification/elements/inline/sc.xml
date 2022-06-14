@@ -6,7 +6,7 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="sc">
-  <title>object <code>"kind" : "sc"</code></title>
+  <title>anonymous inline object <code>"kind" : "sc"</code></title>
   <para>Start of a spanning original code.</para>
   <para><?oxy_custom_start type="oxy_content_highlight" color="140,255,140"?><emphasis>Type:</emphasis>
     object<?oxy_custom_end?></para>
